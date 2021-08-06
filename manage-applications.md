@@ -390,9 +390,9 @@ $ amc wait -c status=ready bcmap7u5nof07arqa2ag
 
 ## Update Applications
 
-Updating an existing application works similar as creating a new one. Each time an existing application is updated it is extended with a new version. All versions an application currently has are individually usable but only one can be available to users.
+Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be available to users.
 
-When you want to update an existing application with a new manifest or APK, you have to provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path
+When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
 From a path:
 
@@ -406,7 +406,7 @@ AMS will start the update process internally. You can watch the status of the ne
 
     amc application show bcmap7u5nof07arqa2ag
 
-The output will show you detailed information about the application and all of its versions:
+The output shows detailed information about the application and all of its versions:
 
 ```bash
 id: bcmap7u5nof07arqa2ag
@@ -494,11 +494,11 @@ The `amc` command will ask for your approval before the version is removed as it
 
 ## Disable Automatic Application Updates
 
-**since 1.11.0**
+*since 1.11.0*
 
-AMS will automatically update applications whenever any of its dependencies (parent image, addons, global configuration) changes. This will produce a new version for the application which gets also automatically published, if the `application.auto_publish` configuration item is enabled.
+AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.
 
-In some cases an automatic update is not wanted. To support this AMS allows disabling automatic application updates via the `application.auto_update` configuration update.
+In some cases, an automatic update is not wanted. To support this, AMS allows disabling automatic application updates via the `application.auto_update` configuration update.
 
 To disable automatic updates:
 
@@ -508,7 +508,7 @@ To enable automatic updates:
 
     amc config set application.auto_update true
 
-When automatic updates are disabled applications need to be manually updated for any changed dependencies. To do this can you use the following command:
+When automatic updates are disabled, applications must be manually updated for any changed dependencies. To do this, use the following command:
 
     amc application update <application id or name>
 
