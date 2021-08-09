@@ -1,5 +1,3 @@
-# Client Side Virtual Keyboard
-
 The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like AnboxWebView, which you can use to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing.
 
 The AnboxWebView extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of the text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
@@ -11,6 +9,7 @@ Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streami
     git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
 
 The `android/libs` folder contains the `com.canonical.anbox.streaming_sdk.aar` AAR file. See the official [documentation](https://developer.android.com/studio/projects/android-library) for how to import an Android library into an Android application project.
+
 The `examples/android` folder contains the `enhanced_webview_streaming` Android application. Refer to this application as an example for this feature integration.
 
 ## Integrate components
@@ -41,7 +40,7 @@ After importing the AAR file, use the AnboxWebView in an Android project:
    }
    ```
 
-3. For the application running in the Android container, whenever a text editor gains or loses focus during streaming, an IME-specific message is sent from the Android container to the client through the Javascript SDK. Each message requests a certain IME operation. This allows you to perform one certain action when the message is received and ensures the behaviour of the virtual keyboard is synced on both ends. The supported IME messages are as follows:
+3. For the application running in the Android container, whenever a text editor gains or loses focus during streaming, an IME-specific message is sent from the Android container to the client through the JavaScript SDK. Each message requests a certain IME operation. This allows you to perform one certain action when the message is received and ensures the behaviour of the virtual keyboard is synced on both ends. The supported IME messages are as follows:
 
    The following IME messages are supported:
 
@@ -178,7 +177,7 @@ After importing the AAR file, use the AnboxWebView in an Android project:
 
    ```
 
-6. In your HTML, define the JavaScript functions that can be invoked from the Android Java layer(AnboxWebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK. This builds up a communication tunnel that works the other way around.
+6. In your HTML, define the JavaScript functions that can be invoked from the Android Java layer (AnboxWebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK. This builds up a communication tunnel that works the other way around.
    ```
    <script>
      function sendIMECommittedText(text) {
