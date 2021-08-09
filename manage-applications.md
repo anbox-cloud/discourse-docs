@@ -105,7 +105,7 @@ watchdog:
 If one of the following scenarios occurs, the watchdog will be triggered. The container will be terminated and ends up with `error` status.
 
 - The application crashes or an [ANR](https://developer.android.com/topic/performance/vitals/anr) is triggered
-- The application is not in the foreground when an application which is not listed in `allowed-packages` 
+- The application is not in the foreground when an application which is not listed in `allowed-packages`
  was brought into the in the foreground and gained the focus
 - The boot package or activity is invalid
 - One of the `allowed-packages` is invalid
@@ -321,7 +321,7 @@ $ amc ls
 
 In general, the bootstrap process goes through the following steps in order:
 
-![application-bootstrap|690x467](upload://haAJJ8p8ZEQXmsvrVb3HOHhl1io.png) 
+![application-bootstrap|690x467](upload://haAJJ8p8ZEQXmsvrVb3HOHhl1io.png)
 
   * Configure network interface and gateway
   * Apply any pending Ubuntu system security updates
@@ -390,25 +390,25 @@ $ amc wait -c status=ready bcmap7u5nof07arqa2ag
 
 ## Update Applications
 
-Updating an existing application works similar as creating a new one. Each time an existing application is updated it is extended with a new version. All versions an application currently has are individually usable but only one can be available to users.
-When a new version of an application is available you have to update the application managed by the AMS service. As input you have to provide an updated tarball in the same format as described before. The `amc application update` command accepts both a directory and a direct path to a file.
+Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be available to users.
 
-From a directory:
+When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
-```bash
-$ amc application update bcmap7u5nof07arqa2ag $PWD/foo
-```
+From a path:
+
+    amc application update bcmap7u5nof07arqa2ag $PWD/foo
 
 From a file:
 
-```bash
-$ amc application update bcmap7u5nof07arqa2ag foo.tar.bz2
-```
+    amc application update bcmap7u5nof07arqa2ag foo.tar.bz2
 
 AMS will start the update process internally. You can watch the status of the new version with the following command:
 
+    amc application show bcmap7u5nof07arqa2ag
+
+The output shows detailed information about the application and all of its versions:
+
 ```bash
-$ amc application show bcmap7u5nof07arqa2ag
 id: bcmap7u5nof07arqa2ag
 name: candy
 status: ready
@@ -478,25 +478,41 @@ The most important part of an application version is the `published` field. If a
 
 Marking an application version as published can be achieved with the following command
 
-```bash
-$ amc application publish bcmap7u5nof07arqa2ag 1
-```
+    amc application publish bcmap7u5nof07arqa2ag 1
 
 Next to publishing an application version its already possible to revoke it
 
-```bash
-$ amc application revoke bcmap7u5nof07arqa2ag 1
-```
+    amc application revoke bcmap7u5nof07arqa2ag 1
 
 As consequence if an application only has a single published version and that version is revoked the application can't be used by any users anymore. AMS will still list the application but will mark it as not published as it has no published versions.
 
 Each version takes space on the LXD nodes. To free up space and remove old and unneeded version they can be individually removed with the only requirement that an application needs to have at least a single version at all time. Removing a specific application version is possible with the following command:
 
-```bash
-$ amc application delete --version=1 bcmap7u5nof07arqa2ag
-```
+    amc application delete --version=1 bcmap7u5nof07arqa2ag
 
 The `amc` command will ask for your approval before the version is removed as it may affect your users. If you want to bypass the check you can add the `--yes` flag to the command.
+
+## Disable Automatic Application Updates
+
+*since 1.11.0*
+
+AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.
+
+In some cases, an automatic update is not wanted. To support this, AMS allows disabling automatic application updates via the `application.auto_update` configuration update.
+
+To disable automatic updates:
+
+    amc config set application.auto_update false
+
+To enable automatic updates:
+
+    amc config set application.auto_update true
+
+When automatic updates are disabled, applications must be manually updated for any changed dependencies. To do this, use the following command:
+
+    amc application update <application id or name>
+
+This will initiate the update process and create a new application version.
 
 ## Change Image an Application is based on
 
