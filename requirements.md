@@ -17,9 +17,9 @@ After registering to Anbox Cloud, you should have received an [Ubuntu Advantage 
 
 ## Ubuntu OS
 
-Anbox Cloud is only supported on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux based operating systems are not supported.
+Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported.
 
-You have to run eiehter the [server](https://ubuntu.com/download/server) or [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on a Ubuntu desktop installation is not supported.
+You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on a Ubuntu Desktop installation is not supported.
 
 Supported Ubuntu versions:
 
