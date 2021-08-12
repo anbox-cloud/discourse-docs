@@ -15,6 +15,16 @@ The following requirements apply to all variants of Anbox Cloud
 
 After registering to Anbox Cloud, you should have received an [Ubuntu Advantage for Applications](https://ubuntu.com/advantage) token. If you haven't received one, please contact [support](https://support.canonical.com/) or your Canonical account representative as you'll need it to deploy Anbox Cloud.
 
+## Ubuntu OS
+
+Anbox Cloud is only supported on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux based operating systems are not supported.
+
+You have to run eiehter the [server](https://ubuntu.com/download/server) or [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on a Ubuntu desktop installation is not supported.
+
+Supported Ubuntu versions:
+
+* 20.04 (focal)
+
 ## Linux Kernel
 
 Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported. 
