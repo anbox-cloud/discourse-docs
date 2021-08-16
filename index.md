@@ -16,15 +16,13 @@ Its core features are:
 * Support for both x86 and Arm64 hardware
 * Integrates with 3rd party solutions for binary translation solutions on Arm64-only hardware
 
-## What's new in 1.10?
+## What's new in 1.11?
 
-Along with bugfixes and general improvements, Anbox Cloud 1.10 comes with:
+Along with bugfixes and general improvements, Anbox Cloud 1.11 comes with:
 
-* Support for Android 11
-* Pinned Package Versions
-* Instant Session Handover
-* Nvidia Server Optimized GPU Drivers are used by default
-* Application Management inside the Anbox Cloud Dashboard
+* Client-side virtual keyboard
+* Hardware accelerated video decoding (H.264, Nvidia GPUs only)
+* Experimental WiFi support
 
 Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) for more details.
 
