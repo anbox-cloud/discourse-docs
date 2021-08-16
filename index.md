@@ -20,7 +20,7 @@ Its core features are:
 
 Along with bugfixes and general improvements, Anbox Cloud 1.11 comes with:
 
-* Client side virtual keyboard
+* Client-side virtual keyboard
 * Hardware accelerated video decoding (H.264, Nvidia GPUs only)
 * Experimental WiFi support
 
