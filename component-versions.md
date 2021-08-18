@@ -38,11 +38,11 @@ n/a
 | ams-node-controller    | 1.11.1  |
 | anbox-cloud-appliance | 1.11.1 |
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -96,7 +96,7 @@ n/a
 | anbox-stream-gateway | 1.11.0 |
 | anbox-cloud-appliance | 1.11.0 |
 
-### Debian Packages
+### Debian packages
 
 | Name | Ubuntu Release | Version |
 |----------|--------------|-----------------|
@@ -104,7 +104,7 @@ n/a
 | anbox-modules-dkms-111 |  18.04 (bionic) |  1:1.11.0-stable1~bionic0 |
 
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -155,11 +155,11 @@ n/a
 | anbox-cloud-dashboard | 1.10.3 |
 
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -216,11 +216,11 @@ n/a
 | anbox-cloud-appliance | 1.10.2 |
 
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -273,14 +273,14 @@ n/a
 | anbox-stream-gateway | 1.10.0 |
 
 
-### Debian Packages
+### Debian packages
 
 | Name | Ubuntu Release | Version |
 |----------|--------------|-----------------|
 | anbox-modules-dkms-110 | 20.04 (focal) | 1:1.10.0~focal0 |
 | anbox-modules-dkms-110 |  18.04 (bionic) |  1:1.10.0~bionic0 |
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -334,14 +334,14 @@ n/a
 | anbox-stream-gateway | 1.10.0 |
 
 
-### Debian Packages
+### Debian packages
 
 | Name | Ubuntu Release | Version |
 |----------|--------------|-----------------|
 | anbox-modules-dkms-110 | 20.04 (focal) | 1:1.10.0~focal0 |
 | anbox-modules-dkms-110 |  18.04 (bionic) |  1:1.10.0~bionic0 |
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -370,11 +370,11 @@ n/a
 | ams    | 1.9.5 |
 
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 n/a
 
@@ -399,11 +399,11 @@ n/a
 | ams    | 1.9.4 |
 
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 n/a
 
@@ -444,14 +444,14 @@ n/a
 | anbox-stream-gateway | 1.9.3 |
 
 
-### Debian Packages
+### Debian packages
 
 | Name | Ubuntu Release | Version |
 |----------|--------------|-----------------|
 | anbox-modules-dkms | 20.04 (focal) | 1:1.9.3~focal0 |
 | anbox-modules-dkms |  18.04 (bionic) |  1:1.9.3~bionic0 |
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|
@@ -493,11 +493,11 @@ n/a
 | aar    | 1.9.2 |
 | ams-node-controller    | 1.9.2  |
 
-### Debian Packages
+### Debian packages
 
 n/a
 
-### Anbox Images
+### Anbox images
 
 n/a
 
@@ -540,14 +540,14 @@ n/a
 | anbox-stream-gateway | 1.9.1 |
 
 
-### Debian Packages
+### Debian packages
 
 | Name | Ubuntu Release | Version |
 |----------|--------------|-----------------|
 | anbox-modules-dkms | 20.04 (focal) | 1:1.9.1~focal0 |
 | anbox-modules-dkms |  18.04 (bionic) |  1:1.9.1~bionic0 |
 
-### Anbox Images
+### Anbox images
 
 | Name | Version |
 |----------|--------------|

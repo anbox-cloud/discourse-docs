@@ -6,7 +6,7 @@
 
 #### New Features & Improvements
 
- * Android security updates for August 2021 (see [here](https://source.android.com/security/bulletin/2021-08-01) for more information)
+ * Android security updates for August 2021 (see [Android Security Bulletin - August 2021](https://source.android.com/security/bulletin/2021-08-01) for more information)
 
 #### Bugs
 
