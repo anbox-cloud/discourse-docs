@@ -8,30 +8,26 @@ Not all components are updated with each release. When components are not update
 
 | Name | Revision |
 |----------|--------------|
-| cs:~anbox-charmers/lxd   |  ? |
-| cs:~anbox-charmers/ams    |  ? |
-| cs:~anbox-charmers/ams-node-controller    | ?  |
-| cs:~anbox-charmers/aar    |  ? |
-| cs:~anbox-charmers/anbox-stream-gateway   |  ? |
-| cs:~anbox-charmers/anbox-stream-agent  |  ?  |
-| cs:~anbox-charmers/coturn  | ? |
-| cs:~anbox-charmers/nats  |  ? |
-| cs:~anbox-charmers/ams-load-balancer | ? |
-| cs:~anbox-charmers/anbox-cloud-dashboard | ? |
+| cs:~anbox-charmers/lxd   |  82 |
+| cs:~anbox-charmers/ams    |  81 |
+| cs:~anbox-charmers/ams-node-controller    | 75  |
+| cs:~anbox-charmers/aar    |  68 |
+| cs:~anbox-charmers/anbox-stream-gateway   |  88 |
+| cs:~anbox-charmers/anbox-stream-agent  |  81  |
+| cs:~anbox-charmers/coturn  | 83 |
+| cs:~anbox-charmers/ams-load-balancer | 72 |
+| cs:~anbox-charmers/anbox-cloud-dashboard | 51 |
 
 ### Validated revisions of 3rd party charms
 
-| Name | Revision |
-|----------|--------------|
-| cs:~containers/easyrsa | 384 |
-| cs:~containers/etcd | 594 |
+n/a
 
 ### Bundles
 
 | Name | Revision |
 |----------|--------------|
-| cs:~anbox-charmers/anbox-cloud | ? |
-| cs:~anbox-charmers/anbox-cloud-core | ? |
+| cs:~anbox-charmers/anbox-cloud | 73 |
+| cs:~anbox-charmers/anbox-cloud-core | 62 |
 
 ### Snaps
 
@@ -40,6 +36,7 @@ Not all components are updated with each release. When components are not update
 | ams    | 1.11.1 |
 | aar    | 1.11.1 |
 | ams-node-controller    | 1.11.1  |
+| anbox-cloud-appliance | 1.11.1 |
 
 ### Debian Packages
 
@@ -97,6 +94,7 @@ n/a
 | anbox-cloud-dashboard | 1.11.0 |
 | anbox-stream-agent | 1.11.0 |
 | anbox-stream-gateway | 1.11.0 |
+| anbox-cloud-appliance | 1.11.0 |
 
 ### Debian Packages
 
