@@ -1,4 +1,4 @@
-To run Anbox Cloud you need to fullfil a few minimum requirements which are a bit different depending on which kind of deployment you choose. 
+To run Anbox Cloud you need to fulfil a few minimum requirements which are a bit different depending on which kind of deployment you choose. 
 
 The following two different deployment variants and their minimum requirements will be covered below:
 
@@ -7,7 +7,7 @@ The following two different deployment variants and their minimum requirements w
 
 See the [overview](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) for a explanation of the differences between both variants.
 
-# Gerneral requirements
+# General requirements
 
 The following requirements apply to all variants of Anbox Cloud 
 
@@ -48,13 +48,13 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 64 bit x86 or Arm CPU with >= 4 CPU cores
 * 8 GB of memory
 * 40 GB of disk space for the OS
-* optional, but strongly recommend: >= 50GB block volume to host container storage
+* optional, but strongly recommended: >= 50GB block volume to host container storage
 
-The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch it's Android containers the available resources dictate the maximum number of possible containers. See [Capacity Planing](https://discourse.ubuntu.com/t/capacity-planning/17765) for an explanation on how to plan for a specific capacity on your appliance.
+The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [Capacity Planing](https://discourse.ubuntu.com/t/capacity-planning/17765) for an explanation on how to plan for a specific capacity on your appliance.
 
-On public clouds it's recommend to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
+On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
 
-For external access to the Anbox Cloud Appliance a couple of network ports needs to be expose on the machine it's running on. The following table lists all ports.
+For external access to the Anbox Cloud Appliance, a couple of network ports must be exposed on the machine it's running on. The following table lists all ports.
 
 | Port(s) | Protocol | Necessity | Description |
 |------------|--------------|----------------|-------------------|
@@ -69,11 +69,11 @@ How to allow incoming traffic on the listed ports is different depending on the 
 
 # Juju based deployments
 
-Anbox Cloud deployments are managed by Juju. They can be crwated on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
+Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
 
 ## Juju setup
 
-Anbox Cloud requires [Juju](https://juju.is/) to be installed in order to manage the different components and their dependencies. Follow the official [documentation](https://juju.is/docs/installing) to get it installed on your machine.
+Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Follow the official [documentation](https://juju.is/docs/installing) to get it installed on your machine.
 
 ## Minimum hardware
 
@@ -93,4 +93,4 @@ Applications not maintained by Anbox Cloud may have different hardware recommend
  - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
  - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
  
-Please note that these are just baselines and should be adapted to your worload. No matter the application, [measuring performances](https://anbox-cloud.io/docs/monitoring/monitoring-installation) is always important.
+Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://anbox-cloud.io/docs/monitoring/monitoring-installation) is always important.
