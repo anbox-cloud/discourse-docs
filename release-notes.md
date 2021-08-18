@@ -1,5 +1,24 @@
 > **NOTE**: If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements  category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
 
+[Details=1.11.1]
+
+# 1.11.1 (August 17 2021)
+
+#### New Features & Improvements
+
+ * Android security updates for August 2021 (see [here](https://source.android.com/security/bulletin/2021-08-01) for more information)
+
+#### Bugs
+
+* LP #1939277 lxc-attach fails on sendfile with EINVAL on 5.11
+* LP #1938877 Native crash occurred when creating an application from Android 11 after finishing application bootstrap
+* LP #1939274 Anbox crashes after "Failed to put memory protection in place"
+* LP #1939666 Bootstrap fails because of missing /dev/fd0
+* LP #1939129 The anbox-stream-sdk.js file is missing from Android webview based projects
+* LP #1938901 Appliance upgrade fails with Juju 2.9.x
+
+[/Details]
+
 [Details=1.11.0]
 
 ## 1.11.0 (August 5 2021)
