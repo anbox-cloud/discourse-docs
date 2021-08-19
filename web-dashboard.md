@@ -3,28 +3,37 @@ The dashboard is useful if you are new to Anbox Cloud or want a simple managemen
 
 Starting in 1.9.0, the dashboard replaces the old Dev UI.
 
-> **Note**: The Web Dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.
+> **Note**: The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.
 
 ![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png) 
 
 # Installation
 
-The dashboard comes pre-installed when you deploy the [Streaming Stack](https://discourse.ubuntu.com/t/install-anbox-cloud/17744) or the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681). It sits behind a reverse proxy for performance and security reasons.
+The dashboard comes pre-installed when you deploy [Anbox Cloud with the streaming stack](https://discourse.ubuntu.com/t/install-anbox-cloud/17744) or the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681). It sits behind a reverse proxy for performance and security reasons.
 
 # Usage
 
+To access the dashboard, go to `https://<your-machine-address>/`.
+
+> **Hint**: The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
+
 ## Granting access
 
-No user is configured by default, you will need to register a new user before you can use the dashboard. Instead of implementing it's own user management. the dashboard relies on OAuth for user authentication. The only OAuth provider supported right now is [Ubuntu One](https://login.ubuntu.com/).  Future versions of Anbox Cloud will allow using other OAuth providers.
+Instead of implementing its own user management, the dashboard relies on OAuth for user authentication. The only OAuth provider supported right now is [Ubuntu One](https://login.ubuntu.com/). Future versions of Anbox Cloud will allow using other OAuth providers.
 
-If you haven't registered an Ubuntu One account yet, you can do that [here](https://login.ubuntu.com/).
+If you haven't registered an Ubuntu One account yet, you can do that at https://login.ubuntu.com/.
 
-Before you can log into the dashboard you need to actually register your [Ubuntu One](https://login.ubuntu.com/) account with the dashboard to grant it access. 
+Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to grant it access. 
 
-On a regular Anbox Cloud deployment there is a Juju action you can use to do that:
+### Register a Ubuntu One account in Anbox Cloud
+
+On a regular Anbox Cloud deployment, use the following Juju action to register a Ubuntu One account:
+
+    juju run-action anbox-cloud-dashboard/0 --wait register-account email=<Ubuntu One email address>
+
+You will see output similar to the following:
 
 ```sh
-ubuntu@anbox-cloud:~$ juju run-action anbox-cloud-dashboard/0 --wait register-account email=<your ubuntu one email>
 unit-anbox-cloud-dashboard-0:
   UnitId: anbox-cloud-dashboard/0
   id: "157"
@@ -38,24 +47,26 @@ unit-anbox-cloud-dashboard-0:
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
 
-When you're using the Anbox Cloud Appliance you can use the following command to register a new Ubuntu SSO user account:
+### Register a Ubuntu One account in Anbox Cloud Appliance
 
-    $ anbox-cloud-appliance dashboard register <your Ubuntu SSO email address>
+If you followed the instructions in [Install Appliance](https://anbox-cloud.io/docs/install-appliance) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
 
-Accessing the resulting link will create your account and ask you to login via Ubuntu One. You only need to do this step once per user you want to grant access to the dashboard to.
+To add more accounts, use the following command:
+
+    $ anbox-cloud-appliance dashboard register <Ubuntu One email address>
+
+Accessing the resulting link will create the account and ask you to login via Ubuntu One. You only need to do this step once per user you want to grant access to the dashboard.
 
 The generated link is valid for one hour.
 
-> **Hint**: The dashboard uses self-signed certificates. You may see a warning from your browser and have to accept the certificates manually.
-
 ## Creating applications
 
-Creating applications through the dashboard is done the same way as you would do with [`amc`](https://anbox-cloud.io/docs/manage/managing-applications).
-Note that more advanced scenarios may not yet be possible via the dashboard and require going through `amc`.
+Creating applications through the dashboard is done the same way as you would do with `amc` (see [Managing Applications](https://anbox-cloud.io/docs/manage/managing-applications)).
+Note that more advanced scenarios might not yet be possible via the dashboard and require going through `amc`.
 
 ![image|690x438](upload://9fPqr5DXciTsKy8bw90FzBxguZH.png)
 
-## Streaming Applications
+## Streaming applications
 
 The dashboard comes with in-browser streaming capabilities through WebRTC.
 
@@ -65,4 +76,4 @@ You can select any application you previously created and start a streaming sess
 
 ![image|690x352](upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png) 
 
-For more information about the Streaming Stack, visit https://anbox-cloud.io/docs/manage/streaming-android-applications
+For more information about the Streaming Stack, visit https://anbox-cloud.io/docs/manage/streaming-android-applications.
