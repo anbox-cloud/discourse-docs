@@ -4,17 +4,15 @@ This guide provides the first steps to using Anbox Cloud. If you haven't install
 
 For all subsequent commands using the `amc` tool to work you need to access the `ams/0` machine on a regular Anbox Cloud deployment. You can do this by opening an SSH session with the `juju` command:
 
-```bash
-$ juju ssh ams/0
-```
+    juju ssh ams/0
 
 If you're running the Anbox Cloud Appliance instead, you can find the `amc` tool directly on the host and it's already set up to talk to the deployed AMS service.
 
 Alternatively you can also install the `amc` command on your local Ubuntu-based development machine. See [AMS Access](https://discourse.ubuntu.com/t/managing-ams-access/17774) for more details.
 
-## Ensure Images are Available
+## Ensure images are available
 
-As a next step you can check that **AMS** has synchronised all images from the Canonical hosted image server. You can list all synchronised images with the `amc image ls` command:
+As a next step you can check that AMS has synchronised all images from the Canonical hosted image server. You can list all synchronised images with the `amc image ls` command:
 
 ```bash
 +----------------------+-----------------------------+--------+----------+--------------+---------+
@@ -48,43 +46,47 @@ Once it is up and running you can get a shell inside the container with:
 See [Managing containers](https://discourse.ubuntu.com/t/managing-containers/17763) for more details.
 
 ## Create an application
-**AMS** provides functionality to manage Android applications for you. To let **AMS** manage your application, you need the APK of the application and a `manifest.yaml` which looks like this in its simplest form:
 
-```bash
-$ cat manifest.yaml
+You can create applications through the web-based dashboard or on the command line.
+
+Both alternatives require you to provide the name and the [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) of the application. If you want to run a specific Android application, you need to provide its APK.
+
+> **Hint**: If your application requires the use of a GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+
+### Create an application through the web dashboard
+
+The web dashboard is available if you installed [Anbox Cloud with the streaming stack](https://anbox-cloud.io/docs/installation/installation-quickstart) or the [Anbox Cloud Appliance](https://anbox-cloud.io/docs/installation/installation-quickstart). See [Web Dashboard](https://anbox-cloud.io/docs/manage/web-dashboard) for more information about the dashboard.
+
+To create an application through the web dashboard, open `https://<your-machine-address>/applications` in your browser. Click **Add Application** and enter the required information. If you want to run a specific Android application, upload its APK.
+
+### Create an application on the command line
+
+To create and manage an application from the command line, use `amc`. 
+
+You must provide a `manifest.yaml` file for your application. In its simplest form, the manifest looks like this:
+
+```yaml
 name: com.my.game
 instance-type: a2.3
 ```
 
-> **Hint**: If you deployed Anbox Cloud with the streaming stack, use an instance type with GPU support like `g2.3`. Otherwise the container will not get access to a GPU for rendering and video encoding.
+It defines the name of the application and which instance type the application should use. The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) and [Instance Types](https://discourse.ubuntu.com/t/instances-types-reference/17764) sections.
 
-The manifest basically defines the name of the application and which instance type the application should use as well as more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others . You can find more details about manifest format and the available instance types in the [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) and [Instance Types](https://discourse.ubuntu.com/t/instances-types-reference/17764) sections.
+To create an application, place the `manifest.yaml` file in a directory of your choice. If you want to run a specific Android application, place its APK in the same directory. Then run the following command, replacing */path/to/manifest/directory/* with the path to your directory:
 
-To create the application with `ams`, place the APK as `app.apk` in the same directory as the `manifest.yaml`, and run the following command:
+    amc application create /path/to/manifest/directory/
 
-    amc application create /path/to/directory/with/apk/and/manifest/
+The tool will now run through a bootstrap process for the application to allow for faster boot times of the application later on.
 
-**AMS** will now run through a bootstrap process for the application to allow for faster boot times of the application later on.
-
-You can monitor the progress of the application with:
+You can use the `amc application show <app name>` command to display the status of your application. To continually monitor the progress of the application, enter the following command:
 
     watch -n 1 amc application ls
 
-When the application is marked as `ready`, you just have to publish it and it's ready to be used:
-
-    amc application publish <app name> 0
-
-Now you can simply start a container for your new application by launching the application:
+When processing is done, you can start a container for your new application by launching the application:
 
     amc launch <app name>
 
-## Accessing the Web Dashboard
-
-The Streaming Stack ships with a user friendly web-based dashboard that can be used to create, manage and stream Android application to a web browser.
-
-You can read more on https://anbox-cloud.io/docs/manage/web-dashboard
-
-## Next Steps
+## Next steps
 * [Image Management](https://discourse.ubuntu.com/t/managing-images/17758)
 * [Container Management](https://discourse.ubuntu.com/t/managing-containers/17763)
 * [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
