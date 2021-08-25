@@ -17,10 +17,15 @@ For the quickstart into Anbox Cloud you will need the following things:
 ### Install Juju
 
 Juju is a tool for deploying, configuring and operating complex software on public or private clouds.
-It can be installed with a snap:
+
+Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information). To install this version, enter the following command:
+
+    sudo snap install --channel=2.8/stable juju
+
+<!--It can be installed with a snap:
 
     sudo snap install juju --classic
-
+-->
 
 ### Find Your Cloud
 

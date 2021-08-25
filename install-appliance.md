@@ -21,6 +21,22 @@ After the installation, access `https://your-machine-address`. This web page pro
 
 ![appliance-welcome|690x343, 100%](upload://yIGZThPljsjPyRAVQVFkZOiVVNF.png)
 
+### Install additional tools
+
+The appliance requires a few additional tools.
+
+- Enter the following command to install Juju:
+
+        sudo snap install --channel=2.8/stable juju
+    
+  Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information).
+  
+- Enter the following command to install amc:
+
+        sudo snap install amc
+
+### Initialise the appliance
+
 Now that the snap is installed, we can invoke the initialisation process of the Anbox Cloud Appliance:
 
     sudo anbox-cloud-appliance init
