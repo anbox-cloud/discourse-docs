@@ -27,13 +27,13 @@ The appliance requires a few additional tools.
 
 - Enter the following command to install Juju:
 
-        sudo snap install --channel=2.8/stable juju
+      sudo snap install --channel=2.8/stable juju
     
   Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information).
   
 - Enter the following command to install amc:
 
-        sudo snap install amc
+      sudo snap install amc
 
 ### Initialise the appliance
 
