@@ -23,7 +23,10 @@ You must run either the [server](https://ubuntu.com/download/server) or the [clo
 
 Supported Ubuntu versions:
 
+* 18.04 (bionic)
 * 20.04 (focal)
+
+For new deployments Ubuntu 20.04 (focal) should be preferred.
 
 ## Linux Kernel
 
