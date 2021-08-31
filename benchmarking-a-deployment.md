@@ -90,6 +90,26 @@ $ amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --contai
 2019/01/21 11:15:39     None
 ```
 
+The benchmark command launches 15 containers on the Anbox [`null` platform](https://anbox-cloud.io/docs/reference/anbox-platforms) with the following default display specification:
+
+ | Display Spec            | Value |
+ | ----------------------- | ----- |
+ | Display width           | 1280  |
+ | Display height          | 720   |
+ | FPS                     | 60    |
+ | Display density         | 160   |
+
+
+You can configure a different display specification through the `--user-data` parameter when running the benchmark. The required format for the parameter varies based on the different platforms:
+
+| Platform              | Required format of user data          | Example                                                   |
+| --------------------- | ------------------------------------  | --------------------------------------------------------  |
+| Null                  | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| Swrast                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| WebRTC                | Json-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
+
+> **Note:** If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.
+
 ### Example Stress Test Application
 
 In order to make evaluation and testing easier we provide a GPU stress test application based on an [example application](https://github.com/google/gpu-emulation-stress-test) from Google.
