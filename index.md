@@ -53,6 +53,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
  * [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)
  * [Dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)
  * [Images](https://discourse.ubuntu.com/t/managing-images/17758)
+    * [Provided images](tbd)
  * [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)
  * [Addons](https://discourse.ubuntu.com/t/managing-addons/17759)
  * [Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)
@@ -169,6 +170,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 |tbd|/docs/howto/upgrade/upgrade-appliance|
 |https://discourse.ubuntu.com/t/usecase-container-configuration/17782|/docs/howto/containers/geographic-location|
 |tbd|/docs/howto/containers/backup-and-restore|
+|https://discourse.ubuntu.com/t/managing-images/17758|/docs/howto/manage/images|
+|tbd|/docs/ref/provided-images|
 [/details]
 
 
