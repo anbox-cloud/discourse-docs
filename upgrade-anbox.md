@@ -8,48 +8,15 @@ The upgrade instructions detail the revisions each charm needs to be upgraded to
 
 ## Upgrade OS
 
-Before you run the upgrade of the appliance or charms below you should make sure all packages on the machines part of the deployment are up-to-date. To do so you can run the following commands on each machine
+Before you run the upgrade of the charms, you should make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:
 
     $ sudo apt update
     $ sudo apt upgrade
 
-## Apppliance based deployments
-
-The Anbox Cloud Appliance includes an `upgrade` command which will perform all relevant upgrade steps to a newer version of the appliance.  First you can check if an update is available:
-
-    $ anbox-cloud-appliance status
-    status: ready
-    update-available: true
-    reboot-needed: false
-
-> **IMPORTANT:** While the upgrade process is active API endpoints and the dashboard will not be available. Anbox containers  will stay active and existing streams will also not be interrupted.
-
-In the command ouput above the `update-available` field indicates an update is available. The upgrade process can now be initiated by running the `upgrade` command:
-
-    $ anbox-cloud-appliance upgrade
-
-The appliance will perform now all necessary steps to upgrade to the newer available version. You can watch for progress on the web interface
-
-![appliance-upgrade|690x435](upload://2mEtGPT2aVrhLvhDW7h9whoEiAT.png) 
-
- or with the `status` command you used above:
-
-    $ anbox-cloud-appliance status
-    status: maintenance
-    progress: 40
-    update-available: false
-    reboot-needed: true
-
-When the upgrade has finished the appliance is again available for regular use.
-
-## Juju based deployments
-
-The following sections describe how to update a Juju based deployment of Anbox Cloud.
-
 <a name="juju-version"></a>
-### Juju Version
+## Check Juju version
 
-With the 1.8 release of Anbox Cloud you **MUST** use Juju >= 2.8. If your deployment doesn't yet use Juju 2.8 you have to upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/upgrading-models) for more details on how to upgrade the Juju controller and all models to Juju 2.8.
+With the 1.8 release of Anbox Cloud you **MUST** use Juju 2.8. If your deployment doesn't yet use Juju 2.8 you have to upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/upgrading-models) for more details on how to upgrade the Juju controller and all models to Juju 2.8.
 
 As of 1.10.0 Juju 2.9 is not yet fully supported and it is recommended to stay with Juju 2.8. You can install Juju 2.8 with
 
@@ -59,7 +26,7 @@ or switch to the 2.8 series with
 
     $ snap refresh --channel=2.8/stable juju
 
-### Upgrading all Charms
+## Upgrade all charms
 
 The deployed Juju charms need to be upgraded next. Please execute the following commands in the exact same order as listed here but skip those you don't use in your deployment:
 
@@ -103,7 +70,7 @@ $ juju config anbox-cloud-dashboard ua_token=<your token>
 
 When the token is set Juju will continue to upgrade Anbox Cloud and install the latest version of the software components.
 
-### Upgrade Debian Packages
+## Upgrade Debian packages
 
 Some parts of Anbox Cloud are distributed as Debian packages coming from the [Anbox Cloud Archive](https://archive.anbox-cloud.io). In order to apply all pending upgrades, run the following commands on your machines:
 
@@ -114,7 +81,7 @@ $ sudo apt upgrade
 
 or apply the updates via [Landscape](https://landscape.canonical.com/) if available.
 
-### Upgrade LXD Image
+## Upgrade LXD image
 
 LXD images are automatically being fetched by AMS from the image server once they are published.
 
@@ -126,7 +93,7 @@ You can check for the status of an existing application by running
 $ amc application show <application id or name>
 ```
 
-### Image Server Access
+## Image server access
 
 Starting with Anbox Cloud 1.9.0 you do not need to manually configure the `images.auth` configuration option in AMS anymore with your personal username and password. Authentication to the image server is now fully automated via your Ubuntu Advantage subscription.
 

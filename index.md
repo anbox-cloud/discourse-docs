@@ -43,7 +43,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 
   * [Customizations](https://discourse.ubuntu.com/t/installation-customizing/17747)
   * [Application Registry](https://discourse.ubuntu.com/t/installation-application-registry/17749)
-  * [Upgrading](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)
+  * [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)
+  * [Upgrade Anbox Cloud Appliance](tbd)
   * [High Availability](https://discourse.ubuntu.com/t/high-availability/17754)
   * [Validation](https://discourse.ubuntu.com/t/validation/20329)
 
@@ -164,6 +165,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 |https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834|/docs/exchange-out-of-band-data|
 |https://discourse.ubuntu.com/t/install-appliance/22681|/docs/install-appliance|
 |https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643|/docs/integrate-keyboard|
+|https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750|/docs/howto/upgrade/upgrade-anbox|
+|tbd|/docs/howto/upgrade/upgrade-appliance|
 |https://discourse.ubuntu.com/t/usecase-container-configuration/17782|/docs/howto/containers/geographic-location|
 |tbd|/docs/howto/containers/backup-and-restore|
 [/details]
