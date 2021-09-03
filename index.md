@@ -66,7 +66,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
  * [LXD Auto Scaling](https://discourse.ubuntu.com/t/lxd-auto-scaling/21351)
 
 ### Using Anbox Cloud
-* [Container configuration](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
+* [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
+* [Back up and restore application data](tbd)
 * [Port Android application to Anbox Cloud](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776)
 * [Anbox Streaming SDK](https://discourse.ubuntu.com/t/usecase-streaming-sdk/17783)
     * [Native streaming client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)
@@ -163,4 +164,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 |https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834|/docs/exchange-out-of-band-data|
 |https://discourse.ubuntu.com/t/install-appliance/22681|/docs/install-appliance|
 |https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643|/docs/integrate-keyboard|
+|https://discourse.ubuntu.com/t/usecase-container-configuration/17782|/docs/howto/containers/geographic-location|
+|tbd|/docs/howto/containers/backup-and-restore|
 [/details]
+
+
