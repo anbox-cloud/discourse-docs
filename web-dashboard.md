@@ -7,17 +7,17 @@ Starting in 1.9.0, the dashboard replaces the old Dev UI.
 
 ![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png) 
 
-# Installation
+## Installation
 
 The dashboard comes pre-installed when you deploy [Anbox Cloud with the streaming stack](https://discourse.ubuntu.com/t/install-anbox-cloud/17744) or the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681). It sits behind a reverse proxy for performance and security reasons.
 
-# Usage
+## Usage
 
 To access the dashboard, go to `https://<your-machine-address>/`.
 
 > **Hint**: The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
 
-## Granting access
+### Granting access
 
 Instead of implementing its own user management, the dashboard relies on OAuth for user authentication. The only OAuth provider supported right now is [Ubuntu One](https://login.ubuntu.com/). Future versions of Anbox Cloud will allow using other OAuth providers.
 
@@ -25,7 +25,7 @@ If you haven't registered an Ubuntu One account yet, you can do that at https://
 
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to grant it access. 
 
-### Register a Ubuntu One account in Anbox Cloud
+#### Register a Ubuntu One account in Anbox Cloud
 
 On a regular Anbox Cloud deployment, use the following Juju action to register a Ubuntu One account:
 
@@ -47,7 +47,7 @@ unit-anbox-cloud-dashboard-0:
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
 
-### Register a Ubuntu One account in Anbox Cloud Appliance
+#### Register a Ubuntu One account in Anbox Cloud Appliance
 
 If you followed the instructions in [Install Appliance](https://anbox-cloud.io/docs/install-appliance) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
 
@@ -59,14 +59,14 @@ Accessing the resulting link will create the account and ask you to login via Ub
 
 The generated link is valid for one hour.
 
-## Creating applications
+### Creating applications
 
 Creating applications through the dashboard is done the same way as you would do with `amc` (see [Managing Applications](https://anbox-cloud.io/docs/manage/managing-applications)).
 Note that more advanced scenarios might not yet be possible via the dashboard and require going through `amc`.
 
 ![image|690x438](upload://9fPqr5DXciTsKy8bw90FzBxguZH.png)
 
-## Streaming applications
+### Streaming applications
 
 The dashboard comes with in-browser streaming capabilities through WebRTC.
 
