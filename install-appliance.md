@@ -5,17 +5,11 @@ This offering is well suited for initial prototype and small scale deployments.
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
 * When installing from [AWS Marketplace](https://aws.amazon.com/marketplace/):
-
   * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
-  
 * When installing the [snap](https://snapcraft.io/):
-
   * A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
-  
     > **NOTE:** The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.
-  
   * Your *Ubuntu Advantage for **Applications*** token. If you don't have yours yet, get it from https://ubuntu.com/advantage or [speak to your Canonical representative](https://anbox-cloud.io/contact-us).
-
     > **WARNING:** The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment.
 
 ## Install the appliance
