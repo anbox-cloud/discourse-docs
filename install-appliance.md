@@ -9,8 +9,8 @@ This offering is well suited for initial prototype and small scale deployments.
 * When installing the [snap](https://snapcraft.io/):
   * A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
     > **NOTE:** The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.
-  * Your *Ubuntu Advantage for **Applications*** token. If you don't have yours yet, get it from https://ubuntu.com/advantage or [speak to your Canonical representative](https://anbox-cloud.io/contact-us).
-    > **WARNING:** The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment.
+  * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
+    > **WARNING:** The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).
 
 ## Install the appliance
 
@@ -46,7 +46,7 @@ AWS offers various instance types. The Anbox Cloud Appliance images are only lis
 
 Select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient.
 
-![00_appiance-aws-instance-type|690x532](upload://AskBufPuBZg586bSaI6Eg39XGqy.png) 
+![00_appiance-aws-instance-type|690x532](upload://AskBufPuBZg586bSaI6Eg39XGqy.png)
 
 In this example, we picked *g4dn.xlarge*, which provides 4 vCPUs, 16 GB of memory and a single NVIDIA Tesla T4 GPU.
 
@@ -54,13 +54,13 @@ In this example, we picked *g4dn.xlarge*, which provides 4 vCPUs, 16 GB of memor
 
 You do not need to customise any of the settings in the instance details, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
 
-![01_appliance_configure_instance|690x533](upload://pnZxItbD6stRmcpunjQxCOjqwfn.png) 
+![01_appliance_configure_instance|690x533](upload://pnZxItbD6stRmcpunjQxCOjqwfn.png)
 
 #### Add storage
 
 The Anbox Cloud instance requires sufficient storage to work correctly. The root disk should have at minimum 50 GB and for best performance, you should create an additional EBS volume of at least 50 GB. Anbox Cloud uses the additional volume exclusively to store all of its containers. Using a separate volume isolates them from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store the containers. However, this is not recommended.
 
-![02_appliance_disk|690x533](upload://ztC8wxUxM4FFJXmXxz2ZKApNq5j.png) 
+![02_appliance_disk|690x533](upload://ztC8wxUxM4FFJXmXxz2ZKApNq5j.png)
 
 In this example, we use three storage volumes:
 
@@ -74,7 +74,7 @@ If you don't have any specific requirements, we recommend choosing the same conf
 
 To allow external access, you must open several ports in the security group attached to the AWS instance. The AMI already comes with the required configuration, so you don't need to do any changes. For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
 
-![03_appliance_security_types|690x534](upload://9KG97kpHpVdvvMDIp7qdQFnO6zT.png) 
+![03_appliance_security_types|690x534](upload://9KG97kpHpVdvvMDIp7qdQFnO6zT.png)
 
 #### Review and launch
 
@@ -87,7 +87,7 @@ Next, continue with the instructions in [Initialise the appliance](#initialise).
 <a name="install-snap"></a>
 ### Install the snap
 
-The Anbox Cloud Appliance requires a valid Ubuntu Advantage for Applications subscription. 
+The Anbox Cloud Appliance requires a valid Ubuntu Advantage for Applications subscription.
 
 Before installing the appliance, you must attach the machine on which you're running the Anbox Cloud Appliance to your Ubuntu Advantage for Applications subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Advantage for Applications token:
 
@@ -104,9 +104,9 @@ The appliance requires a few additional tools.
 - Enter the following command to install Juju:
 
       sudo snap install --channel=2.8/stable juju
-    
+
   Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information).
-  
+
 - Enter the following command to install amc:
 
       sudo snap install amc
@@ -184,7 +184,7 @@ reboot-needed: false
 
 ## Register your user account
 
-Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. 
+Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation.
 
 ![appliance-dashboard|690x442](upload://l4EPbQr1NcsD78r3K03F3ISjiL2.png)
 
