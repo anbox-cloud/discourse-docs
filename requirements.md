@@ -23,9 +23,13 @@ You must run either the [server](https://ubuntu.com/download/server) or the [clo
 
 Supported Ubuntu versions:
 
+* 18.04 (bionic) - see [Linux kernel](#linux-kernel) below for limitations
 * 20.04 (focal)
 
-## Linux Kernel
+For new deployments, Ubuntu 20.04 (focal) is preferred.
+
+<a name="linux-kernel"></a>
+## Linux kernel
 
 Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported. 
 
