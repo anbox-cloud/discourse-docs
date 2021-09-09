@@ -7,15 +7,15 @@ The following two different deployment variants and their minimum requirements w
 
 See the [overview](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) for a explanation of the differences between both variants.
 
-# General requirements
+## General requirements
 
 The following requirements apply to all variants of Anbox Cloud 
 
-## Ubuntu Advantage Token
+### Ubuntu Advantage Token
 
 After registering to Anbox Cloud, you should have received an [Ubuntu Advantage for Applications](https://ubuntu.com/advantage) token. If you haven't received one, please contact [support](https://support.canonical.com/) or your Canonical account representative as you'll need it to deploy Anbox Cloud.
 
-## Ubuntu OS
+### Ubuntu OS
 
 Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported.
 
@@ -29,7 +29,7 @@ Supported Ubuntu versions:
 For new deployments, Ubuntu 20.04 (focal) is preferred.
 
 <a name="linux-kernel"></a>
-## Linux kernel
+### Linux kernel
 
 Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported. 
 
@@ -45,7 +45,7 @@ The following table gives an overview of the available kernel versions for the d
 |OCI|>= 5.4|linux-oracle, linux-modules-extra-oracle||
 |Private|>= 5.4|linux-generic||
 
-# Anbox Cloud Appliance
+## Anbox Cloud Appliance
 
 The Anbox Cloud Appliance has the following minimum hardware requirements:
 
@@ -71,15 +71,15 @@ For external access to the Anbox Cloud Appliance, a couple of network ports must
 
 How to allow incoming traffic on the listed ports is different depending on the cloud used. Please consult the documentation of the cloud for further information on how to change the firewall.
 
-# Juju based deployments
+## Juju based deployments
 
 Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
 
-## Juju setup
+### Juju setup
 
 Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Follow the official [documentation](https://juju.is/docs/installing) to get it installed on your machine.
 
-## Minimum hardware
+### Minimum hardware
 
 While you can run Anbox Cloud on a single machine, we strongly recommend the following setup for a production environment:
 

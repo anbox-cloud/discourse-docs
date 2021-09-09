@@ -2,13 +2,13 @@
 
 [Details=1.11.1]
 
-# 1.11.1 (August 17 2021)
+## 1.11.1 (August 17 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security updates for August 2021 (see [Android Security Bulletin - August 2021](https://source.android.com/security/bulletin/2021-08-01) for more information)
 
-#### Bugs
+### Bugs
 
 * LP #1939277 lxc-attach fails on sendfile with EINVAL on 5.11
 * LP #1938877 Native crash occurred when creating an application from Android 11 after finishing application bootstrap
@@ -23,7 +23,7 @@
 
 ## 1.11.0 (August 5 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Client side virtual keyboard
 * Hardware accelerated video decoding (H.264, Nvidia GPUs only)
@@ -33,7 +33,7 @@
 * Feature flags can now be encoded in the AMS application manifest
 * AMS now uses a larger /20 network subnet for Anbox containers to allow more than 255 containers per host
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1926148 Anbox Session crashed when running with null platform (Angle EGL/GL drivers))
 * LP #1927313 Fail to launch more than 44 containers on two Nvidia GPUs
@@ -64,12 +64,12 @@
 
 ## 1.10.3 (Jul 14 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security updates for July 2021 (see [here](https://source.android.com/security/bulletin/2021-07-01) for more information)
  * Webview based on [upstream 91.0.4472.134 release](https://chromereleases.googleblog.com/2021/06/chrome-for-android-update_0579445428.html)
 
-#### Bug Fixes
+### Bug fixes
 
  * LP #1933195 Sensor device doesn't handle sync and guest_sync commands
  * LP #1932362 [appliance] public address of the lxd node in AMS is not set
@@ -81,13 +81,13 @@
 
 ## 1.10.2 (June 13 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security updates for June 2021 (see [here](https://source.android.com/security/bulletin/2021-06-01) for more information)
  * Webview based on [upstream 90.0.4430.91 release](https://chromereleases.googleblog.com/2021/06/chrome-for-android-update.html)
  * Android System UI can now be enabled for applications via a new feature flag `enable_system_ui`
 
-#### Bug Fixes
+### Bug fixes
 
  * LP #1924715 System gets blocked by sensorservice not responding
  * LP #1926397 Applicance bootstrap log is missing output of various commands
@@ -107,12 +107,12 @@
 
 ## 1.10.1 (May 13 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Properly shut down containers when they are still writing to a ZFS dataset.
  * Android security updates for May 2021 (see [here](https://source.android.com/security/bulletin/2021-05-01) for more information)
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1926695 Task reaper fails to deleted container because of "target is busy"
 * LP #1927234 Sysctl settings for new LXD nodes are not applied
@@ -125,11 +125,11 @@
 
 ## 1.9.5(May 11 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 No features were added in this release.
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1927676 No image is imported in AMS when deploying 1.9.x based Anbox Cloud
 
@@ -143,7 +143,7 @@ Existing deployments based on 1.9.x are not affected by this bug.
 
 ## 1.10.0 (May 6 2021)
 
-### New Features & Improvements
+### New features & improvements
 
 * Android 11 was released back in 2020 by Google and is now available and fully supported in Anbox Cloud. With Android 11 various [new features](https://developer.android.com/about/versions/11/features) become available for developers and applications. From an Anbox perspective Android 11 provides the same feature set as for the existing Android 10 images and will be provided with monthly security updates starting with 1.10.1
 * In earlier Anbox Cloud versions the Juju charms and bundles for Anbox Cloud where only available after whitelisting user accounts for access. With 1.10 all charms and bundles are not available in the public on the Juju Charmstore. You can see all available charms and bundles [here](https://jaas.ai/u/anbox-charmers).
@@ -156,11 +156,11 @@ Existing deployments based on 1.9.x are not affected by this bug.
 * The LLVMPipe software renderer used by Anbox as part of the `swrast` and `webrtc` platforms is now limited in the number of threads it creates for rendering to the number of vCPUs which are assigned to the container. This helps to improve its efficiency and adjusts performance to match the assigned vCPUs.
 * Webview based on [upstream 90.0.4430.91 release](https://chromereleases.googleblog.com/2021/04/chrome-for-android-update_27.html)
 
-## Known Issues
+### Known issues
 
 * With 1.10.0 Juju 2.9 is not yet fully supported. It is recommended to stick to Juju 2.8 until explicit support for Juju 2.9 is added and called out in the release notes.
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1883526 NATs reconnects quite often on a LXD deployment
 * LP #1912172 WebRTC platform hangs forever on peer connection release
@@ -192,12 +192,12 @@ Existing deployments based on 1.9.x are not affected by this bug.
 
 ## 1.9.4 (May 3 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 The 1.9.4 release adapts the AMS service to work with LXD newer than 4.0.5. LXD recently changed
 which certificate is being used on the API endpoint when running clustered. With newer LXD versions AMS fails to setup the initial LXD node within a cluster. For subsequently added nodes the problem does not exist. With the 1.9.4 release AMS now correctly uses the new certificate used by LXD and allows the initial LXD cluster bootstrap to succeed.
 
-#### Bug Fixes
+### Bug fixes
 
 No bugs were fixed in this release.
 
@@ -207,7 +207,7 @@ No bugs were fixed in this release.
 
 ## 1.9.3 (April 13 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 * The LXD charm can now take a lxd-binary resource which allows attaching and detaching custom build LXD binaries
 * `amc delete` has now a `--force` flag which allows deleting container without gracefully stopping them
@@ -216,7 +216,7 @@ No bugs were fixed in this release.
 * Webview based on [upstream 89.0.4389.105 release](https://chromereleases.googleblog.com/2021/03/chrome-for-android-update_22.html)
 * Android security updates for April 2021 (see [here](https://source.android.com/security/bulletin/2021-04-01) for more details)
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1917768 A crash occurred in the glib mainloop thread during the streaming
 * LP #1918601 Metrics reported by AMS are out-of-sync
@@ -246,11 +246,11 @@ No bugs were fixed in this release.
 
 ## 1.9.2 (March 17 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Stability and reliability improvements in AMS and the Juju charms for auto scaling of the LXD cluster. See the [documentation](https://anbox-cloud.io/docs/lxd-auto-scaling) for recommendations and guidelines on how to implement auto scaling.
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1910676 AMS leaks fds
 * LP #1917862 AMS charm tries to add/remove node when AMS service is not available
@@ -267,7 +267,7 @@ No bugs were fixed in this release.
 
 ## 1.9.1 (March 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
 * The coturn charm is now able to figure out the public address of a manually added
   machine in a Juju model when deployed on AWS
@@ -277,7 +277,7 @@ No bugs were fixed in this release.
 * Webview based on [upstream 88.0.4324.181 release](https://chromereleases.googleblog.com/2021/02/chrome-for-android-update_16.html)
 * Android security updates for March 2021 (see [here](https://source.android.com/security/bulletin/2021-03-01) for more details)
 
-### Bug Fixes
+### Bug fixes
 
 * LP #1917578 Dashboards crashes in CI when ran on AWS because it can't reach metadata service
 * LP #1913565 Exposing services on private endpoint makes them not accessible
@@ -308,17 +308,17 @@ No bugs were fixed in this release.
 
 ## 1.9.0 (February 2021)
 
-#### Deprecations
+### Deprecations
 
 * The Android 7 (`bionic:android7:arm64` and `bionic:android7:amd64`) images are now deprecated and will no longer be available starting with Anbox Cloud 1.10 which will be released in April 2021
 * The UI included in the Anbox Stream Gateway service will be dropped in Anbox Cloud 1.10 as it's being replaced with the new dashboard
 
-#### Known Issues
+### Known issues
 
 * At times the `anbox-cloud-dashboard` charm reports a `error` as workload status due to too many units trying to use `apt` on the machine at the same time. Juju will retry the installation after some time automatically and the problem will fix itself. The issue can be identified in the output of `juju debug-log --include anbox-cloud-dashboard`. This will be improved in the upcoming 1.9.1 release
 * If for the initial deployment not Ubuntu Advantage token is configured via an `overlay.yaml` the status messages reported by the charms once they become idle is not set to `UA token missing`. There is no impact in terms of functionality. Applying the UA token via `juju config <application> ua_token=<token>` will work as usual.
 
-#### New Features & Improvements
+### New features & improvements
 
 * New web based dashboard to manage applications and streaming sessions in Anbox Cloud
 * Webview based on [upstream 88.0.4324.152 release](https://chromereleases.googleblog.com/2021/02/chrome-for-android-update_4.html)
@@ -348,7 +348,7 @@ No bugs were fixed in this release.
 * The Google STUN server is no longer used
 * Streaming sessions are now ephemeral by default and will be automatically removed when the container it belongs to terminates
 
-#### Bug Fixes
+### Bug fixes
 
  * LP #1868945 Android: failed to get memory consumption info
  * LP #1873393 Close of unown file descriptor in gralloc modules causes crash
@@ -404,13 +404,13 @@ No bugs were fixed in this release.
 
 ## 1.8.3 (January 2021)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security fixes from January 2021 (patch level `2021-01-05`, see [here](https://source.android.com/security/bulletin/2021-01-01) for more details)
  * Webview update to upstream release `87.0.4280.141` (see [here](https://chromereleases.googleblog.com/2021/01/chrome-for-android-update.html) for more details)
  * Various improvements to the coturn charm to allow proper use behind [AWS Elastic Load Balancers](https://aws.amazon.com/elasticloadbalancing/)
 
-### Bug Fixes
+### Bug fixes
 
  * LP #1910583 Anbox-stream-gateway gets stuck and demands restart after some time of use
  * LP #1912342 Gateway reports database locked errors for various operations
@@ -421,12 +421,12 @@ No bugs were fixed in this release.
 
 ## 1.8.2 (December 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security fixes from December 2020 (patch level `2020-12-05`, see [here](https://source.android.com/security/bulletin/2020-12-01) for more details)
  * Webview update to upstream release ` 87.0.4280.86` (see [here](https://chromereleases.googleblog.com/2020/12/chrome-for-android-update.html) for more details)
 
-### Bug Fixes
+### Bug fixes
 
 * LP #1907464 NvEnc fails to encode when stream is in portrait mode (720x1280)
 * LP #1904078 Garbled image/video generated when taking a picture/recording a video when screen orientation is in portrait mode
@@ -438,13 +438,13 @@ No bugs were fixed in this release.
 
 ## 1.8.1 (November 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security fixes from November 2020 (patch level `2020-11-05`, see [here](https://source.android.com/security/bulletin/2020-11-01) for more details)
  * Webview update to upstream release ` 86.0.4240.185` (see [here](https://chromereleases.googleblog.com/2020/11/chrome-for-android-update.html) for more details)
 * AMS now allows locking image updates to it's own minor version. For example if AMS is at 1.8 it wont pull a 1.9 image but only patch releases for 1.8. This can be configured with the `images.version_lockstep` configuration option
 
-#### Bug Fixes
+### Bug fixes
 
 *  LP #1903510 nagios_context and nagios_servicegroups are never used in any charm
 *  LP #1885926 One touchpoint always stays when another touch event was fired
@@ -467,7 +467,7 @@ No bugs were fixed in this release.
 
 ## 1.8.0 (October 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Camera can now be provided with video and static images as content via the Anbox HTTP API
 * A new `ANBOX_EXIT_CODE` environment variable is provided to the `backup` hook of addons to provide information if Anbox terminate correctly or not
@@ -485,7 +485,7 @@ No bugs were fixed in this release.
 * Applications in AMS can now provide a free-form version field in their manifest to allow users to identify which application version is based on which APK version
 
 
-#### Bug Fixes
+### Bug fixes
 
  * LP #1898180 AMS fails when related to Anbox registry due to missing certificate
  * LP #1901513 Don't join dqlite cluster if gateway is not able to start
@@ -524,12 +524,12 @@ No bugs were fixed in this release.
 
 ## 1.7.4 (October 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security fixes from October 2020 (patch level `2020-10-05`, see [here](https://source.android.com/security/bulletin/2020-10-01) for more details)
  * Webview update to upstream release ` 86.0.4240.75` (see [here](https://chromereleases.googleblog.com/2020/10/chrome-for-android-update.html) for more details)
 
-#### Bug Fixes
+### Bug fixes
 
 None
 
@@ -539,12 +539,12 @@ None
 
 ## 1.7.3 (September 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
  * Android security fixes from September 2020 (patch level `2020-09-05`, see [here](https://source.android.com/security/bulletin/2020-09-01) for more details)
  * Webview update to upstream release ` 85.0.4183.101` (see [here](https://chromereleases.googleblog.com/2020/09/chrome-for-android-update.html) for more details)
 
-#### Bug Fixes
+### Bug fixes
 
 None
 
@@ -554,7 +554,7 @@ None
 
 ## 1.7.2 (September 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Various improvements for HA support in the Anbox Stream Gateway and its [dqlite](https://dqlite.io) integration
  * The Anbox Stream Gateway now exposes a `/1.0/status` endpoint to allow simple health checks
@@ -562,7 +562,7 @@ None
  * The LXD charm can now use Juju storage (AWS EBS, ..) at deployment time as base for the LXD storage pool
  * Coturn can now be manually configured via the Anbox Stream Agent charm configuration
 
-#### Bug Fixes
+### Bug fixes
 
  * Various fixes around interoperability of the various charms in an Anbox Cloud deployment
  * Updated and verified NRPE checks for all service components
@@ -573,11 +573,11 @@ None
 
 ## 1.7.1 (August 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Switched to [LLVMpipe](https://docs.mesa3d.org/gallium/drivers/llvmpipe.html) based software rendering in favor of [swiftshader](https://swiftshader.googlesource.com/SwiftShader/) to mitigate memory corruption during rendering in the [Android WebView](https://developer.android.com/reference/android/webkit/WebView) on both ARM and x86
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1892149: `anbox-shell pm install` fails in the prepare hook of an addon when bootstrapping an application
 * LP #1889747: Coturn should not run as root
@@ -589,7 +589,7 @@ None
 
 ## 1.7.0 (August 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Anbox Cloud is now fully integrated with [Ubuntu Advantage](https://ubuntu.com/advantage)
 * TLS certificates are now managed through a common CA for all components ([easyrsa](https://jaas.ai/u/containers/easyrsa/303))
@@ -599,7 +599,7 @@ None
 * Allow streams started via the stream gateway UI to use 1080p as display resolution
 * Deprecated the Anbox Cloud Doctor in favor of [Juju crashdump](https://github.com/juju/juju-crashdump)
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1890573: Always delete the base container even when an application failed to be bootstrapped
 * LP #1847226 Fixed a bug that prevented the Dev UI to be run in fullscreen in some cases
@@ -615,7 +615,7 @@ None
 
 ## 1.6.3 (July 2020)
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1885726: Fix the mouse and touch displacement issue for Anbox Stream Gateway UI
 
@@ -625,7 +625,7 @@ None
 
 ## 1.6.1 (June 2020)
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1885257: Fix high CPU usage for Anbox daemon
 * LP #1885972: Fix watchdog, services and video encoder settings out of sync when updating an application
@@ -636,11 +636,11 @@ None
 
 ## 1.6.2 (June 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Applications without an APK can now specify a boot activity in their application manifest
 
-#### Bug Fixes
+### Bug fixes
 
 * LP #1885107: Automatic application updates were missing configured resources, watchdog
   or service information
@@ -652,7 +652,7 @@ None
 
 ## 1.6.0 (June 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Watchdog can now be disabled via the application manifest or configured to allow
   additional packages to provide a foreground activity
@@ -682,7 +682,7 @@ None
 
 ## 1.5.2 (June 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Fix infinite loading screen issue when streaming from Anbox Stream Gateway UI
 * Fix SDK documentation for Anbox Stream Gateway and all API routes are prefixed with "/1.0"
@@ -694,7 +694,7 @@ None
 
 ## 1.5.1 (May 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Fix timeout issue when adding or removing LXD nodes from the cluster in AMS
 * Containers are now gracefully terminated to ensure the backup hook is executed
@@ -710,7 +710,7 @@ None
 
 ## 1.5 (April 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Support for Android 10 including latest security updates
 * Updated software rendering to work on Android 10
@@ -737,7 +737,7 @@ None
 
 ## 1.4 (March 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Support for Android 10 including latest security updates
 * Inclusion of an alpha version of the WebRTC based Streaming Stack
@@ -757,7 +757,7 @@ None
 
 ## 1.3 (January 2020)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Generating thumbnails within libstagefright in the Android 7 images is now working
   reliable where it was generating single colored images at times before.
@@ -777,7 +777,7 @@ None
 
 ## 1.3.2 (October 2019)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Increased maximum allowed startup time for containers to 15 minutes
 * Containers can now started with additional disk space added
@@ -795,7 +795,7 @@ None
 
 ## 1.3.1 (September 2019)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Allow underlying image of an application to be changed
 * Support for applications without an APK
@@ -803,7 +803,7 @@ None
 * Integrated Android security fixes for August 2019. See the
   [Android Security Bulletins](https://source.android.com/security/bulletin) for more information.
 
-#### Bug Fixes
+### Bug fixes
 
 * Refresh the LXD snap on demand when the config is changed
 * Don't use embedded etcd when a real etcd is available
@@ -816,7 +816,7 @@ None
 
 ## 1.3.0 (August 2019)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Images are now only distributed via the official image server and no longer available for download
 * The application registry received a dedicated CLI command to manage trusted clients
@@ -845,7 +845,7 @@ None
 
 ## 1.2.1 (April 2019)
 
-#### Bug Fixes
+### Bug fixes
 
   * Telegraf was restarted every five minutes which caused metrics from Anbox
     being lost.
@@ -873,7 +873,7 @@ None
 
 ## 1.2.0 (April 2019)
 
-#### New Features & Improvements
+### New features & improvements
 
 * Full support for an [Application Registry](installation-registry.md)
 * Updated Android 7.x with all [security patches](https://source.android.com/security/bulletin) as of Mar 5 2019
@@ -900,7 +900,7 @@ None
 
 ## 1.1.1 (Feburary 2019)
 
-#### Bug Fixes
+### Bug fixes
 
 * Anbox was taking an incorrect display size from platform plugins and failed
   to initialize EGL rendering context.
@@ -912,7 +912,7 @@ None
 
 ## 1.1.0 (January 2019)
 
-#### New Features & Improvements
+### New features & improvements
 
 * The Anbox container is now based on Ubuntu 18.04
 * Experimental support for an application registry which serves as a central repository
@@ -931,7 +931,7 @@ None
 * AMS can now run on Arm64 machines
 * Example platform plugin with software rendering and VNC support
 
-### Known Issues
+### Known issues
 
 None
 
@@ -941,7 +941,7 @@ None
 
 ## 1.0.1 (December 2018)
 
-#### Bug Fixes
+### Bug fixes
 
  * Applications are not freezing anymore when using OpenGL ES >= 2.x extensively
  * AArch32 support is now properly detected on AArch64 only machines
@@ -952,7 +952,7 @@ None
 
 ## 1.0.0 (November 2018)
 
-#### New Features & Improvements
+### New features & improvements
 
 * First official stable release of the Anbox Cloud stack
 * Simple deployment via Juju in a single command on any cloud (public, private or bare metal)
@@ -972,11 +972,11 @@ None
 * Enabled for binary translation of AArch32 on AArch64 only systems
 * OpenGL ES 3.x support
 
-#### Bug Fixes
+### Bug fixes
 
 None
 
-#### Known Issues
+### Known issues
 
 * A few applications freeze after some time and stop rendering. A reason is not known yet
   and the issue is being investigated.
