@@ -82,7 +82,7 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq 
           "camera_video_streaming",
           "sensor_support",
           "tracing_support"
-        ],         
+        ],
         "api_status": "stable",       # API implementation status (one of, development, stable or deprecated)
         "api_version": "1.0"          # The API version as a string
     },
@@ -132,7 +132,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/loca
     "type": "sync"
 }
 ```
-
+<a name="location-patch"></a>
 #### PATCH
  * Description: Provide location update to be forwarded to Android
  * Operation: sync
@@ -295,7 +295,7 @@ Since a static image is deleted,  the metadata that is recorded in camera inform
 $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.data_available
 ```
 
-#### STREAM VIDEO 
+#### STREAM VIDEO
 
 Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw color-format(rgba) based video streaming and display in the camera preview.
 
@@ -384,7 +384,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sens
 
 #### PATCH
  * Description: Update sensor data to be forwarded to Android.
-    The API accepts a JSON array-based sensor data to be forwarded to Android 
+    The API accepts a JSON array-based sensor data to be forwarded to Android
  * Operation: sync
  * Return: standard return value or standard error
 
@@ -404,7 +404,7 @@ $ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sen
 
 The sensor data is in the form of the following JSON  data structure and all values in the data are represented as floating-point data.
 
-Sensor Type       | JSON Data structure | 
+Sensor Type       | JSON Data structure |
 ------------------|---------------------|-------------------------
 `acceleration`    | {"type": "acceleration", "x": \<data\>, "y": \<data\>, "z": \<data\>} |
 `gyroscope`       | {"type": "gyroscope", "x": \<data\>, "y": \<data\>, "z": \<data\>} |
@@ -436,9 +436,9 @@ Issue GET method to sensor endpoint can check the current active sensors in Andr
 ### <h3 id='heading--10tracing'> `/1.0/tracing`</h3>
 #### GET
 
-* Description: Get tracing status 
+* Description: Get tracing status
  * Operation: sync
- * Return: Current tracing status 
+ * Return: Current tracing status
 
  Return value:
 
@@ -477,7 +477,7 @@ Issue the following request to stop tracing:
 
 ```bash
 curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1
-.0/tracing --data '{"enable":false}' | jq .     
+.0/tracing --data '{"enable":false}' | jq .
 {
  "metadata": {
    "path": "/var/lib/anbox/traces/anbox_468634.1"
@@ -488,5 +488,5 @@ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1
 }
 ```
 
-As a result, a trace file can be found from the given path recorded in the response. 
+As a result, a trace file can be found from the given path recorded in the response.
 You can pull that file from the container and import it to [Perfetto Trace Viewer](https://ui.perfetto.dev/#!/viewer) for further analysis.
