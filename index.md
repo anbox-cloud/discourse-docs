@@ -60,14 +60,15 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/managing-addons | [Addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 1 | manage/application-registry | [Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
-| 1 | manage/capacity-planning | [Capacity Planning](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 1 | manage/capacity-planning | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 2 | howto/cluster/scale-up | [Scale up a LXD cluster](tbd)|
+| 2 | howto/cluster/scale-down | [Scale down a LXD cluster](tbd)|
 | 1 | manage/gpu-support | [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | manage/managing-logs | [Logging](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 1 | manage/managing-ams-access | [AMS Access](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 1 | manage/container-access | [Container access](https://discourse.ubuntu.com/t/container-access/17772)|
 | 1 | manage/benchmarking-a-deployment | [Benchmarking a deployment](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | manage/streaming-android-applications | [Streaming Android Applications](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 1 | lxd-auto-scaling | [LXD Auto Scaling](https://discourse.ubuntu.com/t/lxd-auto-scaling/21351)|
 | 0 | | Using Anbox Cloud |
 | 1 | usage/usecase-container-configuration | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
 | 1 | howto/containers/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
@@ -105,6 +106,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | | installation/metrics-collection | https://discourse.ubuntu.com/t/metrics-collection/17753|/docs/installation/metrics-collection |
 | | manage/managing-lxd-nodes | https://discourse.ubuntu.com/t/managing-lxd-nodes/17757|/docs/manage/managing-lxd-nodes |
 | | monitoring/monitoring | https://discourse.ubuntu.com/t/monitoring/17785|/docs/monitoring/monitoring |
+| | lxd-auto-scaling | https://discourse.ubuntu.com/t/capacity-planning/17765|/docs/lxd-auto-scaling |
 [/details]
 
 ## Redirects
