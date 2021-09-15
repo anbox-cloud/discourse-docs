@@ -42,14 +42,14 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | installation/installation-customizing | [Customizations](https://discourse.ubuntu.com/t/installation-customizing/17747)|
 | 1 | installation/installation-application-registry | [Application Registry](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
 | 1 | installation/upgrading-from-previous-versions | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
-| 1 | howto/upgrade/upgrade-appliance | [Upgrade Anbox Cloud Appliance](tbd)|
+| 1 | howto/upgrade/upgrade-appliance | [Upgrade Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
 | 1 | installation/high-availability | [High Availability](https://discourse.ubuntu.com/t/high-availability/17754)|
 | 1 | installation/validation | [Validation](https://discourse.ubuntu.com/t/validation/20329)|
 | 0 | | Managing Anbox Cloud |
 | 1 | manage/getting-started | [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 1 | manage/web-dashboard | [Dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 1 | manage/managing-images | [Images](https://discourse.ubuntu.com/t/managing-images/17758)|
-| 2 | ref/provided-images | [Provided Images](tbd)|
+| 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 1 | manage/managing-applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 1 | manage/managing-addons | [Addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 1 | manage/application-registry | [Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)|
@@ -64,7 +64,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | lxd-auto-scaling | [LXD Auto Scaling](https://discourse.ubuntu.com/t/lxd-auto-scaling/21351)|
 | 0 | | Using Anbox Cloud |
 | 1 | usage/usecase-container-configuration | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
-| 1 | howto/containers/backup-and-restore | [Back up and restore application data](tbd)|
+| 1 | howto/containers/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
 | 1 | usage/usecase-port-android-application-to-anbox-cloud | [Port Android application to Anbox Cloud](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776)|
 | 1 | usage/usecase-streaming-sdk | [Anbox Streaming SDK](https://discourse.ubuntu.com/t/usecase-streaming-sdk/17783)|
 | 2 | implement-android-native-streaming-client | [Native streaming client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)|

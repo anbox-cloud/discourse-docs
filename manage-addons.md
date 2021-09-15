@@ -37,7 +37,7 @@ description: |
 Name          | Value type | Description
 --------------|------------|-------------------------
 `name`          | string     | Verbose name of the addon, A few special characters are not allowed: '< > : " / \ &#124; ? *', as well as space
-`description`       | string     | A short description to the  addon 
+`description`       | string     | A short description to the  addon
 
  The hook itself can be written in any programming language but the most common way is to use a shell script. An `install` hook that instructs how to install the addon must be included in the addon package. The two other hooks `restore` and `backup` are optional and are only executed if they exist in the package. Because of the execution sequence of `restore` and `backup` hooks and to avoid hangups on system startup or termination, you should not perform long time operations on these two hooks, the `restore` and `backup` processes will be killed if they take more than 5 minutes to complete. All hooks need to marked as executable, otherwise containers will fail to start.
 
@@ -103,11 +103,11 @@ The `prepare` hook needs to be placed as `hook/prepare` within the addon package
 
 Backup and restore hooks are scripts that run automatically whenever a container is terminated or get started. These two hooks let you trigger customizable actions at key points in the container life cycle.
 
-Common use cases for these two hooks are to [backup and restore application data](https://discourse.ubuntu.com/t/usecase-container-configuration/17782#heading--backup-and-restore). Whenever Android container is terminating, all application data, logs that are produced during the container runtime would go away. In most cases, rather than losing those data, you want to backup them by store those data to public or private cloud storage service and restore the data next time when a container was launched from the same application.
+Common use cases for these two hooks are to [back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183). Whenever Android container is terminating, all application data, logs that are produced during the container runtime would go away. In most cases, rather than losing those data, you want to backup them by store those data to public or private cloud storage service and restore the data next time when a container was launched from the same application.
 
 Meanwhile, there is an `ANBOX_EXIT_CODE`  environment variable that can be used in the  `backup` hook to detect if Anbox terminates correctly or not.
 
-For example, if you want to collect container logs and backup them to a public or private storage service for further investigation when a container doesn't terminate properly. 
+For example, if you want to collect container logs and backup them to a public or private storage service for further investigation when a container doesn't terminate properly.
 
 ```bash
 #!/bin/sh -ex
@@ -131,7 +131,7 @@ if curl -o app-data.tar.bz2 <cloud_storage_download_url> ; then
 fi
 ```
 
-The use of `aam` is recommended to [backup and restore of application data](https://discourse.ubuntu.com/t/usecase-container-configuration/17782#heading--backup-and-restore) on container start and stop. The process involves various operations to assign correct permissions to files and directories Android expects.
+The use of `aam` is recommended to [back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183) on container start and stop. The process involves various operations to assign correct permissions to files and directories Android expects.
 
 ## Add Addon to AMS
 

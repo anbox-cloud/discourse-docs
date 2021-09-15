@@ -1,6 +1,6 @@
 An image is the base for a container running in the Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
 
-See [Provided images](tbd) for information about which images Anbox Cloud provides.
+See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for information about which images Anbox Cloud provides.
 
 ## Configure image server
 
@@ -62,7 +62,7 @@ The following command removes version `1` of the image with the name `default`:
 
 In addition to the images provided through Canonical's image server, you can manually upload your own images to be used by AMS.
 
-You must choose a name for the image when uploading it. If you update the image later, use the same name so that the image is not re-created but simply updated. 
+You must choose a name for the image when uploading it. If you update the image later, use the same name so that the image is not re-created but simply updated.
 
 ### Add an image to AMS
 
@@ -104,4 +104,3 @@ Each version will give information about which version of an image it is based o
 ## Next steps
 
  * [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
- 
