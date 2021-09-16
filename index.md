@@ -51,6 +51,12 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/managing-images | [Images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 1 | manage/managing-applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 2 | howto/application/create | [Create an application](tbd)|
+| 2 | howto/application/wait | [Wait for an application](tbd)|
+| 2 | howto/application/update | [Update an application](tbd)|
+| 2 | howto/application/delete | [Delete an application](tbd)|
+| 2 | howto/application/list | [List applications](tbd)|
+| 2 | ref/application-manifest | [Application manifest](tbd)|
 | 1 | manage/managing-addons | [Addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 1 | manage/application-registry | [Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
