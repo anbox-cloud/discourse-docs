@@ -106,7 +106,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | | installation/metrics-collection | https://discourse.ubuntu.com/t/metrics-collection/17753|/docs/installation/metrics-collection |
 | | manage/managing-lxd-nodes | https://discourse.ubuntu.com/t/managing-lxd-nodes/17757|/docs/manage/managing-lxd-nodes |
 | | monitoring/monitoring | https://discourse.ubuntu.com/t/monitoring/17785|/docs/monitoring/monitoring |
-| | lxd-auto-scaling | https://discourse.ubuntu.com/t/capacity-planning/17765|/docs/lxd-auto-scaling |
 [/details]
 
 ## Redirects
@@ -115,4 +114,5 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | Path | Location |
 | ---- | -------- |
 | /docs/install-appliance | /docs/installation/installation-appliance |
+| /docs/lxd-auto-scaling | /docs/manage/capacity-planning |
 [/details]

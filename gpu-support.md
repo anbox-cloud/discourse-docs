@@ -17,59 +17,11 @@ For those GPUs which Anbox Cloud doesn't support hardware video encoding, a soft
 
 Anbox Cloud will automatically detect GPU devices on deployment and configure the cluster for these. **You can't mix GPUs from different vendors in a single deployment.**
 
-## GPU Slots
+## Required GPU slots
 
-GPUs have limited capacity that can be shared amongst multiple containers and `gpu-slots` are a way to fine-tune how many containers can run on a given node.
+GPUs have limited capacity that can be shared amongst multiple containers. To fine-tune how many containers can run on a given node, configure the number of available GPU slots on the node.
 
-In short, each LXD node has a certain amount of `gpu-slots` available, and each application can define a number of `gpu-slots` it needs. Both are configurable.
-
-### GPU Slots for LXD nodes
-
-Each GPU equipped [LXD node](https://discourse.ubuntu.com/t/managing-lxd-nodes/17757) has its own number of GPU slots configured. You can see that number with the following command:
-
-```bash
-$ amc node show lxd0
-...
-config:
-    ...
-    gpu-slots: 0
-```
-
-You can change the number of GPU slots of each node with the following command:
-
-```bash
-$ amc node set lxd0 gpu-slots 10
-```
-> **NOTE**: Determining the correct number of GPU slots for a specific GPU model depends on various things. The following just gives an idea of what should drive the decision for the right number of GPU slots:
-> * Memory a GPU provides
-> * Memory a container uses
-> * Number of parallel encoding pipelines a GPU offers
->
-> Finding the right number of GPU slots requires benchmarking and testing of the intended workload.
-
-Launching a container on that node will reserve some of those `gpu-slots` and mark them as unavailable until the container is terminated. If your node has no `gpu-slot` available, containers requiring a GPU will not be launched on it. Containers not requiring a GPU can still be launched.
-
-### GPU Slots for application
-
-Applications can declare how many `gpu-slots` they require. This number is set by default when specifying the [Instance Type](https://discourse.ubuntu.com/t/instance-types/17764) but can be overridden using [resources](https://discourse.ubuntu.com/t/managing-applications/17760).
-
-```bash
-name: android
-instance-type: g4.3
-resources:
-  gpu-slots: 3 
-```
-In this case the application will use 3 `gpu-slots` instead of 1 as defined in the instance type.
-
-Increasing the number of `gpu-slots` does **NOT** guarantee that more GPU resources are allocated to that application container.
-*e.g.: An intensive game configured with 1 `gpu-slot` will still consume more resources than a photo gallery app configured with 5 `gpu-slots`*
-
-However, it means that less containers will be launched on that node, reducing contention for GPU resources.
-
-
-
-Containers can be configured to use a hardware or software video encoder for video encoding
-This can be done through `video-encoder` field declared in the manifest file when creating an application as well. See [ Managing applications](https://discourse.ubuntu.com/t/managing-applications/17760) for more details.
+See [GPU slots](https://discourse.ubuntu.com/t/capacity-planning/17765#gpu-slots) for detailed information.
 
 ## Using GPUs inside a Container
 
