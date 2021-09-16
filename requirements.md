@@ -1,4 +1,4 @@
-To run Anbox Cloud you need to fulfil a few minimum requirements which are a bit different depending on which kind of deployment you choose. 
+To run Anbox Cloud you need to fulfil a few minimum requirements which are a bit different depending on which kind of deployment you choose.
 
 The following two different deployment variants and their minimum requirements will be covered below:
 
@@ -9,7 +9,7 @@ See the [overview](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) fo
 
 ## General requirements
 
-The following requirements apply to all variants of Anbox Cloud 
+The following requirements apply to all variants of Anbox Cloud
 
 ### Ubuntu Advantage Token
 
@@ -31,9 +31,9 @@ For new deployments, Ubuntu 20.04 (focal) is preferred.
 <a name="linux-kernel"></a>
 ### Linux kernel
 
-Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported. 
+Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported.
 
-AppArmor support must be enabled in the kernel as it's mandatory for the Anbox containers to run. 
+AppArmor support must be enabled in the kernel as it's mandatory for the Anbox containers to run.
 
 The following table gives an overview of the available kernel versions for the different supported clouds:
 
@@ -45,6 +45,7 @@ The following table gives an overview of the available kernel versions for the d
 |OCI|>= 5.4|linux-oracle, linux-modules-extra-oracle||
 |Private|>= 5.4|linux-generic||
 
+<a name="appliance"></a>
 ## Anbox Cloud Appliance
 
 The Anbox Cloud Appliance has the following minimum hardware requirements:
@@ -96,5 +97,5 @@ More CPU cores and more RAM on the machine hosting LXD will allow to run a highe
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
  - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
- 
+
 Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://anbox-cloud.io/docs/monitoring/monitoring-installation) is always important.
