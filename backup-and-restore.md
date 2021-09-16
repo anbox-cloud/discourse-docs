@@ -13,7 +13,7 @@ curl -i -X POST --data-binary @"${TARBALL_FILE}" <cloud_storage_upload_url>
 ```
 Running this script in an [addon backup hook](https://discourse.ubuntu.com/t/managing-addons/17759#heading--backup-and-restore) will back up the user data of a particular application with `aam` and upload the resulting tarball file to the cloud storage service when a container is stopped.
 
-If [`boot-package`](https://discourse.ubuntu.com/t/managing-applications/17760#heading--create-applications) is specified in the application manifest file, you can also back up the boot application data simply with the flag `--boot-package`.
+If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) is specified in the application manifest file, you can also back up the boot application data simply with the flag `--boot-package`.
 
     aam backup --boot-package
 

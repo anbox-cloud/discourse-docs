@@ -11,7 +11,7 @@ If the application fulfils all of the requirements above, it is ready to run on 
 <a name="bootstrap"></a>
 ### Bootstrap process
 
-Whenever [creating an application](tbd) either from a directory or a tarball, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits the bootstrap process provides:
+Whenever [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) either from a directory or a tarball, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits the bootstrap process provides:
 
   * It enables AMS to launch a container for an application without installing the APK every time.
   * It dramatically speeds up the startup time of a regular container.
@@ -75,8 +75,8 @@ When the application bootstrap succeeds, the base container is automatically rem
 
 See the following documentation for instructions on how to manage your applications:
 
- * [Create an application](tbd)
- * [Wait for an application](tbd)
- * [Update an application](tbd)
- * [Delete an application](tbd)
- * [List applications](tbd)
+ * [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)
+ * [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)
+ * [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)
+ * [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)
+ * [List applications](https://discourse.ubuntu.com/t/list-applications/24200)

@@ -41,7 +41,7 @@ resources:
   disk-size: 8GB
 ```
 
-See [Application manifest](tbd) for detailed information about all available attributes.
+See [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) for detailed information about all available attributes.
 
 ## Create from a directory
 
@@ -57,7 +57,7 @@ With everything in place, create the application by entering the following comma
 
     amc application create <path/to/application-content>
 
-When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](tbd) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
+When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](https://anbox-cloud.io/docs/manage/managing-applications#bootstrap) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
 
     amc application show bcmap7u5nof07arqa2ag
 
@@ -102,7 +102,7 @@ resources:
   disk-size: 8GB
 ```
 
-Once the status of the application switches to `ready`, the application is ready and can be used. See [Wait for an application](tbd) for information about how to monitor the application status.
+Once the status of the application switches to `ready`, the application is ready and can be used. See [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
 
 ## Create from a tarball
 
@@ -118,4 +118,4 @@ Once the tarball is created, you can create the application:
 
     amc application create foo.tar.bz2
 
-The AMS service now starts the application [bootstrap process](tbd). See [Wait for an application](tbd) for information about how to monitor the application status.
+The AMS service now starts the application [bootstrap process](https://anbox-cloud.io/docs/manage/managing-applications#bootstrap). See [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
