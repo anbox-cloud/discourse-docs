@@ -82,11 +82,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | usage/usecase-container-configuration | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
 | 1 | howto/containers/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
 | 1 | usage/usecase-port-android-application-to-anbox-cloud | [Port Android application to Anbox Cloud](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776)|
-| 1 | usage/usecase-streaming-sdk | [Anbox Streaming SDK](https://discourse.ubuntu.com/t/usecase-streaming-sdk/17783)|
-| 2 | implement-android-native-streaming-client | [Native streaming client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)|
-| 2 | implement-web-based-streaming-client | [Web-based streaming client](https://discourse.ubuntu.com/t/implement-web-based-streaming-client/21835)|
-| 2 | exchange-out-of-band-data | [Out-of-band data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
-| 2 | integrate-keyboard | [Client-side virtual keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
 | 1 | usage/usecase-application-testing | [Application testing](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
 | 1 | usage/usecase-virtual-devices | [Virtual Devices](https://discourse.ubuntu.com/t/virtual-devices/19069)|
 | 0 | | Monitoring |
@@ -94,10 +89,14 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | monitoring/monitoring-grafana | [Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
 | 1 | monitoring/monitoring-nagios | [Nagios](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 0 | | Reference |
+| 1 | sdks | [SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
+| 2 | implement-android-native-streaming-client | [Native streaming client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)|
+| 2 | implement-web-based-streaming-client | [Web-based streaming client](https://discourse.ubuntu.com/t/implement-web-based-streaming-client/21835)|
+| 2 | exchange-out-of-band-data | [Out-of-band data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
+| 2 | integrate-keyboard | [Client-side virtual keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
 | 1 | reference/ams-rest-api-reference | [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801)|
 | 1 | reference/anbox-http-api-reference | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819/2)|
 | 1 | reference/anbox-stream-gateway-reference | [Anbox Stream Gateway HTTP API](https://anbox-cloud.github.io/1.9/anbox-stream-gateway/index.html)|
-| 1 | reference/ams-sdk-api-reference | [AMS SDK API](https://discourse.ubuntu.com/t/ams-sdk-api-reference/17845)|
 | 1 | ams-configuration | [AMS Configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | manage/instance-types-reference | [Instance Types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
 | 1 | reference/anbox-platforms | [Anbox Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
@@ -107,7 +106,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | roadmap | [Roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 1 | component-versions | [Component Versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 1 | supported-versions | [Supported Versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
-| 1 | sdks | [SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 1 | faq | [FAQ](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
 | | installation/adding-additional-lxd-nodes | https://discourse.ubuntu.com/t/adding-additional-lxd-nodes/17752|/docs/installation/adding-additional-lxd-nodes |
 | | installation/charm-configuration | https://discourse.ubuntu.com/t/charm-configuration/17751|/docs/installation/charm-configuration |
@@ -124,4 +122,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | ---- | -------- |
 | /docs/install-appliance | /docs/installation/installation-appliance |
 | /docs/lxd-auto-scaling | /docs/manage/capacity-planning |
+| /docs/usage/usecase-streaming-sdk | /docs/sdks |
+| /docs/reference/ams-sdk-api-reference | /docs/sdks |
 [/details]

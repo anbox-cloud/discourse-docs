@@ -5,7 +5,7 @@ Starting in 1.9.0, the dashboard replaces the old Dev UI.
 
 > **Note**: The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.
 
-![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png) 
+![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png)
 
 ## Installation
 
@@ -23,7 +23,7 @@ Instead of implementing its own user management, the dashboard relies on OAuth f
 
 If you haven't registered an Ubuntu One account yet, you can do that at https://login.ubuntu.com/.
 
-Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to grant it access. 
+Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to grant it access.
 
 #### Register a Ubuntu One account in Anbox Cloud
 
@@ -70,10 +70,10 @@ Note that more advanced scenarios might not yet be possible via the dashboard an
 
 The dashboard comes with in-browser streaming capabilities through WebRTC.
 
-> **Note**: The dashboard uses the [Streaming SDK](https://anbox-cloud.io/docs/usage/usecase-streaming-sdk) under the hood.
+> **Note**: The dashboard uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk) under the hood.
 
 You can select any application you previously created and start a streaming session.
 
-![image|690x352](upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png) 
+![image|690x352](upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png)
 
 For more information about the Streaming Stack, visit https://anbox-cloud.io/docs/manage/streaming-android-applications.
