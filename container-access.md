@@ -106,8 +106,3 @@ And run the scrcpy to display and control the Android container.
 ```bash
 $ scrcpy
 ```
-
-## Next Steps
-
- * [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
- 

@@ -2,7 +2,7 @@ Anbox Cloud allows you to stream the whole Android experience next to just indiv
 
 ## Create an Application for the Virtual Device
 
-In order to create a virtual device experience we first have to create an application with AMS. This application will not contain any APK and with that will start directly into the Android system launcher and provide the full Android experience. 
+In order to create a virtual device experience we first have to create an application with AMS. This application will not contain any APK and with that will start directly into the Android system launcher and provide the full Android experience.
 
 A very simple application manifest for such an application looks like this:
 
@@ -16,7 +16,7 @@ instance-type: a4.3
 
 ## Extend the Application with Addons
 
-You can also extend the application with [addons](https://discourse.ubuntu.com/t/managing-addons/17759/2) which install additional applications you want to offer as part of your default experience. You can for example replace the standard Android launcher with a custom one like [Lawnchair](https://lawnchair.app/). 
+You can also extend the application with [addons](https://discourse.ubuntu.com/t/managing-addons/17759/2) which install additional applications you want to offer as part of your default experience. You can for example replace the standard Android launcher with a custom one like [Lawnchair](https://lawnchair.app/).
 
 ```bash
 $ mkdir -p vdev-support/hooks
@@ -50,7 +50,7 @@ EOF
 
 $ chmod +x hooks/*
 $ amc addon add vdev-support .
-``` 
+```
 
 Once the addon is uploaded to AMS, you can reference it from your application manifest:
 
@@ -67,9 +67,4 @@ The application will now include the [Lawnchair](https://lawnchair.app/) and has
 
 Now that we have the application created in AMS we can go ahead and stream it through the UI of the Anbox Stream Gateway (see [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud/17756) for more details) or your own custom client application build with the [Anbox Stream SDK](https://discourse.ubuntu.com/t/anbox-streaming-sdk/17783).
 
-![anbox-vdev|690x662,100%](upload://aX9HNy8aMxJxSdZHJvtf4PHa3hH.png) 
-
-## Next Steps
-
-* [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
-* [Container Management](https://discourse.ubuntu.com/t/managing-containers/17763)
+![anbox-vdev|690x662,100%](upload://aX9HNy8aMxJxSdZHJvtf4PHa3hH.png)

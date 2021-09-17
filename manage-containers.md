@@ -49,7 +49,7 @@ When launching a container from an application or an image directly, a regular c
   * Execute the `prepare` hook provided by the installed addons if [lauching a raw container](#heading--raw-containers)
   * Execute the `backup` hook provided by the installed addons after the container is terminated
 
-![container-launch|690x401](upload://exw6GWcRvMzkIztcUIrizFg0oJz.png) 
+![container-launch|690x401](upload://exw6GWcRvMzkIztcUIrizFg0oJz.png)
 
 The whole launch process will be successful only if all of the above steps succeed.
 
@@ -319,8 +319,3 @@ $ amc ls --filter type=regular --filter node=lxd0
 ```
 
 This will query all regular containers that are placed on the node with the name `lxd0`.
-
-## Next Steps
-
- * [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
- 

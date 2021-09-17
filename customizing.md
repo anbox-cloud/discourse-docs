@@ -230,15 +230,6 @@ $ juju gui
 
 Running this command will output some login information and a URL for the GUI interface (the GUI actually runs on the Juju controller instance). On visiting the URL given and logging in, a graphical representation of the current model will be shown. To export the model as a YAML bundle, click on the **Export** button near the top left of the screen.
 
-![Anbox Cloud - Juju GUI|690x444](upload://bXqb0LwD7EBZDwL18CsZSBZqL5r.png) 
+![Anbox Cloud - Juju GUI|690x444](upload://bXqb0LwD7EBZDwL18CsZSBZqL5r.png)
 
 For more information on the Juju GUI, see the [Juju documentation](https://docs.jujucharms.com/stable/en/controllers-gui).
-
-
-## Next Steps
-
-* [High Availability](https://discourse.ubuntu.com/t/high-availability/17754)
-* [Metrics](https://discourse.ubuntu.com/t/metrics-collection/17753)
-* [Adding additional LXD node](https://discourse.ubuntu.com/t/adding-additional-lxd-nodes/17752)
-* [Image management](https://discourse.ubuntu.com/t/managing-images/17758)
-* [Application management](https://discourse.ubuntu.com/t/managing-applications/17760/2)

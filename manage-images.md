@@ -100,7 +100,3 @@ Now that a new image version is available to AMS, it will start to create new ve
     amc application show <id>
 
 Each version will give information about which version of an image it is based on.
-
-## Next steps
-
- * [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
