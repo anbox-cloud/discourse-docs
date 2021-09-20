@@ -1,5 +1,29 @@
 > **NOTE**: If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements  category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
 
+[Details=1.11.2]
+
+## 1.11.2 (September 20 2021)
+
+### New features & improvements
+
+ * Android security updates for September 2021 (see [Android Security Bulletin - September 2021](https://source.android.com/security/bulletin/2021-09-01) for more information)
+ * Android WebView has been updated to [93.0.4577.82](https://chromereleases.googleblog.com/2021/09/chrome-for-android-update.html)
+ * The AMS node controller now synchronises its internal state to disk more often to avoid getting out of sync with the actual running containers across restarts
+ * Client-side virtual keyboard is now supported on Android 11
+ * The default instance type of an application in the dashboard is now selected based on the available GPU support
+
+#### Bugs
+
+ * LP #1938761 AnboxWebView lost focus for unknown reasons and causes client side virtual keyboard hidden in the end
+ * LP #1940807 Failed to launch anbox sessions with WebRTC platform (drm backend)
+ * LP #1940853 anbox-cloud-dashboard-51 charm fails to deploy
+ * LP #1942677 Audio/Video recording is broken on anbox swrast platform
+ * AC-304 Dashboard reports "Could not get response from Anbox Stream Gateway"
+ * AC-303 Dashboard lists non active images in application form
+ * AC-342 Connecting second ADB server breaks existing one
+
+[/Details]
+
 [Details=1.11.1]
 
 ## 1.11.1 (August 17 2021)
