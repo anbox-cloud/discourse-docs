@@ -106,3 +106,11 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | | manage/managing-lxd-nodes | https://discourse.ubuntu.com/t/managing-lxd-nodes/17757|/docs/manage/managing-lxd-nodes |
 | | monitoring/monitoring | https://discourse.ubuntu.com/t/monitoring/17785|/docs/monitoring/monitoring |
 [/details]
+
+## Redirects
+
+[details=Mapping table]
+| Path | Location |
+| ---- | -------- |
+| /docs/install-appliance | /docs/installation/installation-appliance |
+[/details]
