@@ -62,6 +62,13 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 2 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
+| 2 | howto/container/launch | [Launch a container](tbd)|
+| 2 | howto/container/wait | [Wait for a container](tbd)|
+| 2 | manage/container-access | [Access a container](https://discourse.ubuntu.com/t/container-access/17772)|
+| 2 | howto/container/expose-services | [Expose services on a container](tbd)|
+| 2 | howto/container/view-log | [View the container logs](tbd)|
+| 2 | howto/container/delete | [Delete a container](tbd)|
+| 2 | howto/container/list | [List containers](tbd)|
 | 1 | manage/capacity-planning | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
@@ -69,7 +76,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/managing-logs | [Logging](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | manage/managing-ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
-| 1 | manage/container-access | [Container access](https://discourse.ubuntu.com/t/container-access/17772)|
 | 1 | manage/benchmarking-a-deployment | [Benchmarking a deployment](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | manage/streaming-android-applications | [Streaming Android Applications](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 0 | | Using Anbox Cloud |
