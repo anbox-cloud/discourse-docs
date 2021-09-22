@@ -15,7 +15,7 @@ When launching a container from an application or an image directly, a regular c
 
 The whole launch process will be successful only if all of the above steps succeed.
 
-If something goes wrong during the container launch process, the status of the container changes to `error` status. You can [view the available logs](tbd) from the container for diagnosing the root cause of the problem.
+If something goes wrong during the container launch process, the status of the container changes to `error` status. You can [view the available logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) from the container for diagnosing the root cause of the problem.
 
 ## Launch application containers
 

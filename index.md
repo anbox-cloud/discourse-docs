@@ -62,13 +62,13 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 2 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
-| 2 | howto/container/launch | [Launch a container](tbd)|
-| 2 | howto/container/wait | [Wait for a container](tbd)|
+| 2 | howto/container/launch | [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
+| 2 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
 | 2 | manage/container-access | [Access a container](https://discourse.ubuntu.com/t/container-access/17772)|
-| 2 | howto/container/expose-services | [Expose services on a container](tbd)|
-| 2 | howto/container/view-log | [View the container logs](tbd)|
-| 2 | howto/container/delete | [Delete a container](tbd)|
-| 2 | howto/container/list | [List containers](tbd)|
+| 2 | howto/container/expose-services | [Expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)|
+| 2 | howto/container/view-log | [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)|
+| 2 | howto/container/delete | [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)|
+| 2 | howto/container/list | [List containers](https://discourse.ubuntu.com/t/list-containers/24328)|
 | 1 | manage/capacity-planning | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|

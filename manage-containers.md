@@ -1,6 +1,6 @@
 Containers are the centre piece of the Anbox Cloud stack. A single container provides a full Android system.
 
-Each container is hosted on a cluster of multiple nodes provided by the underlying LXD container hypervisor. The base for a container is an application. See [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) for more information about applications.
+Each container is hosted on a cluster of multiple nodes provided by the underlying LXD container hypervisor. The base for a container is an application. See [About applications](https://discourse.ubuntu.com/t/managing-applications/17760) for more information about applications.
 
 ## Data stored in containers
 
@@ -23,10 +23,10 @@ Status            |  Description
 
 ## Managing containers
 
- * [Launch a container](tbd)
- * [Wait for a container](tbd)
+ * [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)
+ * [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)
  * [Access a container](https://discourse.ubuntu.com/t/access-containers-remotely/17772)
- * [Expose services on a container](tbd)
- * [View the container logs](tbd)
- * [Delete a container](tbd)
- * [List containers](tbd)
+ * [Expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)
+ * [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
+ * [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
+ * [List containers](https://discourse.ubuntu.com/t/list-containers/24328)
