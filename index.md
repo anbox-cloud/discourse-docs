@@ -65,7 +65,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/capacity-planning | [Capacity Planning](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 1 | manage/gpu-support | [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | manage/managing-logs | [Logging](https://discourse.ubuntu.com/t/managing-logs/17771)|
-| 1 | exp/ams | [About AMS](tbd)|
+| 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | manage/managing-ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 1 | manage/container-access | [Container access](https://discourse.ubuntu.com/t/container-access/17772)|
 | 1 | manage/benchmarking-a-deployment | [Benchmarking a deployment](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|

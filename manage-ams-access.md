@@ -1,4 +1,4 @@
-By default, the Anbox Management Client (AMC) runs on the same machine as the [Anbox Management Service (AMS)](tbd) and connects to it through a UNIX socket.
+By default, the Anbox Management Client (AMC) runs on the same machine as the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321) and connects to it through a UNIX socket.
 
 If you want to control AMS remotely, you can install the AMC on a separate machine and configure it to connect to AMS through a secure HTTP connection.
 
@@ -12,7 +12,7 @@ To do so, use the following command:
 
 ## Install a trusted certificate
 
-Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See [Security certificates for remote clients](tbd#security-certificates) for more information.
+Controlling AMS remotely requires trusted security certificates. You can generate self-signed certificates or use certificates signed by a Certificate Authority. See [Security certificates for remote clients](https://discourse.ubuntu.com/t/about-ams/24321#security-certificates) for more information.
 
 ### Self-signed certificates
 
