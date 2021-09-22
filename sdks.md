@@ -1,10 +1,15 @@
-Anbox Cloud provides a series of Software Development Kits (SDKs) to facilitate integrating and extending Anbox Cloud for different use cases.
+Anbox Cloud provides a series of Software Development Kits (SDKs) to facilitate integrating and extending Anbox Cloud for different use cases:
 
+- [Anbox Platform SDK](#anbox-platform-sdk)
+- [AMS SDK](#ams-sdk)
+- [Anbox Streaming SDK](#streaming-sdk)
+
+<a name="anbox-platform-sdk"></a>
 ## Anbox Platform SDK
 
 The Anbox Platform SDK provides support for developing custom platform plugins, which allows cloud providers to integrate Anbox with their existing infrastructure. The SDK provides several integration points for things like rendering, audio or input processing.
 
-For more details about custom platform plugins, refer to the [Anbox Platform API documentation](https://anbox-cloud.github.io/1.9/anbox-platform-sdk/index.html).
+For more details about custom platform plugins, refer to the [Anbox Platform SDK API documentation](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html).
 
 ### Download and installation
 
@@ -23,27 +28,12 @@ The Anbox Platform SDK provides a collection of example platform plugins to help
 * `minimal` - A platform plugin that provides a dummy implementation of a minimal platform plugin to demonstrate the general plugin layout.
 * `audio_streaming` - A platform plugin that provides a more advanced example of how a platform plugin can process audio and input data.
 
+<a name="ams-sdk"></a>
 ## AMS SDK
 
 The AMS SDK offers a set of [Go](https://golang.org/) packages and utilities for any external [Go](https://golang.org/) code to be able to connect to the AMS service through the exposed REST API.
 
-### Components
-
-The AMS SDK consist of the following Go packages:
-
-* `client`: A REST client object with methods to manage applications, images, nodes, addons or containers. Each method relates to a specific management operation and wraps the REST calls and listening operations.
-
-* `api`: AMS REST API objects.
-
-* `shared`: Helper methods and tools for common tasks like system tasks, certificates, password hashing or websocket dialing.
-
-* `shared/rest/client`: REST client base functionality to wrap common behaviour of the various operations of the REST protocol and websocket management for event listening.
-
-* `shared/rest/api`: REST API basic objects, independent of any specific REST implementation.
-
-* `shared/errors`: A simple wrapper for the most commonly-used error implementation in the return of REST API.
-
-* `examples`: A set of examples to demonstrate how the `client` package can be used.
+See the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub for more information.
 
 ### Download and installation
 
@@ -59,92 +49,7 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 
 ### Authentication setup
 
-Clients must authenticate to AMS before communicating with it.
-See [client management](https://discourse.ubuntu.com/t/managing-ams-access/17774).
-
-### Connecting to AMS
-
-When creating custom code to connect to the service, you must start with the creation of a REST client object. Such an object needs a TLS configuration that includes the client certificate to be sent to AMS and the server certificate the client trusts. There are many ways of creating a TLS configuration in go. The AMS SDK provides an easy solution involving a few lines of code:
-
-```go
-import (
-    "flag"
-    "net/url"
-    "os"
-
-    "github.com/CanonicalLtd/ams/client"
-    "github.com/CanonicalLtd/ams/shared"
-)
-
-func main() {
-    flag.Parse()
-    if flag.NArg() == 0 {
-        fmt.Println("Please provide AMS service URL")
-        os.Exit(1)
-    }
-
-    serviceURL := flag.Arg(0)
-    u, err := url.Parse(serviceURL)
-    if err != nil {
-        fmt.Println("Failed to parse AMS service URL")
-        os.Exit(1)
-    }
-
-    serverCert, err := shared.GetRemoteCertificate(serviceURL)
-    if err != nil {
-        fmt.Println("Failed to get remote certificates")
-        os.Exit(1)
-    }
-
-    tlsConfig, err := shared.GetTLSConfig(clientCert, clientKey, "", serverCert)
-    if err != nil {
-        fmt.Println("Failed to get TLS config")
-        os.Exit(1)
-    }
-
-    ...
-}
-```
-
-> **Note:** Here, we regard any server certificate as valid. If you want a better compromise on the client side with the server certificate to trust, replace the `shared.GetRemoteCertificate(serviceURL)` method with code to read a server well-known certificate from a remote or local path to an x509 object and pass it to the `shared.GetTLSConfig()` method.
-
-Once the TLS configuration is ready, the next step is to create the REST client object:
-
-```go
-amsClient, err := client.New(u, tlsConfig)
-if err != nil {
-    return err
-}
-```
-
-Now the client object is ready to be used.
-
-### Asynchronous operations
-
-All operations modifying entities on AMS are executed asynchronously to prevent blocking the client. This means that a call, say, to `c.CreateApplication(...)` won't block and will return immediately, even when the operation is still not finished by the service.
-
-All asynchronous operations return a `github.com/CanonicalLtd/ams/shared/rest/client/Operation` struct object.
-
-If you want your client to wait for an asynchronous operation to complete, you can call the `Operation.Wait()` method, which will block the current thread until the operation finishes or an error occurs:
-
-```go
-operation, err := c.CreateApplication(".", nil)
-err = operation.Wait(context.Background())
-if err != nil {
-    return err
-}
-```
-
-In your code, you can receive the resulting resources and extract the ID of the created application:
-
-```go
-resources := operation.Get().Resources
-for _, r := range resources {
-    for _, id := range r {
-        fmt.Printf("id: %s", path.Base(id))
-    }
-}
-```
+Clients must authenticate to AMS before communicating with it. For more information, see [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub.
 
 <a name="streaming-sdk"></a>
 ## Anbox Streaming SDK

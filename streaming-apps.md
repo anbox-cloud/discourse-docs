@@ -1,7 +1,7 @@
 The Streaming Stack is based on [WebRTC](https://webrtc.org/) and integrates with GPUs from different vendors to enable low latency video encoding mandatory for any kind of real time streaming use case.
 
 This section covers usage of the Streaming Stack, for installation instructions please refer to [the installation page](https://discourse.ubuntu.com/t/installation-quickstart/17744).
-We also assume you know [how to get access to the Stream Gateway API].
+We also assume you know [how to get access to the Stream Gateway API](https://discourse.ubuntu.com/t/managing-stream-gateway-access/1778).
 
 ## Streaming Stack Overview
 
@@ -14,11 +14,11 @@ Each component of the stack fills a specific role:
 
 You can see how each component interact when creating a new streaming session
 
-![streaming-stack-sequence|2400x1350](upload://wsIbNMDA3PLkdS54W5GIlUNfkWk.png) 
+![streaming-stack-sequence|2400x1350](upload://wsIbNMDA3PLkdS54W5GIlUNfkWk.png)
 
 ## Streaming an Application
 
-As mentionned above, `sessions` are an important concept for the Streaming Stack. They contain userdata, application information and more, but most importantly, they provide an entrypoint for both the client and the container to start the [signaling process](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/).
+As mentioned above, `sessions` are an important concept for the Streaming Stack. They contain userdata, application information and more, but most importantly, they provide an entrypoint for both the client and the container to start the [signaling process](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/).
 Signaling is a process by which both peers establish optimal codecs, network routes and content types.
 
 ### 1. Creating the session
@@ -30,9 +30,8 @@ The session is created by calling the Gateway API at `POST /1.0/sessions`. The r
 
 ### 2. The signaling process
 
-When they can contact each other, both peers have to agree on a number of parameters. This process of exchanging messages
-is called the `signaling process`.  
-Details about exchanged messages aren't covered in this page, but you can find more information [here](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).  
+When they can contact each other, both peers have to agree on a number of parameters. This process of exchanging messages is called the `signaling process`.
+Details about exchanged messages aren't covered in this page, but you can find more information [here](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 The following provides an overview of the process:
 
  1. The container creates an offer containing the desired streams (video, audio, binary) as well as codec
@@ -52,7 +51,7 @@ The streams can then be consumed to display the final content.
 
 ## Supported Video Codecs
 
-In order to support low latency encoding the list of supported video codecs is limited as not all codecs are either support by any of the supported GPU models or are not performing well enough for low latency purposes.
+In order to support low latency encoding the list of supported video codecs is limited as not all codecs are either supported by any of the supported GPU models or are not performing well enough for low latency purposes.
 
 Currently supported video codecs are:
 
@@ -66,7 +65,6 @@ In the future we plan to add support for:
  * VP9
  * AV1
 
-When additional codecs become available depends on when they are supported by the GPU vendors
-in their hardware encoding solutions or if a viable software encoding solution exists.
+When additional codecs become available depends on when they are supported by the GPU vendors in their hardware encoding solutions or if a viable software encoding solution exists.
 
 Anbox Cloud combines both software and hardware video encoding in order to utilize available resources in the best possible way. Hardware video encoders usually have limited capacity of how many simulatenous video streams they can encode for low latency scenarios. The Nvidia T4 can for example encode 37 video streams at 720p and 30 frames per second (see "[Turing H.264 Video Encoding Speed and Quality](https://devblogs.nvidia.com/turing-h264-video-encoding-speed-and-quality/)" for more details). Depending on the used CPU platform additional compute capacity might be available to support additional session via software encoding.

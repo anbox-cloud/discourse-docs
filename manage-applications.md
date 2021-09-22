@@ -80,3 +80,5 @@ See the following documentation for instructions on how to manage your applicati
  * [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)
  * [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)
  * [List applications](https://discourse.ubuntu.com/t/list-applications/24200)
+ * [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)
+ * [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)

@@ -1,5 +1,7 @@
 With this quick start guide and some tools from Canonical, you'll have an Anbox Cloud running on the cloud of your choice in minutes!
 
+> **NOTE:** There is a difference between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
+
 ## What you'll need
 
 For the quickstart into Anbox Cloud you will need the following things:
@@ -108,7 +110,7 @@ You will use the overlay file in the next steps.
 
 ### Deploy Anbox Cloud
 
-Deploy the Anbox Cloud bundle to the Juju model. This will add instances to the model and deploy the required applications. 
+Deploy the Anbox Cloud bundle to the Juju model. This will add instances to the model and deploy the required applications.
 
 The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud which is enough for smaller scale use cases, e.g. application testing or automation or if you generally don't want to use the Anbox Cloud streaming stack.
 

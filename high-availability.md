@@ -1,5 +1,5 @@
 Anbox Cloud comes with support for High Availability (HA) for both Core and the Streaming Stack.
-Next to [Juju's support for high availability of the Juju controller](https://juju.is/docs/controller-high-availability), you can add HA for the Anbox Management Service (AMS) and the Anbox Stream Gateway to ensure fault tolerance and higher uptime.
+Next to [Juju's support for high availability of the Juju controller](https://juju.is/docs/controller-high-availability), you can add HA for the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321) and the Anbox Stream Gateway to ensure fault tolerance and higher uptime.
 
 Enabling High Availability (HA for short) is achieved by [adding new units via juju](https://juju.is/docs/scaling-applications).
 This will allocate a new machine, run new instances of the scaled application and configure the cluster automatically.
@@ -34,12 +34,12 @@ $ juju add-unit ams -n 2
 ```
 
 > Note: If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to ams:
->    
+>
 >```bash
 >$ amc remote add lb https://10.75.96.23:8444
 >$ amc remote set-default lb
 >```
-        
+
 The port to use is always `8444`, the same AMS is listening on.
 
 ## Anbox Streaming Stack
@@ -62,7 +62,7 @@ This would give you 3 instances of both the Stream Gateway and the Stream Agent.
 ## Checking status
 
 When adding new units, Juju will create new machine so it may take a few minutes for
-your cluster to be fully operational.  
+your cluster to be fully operational.
 You can check `juju status` to see the current deployment status:
 
 ```
@@ -99,4 +99,3 @@ $ juju remove-unit anbox-stream-agent/2
 ```
 
 The cluster will reconfigure itself to work with the removed unit.
-
