@@ -1,5 +1,6 @@
 Anbox Cloud provides a rich software stack to enable you to run Android in the cloud for all kinds of different uses cases. This page intends to give you an overview over the available variants and internal components which make Anbox Cloud.
 
+<a name="variants"></a>
 ## Variants
 
 Anbox Cloud exists in two different variants which serve different purposes:
@@ -40,7 +41,7 @@ Starting from 1.4, Anbox Cloud comes with an easy to use streaming solution. The
 
 The following picture shows an overview of how the different components work together to enable this.
 
-![streaming-stack-overview|690x440](upload://qXJleBmvwQFi2cc1HuPF7P5S15b.png) 
+![streaming-stack-overview|690x440](upload://qXJleBmvwQFi2cc1HuPF7P5S15b.png)
 
 Main components powering the streaming stack in Anbox Cloud:
 
