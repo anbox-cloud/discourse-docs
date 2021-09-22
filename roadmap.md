@@ -2,7 +2,7 @@ In order to plan for new updates of the Anbox Cloud software stack, this page gi
 
 ## Release Cycle
 
-Anbox Cloud follows a defined release cycle with frequent minor and patch releases. 
+Anbox Cloud follows a defined release cycle with frequent minor and patch releases.
 
 #### Minor releases
 
@@ -13,23 +13,6 @@ A new minor release of Anbox Cloud is released every three months. It includes n
 A patch release for Anbox Cloud is released at the beginning of every month and includes Android and Chrome security updates alongside Anbox Cloud specific bug fixes.
 
 ## Roadmap
-
-### 1.11 (~ early August  2021)
-
-* H.264 video decoding inside Android container on systems with Nvidia GPUs
-* Client side virtual keyboard
-* Location and sensor support in the Anbox Stream SDK
-* Wifi support
-
-### 1.11.1 (~ mid August 2021)
-
-* August 2021 security update for Android and Chrome
-* Bug fixes
-
-### 1.11.2 (~ mid September 2021)
-
-* September 2021 security update for Android and Chrome
-* Bug fixes
 
 
 ### 1.11.3 (~ mid October 2021)
