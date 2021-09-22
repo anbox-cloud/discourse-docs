@@ -117,8 +117,3 @@ After the container is up and running, you need to specify the proper `appPackag
   "appActivity": ".MainActivity"
 }
 ```
-
-## Next Steps
-
-* [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
-* [Container Management](https://discourse.ubuntu.com/t/managing-containers/17763)

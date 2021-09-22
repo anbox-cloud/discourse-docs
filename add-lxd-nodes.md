@@ -26,13 +26,13 @@ List the available machines to confirm it has been added:
 ```bash
 $ juju list-machines
 Machine  State    DNS           Inst id              Series AZ Message
-0    	  started  192.168.1.9   manual:192.168.1.9   bionic  Manually provisioned machine 
+0    	  started  192.168.1.9   manual:192.168.1.9   bionic  Manually provisioned machine
 1    	  started  192.168.1.10  manual:192.168.1.10  bionic  Manually provisioned machine
 2    	  started  192.168.1.11  manual:192.168.1.11  bionic  Manually provisioned machine
 ```
 
 As before, take care that a new machine is in the `started` state before you proceed. If
-still in `down` state, please wait until it switches to `started`. 
+still in `down` state, please wait until it switches to `started`.
 
 When the environment is ready, you can add the additional LXD node by requesting Juju to add a new unit of the LXD charm onto machine 2:
 
@@ -41,7 +41,3 @@ $ juju add-unit lxd --to 2
 ```
 
 Once the unit is deployed it is added automatically added to AMS as a new LXD node.
-
-## Next Steps
- * [Node Management](https://discourse.ubuntu.com/t/managing-lxd-nodes/17757)
- 

@@ -61,7 +61,7 @@ To create an application through the web dashboard, open `https://<your-machine-
 
 ### Create an application on the command line
 
-To create and manage an application from the command line, use `amc`. 
+To create and manage an application from the command line, use `amc`.
 
 You must provide a `manifest.yaml` file for your application. In its simplest form, the manifest looks like this:
 
@@ -85,8 +85,3 @@ You can use the `amc application show <app name>` command to display the status 
 When processing is done, you can start a container for your new application by launching the application:
 
     amc launch <app name>
-
-## Next steps
-* [Image Management](https://discourse.ubuntu.com/t/managing-images/17758)
-* [Container Management](https://discourse.ubuntu.com/t/managing-containers/17763)
-* [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)
