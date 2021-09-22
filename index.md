@@ -62,7 +62,9 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 2 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
-| 1 | manage/capacity-planning | [Capacity Planning](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 1 | manage/capacity-planning | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 2 | howto/cluster/scale-up | [Scale up a LXD cluster](tbd)|
+| 2 | howto/cluster/scale-down | [Scale down a LXD cluster](tbd)|
 | 1 | manage/gpu-support | [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | manage/managing-logs | [Logging](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
@@ -70,7 +72,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/container-access | [Container access](https://discourse.ubuntu.com/t/container-access/17772)|
 | 1 | manage/benchmarking-a-deployment | [Benchmarking a deployment](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | manage/streaming-android-applications | [Streaming Android Applications](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 1 | lxd-auto-scaling | [LXD Auto Scaling](https://discourse.ubuntu.com/t/lxd-auto-scaling/21351)|
 | 0 | | Using Anbox Cloud |
 | 1 | usage/usecase-container-configuration | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
 | 1 | howto/containers/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
@@ -116,4 +117,5 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | Path | Location |
 | ---- | -------- |
 | /docs/install-appliance | /docs/installation/installation-appliance |
+| /docs/lxd-auto-scaling | /docs/manage/capacity-planning |
 [/details]
