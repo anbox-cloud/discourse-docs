@@ -63,8 +63,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 1 | manage/capacity-planning | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
-| 2 | howto/cluster/scale-up | [Scale up a LXD cluster](tbd)|
-| 2 | howto/cluster/scale-down | [Scale down a LXD cluster](tbd)|
+| 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
+| 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
 | 1 | manage/gpu-support | [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | manage/managing-logs | [Logging](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
