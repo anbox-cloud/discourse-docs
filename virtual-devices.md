@@ -65,6 +65,6 @@ The application will now include the [Lawnchair](https://lawnchair.app/) and has
 
 ## Launching the new Application
 
-Now that we have the application created in AMS we can go ahead and stream it through the UI of the Anbox Stream Gateway (see [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud/17756) for more details) or your own custom client application build with the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
+Now that we have the application created in AMS we can go ahead and stream it through the UI of the Anbox Stream Gateway (see [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud/17756) for more details) or your own custom client application built with the [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
 
 ![anbox-vdev|690x662,100%](upload://aX9HNy8aMxJxSdZHJvtf4PHa3hH.png)
