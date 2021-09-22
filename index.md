@@ -59,8 +59,8 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/managing-addons | [Addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 1 | manage/application-registry | [Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 2 | installation/installation-application-registry | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
-| 2 | howto/aar/configure | [Configure an AAR](tbd)|
-| 2 | howto/aar/revoke | [Revoke an AAR client](tbd)|
+| 2 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
+| 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 1 | manage/managing-containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 1 | manage/capacity-planning | [Capacity Planning](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 1 | manage/gpu-support | [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768)|

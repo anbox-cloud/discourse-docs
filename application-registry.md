@@ -20,5 +20,5 @@ A single AMS instance can act only as a publisher or as a client, but not both. 
 See the following documentation for instructions on how to use the AAR:
 
 * [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)
-* [Configure an AAR](tbd)
-* [Revoke an AAR client](tbd)
+* [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)
+* [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)
