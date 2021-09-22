@@ -1,52 +1,23 @@
-The Anbox Application Registry, or *AAR*, provides a central repository for applications created on Anbox Cloud.
-It is very useful for larger deployments involving multiple regions in order to keep applications in sync.
+An Anbox Application Registry (AAR) should be deployed on a single unit. After deploying, continue to [configure it](tbd) and connect it with all AMS units that you want to synchronise.
 
-## Deploying 
+Use the following commands to deploy an AAR:
 
-The Application Registry should be deployed on a single unit and connected with all `ams` units you want to synchronize.
+    juju deploy cs:~anbox-charmers/aar
+    juju config aar ua_token=<your UA token>
 
-```sh
-$ juju deploy cs:~anbox-charmers/aar
-$ juju config aar ua_token=<your UA token>
-```
+## Using the AWS S3 storage backend
 
-### Relating to AMS
+The AAR has support for hosting application images on AWS S3.
 
-The `aar` charm offers two principle relations: `client` and `publisher`.
+When using the S3 storage backend, image downloads will be redirected to S3 instead of being served directly by the AAR. The AAR will only be asked for metadata by its clients.
 
- - `client` can hold many units. It only provides read only access
- - `publisher` can only be related to one `ams` unit. It provides read/write access
+### Create and configure an S3 bucket
 
-```sh
-$ juju relate ams aar:publisher
-```
+To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the AWS documentation [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
 
-For `ams` units deployed in another model, you can make use of [Juju cross model relations](https://juju.is/docs/cross-model-relations).
+If you don’t plan to use the [CloudFront CDN](#cloudfront), you should use a region close to your Anbox Cloud deployment to keep download times low.
 
-```sh
-$ juju switch <model containing aar>
-$ juju offer aar:client
-my-controller/my-model.aar
-$ juju switch <model containing ams>
-$ juju relate ams my-controller/my-model.aar
-```
-
-### Using AWS S3 Storage Backend
-
-The Application Registry has support to host images on AWS S3.
-Next to that distribution of the images can be highly improved with additional support for the AWS CloudFront CDN.
-
-When using the S3 storage backend image downloads will be redirect to S3 instead of being served by the registry.
-The registry will be only asked for metadata by its clients.
-
-##### Create and Configure a S3 bucket
-You need to create a dedicated S3 bucket for the registry first. See the AWS documentation for more details on
-this [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html).
-
-If you don’t plan to use the CloudFront CDN you should use a region close to your Anbox Cloud deployment to keep download times low.
-
-To allow the registry to access the S3 bucket you need to create an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
-user with the following policy:
+To allow the AAR to access the S3 bucket, create an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) user with the following policy:
 
 ```json
 {
@@ -80,10 +51,9 @@ user with the following policy:
 
 Replace `aar0` in the policy with the name of your bucket.
 
-Once you created the IAM user you need to create an access key for the user which the registry will use.
-See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this.
+Once you created the IAM user, create an access key for the user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this.
 
-Finally you can update the registry configuration with the charm configuration:
+Finally, update the AAR configuration via the charm configuration:
 
 ```sh
 $ cat config.yaml
@@ -98,15 +68,14 @@ aar:
 juju config aar -f config.yaml
 ```
 
+<a name="cloudfront"></a>
 ### AWS CloudFront CDN support
 
-To bring the images closer to your Anbox Cloud deployments in a more world wide context you can use the AWS CloudFront CDN.
-The [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) describes all necessary setup steps.
+The distribution of the images can be highly improved by adding support for the AWS CloudFront CDN, which brings the images closer to your Anbox Cloud deployments in a more world wide context. The [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html) describes all necessary setup steps.
 
-Once you have setup a CloudFront distribution for your S3 bucket you only need the base URL, public key and key pair
-id in order to configure the registry to use CloudFront to serve image downloads.
+Once you have set up a CloudFront distribution for your S3 bucket, you only need the base URL, public key and key pair ID to configure the AAR to use CloudFront to serve image downloads.
 
-The registry configuration can now be updated via the charm configuration:
+Update the AAR configuration via the charm configuration:
 
 ```sh
 $ cat config.yaml
@@ -128,6 +97,3 @@ aar:
           duration: 1m
 $ juju config aar -f config.yaml
 ```
-### Next Steps
-
-* [Application Registry](https://discourse.ubuntu.com/t/installation-application-registry/17749)
