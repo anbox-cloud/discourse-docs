@@ -40,7 +40,7 @@ Scrcpy is not available from the official Ubuntu repositories. Therefore, you mu
 
 ### Launch container
 
-To interact with scrcpy, each container must be leveraging proper graphics drivers to work. At best the container is launched with a platform that has a proper GPU supported if the deployment includes the [GPU Support](https://discourse.ubuntu.com/t/gpu-support/17768). Otherwise, you can use the `swrast` platform instead, which provides a software rendering graphics driver based on [swiftshader](https://swiftshader.googlesource.com/SwiftShader). The `swrast` platform has been included in the official released images that can be downloaded from an image server hosted by Canonical. We will use the `swrast` platform in the following example.
+To interact with scrcpy, each container must be leveraging proper graphics drivers to work. At best the container is launched with a platform that has a proper GPU supported if the deployment includes the [GPU support](https://discourse.ubuntu.com/t/gpu-support/17768). Otherwise, you can use the `swrast` platform instead, which provides a software rendering graphics driver based on [swiftshader](https://swiftshader.googlesource.com/SwiftShader). The `swrast` platform has been included in the official released images that can be downloaded from an image server hosted by Canonical. We will use the `swrast` platform in the following example.
 
 First, launch a container with the `swrast` platform:
 

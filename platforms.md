@@ -21,7 +21,7 @@ $ amc launch -p swrast <application>
 
 Anbox Cloud provides a way of inserting user data to Android container upon its launch which can configure the display settings for swrast platform.
 
-By default when launching a container on the swrast platform without specifying the display settings through user data, the following display specification will be used: 
+By default when launching a container on the swrast platform without specifying the display settings through user data, the following display specification will be used:
 
 Display specs   | Value
 ----------------|-------
@@ -54,4 +54,4 @@ Instead of supplying the display settings via userdata through the `amc launch` 
 
 ### `webrtc` platform
 
-When using the [Stream Gateway](https://discourse.ubuntu.com/t/streaming-android-applications/17769), the `webrtc` platform is automatically used when launching containers. You don't need to perform additional steps. Launching a container with the webrtc platform can be done via [Stream Gateway UI](https://anbox-cloud.io/docs/manage/getting-started).
+When using the [Stream Gateway](https://discourse.ubuntu.com/t/streaming-android-applications/17769), the `webrtc` platform is automatically used when launching containers. You don't need to perform additional steps. Launching a container with the webrtc platform can be done via the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).

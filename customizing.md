@@ -1,4 +1,4 @@
-The [Quick start](https://discourse.ubuntu.com/t/installation-quickstart/17744) documentation explains how to perform a quick and easy general install of Anbox Cloud. However, in some cases it may be useful to customise the installation:
+The [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/installation-quickstart/17744) documentation explains how to perform a quick and easy general install of Anbox Cloud. However, in some cases it may be useful to customise the installation:
 
 * Deploying on bare metal
 * Adding additional components
@@ -10,10 +10,11 @@ The [Quick start](https://discourse.ubuntu.com/t/installation-quickstart/17744) 
 
 ## What You Will Need
 
-The rest of this page assumes you already have Juju installed and have added credentials for a cloud and bootstrapped a controller. If you still need to do this, please take a look at the [quickstart instructions](https://discourse.ubuntu.com/t/installation-quickstart/17744), or, for custom clouds (OpenStack, MAAS), please consult the [Juju documentation](https://jaas.ai/docs). In case that you want to deploy on bare metal, please have a look below.
+The rest of this page assumes you already have Juju installed and have added credentials for a cloud and bootstrapped a controller. If you still need to do this, please take a look at the [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/installation-quickstart/17744), or, for custom clouds (OpenStack, MAAS), please consult the [Juju documentation](https://jaas.ai/docs). In case that you want to deploy on bare metal, please have a look below.
 
 Before you start, please make sure you read about the [requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) Anbox Cloud has.
 
+<a name="available-juju-bundles"></a>
 ## Available Juju Bundles
 
 To deploy Anbox Cloud, two different Juju bundles exist:
@@ -23,7 +24,7 @@ To deploy Anbox Cloud, two different Juju bundles exist:
 
 Each bundle as different requirements you can learn about [here](https://discourse.ubuntu.com/t/installation-requirements/17734).
 
-If you don't have any need for streaming the visual output of the Android containers you can use the **anbox-cloud-core** bundle, otherwise you'll need the **anbox-cloud** bundle. However, even without the streaming stack there are still ways to get visual access for inspection purposes. See [Remote Access](remote-access.md) for more details.
+If you don't have any need for streaming the visual output of the Android containers you can use the **anbox-cloud-core** bundle, otherwise you'll need the **anbox-cloud** bundle. However, even without the streaming stack there are still ways to get visual access for inspection purposes. See [Access a container](https://discourse.ubuntu.com/t/container-access/17772) for more details.
 
 ## Manual Deployment
 

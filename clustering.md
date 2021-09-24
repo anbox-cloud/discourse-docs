@@ -6,7 +6,7 @@ Each worker node runs [LXD](https://linuxcontainers.org/) in clustering mode, an
 
 Anbox Cloud is optimised to provide containers at high density per host. However, to provide enough underlying resources for a specific number of containers, you need to do some calculations to find out how many LXD machines (thus worker nodes) with how many resources you need.
 
-Each container will take a specific amount of resources defined by the instance type used by the application it is launched for. If an application uses the `a2.3` instance type, it requires 2 CPU cores and 3 GB of memory and 3 GB of disk space (see [Instance Types](https://discourse.ubuntu.com/t/instance-types/17764) for details on how much resources each instance type requires). AMS internally summarises the amount of resources used by containers on a single machine and disallows launching additional containers when all resources are used.
+Each container will take a specific amount of resources defined by the instance type used by the application it is launched for. If an application uses the `a2.3` instance type, it requires 2 CPU cores and 3 GB of memory and 3 GB of disk space (see [Instance types](https://discourse.ubuntu.com/t/instance-types/17764) for details on how much resources each instance type requires). AMS internally summarises the amount of resources used by containers on a single machine and disallows launching additional containers when all resources are used.
 
 For a machine with 8 CPU cores and 16 GB of memory, you could only launch 4 containers before you run out of resources. As a single container will not use the dedicated CPU cores all time at 100%, AMS allows overcommitting available resources.
 
@@ -53,7 +53,7 @@ Which CPU allocation rate makes sense always depends on which type of applicatio
 <a name="gpu-slots"></a>
 ### GPU slots
 
-An additional aspect to take into account when planning your resources is the number of required GPU slots (see [About GPU support](https://anbox-cloud.io/docs/manage/gpu-support) for more information).
+An additional aspect to take into account when planning your resources is the number of required GPU slots (see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for more information).
 
 GPUs have limited capacity that can be shared amongst multiple containers, and GPU slots are a way to fine-tune how many containers can run on a given node.
 
@@ -85,7 +85,7 @@ Launching a container on that node will reserve some of those GPU slots and mark
 
 #### GPU slots for application
 
-Applications can declare how many GPU slots they require. This number is set by default when specifying the [Instance Type](https://discourse.ubuntu.com/t/instance-types/17764), but it can be overridden using [resources](https://discourse.ubuntu.com/t/application-manifest/24197).
+Applications can declare how many GPU slots they require. This number is set by default when specifying the [instance type](https://discourse.ubuntu.com/t/instance-types/17764), but it can be overridden using [resources](https://discourse.ubuntu.com/t/application-manifest/24197).
 
 ```bash
 name: android
@@ -100,7 +100,7 @@ Increasing the number of GPU slots does **NOT** guarantee that more GPU resource
 
 However, it means that less containers will be launched on that node, reducing contention for GPU resources.
 
-Containers can be configured to use a hardware or software video encoder for video encoding. This can be done through the `video-encoder` field declared in the manifest file when creating an application as well. See [ Managing applications](https://discourse.ubuntu.com/t/managing-applications/17760) for more details.
+Containers can be configured to use a hardware or software video encoder for video encoding. This can be done through the `video-encoder` field declared in the manifest file when creating an application as well. See [Video encoder](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) for more details.
 
 ## LXD auto scaling
 

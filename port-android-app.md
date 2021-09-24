@@ -21,8 +21,7 @@ To list all required runtime permissions of an application, you can use the [AAP
 $ aapt2 dump permissions <path to apk>
 ```
 
-Then add the required permissions to top-level key [`required-permissions`]
-in the application `manifest.yaml`, for example:
+Then add the required permissions to top-level key `required-permissions` in the application `manifest.yaml`, for example:
 
 ```yaml
 ....
@@ -60,7 +59,7 @@ Depends on your Anbox Cloud deployment architecture, if the container layer is r
 ## Support OBB Files
 
 Android [has a 100MB limit on applications](https://developer.android.com/google/play/expansion-files.html).
-Applications under that limit can be created using the regular [method](https://discourse.ubuntu.com/t/managing-applications/17760#heading--create-applications).
+Applications under that limit can be created using the regular [method](https://discourse.ubuntu.com/t/create-an-application/24198).
 Larger applications however need to be split up into the main part as an APK file and the expansion part as an OBB file.
 
 - APK - Contains the executables and native libraries(*.so files), plug-ins, basic assets, and data required by the application to load for the first time.
@@ -107,11 +106,11 @@ $ amc application create .
 
 Upon application installation, the `.obb` file will be copied to the destination folder as defined in `manifest.yaml`. Then when launching a regular container from the created application, the `.obb` file will be automatically loaded on startup.
 
-The destination location of `.obb` file may vary depending on the applications. Some applications load the obb file from the SD card `/sdcard/Android/obb/`, but some load it from device internal storage `/data/media/obb`. If an obb file is not properly installed in the container, an application may not function as expected. Some applications exit immediately once the required obb file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/managing-applications/17760#heading--create-applications) in the end and cause the container to end up in an error state.
+The destination location of `.obb` file may vary depending on the applications. Some applications load the obb file from the SD card `/sdcard/Android/obb/`, but some load it from device internal storage `/data/media/obb`. If an obb file is not properly installed in the container, an application may not function as expected. Some applications exit immediately once the required obb file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) in the end and cause the container to end up in an error state.
 
 ## Strict Watchdog Restriction
 
-The [watchdog](https://discourse.ubuntu.com/t/managing-applications/17760#heading--create-applications) is enabled by default upon application creation. It's tricky to identify a problem or debug a porting issue when a watchdog is enabled since a container will be terminated when a watchdog is triggered.
+The [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) is enabled by default upon application creation. It's tricky to identify a problem or debug a porting issue when a watchdog is enabled since a container will be terminated when a watchdog is triggered.
 
 To overcome the problem introduced by watchdog and facilitate application porting, it's recommended to disable the watchdog settings for the time being upon application creation.
 This can be done with the top-level key `watchdog` in the application `manifest.yaml`:

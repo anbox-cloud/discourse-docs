@@ -14,13 +14,13 @@ For the quickstart into Anbox Cloud you will need the following things:
 
 > **WARNING:** The *Ubuntu Advantage for **Infrastructure*** token every user gets for free for personal use does **NOT** work and will result in a failed deployment!
 
-> **NOTE:** If you don't meet these requirements, there are additional ways of installing the Anbox Cloud. See the more general [Custom installation page](https://discourse.ubuntu.com/t/installation-customizing/17747) for details.
+> **NOTE:** If you don't meet these requirements, there are additional ways of installing the Anbox Cloud. See the more general [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747) for details.
 
 ### Install Juju
 
 Juju is a tool for deploying, configuring and operating complex software on public or private clouds.
 
-Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information). To install this version, enter the following command:
+Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for more information). To install this version, enter the following command:
 
     sudo snap install --channel=2.8/stable juju
 
@@ -231,6 +231,6 @@ Once done, the reboot operation is finished.
 
 Congratulations! You have Anbox Cloud up and running - now let's use it! The link below takes you to the operations guide, detailing some of the common things you'll want to do next:
 
-[Get started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started/17756).
+[Getting started](https://discourse.ubuntu.com/t/getting-started/17756)
 
-> Note:  This guide gets you up and running with Anbox Cloud quickly. If you want to explore how to customise your install, please see the [Installation page](https://discourse.ubuntu.com/t/installation-customizing/17747/2) for a more detailed guide.
+> Note:  This guide gets you up and running with Anbox Cloud quickly. If you want to explore how to customise your install, please see [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747) for a more detailed guide.

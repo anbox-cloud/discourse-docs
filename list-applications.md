@@ -10,7 +10,7 @@ The filter flag accepts a key-value pair as input for the filter. The following 
 
 Name            |  Value
 ----------------|------------
-`instance-type` |  Supported instance type. See [Instance Types](https://discourse.ubuntu.com/t/instance-types-reference/17764) for a list of available instance types.
+`instance-type` |  Supported instance type. See [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764) for a list of available instance types.
 `addons`        |  Comma-separated list of addons.
 `tag`           |  Application tag name (deprecated, use `tags` instead).
 `tags`          |  Comma-separated list of tags.

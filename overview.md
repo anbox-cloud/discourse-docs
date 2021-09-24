@@ -28,11 +28,11 @@ The following figure gives an overview over the different components and their r
 ![anbox-core-overview|690x398](upload://x0budFKybsbYLhiplNhF4R91Ght.png)
 
 At the heart of Anbox Cloud sits the **[Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321)**. **AMS** has the job to handle all aspects of the application and container lifecycle (including application and image updates) while ensuring high density, performance and fast container startup times.
-A developer or system administrator will manage **AMS** through the **command line interface (AMC)** or through custom-built tools interacting with the [**AMS REST API**](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801).
+A developer or system administrator will manage **AMS** through the **command line interface (AMC)** or through custom-built tools interacting with the [**AMS HTTP API**](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801).
 
 For example, a simple Android application testing service would provide a user-facing interface dealing with things like authentication and user management, and would communicate with the REST API to add applications or start and stop containers when a user asks to.
 
-Anbox Cloud can be heavily customized and extended via [**Platform Plugins**](https://oem-share.canonical.com/partners/indore/share/docs/1.7/en/sdk/anbox/) and [**addons**](manage-addons.md). Platform plugins and addons can be built to add specific streaming capabilities, perform operations within Android containers and much more. One example of a platform plugin is the **Anbox WebRTC Platform** used in the Anbox Streaming Stack. Addons are ways to customize the base image by installing additional software and running scripts on different lifecycle hooks.
+Anbox Cloud can be heavily customized and extended via [**Platform Plugins**](https://oem-share.canonical.com/partners/indore/share/docs/1.7/en/sdk/anbox/) and [**addons**](https://discourse.ubuntu.com/t/managing-addons/17759). Platform plugins and addons can be built to add specific streaming capabilities, perform operations within Android containers and much more. One example of a platform plugin is the **Anbox WebRTC Platform** used in the Anbox Streaming Stack. Addons are ways to customize the base image by installing additional software and running scripts on different lifecycle hooks.
 
 
 ### Streaming Stack

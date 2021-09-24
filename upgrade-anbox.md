@@ -1,4 +1,4 @@
-> **NOTE**: If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements  category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
+> **NOTE**: If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
 
 Anbox Cloud allows upgrades from older versions to newer version. This describes the steps necessary to perform the upgrade.
 
@@ -54,7 +54,7 @@ Once the commands are executed, Juju will perform all necessary upgrade steps au
 
 After Juju has settled the workload status will be marked as `blocked` and the status will show `UA token missing`.
 
-Since the 1.7.0 release of Anbox Cloud a valid Ubuntu Advantage token including the Anbox Cloud entitlement is mandatory. Generally you can get your Ubuntu Advantage token on [Ubuntu Advantage]( *https://ubuntu.com/advantage* ) but your account has to specifically whitelisted to be entitled for Anbox Cloud. If your account has not yet whitelisted or you're unsure, please speak with your Canonical account representative.
+Since the 1.7.0 release of Anbox Cloud a valid Ubuntu Advantage token including the Anbox Cloud entitlement is mandatory. Generally you can get your Ubuntu Advantage token on [Ubuntu Advantage](https://ubuntu.com/advantage) but your account has to specifically whitelisted to be entitled for Anbox Cloud. If your account has not yet whitelisted or you're unsure, please speak with your Canonical account representative.
 
 When you have your Ubuntu Advantage token you can apply it for all relevant charms with the following commands:
 

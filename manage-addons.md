@@ -135,7 +135,7 @@ The use of `aam` is recommended to [back up and restore application data](https:
 
 ## Add Addon to AMS
 
-Adding an addon to AMS works similar as adding images to AMS (see [Image Management](manage-images.md)).
+Adding an addon to AMS works similar as adding images to AMS (see [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)).
 The `amc` command line utility has a subcommand which only deals with addons.
 
 Adding the addon can be done with the following command
@@ -161,7 +161,7 @@ AMS will take care of updating all existing applications which use the addon in 
 
 ## Create Application with an Addon
 
-Adding an addon to a newly created application can be easily done by extending the application manifest (see [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)). An example application manifest with the `foo` addon added looks like this:
+Adding an addon to a newly created application can be easily done by extending the application manifest (see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)). An example application manifest with the `foo` addon added looks like this:
 
 ```bash
 $ cat manifest.yaml

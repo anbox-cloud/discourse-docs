@@ -85,7 +85,7 @@ versions:
         status: active
 ```
 
-Similar to applications managed by AMS (see [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)), images have a list of versions too. A new version is created each time an image is updated.
+Similar to applications managed by AMS (see [About applications](https://discourse.ubuntu.com/t/managing-applications/17760)), images have a list of versions too. A new version is created each time an image is updated.
 
 ### Update an existing image
 

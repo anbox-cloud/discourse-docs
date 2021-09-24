@@ -6,7 +6,7 @@ The internal process will prepare a container based on the currently available i
 
 To create an application, you need an Android package (APK) with support for the target architecture. Additionally, you must select one of the available instance types for the application. The instance type defines CPU/RAM constraints put onto the container launch for the application.
 
-> **Note:** See [Instance Types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.
+> **Note:** See [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.
 
 To create a new application, you must first create a manifest file to define the various attributes the new application should have. The manifest is a simple [YAML](http://yaml.org/) file and looks like this:
 
@@ -57,7 +57,7 @@ With everything in place, create the application by entering the following comma
 
     amc application create <path/to/application-content>
 
-When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](https://anbox-cloud.io/docs/manage/managing-applications#bootstrap) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
+When the `create` command returns, the application package is uploaded to the AMS service and the [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) is started. The application is not yet ready to be used. You can watch the status of the application with the following command:
 
     amc application show bcmap7u5nof07arqa2ag
 
@@ -118,4 +118,4 @@ Once the tarball is created, you can create the application:
 
     amc application create foo.tar.bz2
 
-The AMS service now starts the application [bootstrap process](https://anbox-cloud.io/docs/manage/managing-applications#bootstrap). See [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
+The AMS service now starts the application [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). See [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.

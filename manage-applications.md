@@ -16,7 +16,7 @@ Whenever [creating an application](https://discourse.ubuntu.com/t/create-an-appl
   * It enables AMS to launch a container for an application without installing the APK every time.
   * It dramatically speeds up the startup time of a regular container.
 
-Furthermore, an application is synchronised within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through [Node Management](https://anbox-cloud.io/docs/manage/managing-lxd-nodes) or lost from the cluster unexpectedly.
+Furthermore, an application is synchronised within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through [scaling down](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) or lost from the cluster unexpectedly.
 
 A temporary base container will be created and used for the bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
 
@@ -67,7 +67,7 @@ error_message: 'Failed to install application: com.foo.bar: Failed to extract na
 config: {}
 ```
 
-Alternatively, [check the container logs](https://discourse.ubuntu.com/t/managing-containers/17763#heading--show-container-logs) to troubleshoot problems in the container.
+Alternatively, [check the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) to troubleshoot problems in the container.
 
 When the application bootstrap succeeds, the base container is automatically removed and the status of the application changes to `ready`. The application is then ready to be used.
 

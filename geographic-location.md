@@ -29,4 +29,4 @@ To make the file `/var/lib/anbox/static_gps_position` available to the Android c
 
 To update the geographic location of an Android container dynamically while the container is running, use the location endpoint of the Anbox HTTP API.
 
-See the documentation of the [PATCH method](https://anbox-cloud.io/docs/reference/anbox-http-api-reference#location-patch) for more information and the specification of the data format.
+See the documentation of the [PATCH method](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819#location-patch) for more information and the specification of the data format.

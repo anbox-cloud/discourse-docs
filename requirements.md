@@ -5,7 +5,7 @@ The following two different deployment variants and their minimum requirements w
 1. The Anbox Cloud Appliance
 2. Juju based deployments
 
-See the [overview](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) for a explanation of the differences between both variants.
+See the [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants) for a explanation of the differences between both variants.
 
 ## General requirements
 
@@ -55,7 +55,7 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 40 GB of disk space for the OS
 * optional, but strongly recommended: >= 50GB block volume to host container storage
 
-The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [Capacity Planing](https://discourse.ubuntu.com/t/capacity-planning/17765) for an explanation on how to plan for a specific capacity on your appliance.
+The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an explanation on how to plan for a specific capacity on your appliance.
 
 On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
 
@@ -92,10 +92,10 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 
 The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
-More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [Capacity Planing](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction of how many resources are necessary to host a specific number of containers.
+More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction of how many resources are necessary to host a specific number of containers.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
  - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
 
-Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://anbox-cloud.io/docs/monitoring/monitoring-installation) is always important.
+Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://discourse.ubuntu.com/t/monitoring-installation/17786) is always important.

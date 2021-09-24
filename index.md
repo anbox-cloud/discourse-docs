@@ -95,7 +95,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 1 | ref/api-reference | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) |
 | 2 | reference/ams-rest-api-reference | [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801)|
-| 2 | reference/anbox-http-api-reference | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819/2)|
+| 2 | reference/anbox-http-api-reference | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
 | 2 | reference/anbox-stream-gateway-reference | [Stream Gateway API](https://anbox-cloud.github.io/1.10/anbox-stream-gateway/index.html)|
 | 2 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html)|
 | 1 | manage/instance-types-reference | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|

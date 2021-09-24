@@ -1,4 +1,4 @@
-This guide provides the first steps to using Anbox Cloud. If you haven't installed Anbox Cloud, please refer to the [installation page](https://discourse.ubuntu.com/t/installation-quickstart/17744) first.
+This guide provides the first steps to using Anbox Cloud. If you haven't installed Anbox Cloud, please refer to [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) or [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) first.
 
 ## Access to AMS
 
@@ -8,7 +8,7 @@ For all subsequent commands using the `amc` tool to work you need to access the 
 
 If you're running the Anbox Cloud Appliance instead, you can find the `amc` tool directly on the host and it's already set up to talk to the deployed AMS service.
 
-Alternatively you can also install the `amc` command on your local Ubuntu-based development machine. See [AMS Access](https://discourse.ubuntu.com/t/managing-ams-access/17774) for more details.
+Alternatively you can also install the `amc` command on your local Ubuntu-based development machine. See [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) for more details.
 
 ## Ensure images are available
 
@@ -43,7 +43,7 @@ Once it is up and running you can get a shell inside the container with:
 
     amc shell <container id>
 
-See [Managing containers](https://discourse.ubuntu.com/t/managing-containers/17763) for more details.
+See the information under [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more details.
 
 ## Create an application
 
@@ -55,7 +55,7 @@ Both alternatives require you to provide the name and the [instance type](https:
 
 ### Create an application through the web dashboard
 
-The web dashboard is available if you installed [Anbox Cloud with the streaming stack](https://anbox-cloud.io/docs/installation/installation-quickstart) or the [Anbox Cloud Appliance](https://anbox-cloud.io/docs/installation/installation-quickstart). See [Web Dashboard](https://anbox-cloud.io/docs/manage/web-dashboard) for more information about the dashboard.
+The web dashboard is available if you installed [Anbox Cloud with the streaming stack](https://discourse.ubuntu.com/t/install-with-juju/17744) or the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681). See [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871) for more information about the dashboard.
 
 To create an application through the web dashboard, open `https://<your-machine-address>/applications` in your browser. Click **Add Application** and enter the required information. If you want to run a specific Android application, upload its APK.
 
@@ -70,7 +70,7 @@ name: com.my.game
 instance-type: a2.3
 ```
 
-It defines the name of the application and which instance type the application should use. The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) and [Instance Types](https://discourse.ubuntu.com/t/instances-types-reference/17764) sections.
+It defines the name of the application and which instance type the application should use. The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) and [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) sections.
 
 To create an application, place the `manifest.yaml` file in a directory of your choice. If you want to run a specific Android application, place its APK in the same directory. Then run the following command, replacing */path/to/manifest/directory/* with the path to your directory:
 

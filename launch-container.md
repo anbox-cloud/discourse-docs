@@ -17,6 +17,7 @@ The whole launch process will be successful only if all of the above steps succe
 
 If something goes wrong during the container launch process, the status of the container changes to `error` status. You can [view the available logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) from the container for diagnosing the root cause of the problem.
 
+<a name="application-containers"></a>
 ## Launch application containers
 
 Launching a container for a registered application can be achieved with the
@@ -34,7 +35,7 @@ list all available applications with the `amc application ls` command:
 | bdp7kmahmss3p9i8huu0 |      candy     | a2.3          | ssh    | false     | ready  | 2018-08-14 08:44:41 |
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
 ```
-If the application for which you want to launch a container is not yet published (see [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) for more details), the launch command will fail as it will only allow launching a container for a published application. However, you can work around this by specifying a specific version of an application:
+If the application for which you want to launch a container is not yet published (see [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for more details), the launch command will fail as it will only allow launching a container for a published application. However, you can work around this by specifying a specific version of an application:
 
     amc launch --application-version=0 bcmap7u5nof07arqa2ag
 
@@ -45,7 +46,7 @@ The command for launching a container from an image is:
 
     amc launch --raw <image id>
 
-As argument, provide the ID or name of the image for which you want to launch a container. See [Image Management](https://discourse.ubuntu.com/t/managing-images/17758) for more details about how images are managed by AMS.
+As argument, provide the ID or name of the image for which you want to launch a container. See [Manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details about how images are managed by AMS.
 
 You can list all available images with the `amc image ls` command:
 

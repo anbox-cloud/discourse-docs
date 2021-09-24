@@ -65,8 +65,8 @@ The distinction between the two is made to make it easier to plug your own softw
 In this case, the connector is made to talk directly to the Stream Gateway and thus needs its location and an access token. It also needs to know which Android application to start.
 
 `gateway.url.net` should be replaced with the Stream Gateway IP/Domain name. You can get this information by running `juju status`.
-`YOUR_AUTH_TOKEN` is a token [generated with the Stream Gateway](manage-gateway-access.md.  
-`com.foo.bar` is the name of an application added via `ams`. You can list all applications by running `amc list`.  
+`YOUR_AUTH_TOKEN` is a token [generated with the Stream Gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784).
+`com.foo.bar` is the name of an application added via `ams`. You can list all applications by running `amc list`.
 
 ```javascript
 let stream = new AnboxStream({
@@ -101,7 +101,7 @@ In this case you'd need to add the following to your HTML body:
 <div id="anbox-stream"></div>
 ```
 
-> **Note:** Make sure events can reach this element, otherwise controls will not work.  
+> **Note:** Make sure events can reach this element, otherwise controls will not work.
 
 The default behavior of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
 

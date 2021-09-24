@@ -90,7 +90,7 @@ in JavaScript, C or C++ by using the Anbox Streaming SDK.
 ### Web Application
 
 For a web based application you can use the JavaScript SDK which you can find at
-https://anbox-cloud.io/docs/sdks. To receive the data sent from the Android application
+[Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk). To receive the data sent from the Android application
 running in the Anbox container you need to implement the `messageReceived` callback
 of the AnboxStream object:
 
@@ -109,7 +109,7 @@ of the AnboxStream object:
 
 ### Native Application
 
-For a native application you can use the native SDK from https://anbox-cloud.io/docs/sdks.
+For a native application you can use the native SDK from [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
 To receive the data sent from the Android application running in the Anbox
 container you need to register a callback via the `anbox_stream_set_message_received_callback` method:
 

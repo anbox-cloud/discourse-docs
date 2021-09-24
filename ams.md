@@ -2,7 +2,7 @@ The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and handles 
 
 AMS is usually managed through the command line interface (the Anbox Management Client - AMC), which can run either on the same machine as AMS or on a remote machine.
 
-Since AMS exposes an HTTP interface, any tool can use the [AMS REST API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801) to interact with AMS. Both the AMC (when running remotely) and the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) use this mechanism. You can also develop your own client by using the [AMS SDK](https://discourse.ubuntu.com/t/ams-sdk-api-reference/17845).
+Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801) to interact with AMS. Both the AMC (when running remotely) and the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) use this mechanism. You can also develop your own client by using the [AMS SDK](https://discourse.ubuntu.com/t/ams-sdk-api-reference/17845).
 
 <a name="security-certificates"></a>
 ## Security certificates for remote clients
@@ -39,7 +39,7 @@ After adding the CA certificate to AMS, any client certificates that are generat
 
 ## Custom clients
 
-As an alternative to using AMC, you can develop a custom client built around your own needs using the [AMS REST API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801).
+As an alternative to using AMC, you can develop a custom client built around your own needs using the [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801).
 
 You can access AMS either by IP or through a UNIX socket. The IP depends on your network, but the UNIX socket will always be located at `/var/snap/ams/common/server/unix.socket` on the machine that hosts AMS.
 

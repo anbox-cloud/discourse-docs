@@ -16,9 +16,9 @@ This will create a container which exposes the TCP port `5559` on its private ad
 $ amc launch -s +adb -p swrast -r
 ```
 
-> **Hint:** If you're wondering about the syntax of the command used to launch a container have a look at the relevant documentation [here](https://discourse.ubuntu.com/t/managing-containers/17763).
+> **Hint:** If you're wondering about the syntax of the command used to launch a container, see [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).
 
-If you want to run the Appium tests against an Android application managed by AMS (see [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)) you can start a regular container instead:
+If you want to run the Appium tests against an Android application managed by AMS (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
 
 ```bash
 $ amc launch -s adb -p swrast --disable-watchdog app
@@ -88,7 +88,7 @@ For more details about Appium, please refer to the [official documentation](http
 
 ### APK managed by AMS
 
-If you want to run test cases without installing the APK every time when starting a new test session in Appium, you can let AMS manage the application for you. See [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760) for more details.
+If you want to run test cases without installing the APK every time when starting a new test session in Appium, you can let AMS manage the application for you. See [About applications](https://discourse.ubuntu.com/t/managing-applications/17760) for more details.
 
 In this example we use the following application `manifest.yaml`:
 

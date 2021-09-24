@@ -60,7 +60,7 @@ You will be presented with the pricing information. Click **Continue** to confir
 
 AWS offers various instance types. The Anbox Cloud Appliance images are listed for a subset of the available instance types only.
 
-Select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://anbox-cloud.io/docs/installation/installation-requirements#appliance) for the minimum hardware requirements.
+Select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
 
 ![Choose an instance type|690x451](upload://sGAxIzuf8vw3CsHlv8s3CsdNCFw.png)
 
@@ -137,7 +137,7 @@ The appliance requires a few additional tools.
 
       sudo snap install --channel=2.8/stable juju
 
-  Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://anbox-cloud.io/docs/installation/upgrading-from-previous-versions#juju-version) for more information).
+  Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for more information).
 
 - Enter the following command to install amc:
 

@@ -21,10 +21,11 @@ Name          | Value type | Description
 
 ## Image
 
-The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [Image Management](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
+The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [Manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
 
     amc image list
 
+<a name="video-encoder"></a>
 ## Video encoder
 A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that a container launched from the application can use a GPU or software video encoder according to different scenarios.
 
@@ -38,6 +39,7 @@ When `gpu` video encoder is specified in the manifest, AMS can fail to create an
  - All GPU slots are used up by running containers.
  - There is no GPU support across the entire LXD cluster.
 
+<a name="watchdog"></a>
 ## Watchdog settings
 
 The `watchdog` attribute includes the following field definitions:

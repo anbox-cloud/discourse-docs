@@ -10,7 +10,7 @@ In order to deploy Anbox Cloud you will need a commercial subscription for *Ubun
 
 If a container failed to start its status is set to `error`. The AMS service automatically fetches several log files from the container and makes them available for further inspection. From the log files you can find out what went wrong. The reason is not always clear as several things play into the container startup, like the application the container is hosting, any installed addons etc.
 
-See [Container Management](https://discourse.ubuntu.com/t/managing-containers/17763) for more details on how to access the container log files.
+See [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) for more details on how to access the container log files.
 
 ### I receive a socket permission error when trying to use the `amc` command. What is wrong?
 
@@ -36,7 +36,7 @@ No. The application manifest describes necessary meta data on top of the Android
 
 ### When launching a container for an application I get "Published application version not found". Why?
 
-If you launch a container by only specifying the application ID and the application has no publish version yet, you need to explicitly specify the version you want to launch or publish a version of the application. See [Managing applications](https://discourse.ubuntu.com/t/managing-applications/17760).
+If you launch a container by only specifying the application ID and the application has no publish version yet, you need to explicitly specify the version you want to launch or publish a version of the application. See [Launch application containers](https://discourse.ubuntu.com/t/launch-a-container/24327#application-containers).
 
 ### When creating an application I get an error like “no such file or directory”. Why?
 

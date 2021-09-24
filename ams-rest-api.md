@@ -184,7 +184,7 @@ Some operations require uploading a payload. To prevent the difficulties of hand
    * [`/1.0/containers`](#heading--10containers)
      * [`/1.0/containers/<id>`](#heading--10containersid)
        * [`/1.0/containers/<id>/logs`](#heading--10containersidlogs)
-       * [`/1.0/containers/<id>/logs/<name>`](#heading--10containersidlogsname)      
+       * [`/1.0/containers/<id>/logs/<name>`](#heading--10containersidlogsname)
    * [`/1.0/events`](#heading--10events)
    * [`/1.0/images`](#heading--10images)
      * [`/1.0/images/<id or name >`](#heading--10images)
@@ -240,14 +240,14 @@ Output (if trusted):
  * Authentication: trusted
  * Operation: sync
  * Cancellable: no
- 
+
 Example:
 ```bash
 $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons
 ```
 
 Output:
- 
+
 ```json
 {
   "type": "sync",
@@ -268,7 +268,7 @@ Output:
  * Authentication: trusted
  * Operation: async
  * Cancellable: no
- 
+
 In the HTTP payload upload case, the following headers may be set by the client:
 
 * `Content-Type:`: application/octet-stream (mandatory field)
@@ -283,7 +283,7 @@ For an addon upload, the `X-AMS-Request` header is comprised of:
 }
 ```
 
-The payload to upload must be a tarball compressed with bzip2. Also, it must contain a manifest.yaml which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntaxes. please refer to [addon creation](https://anbox-cloud.io/docs/manage/managing-addons) for more details.
+The payload to upload must be a tarball compressed with bzip2. Also, it must contain a manifest.yaml which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntaxes. please refer to [addon creation](https://discourse.ubuntu.com/t/managing-addons/17759) for more details.
 
 Example:
 ```bash
@@ -291,7 +291,7 @@ $ curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Req
 ```
 
 Output:
- 
+
 ```json
 {
   "type": "async",
@@ -415,7 +415,7 @@ In the HTTP addon update case, the following headers may be set by the client:
 * `X-AMS-Request`: JSON format metadata (mandatory field)
 * `X-AMS-Fingerprint:`: SHA-256 (if set, the uploaded payload must match)
 
-For an addon patch, the `X-AMS-Request` header is comprised of an empty JSON object 
+For an addon patch, the `X-AMS-Request` header is comprised of an empty JSON object
 
 ```json
 {}
@@ -427,7 +427,7 @@ $ curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Req
 ```
 
 Output:
- 
+
 ```json
 {
   "type": "async",
@@ -537,20 +537,20 @@ Output:
  * Authentication: trusted
  * Operation: async
  * Cancellable: no
- 
+
 In the HTTP application upload case, the following headers may be set by the client:
 
 * `Content-Type:`: application/octet-stream (mandatory field)
 * `X-AMS-Fingerprint:`: SHA-256 (if set, the uploaded payload must match)
 
-The payload to upload must be a tarball compressed with bzip2. Also it must contain a manifest.yaml which declares the basic application information for the creation. For the layout application tarball file and supported syntaxes. please refer to [application creation](https://anbox-cloud.io/docs/manage/managing-applications) for more details.
+The payload to upload must be a tarball compressed with bzip2. Also it must contain a manifest.yaml which declares the basic application information for the creation. For the layout application tarball file and supported syntaxes. See [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
 To support the following syntaxes in the application manifest.yaml, the server requires a corresponding extension
 
 Syntax in manifest            |   Extension
 ----------------|------------------------------------
 watchdog |  application_watchdog_settings
 resources |  application_resource_customization
-services    |  application_services_configuration 
+services    |  application_services_configuration
 version     |  application_manifest_version
 video-encoder | application_gpu_encoder
 
@@ -560,7 +560,7 @@ $ curl -s -X POST --header "Content-Type: application/octet-stream" --insecure -
 ```
 
 Output:
- 
+
 ```json
 {
   "type": "async",
@@ -620,7 +620,7 @@ Output:
     "status_code": 2,
     "status": "ready",        // Application status
     "instance_type": "a2.3",  // Instance type
-    "boot_package": "com.lolo.io.onelist",  // Boot application 
+    "boot_package": "com.lolo.io.onelist",  // Boot application
     "parent_image_id": "btavtegj1qm58qg7ru50",
     "published": true,
     "versions": [             // List of all versions
@@ -631,10 +631,10 @@ Output:
         "parent_image_version": 0,                   // Base image version
         "status_code": 3,
         "status": "active",                          // Application status
-        "published": true,                           // Publication status 
+        "published": true,                           // Publication status
         "created_at": 1532150640,
         "boot_activity": "",                         // Boot activity on application start
-        "required_permissions": null,                // Required Android application permissions 
+        "required_permissions": null,                // Required Android application permissions
         "addons": [],                                // Attached addons
         "extra_data": {},                            // Extra data to be installed on application creation
         "error_message": "",
@@ -668,12 +668,12 @@ An application can be updated with either a new package or specific fields.
 The `Content-Type` header of HTTP patch request is different when uploading
 an application in either way.
 
-Update methods            |  Content-Type 
+Update methods            |  Content-Type
 ----------------|------------------------------------
 With a new package |  application/octet-stream
 With specified fields        |  application/json
 
-An application package can be uploaded with a bzip2 compressed payload if the former method is taken. 
+An application package can be uploaded with a bzip2 compressed payload if the former method is taken.
 
 Example
 ```bash
@@ -755,7 +755,7 @@ In the HTTP application removal case, a JSON format payload input is required fr
 
 ```Payload
 {
-    "force": false // (boolean) Forcibly remove the application 
+    "force": false // (boolean) Forcibly remove the application
 }
 ```
 
@@ -810,7 +810,7 @@ Example:
 ```bash
 $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app --output app-version.tar
 ```
-As a result, an application image that contains a piece of metadata.yaml and rootfs will be generated 
+As a result, an application image that contains a piece of metadata.yaml and rootfs will be generated
 
 #### DELETE
  * Description: Removes an application version
@@ -925,7 +925,7 @@ To monitor the status of an application version update operation, please refer t
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/manifest 
+$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/manifest
 ```
 
 Output:
@@ -952,7 +952,7 @@ The use of this API requires the `application_manifest_download` extension is su
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/0/manifest 
+$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/0/manifest
 ```
 
 Output:
@@ -991,8 +991,8 @@ Output:
   "operation": "",
   "error_code": 0,
   "error": "",
-  "metadata": [    
-   "/1.0/certificates/<fingerprint>",     
+  "metadata": [
+   "/1.0/certificates/<fingerprint>",
    ]
 }
 ```
@@ -1008,7 +1008,7 @@ In the HTTP certificate removal case, a JSON format payload is required sent by 
 ```json
 {
     "certificate": "MIIFUTCCAzmgAw...xjKoUEEQOzJ9",  # Base64 certificate content without header and footer
-    "trust-password": "aahhdjiks9",                  # Only needed if not using an already trusted client 
+    "trust-password": "aahhdjiks9",                  # Only needed if not using an already trusted client
                                                      # certificate in the SSL request or using the local unix socket
 }
 ```
@@ -1125,16 +1125,16 @@ Output:
     "config": {
       "application.addons": "",          // (comma separated list) Addons that will be attached to every application
       "application.auto_publish": true,  // (true/false) Auto publish application when they are created
-      "application.default_abi": "",     // Default application ABI, would be an ABI with cluster compatible if unset 
+      "application.default_abi": "",     // Default application ABI, would be an ABI with cluster compatible if unset
       "application.max_published_versions": 3,  // (number) Limit the number of stored application versions
-      "container.default_platform": "",  // (string) Default platform to launch containers with. The `null` platform will be used if unset 
+      "container.default_platform": "",  // (string) Default platform to launch containers with. The `null` platform will be used if unset
       "container.features": "",          // Features to apply when launching a container
       "container.security_updates": false,  // Apply security updates when boostraping an applicaiton
       "core.proxy_http": "",             // HTTP proxy for AMS service
       "core.proxy_https": "",            // HTTPS proxy for AMS service
       "core.proxy_ignore_hosts": "",     // Hosts to be ignored in the network proxy
-      "core.trust_password": true,       // Password to be used by the untrusted client to talk to AMS 
-      "gpu.allocation_mode": "all",      // GPU allocation mode, optional values: "one" or "all" 
+      "core.trust_password": true,       // Password to be used by the untrusted client to talk to AMS
+      "gpu.allocation_mode": "all",      // GPU allocation mode, optional values: "one" or "all"
       "gpu.type": "none",                // GPU type, optional values: "none", "nvidia", "intel" or "amd"
       "images.allow_insecure": false,    // (true/false) Allow an insecure image server
       "images.auth": true,               // Authentication token for security purpose, `true` implies an auth token has been set, vice versa.
@@ -1142,7 +1142,7 @@ Output:
       "images.url": "https://images.anbox-cloud.io/stable/", // (string) URL for image server
       "images.version_lockstep": "true", // Prevent images of new minor releases to be pulled by AMS
       "registry.filter": "",             // (comma separated list) Filter out applications without matching tags
-      "registry.fingerprint": <fingerprint>, // (string) Fingerprint of registry certificate 
+      "registry.fingerprint": <fingerprint>, // (string) Fingerprint of registry certificate
       "registry.mode": "pull",           // (pull/push) Wether AMS should act as a client or publisher to AAR
       "registry.update_interval": "5s",  // (time) Frequency of updates from registry
       "registry.url": "https://127.0.0.1:3000", // (string) URL of Anbox Application Registry
@@ -1239,12 +1239,12 @@ Output:
 In the HTTP container launch case, a JSON format payload is required sent by the client:
 Payload:
 
- * Payload to launch a container from an application 
+ * Payload to launch a container from an application
 ```json
 {
-    "app_id": "my-app",                       # (string | mandatory) Identifier or name of the application this container belongs to.  
+    "app_id": "my-app",                       # (string | mandatory) Identifier or name of the application this container belongs to.
     "app_version": 0,                         # (number | optional) Version of the application this container uses.
-    "user_data": "",                          # (string | optional) Additional data to be put into the container when bootstrapped. 
+    "user_data": "",                          # (string | optional) Additional data to be put into the container when bootstrapped.
     "node": "lxd1",                           # (string | optional) Lxd node to use for the container to launch
     "services": [                             # (array | optional) List of services the container provides
         {
@@ -1254,16 +1254,16 @@ Payload:
             "expose": false                   # (boolean) to expose the service on the public endpoint or false to keep it on the private one
         }
     ],
-    "disk_size": 5368709120,                  # (number | optional) Number of bytes disk size to be assigned for the container. 
-    "cpu": 2,                                 # (number | optional) Number of CPU cores to be assigned for the container, 
-    "memory": 4294965097,                     # (number | optional) Number of bytes memory to be assigned for the container. 
-    "gpu_slots": 0,                           # (number | optional) Number of GPU slots to be allocated for the container to use 
+    "disk_size": 5368709120,                  # (number | optional) Number of bytes disk size to be assigned for the container.
+    "cpu": 2,                                 # (number | optional) Number of CPU cores to be assigned for the container,
+    "memory": 4294965097,                     # (number | optional) Number of bytes memory to be assigned for the container.
+    "gpu_slots": 0,                           # (number | optional) Number of GPU slots to be allocated for the container to use
     "config": {                               # (struct | optional) Config parameters included in created container
         "platform": "null",                   # (string | optional) Platform name, optional value: "null", "swrast", "webrtc". Please refer to https://anbox-cloud.io/docs/reference/anbox-platforms for all details of each platform
         "boot_package": "com.my.app",         # (string | optional) Boot package
-        "boot_activity": "com.my.app.Activity",   # (string | optional)  Boot acitivty 
+        "boot_activity": "com.my.app.Activity",   # (string | optional)  Boot acitivty
         "metrics_server": "influxdb:192.168.100.8:8095,raw",    # (string | optional) Metrics server
-        "disable_watchdog": false             # (boolean | optional) Toggle watchdog settings 
+        "disable_watchdog": false             # (boolean | optional) Toggle watchdog settings
     }
 }
 ```
@@ -1271,11 +1271,11 @@ Payload:
 * Payload to launch a container from an image
 ```json
 {
-    "image_id": "Android_10",                 # (string | mandatory) Identifier or name of the application this container belongs to.  
+    "image_id": "Android_10",                 # (string | mandatory) Identifier or name of the application this container belongs to.
     "instance_type": "a2.3",                  # (string | mandatory)  Instance type to use for the container. Please refer to https://anbox-cloud.io/docs/manage/instance-types-reference for all available instance types.
     "image_version": 0,                       # (number | optional) Version of the image this container uses.
-    "user_data": "",                          # (string | optional) Additional data to be put into the container when bootstrapped. 
-    "node": "lxd1",                           # (string | optional) Lxd node to use for the container to launch    
+    "user_data": "",                          # (string | optional) Additional data to be put into the container when bootstrapped.
+    "node": "lxd1",                           # (string | optional) Lxd node to use for the container to launch
     "services": [                             # (array | optional) List of services the container provides
         {
             "name": "ssh",                    # (string) Name of service
@@ -1284,10 +1284,10 @@ Payload:
             "expose": false                   # (boolean) to expose the service on the public endpoint or false to keep it on the private one
         }
     ],
-    "disk_size": 5368709120,                  # (number | optional) Number of bytes disk size to be assigned for the container. 
-    "cpu": 2,                                 # (number | optional) Number of CPU cores to be assigned for the container, 
-    "memory": 4294965097,                     # (number | optional) Number of bytes memory to be assigned for the container. 
-    "gpu_slots": 0,                           # (number | optional) Number of GPU slots to be allocated for the container to use 
+    "disk_size": 5368709120,                  # (number | optional) Number of bytes disk size to be assigned for the container.
+    "cpu": 2,                                 # (number | optional) Number of CPU cores to be assigned for the container,
+    "memory": 4294965097,                     # (number | optional) Number of bytes memory to be assigned for the container.
+    "gpu_slots": 0,                           # (number | optional) Number of GPU slots to be allocated for the container to use
     "config": {                               # (struct | optional) Config parameters included in created container
         "platform": "null",                    # (string | optional) Platform name, optional value: "null", "swrast", "webrtc". Please refer to https://anbox-cloud.io/docs/reference/anbox-platforms for all details of each platform
         "boot_package": "com.my.app",         # (string | optional) Boot package
@@ -1500,7 +1500,7 @@ be sent.
  * Authentication: trusted
  * Operation: sync
  * Cancellable: no
- 
+
 URL parameter | Description  |  Optional values
 ----------------|-------------------|-----------------
 type |   comma separated list of notifications to subscribe to (defaults to all) | operation, logging, lifecycle
@@ -1585,7 +1585,7 @@ For an image upload, the `X-AMS-Request` header is comprised of:
 ```
 {
     "name": "my-image",  // (string) Image name
-    "default": false     // (boolean) Whether the default image to be used by AMS 
+    "default": false     // (boolean) Whether the default image to be used by AMS
 }
 ```
 
@@ -1593,7 +1593,7 @@ The payload to upload must be a tarball compressed with gzip, bzip2 or xz. It mu
 
 Example:
 ```bash
-curl -s --header "Content-Type: application/octet-stream" --header 'X-AMS-Request: {"name": "my-image", "default": false}' -X POST --insecure --cert client.crt --key client.key --data-binary @my-image.tar.xz <AMS_SERVICE_URL>/1.0/images  
+curl -s --header "Content-Type: application/octet-stream" --header 'X-AMS-Request: {"name": "my-image", "default": false}' -X POST --insecure --cert client.crt --key client.key --data-binary @my-image.tar.xz <AMS_SERVICE_URL>/1.0/images
 ```
 
 Output:
@@ -1737,7 +1737,7 @@ To update an image with a specified field, a JSON format payload is accepted.
 
 ```json
 {
-     "default": true     // (boolean) Default image setting  
+     "default": true     // (boolean) Default image setting
 }
 ```
 URL parameter | Description  |  Optional values
@@ -1903,7 +1903,7 @@ In the HTTP node registration case, a JSON format payload input is required from
 
 ```json
 {
-    "name": "lxd2",                       // (string | mandatory) Name to the LXD node to be added to AMS 
+    "name": "lxd2",                       // (string | mandatory) Name to the LXD node to be added to AMS
     "address": "172.31.23.150",           // (string | mandatory) LXD node address
     "public_address": "34.250.180.153",   // (string | optional) LXD node public address
     "trust_password": "foobar",           // (string | optional) Trust password for the remote LXD node
@@ -1916,7 +1916,7 @@ In the HTTP node registration case, a JSON format payload input is required from
     "gpu_slots": 10,                      // (number | optional) Slots on the GPU available to containers
     "gpu_encoder_slots": 10,              // (number | optional) Slots on the GPU encoders available to containers
     "tags": [],                           // (array | optional) User defined tags
-    "unmanaged": false,                   // (boolean | optional) Expect node to be already clustered 
+    "unmanaged": false,                   // (boolean | optional) Expect node to be already clustered
     "storage_pool": "",                   // (string | optional) Existing LXD storage pool to use
     "network_name": "amsbr0",             // (string | optional) Name of the network device to create on the LXD cluster. Default to "amsbr0" if unet
     "network_subnet": "192.168.100.1/24"  // (string | optional) Network subnet for the network device on the node. Default to  "192.168.100.1/24" if unset
@@ -2014,14 +2014,14 @@ In the HTTP node update case, a JSON format payload input is required from the c
 
 Supported update field            |   Description
 ----------------|------------------------------------
-public_address |  (string) LXD node public address 
-cpus        |  (number) Number of CPU cores used by LXD node 
-cpu_allocation_rate |  (number) Factor of CPU overcommitment. Overcommitting resources allow to run more containers per node 
-memory | (string) Memory used by LXD node 
+public_address |  (string) LXD node public address
+cpus        |  (number) Number of CPU cores used by LXD node
+cpu_allocation_rate |  (number) Factor of CPU overcommitment. Overcommitting resources allow to run more containers per node
+memory | (string) Memory used by LXD node
 memory_allocation_rate | Factor of memory overcommitment.
-gpu_slots | (number) Slots on the GPU available to containers 
-gpu_encoder_slots | (number) Slots on the GPU encoders available to containers 
-tags | (string) User defined tags  
+gpu_slots | (number) Slots on the GPU available to containers
+gpu_encoder_slots | (number) Slots on the GPU encoders available to containers
+tags | (string) User defined tags
 unscheduable | (boolean) Whether this LXD node is schedulable by AMS
 
 A sample payload as follows:
@@ -2164,7 +2164,7 @@ For example, when changing the publication status of an application by issuing
 ```bash
 payload='{"published": false}'
 operation=$(curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload"  <AMS_SERVICE_URL>/1.0/applications/my-app/0 | jq -r .operation)
-``` 
+```
 
 To monitor the operation status
 ```bash
@@ -2207,12 +2207,12 @@ operation, the information is taken internally from the right one.
 
 For example, to cancel an operation of an application creation
 ```bash
-operation=$(curl -s --header "Content-Type: application/octet-stream" -X POST 
---insecure --cert client.crt --key client.key  --data-binary @my-app.tar.bz2 
+operation=$(curl -s --header "Content-Type: application/octet-stream" -X POST
+--insecure --cert client.crt --key client.key  --data-binary @my-app.tar.bz2
         <AMS_SERVICE_URL>/1.0/applications | jq -r .operation)
 
 curl -s -X DELETE --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/$operation| jq .
-``` 
+```
 
 Output:
 ```json
@@ -2230,20 +2230,20 @@ Output:
 HTTP code for this should be 202 (Accepted).
 
 ### <h3 id='heading--10operationsuuidwait'>`/1.0/operations/<uuid>/wait`</h3>
-#### GET 
+#### GET
  * Description: Wait until an operation reaches a final status
  * Authentication: trusted
  * Operation: sync
  * Cancellable: yes
 
-URL parameter | Description 
+URL parameter | Description
 ----------------|-------------------
 timeout |   The amount of time (In second) when wait operation reaches timed out.  If the value is assigned to `-1`, it means the operation will wait infinitely until the monitored operation reaches a final status.
 
 For example, to wait for the process of an application creation to be done
 ```bash
-operation=$(curl -s --header "Content-Type: application/octet-stream" -X POST 
---insecure --cert client.crt --key client.key  --data-binary @my-app.tar.bz2 
+operation=$(curl -s --header "Content-Type: application/octet-stream" -X POST
+--insecure --cert client.crt --key client.key  --data-binary @my-app.tar.bz2
         <AMS_SERVICE_URL>/1.0/applications | jq -r .operation)
 
 curl -s -X GET \

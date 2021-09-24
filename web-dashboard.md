@@ -49,7 +49,7 @@ unit-anbox-cloud-dashboard-0:
 
 #### Register a Ubuntu One account in Anbox Cloud Appliance
 
-If you followed the instructions in [Install Appliance](https://anbox-cloud.io/docs/install-appliance) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
+If you followed the instructions in [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
 
 To add more accounts, use the following command:
 
@@ -61,7 +61,7 @@ The generated link is valid for one hour.
 
 ### Creating applications
 
-Creating applications through the dashboard is done the same way as you would do with `amc` (see [Managing Applications](https://anbox-cloud.io/docs/manage/managing-applications)).
+Creating applications through the dashboard is done the same way as you would do with `amc` (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)).
 Note that more advanced scenarios might not yet be possible via the dashboard and require going through `amc`.
 
 ![image|690x438](upload://9fPqr5DXciTsKy8bw90FzBxguZH.png)
@@ -76,4 +76,4 @@ You can select any application you previously created and start a streaming sess
 
 ![image|690x352](upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png)
 
-For more information about the Streaming Stack, visit https://anbox-cloud.io/docs/manage/streaming-android-applications.
+For more information about the Streaming Stack, visit [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769).

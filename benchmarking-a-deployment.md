@@ -90,7 +90,7 @@ $ amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --contai
 2019/01/21 11:15:39     None
 ```
 
-The benchmark command launches 15 containers on the Anbox [`null` platform](https://anbox-cloud.io/docs/reference/anbox-platforms) with the following default display specification:
+The benchmark command launches 15 containers on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
 
  | Display Spec            | Value |
  | ----------------------- | ----- |
@@ -119,7 +119,7 @@ The application was modified to constantly run the benchmark scene with `~1000` 
 
 * [Stress Test Application (amd64 + arm64, sha256: dfb67bb97ceb5e3c64398210e2ecd65286f14b0c67856abde2ac0bead07bd223)](https://oem-share.canonical.com/partners/indore/share/releases/1.8/other/com.android.gpu_emulation_stress_test_1.8.apk)
 
-Once downloaded you can add the application as regular (see [Application Management](https://discourse.ubuntu.com/t/managing-applications/17760)) to your Anbox Cloud installation. The manifest may look like:
+Once downloaded you can add the application as regular application (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) to your Anbox Cloud installation. The manifest may look like:
 
 ```yaml
 name: gpu-stress-test
@@ -160,7 +160,7 @@ $ anbox-cloud-tests.benchmark \
   --auth-token=<valid auth token for the Anbox Stream Gateway> \
 ```
 
-> **Hint:** Check [Managing Stream Gateway Access](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
+> **Hint:** Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
 
 If your Anbox Stream Gateway is behind a self-signed TLS certificate you also need to specify the `  --insecure-tls` option.
 

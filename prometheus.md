@@ -1,11 +1,11 @@
-To see how to deploy a monitoring stack in Anbox Cloud, refer to the instructions for [deploying Grafana](https://anbox-cloud.io/docs/monitoring/monitoring-grafana). Those instructions will take you through the installation Prometheus and Grafana.
+To see how to deploy a monitoring stack in Anbox Cloud, refer to the instructions for [deploying Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787). Those instructions will take you through the installation Prometheus and Grafana.
 
 The base installation provides basic dashboards. You can however update them to fit your needs. Below is the list of all metrics returned to Prometheus by each component of Anbox Cloud.
 
 
 ## AMS
 Metrics prefixed with `ams_cluster_` give information about the Anbox management system (AMS). They keep you informed about the status of your cluster.
- 
+
 | Name                                             | Description                                                                                                                                                                             | Available since |
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 | `ams_cluster_nodes_total`                        | Number of nodes in the cluster                                                                                                                                                          | 1.0.0           |
