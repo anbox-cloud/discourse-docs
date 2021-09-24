@@ -1,4 +1,4 @@
-An Anbox Application Registry (AAR) should be deployed on a single unit. After deploying, continue to [configure it](https://discourse.ubuntu.com/t/configure-an-aar/24319) and connect it with all AMS units that you want to synchronise.
+An [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) should be deployed on a single unit. After deploying, continue to [configure it](https://discourse.ubuntu.com/t/configure-an-aar/24319) and connect it with all AMS units that you want to synchronise.
 
 Use the following commands to deploy an AAR:
 

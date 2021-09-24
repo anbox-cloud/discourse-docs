@@ -30,3 +30,5 @@ Status            |  Description
  * [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
  * [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
  * [List containers](https://discourse.ubuntu.com/t/list-containers/24328)
+ * [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
+ * [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)

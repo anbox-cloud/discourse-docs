@@ -27,7 +27,7 @@ The following figure gives an overview over the different components and their r
 
 ![anbox-core-overview|690x398](upload://x0budFKybsbYLhiplNhF4R91Ght.png)
 
-At the heart of Anbox Cloud sits the **Anbox Management Service (AMS)**. **AMS** has the job to handle all aspects of the application and container lifecycle (including application and image updates) while ensuring high density, performance and fast container startup times.
+At the heart of Anbox Cloud sits the **[Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321)**. **AMS** has the job to handle all aspects of the application and container lifecycle (including application and image updates) while ensuring high density, performance and fast container startup times.
 A developer or system administrator will manage **AMS** through the **command line interface (AMC)** or through custom-built tools interacting with the [**AMS REST API**](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801).
 
 For example, a simple Android application testing service would provide a user-facing interface dealing with things like authentication and user management, and would communicate with the REST API to add applications or start and stop containers when a user asks to.
