@@ -31,12 +31,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 [details=Navigation]
 | Level | Path | Navlink |
 | -- | -- | -- |
-| 0 | | Anbox Cloud |
-| 1 | installation/installation-requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 1 | changelog | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
-| 1 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
-| 1 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
-| 1 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 0 | | Tutorials |
 | 1 | installation/installation-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 1 | manage/getting-started | [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)|
@@ -115,6 +109,12 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | manage/benchmarking-a-deployment | [About benchmarking](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | manage/streaming-android-applications | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 1 | usage/usecase-port-android-application-to-anbox-cloud | [Issues when porting apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776)|
+| 0 | | Anbox Cloud |
+| 1 | installation/installation-requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
+| 1 | changelog | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 1 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
+| 1 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
+| 1 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 [/details]
 
 ## Redirects
