@@ -1,8 +1,15 @@
-The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like AnboxWebView, which you can use to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing.
+The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like AnboxWebView, which extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
 
-The AnboxWebView extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of the text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
+You can use AnboxWebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
 
-## Import the AAR library
+* When the text editor of the application in the container gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
+* When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
+
+The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising) for additional implementation options.
+
+For the complete implementation details, refer to the `enhanced_webview_streaming` example in the `example/android` folder.
+
+## 1. Import the AAR library
 
 Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub:
 
@@ -12,7 +19,7 @@ The `android/libs` folder contains the `com.canonical.anbox.streaming_sdk.aar` A
 
 The `examples/android` folder contains the `enhanced_webview_streaming` Android application. Refer to this application as an example for this feature integration.
 
-## Integrate components
+## 2. Integrate components
 
 After importing the AAR file, add the `AnboxWebView` element to the activity layout file and adjust its layout to your needs. For example:
 
@@ -23,9 +30,11 @@ After importing the AAR file, add the `AnboxWebView` element to the activity lay
         android:layout_height="match_parent" />
    ```
 
-## Build communication bridge
+## 3. Build communication bridge
 
-In your web application code, define the JavaScript functions that can be invoked from the Android Java layer (AnboxWebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK. Adding the following JavaScript code snippet builds up a communication tunnel between the Android Java layer (AnboxWebView) and the JavaScript layer. It attaches the AnboxStream object to the global `window` object. And those functions will automatically be invoked by the Android Java layer (AnboxWebView).
+In your web application code, define the JavaScript functions that can be invoked from the Android Java layer (AnboxWebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK.
+
+Adding the following JavaScript code snippet builds up a communication tunnel between the Android Java layer (AnboxWebView) and the JavaScript layer. It attaches the AnboxStream object to the global `window` object. The functions will automatically be invoked by the Android Java layer (AnboxWebView).
 
    ```
    <script type="module">
@@ -57,17 +66,13 @@ In your web application code, define the JavaScript functions that can be invoke
 
    ```
 
-After you build your project, run the application and stream from Anbox Cloud,
-* when the text edit of the application in the container gains the focus, the client-side virtual keyboard pops up accordingly, and vice versa.
-* when typing on the client-side virtual keyboard, the input text will be sent to the Android container and displayed in the running application.
+<a name="customise"></a>
+## Customising the virtual keyboard
 
-The above workflow provides a general overview on how to integrate the client-side virtual keyboard feature into an Android application. For the complete implementation details, refer to the `enhanced_webview_streaming` example in the `example/android` folder.
+You can take advantage of the interfaces that the AnboxWebView exposes to provide your own implementation of a client-side virtual keyboard that customises:
 
-## Customizing the virtual keyboard
-
-Furthermore, by taking advantage of the interfaces that the AnboxWebView exposes, you can easily provide your own implementation of
-* input text processing
-* handling virtual keyboard state change
+* Input text processing
+* Handling of state changes of the virtual keyboard
 
 1. Set up the listener to the activity for which you want to capture the text input events from the virtual keyboard or monitor its visibility changes during streaming.
    ```
@@ -84,7 +89,7 @@ Furthermore, by taking advantage of the interfaces that the AnboxWebView exposes
        }
    ```
 
-2. When people start typing, one of the following methods from the AnboxWebView.VirtualKeyboardListener interfaces will be triggered. You must implement the following methods for the AppInterface.ActionListener interfaces so that the application can respond to those events and send texts to the Android container:
+2. When people start typing, one of the following methods from the AnboxWebView.VirtualKeyboardListener interfaces will be triggered. Implement the following methods for the AppInterface.ActionListener interfaces so that the application can respond to those events and send texts to the Android container:
 
    ```
        /**
@@ -147,7 +152,9 @@ Furthermore, by taking advantage of the interfaces that the AnboxWebView exposes
 
    ```
 
-3. Once the virtual keyboard pops up on the client side, the `onVirtualKeyboardStateChanged` callback function is triggered. To keep the display proportions correct for IME displaying on both the client and the server ends, the `show` action, which carries the display ratio, must be sent out to the server side. Similar to virtual keyboard pops up, when the virtual keyboard pops down on the client side, to ensure the behaviour of the virtual keyboard is synced on both ends. the `hide` action must be sent out to server side.
+3. Once the virtual keyboard pops up on the client side, the `onVirtualKeyboardStateChanged` callback function is triggered. To keep the display proportions correct for IME displaying on both the client and the server ends, the `show` action, which carries the display ratio, must be sent out to the server side.
+
+   Similarly, when the virtual keyboard pops down on the client side, you must ensure that the behaviour of the virtual keyboard is synced on both ends. Therefore, the `hide` action must be sent out to the server side.
 
 
    ```
@@ -179,4 +186,3 @@ Furthermore, by taking advantage of the interfaces that the AnboxWebView exposes
        }
 
    ```
-
