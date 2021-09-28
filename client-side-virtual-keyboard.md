@@ -66,7 +66,7 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
 
    ```
 
-<a name="customise"></a>
+<a name="customising"></a>
 ## Customising the virtual keyboard
 
 You can take advantage of the interfaces that the AnboxWebView exposes to provide your own implementation of a client-side virtual keyboard that customises:
