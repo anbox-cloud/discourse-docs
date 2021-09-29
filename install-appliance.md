@@ -8,19 +8,21 @@ This offering is well suited for initial prototype and small scale deployments.
   * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
 * When installing the [snap](https://snapcraft.io/):
   * A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
-    > **NOTE:** The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.
+    [note type="information" status="Note"]The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.[/note]
   * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
-    > **WARNING:** The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).
+    [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
 ## Install the appliance
 
 The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap.
 
 * When installing on AWS, follow the steps in [Install from AWS Marketplace](#install-aws).
-* When installing on a local machine or in another cloud, follow the steps in [Install the snap](#install-snap)
+* When installing on a local machine or in another cloud, follow the steps in [Install the snap](#install-snap).
 
 <a name="install-aws"></a>
 ### Install from AWS Marketplace
+
+[note type="information" status="Note"]Skip this section when installing the snap.[/note]
 
 Installing the Anbox Cloud Appliance through the AWS Marketplace simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 
@@ -44,7 +46,7 @@ On the EC2 dashboard, click **Launch Instance** to start the Launch Instance Wiz
 
 ![Start the Launch Instance Wizard|690x451](upload://aTIoezIMs9zzlQksuXn6EJKcsz.png)
 
-> **NOTE:** You should go through all steps in the wizard before launching the instance. In most steps, you can accept the default configuration, but you must configure the required storage for the instance. Therefore, do not click **Review and Launch** until you reach the final page of the wizard.
+[note type="information" status="Note"]You should go through all steps in the wizard before launching the instance. In most steps, you can accept the default configuration, but you must configure the required storage for the instance. Therefore, do not click **Review and Launch** until you reach the final page of the wizard.[/note]
 
 #### 2. Select the AMI
 
@@ -119,6 +121,8 @@ Next, continue with the instructions in [Initialise the appliance](#initialise).
 <a name="install-snap"></a>
 ### Install the snap
 
+[note type="information" status="Note"]Skip this section when installing from the AWS Marketplace.[/note]
+
 The Anbox Cloud Appliance requires a valid Ubuntu Advantage for Applications subscription.
 
 Before installing the appliance, you must attach the machine on which you're running the Anbox Cloud Appliance to your Ubuntu Advantage for Applications subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Advantage for Applications token:
@@ -148,7 +152,7 @@ The appliance requires a few additional tools.
 
 After the installation, access `https://your-machine-address`. This web page provides status information for the following initialisation process.
 
-> **NOTE:** By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.
+[note type="information" status="Note"]By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.[/note]
 
 ![Appliance welcome screen|690x343, 100%](upload://yIGZThPljsjPyRAVQVFkZOiVVNF.png)
 
