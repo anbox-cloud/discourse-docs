@@ -13,7 +13,7 @@ Anbox can make use of different [platforms](https://oem-share.canonical.com/part
 Instructing a container to use a platform is done through the `--platform` (or `-p`) flag when launching a container, e.g.
 
 ```bash
-$ amc launch -p swrast <application>
+amc launch -p swrast <application>
 ```
 
 ### `swrast` platform
@@ -40,7 +40,7 @@ The first two fields which imply display width and display height respectively a
 And when launching a container, supply the display settings via user data:
 
 ```bash
-$ amc launch --userdata="960,720,30,120" -p swrast <application>
+amc launch --userdata="960,720,30,120" -p swrast <application>
 ```
 
 Then the supplied display setting will be applied after the container gets started.
