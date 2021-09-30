@@ -1,30 +1,38 @@
-Anbox Cloud offers a software stack that runs Android applications in any cloud enabling high-performance streaming of graphics to desktop and mobile client devices.
+Anbox Cloud provides a rich software stack that enables you to run Android applications in the cloud for all kinds of different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
 
-At its heart, it uses lightweight container technology instead of full virtual machines to achieve higher density and better performance per host while ensuring security and isolation of each container. Depending on the target platform, payload, and desired application performance (e.g. frame rate), more than 100 containers can be run on a single machine.
+Using container technology, Anbox Cloud is scalable from a single-machine installation that can run scores of single Android systems to an entire cluster of machines. It is based on powerful and battle-proven software from Canonical like [LXD](https://linuxcontainers.org/) and [Juju](https://jujucharms.com/).
 
-For containerization of Android, Anbox Cloud uses the well established and secure container hypervisor [LXD](https://linuxcontainers.org/). LXD is secure by design, scales to a large number of containers and provides advanced resource management for hosted containers.
+## Core features
 
-Also have a look at the [official Anbox Cloud website](https://anbox-cloud.io/) for more information.
+* Simple and straightforward deployment
+* Management of the container and application life cycle while optimising for high density, performance and fast container boot times
+* Platform integration tools to allow, for example, integration of existing streaming solutions
+* Support for both x86 and Arm64 hardware, providing the same set of features
 
-## What Anbox Cloud offers
-Anbox Cloud provides management of an entire cluster of machines running the Anbox Cloud software and maintains a single Android system per container. It is based on powerful and battle proven software from Canonical like [LXD](https://linuxcontainers.org/) or [Juju](https://jujucharms.com/).
+See the [official Anbox Cloud website](https://anbox-cloud.io/) for more information.
 
-Its core features are:
-* Simple and straightforward deployment using [Juju](https://jujucharms.com/) on any cloud
-* Specialized management service to handle all aspects of the container and application lifecycle while optimizing the cluster for high density, performance and faster container boot times
-* Platform integration tools including a rich SDK to allow integration of existing streaming solutions in the Anbox Cloud platform
-* Support for both x86 and Arm64 hardware
-* Integrates with 3rd party solutions for binary translation solutions on Arm64-only hardware
+## Get started
 
-## What's new in 1.11?
+|  |  |
+|--|--|
+| [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) | Learn about the difference between Anbox Cloud and the Anbox Cloud Appliance and about the components and architecture of the offering |
+| [About AMS](https://discourse.ubuntu.com/t/about-ams/24321) | Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle |
+| [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) | Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments |
+| [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) | Deploy the full Anbox Cloud solution to a public cloud |
+| [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud |
 
-Along with bugfixes and general improvements, Anbox Cloud 1.11 comes with:
+## What's new
+
+Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 
 * Client-side virtual keyboard
 * Hardware accelerated video decoding (H.264, Nvidia GPUs only)
 * Experimental WiFi support
 
-Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) for more details.
+|  |  |
+|--|--|
+| [Release notes](https://discourse.ubuntu.com/t/release-notes/17842) | All new features, improvements and bug fixes |
+| [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359) | Planned updates and features for upcoming releases |
 
 ## Navigation
 
