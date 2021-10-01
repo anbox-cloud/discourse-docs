@@ -15,7 +15,7 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 
 |  |  |
 |--|--|
-| [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) | Learn about the difference between Anbox Cloud and the Anbox Cloud Appliance and about the components and architecture of the offering |
+| [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) | Learn about the differences between Anbox Cloud and the Anbox Cloud Appliance and about the components and architecture of the offering |
 | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321) | Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle |
 | [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) | Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments |
 | [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) | Deploy the full Anbox Cloud solution to a public cloud |
