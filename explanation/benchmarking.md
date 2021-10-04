@@ -110,25 +110,6 @@ You can configure a different display specification through the `--user-data` pa
 
 > **Note:** If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.
 
-### Example Stress Test Application
-
-In order to make evaluation and testing easier we provide a GPU stress test application based on an [example application](https://github.com/google/gpu-emulation-stress-test) from Google.
-The application is a stress test which is primarily being used to verify the OpenGL emulation of the Android emulator but serves general stress test purposes as well.
-
-The application was modified to constantly run the benchmark scene with `~1000` objects to drive CPU and GPU utilization of a container. You can find the application APK package here:
-
-* [Stress Test Application (amd64 + arm64, sha256: dfb67bb97ceb5e3c64398210e2ecd65286f14b0c67856abde2ac0bead07bd223)](https://oem-share.canonical.com/partners/indore/share/releases/1.8/other/com.android.gpu_emulation_stress_test_1.8.apk)
-
-Once downloaded you can add the application as regular application (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) to your Anbox Cloud installation. The manifest may look like:
-
-```yaml
-name: gpu-stress-test
-instance: a2.3
-image: default
-```
-
-> **Hint:** Depending on the selected instance type and how powerful a single core of your machines is you may get better results with a larger instance type.
-
 ## Stream Benchmarking
 
 As streaming involves more things to automate for a proper benchmark Anbox Cloud provides a dedicated benchmark tool which allows creating a streaming session, receiving the video/audio stream and collecting various statistics and optional also dumping the received stream to a local file.
