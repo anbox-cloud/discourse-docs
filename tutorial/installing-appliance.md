@@ -26,7 +26,7 @@ Before you start the installation, ensure that you have the required accounts an
   * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
     [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
-<a href="install"></a>
+<a name="install"></a>
 ## Install the appliance
 
 The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap.
