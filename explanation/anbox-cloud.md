@@ -32,7 +32,7 @@ A developer or system administrator will manage **AMS** through the **command li
 
 For example, a simple Android application testing service would provide a user-facing interface dealing with things like authentication and user management, and would communicate with the REST API to add applications or start and stop containers when a user asks to.
 
-Anbox Cloud can be heavily customized and extended via [**Platform Plugins**](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html) and [**addons**](https://discourse.ubuntu.com/t/managing-addons/17759). Platform plugins and addons can be built to add specific streaming capabilities, perform operations within Android containers and much more. One example of a platform plugin is the **Anbox WebRTC Platform** used in the Anbox Streaming Stack. Addons are ways to customize the base image by installing additional software and running scripts on different lifecycle hooks.
+Anbox Cloud can be heavily customized and extended via [**Platform Plugins**](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk) and [**addons**](https://discourse.ubuntu.com/t/managing-addons/17759). Platform plugins and addons can be built to add specific streaming capabilities, perform operations within Android containers and much more. One example of a platform plugin is the **Anbox WebRTC Platform** used in the Anbox Streaming Stack. Addons are ways to customize the base image by installing additional software and running scripts on different lifecycle hooks.
 
 
 ### Streaming Stack
