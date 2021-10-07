@@ -34,6 +34,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 0 | | Tutorials |
 | 1 | tut/installing-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 1 | tut/getting-started | [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 1 | tut/creating-addon | [Creating an addon](tbd)|
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
@@ -46,7 +47,6 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
 | 2 | howto/manage/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 2 | howto/manage/images | [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)|
-| 2 | howto/addons/landing | [Create addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 2 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 2 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 1 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
@@ -70,6 +70,15 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 2 | howto/container/list | [List containers](https://discourse.ubuntu.com/t/list-containers/24328)|
 | 2 | howto/container/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
 | 2 | howto/container/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
+| 1 | howto/addons/landing | [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
+| 2 | howto/addons/enable-globally | [Enable globally](tbd)|
+| 2 | howto/addons/update | [Update addons](tbd)|
+| 2 | howto/addons/migrate | [Migrate from previous versions](tbd)|
+| 2 | howto/addons/install-tools | [Example: Install tools](tbd)|
+| 2 | howto/addons/backup-and-restore | [Example: Back up data](tbd)|
+| 2 | howto/addons/customise-android | [Example: Customise Android](tbd)|
+| 2 | howto/addons/emulate-platforms | [Example: Emulate platforms](tbd)|
+| 2 | howto/addons/best-practices | [Best practices](tbd)|
 | 1 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
 | 2 | howto/monitor/install | [Install the monitoring stack](https://discourse.ubuntu.com/t/monitoring-installation/17786)|
 | 2 | howto/monitor/grafana | [Use Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
@@ -97,6 +106,7 @@ Check the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) fo
 | 1 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 1 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
+| 1 | ref/addons | [Addons](tbd)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index)|
 | 0 | | Explanation |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |

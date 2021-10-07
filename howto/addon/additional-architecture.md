@@ -1,8 +1,6 @@
-You might want to have addons that perform translation on platforms that are not
-natively supported by your application (running x86_64 applications on ARM for example).
+If you want to provide support for platforms that are not natively supported by your application (for example, you want to run an x86_64 application on Arm), you can use a hook to provide support for these platforms.
 
-You can add the top-level key  `provides`  to your addon manifest and list the architecture
-it supports:
+To do so, create a hook that performs the required translation and add the top-level key `provides` to your addon manifest. The value for the `provides` key must list the architectures that the addon supports:
 
 ```yaml
 name: my-addon
@@ -13,5 +11,4 @@ provides:
     - armeabi-v7a
 ```
 
-This will tell AMS that an application can be scheduled on `arm64-v8a` and `armeabi-v7a` systems
-even if no native support is detected in the APK.
+This manifest tells AMS that an application can be scheduled on `arm64-v8a` and `armeabi-v7a` systems even if no native support is detected in the APK.
