@@ -94,6 +94,8 @@ The specified number of cores and RAM is only the minimum required to run Anbox 
 
 More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction of how many resources are necessary to host a specific number of containers.
 
+If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
+
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
  - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
