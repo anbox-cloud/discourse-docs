@@ -1,6 +1,6 @@
 Anbox Cloud provides images based on different Android versions and different architectures (amd64, arm64). AMS manages these images, which can be individually selected by applications. When an image is updated, all applications using the image are automatically updated and rebased on the new image version.
 
-Officially released images are available for each version of Anbox Cloud, either on the [Downloads](https://oem-share.canonical.com/partners/indore/share/docs/1.7/en/installation-downloads.html) page (for versions <= 1.7) or on an image server hosted by Canonical.
+Officially released images are available from the [official image server](https://images.anbox-cloud.io) hosted by Canonical.
 
 > **Note**: Anbox images are regular [Ubuntu cloud images](https://cloud-images.ubuntu.com/) where Anbox and its dependencies are installed. Unnecessary packages are removed to improve images size, boot time and security.
 

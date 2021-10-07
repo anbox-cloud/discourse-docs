@@ -55,7 +55,6 @@ For example, a simple Android application testing service would provide a user-f
 
 Anbox Cloud can be heavily customised and extended via [**platform plugins**](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk) and [**addons**](https://discourse.ubuntu.com/t/managing-addons/17759). Platform plugins and addons can be built to add specific streaming capabilities, perform operations within Android containers and much more. One example of a platform plugin is the [**Anbox WebRTC Platform**](https://discourse.ubuntu.com/t/anbox-platforms/18733) used in the Anbox Streaming Stack. Addons are ways to customise the base image by installing additional software and running scripts on different life cycle hooks.
 
-
 ### Streaming stack
 
 Starting from 1.4, Anbox Cloud comes with an easy to use streaming solution. The [**Anbox Streaming Stack**](https://discourse.ubuntu.com/t/streaming-android-applications/17769) is a collection of components designed to run containers on GPU-equipped machines and stream their visual output to clients via [WebRTC](https://webrtc.org/).
