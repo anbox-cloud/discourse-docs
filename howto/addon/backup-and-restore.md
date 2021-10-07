@@ -1,12 +1,9 @@
-When a container is stopped, all the data and logs produced during the runtime are lost.
-To avoid this, you can use hooks to backup and restore any type of data you want.
+When a container is stopped, all the data and logs produced during the runtime are lost. To avoid this, you can use hooks to back up and restore any type of data you want.
 
-### Backup
-In this example, we are writing a backup hook that uploads logs onto a cloud storage if
-Android terminated with an error.
+### Back up
+In this example, we create a backup hook that uploads logs onto a cloud storage if Android terminated with an error.
 
-Write a new `post-stop` hook on a new or existing addon
-
+Add the following `post-stop` hook to a new or existing addon:
 ```bash
 #!/bin/sh -ex
 
@@ -17,14 +14,14 @@ fi
 
 FILE_NAME=container-logs.tar.bz2
 (cd /var/lib/anbox/logs; tar cvjf ../"${FILE_NAME}" *)
-# Upload the tarball to public or private cloud storage service
+# Upload the tarball to a public or private cloud storage service
 curl -i -X POST --data-binary @"${FILE_NAME}" <cloud_storage_upload_url>
 ```
 
 ### Restore
-In this example, we are writing a hook that restores some user application data
+In this example, we create a hook that restores some user application data.
 
-Write a new `pre-start` hook on a new or existing addon
+Add the following `pre-start` hook to a new or existing addon:
 ```bash
 #!/bin/sh -ex
 
