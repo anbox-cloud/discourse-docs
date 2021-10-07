@@ -1,6 +1,6 @@
 With this quick start guide and some tools from Canonical, you'll have an Anbox Cloud running on the cloud of your choice in minutes!
 
-> **NOTE:** There is a difference between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
+> **NOTE:** There are differences between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
 
 ## What you'll need
 

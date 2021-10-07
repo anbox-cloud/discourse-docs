@@ -1,32 +1,47 @@
-The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine.
-This offering is well suited for initial prototype and small scale deployments.
+The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
-## What you need
+[note type="information" status="Note"]
+There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install the **Anbox Cloud Appliance**, see [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744).
+[/note]
+
+This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance, either from the [AWS Marketplace](https://aws.amazon.com/marketplace/) or from the [snap](https://snapcraft.io/anbox-cloud-appliance):
+
+1. [Check the prerequisites](#prerequisites)
+2. [Install the appliance](#install)
+3. [Initialise the appliance](#initialise)
+4. [Register with the dashboard](#register)
+
+
+<a name="prerequisites"></a>
+## Check the prerequisites
+
+Before you start the installation, ensure that you have the required accounts and prerequisites:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
-* When installing from [AWS Marketplace](https://aws.amazon.com/marketplace/):
+* When installing from the [AWS Marketplace](https://aws.amazon.com/marketplace/):
   * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
-* When installing the [snap](https://snapcraft.io/):
+* When installing the [snap](https://snapcraft.io/anbox-cloud-appliance):
   * A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
     [note type="information" status="Note"]The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.[/note]
   * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
     [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
+<a name="install"></a>
 ## Install the appliance
 
 The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap.
 
-* When installing on AWS, follow the steps in [Install from AWS Marketplace](#install-aws).
+* When installing on AWS, follow the steps in [Install from the AWS Marketplace](#install-aws).
 * When installing on a local machine or in another cloud, follow the steps in [Install the snap](#install-snap).
 
 <a name="install-aws"></a>
-### Install from AWS Marketplace
+### Install from the AWS Marketplace
 
 [note type="information" status="Note"]Skip this section when installing the snap.[/note]
 
 Installing the Anbox Cloud Appliance through the AWS Marketplace simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 
-AWS supports running the Anbox Cloud Appliance on x86 or the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances. Before installing the appliance, decide which architecture you want to use. The decision should factor in the following aspects:
+AWS supports running the Anbox Cloud Appliance on x86 or the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
 
 * GPUs are currently available for x86. NVIDIA GPUs will only become available for Arm instances [later in 2021](https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-to-bring-arm-based-instances-with-gpus-to-the-cloud/).
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
@@ -123,29 +138,33 @@ Next, continue with the instructions in [Initialise the appliance](#initialise).
 
 [note type="information" status="Note"]Skip this section when installing from the AWS Marketplace.[/note]
 
+The following instructions guide you through all relevant steps to install the Anbox Cloud Appliance from the [snap](https://snapcraft.io/anbox-cloud-appliance).
+
+#### 1. Attach your machine to the UA subscription
+
 The Anbox Cloud Appliance requires a valid Ubuntu Advantage for Applications subscription.
 
 Before installing the appliance, you must attach the machine on which you're running the Anbox Cloud Appliance to your Ubuntu Advantage for Applications subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Advantage for Applications token:
 
     sudo ua attach <UA_token>
 
-Then install the `anbox-cloud-appliance` snap, which handles the installation and deployment of Anbox Cloud:
+#### 2. Install the snap
+
+Run the following command to install the `anbox-cloud-appliance` snap, which handles the installation and deployment of the Anbox Cloud Appliance:
 
     sudo snap install --classic anbox-cloud-appliance
 
-#### Install additional tools
+#### 3. Install additional tools
 
-The appliance requires a few additional tools.
+The appliance requires a few additional tools. Run the following commands to install them:
 
-- Enter the following command to install Juju:
+    sudo snap install amc
+    sudo snap install --channel=2.8/stable juju
 
-      sudo snap install --channel=2.8/stable juju
+[note type="information" status="Note"]
+Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for more information).
+[/note]
 
-  Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for more information).
-
-- Enter the following command to install amc:
-
-      sudo snap install amc
 
 <a name="initialise"></a>
 ## Initialise the appliance
@@ -156,7 +175,20 @@ After the installation, access `https://your-machine-address`. This web page pro
 
 ![Appliance welcome screen|690x343, 100%](upload://yIGZThPljsjPyRAVQVFkZOiVVNF.png)
 
+The following instructions guide you through all relevant steps to initialise the Anbox Cloud Appliance.
+
+### 1. Log on to the machine
+
 Log on to the machine that hosts the appliance. If you installed on an AWS instance, note that you must use the user name `ubuntu` and provide the path to your private key file when connecting. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
+
+### 2. Update your system
+
+Run the following commands to ensure that all installed packages on your system are up-to-date:
+
+    sudo apt update
+    sudo apt upgrade
+
+### 3. Start the initialisation process
 
 Invoke the initialisation process of the Anbox Cloud Appliance:
 
@@ -221,12 +253,14 @@ progress: 60
 update-available: false
 reboot-needed: false
 ```
+<a name="register"></a>
+## Register with the dashboard
 
-## Register your user account
-
-Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation.
+Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
 ![Instructions for registering Ubuntu SSO account|690x442](upload://l4EPbQr1NcsD78r3K03F3ISjiL2.png)
+
+### 1. Register your Ubuntu SSO account
 
 Register your Ubuntu SSO account by running the following command via SSH on the machine that hosts the appliance:
 
@@ -236,6 +270,6 @@ The output provides a link that you must open in your web browser to finish the 
 
 ## Done!
 
-Your Anbox Cloud Appliance is now fully set up and ready to be used! You can read more about your next steps [here](https://discourse.ubuntu.com/t/getting-started/17756).
+Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
