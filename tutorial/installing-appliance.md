@@ -41,8 +41,9 @@ The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap
 
 Installing the Anbox Cloud Appliance through the AWS Marketplace simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 
-AWS supports running the Anbox Cloud Appliance on x86 or the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
+AWS supports running the Anbox Cloud Appliance on the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances or on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
 
+* AWS Graviton (Arm) and x86 offer equal performance for Android applications.
 * GPUs are currently available for x86. NVIDIA GPUs will only become available for Arm instances [later in 2021](https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-to-bring-arm-based-instances-with-gpus-to-the-cloud/).
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
 
