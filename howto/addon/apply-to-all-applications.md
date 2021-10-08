@@ -8,6 +8,6 @@ amc config set application.addons foo,bar
 
 This command adds the `foo` and `bar` addons to all your new and existing applications. AMS will automatically update existing applications.
 
-Global addons will be added to application-specific addons.
+If you define both global addons and application-specific addons, applications will use both.
 
 [note type="caution" status="Warning"]Addons can delay the start of your applications. Therefore, keep them light.[/note]
