@@ -4,7 +4,7 @@ See [Addons](tbd) for more information and a complete reference on addons. Follo
 
 You can use addons to, for example:
 - Enable SSH access for automation tools (see [Creating an addon](tbd))
-- Set up user-specific data when starting an application
+- Set up user-specific data when starting an application (see [Restore data](tbd#restore))
 - Install additional tools in the container (see [Example: Install tools](tbd))
 - Back up data when the container is stopping (see [Example: Back up data](tbd))
 - Configure the Android system before running the application (see [Example: Customise Android](tbd))
