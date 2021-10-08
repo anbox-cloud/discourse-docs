@@ -41,7 +41,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | -- | -- | -- |
 | 0 | | Tutorials |
 | 1 | tut/installing-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 1 | tut/getting-started | [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 1 | tut/getting-started-dashboard | [Getting started (dashboard)](tbd)|
+| 1 | tut/getting-started | [Getting started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |

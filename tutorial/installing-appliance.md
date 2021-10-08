@@ -155,6 +155,7 @@ Run the following command to install the `anbox-cloud-appliance` snap, which han
 
     sudo snap install --classic anbox-cloud-appliance
 
+<a name="additional-tools"></a>
 #### 3. Install additional tools
 
 The appliance requires a few additional tools. Run the following commands to install them:
