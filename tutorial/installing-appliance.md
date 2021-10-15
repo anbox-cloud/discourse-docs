@@ -96,7 +96,7 @@ Click **Next: Add Storage** to continue.
 
 #### 5. Add storage
 
-The Anbox Cloud instance requires sufficient storage to work correctly. The root disk should have at minimum 50 GB and for best performance, you should create an additional EBS volume of at least 50 GB. Anbox Cloud uses the additional volume exclusively to store all of its containers. Using a separate volume isolates them from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store the containers. However, this is not recommended.
+The Anbox Cloud instance requires sufficient storage to work correctly. The root disk should have at minimum 50 GB and for best performance, you should create an additional EBS volume of at least 50 GB. Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
 
 ![Add storage|690x451](upload://q1ZMOzkRWUZo6OVhwRXDtI8AZz3.png)
 
