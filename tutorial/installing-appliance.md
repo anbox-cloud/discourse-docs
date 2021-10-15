@@ -255,7 +255,7 @@ update-available: false
 reboot-needed: false
 ```
 
-The entire deployment process will take 10-15 minutes depending on selected hardware and network conditions.
+The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
 
 <a name="register"></a>
 ## Register with the dashboard
