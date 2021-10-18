@@ -106,6 +106,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 1 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index)|
+| 1 | ref/perf-benchmarks | [Performance benchmarks](TBD)|
 | 0 | | Explanation |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
 | 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
