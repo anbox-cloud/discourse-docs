@@ -1,8 +1,8 @@
-This page collects performance benchmarks collected from various virtual and bare metal hardware in order to provide an overview of what can be achieved with Anbox Cloud.
+The following benchmarks give an overview of the performance that you can achieve with Anbox Cloud. The numbers were collected on various virtual and bare metal hardware.
 
-## Bare Metal
+## Bare metal
 
-| Instance Type                       | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # containers | avg FPS |
+| Instance type                       | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # Containers | Avg. FPS |
 |-------------------------------------|---------------------|----------------------|------------|---------------------|--------------|---------|
 | Ampere Altra + 1x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | BombSquad Stress    | 30           | 29      |
 | Ampere Altra + 2x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | BombSquad Stress    | 55           | 29      |
@@ -11,7 +11,7 @@ This page collects performance benchmarks collected from various virtual and bar
 
 ## AWS
 
-| Instance Type | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # containers | avg FPS |
+| Instance type | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # Containers | Avg. FPS |
 |---------------|---------------------|----------------------|------------|---------------------|--------------|---------|
 | m6g.2xlarge   | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 20      |
 | m5a.2xlarge   | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 13      |
