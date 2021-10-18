@@ -2,6 +2,25 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.11.3]
+
+## 1.11.3 (October 18 2021)
+
+### New features & improvements
+
+ * Android security updates for October 2021 (see [Android Security Bulletin - October 2021](https://source.android.com/security/bulletin/2021-10-01) for more information)
+ * Android WebView has been updated to [94.0.4606.80](https://chromereleases.googleblog.com/2021/10/chrome-for-android-update.html)
+ * The shared memory transport used for the `null` platform is now disabled by default for increased stability
+ * ANGLE libraries used for `null` platform are updated to increase stability and cause Anbox to not crash in certain situations
+
+### Bugs
+
+ * AC-321 Deploying multiple AMS units at the same time causes problems
+ * AC-343 ANDROID_EMU_* extensions are visible for Android applications
+ * AC-384 Fix steam view in the dashboard
+
+[/Details]
+
 [Details=1.11.2]
 
 ## 1.11.2 (September 20 2021)
