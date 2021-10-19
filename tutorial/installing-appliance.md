@@ -54,6 +54,23 @@ For detailed information about the offering, see the following pages on the AWS 
 
 The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance in your AWS account. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) about launching an instance.
 
+The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
+
+#### Before you start
+
+Deploying the Anbox Cloud Appliance requires some familiarity with AWS. In particular, you should be familiar with:
+
+- Amazon Elastic Compute Cloud (Amazon EC2), for basic EC2 configuration
+- Amazon Elastic Block Storage (Amazon EBS), for configuring the EC2 instance storage and managing encryption
+- Amazon Virtual Private Cloud (Amazon VPC), for configuring an internet facing subnet and a security group
+
+The appliance uses the following billable services by AWS:
+
+- EC2 and Marketplace appliance (see the AWS Marketplace product page for costs)
+- Network egress
+
+You do not need to request an increase in limits for your AWS account for this deployment.
+
 #### 1. Start the launch wizard
 
 Open the [Amazon EC2 console](https://console.aws.amazon.com/ec2/) and log in.
@@ -254,8 +271,6 @@ progress: 60
 update-available: false
 reboot-needed: false
 ```
-
-The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
 
 <a name="register"></a>
 ## Register with the dashboard
