@@ -81,7 +81,11 @@ resources:
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.
 
+## Publish application versions
+
 The most important part of an application version is the `published` field. If a version is marked as published, it is accessible to users of Anbox Cloud. Generally when launching containers by using the AMS REST API, if no specific application version is given, the last published version of an application is used to create the container.
+
+If [`application.auto_publish`](https://discourse.ubuntu.com/t/ams-configuration/20872) is set to `true` (the default), new versions are automatically published. Otherwise, you need to publish them manually.
 
 You can mark an application version as published with the following command:
 
@@ -92,6 +96,8 @@ To revoke an application version, use the following command:
     amc application revoke bcmap7u5nof07arqa2ag 1
 
 If an application has only a single published version and that version is revoked, the application can't be used by any users anymore. AMS will still list the application but will mark it as not published as it has no published versions.
+
+## Delete application versions
 
 Each version takes up space on the LXD nodes. To free up space and remove old and unneeded versions, you can individually remove them, with the only requirement that an application must have at least a single version at all times. Removing a specific application version is possible with the following command:
 
