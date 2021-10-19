@@ -41,6 +41,21 @@ The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap
 
 Installing the Anbox Cloud Appliance through the AWS Marketplace simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 
+AWS supports running the Anbox Cloud Appliance on the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances or on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
+
+* AWS Graviton (Arm) and x86 offer equal performance for Android applications.
+* GPUs are currently available for x86. NVIDIA GPUs will only become available for Arm instances [later in 2021](https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-to-bring-arm-based-instances-with-gpus-to-the-cloud/).
+* Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
+
+For detailed information about the offering, see the following pages on the AWS Marketplace:
+
+* [Anbox Cloud Appliance for AWS Graviton (Arm)](https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk)
+* [Anbox Cloud Appliance for x86](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4)
+
+The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance in your AWS account. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) about launching an instance.
+
+The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
+
 #### Before you start
 
 Deploying the Anbox Cloud Appliance requires some familiarity with AWS. In particular, you should be familiar with:
@@ -55,21 +70,6 @@ The appliance uses the following billable services by AWS:
 - Network egress
 
 You do not need to request an increase in limits for your AWS account for this deployment.
-
-The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
-
-AWS supports running the Anbox Cloud Appliance on the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances or on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
-
-* AWS Graviton (Arm) and x86 offer equal performance for Android applications.
-* GPUs are currently available for x86. NVIDIA GPUs will only become available for Arm instances [later in 2021](https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-to-bring-arm-based-instances-with-gpus-to-the-cloud/).
-* Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
-
-For detailed information about the offering, see the following pages on the AWS Marketplace:
-
-* [Anbox Cloud Appliance for AWS Graviton (Arm)](https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk)
-* [Anbox Cloud Appliance for x86](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4)
-
-The following instructions guide you through all relevant steps to deploy the Anbox Cloud Appliance in your AWS account. For additional information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html) about launching an instance.
 
 #### 1. Start the launch wizard
 
