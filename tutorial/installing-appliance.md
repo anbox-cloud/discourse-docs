@@ -41,6 +41,26 @@ The Anbox Cloud Appliance is available through the AWS Marketplace and as a snap
 
 Installing the Anbox Cloud Appliance through the AWS Marketplace simplifies the installation and deployment process and allows billing to be handled directly through AWS.
 
+#### General information and requirements
+
+Deploying Anbox cloud appliance requires familiarity with AWS. In particular:
+
+- Amazon Elastic Compute Cloud (Amazon EC2), for basic EC2 configuration
+- Amazon Elastic Block Storage (Amazon EBS), for configuring the EC2 instance storage and managing encryption
+- Amazon Virtual Private Cloud (Amazon VPC), for configuring an internet facing subnet and a security groups.
+
+This appliance uses the following billable services by AWS:
+
+- EC2 and Marketplace appliance. Please refer to the AWS Marketplace product page for costs.
+- Network egress.
+
+You will not need to request an increase in limits for you AWS Account for this
+deployment.
+
+The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
+
+#### Installation steps
+
 AWS supports running the Anbox Cloud Appliance on the [AWS Graviton](https://aws.amazon.com/ec2/graviton/) Arm-based instances or on x86 instances. Before installing the appliance, decide which architecture you want to use. The appliance supports the same set of features on both architectures, but you should factor in the following aspects:
 
 * AWS Graviton (Arm) and x86 offer equal performance for Android applications.
@@ -254,8 +274,6 @@ progress: 60
 update-available: false
 reboot-needed: false
 ```
-
-The entire deployment process will take 10-15 minutes, depending on the selected hardware and the network conditions.
 
 <a name="register"></a>
 ## Register with the dashboard
