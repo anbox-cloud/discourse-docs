@@ -1,7 +1,7 @@
 The Streaming Stack is based on [WebRTC](https://webrtc.org/) and integrates with GPUs from different vendors to enable low latency video encoding mandatory for any kind of real time streaming use case.
 
 This section covers usage of the Streaming Stack, for installation instructions please refer to [the installation page](https://discourse.ubuntu.com/t/installation-quickstart/17744).
-We also assume you know [how to get access to the Stream Gateway API](https://discourse.ubuntu.com/t/managing-stream-gateway-access/1778).
+We also assume you know [how to get access to the Stream Gateway API](https://discourse.ubuntu.com/t/access-the-stream-gateway/17784).
 
 ## Streaming Stack Overview
 

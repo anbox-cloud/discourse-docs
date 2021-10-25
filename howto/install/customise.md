@@ -179,7 +179,7 @@ anbox-stream-gateway:
   to: ['0']
 ```
 
-There are a few entries under `options`, in this case to enable the development UI and point Prometheus at a specific port. There are however, a number of configuration options available (more details are in [the charm documentation](https://jujucharms.com/new/u/anbox-charmers/anbox-stream-gateway/23)). We can add additional configuration by supplying the desired settings under options. So, for example, where we might do the following through Juju to set some proxy values:
+There are a few entries under `options`, in this case to enable the development UI and point Prometheus at a specific port. There are however, a number of configuration options available (more details are in [the charm documentation](https://jaas.ai/u/anbox-charmers/anbox-stream-gateway/64)). We can add additional configuration by supplying the desired settings under options. So, for example, where we might do the following through Juju to set some proxy values:
 
 ```bash
 $ juju config anbox-stream-gateway https_proxy=https://proxy.example.com
@@ -233,4 +233,4 @@ Running this command will output some login information and a URL for the GUI in
 
 ![Anbox Cloud - Juju GUI|690x444](upload://bXqb0LwD7EBZDwL18CsZSBZqL5r.png)
 
-For more information on the Juju GUI, see the [Juju documentation](https://docs.jujucharms.com/stable/en/controllers-gui).
+For more information on the Juju GUI, see the [Juju documentation](https://juju.is/docs/olm/accessing-the-dashboard).
