@@ -8,7 +8,7 @@ The tutorial focuses on using the command line to work with Anbox Cloud, which g
 
 ## 1. Run AMC
 
-The Anbox Management Client `amc` communicates with the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321). You will use `amc` to manage all aspects of Anbox Cloud.
+The Anbox Management Client `amc` communicates with the [Anbox Management Service (AMS)](https://discourse.ubuntu.com/t/about-ams/24321). You will use `amc` to manage all aspects of Anbox Cloud that are related to AMS.
 
 How and where to run `amc` depends on your use case:
 
@@ -167,6 +167,8 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
+[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Issues when porting Android apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776) for more information.[/note]
+
 Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
@@ -192,8 +194,6 @@ Complete the following steps to create an application from an APK:
    Wait until the status of the application changes to `ready`.
 
 When the application is ready, you can launch it and then test it in the same way as the virtual device by either [logging on to it](#logon) or [connecting to it with `scrcpy`](#scrcpy).
-
-If you encounter any problems, see [Issues when porting Android apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776).
 
 ## 7. Update an application
 
