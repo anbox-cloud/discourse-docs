@@ -4,7 +4,7 @@ The tutorial focuses on using the command line to work with Anbox Cloud, which g
 
 [note type="information" status="Important"]If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 - [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
-- [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744)[/note]
+- [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)[/note]
 
 ## 1. Run AMC
 

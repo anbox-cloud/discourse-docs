@@ -1,7 +1,7 @@
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
 [note type="information" status="Note"]
-There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install the **Anbox Cloud Appliance**, see [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744).
+There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install **Anbox Cloud**, see [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336).
 [/note]
 
 This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance, either from the [AWS Marketplace](https://aws.amazon.com/marketplace/) or from the [snap](https://snapcraft.io/anbox-cloud-appliance):
