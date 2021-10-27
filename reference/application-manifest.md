@@ -81,18 +81,19 @@ Name           | Value type | Description
 `protocols`    | array of strings | Protocols to be used by the service (Possible values are: tcp, udp)
 `expose`       | Boolean    | Expose service to be accessible externally or internally
 
+<a name="resources"></a>
 ## Resources
 
-If the [`instance-type`](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is provided by AMS doesn't meet the criteria that the installed application requires to function, you use the `resources` directive to override the predefined resources in `instance-type`.
+If the [`instance-type`](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is provided by AMS doesn't meet the criteria that the installed application requires to function, you can use the `resources` directive to override the predefined resources.
 
 Name           | Value type | Minimum value  | Description
 ---------------|------------|----------------|-------------------------
-`cpus`         | integer    |     1          | Number of vcpu cores
+`cpus`         | integer    |     1          | Number of vCPU cores
 `memory`       | string     |     3 GB       | Memory to be assigned to the application
 `disk-size`    | string     |     3 GB       | Disk size to be assigned to the application
 `gpu-slots`(optional) | integer |     0      | Number of GPU slots to be assigned to the application
 
-In the following application manifest file, the application is created with `a2.3` instance type, which will be assigned 2 vcpu cores, 3 GB memory and 3 GB disk size. With the following resources defined in the manifest file, the allocated memory and disk size will end up at 4 GB and 8 GB, respectively, on application installation and the number of vcpu cores remains the same:
+In the following application manifest file, the application is created with `a2.3` instance type, which will be assigned 2 vCPU cores, 3 GB of memory and a disk size of 3 GB. With the following resources defined in the manifest file, the allocated memory and disk size will end up at 4 GB and 8 GB, respectively, on application installation, and the number of vCPU cores remains the same:
 
 ```yaml
 name: candy
@@ -102,7 +103,7 @@ resources:
   disk-size: 8GB
 ```
 
-If all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest, the `instance-type` field is no longer needed. Even if the `instance-type` field is provided, it will be overridden by `resources` in the end upon application installation.
+If all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest, the `instance-type` field is no longer needed. Even if the `instance-type` field is provided, it will be overridden by the requirements in the `resources` fields upon application installation.
 
 ## Extra data
 
