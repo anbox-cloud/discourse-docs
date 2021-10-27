@@ -1,6 +1,6 @@
 This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with [AMS](https://discourse.ubuntu.com/t/about-ams/24321) and how to create and access a virtual Android device or an application.
 
-The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Getting started (dashboard)](tbd) tutorial for an introduction on how to use the web dashboard.
+The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Getting started with Anbox Cloud (web dashboard)](tbd) tutorial for an introduction on how to use the web dashboard.
 
 [note type="information" status="Important"]If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 - [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
@@ -134,7 +134,7 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
 1. Launch a container based on the virtual device application, with the ADB service exposed and using the [`swrast` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) that provides software rendering:
 
-        amc launch virtual-device-cli -s +adb -p swrast
+        amc launch virtual-device-cli --service +adb --platform swrast
 
 2. Enter the following command to monitor the progress:
 
@@ -173,7 +173,7 @@ Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
 
-2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) for the application. Choose an instance type that is suitable for your application. If your application requires the use of a GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
    For example, the file could look like this:
 
@@ -223,7 +223,7 @@ Complete the following steps to add a new version to your application:
 
    Note the `status` and the `published` fields. Once the status changes to `active`, the new version of the application is automatically published.
 
-When you now launch the application again, the ADB service is exposed automatically.
+When you launch an application without explicitly specifying a version, AMS uses the latest published version of the application. Therefore, when you now launch the application again, the new version of your application is selected and the ADB service is exposed automatically.
 
 ## 8. List and delete applications and containers
 
@@ -282,6 +282,6 @@ While following this tutorial, you created several applications and containers. 
 
 You now know how to use the command line to create, launch and test applications in Anbox Cloud.
 
-If you are interested in a more easy-to-use interface, check out the [Getting started (dashboard)](tbd) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
+If you are interested in a more easy-to-use interface, check out the [Getting started with Anbox Cloud (web dashboard)](tbd) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
 Also see the documentation about [how to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [how to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.

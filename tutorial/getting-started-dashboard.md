@@ -1,6 +1,6 @@
 This tutorial guides you through the first steps of using Anbox Cloud. You will learn how to create and access a virtual Android device or an application using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
-The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Getting started (CLI)](tbd) tutorial.
+The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial.
 
 [note type="information" status="Important"]If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 - [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
@@ -40,7 +40,7 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 
 [note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Issues when porting Android apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776) for more information.[/note]
 
-Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your application requires the use of a GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
 You can launch and test the application in the same way as you did for the virtual device.
 
@@ -59,6 +59,6 @@ Complete the following steps to add a new version to your application:
 
 You now know how to use the web dashboard to create, launch and test applications in Anbox Cloud.
 
-If you are interested in more advanced use cases, check out the [Getting started (CLI)](tbd) tutorial to learn how to use Anbox Cloud from the command line.
+If you are interested in more advanced use cases, check out the [Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to learn how to use Anbox Cloud from the command line.
 
 Also see the documentation about [how to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [how to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335).
