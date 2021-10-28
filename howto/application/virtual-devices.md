@@ -16,7 +16,7 @@ instance-type: a4.3
 
 ## Extend the Application with Addons
 
-You can also extend the application with [addons](https://discourse.ubuntu.com/t/managing-addons/17759/2) which install additional applications you want to offer as part of your default experience. You can for example replace the standard Android launcher with a custom one like [Lawnchair](https://lawnchair.app/).
+You can also extend the application with [addons](tbd) which install additional applications you want to offer as part of your default experience. You can for example replace the standard Android launcher with a custom one like [Lawnchair](https://lawnchair.app/).
 
 ```bash
 $ mkdir -p vdev-support/hooks
@@ -26,12 +26,12 @@ $ cat << EOF > manifest.yaml
 name: vdev-support
 description: |
   Addon installing and configuring the Lawnchair launcher as the systems default one
-$ touch hooks/prepare hooks/install
-$ cat << EOF > hooks/install
+$ touch hooks/post-start hooks/pre-start
+$ cat << EOF > hooks/pre-start
 #!/bin/sh -ex
 exit 0
 EOF
-$ cat << EOF > hooks/prepare
+$ cat << EOF > hooks/post-start
 #!/bin/sh -ex
 cp "$ADDON_DIR"/lawnchair.apk /var/lib/anbox/data/
 anbox-shell pm install -g -t /data/lawnchair.apk
