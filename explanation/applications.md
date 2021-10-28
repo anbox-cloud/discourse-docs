@@ -1,4 +1,4 @@
-Applications are one of the main objects AMS manages. A single application encapsulates one Android application and manages it within the cluster. It takes care of installing the supplied application package ([Android Package Kit - APK](https://en.wikipedia.org/wiki/Android_application_package)), to make it available to users. Further, AMS manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
+Applications are one of the main objects AMS manages. A single application encapsulates one Android app and manages it within the cluster. It takes care of installing the supplied app package ([Android Package Kit - APK](https://en.wikipedia.org/wiki/Android_application_package)), to make it available to users. Further, AMS manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
 
 ## Application requirements
 To run on the Anbox Cloud platform, applications must fulfil a set of requirements. These are:
@@ -11,14 +11,14 @@ If the application fulfils all of the requirements above, it is ready to run on 
 <a name="bootstrap"></a>
 ### Bootstrap process
 
-Whenever [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) either from a directory or a tarball, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits the bootstrap process provides:
+When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) either from a directory or a tarball, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits the bootstrap process provides:
 
   * It enables AMS to launch a container for an application without installing the APK every time.
   * It dramatically speeds up the startup time of a regular container.
 
 Furthermore, an application is synchronised within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through [scaling down](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) or lost from the cluster unexpectedly.
 
-A temporary base container will be created and used for the bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
+A temporary base container is created and used for the bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
 
 ```bash
 +----------------------+-------------+------+----------+------+---------------+-----------+
@@ -30,20 +30,20 @@ A temporary base container will be created and used for the bootstrapping during
 
 In general, the bootstrap process goes through the following steps in order:
 
-![application-bootstrap|690x467](upload://haAJJ8p8ZEQXmsvrVb3HOHhl1io.png)
+1. Configure the network interface and gateway.
+2. Apply any pending Ubuntu system security updates.
+3. Install [addons](tbd) via the `pre-start` hook provided by each addon listed in the application manifest file.
+4. Launch the Android container.
+5. Install the APK provided by the application.
+6. Grant the application permissions as requested in the application manifest.
+7. Install the extra data as listed in the application manifest.
+8. Execute the `post-start` hook provided by each addon listed in the application manifest.
 
-  * Configure network interface and gateway.
-  * Apply any pending Ubuntu system security updates.
-  * Install [addons](https://discourse.ubuntu.com/t/managing-addons/17759) via the `install` hook provided by each addon listed in the application manifest file.
-  * Launch Android container.
-  * Install the APK provided by the application.
-  * Grant the application permissions as requested in the application manifest.
-  * Install the extra data as listed in the application manifest.
-  * Execute the `prepare` hook provided by each addon listed in the application manifest.
+![Application bootstrap process](tbd)
 
 If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be marked with `error` and the application's status will end up with `error` as well.
 
-> **Note:** An application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the status of application is set to `error` too.
+[note type="information" status="Note"]An application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the status of application is set to `error` too.[/note]
 
 When a base container runs into an error status, you can see what has gone wrong there by checking the error message with `amc show <application ID>`:
 
