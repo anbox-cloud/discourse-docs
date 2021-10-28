@@ -50,7 +50,7 @@ Then the supplied display setting will be applied after the container gets start
 
 Display settings for the `null` can be configured in the same way as for the `swrast` platform.
 
-Instead of supplying the display settings via userdata through the `amc launch` command they can be alternatively written before the start of the Anbox runtime (e.g. in a restore or install hook) to `/var/lib/anbox/display_settings`. The format remains the same as when supplied as userdata.
+Instead of supplying the display settings via userdata through the `amc launch` command they can be alternatively written before the start of the Anbox runtime (e.g. in a pre-start hook) to `/var/lib/anbox/display_settings`. The format remains the same as when supplied as userdata.
 
 ### `webrtc` platform
 
