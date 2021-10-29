@@ -51,6 +51,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 2 | howto/install/high-availability | [Enable High Availability](https://discourse.ubuntu.com/t/high-availability/17754)|
 | 2 | howto/install/validate | [Validate the deployment](https://discourse.ubuntu.com/t/validation/20329)|
 | 1 | howto/update/landing | [Update your installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
+| 2 | howto/update/control | [Control updates](tbd)|
 | 2 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
 | 2 | howto/update/upgrade-anbox | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
 | 1 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
