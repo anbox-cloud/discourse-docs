@@ -5,6 +5,7 @@ AMS provides various configuration items to customize its behavior. The followin
 |-----------|------------|----|-------------------------|--------------------|
 | `application.addons` | string| -  |Comma separate listed of addons every application managed by AMS should use. |
 | `application.auto_publish` | boolean | true | If set to `true` AMS will automatically publish new applications versions when they finished the bootstrap process. `false` disables this. |
+| `application.auto_update` | boolean | true | If set to `true` AMS will automatically update applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. |
 | `application.default_abi` | string | - | Default Android ABI applications should use. See https://developer.android.com/ndk/guides/abis for a list of available ABIs|
 |`application.max_published_versions` | integer | 3 | Maximum number of published versions per application. If the number of versions of an application is higher, AMS will automatically clean up older versions. |
 |`container.default_platform` | string | -  | Set to the platform name Anbox should use by default |
