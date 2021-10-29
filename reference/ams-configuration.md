@@ -1,8 +1,8 @@
 AMS provides various configuration items to customize its behavior. The following lists the available ones and their meaning.
 
 
-| Name | Type | Default |  Description |
-|-----------|------------|----|-------------------------|--------------------|
+| Name | Type | Default |  Description            |
+|------|------|---------|-------------------------|
 | `application.addons` | string| -  |Comma separate listed of addons every application managed by AMS should use. |
 | `application.auto_publish` | boolean | true | If set to `true` AMS will automatically publish new applications versions when they finished the bootstrap process. `false` disables this. |
 | `application.auto_update` | boolean | true | If set to `true` AMS will automatically update applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. |

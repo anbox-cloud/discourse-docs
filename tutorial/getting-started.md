@@ -1,10 +1,13 @@
 This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with [AMS](https://discourse.ubuntu.com/t/about-ams/24321) and how to create and access a virtual Android device or an application.
 
-The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Getting started with Anbox Cloud (web dashboard)](tbd) tutorial for an introduction on how to use the web dashboard.
+The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
 
-[note type="information" status="Important"]If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
+[note type="information" status="Important"]
+If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
+
 - [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
-- [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)[/note]
+- [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)
+[/note]
 
 ## 1. Run AMC
 
@@ -282,6 +285,6 @@ While following this tutorial, you created several applications and containers. 
 
 You now know how to use the command line to create, launch and test applications in Anbox Cloud.
 
-If you are interested in a more easy-to-use interface, check out the [Getting started with Anbox Cloud (web dashboard)](tbd) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
+If you are interested in a more easy-to-use interface, check out the [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
 Also see the documentation about [how to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [how to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.

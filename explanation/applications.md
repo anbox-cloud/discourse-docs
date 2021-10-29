@@ -78,6 +78,7 @@ See the following documentation for instructions on how to manage your applicati
  * [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)
  * [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)
  * [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)
+ * [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)
  * [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)
  * [List applications](https://discourse.ubuntu.com/t/list-applications/24200)
  * [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)

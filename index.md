@@ -19,7 +19,7 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321) | Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle |
 | [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) | Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments |
 | [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) | Deploy the full Anbox Cloud solution to a public cloud |
-| [Getting started with Anbox Cloud (web dashboard)](tbd)<br>[Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface |
+| [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)<br>[Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface |
 
 
 ## What's new
@@ -42,7 +42,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | -- | -- | -- |
 | 0 | | Tutorials |
 | 1 | tut/installing-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 1 | tut/getting-started-dashboard | [Getting started (web dashboard)](tbd)|
+| 1 | tut/getting-started-dashboard | [Getting started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 1 | tut/getting-started | [Getting started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
@@ -51,7 +51,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 2 | howto/install/high-availability | [Enable High Availability](https://discourse.ubuntu.com/t/high-availability/17754)|
 | 2 | howto/install/validate | [Validate the deployment](https://discourse.ubuntu.com/t/validation/20329)|
 | 1 | howto/update/landing | [Update your installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
-| 2 | howto/update/control | [Control updates](tbd)|
+| 2 | howto/update/control | [Control updates](https://discourse.ubuntu.com/t/control-updates/24959)|
 | 2 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
 | 2 | howto/update/upgrade-anbox | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
 | 1 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
@@ -64,7 +64,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 2 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 2 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
 | 2 | howto/application/update | [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)|
-| 2 | howto/application/resources | [Configure available resource](tbd)|
+| 2 | howto/application/resources | [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)|
 | 2 | howto/application/delete | [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)|
 | 2 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
 | 2 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|

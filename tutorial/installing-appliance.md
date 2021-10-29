@@ -290,6 +290,6 @@ The output provides a link that you must open in your web browser to finish the 
 
 ## Done!
 
-Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Getting started with Anbox Cloud (web dashboard)](tbd) or the [Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
+Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) or the [Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
