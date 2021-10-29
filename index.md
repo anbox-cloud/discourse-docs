@@ -19,7 +19,8 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321) | Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle |
 | [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) | Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments |
 | [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) | Deploy the full Anbox Cloud solution to a public cloud |
-| [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud |
+| [Getting started with Anbox Cloud (web dashboard)](tbd)<br>[Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface |
+
 
 ## What's new
 
@@ -41,7 +42,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | -- | -- | -- |
 | 0 | | Tutorials |
 | 1 | tut/installing-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 1 | tut/getting-started | [Getting started](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 1 | tut/getting-started-dashboard | [Getting started (web dashboard)](tbd)|
+| 1 | tut/getting-started | [Getting started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |

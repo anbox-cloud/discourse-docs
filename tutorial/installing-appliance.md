@@ -1,7 +1,7 @@
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
 [note type="information" status="Note"]
-There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install the **Anbox Cloud Appliance**, see [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744).
+There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on the **Anbox Cloud Appliance**. For instructions on how to install **Anbox Cloud**, see [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336).
 [/note]
 
 This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance, either from the [AWS Marketplace](https://aws.amazon.com/marketplace/) or from the [snap](https://snapcraft.io/anbox-cloud-appliance):
@@ -172,6 +172,7 @@ Run the following command to install the `anbox-cloud-appliance` snap, which han
 
     sudo snap install --classic anbox-cloud-appliance
 
+<a name="additional-tools"></a>
 #### 3. Install additional tools
 
 The appliance requires a few additional tools. Run the following commands to install them:
@@ -289,6 +290,6 @@ The output provides a link that you must open in your web browser to finish the 
 
 ## Done!
 
-Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Getting started with Anbox Cloud](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
+Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Getting started with Anbox Cloud (web dashboard)](tbd) or the [Getting started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
