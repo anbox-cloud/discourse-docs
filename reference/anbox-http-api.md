@@ -144,7 +144,7 @@ Input:
 
 ```json
 {
-    "latitude":: 52.4538982,         # Latitude of geographic coordinates
+    "latitude": 52.4538982,         # Latitude of geographic coordinates
     "longitude": 13.3857982,         # Longitude of geographic coordinates
     "altitude": 10.0,                # Altitude in meters
     "time": 1597237057,              # Current time in millisecond since 1970-01-01 00:00:00 UTC
