@@ -63,6 +63,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 2 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 2 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
 | 2 | howto/application/update | [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)|
+| 2 | howto/application/resources | [Configure available resource](tbd)|
 | 2 | howto/application/delete | [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)|
 | 2 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
 | 2 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
