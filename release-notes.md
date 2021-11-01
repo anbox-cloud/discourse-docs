@@ -2,6 +2,20 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.11.4]
+
+## 1.11.4 (November 1 2021)
+
+### New features & improvements
+
+None.
+
+### Bugs
+
+A bug in the Anbox runtime caused random webview-based applications to crash when upgrading the webview.apk to [94.0.4606.80](https://chromereleases.googleblog.com/2021/10/chrome-for-android-update.html). For this reason, we downgraded the webview version to [93.0.4577.82](https://chromereleases.googleblog.com/2021/09/chrome-for-android-update.html) for stability, and we are planning to provide a fix in the Anbox Cloud 1.12 release.
+
+[/Details]
+
 [Details=1.11.3]
 
 ## 1.11.3 (October 18 2021)
