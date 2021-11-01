@@ -1,4 +1,4 @@
-Applications are one of the main objects AMS manages. A single application encapsulates one Android app and manages it within the cluster. It takes care of installing the supplied app package ([Android Package Kit - APK](https://en.wikipedia.org/wiki/Android_application_package)), to make it available to users. Further, AMS manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
+Applications are one of the main objects AMS manages. A single application encapsulates one Android APK ([Android Package Kit](https://en.wikipedia.org/wiki/Android_application_package)) and manages it within the cluster. It takes care of installing the supplied APK, to make it available to users. Further, AMS manages updates to existing applications, which includes allowing the operator to test new uploaded versions before making them available to any users.
 
 ## Application requirements
 To run on the Anbox Cloud platform, applications must fulfil a set of requirements. These are:
@@ -32,7 +32,7 @@ In general, the bootstrap process goes through the following steps in order:
 
 1. Configure the network interface and gateway.
 2. Apply any pending Ubuntu system security updates.
-3. Install [addons](tbd) via the `pre-start` hook provided by each addon listed in the application manifest file.
+3. Install [addons](tbd) listed in the application manifest file and run their `pre-start` hook.
 4. Launch the Android container.
 5. Install the APK provided by the application.
 6. Grant the application permissions as requested in the application manifest.
