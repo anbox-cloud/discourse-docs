@@ -2,6 +2,35 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.11.4]
+
+### Charms
+
+n/a
+
+### Bundles
+
+n/a
+
+### Snaps
+
+n/a
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| bionic:android11:amd64 | 1.11.4 |
+| bionic:android11:arm64 | 1.11.4 |
+| bionic:android10:amd64 | 1.11.4 |
+| bionic:android10:arm64 | 1.11.4 |
+
+[/Details]
+
 [Details=1.11.3]
 
 ### Charms
