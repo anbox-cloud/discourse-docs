@@ -1,4 +1,6 @@
-Launching a container is normally done by another service over the REST API that the AMS service provides. However, the `amc` utility allows launching a container manually for experiments or development purposes. By default, the container will run headless and does not provide an entry point for a user to connect. Containers can be launched for either a registered application or image (see [Application containers vs. raw containers](https://discourse.ubuntu.com/t/managing-containers/17763#application-vs-raw)).
+You can launch a container for a registered application or image (see [Application containers vs. raw containers](https://discourse.ubuntu.com/t/managing-containers/17763#application-vs-raw)), either by using the `amc` tool or through another service over the REST API that the AMS service provides.
+
+By default, the container will run headless. See [Access a container](https://discourse.ubuntu.com/t/container-access/17772) for instructions on how to access it for debugging purposes, and [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for information about the streaming stack.
 
 <a name="application-containers"></a>
 ## Launch application containers

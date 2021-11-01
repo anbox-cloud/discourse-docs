@@ -1,7 +1,5 @@
 Containers are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system.
 
-Each container is hosted on a cluster of multiple nodes provided by the underlying LXD container hypervisor.
-
 ## Regular containers vs. base containers
 
 Anbox Cloud differentiates between two types of containers: regular containers and base containers. The container type is visible in the output of the `amc ls` command.
