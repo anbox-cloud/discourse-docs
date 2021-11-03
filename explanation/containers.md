@@ -15,9 +15,9 @@ When we refer to containers in this documentation without specifying the contain
 
 Containers are based on either [applications](https://discourse.ubuntu.com/t/managing-applications/17760) or [images](https://discourse.ubuntu.com/t/provided-images/24185). That means that if you launch an application or an image, AMS automatically creates a container for it.
 
-Application containers, thus containers created when launching an application, run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog). With the default configuration, you will only see the app and not the underlying Android system.
+Application containers, thus containers created when launching an application, run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog). With the default configuration, you will see only the app and not the Android launcher.
 
-Containers that are created when launching an image are called raw containers. They run only the base Android system.
+Containers that are created when launching an image are called raw containers. They run the full Android system, without any additional apps installed.
 
 ## Data stored in containers
 
