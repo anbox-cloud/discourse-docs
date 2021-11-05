@@ -9,7 +9,7 @@ Since AMS exposes an HTTP interface, any tool can use the [AMS HTTP API](https:/
 
 Talking with AMS through HTTP requires a secure and trusted setup for communications, using TLS and [certificates](https://en.wikipedia.org/wiki/X.509).
 
-> **NOTE:** The AMC running on the same machine as AMS communicates with AMS through a socket, not through HTTP. Therefore, you do not need to worry about security certificates for local clients.
+[note type="information" status="Note"]The AMC running on the same machine as AMS communicates with AMS through a socket, not through HTTP. Therefore, you do not need to worry about security certificates for local clients.[/note]
 
 You can generate self-signed certificates or use certificates signed by a Certificate Authority.
 
@@ -43,7 +43,7 @@ As an alternative to using AMC, you can develop a custom client built around you
 
 You can access AMS either by IP or through a UNIX socket. The IP depends on your network, but the UNIX socket will always be located at `/var/snap/ams/common/server/unix.socket` on the machine that hosts AMS.
 
-> **Hint:** If your client requires the AMS certificate, you can find it in `/var/snap/ams/common/server/ams.crt`.
+[note type="information" status="Hint"]If your client requires the AMS certificate, you can find it in `/var/snap/ams/common/server/ams.crt`.[/note]
 
 ## Remote access to AMS
 

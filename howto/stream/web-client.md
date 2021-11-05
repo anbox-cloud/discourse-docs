@@ -101,7 +101,7 @@ In this case you'd need to add the following to your HTML body:
 <div id="anbox-stream"></div>
 ```
 
-> **Note:** Make sure events can reach this element, otherwise controls will not work.
+[note type="information" status="Note"]Make sure events can reach this element, otherwise controls will not work.[/note]
 
 The default behavior of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
 

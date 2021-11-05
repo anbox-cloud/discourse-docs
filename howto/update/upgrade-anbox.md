@@ -1,10 +1,10 @@
-> **NOTE**: If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.
+[note type="information" status="Note"]If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.[/note]
 
 Anbox Cloud allows upgrades from older versions to newer version. This describes the steps necessary to perform the upgrade.
 
 The upgrade instructions detail the revisions each charm needs to be upgraded to, to bring it to the latest version. Next to the upgrade of the charms any used images or addons need to be updated as well.
 
-> **Warning**: Before you perform the upgrade ensure that you perform a backup of critical data you don't want to lose.
+[note type="caution" status="Warning"]Before you perform the upgrade ensure that you perform a backup of critical data you don't want to lose.[/note]
 
 ## Upgrade OS
 
@@ -30,7 +30,7 @@ or switch to the 2.8 series with
 
 The deployed Juju charms need to be upgraded next. Please execute the following commands in the exact same order as listed here but skip those you don't use in your deployment:
 
-> **NOTE**: You can find a list of all charm, snap and Debian package versions for each Anbox Cloud relase in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions for each release you want to replace `<rev>` in the commands below with.
+[note type="information" status="Note"]You can find a list of all charm, snap and Debian package versions for each Anbox Cloud relase in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions for each release you want to replace `<rev>` in the commands below with.[/note]
 
 ```bash
 $ juju upgrade-charm easyrsa --revision=<rev>

@@ -9,7 +9,7 @@ The Anbox Cloud Appliance includes an `upgrade` command which will perform all r
     update-available: true
     reboot-needed: false
 
-> **IMPORTANT:** While the upgrade process is active API endpoints and the dashboard will not be available. Anbox containers will stay active and existing streams will also not be interrupted.
+[note type="information" status="Important"]While the upgrade process is active API endpoints and the dashboard will not be available. Anbox containers will stay active and existing streams will also not be interrupted.[/note]
 
 In the command output above the `update-available` field indicates an update is available. The upgrade process can now be initiated by running the `upgrade` command:
 

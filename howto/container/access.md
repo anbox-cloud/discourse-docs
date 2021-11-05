@@ -36,7 +36,7 @@ Scrcpy is not available from the official Ubuntu repositories. Therefore, you mu
 
         sudo snap install scrcpy
 
-  > **Note:** The scrcpy snap package that is published to snap store is a non-official package. You can use it, but it's at your own risk. Because of this, it's highly recommended to build scrcpy from source by yourself.
+  [note type="information" status="Note"]The scrcpy snap package that is published to snap store is a non-official package. You can use it, but it's at your own risk. Because of this, it's highly recommended to build scrcpy from source by yourself.[/note]
 
 ### Launch container
 
@@ -60,7 +60,7 @@ Afterwards you can find the network endpoint of the container in the output of t
 
 The endpoint of the ADB service exposed from the running container is available at 10.226.4.200:10000 on the public network.
 
-> **Warning:** Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#ssh-tunnel) if possible.
+[note type="caution" status="Warning"]Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#ssh-tunnel) if possible.[/note]
 
 ### Run scrcpy
 

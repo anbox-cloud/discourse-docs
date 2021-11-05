@@ -4,7 +4,7 @@ Anbox Cloud provides different tools to allow benchmarking different aspects of 
 
 The `amc` command line utility comes with a subcommand to allow easy benchmarking of an Anbox Cloud deployment. It can be used to measure the time containers take to start up but also for measuring their frames per second. The benchmark enables you to put Anbox Cloud under load. The results can be used to evaluate the performance of Anbox Cloud for a well defined workload.
 
-> **Warning:** If your application is not constantly refreshing the screen by itself, like regular Android applications providing a simple user interface do, you will get a low FPS number. The benchmark can only provide useful information if you know your workload and how it should perform in an ideal scenario.
+[note type="caution" status="Warning"]If your application is not constantly refreshing the screen by itself, like regular Android applications providing a simple user interface do, you will get a low FPS number. The benchmark can only provide useful information if you know your workload and how it should perform in an ideal scenario.[/note]
 
 ### Run the Benchmark
 
@@ -16,7 +16,7 @@ $ amc benchmark -h
 
 to learn more about the different arguments and their purpose.
 
-> **Hint:** Keep in mind that the success of container startup and the times you will get depend on  the underlying resources used on the machines hosting the containers. Latency between the different nodes and the AMS services also play their role.
+[note type="information" status="Hint"]Keep in mind that the success of container startup and the times you will get depend on  the underlying resources used on the machines hosting the containers. Latency between the different nodes and the AMS services also play their role.[/note]
 
 An example benchmark session looks like this:
 
@@ -108,13 +108,13 @@ You can configure a different display specification through the `--user-data` pa
 | Swrast                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
 | WebRTC                | Json-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
 
-> **Note:** If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.
+[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
 
 ## Stream Benchmarking
 
 As streaming involves more things to automate for a proper benchmark Anbox Cloud provides a dedicated benchmark tool which allows creating a streaming session, receiving the video/audio stream and collecting various statistics and optional also dumping the received stream to a local file.
 
-> **WARNING:** Right now the benchmark tool is only supported on a Linux system supporting snaps and on 64 bit x86 systems. Support for 64 bit ARM systems will be added at a later point.
+[note type="caution" status="Warning"]Right now the benchmark tool is only supported on a Linux system supporting snaps and on 64 bit x86 systems. Support for 64 bit ARM systems will be added at a later point.[/note]
 
 The benchmark tool comes with the `anbox-cloud-tests` snap which you can install with
 
@@ -141,7 +141,7 @@ $ anbox-cloud-tests.benchmark \
   --auth-token=<valid auth token for the Anbox Stream Gateway> \
 ```
 
-> **Hint:** Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
+[note type="information" status="Hint"]Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.[/note]
 
 If your Anbox Stream Gateway is behind a self-signed TLS certificate you also need to specify the `  --insecure-tls` option.
 

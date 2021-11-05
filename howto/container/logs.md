@@ -34,4 +34,4 @@ Jan 17 08:38:58 ams-bh03th0j1qm6416q0v30 acc[607]: 2019/01/17 08:38:58 Waiting f
 Jan 17 08:38:58 ams-bh03th0j1qm6416q0v30 acc[607]: 2019/01/17 08:38:58 Installing application com.canonical.candy from app.apk ...
 ```
 
-> **Note:** AMS does not support runtime log collection. Logs are currently only being collected from a container which failed to start or had an error at runtime.
+[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from a container which failed to start or had an error at runtime.[/note]

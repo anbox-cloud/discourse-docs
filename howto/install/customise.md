@@ -62,9 +62,9 @@ $ juju add-machine ssh:ubuntu@192.168.1.11
 $ juju add-machine ssh:ubuntu@192.168.1.12
 ```
 
-> **Hint:** `ubuntu` is the user that can ssh to these machines, it can be another depending on how the operating system on the machines is setup. The user needs to have administrator rights on the machine.
+[note type="information" status="Hint"]`ubuntu` is the user that can ssh to these machines, it can be another depending on how the operating system on the machines is setup. The user needs to have administrator rights on the machine.[/note]
 
-> **WARNING:** Please make sure that you add the machine by their IP address rather than a DNS name. Adding a machine by its DNS name does currently not working and will be fixed with a future version of Anbox Cloud.
+[note type="caution" status="Warning"]Please make sure that you add the machine by their IP address rather than a DNS name. Adding a machine by its DNS name does currently not working and will be fixed with a future version of Anbox Cloud.[/note]
 
 Juju now starts to add the machines to its list of usable machines. Take care that all are in the `started` state before you proceed. If any of them is still in `down` state, please wait until they switch to `started`. You can retrieve the list of machines registered with the Juju controller with the following command:
 

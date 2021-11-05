@@ -47,7 +47,7 @@ After setting up the security certificates, configure AMC to connect to the remo
 
     amc remote add <your remote name> https://<IP address of the AMS machine>:8444
 
-> **Hint:** If you haven't changed the port AMS is listening on, it's 8444 by default.
+[note type="information" status="Hint"]If you haven't changed the port AMS is listening on, it's 8444 by default.[/note]
 
 The command connects to AMS and shows you the fingerprint of the server certificate. If it matches what you expect, acknowledge the fingerprint by typing "yes".
 

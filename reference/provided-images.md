@@ -2,7 +2,7 @@ Anbox Cloud provides images based on different Android versions and different ar
 
 Officially released images are available from the [official image server](https://images.anbox-cloud.io) hosted by Canonical.
 
-> **Note**: Anbox images are regular [Ubuntu cloud images](https://cloud-images.ubuntu.com/) where Anbox and its dependencies are installed. Unnecessary packages are removed to improve images size, boot time and security.
+[note type="information" status="Note"]Anbox images are regular [Ubuntu cloud images](https://cloud-images.ubuntu.com/) where Anbox and its dependencies are installed. Unnecessary packages are removed to improve images size, boot time and security.[/note]
 
 ## Official images
 

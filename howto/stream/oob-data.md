@@ -80,7 +80,7 @@ public class FakeCameraActivity extends AppCompatActivity {
 }
 ```
 
-**NOTE**: The length for message type is limited to 256KB and the length of data is limited to 1MB.
+[note type="information" status="Note"]The length for message type is limited to 256KB and the length of data is limited to 1MB.[/note]
 
 ## Receive Message on the Client
 

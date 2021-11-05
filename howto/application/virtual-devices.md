@@ -12,7 +12,7 @@ name: vdev
 instance-type: a4.3
 ```
 
-> **Note:** If you want to use a GPU for containers created for you new `vdev` application, use an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) with GPU support like `g4.3`
+[note type="information" status="Note"]If you want to use a GPU for containers created for you new `vdev` application, use an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) with GPU support like `g4.3`.[/note]
 
 ## Extend the Application with Addons
 
