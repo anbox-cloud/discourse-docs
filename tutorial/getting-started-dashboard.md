@@ -27,6 +27,8 @@ Complete the following steps to create a virtual device:
 5. Select the Android image that you want to use, for example, `bionic:android11:arm64`.
 6. Do not upload an APK file.
 7. Click **Add Application**.
+
+   ![Add a virtual device](tbd)
 8. Wait until the application status changes to `ready`.
 
 ## 2. Launch and test the virtual device
@@ -34,7 +36,11 @@ Complete the following steps to create a virtual device:
 When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
 1. In the list of applications, click the play button (labelled **New session**) for the application to start a new session.
+
+   ![Start a new session](tbd)
 2. Accept the default settings and click **New Session**.
+
+   ![Start with default settings](tbd)
 3. When the stream has loaded, you can interact with your virtual device.
 
 ## 3. Create an application from an APK
@@ -44,6 +50,8 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 [note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Issues when porting Android apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776) for more information.[/note]
 
 Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+
+![Add an application](tbd)
 
 You can launch and test the application in the same way as you did for the virtual device.
 
@@ -55,6 +63,8 @@ Complete the following steps to add a new version to your application:
 
 1. Open `https://<your-machine-address>/applications` in your browser.
 2. Click the **Edit application** button next to the application for which you want to add a new version.
+
+   ![Update an application](tbd)
 3. Upload a new APK, or do other changes to the configuration.
 4. Click **Update application**.
 
