@@ -60,8 +60,7 @@ The following command removes version `1` of the image with the name `default`:
 
 ## Use a specific release of an image
 
-With every new Anbox Cloud release, updated images are published. By default, the latest image release is pulled by AMS, but you can request a
-specific release with the following syntax:
+With every new Anbox Cloud release, updated images are published. By default, the latest image release is pulled by AMS, but you can request a specific release with the following syntax:
 
     amc image add <local image name> <remote image name>@<release>
 
