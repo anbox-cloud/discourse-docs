@@ -58,6 +58,23 @@ The following command removes version `1` of the image with the name `default`:
 
     amc image delete default --version=1
 
+## Use a specific release of an image
+
+With every new Anbox Cloud release, updated images are published. By default, the latest image release is pulled by AMS, but you can request a
+specific release with the following syntax:
+
+    amc image add <local image name> <remote image name>@<release>
+
+For instance, to fetch the arm64 Android 11 image of the 1.11.2 release:
+
+    amc image foobar bionic:android11:arm64@1.11.2
+
+You can then use the `foobar` image as you would any other image.
+
+[note type="information" status="Tip"]
+Image updates contain important security patches and optimisations. Use older images only when strictly necessary.
+[/note]
+
 ## Manual upload of images
 
 In addition to the images provided through Canonical's image server, you can manually upload your own images to be used by AMS.
