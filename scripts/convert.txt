@@ -1,0 +1,1 @@
+for f in $(find $dir -name '*.md') ; do python3 scripts/replace-anchors.py $f; python3 scripts/replace-links.py $f; python3 scripts/replace-tables.py $f; pandoc $f --from markdown --to rst -s -o ${f%.md}.rst; python3 scripts/fix-rst.py ${f%.md}.rst; done
