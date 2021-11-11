@@ -61,7 +61,8 @@ HTTP code must be one of 400 or 500.
    * [`/1.0/tracing`](#heading--10tracing)
 
 ## API details
-### <h3 id='heading--10'> `/1.0/` </h3>
+<a name="heading--10"></a>
+### `/1.0/`
 #### GET
 
  * Description: Server configuration
@@ -92,7 +93,8 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq 
 }
 ```
 
-### <h3 id='heading--10location'> `/1.0/location`</h3>
+<a name="heading--10location"></a>
+### `/1.0/location`
 #### GET
 
  * Description: Get location status
@@ -193,7 +195,8 @@ Return value:
 }
 ```
 
-### <h3 id='heading--10camera'> `/1.0/camera`</h3>
+<a name="heading--10camera"></a>
+### `/1.0/camera`
 #### GET
 
 * Description: Get camera basic information
@@ -249,7 +252,8 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camer
 true
 ```
 
-### <h3 id='heading--10cameradata'> `/1.0/camera/data`</h3>
+<a name="heading--10cameradata"></a>
+### `/1.0/camera/data`
 #### POST
 
 * Description: Upload a static image to Anbox
@@ -322,7 +326,8 @@ With ffmpeg, you can do:
 $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
 ```
 
-### <h3 id='heading--10sensors'> `/1.0/sensors`</h3>
+<a name="heading--10sensors"></a>
+### `/1.0/sensors`
 #### GET
 
 * Description: Get sensors’ status and supported sensors by Anbox
@@ -435,7 +440,8 @@ Issue GET method to sensor endpoint can check the current active sensors in Andr
 [/note]
 
 
-### <h3 id='heading--10tracing'> `/1.0/tracing`</h3>
+<a name="heading--10tracing"></a>
+### `/1.0/tracing`
 #### GET
 
 * Description: Get tracing status
