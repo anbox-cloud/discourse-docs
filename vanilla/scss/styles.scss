@@ -1,0 +1,72 @@
+@import "vanilla-framework/scss/vanilla";
+$grid-max-width: 92rem;
+
+@import "pygment";
+
+@include vanilla;
+
+.current.reference.internal {
+  @include vf-highlight-bar($colors--light-theme--text-default, left);
+  background: $colors--light-theme--background-active;
+  color: $colors--light-theme--text-default;
+}
+
+.headerlink {
+  color: $colors--light-theme--text-default;
+}
+
+// Sphinx adds paragraphs inside li elements - this removes unnecessary margin
+li > p {
+  margin-bottom: 0;
+}
+
+// Reuses style from p-notification pattern
+// https://github.com/canonical-web-and-design/vanilla-framework/blob/main/scss/_patterns_notifications.scss#L21
+.admonition {
+  @extend %vf-notification;
+
+  // This is reducing the bottom margin on the content text with no class name
+  > p {
+    margin-bottom: $notification-text-margin-bottom;
+  }
+
+  // Reusing styles from .p-notification--information
+  // https://github.com/canonical-web-and-design/vanilla-framework/blob/main/scss/_patterns_notifications.scss#L190
+  &.note {
+    @include vf-highlight-bar($color-information, left, true);
+    @include vf-icon-info($color-mid-dark);
+  }
+
+  // Reusing styles from .p-notification--negative
+  // https://github.com/canonical-web-and-design/vanilla-framework/blob/main/scss/_patterns_notifications.scss#L181
+  &.danger {
+    @include vf-highlight-bar($color-negative, left, true);
+    @include vf-icon-error;
+  }
+
+  // Reusing styles from p-notification--caution
+  // https://github.com/canonical-web-and-design/vanilla-framework/blob/main/scss/_patterns_notifications.scss#L172
+  &.caution {
+    @include vf-highlight-bar($color-caution, left, true);
+    @include vf-icon-warning;
+  }
+
+  // Reusing styles from p-notification__title
+  // https://github.com/canonical-web-and-design/vanilla-framework/blob/main/scss/_patterns_notifications.scss#L81
+  .admonition-title {
+    @extend %common-default-text-properties;
+
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  .admonition-title + p {
+    margin-top: 0 !important;
+    padding-top: 0;
+  }
+}
+// Removing large left padding when there is no icon
+.admonition-security-notice {
+  padding-left: 1rem;
+}

@@ -1,0 +1,2 @@
+.. |ACA| replace:: Anbox Cloud Appliance
+.. |AC| replace:: Anbox Cloud

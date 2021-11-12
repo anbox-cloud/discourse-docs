@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% if meta %}
+  {% set sequential_nav = meta.sequential_nav %}
+  {% set hide_toc = "hide-toc" in meta %}
+{% endif %}
+
+{% block body -%}
+  <header id="navigation" class="p-navigation is-dark">
+    <div class="p-navigation__row">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo">
+          <a class="p-navigation__item" href="{{ pathto(master_doc) }}">
+            <img class="p-navigation__image" src="https://assets.ubuntu.com/v1/3c7954dd-logo-canonical-white.svg" alt="{{ docstitle }}" width="95">
+          </a>
+        </div>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+      </div>
+      <nav class="p-navigation__nav" aria-label="Example main navigation">
+        <ul class="p-navigation__items">
+          <li class="p-navigation__item is-selected">
+            <a class="p-navigation__link" href="#">Products</a>
+          </li>
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="#">Services</a>
+          </li>
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="#">Partners</a>
+          </li>
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="#">About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="p-strip--light is-shallow">
+    <div class="u-fixed-width">
+      <form class="p-search-box u-no-margin--bottom">
+        <input type="search" class="p-search-box__input" name="search" placeholder="Search" required="" autocomplete="on">
+        <button type="reset" class="p-search-box__reset"><i class="p-icon--close"></i></button>
+        <button type="submit" class="p-search-box__button"><i class="p-icon--search"></i></button>
+      </form>
+    </div>
+  </section>
+  <section class="p-strip is-shallow">
+    <div class="row">
+      <div class="col-2">
+        <div class="p-side-navigation--raw-html is-sticky" id="drawer">
+          <a href="#drawer" class="p-side-navigation__toggle js-drawer-toggle" aria-controls="drawer">
+            Toggle side navigation
+          </a>
+          <div class="p-side-navigation__overlay js-drawer-toggle" aria-controls="drawer"></div>
+          <div class="p-side-navigation__drawer">
+            <div class="p-side-navigation__drawer-header">
+              <a href="#" class="p-side-navigation__toggle--in-drawer js-drawer-toggle" aria-controls="drawer">
+                Toggle side navigation
+              </a>
+            </div>
+            {% block left_sidebar %}
+              {%- for sidebar_section in sidebars %}
+                {%- include sidebar_section %}
+              {%- endfor %}
+            {% endblock left_sidebar %}
+          </div>
+        </div>
+      </div>
+      {% if hide_toc %}
+      <main class="col-8">
+      {% else %}
+      <main class="col-7">
+      {% endif %}
+        {% block content %}{{ body }}{% endblock %}
+        <footer>
+          {% block footer %}
+
+          {% if sequential_nav %}
+            <div class="p-article-pagination">
+
+              {% if sequential_nav=="prev" or sequential_nav=="both" %}
+                {% if prev -%}
+                  <a class="p-article-pagination__link--previous" href="{{ prev.link }}">
+                    <span class="p-article-pagination__label">{{ _("Previous") }}</span>
+                    <span class="p-article-pagination__title">
+                      {% if prev.link == pathto(master_doc) %}
+                        {{ _("Home") }}
+                        {% else %}
+                        {{ prev.title }}
+                        {% endif %}
+                    </span>
+                {%- endif %}
+              {% endif %}
+
+              {% if sequential_nav=="next" or sequential_nav=="both" %}
+                {% if next -%}
+                  <a class="p-article-pagination__link--next" href="{{ next.link }}">
+                    <span class="p-article-pagination__label">{{ _("Next") }}</span>
+                    <span class="p-article-pagination__title">{{ next.title }}</span>
+                  </a>
+              {%- endif %}
+            {% endif %}
+
+            </div>
+          {% endif %}
+
+
+          <div class="related-information">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e -%}
+                  <a href="{{ path }}">Copyright</a> &#169; {{ copyright }}.
+                {%- endtrans %}
+              {%- else %}
+                {% trans copyright=copyright|e -%}
+                  Copyright &#169; {{ copyright }}
+                {%- endtrans %}
+              {%- endif %}
+            {%- endif %}
+            {%- if last_updated %}
+              {%- if show_copyright %} | {%- endif %}
+              {% trans last_updated=last_updated|e -%}
+                Last updated on {{ last_updated }}.
+              {%- endtrans %}
+            {%- endif %}
+            {%- if show_sphinx %}
+              {%- if show_copyright or last_updated %} | {%- endif %}
+              {% trans -%}
+                Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+                and
+                <a href="https://vanillaframework.io/">Vanilla theme</a>.
+              {%- endtrans %}
+            {%- endif %}
+            {%- if show_source and has_source and sourcename %}
+              {%- if show_copyright or last_updated or show_sphinx %} | {%- endif %}
+              <a class="muted-link" href="{{ pathto('_sources/' + sourcename, true)|e }}"
+                 rel="nofollow">
+                {{ _('Show Source') }}
+              </a>
+            {%- endif %}
+          </div>
+          {% endblock footer %}
+        </footer>
+      </main>
+      {% if not hide_toc %}
+      <div class="col-3">
+        <aside class="p-side-navigation--raw-html is-sticky">
+          {% block right_sidebar %}
+              <h3>
+                {{ _("Contents") }}
+              </h3>
+              {{ toc }}
+          {% endblock right_sidebar %}
+        </aside>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <script>
+    /**
+  Toggles the expanded/collapsed classed on side navigation element.
+
+  @param {HTMLElement} sideNavigation The side navigation element.
+  @param {Boolean} show Whether to show or hide the drawer.
+*/
+function toggleDrawer(sideNavigation, show) {
+  if (sideNavigation) {
+    if (show) {
+      sideNavigation.classList.remove('is-collapsed');
+      sideNavigation.classList.add('is-expanded');
+    } else {
+      sideNavigation.classList.remove('is-expanded');
+      sideNavigation.classList.add('is-collapsed');
+    }
+  }
+}
+
+/**
+  Attaches event listeners for the side navigation toggles
+  @param {HTMLElement} sideNavigation The side navigation element.
+*/
+function setupSideNavigation(sideNavigation) {
+  var toggles = [].slice.call(sideNavigation.querySelectorAll('.js-drawer-toggle'));
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function (event) {
+      event.preventDefault();
+      var sideNav = document.getElementById(toggle.getAttribute('aria-controls'));
+
+      if (sideNav) {
+        toggleDrawer(sideNav, !sideNav.classList.contains('is-expanded'));
+      }
+    });
+  });
+}
+
+/**
+  Attaches event listeners for all the side navigations in the document.
+  @param {String} sideNavigationSelector The CSS selector matching side navigation elements.
+*/
+function setupSideNavigations(sideNavigationSelector) {
+  // Setup all side navigations on the page.
+  var sideNavigations = [].slice.call(document.querySelectorAll(sideNavigationSelector));
+
+  sideNavigations.forEach(setupSideNavigation);
+}
+
+setupSideNavigations('.p-side-navigation, [class*="p-side-navigation--"]');
+  </script>
+{%- endblock %}
