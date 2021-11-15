@@ -28,15 +28,23 @@ AMS provides various configuration items to customize its behavior. The followin
 
 ## Features
 
-Some features can be conditionally enabled via AMS.
+Anbox Cloud includes some features which are not enabled by default but can be conditionally enabled. The features are enabled by flags which are configured through AMS. You can configure the feature flags either globally for all containers or per application.
+
+To configure a feature globally for all containers, use a command similar to the following:
+
+    amc config set container.feature foo,bar
+
+To configure a feature for one application in the manifest, use a syntax similar to the following:
+
+    name: my-app
+    instance-type: a4.3
+    features: ["foo", "bar"]
 
 #### System UI
 
 *since 1.10.2*
 
-By default Anbox hides the Android system UI when an application is running in foreground mode. In some use cases it's however required to have the system UI available for navigation purposes. The system UI can be enabled via feature flag, e.g.:
-
-    $ amc config set container.features "enable_system_ui"
+By default, Anbox hides the Android system UI when an application is running in foreground mode. In some use cases, however, it's required to have the system UI available for navigation purposes. This can be enabled with the `enable_system_ui` feature flag.
 
 The feature flag will be considered by all new launched containers once set.
 
@@ -44,8 +52,24 @@ The feature flag will be considered by all new launched containers once set.
 
 *since 1.9.0*
 
-The Android virtual keyboard is disabled by default but can be enabled by adding the `enable_virtual_keyboard` feature, e.g.:
+The Android virtual keyboard is disabled by default but can be enabled with the `enable_virtual_keyboard` feature flag.
 
-    $ amc config set container.features "enable_virtual_keyboard"
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
 
-Note that you need to manually update the existing applications for the change to take effect. After the application gets updated,  containers that are launched from the latest application version will have the virtual keyboard enabled by default.
+#### Wi-Fi
+
+*since 1.12.0*
+
+Wi-Fi support can be optionally enabled. Anbox will then set up a virtual Wi-Fi device, which sits on top of an ethernet connection and simulates a real Wi-Fi connection.
+
+The feature flag will be considered by all newly launched containers once set.
+
+### Android reboot
+
+*since 1.12.0*
+
+By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
+
+Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
+
+The feature flag will be considered by all newly launched containers once set.
