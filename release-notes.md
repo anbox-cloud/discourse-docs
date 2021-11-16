@@ -2,6 +2,42 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.0]
+
+## 1.12.0 (November 16 2021)
+
+### New features & improvements
+
+* Android 12 images
+* Improved density for NVIDIA GPUs
+* Improved Wi-Fi support
+* Rebooting Android is now possible
+* Additional life-cycle hooks
+* Port ranges support in AMS
+* Container tags
+* Android security updates for November 2021 (see [Android Security Bulletin - October 2021](https://source.android.com/security/bulletin/2021-11-01) for more information)
+
+### Known issues
+
+* The Android 12 image currently comes without a functioning WebView. The WebView will become functional with the 1.12.1 release.
+
+### Bug fixes
+
+* AC-467 AMS fails to import image with multiple instances
+* AC-174 LP #1927233 anbox-stream-gateway-lb has no open ports when deployed via Juju 2.9
+* AC-293 Anbox leaks after CtsGraphicsTestCases has finished
+* AC-294 WebRTC platform crashes on glDeleteTextures
+* AC-446 Container fails to start: This operation can't be cancelled
+* AC-453 Dashboard charm fails to deploy
+* AC-466 amc application set fails with "argument cpu is invalid"
+* AC-501 A kernel crash occurred in virt_wifi kernel module
+* AC-502 Grafana fails in dashboard-relation-joined
+* AC-504 LXD nodes fail to be added if relation hook is run before AMS is configured
+* LP #1922918 LXD charm crashes with TypeError in count_lxd_nodes_in_cluster
+* LP #1926118 Using invalid UA token causes hook error instead of proper error
+
+[/Details]
+
 [Details=1.11.4]
 
 ## 1.11.4 (November 1 2021)
