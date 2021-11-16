@@ -15,7 +15,7 @@ See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous
 * Additional life-cycle hooks
 * Port ranges support in AMS
 * Container tags
-* Android security updates for November 2021 (see [Android Security Bulletin - October 2021](https://source.android.com/security/bulletin/2021-11-01) for more information)
+* Android security updates for November 2021 (see [Android Security Bulletin - November 2021](https://source.android.com/security/bulletin/2021-11-01) for more information)
 
 ### Known issues
 
