@@ -32,7 +32,7 @@ In general, the bootstrap process goes through the following steps in order:
 
 1. Configure the network interface and gateway.
 2. Apply any pending Ubuntu system security updates.
-3. Install [addons](tbd) listed in the application manifest file.
+3. Install [addons](https://discourse.ubuntu.com/t/addons/25293) listed in the application manifest file.
 4. Run the `pre-start` hook provided by each addon listed in the application manifest.
 5. Launch the Android container.
 6. Install the APK provided by the application.
@@ -40,7 +40,7 @@ In general, the bootstrap process goes through the following steps in order:
 8. Install the extra data as listed in the application manifest.
 9. Execute the `post-start` hook provided by each addon listed in the application manifest.
 
-![Application bootstrap process](tbd)
+![Application bootstrap process|571x653](upload://bZZCt9U0YVBYD4le9S9TInMSvE9.png)
 
 If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be marked with `error` and the application's status will end up with `error` as well.
 

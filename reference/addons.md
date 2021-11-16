@@ -1,4 +1,4 @@
-Addons provide a way to extend and customise images in Anbox Cloud. See [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759) and the [Creating an addon](tbd) tutorial for instructions on how to use them.
+Addons provide a way to extend and customise images in Anbox Cloud. See [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759) and the [Creating an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial for instructions on how to use them.
 
 <a name='file-structure'></a>
 ## File structure
@@ -7,7 +7,7 @@ When creating or updating an addon, the directory containing your addon files mu
 - A file named `manifest.yaml`.
 - A directory named `hooks`. This directory must contain at least one executable file with a valid hook name (see [Hooks](#hooks) below).
 
-Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` [*environment variable*](#env-variables)). For example:
+Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` [environment variable](#env-variables)). For example:
 ```bash
 cat "$ADDON_DIR"/public_key.pem >> ~/.ssh/authorized_keys
 ```
@@ -58,7 +58,8 @@ An addon is a collection of hooks that are invoked at different points in time i
 | backup (deprecated)  | DEPRECATED: Use `post-stop` instead. Executed after Android shuts down.                                    |
 
 The following figure shows when the different hooks are executed in the life cycle of a container (base container or regular container).
-![Hooks execution in the life cycle of a container](../images/addons-reference-hook-order.svg)
+
+![Hooks execution in the life cycle of a container|471x601](upload://hfTnyF3zn5Ok3e9WtVBXC7eq5MC.png)
 
 ### Hook timeouts
 All hooks are subject to a 5 minute timeout to avoid blocking a container for too long.

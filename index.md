@@ -44,7 +44,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 1 | tut/installing-appliance | [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 1 | tut/getting-started-dashboard | [Getting started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 1 | tut/getting-started | [Getting started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
-| 1 | tut/creating-addon | [Creating an addon](tbd)|
+| 1 | tut/creating-addon | [Creating an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
@@ -83,14 +83,14 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 2 | howto/container/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
 | 2 | howto/container/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
 | 1 | howto/addons/landing | [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
-| 2 | howto/addons/enable-globally | [Enable globally](tbd)|
-| 2 | howto/addons/update | [Update addons](tbd)|
-| 2 | howto/addons/migrate | [Migrate from previous versions](tbd)|
-| 2 | howto/addons/install-tools | [Example: Install tools](tbd)|
-| 2 | howto/addons/backup-and-restore | [Example: Back up data](tbd)|
-| 2 | howto/addons/customise-android | [Example: Customise Android](tbd)|
-| 2 | howto/addons/emulate-platforms | [Example: Emulate platforms](tbd)|
-| 2 | howto/addons/best-practices | [Best practices](tbd)|
+| 2 | howto/addons/enable-globally | [Enable globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285)|
+| 2 | howto/addons/update | [Update addons](https://discourse.ubuntu.com/t/update-addons/25286)|
+| 2 | howto/addons/migrate | [Migrate from previous versions](https://discourse.ubuntu.com/t/migrate-from-previous-addon-versions/25287)|
+| 2 | howto/addons/install-tools | [Example: Install tools](https://discourse.ubuntu.com/t/example-install-tools/25288)|
+| 2 | howto/addons/backup-and-restore | [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289)|
+| 2 | howto/addons/customise-android | [Example: Customise Android](https://discourse.ubuntu.com/t/example-customise-android/25290)|
+| 2 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
+| 2 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
 | 1 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
 | 2 | howto/monitor/install | [Install the monitoring stack](https://discourse.ubuntu.com/t/monitoring-installation/17786)|
 | 2 | howto/monitor/grafana | [Use Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
@@ -118,7 +118,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
 | 1 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 1 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
-| 1 | ref/addons | [Addons](tbd)|
+| 1 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index)|
 | 0 | | Explanation |

@@ -11,7 +11,7 @@ TARBALL_FILE=$(basename $(find ./ -name *.tar.bz2))
  # Upload the tarball to public or private cloud storage service
 curl -i -X POST --data-binary @"${TARBALL_FILE}" <cloud_storage_upload_url>
 ```
-Running this script in an [addon post-stop hook](tbd) will back up the user data of a particular application with `aam` and upload the resulting tarball file to the cloud storage service when a container is stopped.
+Running this script in an [addon post-stop hook](https://discourse.ubuntu.com/t/example-back-up-data/25289) will back up the user data of a particular application with `aam` and upload the resulting tarball file to the cloud storage service when a container is stopped.
 
 If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) is specified in the application manifest file, you can also back up the boot application data simply with the flag `--boot-package`.
 
@@ -22,7 +22,7 @@ If [`boot-package`](https://discourse.ubuntu.com/t/application-manifest/24197) i
 
 ## Restore application data
 
-The application data can be restored with the following [pre-start hook](tbd) when a container is up and running:
+The application data can be restored with the following [pre-start hook](https://discourse.ubuntu.com/t/example-back-up-data/25289#restore) when a container is up and running:
 
 ```bash
 #!/bin/sh -ex
