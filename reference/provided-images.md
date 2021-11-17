@@ -10,11 +10,13 @@ The official image server has a set of images available. The following table lis
 
 | Name                        | Android Version | Ubuntu Version | Support Status     | Available since |
 |-----------------------------|-----------------|----------------|------------|---------------|
-| `bionic:android11:amd64`      | 11              | 18.04          | supported | 1.10 |
-| `bionic:android11:arm64`      | 11              | 18.04          | supported | 1.10 |
-| `bionic:android10:amd64`      | 10              | 18.04          | supported | 1.0
-| `bionic:android10:arm64`      | 10              | 18.04          | supported | 1.0
-| `bionic:android7:amd64`       | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
-| `bionic:android7:arm64`       | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
+| `bionic:android12:amd64`    | 12              | 18.04          | supported | 1.12 |
+| `bionic:android12:arm64`    | 12              | 18.04          | supported | 1.12 |
+| `bionic:android11:amd64`    | 11              | 18.04          | supported | 1.10 |
+| `bionic:android11:arm64`    | 11              | 18.04          | supported | 1.10 |
+| `bionic:android10:amd64`    | 10              | 18.04          | supported | 1.0
+| `bionic:android10:arm64`    | 10              | 18.04          | supported | 1.0
+| `bionic:android7:amd64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
+| `bionic:android7:arm64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
 
 The `bionic:android7:arm64` and `bionic:android7:amd64` images are not receiving Android security updates anymore as Google stopped supporting Android 7 in 2019. They are only provided for legacy reasons and have been dropped with Anbox Cloud 1.10 in April 2021.
