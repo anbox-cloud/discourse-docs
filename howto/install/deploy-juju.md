@@ -14,6 +14,7 @@ Before you start the installation, ensure that you have the required credentials
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
+  * [Microsoft Azure](https://azure.microsoft.com/)
 * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
@@ -23,9 +24,11 @@ If you don't meet these requirements, you might still be able to install Anbox C
 
 Juju is a tool for deploying, configuring and operating complex software on public or private clouds.
 
-Anbox Cloud currently requires Juju 2.8 (see [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for more information). To install this version, enter the following command:
+To install Juju 2.9, enter the following command:
 
-    sudo snap install --channel=2.8/stable juju
+    sudo snap install --channel=2.9/stable juju
+
+See [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Authenticate with your cloud
 
@@ -153,7 +156,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud ... --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ### Add GPU support
 
@@ -176,7 +179,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud ... --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ### Use Arm instances
 
@@ -197,7 +200,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud ... --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ## Monitor the deployment
 
