@@ -24,11 +24,10 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 
 ## What's new
 
-Along with bug fixes and general improvements, Anbox Cloud 1.11 comes with:
+Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 
-* Client-side virtual keyboard
-* Hardware accelerated video decoding (H.264, Nvidia GPUs only)
-* Experimental WiFi support
+* Android 12
+* Improved density for NVIDIA GPUs
 
 |  |  |
 |--|--|

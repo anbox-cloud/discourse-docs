@@ -14,15 +14,16 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
+### 1.12.1 (~ mid December 2021)
 
-### 1.11.3 (~ mid October 2021)
-
-* October 2021 security update for Android and Chrome
+* December 2021 security update for Android and Chrome
 * Bug fixes
 
+### 1.12.2 (~ mid January 2022)
 
-### 1.12 (~ October 2021)
+* January 2022 security update for Android and Chrome
+* Bug fixes
 
-* WebRTC streaming improvements (automatic resolution and frame rate adjustments)
-* Android 12
-* Improved tooling to support auto scaling of LXD clusters
+### 1.13 (~ February 2021)
+
+* Native rendering
