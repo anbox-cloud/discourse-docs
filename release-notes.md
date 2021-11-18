@@ -651,7 +651,7 @@ None
 
 ### New features & improvements
 
-* Various improvements for HA support in the Anbox Stream Gateway and its [dqlite](https://dqlite.io) integration
+* Various improvements for HA support in the Anbox Stream Gateway and its [dqlite](https://dqlite.io/) integration
  * The Anbox Stream Gateway now exposes a `/1.0/status` endpoint to allow simple health checks
  * The number of registered stream agents is now exported via the prometheus endpoint of the Anbox Stream Gateway
  * The LXD charm can now use Juju storage (AWS EBS, ..) at deployment time as base for the LXD storage pool

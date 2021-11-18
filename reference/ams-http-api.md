@@ -189,7 +189,7 @@ Some operations require uploading a payload. To prevent the difficulties of hand
    * [`/1.0/images`](#heading--10images)
      * [`/1.0/images/<id or name >`](#heading--10images)
        * [`/1.0/images/<id or name>/<version>`](#heading--10imagesidversion)
-   * [`/1.0/metrics`](#heading--10metrics)
+   * `/1.0/metrics`
    * [`/1.0/nodes`](#heading--10nodes)
      * [`/1.0/nodes/<name>`](#heading--10nodesname)
    * [`/1.0/operations`](#heading--10operations)
@@ -950,7 +950,7 @@ abi: x86_64
 ```
 The use of this API requires the `application_manifest_download` extension is supported by the server.
 
-<a name="heading--10applicationsnamemanifestmanifest"></a>
+<a name="heading--10applicationsnameversionmanifest"></a>
 ### `/1.0/applications/<id or name>/<version>/manifest`
 
 #### GET

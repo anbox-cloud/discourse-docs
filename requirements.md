@@ -97,7 +97,8 @@ More CPU cores and more RAM on the machine hosting LXD will allow to run a highe
 If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
- - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
- - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
+
+- **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
+- **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
 
 Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://discourse.ubuntu.com/t/monitoring-installation/17786) is always important.

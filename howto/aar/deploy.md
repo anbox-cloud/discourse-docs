@@ -13,7 +13,7 @@ When using the S3 storage backend, image downloads will be redirected to S3 inst
 
 ### Create and configure an S3 bucket
 
-To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See the AWS documentation [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) for instructions on how to do this.
+To use the AWS S3 storage backend, you must create a dedicated S3 bucket for the AAR first. See [Create your first S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) in the AWS documentation for instructions on how to do this.
 
 If you don’t plan to use the [CloudFront CDN](#cloudfront), you should use a region close to your Anbox Cloud deployment to keep download times low.
 
@@ -51,7 +51,7 @@ To allow the AAR to access the S3 bucket, create an [IAM](https://docs.aws.amazo
 
 Replace `aar0` in the policy with the name of your bucket.
 
-Once you created the IAM user, create an access key for the user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this.
+Once you created the IAM user, create an access key for the user, which the AAR will use. See [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the AWS documentation for more details on this.
 
 Finally, update the AAR configuration via the charm configuration:
 

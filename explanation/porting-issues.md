@@ -62,7 +62,7 @@ Android [has a 100MB limit on applications](https://developer.android.com/google
 Applications under that limit can be created using the regular [method](https://discourse.ubuntu.com/t/create-an-application/24198).
 Larger applications however need to be split up into the main part as an APK file and the expansion part as an OBB file.
 
-- APK - Contains the executables and native libraries(*.so files), plug-ins, basic assets, and data required by the application to load for the first time.
+- APK - Contains the executables and native libraries (`*.so` files), plug-ins, basic assets, and data required by the application to load for the first time.
 - OBB - Contains the remaining assets (high-fidelity graphics, media files, or other large resource files) for full application user experience.
 
 Creating this type of application in AMS is supported but requires a few more steps.
