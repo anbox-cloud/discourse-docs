@@ -16,15 +16,15 @@ Before you run the upgrade of the charms, you should make sure all packages on t
 <a name="juju-version"></a>
 ## Check Juju version
 
-With the 1.8 release of Anbox Cloud you **MUST** use Juju 2.8. If your deployment doesn't yet use Juju 2.8 you have to upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/upgrading-models) for more details on how to upgrade the Juju controller and all models to Juju 2.8.
+Up until release 1.11, Anbox Cloud requires Juju 2.8. If your deployment doesn't yet use Juju 2.8 you have to upgrade your controller and all models first. See the [Juju documentation](https://juju.is/docs/upgrading-models) for more details on how to upgrade the Juju controller and all models to Juju 2.8.
 
-As of 1.10.0 Juju 2.9 is not yet fully supported and it is recommended to stay with Juju 2.8. You can install Juju 2.8 with
+As of 1.12, Juju 2.9 is supported. You can install Juju 2.9 with
 
-    $ snap install --channel=2.8/stable juju
+    $ snap install --channel=2.9/stable juju
 
-or switch to the 2.8 series with
+or switch to the 2.9 series with
 
-    $ snap refresh --channel=2.8/stable juju
+    $ snap refresh --channel=2.9/stable juju
 
 ## Upgrade all charms
 
