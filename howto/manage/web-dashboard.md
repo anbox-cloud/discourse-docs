@@ -3,7 +3,7 @@ The dashboard is useful if you are new to Anbox Cloud or want a simple managemen
 
 Starting in 1.9.0, the dashboard replaces the old Dev UI.
 
-> **Note**: The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.
+[note type="information" status="Note"]The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.[/note]
 
 ![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png)
 
@@ -15,7 +15,7 @@ The dashboard comes pre-installed when you deploy [Anbox Cloud with the streamin
 
 To access the dashboard, go to `https://<your-machine-address>/`.
 
-> **Hint**: The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
+[note type="information" status="Hint"]The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.[/note]
 
 ### Granting access
 
@@ -70,7 +70,7 @@ Note that more advanced scenarios might not yet be possible via the dashboard an
 
 The dashboard comes with in-browser streaming capabilities through WebRTC.
 
-> **Note**: The dashboard uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk) under the hood.
+[note type="information" status="Note"]The dashboard uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk) under the hood.[/note]
 
 You can select any application you previously created and start a streaming session.
 

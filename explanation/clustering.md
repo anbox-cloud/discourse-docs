@@ -74,12 +74,12 @@ You can change the number of GPU slots of each node with the following command:
 
     amc node set lxd0 gpu-slots 10
 
-> **NOTE**: Determining the correct number of GPU slots for a specific GPU model depends on various things. The following just gives an idea of what should drive the decision for the right number of GPU slots:
-> * Memory a GPU provides
-> * Memory a container uses
-> * Number of parallel encoding pipelines a GPU offers
->
-> Finding the right number of GPU slots requires benchmarking and testing of the intended workload.
+[note type="information" status="Note"]Determining the correct number of GPU slots for a specific GPU model depends on various things. The following just gives an idea of what should drive the decision for the right number of GPU slots:
+- Memory a GPU provides
+- Memory a container uses
+- Number of parallel encoding pipelines a GPU offers
+
+Finding the right number of GPU slots requires benchmarking and testing of the intended workload.[/note]
 
 Launching a container on that node will reserve some of those GPU slots and mark them as unavailable until the container is terminated. If your node has no GPU slot available, containers requiring a GPU will not be launched on it. Containers not requiring a GPU can still be launched.
 

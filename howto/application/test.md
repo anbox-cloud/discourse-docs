@@ -16,7 +16,7 @@ This will create a container which exposes the TCP port `5559` on its private ad
 $ amc launch -s +adb -p swrast -r
 ```
 
-> **Hint:** If you're wondering about the syntax of the command used to launch a container, see [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).
+[note type="information" status="Hint"]If you're wondering about the syntax of the command used to launch a container, see [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
 
 If you want to run the Appium tests against an Android application managed by AMS (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
 
@@ -24,7 +24,7 @@ If you want to run the Appium tests against an Android application managed by AM
 $ amc launch -s adb -p swrast --disable-watchdog app
 ```
 
-> **Hint:** The `--disable-watchdog` argument is important as by default Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this we need to disable the watchdog which is responsible for this.
+[note type="information" status="Hint"]The `--disable-watchdog` argument is important as by default Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this we need to disable the watchdog which is responsible for this.[/note]
 
 Once the container is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the following command:
 
@@ -61,7 +61,7 @@ $ $ANDROID_HOME/platform-tools/adb connect localhost:10000
 connected to localhost:10000
 ```
 
-> **Warning:** Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first (`$ sudo apt purge -y adb`).
+[note type="caution" status="Warning"]Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first (`$ sudo apt purge -y adb`).[/note]
 
 ## Execute Tests with Appium
 

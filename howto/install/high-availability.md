@@ -16,11 +16,11 @@ For example, to go from 1 to 5 ams units, you would run the following:
 $ juju add-unit ams -n 4
 ```
 
-> **Hint:** By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/constraints):
->
->`$ juju set-constraints anbox-stream-gateway cores=4 memory=8GB.`
->
->This is heavily recommended on production environments.
+[note type="information" status="Hint"]By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/constraints):
+
+`$ juju set-constraints anbox-stream-gateway cores=4 memory=8GB.`
+
+This is heavily recommended on production environments.[/note]
 
 
 ## Anbox Cloud Core
@@ -33,18 +33,19 @@ $ juju relate ams ams-load-balancer
 $ juju add-unit ams -n 2
 ```
 
-> Note: If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to ams:
->
->```bash
->$ amc remote add lb https://10.75.96.23:8444
->$ amc remote set-default lb
->```
+[note type="information" status="Note"]If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to ams:
+
+```bash
+$ amc remote add lb https://10.75.96.23:8444
+$ amc remote set-default lb
+```
+[/note]
 
 The port to use is always `8444`, the same AMS is listening on.
 
 ## Anbox Streaming Stack
 
-> **Warning:** If you are upgrading from 1.4 or earlier, check [the upgrade instructions](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)
+[note type="caution" status="Warning"]If you are upgrading from 1.4 or earlier, check [the upgrade instructions](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750).[/note]
 
 In the Streaming Stack, both the Agent and the Gateway can be run in HA.
 
@@ -56,7 +57,7 @@ $ juju relate anbox-stream-gateway:api anbox-stream-gateway-lb:reverseproxy
 
 This would give you 3 instances of both the Stream Gateway and the Stream Agent.
 
-> **Note:** We recommend a minimum of 3 machines for the Streaming Stack.
+[note type="information" status="Note"]We recommend a minimum of 3 machines for the Streaming Stack.[/note]
 
 
 ## Checking status

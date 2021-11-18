@@ -200,7 +200,8 @@ Some operations require uploading a payload. To prevent the difficulties of hand
    * [`/1.0/version`](#heading--10version)
 
 ## API details
-### <h3 id='heading--10'>`/1.0/`</h3>
+<a name="heading--10"></a>
+### `/1.0/`
 #### GET
  * Description: Server configuration
  * Authentication: guest, untrusted or trusted
@@ -234,7 +235,8 @@ Output (if trusted):
 }
 ```
 
-### <h3 id='heading--10addons'>`/1.0/addons`</h3>
+<a name="heading--10addons"></a>
+### `/1.0/addons`
 #### GET
  * Description: List of addons
  * Authentication: trusted
@@ -323,7 +325,8 @@ Output:
 
 To monitor the status of an addon upload operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10addonsname'>`/1.0/addons/<id or name>`</h3>
+<a name="heading--10addonsname"></a>
+### `/1.0/addons/<id or name>`
 #### GET
  * Description: Retrieve information about an addon
  * Authentication: trusted
@@ -459,7 +462,8 @@ Output:
 
 To monitor the status of an addon update operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10addonsnameversion'>`/1.0/addons/<id or name>/<version>`</h3>
+<a name="heading--10addonsnameversion"></a>
+### `/1.0/addons/<id or name>/<version>`
 #### DELETE
  * Description: Delete specific version of an addon
  * Authentication: trusted
@@ -504,7 +508,8 @@ Output:
 
 To monitor the status of an addon version deletion operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10applications'>`/1.0/applications`</h3>
+<a name="heading--10applications"></a>
+### `/1.0/applications`
 #### GET
  * Description: List of applications
  * Authentication: trusted
@@ -592,7 +597,8 @@ Output:
 
 To monitor the status of an application  creation operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10applicationsname'>`/1.0/applications/<id or name>`</h3>
+<a name="heading--10applicationsname"></a>
+### `/1.0/applications/<id or name>`
 #### GET
  * Description: Retrieve information about an application
  * Authentication: trusted
@@ -797,7 +803,8 @@ Output:
 
 To monitor the status of an application removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10applicationsnameversion'>`/1.0/applications/<id or name>/<version>`</h3>
+<a name="heading--10applicationsnameversion"></a>
+### `/1.0/applications/<id or name>/<version>`
 
 #### GET
  * Description: Export an application version image
@@ -915,7 +922,8 @@ Output:
 ```
 To monitor the status of an application version update operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10applicationsnamemanifest'>`/1.0/applications/<id or name>/manifest`</h3>
+<a name="heading--10applicationsnamemanifest"></a>
+### `/1.0/applications/<id or name>/manifest`
 
 #### GET
  * Description: Get lastest application manifest file
@@ -942,7 +950,8 @@ abi: x86_64
 ```
 The use of this API requires the `application_manifest_download` extension is supported by the server.
 
-### <h3 id='heading--10applicationsnamemanifestmanifest'>`/1.0/applications/<id or name>/<version>/manifest`</h3>
+<a name="heading--10applicationsnamemanifestmanifest"></a>
+### `/1.0/applications/<id or name>/<version>/manifest`
 
 #### GET
  * Description: Get one specific application version manifest file
@@ -969,7 +978,8 @@ abi: x86_64
 ```
 The use of this API requires the `application_manifest_download` extension is supported by the server.
 
-### <h3 id='heading--10certificates'>`/1.0/certificates`</h3>
+<a name="heading--10certificates"></a>
+### `/1.0/certificates`
 #### GET
  * Description: List of trusted client certificates
  * Authentication: trusted
@@ -1032,7 +1042,8 @@ Output:
 }
 ```
 
-### <h3 id='heading--10certificatesid'>`/1.0/certificates/<fingerprint>`</h3>
+<a name="heading--10certificatesid"></a>
+### `/1.0/certificates/<fingerprint>`
 #### GET
  * Description: Retrieve information about a stored certificate
  * Authentication: trusted
@@ -1100,7 +1111,8 @@ Output:
 
 To monitor the status of a certificate removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10config'>`/1.0/config`</h3>
+<a name="heading--10config"></a>
+### `/1.0/config`
 #### GET
  * Description: Retrieve list of all config items
  * Authentication: trusted
@@ -1202,7 +1214,8 @@ Output:
 To monitor the status of a configuration modification operation, please refer to [`/1.0/operations`](#heading--10operations)
 
 
-### <h3 id='heading--10containers'>`/1.0/containers`</h3>
+<a name="heading--10containers"></a>
+### `/1.0/containers`
 #### GET
  * Description: Retrieve list of all available containers
  * Authentication: trusted
@@ -1333,7 +1346,8 @@ Output:
 ```
 To monitor the status of a container creation operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10containersid'>`/1.0/containers/<id>`</h3>
+<a name="heading--10containersid"></a>
+### `/1.0/containers/<id>`
 #### GET
  * Description: Container information
  * Authentication: trusted
@@ -1438,7 +1452,8 @@ Output:
 ```
 To monitor the status of a container removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10containersidlogs'>`/1.0/containers/<id>/logs`</h3>
+<a name="heading--10containersidlogs"></a>
+### `/1.0/containers/<id>/logs`
 #### GET
  * Description: List of container logs
  * Authentication: trusted
@@ -1468,7 +1483,8 @@ Output:
 }
 ```
 
-### <h3 id='heading--10containersidlogsname'>`/1.0/containers/<id>/logs/<name>`</h3>
+<a name="heading--10containersidlogsname"></a>
+### `/1.0/containers/<id>/logs/<name>`
 #### GET
  * Description: Retrieves a stored log file for a container
  * Authentication: trusted
@@ -1490,7 +1506,8 @@ Output:
 ...
 ```
 
-### <h3 id='heading--10events'>`/1.0/events`</h3>
+<a name="heading--10events"></a>
+### `/1.0/events`
 This URL isn't a real REST API endpoint, instead of doing a GET query on it
 will upgrade the connection to a websocket on which notifications will
 be sent.
@@ -1540,7 +1557,8 @@ This never returns. Each notification is sent as a separate JSON dict, for examp
 }
 ```
 
-### <h3 id='heading--10images'>`/1.0/images`</h3>
+<a name="heading--10images"></a>
+### `/1.0/images`
 #### GET
  * Description: List available images
  * Authentication: trusted
@@ -1627,7 +1645,8 @@ Output:
 ```
 To monitor the status of an image registration operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10imagesid'>`/1.0/images/<id or name>`</h3>
+<a name="heading--10imagesid"></a>
+### `/1.0/images/<id or name>`
 #### GET
  * Description: Load image information
  * Authentication: trusted
@@ -1802,7 +1821,8 @@ Output:
 ```
 To monitor the status of an image removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10imagesidversion'>`/1.0/images/<id or name>/<version>`</h3>
+<a name="heading--10imagesidversion"></a>
+### `/1.0/images/<id or name>/<version>`
 #### DELETE
  * Description: Deletes a single version of an image
  * Authentication: trusted
@@ -1845,7 +1865,8 @@ Output:
 ```
 To monitor the status of an image version removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10nodes'>`/1.0/nodes`</h3>
+<a name="heading--10nodes"></a>
+### `/1.0/nodes`
 #### GET
  * Description: List available nodes
  * Authentication: trusted
@@ -1959,7 +1980,8 @@ Output:
 ```
 To monitor the status of an LXD node registration operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10nodesname'>`/1.0/nodes/<name>`</h3>
+<a name="heading--10nodesname"></a>
+### `/1.0/nodes/<name>`
 #### GET
  * Description: Load node information
  * Authentication: trusted
@@ -2121,7 +2143,8 @@ Output:
 ```
 To monitor the status of a LXD node removal operation, please refer to [`/1.0/operations`](#heading--10operations)
 
-### <h3 id='heading--10operations'>`/1.0/operations`</h3>
+<a name="heading--10operations"></a>
+### `/1.0/operations`
 #### GET
  * Description: list of operations
  * Authentication: trusted
@@ -2150,7 +2173,8 @@ Output:
 }
 ```
 
-### <h3 id='heading--10operationsuuid'>`/1.0/operations/<uuid>`</h3>
+<a name="heading--10operationsuuid"></a>
+### `/1.0/operations/<uuid>`
 #### GET
  * Description: Load operation information. If the service is deployed as
 a cluster of several instances, the operation is held in one of them. In
@@ -2229,7 +2253,8 @@ Output:
 
 HTTP code for this should be 202 (Accepted).
 
-### <h3 id='heading--10operationsuuidwait'>`/1.0/operations/<uuid>/wait`</h3>
+<a name="heading--10operationsuuidwait"></a>
+### `/1.0/operations/<uuid>/wait`
 #### GET
  * Description: Wait until an operation reaches a final status
  * Authentication: trusted
@@ -2281,7 +2306,8 @@ Output:
 }
 ```
 
-### <h3 id='heading--10operationsuuidwebsocket'>`/1.0/operations/<uuid>/websocket`</h3>
+<a name="heading--10operationsuuidwebsocket"></a>
+### `/1.0/operations/<uuid>/websocket`
 #### GET (`?secret=SECRET`)
  * Description: This connection is upgraded into a websocket connection
    speaking the protocol defined by the operation type. For example, in the
@@ -2295,7 +2321,8 @@ Output:
  * Operation: sync
  * Cancellable: no
 
-### <h3 id='heading--10tasks'>`/1.0/tasks`</h3>
+<a name="heading--10tasks"></a>
+### `/1.0/tasks`
 #### GET
  * Description: List of available tasks
  * Authentication: trusted
@@ -2328,7 +2355,8 @@ $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>
 }
 ```
 
-### <h3 id='heading--10version'>`/1.0/version`</h3>
+<a name="heading--10version"></a>
+### `/1.0/version`
 #### GET
  * Description: Load status information about the service
  * Authentication: guest

@@ -6,4 +6,4 @@ Use the following command to revoke a certificate:
 
     aar trust revoke <fingerprint>
 
-> **Warning:** This operation is irreversible. You cannot reverse a revocation or add the certificate again.
+[note type="caution" status="Warning"]This operation is irreversible. You cannot reverse a revocation or add the certificate again.[/note]

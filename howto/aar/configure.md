@@ -14,7 +14,7 @@ To register an instance as publisher, use the following command:
 
     juju add-relation aar:publisher ams:registry-publisher
 
-> **Hint:** Run `amc config show` to check that the AAR configuration items were changed.
+[note type="information" status="Hint"]Run `amc config show` to check that the AAR configuration items were changed.[/note]
 
 ### Register units deployed in another model
 
@@ -112,7 +112,7 @@ Use any of the following commands to do that:
 
     sudo aar trust add client.crt
 
-> **Note:** Due to Snap strict confinement and the AAR sudo requirement, the second method requires certificates to be located in the root user home directory `/root`.
+[note type="information" status="Note"]Due to Snap strict confinement and the AAR sudo requirement, the second method requires certificates to be located in the root user home directory `/root`.[/note]
 
 Finally, reboot the AAR:
 

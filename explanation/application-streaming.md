@@ -42,7 +42,7 @@ The following provides an overview of the process:
  5. Each network path is bundled in an `ICE candidate`. There are usually multiple ICE candidates per peer and both sides negotiate the best candidate pair.
  6. Both peer agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway websocket and talk directly to each other.
 
-> **Hint:** The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other
+[note type="information" status="Hint"]The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other.[/note]
 
 ### 3. Establishing the stream
 
@@ -58,7 +58,7 @@ Currently supported video codecs are:
  * H.264
  * VP8
 
-> **IMPORTANT:** The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). It's your obligation to ensure you have the rights to streaming H.264 encoded video content to your users.
+[note type="information" status="Important"]The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). It's your obligation to ensure you have the rights to streaming H.264 encoded video content to your users.[/note]
 
 In the future we plan to add support for:
 

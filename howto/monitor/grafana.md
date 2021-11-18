@@ -4,10 +4,10 @@ Grafana is a tool for analytics and monitoring that allows to query, visualize o
 
 Every cluster LXD node contains a running Telegraf instance gathering machine metrics.
 Besides, Anbox containers existing in that node also report their metrics to that same Telegraf instance.
- 
+
 Grafana takes its data by considering the Telegraf instances as metrics targets and polls for new content
 
-![metrics|606x399](upload://36fg3QjJ4FUy6RWm79aa45pl63q.png) 
+![metrics|606x399](upload://36fg3QjJ4FUy6RWm79aa45pl63q.png)
 
 ## Access Grafana
 
@@ -31,7 +31,7 @@ Once entered the above URL, You are now redirected to the login page requiring t
 $ juju run-action --wait grafana/0 get-admin-password
 ```
 
-> **Note:** You have to replace the `0` in `grafana/0` with the unit version of the installed grafana juju unit.
+[note type="information" status="Note"]You have to replace the `0` in `grafana/0` with the unit version of the installed grafana juju unit.[/note]
 
 You should obtain a response like:
 
@@ -55,6 +55,4 @@ User: admin
 Password: jd673zyYWkR7kyPW
 ```
 
-> **Note:**	The value `jd673zyYWkR7kyPW` is illustrative. Replace it by the one received as response
-	to the juju run-action command
-    
+[note type="information" status="Note"]The value `jd673zyYWkR7kyPW` is illustrative. Replace it by the one received as response	to the juju run-action command.[/note]

@@ -61,7 +61,8 @@ HTTP code must be one of 400 or 500.
    * [`/1.0/tracing`](#heading--10tracing)
 
 ## API details
-### <h3 id='heading--10'> `/1.0/` </h3>
+<a name="heading--10"></a>
+### `/1.0/`
 #### GET
 
  * Description: Server configuration
@@ -92,14 +93,15 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq 
 }
 ```
 
-### <h3 id='heading--10location'> `/1.0/location`</h3>
+<a name="heading--10location"></a>
+### `/1.0/location`
 #### GET
 
  * Description: Get location status
  * Operation: sync
  * Return: Current location status
 
-> **NOTE:**  After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html) won't be processed by Anbox until the location endpoint is disabled again.
+[note type="information" status="Note"]After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html) won't be processed by Anbox until the location endpoint is disabled again.[/note]
 
  Return value:
 
@@ -120,7 +122,7 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/locat
  * Operation: sync
  * Return: standard return value or standard error
 
-> **NOTE:**  Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
+[note type="information" status="Note"]Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
 
 Return value:
 
@@ -138,7 +140,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/loca
  * Operation: sync
  * Return: standard return value or standard error
 
-> **NOTE:**  The latitude or longitude of geographic coordinates is expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example, whereas the NMEA-based data format is expressed in [ddmm.mm](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
+[note type="information" status="Note"]The latitude or longitude of geographic coordinates is expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example, whereas the NMEA-based data format is expressed in [ddmm.mm](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.[/note]
 
 Input:
 
@@ -193,7 +195,8 @@ Return value:
 }
 ```
 
-### <h3 id='heading--10camera'> `/1.0/camera`</h3>
+<a name="heading--10camera"></a>
+### `/1.0/camera`
 #### GET
 
 * Description: Get camera basic information
@@ -249,7 +252,8 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camer
 true
 ```
 
-### <h3 id='heading--10cameradata'> `/1.0/camera/data`</h3>
+<a name="heading--10cameradata"></a>
+### `/1.0/camera/data`
 #### POST
 
 * Description: Upload a static image to Anbox
@@ -271,7 +275,7 @@ After this, when opening a camera application, the uploaded image should be disp
 
 Here is a caveat about the size of a jpeg image to be uploaded to Anbox. Irrespective of the screen orientation is in landscape or portrait, the size of the uploaded jpeg image must match one of the resolutions you got from the response to the camera info request, Anbox will rotate the image automatically for you based on current screen orientation.
 
-> **NOTE:**  If a static image already exists in Anbox, when you issue the above request next time, the image will be overridden.
+[note type="information" status="Note"]If a static image already exists in Anbox, when you issue the above request next time, the image will be overridden.[/note]
 
 #### DELETE
 
@@ -304,7 +308,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/came
 /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
 ```
 
-> **NOTE:**  the returned socket path is not fixed. It varies when you toggle camera support in Anbox via the above API
+[note type="information" status="Note"]The returned socket path is not fixed. It varies when you toggle camera support in Anbox via the above API.[/note]
 
 For example, you have a mp4 video file available in the container, to stream video content to Anbox
 
@@ -322,7 +326,8 @@ With ffmpeg, you can do:
 $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
 ```
 
-### <h3 id='heading--10sensors'> `/1.0/sensors`</h3>
+<a name="heading--10sensors"></a>
+### `/1.0/sensors`
 #### GET
 
 * Description: Get sensors’ status and supported sensors by Anbox
@@ -369,7 +374,7 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/senso
  * Operation: sync
  * Return: standard return value or standard error
 
-> **NOTE:**  Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.
+[note type="information" status="Note"]Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
 
 Return value:
 
@@ -418,7 +423,7 @@ Sensor Type       | JSON Data structure |
 
 Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
-> **NOTE:**  If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the following error even if the sensor updates are activated:
+[note type="information" status="Note"]If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the following error even if the sensor updates are activated:
 
 ```bash
 $ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":
@@ -432,8 +437,11 @@ $ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sen
 
 ```
 Issue GET method to sensor endpoint can check the current active sensors in Android container.
+[/note]
 
-### <h3 id='heading--10tracing'> `/1.0/tracing`</h3>
+
+<a name="heading--10tracing"></a>
+### `/1.0/tracing`
 #### GET
 
 * Description: Get tracing status

@@ -37,7 +37,7 @@ $ amc launch -p webrtc my-application
 
 ## Force Software Rendering and Video Encoding
 
-> **Note:** Software rendering and video encoding will utilize the CPU. This will mean you can run less containers on a system than you can, when you have a GPU.
+[note type="information" status="Note"]Software rendering and video encoding will utilize the CPU. This will mean you can run less containers on a system than you can, when you have a GPU.[/note]
 
 It is possible to force a container to run with software rendering. For that simply launch a container with
 

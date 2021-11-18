@@ -6,7 +6,7 @@ The internal process will prepare a container based on the currently available i
 
 To create an application, you need an Android package (APK) with support for the target architecture. Additionally, you must select one of the available instance types for the application. The instance type defines CPU/RAM constraints put onto the container launch for the application.
 
-> **Note:** See [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.
+[note type="information" status="Note"]See [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.[/note]
 
 To create a new application, you must first create a manifest file to define the various attributes the new application should have. The manifest is a simple [YAML](http://yaml.org/) file and looks like this:
 
@@ -51,7 +51,7 @@ When creating an application from a directory, the directory should contain the 
 * `app.apk`
 * `extra-data` (optional)
 
-> **Note:** Due to Snap strict confinement, the directory must be located in the home directory.
+[note type="information" status="Note"]Due to Snap strict confinement, the directory must be located in the home directory.[/note]
 
 With everything in place, create the application by entering the following command:
 
@@ -108,7 +108,7 @@ Once the status of the application switches to `ready`, the application is ready
 
 An application can also be created from a tarball file. The tarball file must be compressed with bzip2 and must use the same components and structure as the directory.
 
-> **Note:** Due to Snap strict confinement, the tarball file must be located in the home directory.
+[note type="information" status="Note"]Due to Snap strict confinement, the tarball file must be located in the home directory.[/note]
 
 For example, a tarball can be created with the following command:
 

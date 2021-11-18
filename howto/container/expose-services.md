@@ -2,7 +2,7 @@ AMS allows a container to expose a service to the outer network. For that, it pr
 
     amc launch -s tcp:22 bdp7kmahmss3p9i8huu0
 
-> **Note:** The specified port is exposed only on the IP address that the container itself has. As the container is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).
+[note type="information" status="Note"]The specified port is exposed only on the IP address that the container itself has. As the container is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).[/note]
 
 The list of containers (`amc ls`) will now show the container and the exposed port `22`:
 

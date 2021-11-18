@@ -98,4 +98,4 @@ $  juju model-config logging-config="<root>=WARNING;unit=TRACE"
 
 It will set the logging level for all units to `TRACE`.
 
-> **Warning:** It isn't a good idea to leave the logging level at `TRACE` for any longer than you actually need to. Verbose logging not only consumes network bandwidth but also fills up the database on the controller.
+[note type="caution" status="Warning"]It isn't a good idea to leave the logging level at `TRACE` for any longer than you actually need to. Verbose logging not only consumes network bandwidth but also fills up the database on the controller.[/note]

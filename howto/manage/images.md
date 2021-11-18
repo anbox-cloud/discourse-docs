@@ -34,7 +34,7 @@ You can set any image as your default with the following command:
 
 Running `amc image list` will now show this image marked as default.
 
-> **Hint:** Note that you cannot delete an image marked as default. You'll need to set a new default image first. *(does not apply if you only have one image left)*
+[note type="information" status="Hint"]Note that you cannot delete an image marked as default. You'll need to set a new default image first. *(does not apply if you only have one image left)*[/note]
 
 ## Delete an image
 
