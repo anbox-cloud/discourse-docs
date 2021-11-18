@@ -136,8 +136,6 @@ Return value:
 ``/1.0/location``
 -----------------
 
-.. _get-1:
-
 GET
 ~~~
 
@@ -266,8 +264,6 @@ Return value:
 ``/1.0/camera``
 ---------------
 
-.. _get-2:
-
 GET
 ~~~
 
@@ -295,8 +291,6 @@ Return value:
      "status_code": 200,
      "type": "sync"
    }
-
-.. _post-1:
 
 POST
 ~~~~
@@ -337,8 +331,6 @@ query will indicate the camera is enabled.
 
 ``/1.0/camera/data``
 --------------------
-
-.. _post-2:
 
 POST
 ~~~~
@@ -445,8 +437,6 @@ With ffmpeg, you can do:
 ``/1.0/sensors``
 ----------------
 
-.. _get-3:
-
 GET
 ~~~
 
@@ -489,8 +479,6 @@ Return value:
      "type": "sync"
    }
 
-.. _post-3:
-
 POST
 ~~~~
 
@@ -514,8 +502,6 @@ Return value:
        "status_code": 200,
        "type": "sync"
    }
-
-.. _patch-1:
 
 PATCH
 ~~~~~
@@ -547,23 +533,23 @@ all values in the data are represented as floating-point data.
 
    * - Sensor Type
      - JSON Data structure
-   * - \ ``acceleration``\ 
+   * - \ ``acceleration``\
      - {“type”: “acceleration”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``gyroscope``\ 
+   * - ``gyroscope``\
      - {“type”: “gyroscope”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``magnetic-field``\ 
+   * - ``magnetic-field``\
      - {“type”: “magnetic-field”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``orientation``\ 
+   * - ``orientation``\
      - {“type”: “orientation”, “azimuth”: <data>, “pitch”: <data>, “roll”: <data>}
-   * - ``humidity``\ 
+   * - ``humidity``\
      - {“type”: “humidity”, “value”: <data>}
-   * - ``pressure``\ 
+   * - ``pressure``\
      - {“type”: “pressure”, “value”: <data>}
-   * - ``light``\ 
+   * - ``light``\
      - {“type”: “light”, “value”: <data>}
-   * - ``proximity``\ 
+   * - ``proximity``\
      - {“type”: “proximity”, “value”: <data>}
-   * - ``temperature``\ 
+   * - ``temperature``\
      - {“type”: “temperature”, “value”: <data>}
 
 
@@ -576,27 +562,25 @@ for the units of measure for the environmental sensors.
    applications are not requesting sensor data during its runtime, any
    attempt to send sensor data to Anbox via HTTP API endpoint will fail
    with the following error even if the sensor updates are activated:
-   
+
    .. code:: bash
-   
+
       $ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":
       -0.1, "z": 0.1},{"type": "pressure", "value": 1.0}]' | jq .
-   
+
       {
         "error": "Sensor 'acceleration' is not active",
         "error_code": 400,
         "type": "error"
       }
-   
+
    Issue GET method to sensor endpoint can check the current active sensors
-   in Android container. 
+   in Android container.
 
 .. _reference_anbox-http-api-heading--10tracing:
 
 ``/1.0/tracing``
 ----------------
-
-.. _get-4:
 
 GET
 ~~~
@@ -619,8 +603,6 @@ Return value:
     "status_code": 200,
     "type": "sync"
    }
-
-.. _post-4:
 
 POST
 ~~~~

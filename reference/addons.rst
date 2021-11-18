@@ -50,20 +50,19 @@ The following table lists the valid keys in an addon manifest:
    * - name
      - string
      - Name of the addon. Can be used to reference the addon.
-     - All characters except for the following: ``< > : " / \ \
-     - ? *``, as well as space.
+     - All characters except for the following: ``< > : " / \ | - ? *``, as well as space.
    * - description
      - string
      - Description of the addon.
-     - 
+     -
    * - provides
      - object
      - Additional capabilities that this addon provides to the container. See individual items for details.
-     - 
+     -
    * - provides.abi-support
      - string array
      - Tells AMS that this addon adds support for the given architecture even if the application doesn’t support it natively. Use this when your addon brings instruction translation or provides libraries for other architectures.
-     - \ ``arm64-v8a``, ``armeabi-v7a``, ``armeabi``\ 
+     - \ ``arm64-v8a``, ``armeabi-v7a``, ``armeabi``\
 
 
 .. _reference_addons-env-variables:
@@ -85,16 +84,16 @@ The following variables are available:
      - Possible values
    * - ADDON_DIR
      - Directory of the addon whose hook is currently running.
-     - 
+     -
    * - ANBOX_DIR
      - Path to the Anbox directory.
-     - \ ``/var/lib/anbox``\ 
+     - \ ``/var/lib/anbox``\
    * - ANDROID_ROOTFS
      - Path to the Android RootFS.
-     - \ ``/var/lib/anbox/rootfs``\ 
+     - \ ``/var/lib/anbox/rootfs``\
    * - BOOT_PACKAGE
      - Boot package of the APK.
-     - 
+     -
    * - CONTAINER_TYPE
      - Type of container being run.
      - \ ``regular`` (container running an application or a raw image)\ ``base`` (container bootstrapping, thus creating or updating, an application)

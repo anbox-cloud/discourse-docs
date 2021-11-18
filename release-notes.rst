@@ -110,7 +110,7 @@ Bugs
 ----
 
 -  AC-321 Deploying multiple AMS units at the same time causes problems
--  AC-343 ANDROID_EMU_\* extensions are visible for Android applications
+-  AC-343 ANDROID_EMU\_\* extensions are visible for Android applications
 -  AC-384 Fix steam view in the dashboard
 
 [/Details]

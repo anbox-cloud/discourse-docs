@@ -28,6 +28,5 @@ bootstrapped, you can do the following:
 
    # Rest of the code for your addon
 
-[note type=“caution” type=“Warning”]Copying your existing addons without
-modifications might have unintended side effects, because your hooks
-   will run for every container.
+.. note::
+   Copying your existing addons without modifications might have unintended side effects, because your hooks will run for every container.
