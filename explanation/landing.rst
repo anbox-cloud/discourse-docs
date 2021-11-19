@@ -11,12 +11,12 @@ Placeholder
    :titlesonly:
 
    anbox-cloud
-   ams
+   About AMS <ams>
    applications
-   aar
+   About the AAR <aar>
    containers
    clustering
    gpu-support
    benchmarking
    application-streaming
-   porting-issues
+   Issues when porting apps <porting-issues>

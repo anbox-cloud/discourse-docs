@@ -1,8 +1,8 @@
 .. _howto_addon_migrate-from-old-addons:
 
-==============================
-Migrate from previous versions
-==============================
+====================================
+Migrate from previous addon versions
+====================================
 
 Starting with Anbox Cloud 1.12, the following hooks are deprecated and
 should be replaced:

@@ -26,4 +26,4 @@ To check which configuration options are available for applications, see
    ../aar/configure
    ../aar/revoke
    test
-   virtual-devices
+   Create a virtual device <virtual-devices>

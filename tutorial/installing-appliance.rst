@@ -1,8 +1,8 @@
 .. _tutorial_installing-appliance:
 
-========================
-Installing the appliance
-========================
+====================
+Installing the |ACA|
+====================
 
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a
 single machine. This offering is well suited for initial prototype and
@@ -347,7 +347,7 @@ commands to install them:
 .. note::
    See :ref:`Juju version <howto_update_upgrade-anbox-juju-version>`
    for information about which Juju version is required for your version of
-   Anbox Cloud. 
+   Anbox Cloud.
 
 .. _tutorial_installing-appliance-initialise:
 

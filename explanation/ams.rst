@@ -1,8 +1,8 @@
 .. _explanation_ams:
 
-=========
-About AMS
-=========
+==============================
+Anbox Management Service (AMS)
+==============================
 
 The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and
 handles all aspects of the application and container life cycle. It is

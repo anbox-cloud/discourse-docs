@@ -1,8 +1,8 @@
 .. _explanation_aar:
 
-=============
-About the AAR
-=============
+================================
+Anbox Application Registry (AAR)
+================================
 
 The Anbox Application Registry, or *AAR*, provides a central repository
 for applications created on Anbox Cloud. Using an AAR is very useful for

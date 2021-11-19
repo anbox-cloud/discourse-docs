@@ -1,8 +1,8 @@
 .. _explanation_porting-issues:
 
-========================
-Issues when porting apps
-========================
+================================
+Issues when porting Android apps
+================================
 
 When porting an Android application to Anbox Cloud usually in the form
 of APK, there are a few issues that can cause an application to not

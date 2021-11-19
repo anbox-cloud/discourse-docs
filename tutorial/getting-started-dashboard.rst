@@ -1,8 +1,8 @@
 .. _tutorial_getting-started-dashboard:
 
-===============================
-Getting started (web dashboard)
-===============================
+================================================
+Getting started with Anbox Cloud (web dashboard)
+================================================
 
 This tutorial guides you through the first steps of using Anbox Cloud.
 You will learn how to create and access a virtual Android device or an

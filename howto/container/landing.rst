@@ -16,7 +16,7 @@ for an introduction to how containers are used in Anbox Cloud.
    launch
    wait
    access
-   expose-services
+   Expose services <expose-services>
    logs
    delete
    list

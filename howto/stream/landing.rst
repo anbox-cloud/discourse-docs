@@ -17,7 +17,7 @@ For an introduction to the Streaming SDK, see :ref:`Anbox Streaming SDK <referen
    :titlesonly:
 
    access
-   native-client
-   web-client
-   oob-data
-   client-side-keyboard
+   Implement a native client <native-client>
+   Implement a web-based client <web-client>
+   Exchange OOB data <oob-data>
+   Use a client-side keyboard <client-side-keyboard>

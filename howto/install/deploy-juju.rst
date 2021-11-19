@@ -1,8 +1,8 @@
 .. _howto_install_deploy-juju:
 
-================
-Deploy with Juju
-================
+============================
+Deploy Anbox Cloud with Juju
+============================
 
 Anbox Cloud supports various public clouds, such as AWS, Azure and
 Google. To deploy Anbox Cloud in a cloud environment, you use Juju.
@@ -16,7 +16,7 @@ information and alternative installation methods, see :ref:`howto_install_custom
    :ref:`Variants <explanation_anbox-cloud-variants>`).
    This section focuses on **Anbox Cloud**. For instructions on how to
    install the **Anbox Cloud Appliance**, see :ref:`Installing the Anbox Cloud Appliance <tutorial_installing-appliance>`.
-   
+
 
 Prerequisites
 =============

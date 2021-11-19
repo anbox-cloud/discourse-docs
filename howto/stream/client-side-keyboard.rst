@@ -1,8 +1,8 @@
 .. _howto_stream_client-side-keyboard:
 
-==========================
-Use a client-side keyboard
-==========================
+========================================
+Integrate a client-side virtual keyboard
+========================================
 
 The Anbox Streaming SDK enables developers to build a hybrid mobile
 application that can integrate the features that Anbox Cloud provides.

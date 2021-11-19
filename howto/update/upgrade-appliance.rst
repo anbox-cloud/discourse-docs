@@ -1,8 +1,8 @@
 .. _howto_update_upgrade-appliance:
 
-=====================
-Upgrade the appliance
-=====================
+=================================
+Upgrade the Anbox Cloud Appliance
+=================================
 
 Before you upgrade the Anbox Cloud Appliance, you should make sure all
 packages on the machines that are part of the deployment are up-to-date.

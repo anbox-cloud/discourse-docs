@@ -21,7 +21,7 @@ before you start your installation.
 .. toctree::
    :titlesonly:
 
-   deploy-juju
+   Deploy with Juju <deploy-juju>
    customise
    high-availability
    validate

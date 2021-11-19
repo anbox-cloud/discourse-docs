@@ -1,8 +1,8 @@
 .. _howto_stream_oob-data:
 
-=================
-Exchange OOB data
-=================
+=========================
+Exchange out-of-band data
+=========================
 
 The exchange of out-of-band data transmission between Android and Anbox
 (WebRTC platform) enables Android application developers to trigger an

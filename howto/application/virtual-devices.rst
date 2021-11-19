@@ -1,8 +1,8 @@
 .. _howto_application_virtual-devices:
 
-=======================
-Create a virtual device
-=======================
+===============================
+Create a virtual Android device
+===============================
 
 Anbox Cloud allows you to stream the whole Android experience next to
 just individual applications. The following sections will show how to

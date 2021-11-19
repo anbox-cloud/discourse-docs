@@ -1,8 +1,8 @@
 .. _howto_addon_best-practices:
 
-==============
-Best practices
-==============
+=========================
+Best practices for addons
+=========================
 
 When building addons, consider the following good practices.
 

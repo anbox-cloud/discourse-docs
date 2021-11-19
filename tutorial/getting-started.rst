@@ -1,8 +1,8 @@
 .. _tutorial_getting-started:
 
-=====================
-Getting started (CLI)
-=====================
+======================================
+Getting started with Anbox Cloud (CLI)
+======================================
 
 This tutorial guides you through the first steps of managing Anbox Cloud
 from the command line. You will learn how to communicate with
@@ -21,10 +21,10 @@ tutorial for an introduction on how to use the web dashboard.
    Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you
    can continue with this tutorial. See the following documentation for
    installation instructions:
-   
+
    -  :ref:`Installing the Anbox Cloud Appliance <tutorial_installing-appliance>`
    -  :ref:`howto_install_landing`
-      
+
 
 1. Run AMC
 ==========

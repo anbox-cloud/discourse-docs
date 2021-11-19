@@ -1,8 +1,8 @@
 .. _howto_addon_apply-to-all-applications:
 
-===============
-Enable globally
-===============
+========================
+Enable an addon globally
+========================
 
 To enable an addon for an application, you must add it to the
 :ref:`application manifest <reference_application-manifest>`.

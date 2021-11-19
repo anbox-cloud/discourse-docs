@@ -1,8 +1,8 @@
 .. _howto_stream_web-client:
 
-============================
-Implement a web-based client
-============================
+======================================
+Implement a web-based streaming client
+======================================
 
 The following HTML document should give you the minimum to get started.
 Detailed explanations can be found below.

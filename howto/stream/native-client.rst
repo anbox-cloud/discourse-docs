@@ -1,8 +1,8 @@
 .. _howto_stream_native-client:
 
-=========================
-Implement a native client
-=========================
+===================================
+Implement a native streaming client
+===================================
 
 This native SDK contains a header file to include in your C or C++ based
 program and the shared library to link against.

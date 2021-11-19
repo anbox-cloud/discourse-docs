@@ -12,5 +12,5 @@ Anbox Cloud Appliance installation.
    :titlesonly:
 
    control
-   upgrade-appliance
+   Upgrade the appliance <upgrade-appliance>
    upgrade-anbox
