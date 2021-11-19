@@ -64,13 +64,13 @@ The following table gives an overview of the available kernel versions
 for the different supported clouds:
 
 ======= ============== ========================================
-CLOUD   KERNEL VERSION UBUNTU PACKAGES                         
+CLOUD   KERNEL VERSION UBUNTU PACKAGES
 ======= ============== ========================================
-AWS     >= 5.4         linux-aws, linux-modules-extra-aws      
-GCE     >= 5.4         linux-gcp, linux-modules-extra-gcp      
-Azure   >= 5.4         linux-azure, linux-modules-extra-azure  
+AWS     >= 5.4         linux-aws, linux-modules-extra-aws
+GCE     >= 5.4         linux-gcp, linux-modules-extra-gcp
+Azure   >= 5.4         linux-azure, linux-modules-extra-azure
 OCI     >= 5.4         linux-oracle, linux-modules-extra-oracle
-Private >= 5.4         linux-generic                           
+Private >= 5.4         linux-generic
 ======= ============== ========================================
 
 .. _requirements-appliance:
@@ -181,7 +181,7 @@ the following setup for a production environment:
      - 4GB
      - 50GB SSD
      - no
-     - Hosts the `Juju controller <https://discourse.juju.is/t/controllers/1111>`__\ 
+     - Hosts the `Juju controller <https://juju.is/docs/olm/controllers>`_
    * - 1
      - amd64
      - 4

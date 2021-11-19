@@ -54,25 +54,25 @@ variants:
    * - Feature
      - Anbox Cloud Appliance
      - Anbox Cloud
-   * - \ `Streaming capabilities <https://discourse.ubuntu.com/t/streaming-android-applications/17769>`__\ 
+   * - :ref:`Streaming capabilities <explanation_application-streaming>`
      - ✓
      - ✓
-   * - \ `Web dashboard <https://discourse.ubuntu.com/t/web-dashboard/20871>`__\ 
+   * - :ref:`Web dashboard <howto_manage_web-dashboard>`
      - ✓
      - ✓
-   * - \ `Android API version <https://discourse.ubuntu.com/t/provided-images/24185>`__\ 
+   * - :ref:`Android API version <reference_provided-images>`
      - 10, 11
      - 10, 11
-   * - \ `Security updates <https://ubuntu.com/support>`__\ 
+   * - `Security updates <https://ubuntu.com/support>`_
      - ✓
      - ✓
-   * - \ `Community support <https://discourse.ubuntu.com/c/anbox-cloud/>`__\ 
+   * - `Community support <https://discourse.ubuntu.com/c/anbox-cloud/>`_
      - ✓
      - ✓
-   * - \ `Vendor support <https://anbox-cloud.io/contact-us>`__\ 
+   * - `Vendor support <https://anbox-cloud.io/contact-us>`_
      - -
      - ✓
-   * - \ `Monitoring <https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338>`__\ 
+   * - :ref:`Monitoring <howto_monitor_landing>`
      - -
      - ✓
 
@@ -84,7 +84,7 @@ deployments, whereas the regular Anbox Cloud is best to scale big.
 .. tip::
    We recommend to always start with
    the Anbox Cloud Appliance for first tests. You can then expand to a full
-   Anbox Cloud installation later. 
+   Anbox Cloud installation later.
 
 Components
 ==========

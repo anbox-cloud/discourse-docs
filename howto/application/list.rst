@@ -27,19 +27,19 @@ following attributes are valid keys:
 
    * - Name
      - Value
-   * - \ ``instance-type``\ 
-     - Supported instance type. See `Instance types <https://discourse.ubuntu.com/t/instance-types-reference/17764>`__ for a list of available instance types.
-   * - \ ``addons``\ 
+   * - \ ``instance-type``\
+     - Supported instance type. See :ref:`reference_instance-types` for a list of available instance types.
+   * - \ ``addons``\
      - Comma-separated list of addons.
-   * - \ ``tag``\ 
+   * - \ ``tag``\
      - Application tag name (deprecated, use ``tags`` instead).
-   * - \ ``tags``\ 
+   * - \ ``tags``\
      - Comma-separated list of tags.
-   * - \ ``published``\ 
+   * - \ ``published``\
      - “true” or “false” indicating whether the application is published.
-   * - \ ``immutable``\ 
+   * - \ ``immutable``\
      - “true” or “false” indicating whether the application is changeable.
-   * - \ ``status``\ 
+   * - \ ``status``\
      - Application status, possible values: “error”, “unknown”, “initializing”, “ready”, “deleted”
 
 

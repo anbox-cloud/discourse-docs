@@ -16,7 +16,7 @@ AMS or on a remote machine.
 
 Since AMS exposes an HTTP interface, any tool can use the :ref:`reference_ams-http-api` to
 interact with AMS. Both the AMC (when running remotely) and the :ref:`Anbox Application Registry (AAR) <explanation_aar>` use
-this mechanism. You can also develop your own client by using the `AMS SDK <https://discourse.ubuntu.com/t/ams-sdk-api-reference/17845>`_.
+this mechanism. You can also develop your own client by using the :ref:`reference_sdks-ams-sdk`.
 
 .. _explanation_ams-security-certificates:
 

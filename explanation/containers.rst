@@ -56,7 +56,7 @@ All containers in Anbox Cloud are ephemeral, which means that as soon as
 a container is stopped, all of its data is gone. Anbox Cloud **DOES
 NOT** back up any data from the Android or the outer Ubuntu container.
 Backup and restore of data must be implemented separately through
-:ref:`addons <reference_addons>`. See `Example: Back up data <https://discourse.ubuntu.com/t/example-back-up-data/25289>`_ for
+:ref:`addons <reference_addons>`. See :ref:`howto_addon_backup-and-restore` for
 information on how to do this.
 
 Container life cycle
