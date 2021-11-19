@@ -1,0 +1,36 @@
+.. _release-notes-1.5.0:
+
+================
+1.5 (April 2020)
+================
+
+.. _new-features-improvements-29:
+
+New features & improvements
+---------------------------
+
+-  Support for Android 10 including latest security updates
+-  Updated software rendering to work on Android 10
+-  Applications can now have encoder requirements (e.g. whether or not
+   they require a GPU or are fine on a CPU encoder) and are scheduled
+   accordingly
+-  Use `Dqlite <https://dqlite.io/>`_ in the Stream Gateway for High
+   Availability
+-  HTTP/HTTPS proxy support in AMS
+-  Highly Availability support for Anbox Stream Gateway via
+   `Dqlite <https://dqlite.io/>`_
+-  Charms now properly work with DNS names when adding machines
+-  Updated Android webview to
+   `80.0.3987.132 <https://chromereleases.googleblog.com/2020/03/stable-channel-update-for-desktop.html>`_
+-  Preliminary support for Ubuntu 20.04
+-  Software rendering and video encoding support for the streaming stack
+-  GPUs are now identified by their PCI address in order for a correct
+   mapping inside containers
+
+.. _deprecations-1:
+
+Deprecations
+------------
+
+-  Android 7 images are now deprecated and will be dropped with the next
+   release of Anbox Cloud

@@ -1,0 +1,14 @@
+.. _release-notes-1.6.1:
+
+=================
+1.6.1 (June 2020)
+=================
+
+.. _bug-fixes-22:
+
+Bug fixes
+---------
+
+-  LP #1885257: Fix high CPU usage for Anbox daemon
+-  LP #1885972: Fix watchdog, services and video encoder settings out of
+   sync when updating an application

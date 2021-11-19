@@ -1,0 +1,30 @@
+.. _release-notes-1.7.2:
+
+======================
+1.7.2 (September 2020)
+======================
+
+.. _new-features-improvements-22:
+
+New features & improvements
+---------------------------
+
+-  Various improvements for HA support in the Anbox Stream Gateway and
+   its `dqlite <https://dqlite.io/>`_ integration
+-  The Anbox Stream Gateway now exposes a ``/1.0/status`` endpoint to
+   allow simple health checks
+-  The number of registered stream agents is now exported via the
+   prometheus endpoint of the Anbox Stream Gateway
+-  The LXD charm can now use Juju storage (AWS EBS, ..) at deployment
+   time as base for the LXD storage pool
+-  Coturn can now be manually configured via the Anbox Stream Agent
+   charm configuration
+
+.. _bug-fixes-18:
+
+Bug fixes
+---------
+
+-  Various fixes around interoperability of the various charms in an
+   Anbox Cloud deployment
+-  Updated and verified NRPE checks for all service components

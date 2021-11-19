@@ -1,0 +1,28 @@
+.. _release-notes-1.11.3:
+
+========================
+1.11.3 (October 18 2021)
+========================
+
+.. _new-features-improvements-2:
+
+New features & improvements
+---------------------------
+
+-  Android security updates for October 2021 (see `Android Security Bulletin - October 2021 <https://source.android.com/security/bulletin/2021-10-01>`_ for
+   more information)
+-  Android WebView has been updated to
+   `94.0.4606.80 <https://chromereleases.googleblog.com/2021/10/chrome-for-android-update.html>`_
+-  The shared memory transport used for the ``null`` platform is now
+   disabled by default for increased stability
+-  ANGLE libraries used for ``null`` platform are updated to increase
+   stability and cause Anbox to not crash in certain situations
+
+.. _bugs-1:
+
+Bugs
+----
+
+-  AC-321 Deploying multiple AMS units at the same time causes problems
+-  AC-343 ANDROID_EMU\_\* extensions are visible for Android applications
+-  AC-384 Fix steam view in the dashboard

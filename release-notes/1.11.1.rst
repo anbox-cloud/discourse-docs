@@ -1,0 +1,28 @@
+.. _release-notes-1.11.1:
+
+=======================
+1.11.1 (August 17 2021)
+=======================
+
+.. _new-features-improvements-4:
+
+New features & improvements
+---------------------------
+
+-  Android security updates for August 2021 (see `Android Security Bulletin - August 2021 <https://source.android.com/security/bulletin/2021-08-01>`_ for
+   more information)
+
+.. _bugs-3:
+
+Bugs
+----
+
+-  LP #1939277 lxc-attach fails on sendfile with EINVAL on 5.11
+-  LP #1938877 Native crash occurred when creating an application from
+   Android 11 after finishing application bootstrap
+-  LP #1939274 Anbox crashes after “Failed to put memory protection in
+   place”
+-  LP #1939666 Bootstrap fails because of missing /dev/fd0
+-  LP #1939129 The anbox-stream-sdk.js file is missing from Android
+   webview based projects
+-  LP #1938901 Appliance upgrade fails with Juju 2.9.x

@@ -1,0 +1,13 @@
+.. _release-notes-1.6.3:
+
+=================
+1.6.3 (July 2020)
+=================
+
+.. _bug-fixes-21:
+
+Bug fixes
+---------
+
+-  LP #1885726: Fix the mouse and touch displacement issue for Anbox
+   Stream Gateway UI

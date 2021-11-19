@@ -1,0 +1,23 @@
+.. _release-notes-1.11.4:
+
+========================
+1.11.4 (November 1 2021)
+========================
+
+.. _new-features-improvements-1:
+
+New features & improvements
+---------------------------
+
+None.
+
+Bugs
+----
+
+A bug in the Anbox runtime caused random webview-based applications to
+crash when upgrading the webview.apk to
+`94.0.4606.80 <https://chromereleases.googleblog.com/2021/10/chrome-for-android-update.html>`_.
+For this reason, we downgraded the webview version to
+`93.0.4577.82 <https://chromereleases.googleblog.com/2021/09/chrome-for-android-update.html>`_
+for stability, and we are planning to provide a fix in the Anbox Cloud
+1.12 release.

@@ -1,0 +1,33 @@
+.. _release-notes-1.9.2:
+
+=====================
+1.9.2 (March 17 2021)
+=====================
+
+.. _new-features-improvements-13:
+
+New features & improvements
+---------------------------
+
+-  Stability and reliability improvements in AMS and the Juju charms for
+   auto scaling of the LXD cluster. See the
+   `documentation <https://anbox-cloud.io/docs/lxd-auto-scaling>`_ for
+   recommendations and guidelines on how to implement auto scaling.
+
+.. _bug-fixes-9:
+
+Bug fixes
+---------
+
+-  LP #1910676 AMS leaks fds
+-  LP #1917862 AMS charm tries to add/remove node when AMS service is
+   not available
+-  LP #1917867 LXD charm doesn’t respect configured channel
+-  LP #1917869 AMS fails to get started due to error
+   ``tls: private key does not match public key`` when multiple AMS
+   units are deployed
+-  LP #1918089 Failed to remove lxd node from cluster
+-  LP #1918431 Container logs are missing in a HA AMS
+-  LP #1918675 Image synchronization is not triggered in AMS when
+   relevant config items change
+-  LP #1918676 Image server configuration can be stale in HA AMS

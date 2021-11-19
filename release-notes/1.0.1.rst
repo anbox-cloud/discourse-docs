@@ -1,0 +1,14 @@
+.. _release-notes-1.0.1:
+
+=====================
+1.0.1 (December 2018)
+=====================
+
+.. _bug-fixes-27:
+
+Bug fixes
+---------
+
+-  Applications are not freezing anymore when using OpenGL ES >= 2.x
+   extensively
+-  AArch32 support is now properly detected on AArch64 only machines

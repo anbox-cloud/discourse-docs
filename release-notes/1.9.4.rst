@@ -1,0 +1,25 @@
+.. _release-notes-1.9.4:
+
+==================
+1.9.4 (May 3 2021)
+==================
+
+.. _new-features-improvements-11:
+
+New features & improvements
+---------------------------
+
+The 1.9.4 release adapts the AMS service to work with LXD newer than
+4.0.5. LXD recently changed which certificate is being used on the API
+endpoint when running clustered. With newer LXD versions AMS fails to
+setup the initial LXD node within a cluster. For subsequently added
+nodes the problem does not exist. With the 1.9.4 release AMS now
+correctly uses the new certificate used by LXD and allows the initial
+LXD cluster bootstrap to succeed.
+
+.. _bug-fixes-7:
+
+Bug fixes
+---------
+
+No bugs were fixed in this release.

@@ -1,0 +1,28 @@
+.. _release-notes-1.7.1:
+
+===================
+1.7.1 (August 2020)
+===================
+
+.. _new-features-improvements-23:
+
+New features & improvements
+---------------------------
+
+-  Switched to
+   `LLVMpipe <https://docs.mesa3d.org/gallium/drivers/llvmpipe.html>`_
+   based software rendering in favor of
+   `swiftshader <https://swiftshader.googlesource.com/SwiftShader/>`_
+   to mitigate memory corruption during rendering in the `Android WebView <https://developer.android.com/reference/android/webkit/WebView>`_
+   on both ARM and x86
+
+.. _bug-fixes-19:
+
+Bug fixes
+---------
+
+-  LP #1892149: ``anbox-shell pm install`` fails in the prepare hook of
+   an addon when bootstrapping an application
+-  LP #1889747: Coturn should not run as root
+-  LP #1891746: Some ARM applications crash because of failing
+   cacheflush syscall

@@ -1,0 +1,30 @@
+.. _release-notes-1.8.3:
+
+====================
+1.8.3 (January 2021)
+====================
+
+.. _new-features-improvements-16:
+
+New features & improvements
+---------------------------
+
+-  Android security fixes from January 2021 (patch level ``2021-01-05``,
+   see
+   `here <https://source.android.com/security/bulletin/2021-01-01>`__
+   for more details)
+-  Webview update to upstream release ``87.0.4280.141`` (see
+   `here <https://chromereleases.googleblog.com/2021/01/chrome-for-android-update.html>`__
+   for more details)
+-  Various improvements to the coturn charm to allow proper use behind
+   `AWS Elastic Load Balancers <https://aws.amazon.com/elasticloadbalancing/>`_
+
+.. _bug-fixes-12:
+
+Bug fixes
+---------
+
+-  LP #1910583 Anbox-stream-gateway gets stuck and demands restart after
+   some time of use
+-  LP #1912342 Gateway reports database locked errors for various
+   operations

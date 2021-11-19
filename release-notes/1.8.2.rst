@@ -1,0 +1,30 @@
+.. _release-notes-1.8.2:
+
+=====================
+1.8.2 (December 2020)
+=====================
+
+.. _new-features-improvements-17:
+
+New features & improvements
+---------------------------
+
+-  Android security fixes from December 2020 (patch level
+   ``2020-12-05``, see
+   `here <https://source.android.com/security/bulletin/2020-12-01>`__
+   for more details)
+-  Webview update to upstream release ``87.0.4280.86`` (see
+   `here <https://chromereleases.googleblog.com/2020/12/chrome-for-android-update.html>`__
+   for more details)
+
+.. _bug-fixes-13:
+
+Bug fixes
+---------
+
+-  LP #1907464 NvEnc fails to encode when stream is in portrait mode
+   (720x1280)
+-  LP #1904078 Garbled image/video generated when taking a
+   picture/recording a video when screen orientation is in portrait mode
+-  LP #1904417 [REGRESSION] adb screenrecord output has incorrect
+   orientation

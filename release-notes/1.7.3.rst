@@ -1,0 +1,25 @@
+.. _release-notes-1.7.3:
+
+======================
+1.7.3 (September 2020)
+======================
+
+.. _new-features-improvements-21:
+
+New features & improvements
+---------------------------
+
+-  Android security fixes from September 2020 (patch level
+   ``2020-09-05``, see
+   `here <https://source.android.com/security/bulletin/2020-09-01>`__
+   for more details)
+-  Webview update to upstream release ``85.0.4183.101`` (see
+   `here <https://chromereleases.googleblog.com/2020/09/chrome-for-android-update.html>`__
+   for more details)
+
+.. _bug-fixes-17:
+
+Bug fixes
+---------
+
+None
