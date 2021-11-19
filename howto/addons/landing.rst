@@ -30,11 +30,11 @@ to update your addons to use the new hooks.
 .. toctree::
    :titlesonly:
 
-   Enable globally <apply-to-all-applications>
+   Enable globally <enable-globally>
    update
-   Migrate from previous versions <migrate-from-old-addons>
-   install-tools-in-container
+   Migrate from previous versions <migrate>
+   install-tools
    backup-and-restore
-   customize-android
-   additional-architecture
+   customise-android
+   emulate-platforms
    Best practices <best-practices>
