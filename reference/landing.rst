@@ -20,3 +20,4 @@ Placeholder
    application-manifest
    addons
    perf-benchmarks
+   LXD documentation <https://linuxcontainers.org/lxd/docs/master/>

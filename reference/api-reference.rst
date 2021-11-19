@@ -17,3 +17,5 @@ more detailed description of the SDKs that Anbox Cloud provides.
 
    ams-http-api
    anbox-http-api
+   Stream Gateway API <https://anbox-cloud.github.io/1.10/anbox-stream-gateway/index.html>
+   Anbox Platform SDK API <https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html>
