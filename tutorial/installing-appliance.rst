@@ -14,7 +14,7 @@ small scale deployments.
    :ref:`Variants <explanation_anbox-cloud-variants>`).
    This section focuses on the **Anbox Cloud Appliance**. For instructions
    on how to install **Anbox Cloud**, see :ref:`howto_install_landing`.
-   
+
 
 This tutorial guides you through the steps that are required to install
 and initialise the Anbox Cloud Appliance, either from the `AWS Marketplace <https://aws.amazon.com/marketplace/>`_ or from the
@@ -148,10 +148,10 @@ and log in.
 On the EC2 dashboard, click **Launch Instance** to start the Launch
 Instance Wizard.
 
-.. figure:: upload://aTIoezIMs9zzlQksuXn6EJKcsz.png
-   :alt: Start the Launch Instance Wizard|690x451
+.. figure:: /images/install_appliance_launch-wizard.png
+   :alt: Start the Launch Instance Wizard
 
-   Start the Launch Instance Wizard|690x451
+   Start the Launch Instance Wizard
 
 .. note::
    You should go through all steps
@@ -168,10 +168,10 @@ search field.
 
 Choose either the Arm variant or the x86 variant and click **Select**.
 
-.. figure:: upload://v3EsHkiOyBBztNHtzWvMnHD8W3U.png
-   :alt: Select the Amazon Machine Image (AMI)|690x451
+.. figure:: /images/install_appliance_select-ami.png
+   :alt: Select the Amazon Machine Image (AMI)
 
-   Select the Amazon Machine Image (AMI)|690x451
+   Select the Amazon Machine Image (AMI)
 
 You will be presented with the pricing information. Click **Continue**
 to confirm.
@@ -189,10 +189,10 @@ is sufficient. See the
 :ref:`Requirements <requirements-appliance>`
 for the minimum hardware requirements.
 
-.. figure:: upload://sGAxIzuf8vw3CsHlv8s3CsdNCFw.png
-   :alt: Choose an instance type|690x451
+.. figure:: /images/install_appliance_instance-type.png
+   :alt: Choose an instance type
 
-   Choose an instance type|690x451
+   Choose an instance type
 
 In this example, we picked *g4dn.2xlarge*, which provides 8 vCPUs, 32 GB
 of memory and a single NVIDIA Tesla T4 GPU.
@@ -206,10 +206,10 @@ You do not need to customise any of the settings in the instance
 details, but you can fine-tune things. For example, you might want to
 put the instance onto a different VPC or subnet.
 
-.. figure:: upload://xdZ9Evmd8luWHV2FRLo0MiA4Ldh.png
-   :alt: Configure the instance details|690x451
+.. figure:: /images/install_appliance_configure-instance.png
+   :alt: Configure the instance details
 
-   Configure the instance details|690x451
+   Configure the instance details
 
 Click **Next: Add Storage** to continue.
 
@@ -226,10 +226,10 @@ volume is added, the Anbox Cloud Appliance automatically creates an
 image on the root disk, which is used to store any data. However, this
 is not recommended.
 
-.. figure:: upload://q1ZMOzkRWUZo6OVhwRXDtI8AZz3.png
-   :alt: Add storage|690x451
+.. figure:: /images/install_appliance_add-storage.png
+   :alt: Add storage
 
-   Add storage|690x451
+   Add storage
 
 In this example, we use three storage volumes:
 
@@ -253,10 +253,10 @@ required configuration, so you don’t need to do any changes. For
 reference, all required ports are documented
 :ref:`here <requirements>`.
 
-.. figure:: upload://kEb4lKrneccaRgP6lW2PNg88oco.png
-   :alt: Configure the security group|690x451
+.. figure:: /images/install_appliance_security-group.png
+   :alt: Configure the security group
 
-   Configure the security group|690x451
+   Configure the security group
 
 Click **Review and Launch** to continue.
 
@@ -270,18 +270,18 @@ You are prompted to select a key pair. You can choose an existing key
 pair or create one if you don’t have one yet. Make sure to save the
 private key in a secure location.
 
-.. figure:: upload://q7cWUi9lcViENauUFV6iYkj86hK.png
-   :alt: Confirm to launch instances|690x451
+.. figure:: /images/install_appliance_launch-instances.png
+   :alt: Confirm to launch instances
 
-   Confirm to launch instances|690x451
+   Confirm to launch instances
 
 Click **Launch Instances** to continue. AWS will verify your
 configuration, subscribe you to the product and launch the instance.
 
-.. figure:: upload://lDWrlb2AvahEdJellyKxDdEYW4f.png
-   :alt: Launch status|690x451
+.. figure:: /images/install_appliance_launch-status.png
+   :alt: Launch status
 
-   Launch status|690x451
+   Launch status
 
 When the instance is successfully launched, you can find its public IP
 address in the instance details page. Use this IP address or the
@@ -364,10 +364,10 @@ process.
    warning in your browser. Use the mechanism provided by your browser to
    proceed to the web page.
 
-.. figure:: upload://yIGZThPljsjPyRAVQVFkZOiVVNF.png
-   :alt: Appliance welcome screen|690x343, 100%
+.. figure:: /images/install_appliance_welcome-screen.png
+   :alt: Appliance welcome screen
 
-   Appliance welcome screen|690x343, 100%
+   Appliance welcome screen
 
 The following instructions guide you through all relevant steps to
 initialise the Anbox Cloud Appliance.
@@ -452,10 +452,10 @@ After the command has returned, the initialisation process will run
 fully automatically in the background. You can watch the status web page
 at ``https://your-machine-address`` for progress information.
 
-.. figure:: upload://5Eti9Lj0Q4VpYmpEvVMzK4fjkxH.png
-   :alt: Anbox Cloud deployment|690x442
+.. figure:: /images/install_appliance_deployment.png
+   :alt: Anbox Cloud deployment
 
-   Anbox Cloud deployment|690x442
+   Anbox Cloud deployment
 
 Alternatively, use the ``anbox-cloud-appliance status`` command to
 monitor the progress information on the command line.
@@ -477,10 +477,10 @@ welcome page on ``https://your-machine-address`` with instructions on
 how to register a user account with your installation. This registration
 is needed to access the :ref:`web dashboard <howto_manage_web-dashboard>`.
 
-.. figure:: upload://l4EPbQr1NcsD78r3K03F3ISjiL2.png
-   :alt: Instructions for registering Ubuntu SSO account|690x442
+.. figure:: /images/install_appliance_register-sso.png
+   :alt: Instructions for registering Ubuntu SSO account
 
-   Instructions for registering Ubuntu SSO account|690x442
+   Instructions for registering Ubuntu SSO account
 
 1. Register your Ubuntu SSO account
 -----------------------------------

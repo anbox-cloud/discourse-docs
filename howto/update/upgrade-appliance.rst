@@ -41,10 +41,10 @@ the ``upgrade`` command:
 The appliance will perform now all necessary steps to upgrade to the
 newer available version. You can watch for progress on the web interface
 
-.. figure:: upload://2mEtGPT2aVrhLvhDW7h9whoEiAT.png
-   :alt: appliance-upgrade|690x435
+.. figure:: /images/upgrade_appliance_deploy.png
+   :alt: Upgrade the appliance
 
-   appliance-upgrade|690x435
+   Upgrade the appliance
 
 or with the ``anbox-cloud-appliance status`` command you used above:
 

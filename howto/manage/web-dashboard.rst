@@ -17,10 +17,10 @@ Starting in 1.9.0, the dashboard replaces the old Dev UI.
    available APIs and SDKs, and can be a good example to build your own
    web-based platform.
 
-.. figure:: upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png
-   :alt: Screenshot 2021-02-10 at 14.33.52|690x322
+.. figure:: /images/web_dashboard_ui.png
+   :alt: The web dashboard
 
-   Screenshot 2021-02-10 at 14.33.52|690x322
+   The web dashboard
 
 Installation
 ============
@@ -106,10 +106,10 @@ would do with :ref:`amc (see Create an application <howto_application_create>`).
 Note that more advanced scenarios might not yet be possible via the
 dashboard and require going through ``amc``.
 
-.. figure:: upload://9fPqr5DXciTsKy8bw90FzBxguZH.png
-   :alt: image|690x438
+.. figure:: /images/web_dashboard_add_application.png
+   :alt: Create an application
 
-   image|690x438
+   Create an application
 
 Streaming applications
 ----------------------
@@ -124,9 +124,9 @@ WebRTC.
 You can select any application you previously created and start a
 streaming session.
 
-.. figure:: upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png
-   :alt: image|690x352
+.. figure:: /images/web_dashboard_start_streaming.png
+   :alt: Start streaming
 
-   image|690x352
+   Start streaming
 
 For more information about the Streaming Stack, visit :ref:`explanation_application-streaming`.

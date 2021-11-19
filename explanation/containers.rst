@@ -74,10 +74,10 @@ executes the following steps in order:
 5. Launch the Android container.
 6. Execute the ``post-start`` hook provided by the installed addons.
 
-.. figure:: upload://bp1BNo5CKGjLmesP5TXj59faclr.png
-   :alt: Container start|566x528
+.. figure:: /images/container_start.svg
+   :alt: Container start
 
-   Container start|566x528
+   Container start
 
 The whole launch process is successful only if all of the above steps
 succeed.
@@ -93,10 +93,10 @@ error occurred, it executes the following steps in order:
 2. Execute the ``post-stop`` hook provided by the installed addons.
 3. Shut down the container.
 
-.. figure:: upload://tqRdCg34qOVjmlJOZwiXqijXeov.png
-   :alt: Container stop|551x385
+.. figure:: /images/container_stop.svg
+   :alt: Container stop
 
-   Container stop|551x385
+   Container stop
 
 Possible container status
 -------------------------
@@ -110,19 +110,19 @@ depending on the state it’s currently in.
 
    * - Status
      - Description
-   * - \ ``created``\ 
+   * - \ ``created``\
      - AMS has created an internal database object for the container and will schedule the container onto a suitable LXD node next.
-   * - \ ``prepared``\ 
+   * - \ ``prepared``\
      - AMS has decided on which LXD node the container will be placed.
-   * - \ ``started``\ 
+   * - \ ``started``\
      - The container was started and is now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the container will switch to ``running``.
-   * - \ ``running``\ 
+   * - \ ``running``\
      - The container is fully up and running.
-   * - \ ``stopped``\ 
+   * - \ ``stopped``\
      - The container is fully stopped and will be deleted by AMS.
-   * - \ ``deleted``\ 
+   * - \ ``deleted``\
      - The container is deleted and will be removed from the AMS database soon.
-   * - \ ``error``\ 
+   * - \ ``error``\
      - An error occurred while processing the container. The container is stopped. Further information about the error can be viewed with ``amc show <container id>``.
 
 

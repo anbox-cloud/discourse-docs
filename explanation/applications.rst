@@ -77,10 +77,10 @@ order:
 9. Execute the ``post-start`` hook provided by each addon listed in the
    application manifest.
 
-.. figure:: upload://bZZCt9U0YVBYD4le9S9TInMSvE9.png
-   :alt: Application bootstrap process|571x653
+.. figure:: /images/application-bootstrap.svg
+   :alt: Application bootstrap process
 
-   Application bootstrap process|571x653
+   Application bootstrap process
 
 If one of the steps fails, AMS will interrupt the bootstrap process and
 make the entire process fail. As a result, the status of the base

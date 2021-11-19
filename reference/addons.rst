@@ -136,10 +136,10 @@ file as long as its name is one of the following:
 The following figure shows when the different hooks are executed in the
 life cycle of a container (base container or regular container).
 
-.. figure:: upload://hfTnyF3zn5Ok3e9WtVBXC7eq5MC.png
-   :alt: Hooks execution in the life cycle of a container|471x601
+.. figure:: /images/addons-reference-hook-order.svg
+   :alt: Hooks execution in the life cycle of a container
 
-   Hooks execution in the life cycle of a container|471x601
+   Hooks execution in the life cycle of a container
 
 Hook timeouts
 -------------

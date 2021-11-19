@@ -19,10 +19,10 @@ report their metrics to that same Telegraf instance.
 Grafana takes its data by considering the Telegraf instances as metrics
 targets and polls for new content
 
-.. figure:: upload://36fg3QjJ4FUy6RWm79aa45pl63q.png
-   :alt: metrics|606x399
+.. figure:: /images/grafana.png
+   :alt: Grafana
 
-   metrics|606x399
+   Grafana
 
 Access Grafana
 ==============

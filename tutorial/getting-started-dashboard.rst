@@ -19,11 +19,11 @@ tutorial.
    Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you
    can continue with this tutorial. See the following documentation for
    installation instructions:
-   
+
    -  :ref:`Installing the Anbox Cloud Appliance <tutorial_installing-appliance>`
    -  :ref:`howto_install_landing`
       (note that you must install the streaming stack for the web dashboard
-      to be available) 
+      to be available)
 
 .. _tutorial_getting-started-dashboard-virtual-device:
 
@@ -58,7 +58,10 @@ Complete the following steps to create a virtual device:
 6. Do not upload an APK file.
 7. Click **Add Application**.
 
-   |Add a virtual device|690x312|
+   .. figure:: /images/gs_dashboard_add_virtual_device.png
+      :alt: Add a virtual device
+
+      Add a virtual device
 8. Wait until the application status changes to ``ready``.
 
 2. Launch and test the virtual device
@@ -71,10 +74,16 @@ device:
 1. In the list of applications, click the play button (labelled **New
    session**) for the application to start a new session.
 
-   |Start a new session|690x222|
+   .. figure:: /images/gs_dashboard_new_session.png
+      :alt: Start a new session
+
+      Start a new session
 2. Accept the default settings and click **New Session**.
 
-   |Start with default settings|690x322|
+   .. figure:: /images/gs_dashboard_start_session.png
+      :alt: Start with default settings
+
+      Start with default settings
 3. When the stream has loaded, you can interact with your virtual
    device.
 
@@ -97,10 +106,10 @@ video encoding, select an instance type with GPU support like ``g2.3``.
 For other instance types, the container will use a GPU if available or
 software encoding otherwise.
 
-.. figure:: upload://3Q3izbrav4LBEcxEx9ahhmRyy0l.png
-   :alt: Add an application|690x316
+.. figure:: /images/gs_dashboard_add_application.png
+   :alt: Add an application
 
-   Add an application|690x316
+   Add an application
 
 You can launch and test the application in the same way as you did for
 the virtual device.
@@ -117,7 +126,10 @@ Complete the following steps to add a new version to your application:
 2. Click the **Edit application** button next to the application for
    which you want to add a new version.
 
-   |Update an application|690x227|
+   .. figure:: /images/gs_dashboard_edit_application.png
+      :alt: Update an application
+
+      Update an application
 3. Upload a new APK, or do other changes to the configuration.
 4. Click **Update application**.
 
@@ -132,8 +144,3 @@ to learn how to use Anbox Cloud from the command line.
 
 Also see the documentation about :ref:`how to manage applications <howto_application_landing>`
 and :ref:`how to work with containers <howto_container_landing>`.
-
-.. |Add a virtual device|690x312| image:: upload://oXj59uQULQySK2fPjlKCAdIPl3K.png
-.. |Start a new session|690x222| image:: upload://erAnVEmlucBTrnc6GHFsSjkriuN.png
-.. |Start with default settings|690x322| image:: upload://7mRukJHoTPoQ04Mrvj1FuXC5Tcc.png
-.. |Update an application|690x227| image:: upload://qAXQo0sDFYQupEEHoZ70UqDu1Xh.png

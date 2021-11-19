@@ -96,7 +96,7 @@ stream it through the UI of the Anbox Stream Gateway (see :ref:`Getting started 
 for more details) or your own custom client application built with the
 :ref:`Anbox Streaming SDK <reference_sdks-streaming-sdk>`.
 
-.. figure:: upload://aX9HNy8aMxJxSdZHJvtf4PHa3hH.png
-   :alt: anbox-vdev|690x662,100%
+.. figure:: /images/virtual_device_launch.png
+   :alt: Launch a virtual device
 
-   anbox-vdev|690x662,100%
+   Launch a virtual device

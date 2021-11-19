@@ -102,10 +102,10 @@ existing infrastructure and service implementations.
 The following figure gives an overview of the different components and
 their responsibility within the core stack of Anbox Cloud.
 
-.. figure:: upload://x0budFKybsbYLhiplNhF4R91Ght.png
-   :alt: anbox-core-overview|690x398
+.. figure:: /images/anbox-core-overview.svg
+   :alt: Anbox Cloud core stack
 
-   anbox-core-overview|690x398
+   Anbox Cloud core stack
 
 At the heart of Anbox Cloud sits the :ref:`Anbox Management Service (AMS) <explanation_ams>`. **AMS** has
 the job to handle all aspects of the application and container life
@@ -142,10 +142,10 @@ machines and stream their visual output to clients via
 The following figure shows an overview of how the different components
 work together to enable this.
 
-.. figure:: upload://qXJleBmvwQFi2cc1HuPF7P5S15b.png
-   :alt: streaming-stack-overview|690x440
+.. figure:: /images/anbox_cloud_streaming_stack.svg
+   :alt: Streaming stack overview
 
-   streaming-stack-overview|690x440
+   Streaming stack overview
 
 The main components powering the streaming stack in Anbox Cloud are:
 

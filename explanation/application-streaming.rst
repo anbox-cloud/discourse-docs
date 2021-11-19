@@ -35,10 +35,10 @@ about how it works. Each component of the stack fills a specific role:
 You can see how each component interact when creating a new streaming
 session
 
-.. figure:: upload://wsIbNMDA3PLkdS54W5GIlUNfkWk.png
-   :alt: streaming-stack-sequence|2400x1350
+.. figure:: /images/streaming-stack-sequence.png
+   :alt: Streaming stack sequence
 
-   streaming-stack-sequence|2400x1350
+   Streaming stack sequence
 
 Streaming an Application
 ========================

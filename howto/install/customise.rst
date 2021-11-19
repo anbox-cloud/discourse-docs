@@ -338,9 +338,9 @@ representation of the current model will be shown. To export the model
 as a YAML bundle, click on the **Export** button near the top left of
 the screen.
 
-.. figure:: upload://bXqb0LwD7EBZDwL18CsZSBZqL5r.png
-   :alt: Anbox Cloud - Juju GUI|690x444
+.. figure:: /images/anbox-cloud-juju-gui.png
+   :alt: Anbox Cloud - Juju GUI
 
-   Anbox Cloud - Juju GUI|690x444
+   Anbox Cloud - Juju GUI
 
 For more information on the Juju GUI, see the `Juju documentation <https://juju.is/docs/olm/accessing-the-dashboard>`__.
