@@ -1,4 +1,4 @@
-.. _tutorial_getting-started-dashboard:
+.. _tut_getting-started-dashboard:
 
 ================================================
 Getting started with Anbox Cloud (web dashboard)
@@ -11,7 +11,7 @@ application using the :ref:`web dashboard <howto_manage_web-dashboard>`.
 The web dashboard provides an easy-to use interface to Anbox Cloud.
 However, it currently supports a limited set of functionality, which
 means that it might not be sufficient for all use cases. If you want to
-learn how to manage Anbox Cloud from the command line, see the :ref:`Getting started with Anbox Cloud (CLI) <tutorial_getting-started>`
+learn how to manage Anbox Cloud from the command line, see the :ref:`Getting started with Anbox Cloud (CLI) <tut_getting-started>`
 tutorial.
 
 .. important::
@@ -20,12 +20,12 @@ tutorial.
    can continue with this tutorial. See the following documentation for
    installation instructions:
 
-   -  :ref:`Installing the Anbox Cloud Appliance <tutorial_installing-appliance>`
+   -  :ref:`Installing the Anbox Cloud Appliance <tut_installing-appliance>`
    -  :ref:`howto_install_landing`
       (note that you must install the streaming stack for the web dashboard
       to be available)
 
-.. _tutorial_getting-started-dashboard-virtual-device:
+.. _tut_getting-started-dashboard-virtual-device:
 
 1. Create a virtual device
 ==========================
@@ -91,15 +91,15 @@ device:
 ====================================
 
 To create an application for a specific Android app, follow the steps in
-:ref:`1. Create a virtual device <tutorial_getting-started-dashboard-virtual-device>`, but upload the APK of
+:ref:`1. Create a virtual device <tut_getting-started-dashboard-virtual-device>`, but upload the APK of
 the Android app.
 
 .. important::
    Not all Android apps are
-   compatible with Anbox Cloud. See :ref:`Issues when porting Android apps <explanation_porting-issues>`
+   compatible with Anbox Cloud. See :ref:`Issues when porting Android apps <exp_porting-issues>`
    for more information.
 
-Choose an :ref:`instance type <reference_instance-types>`
+Choose an :ref:`instance type <ref_instance-types>`
 that is suitable for your application. If your instance is equipped with
 a GPU and your application requires the use of the GPU for rendering and
 video encoding, select an instance type with GPU support like ``g2.3``.
@@ -139,7 +139,7 @@ Done!
 You now know how to use the web dashboard to create, launch and test
 applications in Anbox Cloud.
 
-If you are interested in more advanced use cases, check out the :ref:`Getting started with Anbox Cloud (CLI) <tutorial_getting-started>` tutorial
+If you are interested in more advanced use cases, check out the :ref:`Getting started with Anbox Cloud (CLI) <tut_getting-started>` tutorial
 to learn how to use Anbox Cloud from the command line.
 
 Also see the documentation about :ref:`how to manage applications <howto_application_landing>`

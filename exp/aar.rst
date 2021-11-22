@@ -1,4 +1,4 @@
-.. _explanation_aar:
+.. _exp_aar:
 
 ================================
 Anbox Application Registry (AAR)

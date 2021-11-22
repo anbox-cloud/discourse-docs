@@ -1,4 +1,4 @@
-.. _reference_landing:
+.. _ref_landing:
 
 =========
 Reference

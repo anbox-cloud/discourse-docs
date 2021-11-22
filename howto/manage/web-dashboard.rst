@@ -26,7 +26,7 @@ Installation
 ============
 
 The dashboard comes pre-installed when you deploy :ref:`Anbox Cloud with the streaming stack <howto_install_deploy-juju>` or
-the :ref:`Anbox Cloud Appliance <tutorial_installing-appliance>`.
+the :ref:`Anbox Cloud Appliance <tut_installing-appliance>`.
 It sits behind a reverse proxy for performance and security reasons.
 
 Usage
@@ -82,7 +82,7 @@ You will see output similar to the following:
 Register a Ubuntu One account in Anbox Cloud Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you followed the instructions in :ref:`tutorial_installing-appliance` to
+If you followed the instructions in :ref:`tut_installing-appliance` to
 install the Anbox Cloud Appliance, you already registered your Ubuntu
 One account.
 
@@ -118,7 +118,7 @@ The dashboard comes with in-browser streaming capabilities through
 WebRTC.
 
 .. note::
-   The dashboard uses the :ref:`Streaming SDK <reference_sdks-streaming-sdk>`
+   The dashboard uses the :ref:`Streaming SDK <ref_sdks-streaming-sdk>`
    under the hood.
 
 You can select any application you previously created and start a
@@ -129,4 +129,4 @@ streaming session.
 
    Start streaming
 
-For more information about the Streaming Stack, visit :ref:`explanation_application-streaming`.
+For more information about the Streaming Stack, visit :ref:`exp_application-streaming`.

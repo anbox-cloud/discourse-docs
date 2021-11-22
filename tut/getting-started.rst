@@ -1,4 +1,4 @@
-.. _tutorial_getting-started:
+.. _tut_getting-started:
 
 ======================================
 Getting started with Anbox Cloud (CLI)
@@ -6,14 +6,14 @@ Getting started with Anbox Cloud (CLI)
 
 This tutorial guides you through the first steps of managing Anbox Cloud
 from the command line. You will learn how to communicate with
-:ref:`AMS <explanation_ams>` and how to
+:ref:`AMS <exp_ams>` and how to
 create and access a virtual Android device or an application.
 
 The tutorial focuses on using the command line to work with Anbox Cloud,
 which gives you access to all features of Anbox Cloud. Alternatively,
 you can use the :ref:`web dashboard <howto_manage_web-dashboard>`, which
 provides a simpler user interface but does not support all
-functionality. See the :ref:`Getting started with Anbox Cloud (web dashboard) <tutorial_getting-started-dashboard>`
+functionality. See the :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
 tutorial for an introduction on how to use the web dashboard.
 
 .. important::
@@ -22,14 +22,14 @@ tutorial for an introduction on how to use the web dashboard.
    can continue with this tutorial. See the following documentation for
    installation instructions:
 
-   -  :ref:`Installing the Anbox Cloud Appliance <tutorial_installing-appliance>`
+   -  :ref:`Installing the Anbox Cloud Appliance <tut_installing-appliance>`
    -  :ref:`howto_install_landing`
 
 
 1. Run AMC
 ==========
 
-The Anbox Management Client :ref:`amc communicates with the Anbox Management Service (AMS) <explanation_ams>`. You will use
+The Anbox Management Client :ref:`amc communicates with the Anbox Management Service (AMS) <exp_ams>`. You will use
 ``amc`` to manage all aspects of Anbox Cloud that are related to AMS.
 
 How and where to run ``amc`` depends on your use case:
@@ -42,7 +42,7 @@ How and where to run ``amc`` depends on your use case:
    to your private key file when connecting. See `Connect to your Linux instance using SSH <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html>`_
    for instructions on how to connect.
 -  If you are running the Anbox Cloud Appliance on a physical or virtual
-   machine, log on to that machine and ensure that you have :ref:`installed the additional tools <tutorial_installing-appliance-additional-tools>`.
+   machine, log on to that machine and ensure that you have :ref:`installed the additional tools <tut_installing-appliance-additional-tools>`.
 -  If you are running a full Anbox Cloud deployment, access the
    ``ams/0`` machine to run ``amc``. You can do this by opening an SSH
    session with the ``juju`` command:
@@ -85,7 +85,7 @@ hosted image server. You can list all synchronised images with the
    | c4b4ev4rorjohh948dg0 | bionic:android10:arm64      | active | 1        | aarch64      | false   |
    +----------------------+-----------------------------+--------+----------+--------------+---------+
 
-See :ref:`reference_provided-images` for
+See :ref:`ref_provided-images` for
 more information.
 
 If the images are not yet available, wait a few minutes, then try again.
@@ -123,7 +123,7 @@ Complete the following steps to create a virtual device:
        amc application create /path/to/manifest/directory/
 
 3. The application is now being
-   :ref:`bootstrapped <explanation_applications-bootstrap>`.
+   :ref:`bootstrapped <exp_applications-bootstrap>`.
    Enter the following command to monitor the progress:
 
    ::
@@ -140,7 +140,7 @@ Complete the following steps to create a virtual device:
       | c5mnh3oehn3g26pv4jlg | virtual-device-cli | a4.3          |        |      | true      | ready  | 2021-10-18 13:37:19 |
       +----------------------+--------------------+---------------+--------+------+-----------+--------+---------------------+
 
-.. _tutorial_getting-started-logon:
+.. _tut_getting-started-logon:
 
 4. Log on to the virtual device
 ===============================
@@ -197,7 +197,7 @@ and log on to it:
 6. Enter ``exit`` or press Ctrl+D once to exit the Android shell, and
    then again to exit the Linux container.
 
-.. _tutorial_getting-started-scrcpy:
+.. _tut_getting-started-scrcpy:
 
 5. Test the virtual device
 --------------------------
@@ -221,7 +221,7 @@ To connect to your virtual device with ``scrcpy``, complete the
 following steps:
 
 1. Launch a container based on the virtual device application, with the
-   ADB service exposed and using the :ref:`swrast platform <reference_platforms>`
+   ADB service exposed and using the :ref:`swrast platform <ref_platforms>`
    that provides software rendering:
 
    ::
@@ -276,7 +276,7 @@ app when creating the Anbox Cloud application.
 
 .. important::
    Not all Android apps are
-   compatible with Anbox Cloud. See :ref:`Issues when porting Android apps <explanation_porting-issues>`
+   compatible with Anbox Cloud. See :ref:`Issues when porting Android apps <exp_porting-issues>`
    for more information.
 
 Complete the following steps to create an application from an APK:
@@ -285,7 +285,7 @@ Complete the following steps to create an application from an APK:
    ``my-application``) and place your APK inside this folder.
 
 2. Create a ``manifest.yaml`` file in that folder. The manifest contains
-   the name and :ref:`instance type <reference_instance-types>`
+   the name and :ref:`instance type <ref_instance-types>`
    for the application. Choose an instance type that is suitable for
    your application. If your instance is equipped with a GPU and your
    application requires the use of the GPU for rendering and video
@@ -303,10 +303,10 @@ Complete the following steps to create an application from an APK:
    .. tip::
       The manifest can also contain
       more advanced configuration like
-      :ref:`Addons <howto_addon_landing>`,
+      :ref:`Addons <howto_addons_landing>`,
       permissions and others. You can find more details about the manifest
-      format and the available instance types in the :ref:`reference_application-manifest`
-      and :ref:`reference_instance-types`
+      format and the available instance types in the :ref:`ref_application-manifest`
+      and :ref:`ref_instance-types`
       documentation.
 3. Enter the following command to create the application, replacing
    */path/to/manifest/directory/* with the path to the directory where
@@ -317,7 +317,7 @@ Complete the following steps to create an application from an APK:
        amc application create /path/to/manifest/directory/
 
 4. The application is now being
-   :ref:`bootstrapped <explanation_applications-bootstrap>`.
+   :ref:`bootstrapped <exp_applications-bootstrap>`.
    Enter the following command to monitor the progress:
 
    ::
@@ -327,8 +327,8 @@ Complete the following steps to create an application from an APK:
    Wait until the status of the application changes to ``ready``.
 
 When the application is ready, you can launch it and then test it in the
-same way as the virtual device by either :ref:`logging on to it <tutorial_getting-started-logon>`
-or :ref:`connecting to it with scrcpy <tutorial_getting-started-scrcpy>`.
+same way as the virtual device by either :ref:`logging on to it <tut_getting-started-logon>`
+or :ref:`connecting to it with scrcpy <tut_getting-started-scrcpy>`.
 
 7. Update an application
 ========================
@@ -453,7 +453,7 @@ You now know how to use the command line to create, launch and test
 applications in Anbox Cloud.
 
 If you are interested in a more easy-to-use interface, check out the
-:ref:`Getting started with Anbox Cloud (web dashboard) <tutorial_getting-started-dashboard>`
+:ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
 tutorial to learn how to manage Anbox Cloud using the :ref:`web dashboard <howto_manage_web-dashboard>`.
 
 Also see the documentation about :ref:`how to manage applications <howto_application_landing>`

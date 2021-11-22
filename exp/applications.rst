@@ -1,4 +1,4 @@
-.. _explanation_applications:
+.. _exp_applications:
 
 ==================
 About applications
@@ -28,7 +28,7 @@ If the application fulfils all of the requirements above, it is ready to
 run on the Anbox Cloud platform. If not, please file a `bug report <https://bugs.launchpad.net/indore-extern/+filebug>`_ so that we
 can find out what we can do to still support the application.
 
-.. _explanation_applications-bootstrap:
+.. _exp_applications-bootstrap:
 
 Bootstrap process
 -----------------
@@ -65,7 +65,7 @@ order:
 
 1. Configure the network interface and gateway.
 2. Apply any pending Ubuntu system security updates.
-3. Install :ref:`addons <reference_addons>`
+3. Install :ref:`addons <ref_addons>`
    listed in the application manifest file.
 4. Run the ``pre-start`` hook provided by each addon listed in the
    application manifest.

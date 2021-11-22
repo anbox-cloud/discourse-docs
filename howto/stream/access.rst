@@ -4,8 +4,8 @@
 Access the stream gateway
 =========================
 
-Similarly to :ref:`AMS <explanation_ams>`,
-the Stream Gateway (see :ref:`explanation_application-streaming`
+Similarly to :ref:`AMS <exp_ams>`,
+the Stream Gateway (see :ref:`exp_application-streaming`
 for more information) exposes its API over an HTTP interface. Clients
 can be anything from the provided Dev UI to any custom client you
 develop.

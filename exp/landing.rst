@@ -1,4 +1,4 @@
-.. _explanation_landing:
+.. _exp_landing:
 
 ===========
 Explanation

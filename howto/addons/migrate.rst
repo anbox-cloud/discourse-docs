@@ -1,4 +1,4 @@
-.. _howto_addon_migrate-from-old-addons:
+.. _howto_addons_migrate:
 
 ====================================
 Migrate from previous addon versions

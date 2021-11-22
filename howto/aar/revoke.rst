@@ -5,7 +5,7 @@ Revoke an AAR client
 ====================
 
 If a client gets compromised, it’s important to block its access to the
-:ref:`Anbox Application Registry (AAR) <explanation_aar>` by
+:ref:`Anbox Application Registry (AAR) <exp_aar>` by
 revoking its certificate.
 
 Revoked clients are blocked from accessing the AAR. You’ll need to

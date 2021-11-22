@@ -28,7 +28,7 @@ following attributes are valid keys:
    * - Name
      - Value
    * - \ ``instance-type``\
-     - Supported instance type. See :ref:`reference_instance-types` for a list of available instance types.
+     - Supported instance type. See :ref:`ref_instance-types` for a list of available instance types.
    * - \ ``addons``\
      - Comma-separated list of addons.
    * - \ ``tag``\

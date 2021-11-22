@@ -1,4 +1,4 @@
-.. _reference_prometheus:
+.. _ref_prometheus:
 
 ==================
 Prometheus metrics

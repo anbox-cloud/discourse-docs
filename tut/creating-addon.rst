@@ -1,11 +1,11 @@
-.. _tutorial_creating-addon:
+.. _tut_creating-addon:
 
 =================
 Creating an addon
 =================
 
 This tutorial guides you through the creation of a simple
-:ref:`addon <howto_addon_landing>`. The
+:ref:`addon <howto_addons_landing>`. The
 addon that we create in this tutorial is an example for enabling SSH
 access on a container.
 
@@ -51,7 +51,7 @@ Make the file executable. To do so, enter the following command (in the
 .. tip::
    Supported hooks are ``pre-start``,
    ``post-start`` and post-stop. Read more about them
-   :ref:`here <reference_addons-hooks>`.
+   :ref:`here <ref_addons-hooks>`.
 
 Create an SSH key in your addon directory and move the private key to a
 location outside of the addon directory (for example, your home
@@ -136,5 +136,5 @@ You can now access your container via SSH:
 More information about addons
 =============================
 
--  :ref:`Addon reference <reference_addons>`
--  :ref:`Updating addons <howto_addon_update>`
+-  :ref:`Addon reference <ref_addons>`
+-  :ref:`Updating addons <howto_addons_update>`

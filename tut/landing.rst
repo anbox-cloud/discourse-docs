@@ -1,4 +1,4 @@
-.. _tutorial_landing:
+.. _tut_landing:
 
 =========
 Tutorials

@@ -28,14 +28,14 @@ this:
 
 .. note::
    If you want to use a GPU for
-   containers created for you new vdev application, use an :ref:`instance type <reference_instance-types>`
+   containers created for you new vdev application, use an :ref:`instance type <ref_instance-types>`
    with GPU support like ``g4.3``.
 
 Extend the Application with Addons
 ==================================
 
 You can also extend the application with
-:ref:`addons <reference_addons>` which install
+:ref:`addons <ref_addons>` which install
 additional applications you want to offer as part of your default
 experience. You can for example replace the standard Android launcher
 with a custom one like `Lawnchair <https://lawnchair.app/>`_.
@@ -92,9 +92,9 @@ Launching the new Application
 =============================
 
 Now that we have the application created in AMS we can go ahead and
-stream it through the UI of the Anbox Stream Gateway (see :ref:`Getting started with Anbox Cloud (web dashboard) <tutorial_getting-started-dashboard>`
+stream it through the UI of the Anbox Stream Gateway (see :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
 for more details) or your own custom client application built with the
-:ref:`Anbox Streaming SDK <reference_sdks-streaming-sdk>`.
+:ref:`Anbox Streaming SDK <ref_sdks-streaming-sdk>`.
 
 .. figure:: /images/virtual_device_launch.png
    :alt: Launch a virtual device

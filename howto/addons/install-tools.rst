@@ -1,4 +1,4 @@
-.. _howto_addon_install-tools-in-container:
+.. _howto_addons_install-tools:
 
 ======================
 Example: Install tools

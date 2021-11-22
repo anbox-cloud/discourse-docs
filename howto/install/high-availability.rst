@@ -6,7 +6,7 @@ Enable High Availability
 
 Anbox Cloud comes with support for High Availability (HA) for both Core
 and the Streaming Stack. Next to `Juju’s support for high availability of the Juju controller <https://juju.is/docs/controller-high-availability>`_, you
-can add HA for the :ref:`Anbox Management Service (AMS) <explanation_ams>` and the Anbox
+can add HA for the :ref:`Anbox Management Service (AMS) <exp_ams>` and the Anbox
 Stream Gateway to ensure fault tolerance and higher uptime.
 
 Enabling High Availability (HA for short) is achieved by `adding new units via juju <https://juju.is/docs/scaling-applications>`_. This will

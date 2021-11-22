@@ -1,4 +1,4 @@
-.. _howto_addon_backup-and-restore:
+.. _howto_addons_backup-and-restore:
 
 =====================
 Example: Back up data
@@ -30,7 +30,7 @@ Add the following ``post-stop`` hook to a new or existing addon:
    # Upload the tarball to a public or private cloud storage service
    curl -i -X POST --data-binary @"${FILE_NAME}" <cloud_storage_upload_url>
 
-.. _howto_addon_backup-and-restore-restore:
+.. _howto_addons_backup-and-restore-restore:
 
 Restore data
 ============

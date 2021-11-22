@@ -1,4 +1,4 @@
-.. _reference_ams-configuration:
+.. _ref_ams-configuration:
 
 =================
 AMS configuration
@@ -152,7 +152,7 @@ with the ``enable_virtual_keyboard`` feature flag.
 
 For the feature to be considered, applications must be manually updated,
 because changes to allow the feature to work are only applied during the
-:ref:`application bootstrap process <explanation_applications-bootstrap>`.
+:ref:`application bootstrap process <exp_applications-bootstrap>`.
 
 Wi-Fi
 -----
@@ -175,7 +175,7 @@ By default, Android is not allowed to reboot. With the
 ``allow_android_reboot`` feature flag, this can be allowed.
 
 Note that you must disable the
-:ref:`watchdog <reference_application-manifest-watchdog>`
+:ref:`watchdog <ref_application-manifest-watchdog>`
 if reboots are allowed.
 
 The feature flag will be considered by all newly launched containers

@@ -1,4 +1,4 @@
-.. _howto_addon_customize-android:
+.. _howto_addons_customise-android:
 
 ==========================
 Example: Customise Android

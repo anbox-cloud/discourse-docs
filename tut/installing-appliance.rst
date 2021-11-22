@@ -1,4 +1,4 @@
-.. _tutorial_installing-appliance:
+.. _tut_installing-appliance:
 
 ====================
 Installing the |ACA|
@@ -11,7 +11,7 @@ small scale deployments.
 .. note::
    There are differences between
    the Anbox Cloud Appliance and the full Anbox Cloud installation (see
-   :ref:`Variants <explanation_anbox-cloud-variants>`).
+   :ref:`Variants <exp_anbox-cloud-variants>`).
    This section focuses on the **Anbox Cloud Appliance**. For instructions
    on how to install **Anbox Cloud**, see :ref:`howto_install_landing`.
 
@@ -20,12 +20,12 @@ This tutorial guides you through the steps that are required to install
 and initialise the Anbox Cloud Appliance, either from the `AWS Marketplace <https://aws.amazon.com/marketplace/>`_ or from the
 `snap <https://snapcraft.io/anbox-cloud-appliance>`_:
 
-1. :ref:`Check the prerequisites <tutorial_installing-appliance-prerequisites>`
-2. :ref:`Install the appliance <tutorial_installing-appliance-install>`
-3. :ref:`Initialise the appliance <tutorial_installing-appliance-initialise>`
-4. :ref:`Register with the dashboard <tutorial_installing-appliance-register>`
+1. :ref:`Check the prerequisites <tut_installing-appliance-prerequisites>`
+2. :ref:`Install the appliance <tut_installing-appliance-install>`
+3. :ref:`Initialise the appliance <tut_installing-appliance-initialise>`
+4. :ref:`Register with the dashboard <tut_installing-appliance-register>`
 
-.. _tutorial_installing-appliance-prerequisites:
+.. _tut_installing-appliance-prerequisites:
 
 Check the prerequisites
 =======================
@@ -65,7 +65,7 @@ accounts and prerequisites:
          deployment. You must purchase a *Ubuntu Advantage
          for*\ **Applications** subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
 
-.. _tutorial_installing-appliance-install:
+.. _tut_installing-appliance-install:
 
 Install the appliance
 =====================
@@ -73,11 +73,11 @@ Install the appliance
 The Anbox Cloud Appliance is available through the AWS Marketplace and
 as a snap.
 
--  When installing on AWS, follow the steps in :ref:`Install from the AWS Marketplace <tutorial_installing-appliance-install-aws>`.
+-  When installing on AWS, follow the steps in :ref:`Install from the AWS Marketplace <tut_installing-appliance-install-aws>`.
 -  When installing on a local machine or in another cloud, follow the
-   steps in :ref:`Install the snap <tutorial_installing-appliance-install-snap>`.
+   steps in :ref:`Install the snap <tut_installing-appliance-install-snap>`.
 
-.. _tutorial_installing-appliance-install-aws:
+.. _tut_installing-appliance-install-aws:
 
 Install from the AWS Marketplace
 --------------------------------
@@ -288,9 +288,9 @@ address in the instance details page. Use this IP address or the
 corresponding DNS name to access the status web page (in the following
 steps referred to as ``https://your-machine-address``).
 
-Next, continue with the instructions in :ref:`Initialise the appliance <tutorial_installing-appliance-initialise>`.
+Next, continue with the instructions in :ref:`Initialise the appliance <tut_installing-appliance-initialise>`.
 
-.. _tutorial_installing-appliance-install-snap:
+.. _tut_installing-appliance-install-snap:
 
 Install the snap
 ----------------
@@ -331,7 +331,7 @@ Appliance:
 
    sudo snap install --classic anbox-cloud-appliance
 
-.. _tutorial_installing-appliance-additional-tools:
+.. _tut_installing-appliance-additional-tools:
 
 3. Install additional tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -349,7 +349,7 @@ commands to install them:
    for information about which Juju version is required for your version of
    Anbox Cloud.
 
-.. _tutorial_installing-appliance-initialise:
+.. _tut_installing-appliance-initialise:
 
 Initialise the appliance
 ========================
@@ -467,7 +467,7 @@ monitor the progress information on the command line.
    update-available: false
    reboot-needed: false
 
-.. _tutorial_installing-appliance-register:
+.. _tut_installing-appliance-register:
 
 Register with the dashboard
 ===========================
@@ -501,8 +501,8 @@ Done!
 =====
 
 Your Anbox Cloud Appliance is now fully set up and ready to be used!
-Next, you should check out the :ref:`Getting started with Anbox Cloud (web dashboard) <tutorial_getting-started-dashboard>`
-or the :ref:`Getting started with Anbox Cloud (CLI) <tutorial_getting-started>` tutorial
+Next, you should check out the :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
+or the :ref:`Getting started with Anbox Cloud (CLI) <tut_getting-started>` tutorial
 to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the

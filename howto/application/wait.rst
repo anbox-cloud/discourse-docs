@@ -18,7 +18,7 @@ The supported conditions for an application are as follows:
    * - Name
      - Value
    * - \ ``instance-type``\
-     - Supported instance type. See :ref:`reference_instance-types` for a list of available instance types.
+     - Supported instance type. See :ref:`ref_instance-types` for a list of available instance types.
    * - \ ``addons``\
      - Comma-separated list of addons.
    * - \ ``tag``\
@@ -34,7 +34,7 @@ The supported conditions for an application are as follows:
 
 
 One example of using the ``amc wait`` command is to wait for the
-application :ref:`bootstrap process <explanation_applications-bootstrap>`
+application :ref:`bootstrap process <exp_applications-bootstrap>`
 to be done, since the application bootstrap is performed asynchronously
 by the AMS service and takes some time to process. The application
 cannot be used until the bootstrap is complete and the status is marked

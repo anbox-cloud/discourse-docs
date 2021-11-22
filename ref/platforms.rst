@@ -1,4 +1,4 @@
-.. _reference_platforms:
+.. _ref_platforms:
 
 ===============
 Anbox platforms
@@ -104,7 +104,7 @@ supplied as userdata.
 ``webrtc`` platform
 -------------------
 
-When using the :ref:`Stream Gateway <explanation_application-streaming>`,
+When using the :ref:`Stream Gateway <exp_application-streaming>`,
 the webrtc platform is automatically used when launching containers. You
 don’t need to perform additional steps. Launching a container with the
 webrtc platform can be done via the :ref:`web dashboard <howto_manage_web-dashboard>`.

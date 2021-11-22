@@ -1,4 +1,4 @@
-.. _explanation_porting-issues:
+.. _exp_porting-issues:
 
 ================================
 Issues when porting Android apps
@@ -160,14 +160,14 @@ applications. Some applications load the obb file from the SD card
 container, an application may not function as expected. Some
 applications exit immediately once the required obb file is not found,
 which triggers the
-:ref:`watchdog <reference_application-manifest-watchdog>`
+:ref:`watchdog <ref_application-manifest-watchdog>`
 in the end and cause the container to end up in an error state.
 
 Strict Watchdog Restriction
 ===========================
 
 The
-:ref:`watchdog <reference_application-manifest-watchdog>`
+:ref:`watchdog <ref_application-manifest-watchdog>`
 is enabled by default upon application creation. It’s tricky to identify
 a problem or debug a porting issue when a watchdog is enabled since a
 container will be terminated when a watchdog is triggered.

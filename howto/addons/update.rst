@@ -1,4 +1,4 @@
-.. _howto_addon_update:
+.. _howto_addons_update:
 
 =============
 Update addons

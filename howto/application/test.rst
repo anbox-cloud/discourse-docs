@@ -145,7 +145,7 @@ APK managed by AMS
 
 If you want to run test cases without installing the APK every time when
 starting a new test session in Appium, you can let AMS manage the
-application for you. See :ref:`explanation_applications`
+application for you. See :ref:`exp_applications`
 for more details.
 
 In this example we use the following application ``manifest.yaml``:

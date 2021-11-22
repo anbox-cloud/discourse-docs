@@ -80,7 +80,7 @@ Launch container
 To interact with scrcpy, each container must be leveraging proper
 graphics drivers to work. At best the container is launched with a
 platform that has a proper GPU supported if the deployment includes the
-:ref:`GPU support <explanation_gpu-support>`.
+:ref:`GPU support <exp_gpu-support>`.
 Otherwise, you can use the swrast platform instead, which provides a
 software rendering graphics driver based on
 `swiftshader <https://swiftshader.googlesource.com/SwiftShader>`_. The

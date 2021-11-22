@@ -1,4 +1,4 @@
-.. _howto_addon_best-practices:
+.. _howto_addons_best-practices:
 
 =========================
 Best practices for addons

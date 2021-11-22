@@ -38,17 +38,17 @@ Get started
 
    * -
      -
-   * - :ref:`explanation_anbox-cloud`
+   * - :ref:`exp_anbox-cloud`
      - Learn about the differences between Anbox Cloud and the Anbox Cloud Appliance and about the components and architecture of the offering
-   * - :ref:`explanation_ams`
+   * - :ref:`exp_ams`
      - Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle
-   * - :ref:`tutorial_installing-appliance`
+   * - :ref:`tut_installing-appliance`
      - Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments
    * - :ref:`howto_install_deploy-juju`
      - Deploy the full Anbox Cloud solution to a public cloud
-   * - :ref:`tutorial_getting-started-dashboard`
+   * - :ref:`tut_getting-started-dashboard`
 
-       :ref:`tutorial_getting-started`
+       :ref:`tut_getting-started`
      - Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface
 
 

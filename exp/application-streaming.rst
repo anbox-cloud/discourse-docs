@@ -1,4 +1,4 @@
-.. _explanation_application-streaming:
+.. _exp_application-streaming:
 
 ===========================
 About application streaming

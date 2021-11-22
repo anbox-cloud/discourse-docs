@@ -8,7 +8,7 @@ An image is the base for a container running in the Anbox Cloud. It
 contains all necessary components, like Anbox or the Android root file
 system. Each release of Anbox Cloud comes with an updated image.
 
-See :ref:`reference_provided-images` for
+See :ref:`ref_provided-images` for
 information about which images Anbox Cloud provides.
 
 Configure image server
@@ -167,7 +167,7 @@ further information about the image with ``amc image show <ID>``:
            created-at: 2018-06-27 10:05:32 +0000 UTC
            status: active
 
-Similar to applications managed by AMS (see :ref:`explanation_applications`),
+Similar to applications managed by AMS (see :ref:`exp_applications`),
 images have a list of versions too. A new version is created each time
 an image is updated.
 

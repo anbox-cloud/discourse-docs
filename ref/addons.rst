@@ -1,15 +1,15 @@
-.. _reference_addons:
+.. _ref_addons:
 
 ======
 Addons
 ======
 
 Addons provide a way to extend and customise images in Anbox Cloud. See
-:ref:`howto_addon_landing`
-and the :ref:`tutorial_creating-addon`
+:ref:`howto_addons_landing`
+and the :ref:`tut_creating-addon`
 tutorial for instructions on how to use them.
 
-.. _reference_addons-file-structure:
+.. _ref_addons-file-structure:
 
 File structure
 ==============
@@ -19,11 +19,11 @@ files must contain:
 
 -  A file named ``manifest.yaml``.
 -  A directory named ``hooks``. This directory must contain at least one
-   executable file with a valid hook name (see :ref:`Hooks <reference_addons-hooks>`
+   executable file with a valid hook name (see :ref:`Hooks <ref_addons-hooks>`
    below).
 
 Other files in the addon directory are bundled with the addon. They can
-be accessed in a hook by using the :ref:`$ADDON_DIR environment variable <reference_addons-env-variables>`). For example:
+be accessed in a hook by using the :ref:`$ADDON_DIR environment variable <ref_addons-env-variables>`). For example:
 
 .. code:: bash
 
@@ -32,7 +32,7 @@ be accessed in a hook by using the :ref:`$ADDON_DIR environment variable <refere
 To create the addon, you must provide ``amc`` with either the directory
 or a tarball containing the same file structure.
 
-.. _reference_addons-manifest:
+.. _ref_addons-manifest:
 
 Addon manifest
 ==============
@@ -65,7 +65,7 @@ The following table lists the valid keys in an addon manifest:
      - \ ``arm64-v8a``, ``armeabi-v7a``, ``armeabi``\
 
 
-.. _reference_addons-env-variables:
+.. _ref_addons-env-variables:
 
 Environment variables
 =====================
@@ -102,7 +102,7 @@ The following variables are available:
      - \ ``0`` if no error occurred, otherwise set to the actual return code.
 
 
-.. _reference_addons-hooks:
+.. _ref_addons-hooks:
 
 Hooks
 =====

@@ -1,4 +1,4 @@
-.. _explanation_ams:
+.. _exp_ams:
 
 ==============================
 Anbox Management Service (AMS)
@@ -14,11 +14,11 @@ AMS is usually managed through the command line interface (the Anbox
 Management Client - AMC), which can run either on the same machine as
 AMS or on a remote machine.
 
-Since AMS exposes an HTTP interface, any tool can use the :ref:`reference_ams-http-api` to
-interact with AMS. Both the AMC (when running remotely) and the :ref:`Anbox Application Registry (AAR) <explanation_aar>` use
-this mechanism. You can also develop your own client by using the :ref:`reference_sdks-ams-sdk`.
+Since AMS exposes an HTTP interface, any tool can use the :ref:`ref_ams-http-api` to
+interact with AMS. Both the AMC (when running remotely) and the :ref:`Anbox Application Registry (AAR) <exp_aar>` use
+this mechanism. You can also develop your own client by using the :ref:`ref_sdks-ams-sdk`.
 
-.. _explanation_ams-security-certificates:
+.. _exp_ams-security-certificates:
 
 Security certificates for remote clients
 ========================================
@@ -73,7 +73,7 @@ Custom clients
 ==============
 
 As an alternative to using AMC, you can develop a custom client built
-around your own needs using the :ref:`reference_ams-http-api`.
+around your own needs using the :ref:`ref_ams-http-api`.
 
 You can access AMS either by IP or through a UNIX socket. The IP depends
 on your network, but the UNIX socket will always be located at

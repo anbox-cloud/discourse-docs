@@ -5,7 +5,7 @@ Control AMS remotely
 ====================
 
 By default, the Anbox Management Client (AMC) runs on the same machine
-as the :ref:`Anbox Management Service (AMS) <explanation_ams>` and connects
+as the :ref:`Anbox Management Service (AMS) <exp_ams>` and connects
 to it through a UNIX socket.
 
 If you want to control AMS remotely, you can install the AMC on a
@@ -29,7 +29,7 @@ Install a trusted certificate
 
 Controlling AMS remotely requires trusted security certificates. You can
 generate self-signed certificates or use certificates signed by a
-Certificate Authority. See :ref:`Security certificates for remote clients <explanation_ams-security-certificates>`
+Certificate Authority. See :ref:`Security certificates for remote clients <exp_ams-security-certificates>`
 for more information.
 
 Self-signed certificates

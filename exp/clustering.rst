@@ -1,4 +1,4 @@
-.. _explanation_clustering:
+.. _exp_clustering:
 
 ================
 About clustering
@@ -26,7 +26,7 @@ machines (thus worker nodes) with how many resources you need.
 Each container will take a specific amount of resources defined by the
 instance type used by the application it is launched for. If an
 application uses the ``a2.3`` instance type, it requires 2 CPU cores and
-3 GB of memory and 3 GB of disk space (see :ref:`reference_instance-types` for
+3 GB of memory and 3 GB of disk space (see :ref:`ref_instance-types` for
 details on how much resources each instance type requires). AMS
 internally summarises the amount of resources used by containers on a
 single machine and disallows launching additional containers when all
@@ -93,13 +93,13 @@ application will be running inside the containers and which amount of
 CPU it needs. For low CPU intensive applications a higher and for high
 CPU intensive applications a lower allocation rate makes sense.
 
-.. _explanation_clustering-gpu-slots:
+.. _exp_clustering-gpu-slots:
 
 GPU slots
 ---------
 
 An additional aspect to take into account when planning your resources
-is the number of required GPU slots (see :ref:`explanation_gpu-support` for more
+is the number of required GPU slots (see :ref:`exp_gpu-support` for more
 information).
 
 GPUs have limited capacity that can be shared amongst multiple
@@ -149,9 +149,9 @@ GPU slots for application
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Applications can declare how many GPU slots they require. This number is
-set by default when specifying the :ref:`instance type <reference_instance-types>`, but it
+set by default when specifying the :ref:`instance type <ref_instance-types>`, but it
 can be overridden using
-:ref:`resources <reference_application-manifest>`.
+:ref:`resources <ref_application-manifest>`.
 
 .. code:: bash
 
@@ -174,7 +174,7 @@ reducing contention for GPU resources.
 Containers can be configured to use a hardware or software video encoder
 for video encoding. This can be done through the ``video-encoder`` field
 declared in the manifest file when creating an application as well. See
-:ref:`Video encoder <reference_application-manifest-video-encoder>`
+:ref:`Video encoder <ref_application-manifest-video-encoder>`
 for more details.
 
 LXD auto scaling
@@ -243,7 +243,7 @@ different in each case. For that reason, custom logic is required to
 take a decision when a cluster should be scaled up or down.
 
 Anbox Cloud provides various metrics to help decide when to scale up or
-down. See the :ref:`relevant documentation <reference_prometheus>`
+down. See the :ref:`relevant documentation <ref_prometheus>`
 for a list of available metrics that can be used to take a decision.
 Based on this together with data from a production system, you can build
 a model trying to predict when auto scaling should trigger or not.

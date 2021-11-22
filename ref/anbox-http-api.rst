@@ -1,4 +1,4 @@
-.. _reference_anbox-http-api:
+.. _ref_anbox-http-api:
 
 ==============
 Anbox HTTP API
@@ -78,22 +78,22 @@ HTTP code must be one of 400 or 500.
 API structure
 =============
 
--  :ref:`/1.0 <reference_anbox-http-api-heading--10>`
+-  :ref:`/1.0 <ref_anbox-http-api-heading--10>`
 
-   -  :ref:`/1.0/location <reference_anbox-http-api-heading--10location>`
+   -  :ref:`/1.0/location <ref_anbox-http-api-heading--10location>`
 
-   -  :ref:`/1.0/camera <reference_anbox-http-api-heading--10camera>`
+   -  :ref:`/1.0/camera <ref_anbox-http-api-heading--10camera>`
 
-      -  :ref:`/1.0/camera/data <reference_anbox-http-api-heading--10cameradata>`
+      -  :ref:`/1.0/camera/data <ref_anbox-http-api-heading--10cameradata>`
 
-   -  :ref:`/1.0/sensors <reference_anbox-http-api-heading--10sensors>`
+   -  :ref:`/1.0/sensors <ref_anbox-http-api-heading--10sensors>`
 
-   -  :ref:`/1.0/tracing <reference_anbox-http-api-heading--10tracing>`
+   -  :ref:`/1.0/tracing <ref_anbox-http-api-heading--10tracing>`
 
 API details
 ===========
 
-.. _reference_anbox-http-api-heading--10:
+.. _ref_anbox-http-api-heading--10:
 
 ``/1.0/``
 ---------
@@ -131,7 +131,7 @@ Return value:
        "type": "sync"
    }
 
-.. _reference_anbox-http-api-heading--10location:
+.. _ref_anbox-http-api-heading--10location:
 
 ``/1.0/location``
 -----------------
@@ -187,7 +187,7 @@ Return value:
        "type": "sync"
    }
 
-.. _reference_anbox-http-api-location-patch:
+.. _ref_anbox-http-api-location-patch:
 
 PATCH
 ~~~~~
@@ -259,7 +259,7 @@ Return value:
        "type": "sync"
    }
 
-.. _reference_anbox-http-api-heading--10camera:
+.. _ref_anbox-http-api-heading--10camera:
 
 ``/1.0/camera``
 ---------------
@@ -327,7 +327,7 @@ query will indicate the camera is enabled.
    $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.enabled
    true
 
-.. _reference_anbox-http-api-heading--10cameradata:
+.. _ref_anbox-http-api-heading--10cameradata:
 
 ``/1.0/camera/data``
 --------------------
@@ -432,7 +432,7 @@ With ffmpeg, you can do:
 
    $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
 
-.. _reference_anbox-http-api-heading--10sensors:
+.. _ref_anbox-http-api-heading--10sensors:
 
 ``/1.0/sensors``
 ----------------
@@ -577,7 +577,7 @@ for the units of measure for the environmental sensors.
    Issue GET method to sensor endpoint can check the current active sensors
    in Android container.
 
-.. _reference_anbox-http-api-heading--10tracing:
+.. _ref_anbox-http-api-heading--10tracing:
 
 ``/1.0/tracing``
 ----------------

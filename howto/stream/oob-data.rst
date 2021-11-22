@@ -116,7 +116,7 @@ Web Application
 ---------------
 
 For a web based application you can use the JavaScript SDK which you can
-find at :ref:`Anbox Cloud SDKs <reference_sdks-streaming-sdk>`.
+find at :ref:`Anbox Cloud SDKs <ref_sdks-streaming-sdk>`.
 To receive the data sent from the Android application running in the
 Anbox container you need to implement the ``messageReceived`` callback
 of the AnboxStream object:
@@ -137,7 +137,7 @@ of the AnboxStream object:
 Native Application
 ------------------
 
-For a native application you can use the native SDK from :ref:`Anbox Cloud SDKs <reference_sdks-streaming-sdk>`.
+For a native application you can use the native SDK from :ref:`Anbox Cloud SDKs <ref_sdks-streaming-sdk>`.
 To receive the data sent from the Android application running in the
 Anbox container you need to register a callback via the
 ``anbox_stream_set_message_received_callback`` method:

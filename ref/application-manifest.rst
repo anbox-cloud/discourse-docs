@@ -1,4 +1,4 @@
-.. _reference_application-manifest:
+.. _ref_application-manifest:
 
 ====================
 Application manifest
@@ -73,7 +73,7 @@ listed with the following command:
 
    amc image list
 
-.. _reference_application-manifest-video-encoder:
+.. _ref_application-manifest-video-encoder:
 
 Video encoder
 =============
@@ -101,7 +101,7 @@ When ``gpu`` video encoder is specified in the manifest, AMS can fail to
 create an application if: - All GPU slots are used up by running
 containers. - There is no GPU support across the entire LXD cluster.
 
-.. _reference_application-manifest-watchdog:
+.. _ref_application-manifest-watchdog:
 
 Watchdog settings
 =================
@@ -183,13 +183,13 @@ must define the following properties for each service:
      - Expose service to be accessible externally or internally
 
 
-.. _reference_application-manifest-resources:
+.. _ref_application-manifest-resources:
 
 Resources
 =========
 
 If the
-:ref:`instance-type <reference_instance-types>`
+:ref:`instance-type <ref_instance-types>`
 that is provided by AMS doesn’t meet the criteria that the installed
 application requires to function, you can use the ``resources``
 directive to override the predefined resources.

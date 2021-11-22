@@ -1,4 +1,4 @@
-.. _reference_provided-images:
+.. _ref_provided-images:
 
 ===============
 Provided images

@@ -1,4 +1,4 @@
-.. _howto_troubleshoot:
+.. _howto_troubleshoot_landing:
 
 ========================
 Troubleshoot Anbox Cloud

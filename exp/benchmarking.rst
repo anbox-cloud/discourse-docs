@@ -1,4 +1,4 @@
-.. _explanation_benchmarking:
+.. _exp_benchmarking:
 
 ==================
 About benchmarking
@@ -115,7 +115,7 @@ An example benchmark session looks like this:
    2019/01/21 11:15:39   Containers below run at low FPS(<30):
    2019/01/21 11:15:39     None
 
-The benchmark command launches 15 containers on the Anbox :ref:`null platform <reference_platforms>` with
+The benchmark command launches 15 containers on the Anbox :ref:`null platform <ref_platforms>` with
 the following default display specification:
 
 =============== =====

@@ -6,7 +6,7 @@ Work with containers
 
 The guides in this section describe how to work with containers.
 
-See :ref:`explanation_containers`
+See :ref:`exp_containers`
 for an introduction to how containers are used in Anbox Cloud.
 
 

@@ -114,7 +114,7 @@ API, if no specific application version is given, the last published
 version of an application is used to create the container.
 
 If
-:ref:`application.auto_publish <reference_ams-configuration>`
+:ref:`application.auto_publish <ref_ams-configuration>`
 is set to ``true`` (the default), new versions are automatically
 published. Otherwise, you need to publish them manually.
 

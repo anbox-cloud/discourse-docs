@@ -1,4 +1,4 @@
-.. _reference_instance-types:
+.. _ref_instance-types:
 
 ==============
 Instance types

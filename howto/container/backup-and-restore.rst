@@ -23,13 +23,13 @@ See the following script for an example for backing up your data:
     # Upload the tarball to public or private cloud storage service
    curl -i -X POST --data-binary @"${TARBALL_FILE}" <cloud_storage_upload_url>
 
-Running this script in an :ref:`addon post-stop hook <howto_addon_backup-and-restore>` will
+Running this script in an :ref:`addon post-stop hook <howto_addons_backup-and-restore>` will
 back up the user data of a particular application with ``aam`` and
 upload the resulting tarball file to the cloud storage service when a
 container is stopped.
 
 If
-:ref:`boot-package <reference_application-manifest>`
+:ref:`boot-package <ref_application-manifest>`
 is specified in the application manifest file, you can also back up the
 boot application data simply with the flag ``--boot-package``.
 
@@ -44,7 +44,7 @@ will create a tarball file with the name ``<package name>.tar.bz2``.
 Restore application data
 ========================
 
-The application data can be restored with the following :ref:`pre-start hook <howto_addon_backup-and-restore-restore>`
+The application data can be restored with the following :ref:`pre-start hook <howto_addons_backup-and-restore-restore>`
 when a container is up and running:
 
 .. code:: bash

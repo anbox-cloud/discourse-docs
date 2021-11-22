@@ -4,7 +4,7 @@
 Configure an AAR
 ================
 
-The :ref:`Anbox Application Registry (AAR) <explanation_aar>`
+The :ref:`Anbox Application Registry (AAR) <exp_aar>`
 uses a certificate-based authentication system that uses TLS server and
 client certificates to establish a trusted connection between the AAR
 and AMS.

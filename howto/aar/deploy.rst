@@ -4,7 +4,7 @@
 Deploy an AAR
 =============
 
-An :ref:`Anbox Application Registry (AAR) <explanation_aar>`
+An :ref:`Anbox Application Registry (AAR) <exp_aar>`
 should be deployed on a single unit. After deploying, continue to
 :ref:`configure it <howto_aar_configure>`
 and connect it with all AMS units that you want to synchronise.

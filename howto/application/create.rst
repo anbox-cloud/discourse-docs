@@ -21,7 +21,7 @@ available instance types for the application. The instance type defines
 CPU/RAM constraints put onto the container launch for the application.
 
 .. note::
-   See :ref:`reference_instance-types`
+   See :ref:`ref_instance-types`
    for a list of available instance types.
 
 To create a new application, you must first create a manifest file to
@@ -60,7 +60,7 @@ this:
      memory: 4GB
      disk-size: 8GB
 
-See :ref:`reference_application-manifest`
+See :ref:`ref_application-manifest`
 for detailed information about all available attributes.
 
 Create from a directory
@@ -85,7 +85,7 @@ following command:
    amc application create <path/to/application-content>
 
 When the ``create`` command returns, the application package is uploaded
-to the AMS service and the :ref:`bootstrap process <explanation_applications-bootstrap>`
+to the AMS service and the :ref:`bootstrap process <exp_applications-bootstrap>`
 is started. The application is not yet ready to be used. You can watch
 the status of the application with the following command:
 
@@ -161,6 +161,6 @@ Once the tarball is created, you can create the application:
 
    amc application create foo.tar.bz2
 
-The AMS service now starts the application :ref:`bootstrap process <explanation_applications-bootstrap>`.
+The AMS service now starts the application :ref:`bootstrap process <exp_applications-bootstrap>`.
 See :ref:`howto_application_wait`
 for information about how to monitor the application status.

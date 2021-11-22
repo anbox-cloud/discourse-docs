@@ -1,4 +1,4 @@
-.. _explanation_anbox-cloud:
+.. _exp_anbox-cloud:
 
 =================
 About Anbox Cloud
@@ -22,7 +22,7 @@ and secure container hypervisor `LXD <https://linuxcontainers.org/>`__.
 LXD is secure by design, scales to a large number of containers and
 provides advanced resource management for hosted containers.
 
-.. _explanation_anbox-cloud-variants:
+.. _exp_anbox-cloud-variants:
 
 Variants
 ========
@@ -54,13 +54,13 @@ variants:
    * - Feature
      - Anbox Cloud Appliance
      - Anbox Cloud
-   * - :ref:`Streaming capabilities <explanation_application-streaming>`
+   * - :ref:`Streaming capabilities <exp_application-streaming>`
      - ✓
      - ✓
    * - :ref:`Web dashboard <howto_manage_web-dashboard>`
      - ✓
      - ✓
-   * - :ref:`Android API version <reference_provided-images>`
+   * - :ref:`Android API version <ref_provided-images>`
      - 10, 11
      - 10, 11
    * - `Security updates <https://ubuntu.com/support>`_
@@ -107,25 +107,25 @@ their responsibility within the core stack of Anbox Cloud.
 
    Anbox Cloud core stack
 
-At the heart of Anbox Cloud sits the :ref:`Anbox Management Service (AMS) <explanation_ams>`. **AMS** has
+At the heart of Anbox Cloud sits the :ref:`Anbox Management Service (AMS) <exp_ams>`. **AMS** has
 the job to handle all aspects of the application and container life
 cycle (including application and image updates) while ensuring high
 density, performance and fast container startup times.
 
 A developer or system administrator will manage **AMS** through the
 **command line interface (AMC)** or through custom-built tools
-interacting with the :ref:`reference_ams-http-api`.
+interacting with the :ref:`ref_ams-http-api`.
 
 For example, a simple Android application testing service would provide
 a user-facing interface dealing with things like authentication and user
 management, and would communicate with the REST API to add applications
 or start and stop containers when a user asks to.
 
-Anbox Cloud can be heavily customised and extended via :ref:`platform plugins <reference_sdks-anbox-platform-sdk>`
-and :ref:`addons <howto_addon_landing>`.
+Anbox Cloud can be heavily customised and extended via :ref:`platform plugins <ref_sdks-anbox-platform-sdk>`
+and :ref:`addons <howto_addons_landing>`.
 Platform plugins and addons can be built to add specific streaming
 capabilities, perform operations within Android containers and much
-more. One example of a platform plugin is the :ref:`Anbox WebRTC Platform <reference_platforms>` used
+more. One example of a platform plugin is the :ref:`Anbox WebRTC Platform <ref_platforms>` used
 in the Anbox Streaming Stack. Addons are ways to customise the base
 image by installing additional software and running scripts on different
 life cycle hooks.
@@ -134,7 +134,7 @@ Streaming stack
 ---------------
 
 Starting from 1.4, Anbox Cloud comes with an easy to use streaming
-solution. The :ref:`Anbox Streaming Stack <explanation_application-streaming>`
+solution. The :ref:`Anbox Streaming Stack <exp_application-streaming>`
 is a collection of components designed to run containers on GPU-equipped
 machines and stream their visual output to clients via
 `WebRTC <https://webrtc.org/>`_.

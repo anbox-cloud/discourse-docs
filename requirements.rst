@@ -14,7 +14,7 @@ requirements will be covered below:
 2. Juju based deployments
 
 See the
-:ref:`Variants <explanation_anbox-cloud-variants>`
+:ref:`Variants <exp_anbox-cloud-variants>`
 for a explanation of the differences between both variants.
 
 General requirements
@@ -90,7 +90,7 @@ requirements:
 The above defines a minimum of what is necessary to run the Anbox Cloud
 Appliance. As Anbox Cloud is dependent on available resources to launch
 its Android containers, the available resources dictate the maximum
-number of possible containers. See :ref:`explanation_clustering`
+number of possible containers. See :ref:`exp_clustering`
 for an explanation on how to plan for a specific capacity on your
 appliance.
 
@@ -202,11 +202,11 @@ The specified number of cores and RAM is only the minimum required to
 run Anbox Cloud at a sensible performance.
 
 More CPU cores and more RAM on the machine hosting LXD will allow to run
-a higher number of containers. See :ref:`explanation_clustering`
+a higher number of containers. See :ref:`exp_clustering`
 for an introduction of how many resources are necessary to host a
 specific number of containers.
 
-If you require GPU support, see :ref:`explanation_gpu-support` for a list
+If you require GPU support, see :ref:`exp_gpu-support` for a list
 of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware

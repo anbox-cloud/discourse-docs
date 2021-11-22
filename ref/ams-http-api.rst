@@ -1,4 +1,4 @@
-.. _reference_ams-http-api:
+.. _ref_ams-http-api:
 
 ============
 AMS HTTP API
@@ -265,67 +265,67 @@ API structure
 
 -  `/ <heading--#>`_
 
--  :ref:`/1.0 <reference_ams-http-api-heading--10>`
+-  :ref:`/1.0 <ref_ams-http-api-heading--10>`
 
--  :ref:`/1.0/addons <reference_ams-http-api-heading--10addons>`
+-  :ref:`/1.0/addons <ref_ams-http-api-heading--10addons>`
 
-   -  :ref:`/1.0/addons/ <reference_ams-http-api-heading--10addonsname>`
+   -  :ref:`/1.0/addons/ <ref_ams-http-api-heading--10addonsname>`
 
-   -  :ref:`/1.0/addons// <reference_ams-http-api-heading--10addonsnameversion>`
+   -  :ref:`/1.0/addons// <ref_ams-http-api-heading--10addonsnameversion>`
 
--  :ref:`/1.0/applications <reference_ams-http-api-heading--10applications>`
+-  :ref:`/1.0/applications <ref_ams-http-api-heading--10applications>`
 
-   -  :ref:`/1.0/applications/ <reference_ams-http-api-heading--10applicationsname>`
+   -  :ref:`/1.0/applications/ <ref_ams-http-api-heading--10applicationsname>`
 
-      -  :ref:`/1.0/applications//manifest <reference_ams-http-api-heading--10applicationsnamemanifest>`
+      -  :ref:`/1.0/applications//manifest <ref_ams-http-api-heading--10applicationsnamemanifest>`
 
-      -  :ref:`/1.0/applications// <reference_ams-http-api-heading--10applicationsnameversion>`
+      -  :ref:`/1.0/applications// <ref_ams-http-api-heading--10applicationsnameversion>`
 
-      -  :ref:`/1.0/applications///manifest <reference_ams-http-api-heading--10applicationsnameversionmanifest>`
+      -  :ref:`/1.0/applications///manifest <ref_ams-http-api-heading--10applicationsnameversionmanifest>`
 
--  :ref:`/1.0/certificates <reference_ams-http-api-heading--10certificates>`
+-  :ref:`/1.0/certificates <ref_ams-http-api-heading--10certificates>`
 
-   -  :ref:`/1.0/certificates/ <reference_ams-http-api-heading--10certificatesid>`
+   -  :ref:`/1.0/certificates/ <ref_ams-http-api-heading--10certificatesid>`
 
--  :ref:`/1.0/config <reference_ams-http-api-heading--10config>`
+-  :ref:`/1.0/config <ref_ams-http-api-heading--10config>`
 
--  :ref:`/1.0/containers <reference_ams-http-api-heading--10containers>`
+-  :ref:`/1.0/containers <ref_ams-http-api-heading--10containers>`
 
-   -  :ref:`/1.0/containers/ <reference_ams-http-api-heading--10containersid>`
+   -  :ref:`/1.0/containers/ <ref_ams-http-api-heading--10containersid>`
 
-      -  :ref:`/1.0/containers//logs <reference_ams-http-api-heading--10containersidlogs>`
+      -  :ref:`/1.0/containers//logs <ref_ams-http-api-heading--10containersidlogs>`
 
-      -  :ref:`/1.0/containers//logs/ <reference_ams-http-api-heading--10containersidlogsname>`
+      -  :ref:`/1.0/containers//logs/ <ref_ams-http-api-heading--10containersidlogsname>`
 
--  :ref:`/1.0/events <reference_ams-http-api-heading--10events>`
+-  :ref:`/1.0/events <ref_ams-http-api-heading--10events>`
 
--  :ref:`/1.0/images <reference_ams-http-api-heading--10images>`
+-  :ref:`/1.0/images <ref_ams-http-api-heading--10images>`
 
-   -  :ref:`/1.0/images/ <reference_ams-http-api-heading--10images>`
+   -  :ref:`/1.0/images/ <ref_ams-http-api-heading--10images>`
 
-      -  :ref:`/1.0/images// <reference_ams-http-api-heading--10imagesidversion>`
+      -  :ref:`/1.0/images// <ref_ams-http-api-heading--10imagesidversion>`
 
 -  ``/1.0/metrics``
--  :ref:`/1.0/nodes <reference_ams-http-api-heading--10nodes>`
+-  :ref:`/1.0/nodes <ref_ams-http-api-heading--10nodes>`
 
-   -  :ref:`/1.0/nodes/ <reference_ams-http-api-heading--10nodesname>`
+   -  :ref:`/1.0/nodes/ <ref_ams-http-api-heading--10nodesname>`
 
--  :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+-  :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-   -  :ref:`/1.0/operations/ <reference_ams-http-api-heading--10operationsuuid>`
+   -  :ref:`/1.0/operations/ <ref_ams-http-api-heading--10operationsuuid>`
 
-      -  :ref:`/1.0/operations//wait <reference_ams-http-api-heading--10operationsuuidwait>`
+      -  :ref:`/1.0/operations//wait <ref_ams-http-api-heading--10operationsuuidwait>`
 
-      -  :ref:`/1.0/operations//websocket <reference_ams-http-api-heading--10operationsuuidwebsocket>`
+      -  :ref:`/1.0/operations//websocket <ref_ams-http-api-heading--10operationsuuidwebsocket>`
 
--  :ref:`/1.0/tasks <reference_ams-http-api-heading--10tasks>`
+-  :ref:`/1.0/tasks <ref_ams-http-api-heading--10tasks>`
 
--  :ref:`/1.0/version <reference_ams-http-api-heading--10version>`
+-  :ref:`/1.0/version <ref_ams-http-api-heading--10version>`
 
 API details
 ===========
 
-.. _reference_ams-http-api-heading--10:
+.. _ref_ams-http-api-heading--10:
 
 ``/1.0/``
 ---------
@@ -366,7 +366,7 @@ Output (if trusted):
      }
    }
 
-.. _reference_ams-http-api-heading--10addons:
+.. _ref_ams-http-api-heading--10addons:
 
 ``/1.0/addons``
 ---------------
@@ -431,7 +431,7 @@ For an addon upload, the ``X-AMS-Request`` header is comprised of:
 The payload to upload must be a tarball compressed with bzip2. Also, it
 must contain a manifest.yaml which declares the basic addon information
 and at least an install hook for the creation. For the layout addon
-tarball file and supported syntaxes. please refer to :ref:`addon creation <howto_addon_landing>` for
+tarball file and supported syntaxes. please refer to :ref:`addon creation <howto_addons_landing>` for
 more details.
 
 Example:
@@ -472,9 +472,9 @@ Output:
    }
 
 To monitor the status of an addon upload operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10addonsname:
+.. _ref_ams-http-api-heading--10addonsname:
 
 ``/1.0/addons/<id or name>``
 ----------------------------
@@ -566,7 +566,7 @@ Output:
    }
 
 To monitor the status of an addon deletion operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
 PATCH (ETag supported)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -630,9 +630,9 @@ Output:
    }
 
 To monitor the status of an addon update operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10addonsnameversion:
+.. _ref_ams-http-api-heading--10addonsnameversion:
 
 ``/1.0/addons/<id or name>/<version>``
 --------------------------------------
@@ -685,9 +685,9 @@ Output:
    }
 
 To monitor the status of an addon version deletion operation, please
-refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10applications:
+.. _ref_ams-http-api-heading--10applications:
 
 ``/1.0/applications``
 ---------------------
@@ -804,9 +804,9 @@ Output:
    }
 
 To monitor the status of an application creation operation, please refer
-to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10applicationsname:
+.. _ref_ams-http-api-heading--10applicationsname:
 
 ``/1.0/applications/<id or name>``
 ----------------------------------
@@ -963,7 +963,7 @@ Example
    $ curl -s --header "Content-Type: application/json" -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/applications/my-app
 
 To monitor the status of an application update operation, please refer
-to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
 The following fields can be modified when updating an application.
 Changing some of those fields will lead to creating another application
@@ -1062,9 +1062,9 @@ Output:
    }
 
 To monitor the status of an application removal operation, please refer
-to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10applicationsnameversion:
+.. _ref_ams-http-api-heading--10applicationsnameversion:
 
 ``/1.0/applications/<id or name>/<version>``
 --------------------------------------------
@@ -1147,7 +1147,7 @@ Output:
    }
 
 To monitor the status of an application version removal operation,
-please refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+please refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
 PATCH
 ~~~~~
@@ -1204,9 +1204,9 @@ Output:
    }
 
 To monitor the status of an application version update operation, please
-refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10applicationsnamemanifest:
+.. _ref_ams-http-api-heading--10applicationsnamemanifest:
 
 ``/1.0/applications/<id or name>/manifest``
 -------------------------------------------
@@ -1244,7 +1244,7 @@ Output:
 The use of this API requires the ``application_manifest_download``
 extension is supported by the server.
 
-.. _reference_ams-http-api-heading--10applicationsnameversionmanifest:
+.. _ref_ams-http-api-heading--10applicationsnameversionmanifest:
 
 ``/1.0/applications/<id or name>/<version>/manifest``
 -----------------------------------------------------
@@ -1282,7 +1282,7 @@ Output:
 The use of this API requires the ``application_manifest_download``
 extension is supported by the server.
 
-.. _reference_ams-http-api-heading--10certificates:
+.. _ref_ams-http-api-heading--10certificates:
 
 ``/1.0/certificates``
 ---------------------
@@ -1360,7 +1360,7 @@ Output:
      "metadata": null
    }
 
-.. _reference_ams-http-api-heading--10certificatesid:
+.. _ref_ams-http-api-heading--10certificatesid:
 
 ``/1.0/certificates/<fingerprint>``
 -----------------------------------
@@ -1441,9 +1441,9 @@ Output:
    }
 
 To monitor the status of a certificate removal operation, please refer
-to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10config:
+.. _ref_ams-http-api-heading--10config:
 
 ``/1.0/config``
 ---------------
@@ -1560,9 +1560,9 @@ Output:
    }
 
 To monitor the status of a configuration modification operation, please
-refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10containers:
+.. _ref_ams-http-api-heading--10containers:
 
 ``/1.0/containers``
 -------------------
@@ -1710,9 +1710,9 @@ Output:
    }
 
 To monitor the status of a container creation operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10containersid:
+.. _ref_ams-http-api-heading--10containersid:
 
 ``/1.0/containers/<id>``
 ------------------------
@@ -1832,9 +1832,9 @@ Output:
    }
 
 To monitor the status of a container removal operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10containersidlogs:
+.. _ref_ams-http-api-heading--10containersidlogs:
 
 ``/1.0/containers/<id>/logs``
 -----------------------------
@@ -1874,7 +1874,7 @@ Output:
      ]
    }
 
-.. _reference_ams-http-api-heading--10containersidlogsname:
+.. _ref_ams-http-api-heading--10containersidlogsname:
 
 ``/1.0/containers/<id>/logs/<name>``
 ------------------------------------
@@ -1899,7 +1899,7 @@ Output: TABLEHEADER#X#TABLEHEADER#X#```#X#TABLEEND#X#TABLEEND
 
 01-28 07:22:44.578 7 7 V vold : Detected support for: ext4 vfat … \``\`
 
-.. _reference_ams-http-api-heading--10events:
+.. _ref_ams-http-api-heading--10events:
 
 ``/1.0/events``
 ---------------
@@ -1968,7 +1968,7 @@ for example:
      "type": "operation"                            // Notification type
    }
 
-.. _reference_ams-http-api-heading--10images:
+.. _ref_ams-http-api-heading--10images:
 
 ``/1.0/images``
 ---------------
@@ -2074,9 +2074,9 @@ Output:
    }
 
 To monitor the status of an image registration operation, please refer
-to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10imagesid:
+.. _ref_ams-http-api-heading--10imagesid:
 
 ``/1.0/images/<id or name>``
 ----------------------------
@@ -2231,7 +2231,7 @@ When updating an image with the above field, no new image version will
 be generated.
 
 To monitor the status of an image update operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
 .. _delete-6:
 
@@ -2290,9 +2290,9 @@ Output:
    }
 
 To monitor the status of an image removal operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10imagesidversion:
+.. _ref_ams-http-api-heading--10imagesidversion:
 
 ``/1.0/images/<id or name>/<version>``
 --------------------------------------
@@ -2345,9 +2345,9 @@ Output:
    }
 
 To monitor the status of an image version removal operation, please
-refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10nodes:
+.. _ref_ams-http-api-heading--10nodes:
 
 ``/1.0/nodes``
 --------------
@@ -2477,9 +2477,9 @@ Output:
    }
 
 To monitor the status of an LXD node registration operation, please
-refer to :ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+refer to :ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10nodesname:
+.. _ref_ams-http-api-heading--10nodesname:
 
 ``/1.0/nodes/<name>``
 ---------------------
@@ -2617,7 +2617,7 @@ Output:
    }
 
 To monitor the status of an LXD node update operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
 .. _delete-8:
 
@@ -2677,9 +2677,9 @@ Output:
    }
 
 To monitor the status of a LXD node removal operation, please refer to
-:ref:`/1.0/operations <reference_ams-http-api-heading--10operations>`
+:ref:`/1.0/operations <ref_ams-http-api-heading--10operations>`
 
-.. _reference_ams-http-api-heading--10operations:
+.. _ref_ams-http-api-heading--10operations:
 
 ``/1.0/operations``
 -------------------
@@ -2719,7 +2719,7 @@ Output:
      }
    }
 
-.. _reference_ams-http-api-heading--10operationsuuid:
+.. _ref_ams-http-api-heading--10operationsuuid:
 
 ``/1.0/operations/<uuid>``
 --------------------------
@@ -2820,7 +2820,7 @@ Output:
 
 HTTP code for this should be 202 (Accepted).
 
-.. _reference_ams-http-api-heading--10operationsuuidwait:
+.. _ref_ams-http-api-heading--10operationsuuidwait:
 
 ``/1.0/operations/<uuid>/wait``
 -------------------------------
@@ -2889,7 +2889,7 @@ Output:
      }
    }
 
-.. _reference_ams-http-api-heading--10operationsuuidwebsocket:
+.. _ref_ams-http-api-heading--10operationsuuidwebsocket:
 
 ``/1.0/operations/<uuid>/websocket``
 ------------------------------------
@@ -2910,7 +2910,7 @@ GET (``?secret=SECRET``)
 -  Operation: sync
 -  Cancellable: no
 
-.. _reference_ams-http-api-heading--10tasks:
+.. _ref_ams-http-api-heading--10tasks:
 
 ``/1.0/tasks``
 --------------
@@ -2952,7 +2952,7 @@ Output:
      ]
    }
 
-.. _reference_ams-http-api-heading--10version:
+.. _ref_ams-http-api-heading--10version:
 
 ``/1.0/version``
 ----------------

@@ -1,4 +1,4 @@
-.. _explanation_containers:
+.. _exp_containers:
 
 ================
 About containers
@@ -19,21 +19,21 @@ Regular containers are containers that are launched from either an
 application or an image. They exist until they are deleted.
 
 Base containers are temporary containers that are used when
-:ref:`bootstrapping an application <explanation_applications-bootstrap>`.
+:ref:`bootstrapping an application <exp_applications-bootstrap>`.
 They are automatically deleted when the application bootstrap is
 completed.
 
 When we refer to containers in this documentation without specifying the
 container type, we mean regular containers.
 
-.. _explanation_containers-application-vs-raw:
+.. _exp_containers-application-vs-raw:
 
 Application containers vs. raw containers
 =========================================
 
 Containers are based on either
-:ref:`applications <explanation_applications>`
-or :ref:`images <reference_provided-images>`.
+:ref:`applications <exp_applications>`
+or :ref:`images <ref_provided-images>`.
 That means that if you launch an application or an image, AMS
 automatically creates a container for it.
 
@@ -41,7 +41,7 @@ Application containers, thus containers created when launching an
 application, run the full Android system. If the application is based on
 an Android app (an APK package), this app is launched after the system
 boots and monitored by the
-:ref:`watchdog <reference_application-manifest-watchdog>`.
+:ref:`watchdog <ref_application-manifest-watchdog>`.
 With the default configuration, you will see only the app and not the
 Android launcher.
 
@@ -56,7 +56,7 @@ All containers in Anbox Cloud are ephemeral, which means that as soon as
 a container is stopped, all of its data is gone. Anbox Cloud **DOES
 NOT** back up any data from the Android or the outer Ubuntu container.
 Backup and restore of data must be implemented separately through
-:ref:`addons <reference_addons>`. See :ref:`howto_addon_backup-and-restore` for
+:ref:`addons <ref_addons>`. See :ref:`howto_addons_backup-and-restore` for
 information on how to do this.
 
 Container life cycle

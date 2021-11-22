@@ -1,4 +1,4 @@
-.. _howto_addon_additional-architecture:
+.. _howto_addons_emulate-platforms:
 
 ==========================
 Example: Emulate platforms

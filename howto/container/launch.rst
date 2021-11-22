@@ -5,12 +5,12 @@ Launch a container
 ==================
 
 You can launch a container for a registered application or image (see
-:ref:`Application containers vs. raw containers <explanation_containers-application-vs-raw>`),
+:ref:`Application containers vs. raw containers <exp_containers-application-vs-raw>`),
 either by using the ``amc`` tool or through another service over the
 REST API that the AMS service provides.
 
 By default, the container will run headless. See :ref:`howto_container_access` for
-instructions on how to access it for debugging purposes, and :ref:`explanation_application-streaming`
+instructions on how to access it for debugging purposes, and :ref:`exp_application-streaming`
 for information about the streaming stack.
 
 .. _howto_container_launch-application-containers:
@@ -59,7 +59,7 @@ The command for launching a raw container from an image is:
    amc launch --raw <image id>
 
 As argument, provide the ID or name of the image for which you want to
-launch a container. See :ref:`reference_provided-images` for a
+launch a container. See :ref:`ref_provided-images` for a
 list of images that are available in Anbox Cloud.
 
 You can also list all available images with the ``amc image ls``
@@ -92,7 +92,7 @@ Launch a container with a different Anbox platform
 ==================================================
 
 By default, every container starts with the ``null`` platform (see
-:ref:`reference_platforms`).
+:ref:`ref_platforms`).
 The selected platform cannot be changed at runtime and must be selected
 when the container is created. For example, you can launch a container
 with the ``swrast`` platform like this:

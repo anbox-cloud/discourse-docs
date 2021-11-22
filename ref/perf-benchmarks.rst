@@ -1,4 +1,4 @@
-.. _reference_perf-benchmarks:
+.. _ref_perf-benchmarks:
 
 ======================
 Performance benchmarks

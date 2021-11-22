@@ -1,4 +1,4 @@
-.. _reference_sdks:
+.. _ref_sdks:
 
 ================
 Anbox Cloud SDKs
@@ -8,11 +8,11 @@ Anbox Cloud provides a series of Software Development Kits (SDKs) to
 facilitate integrating and extending Anbox Cloud for different use
 cases:
 
--  :ref:`Anbox Platform SDK <reference_sdks-anbox-platform-sdk>`
--  :ref:`AMS SDK <reference_sdks-ams-sdk>`
--  :ref:`Anbox Streaming SDK <reference_sdks-streaming-sdk>`
+-  :ref:`Anbox Platform SDK <ref_sdks-anbox-platform-sdk>`
+-  :ref:`AMS SDK <ref_sdks-ams-sdk>`
+-  :ref:`Anbox Streaming SDK <ref_sdks-streaming-sdk>`
 
-.. _reference_sdks-anbox-platform-sdk:
+.. _ref_sdks-anbox-platform-sdk:
 
 Anbox Platform SDK
 ==================
@@ -52,7 +52,7 @@ examples are included:
 -  ``audio_streaming`` - A platform plugin that provides a more advanced
    example of how a platform plugin can process audio and input data.
 
-.. _reference_sdks-ams-sdk:
+.. _ref_sdks-ams-sdk:
 
 AMS SDK
 =======
@@ -94,7 +94,7 @@ Clients must authenticate to AMS before communicating with it. For more
 information, see :ref:`howto_manage_ams-access`
 and the `AMS SDK documentation <https://github.com/anbox-cloud/ams-sdk>`_ on GitHub.
 
-.. _reference_sdks-streaming-sdk:
+.. _ref_sdks-streaming-sdk:
 
 Anbox Streaming SDK
 ===================

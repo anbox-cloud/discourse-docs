@@ -1,4 +1,4 @@
-.. _explanation_gpu-support:
+.. _exp_gpu-support:
 
 =================
 About GPU support
@@ -54,7 +54,7 @@ GPUs have limited capacity that can be shared amongst multiple
 containers. To fine-tune how many containers can run on a given node,
 configure the number of available GPU slots on the node.
 
-See :ref:`GPU slots <explanation_clustering-gpu-slots>`
+See :ref:`GPU slots <exp_clustering-gpu-slots>`
 for detailed information.
 
 Using GPUs inside a Container
@@ -66,7 +66,7 @@ every container owning a GPU slot. For Nvidia GPUs LXD uses the `Nvidia containe
 the GPU driver of the host available to a container. When GPUs from
 Intel or AMD are being used no GPU driver is made available
 automatically. It has to be provided by an
-:ref:`addon <howto_addon_landing>`.
+:ref:`addon <howto_addons_landing>`.
 
 If a GPU driver is available inside the container there are no further
 differences of how to use it in comparison to a regular environment.
@@ -100,7 +100,7 @@ software based rendering.
 
 If you want to force an application to use software rendering and video
 encoding when streaming via the Anbox Stream Gateway you can simply set
-a an :ref:`instance type <reference_instance-types>` which
+a an :ref:`instance type <ref_instance-types>` which
 doesn’t require a GPU slot. For example
 
 .. code:: bash
