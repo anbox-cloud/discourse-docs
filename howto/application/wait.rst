@@ -17,19 +17,19 @@ The supported conditions for an application are as follows:
 
    * - Name
      - Value
-   * - \ ``instance-type``\
+   * - ``instance-type``
      - Supported instance type. See :ref:`ref_instance-types` for a list of available instance types.
-   * - \ ``addons``\
+   * - ``addons``
      - Comma-separated list of addons.
-   * - \ ``tag``\
+   * - ``tag``
      - Application tag name (deprecated, use ``tags`` instead).
-   * - \ ``tags``\
+   * - ``tags``
      - Comma-separated list of tags.
-   * - \ ``published``\
+   * - ``published``
      - “true” or “false” indicating whether the application is published.
-   * - \ ``immutable``\
+   * - ``immutable``
      - “true” or “false” indicating whether the application is changeable.
-   * - \ ``status``\
+   * - ``status``
      - Application status, possible values: “error”, “unknown”, “initializing”, “ready”, “deleted”
 
 

@@ -33,14 +33,15 @@ credentials and prerequisites:
    -  `Google Cloud platform <https://cloud.google.com/>`_
    -  `Microsoft Azure <https://azure.microsoft.com/>`_
 
--  Your *Ubuntu Advantage for*\ **Applications** token. If you don’t
+-  Your *Ubuntu Advantage for Applications* token. If you don’t
    have one yet, `speak to your Canonical representative <https://anbox-cloud.io/contact-us>`_. If you already
    have a UA Applications token, sign in on https://ubuntu.com/advantage
-   to retrieve it. [note type=“caution” status=“Warning”]The *Ubuntu
-   Advantage for*\ **Infrastructure** token that every user gets for
-   free for personal use does **NOT** work and will result in a failed
-   deployment. You must purchase a *Ubuntu Advantage
-   for*\ **Applications** subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
+   to retrieve it.
+
+   .. warning::
+      The *Ubuntu Advantage for Infrastructure* token that every user gets for
+      free for personal use does **NOT** work and will result in a failed
+      deployment. You must purchase a *Ubuntu Advantage for Applications* subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
 
 If you don’t meet these requirements, you might still be able to install
 Anbox Cloud in a different way. See :ref:`howto_install_customise`
@@ -119,15 +120,15 @@ correct licences you’re granted as part of your licence agreement with
 Canonical, next to other services available through your subscription
 like `Livepatch <https://ubuntu.com/livepatch>`_.
 
-You can retrieve your *Ubuntu Advantage for*\ **Applications** token at
+You can retrieve your *Ubuntu Advantage for Applications* token at
 https://ubuntu.com/advantage after logging in. You should record the
 token as you will need it for every deployment of Anbox Cloud.
 
 .. warning::
    The *Ubuntu Advantage
-   for*\ **Infrastructure** token that every user gets for free for
+   for Infrastructure* token that every user gets for free for
    personal use does **NOT** work and will result in a failed deployment.
-   You must purchase a *Ubuntu Advantage for*\ **Applications**
+   You must purchase a *Ubuntu Advantage for Applications*
    subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
 
 To provide your token when deploying with Juju, you need an overlay file

@@ -11,11 +11,11 @@ Several Juju units of my deployment show ``hook: installation failure``. Why?
 =============================================================================
 
 You use the wrong Ubuntu Advantage token. Most likely you used the
-*Ubuntu Advantage for*\ **Infrastructure** which every use gets for free
+*Ubuntu Advantage for Infrastructure* which every use gets for free
 limited personal use.
 
 In order to deploy Anbox Cloud you will need a commercial subscription
-for *Ubuntu Advantage for*\ **Applications**. Using a different token
+for *Ubuntu Advantage for Applications*. Using a different token
 will result in a failed deployment and is currently not recoverable.
 
 A container failed to start. Where can I find more information why it failed to start?

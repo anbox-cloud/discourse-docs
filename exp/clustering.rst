@@ -134,9 +134,12 @@ command:
    Determining the correct number of
    GPU slots for a specific GPU model depends on various things. The
    following just gives an idea of what should drive the decision for the
-   right number of GPU slots: - Memory a GPU provides - Memory a container
-   uses - Number of parallel encoding pipelines a GPU offers
-   
+   right number of GPU slots:
+
+   - Memory a GPU provides
+   - Memory a container uses
+   - Number of parallel encoding pipelines a GPU offers
+
    Finding the right number of GPU slots requires benchmarking and testing
    of the intended workload.
 

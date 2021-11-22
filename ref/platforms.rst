@@ -18,11 +18,11 @@ Supported platforms
 
    * - Name
      - Behavior
-   * - \ ``null``\ 
+   * - ``null``
      - A headless-gl platform. No rendering is performed. No audio input/output. Useful for functional tests. It’s used by default if no platform is specified when launching a container.
-   * - \ ``webrtc``\ 
+   * - ``webrtc``
      - Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVidia GPUs as well as LLVMPipe based software rendering if no GPU is detected. Support audio input/output.
-   * - \ ``swrast``\ 
+   * - ``swrast``
      - \ **S**\ oft\ **w**\ are **Rast**\ erization platform. A LLVMPipe based software rendering platform. Useful for visual tests. No audio input/output.
 
 

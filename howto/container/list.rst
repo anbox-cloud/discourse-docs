@@ -34,13 +34,13 @@ following attributes are valid keys:
 
    * - Name
      - Value
-   * - \ ``app``\ 
+   * - ``app``
      - Application name or ID
-   * - \ ``type``\ 
+   * - ``type``
      - Container type, possible values: “base”, “regular”
-   * - \ ``node``\ 
+   * - ``node``
      - Node on which the container runs
-   * - \ ``status``\ 
+   * - ``status``
      - Container status, possible values: “created”, “prepared”, “started”, “stopped”, “running”, “error”, “deleted”, “unknown”
 
 

@@ -2582,8 +2582,7 @@ A sample payload as follows:
      "memory_allocation_rate": 2
    }
 
-Example:
-\`\ ``bash curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload"<AMS_SERVICE_URL>/1.0/nodes/lxd0``
+Example: ``bash curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload"<AMS_SERVICE_URL>/1.0/nodes/lxd0``
 
 Output:
 

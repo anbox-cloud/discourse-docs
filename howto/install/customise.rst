@@ -15,7 +15,7 @@ installation:
 -  Copying an existing configuration
 -  Testing a pre-release version
 
-…and many more. This part of the documentation will help you with this.
+... and many more. This part of the documentation will help you with this.
 
 What You Will Need
 ==================
@@ -101,7 +101,7 @@ And for the ``anbox-cloud`` bundle:
    $ juju add-machine ssh:ubuntu@192.168.1.12
 
 .. hint::
-   \ ``ubuntu`` is the user that can
+   ``ubuntu`` is the user that can
    ssh to these machines, it can be another depending on how the operating
    system on the machines is setup. The user needs to have administrator
    rights on the machine.

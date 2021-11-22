@@ -75,9 +75,9 @@ filters to back up files that match wildcard patterns:
 
    * - Filter
      - Description
-   * - \ ``include``\ 
+   * - ``include``
      - Include files in resulting tarball with a wildcard
-   * - \ ``exclude``\ 
+   * - ``exclude``
      - Exclude files in resulting tarball with a wildcard
 
 

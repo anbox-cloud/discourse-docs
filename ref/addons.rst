@@ -62,7 +62,7 @@ The following table lists the valid keys in an addon manifest:
    * - provides.abi-support
      - string array
      - Tells AMS that this addon adds support for the given architecture even if the application doesn’t support it natively. Use this when your addon brings instruction translation or provides libraries for other architectures.
-     - \ ``arm64-v8a``, ``armeabi-v7a``, ``armeabi``\
+     - ``arm64-v8a``, ``armeabi-v7a``, ``armeabi``
 
 
 .. _ref_addons-env-variables:
@@ -87,19 +87,20 @@ The following variables are available:
      -
    * - ANBOX_DIR
      - Path to the Anbox directory.
-     - \ ``/var/lib/anbox``\
+     - ``/var/lib/anbox``
    * - ANDROID_ROOTFS
      - Path to the Android RootFS.
-     - \ ``/var/lib/anbox/rootfs``\
+     - ``/var/lib/anbox/rootfs``
    * - BOOT_PACKAGE
      - Boot package of the APK.
      -
    * - CONTAINER_TYPE
      - Type of container being run.
-     - \ ``regular`` (container running an application or a raw image)\ ``base`` (container bootstrapping, thus creating or updating, an application)
+     - | ``regular`` (container running an application or a raw image)
+       | ``base`` (container bootstrapping, thus creating or updating, an application)
    * - ANBOX_EXIT_CODE
-     - \ *``post-stop`` hook only:* Exit code of the Anbox process.
-     - \ ``0`` if no error occurred, otherwise set to the actual return code.
+     - *``post-stop`` hook only:* Exit code of the Anbox process.
+     - ``0`` if no error occurred, otherwise set to the actual return code.
 
 
 .. _ref_addons-hooks:

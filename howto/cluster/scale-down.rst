@@ -6,9 +6,10 @@ Scale down a LXD cluster
 
 Scaling down a LXD cluster involves more checks than scaling up.
 
-There are two important requirements when scaling down: - The node you
-remove must not have any containers left. - You must wait for a node to
-be fully removed before you can start removing another one.
+There are two important requirements when scaling down:
+
+- The node you remove must not have any containers left.
+- You must wait for a node to be fully removed before you can start removing another one.
 
 Prepare the node for removal
 ============================

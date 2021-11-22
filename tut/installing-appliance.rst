@@ -53,17 +53,17 @@ accounts and prerequisites:
          `Oracle Cloud (OCI) <https://www.oracle.com/cloud/>`_. Official
          support for other clouds, namely Azure and Google Cloud, will be
          added soon.
-   -  Your *Ubuntu Advantage for*\ **Applications** token. If you don’t
+   -  Your *Ubuntu Advantage for Applications* token. If you don’t
       have one yet, `speak to your Canonical representative <https://anbox-cloud.io/contact-us>`_. If you
       already have a UA Applications token, sign in on
       https://ubuntu.com/advantage to retrieve it.
 
       .. warning::
          The *Ubuntu Advantage
-         for*\ **Infrastructure** token that every user gets for free for
+         for Infrastructure* token that every user gets for free for
          personal use does **NOT** work and will result in a failed
          deployment. You must purchase a *Ubuntu Advantage
-         for*\ **Applications** subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
+         for Applications* subscription by `contacting Canonical <https://anbox-cloud.io/contact-us>`_.
 
 .. _tut_installing-appliance-install:
 

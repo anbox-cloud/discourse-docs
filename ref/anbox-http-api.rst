@@ -533,23 +533,23 @@ all values in the data are represented as floating-point data.
 
    * - Sensor Type
      - JSON Data structure
-   * - \ ``acceleration``\
+   * - ``acceleration``
      - {“type”: “acceleration”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``gyroscope``\
+   * - ``gyroscope``
      - {“type”: “gyroscope”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``magnetic-field``\
+   * - ``magnetic-field``
      - {“type”: “magnetic-field”, “x”: <data>, “y”: <data>, “z”: <data>}
-   * - ``orientation``\
+   * - ``orientation``
      - {“type”: “orientation”, “azimuth”: <data>, “pitch”: <data>, “roll”: <data>}
-   * - ``humidity``\
+   * - ``humidity``
      - {“type”: “humidity”, “value”: <data>}
-   * - ``pressure``\
+   * - ``pressure``
      - {“type”: “pressure”, “value”: <data>}
-   * - ``light``\
+   * - ``light``
      - {“type”: “light”, “value”: <data>}
-   * - ``proximity``\
+   * - ``proximity``
      - {“type”: “proximity”, “value”: <data>}
-   * - ``temperature``\
+   * - ``temperature``
      - {“type”: “temperature”, “value”: <data>}
 
 

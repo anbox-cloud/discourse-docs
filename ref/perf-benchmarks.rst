@@ -54,3 +54,28 @@ Bare metal
 
 AWS
 ===
+
+.. list-table::
+   :header-rows: 1
+
+   * - Instance type
+     - Anbox Cloud version
+     - Rendering / encoding
+     - Resolution
+     - Application
+     - # Containers
+     - Avg. FPS
+   * - m6g.2xlarge
+     - 1.11.2 (appliance)
+     - software / software
+     - 720p
+     - Android 10 Launcher
+     - 3
+     - 20
+   * - m5a.2xlarge
+     - 1.11.2 (appliance)
+     - software / software
+     - 720p
+     - Android 10 Launcher
+     - 3
+     - 13

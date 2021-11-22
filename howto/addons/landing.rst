@@ -14,13 +14,13 @@ See :ref:`ref_addons` for more
 information and a complete reference on addons. Follow the :ref:`tut_creating-addon`
 tutorial to learn how to write a simple addon.
 
-You can use addons to, for example: - Enable SSH access for automation
-tools (see :ref:`tut_creating-addon`) - Set
-up user-specific data when starting an application (see :ref:`Restore data <howto_addons_backup-and-restore-restore>`)
-- Install additional tools in the container (see :ref:`howto_addons_install-tools`) -
-Back up data when the container is stopping (see :ref:`howto_addons_backup-and-restore`) -
-Configure the Android system before running the application (see
-:ref:`howto_addons_customise-android`)
+You can use addons to, for example:
+
+- Enable SSH access for automation tools (see :ref:`tut_creating-addon`)
+- Set up user-specific data when starting an application (see :ref:`Restore data <howto_addons_backup-and-restore-restore>`)
+- Install additional tools in the container (see :ref:`howto_addons_install-tools`)
+- Back up data when the container is stopping (see :ref:`howto_addons_backup-and-restore`)
+- Configure the Android system before running the application (see :ref:`howto_addons_customise-android`)
 - Provide support for other platforms (see :ref:`howto_addons_emulate-platforms`)
 
 If you have used addons before Anbox Cloud 1.12, see the :ref:`migration guide <howto_addons_migrate>`

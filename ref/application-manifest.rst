@@ -16,46 +16,46 @@ The available attributes are listed in the following table:
    * - Name
      - Value type
      - Description
-   * - \ ``name``\ 
+   * - ``name``
      - string
      - Verbose name of the application. The following special characters are not allowed: ``< > : " / \ &#124; ? *``, as well as space
-   * - \ ``version``\ 
+   * - ``version``
      - string
      - Version to encode with the application. Maximum length is 50 characters.
-   * - \ ``instance-type``\ 
+   * - ``instance-type``
      - string
      - Container instance type that all containers created for the application will use.
-   * - \ ``required-permissions``\ 
+   * - ``required-permissions``
      - array of strings
      - List of permissions to automatically grant to the application. See `Android Permissions <https://developer.android.com/guide/topics/permissions/overview>`__ for a list of available permissions. If ``[*]`` was given, all required runtime permissions for the application will be granted on application installation.
-   * - \ ``image`` (optional)
+   * - ``image`` (optional)
      - string
      - Name or ID of an image to be used for the application. The default image is used if empty.
-   * - \ ``addons`` (optional)
+   * - ``addons`` (optional)
      - array
      - List of addons to be installed during the application bootstrap process.
-   * - \ ``tags`` (optional)
+   * - ``tags`` (optional)
      - array
      - List of tags to be associated with the application.
-   * - \ ``boot-package`` (optional)
+   * - ``boot-package`` (optional)
      - string
      - Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present).
-   * - \ ``boot-activity`` (optional)
+   * - ``boot-activity`` (optional)
      - string
      - Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest).
-   * - \ ``video-encoder`` (optional)
+   * - ``video-encoder`` (optional)
      - string
      - Video encoder to be used by a container launched from the application (default: gpu-preferred). Possible values are: gpu, gpu-preferred, software
-   * - \ ``watchdog`` (optional)
+   * - ``watchdog`` (optional)
      - map
      - Watchdog settings to be configured on application installation.
-   * - \ ``services`` (optional)
+   * - ``services`` (optional)
      - array
      - Services to be provided from the installed application.
-   * - \ ``resources`` (optional)
+   * - ``resources`` (optional)
      - map
      - Resources to be allocated on application installation.
-   * - \ ``extra-data`` (optional)
+   * - ``extra-data`` (optional)
      - array
      - List of additional data to be installed on application installation.
 
@@ -89,17 +89,19 @@ encoder according to different scenarios.
 
    * - Name
      - Description
-   * - \ ``gpu``\ 
+   * - ``gpu``
      - A GPU-based video encoder
-   * - \ ``gpu-preferred``\ 
+   * - ``gpu-preferred``
      - A GPU-based video encoder if GPU slots are not used up, otherwise, fall back to use a software-based video encoder
-   * - \ ``software``\ 
+   * - ``software``
      - A software-based video encoder
 
 
 When ``gpu`` video encoder is specified in the manifest, AMS can fail to
-create an application if: - All GPU slots are used up by running
-containers. - There is no GPU support across the entire LXD cluster.
+create an application if:
+
+- All GPU slots are used up by running containers.
+- There is no GPU support across the entire LXD cluster.
 
 .. _ref_application-manifest-watchdog:
 
@@ -115,10 +117,10 @@ The ``watchdog`` attribute includes the following field definitions:
    * - Name
      - Value type
      - Description
-   * - \ ``disabled``\ 
+   * - ``disabled``
      - Boolean
      - Toggle application watchdog on or off (default: false)
-   * - \ ``allowed-packages``\ 
+   * - ``allowed-packages``
      - array of strings
      - Besides the boot package, list of packages to be allowed to display in the foreground
 
@@ -169,16 +171,16 @@ must define the following properties for each service:
    * - Name
      - Value type
      - Description
-   * - \ ``name``\ 
+   * - ``name``
      - string
      - Name of service
-   * - \ ``port``\ 
+   * - ``port``
      - integer
      - Port number to be exposed by the service
-   * - \ ``protocols``\ 
+   * - ``protocols``
      - array of strings
      - Protocols to be used by the service (Possible values are: tcp, udp)
-   * - \ ``expose``\ 
+   * - ``expose``
      - Boolean
      - Expose service to be accessible externally or internally
 
@@ -202,19 +204,19 @@ directive to override the predefined resources.
      - Value type
      - Minimum value
      - Description
-   * - \ ``cpus``\ 
+   * - ``cpus``
      - integer
      - 1
      - Number of vCPU cores
-   * - \ ``memory``\ 
+   * - ``memory``
      - string
      - 3 GB
      - Memory to be assigned to the application
-   * - \ ``disk-size``\ 
+   * - ``disk-size``
      - string
      - 3 GB
      - Disk size to be assigned to the application
-   * - \ ``gpu-slots``\ (optional)
+   * - ``gpu-slots`` (optional)
      - integer
      - 0
      - Number of GPU slots to be assigned to the application
@@ -271,16 +273,16 @@ The fields have the following purpose:
    * - Name
      - Value type
      - Description
-   * - \ ``name``\ 
+   * - ``name``
      - string
      - Name of file or directory to be installed into the Android file system
-   * - \ ``target-path``\ 
+   * - ``target-path``
      - string
      - Target location for the file or directory
-   * - \ ``owner`` (optional)
+   * - ``owner`` (optional)
      - string
      - Owner assigned to the target file or directory in the Android file system
-   * - \ ``permissions`` (optional)
+   * - ``permissions`` (optional)
      - string
      - Permissions assigned to the target file or directory in the Android file system
 
@@ -301,35 +303,35 @@ used:
      - App data installation directory
      - Type
      - Value
-   * - \ ``owner``\ 
+   * - ``owner``
      - sdcard
      - File
      - package_uid:sdcard_rw
-   * - 
+   * -
      - sdcard
      - Dir
      - package_uid:sdcard_rw
-   * - 
+   * -
      - system data
      - File
      - package_uid:package_gid
-   * - 
+   * -
      - system data
      - Dir
      - package_uid:package_gid
-   * - \ ``permissions``\ 
+   * - ``permissions``
      - sdcard
      - File
      - 0660
-   * - 
+   * -
      - sdcard
      - Dir
      - 0771
-   * - 
+   * -
      - system data
      - File
      - 0660
-   * - 
+   * -
      - system data
      - Dir
      - boot package folder -> 0700, nested folders of boot package folder -> 0770

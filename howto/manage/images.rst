@@ -65,7 +65,7 @@ Running ``amc image list`` will now show this image marked as default.
 .. hint::
    Note that you cannot delete an
    image marked as default. You’ll need to set a new default image first.
-   *(does not apply if you only have one image left)*\ 
+   *(does not apply if you only have one image left)*
 
 Delete an image
 ===============
@@ -129,7 +129,7 @@ You can then use the ``foobar`` image as you would any other image.
 .. tip::
    Image updates contain important
    security patches and optimisations. Use older images only when strictly
-   necessary. 
+   necessary.
 
 Manual upload of images
 =======================
