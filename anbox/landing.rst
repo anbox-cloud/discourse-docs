@@ -10,8 +10,8 @@ Placeholder
 .. toctree::
    :titlesonly:
 
-   ../requirements
-   ../release-notes
-   ../roadmap
-   ../supported-versions
-   ../component-versions
+   requirements
+   release-notes
+   roadmap
+   supported-versions
+   component-versions

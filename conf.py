@@ -80,3 +80,11 @@ intersphinx_mapping = {
 rst_epilog = """
 .. include:: /reuse/substitutions.txt
 """
+
+redirects = {
+    "component-versions/index": "../anbox/component-versions/",
+    "supported-versions/index": "../anbox/supported-versions/",
+    "roadmap/index": "../anbox/roadmap/",
+    "changelog/index": "../anbox/release-notes/",
+    "requirements/index": "../anbox/requirements/",
+}
