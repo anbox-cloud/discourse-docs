@@ -10,10 +10,13 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+from git import Repo
 
+if not os.path.isdir('.theme-repo'):
+    Repo.clone_from('https://github.com/evildmp/vanilla-sphinx-test', '.theme-repo')
+if not os.path.islink('vanilla'):
+    os.symlink('.theme-repo/vanilla', 'vanilla')
 
 # -- Project information -----------------------------------------------------
 
@@ -39,8 +42,11 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'env', "v1.11.x"]
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv', '.theme-repo']
 
+rst_epilog = """
+.. include:: /reuse/substitutions.txt
+"""
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -50,16 +56,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'env', "v1.11.x"]
 html_theme_path = ['.']
 html_theme = 'vanilla'
 
-# html_css_files = [
-#     'styles.css',
-# ]
-
-
-# html_title = "your custom sidebar title"
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
+html_show_sphinx = False
+html_last_updated_fmt = ""
 
 # Uses global TOC for side nav instead of default local TOC
 html_sidebars = {
@@ -67,19 +65,8 @@ html_sidebars = {
         'globaltoc.html',
     ]
 }
-#
-# theme_globaltoc_maxdepth = 2
-# theme_globaltoc_includehidden = True
 
-intersphinx_mapping = {
-    'lxd':
-        ('https://linuxcontainers.org/lxd/docs/master/',
-            ('../lxd/doc/_build/html/objects.inv', None)),
-}
-
-rst_epilog = """
-.. include:: /reuse/substitutions.txt
-"""
+# -- Redirects ---------------------------------------------------------------
 
 redirects = {
     "component-versions/index": "../anbox/component-versions/",

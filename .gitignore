@@ -1,1 +1,4 @@
-env
+.venv
+.theme-repo
+vanilla
+warnings.txt
