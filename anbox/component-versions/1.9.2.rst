@@ -1,0 +1,65 @@
+.. _component-versions-1.9.2:
+
+============================
+Component versions for 1.9.2
+============================
+
+Charms
+======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/lxd
+     - 29
+   * - cs:~anbox-charmers/ams
+     - 32
+   * - cs:~anbox-charmers/ams-node-controller
+     - 26
+   * - cs:~anbox-charmers/aar
+     - 17
+   * - cs:~anbox-charmers/anbox-stream-gateway
+     - 39
+   * - cs:~anbox-charmers/anbox-stream-agent
+     - 32
+   * - cs:~anbox-charmers/coturn
+     - 34
+   * - cs:~anbox-charmers/anbox-cloud-dashboard
+     - 2
+   * - cs:~anbox-charmers/ams-load-balancer
+     - 24
+
+Bundles
+=======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/anbox-cloud
+     - 25
+   * - cs:~anbox-charmers/anbox-cloud-core
+     - 14
+
+Snaps
+=====
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - ams
+     - 1.9.2
+   * - aar
+     - 1.9.2
+   * - ams-node-controller
+     - 1.9.2
+
+Debian packages
+===============
+n/a
+
+Anbox images
+============
+n/a

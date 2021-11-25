@@ -1,0 +1,94 @@
+.. _component-versions-1.9.1:
+
+============================
+Component versions for 1.9.1
+============================
+
+Charms
+======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/lxd
+     - 28
+   * - cs:~anbox-charmers/ams
+     - 31
+   * - cs:~anbox-charmers/ams-node-controller
+     - 25
+   * - cs:~anbox-charmers/aar
+     - 16
+   * - cs:~anbox-charmers/anbox-stream-gateway
+     - 38
+   * - cs:~anbox-charmers/anbox-stream-agent
+     - 31
+   * - cs:~anbox-charmers/coturn
+     - 33
+   * - cs:~anbox-charmers/nats
+     - 9
+   * - cs:~anbox-charmers/ams-load-balancer
+     - 23
+
+Bundles
+=======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/anbox-cloud
+     - 24
+   * - cs:~anbox-charmers/anbox-cloud-core
+     - 13
+
+Snaps
+=====
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - ams
+     - 1.9.1
+   * - aar
+     - 1.9.1
+   * - ams-node-controller
+     - 1.9.1
+   * - anbox-cloud-dashboard
+     - 1.9.1
+   * - anbox-stream-agent
+     - 1.9.1
+   * - anbox-stream-gateway
+     - 1.9.1
+
+Debian packages
+===============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Ubuntu Release
+     - Version
+   * - anbox-modules-dkms
+     - 20.04 (focal)
+     - 1:1.9.1~focal0
+   * - anbox-modules-dkms
+     - 18.04 (bionic)
+     - 1:1.9.1~bionic0
+
+Anbox images
+============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - bionic:android7:amd64
+     - 1.9.1
+   * - bionic:android7:arm64
+     - 1.9.1
+   * - bionic:android10:amd64
+     - 1.9.1
+   * - bionic:android10:arm64
+     - 1.9.1

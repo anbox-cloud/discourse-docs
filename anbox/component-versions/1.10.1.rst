@@ -1,0 +1,107 @@
+.. _component-versions-1.10.1:
+
+=============================
+Component versions for 1.10.1
+=============================
+
+Charms
+======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/lxd
+     - 48
+   * - cs:~anbox-charmers/ams
+     - 47
+   * - cs:~anbox-charmers/ams-node-controller
+     - 41
+   * - cs:~anbox-charmers/aar
+     - 34
+   * - cs:~anbox-charmers/anbox-stream-gateway
+     - 54
+   * - cs:~anbox-charmers/anbox-stream-agent
+     - 47
+   * - cs:~anbox-charmers/coturn
+     - 49
+   * - cs:~anbox-charmers/nats
+     - 9
+   * - cs:~anbox-charmers/ams-load-balancer
+     - 38
+
+
+Validated revisions of 3rd party charms
+=======================================
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~containers/easyrsa
+     - 333
+   * - cs:~containers/etcd
+     - 540
+
+Bundles
+=======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/anbox-cloud
+     - 39
+   * - cs:~anbox-charmers/anbox-cloud-core
+     - 28
+
+Snaps
+=====
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - ams
+     - 1.10.1
+   * - aar
+     - 1.10.1
+   * - ams-node-controller
+     - 1.10.1
+   * - anbox-cloud-dashboard
+     - 1.10.0
+   * - anbox-stream-agent
+     - 1.10.0
+   * - anbox-stream-gateway
+     - 1.10.0
+
+Debian packages
+===============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Ubuntu Release
+     - Version
+   * - anbox-modules-dkms-110
+     - 20.04 (focal)
+     - 1:1.10.0~focal0
+   * - anbox-modules-dkms-110
+     - 18.04 (bionic)
+     - 1:1.10.0~bionic0
+
+Anbox images
+============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - bionic:android11:amd64
+     - 1.10.1
+   * - bionic:android11:arm64
+     - 1.10.1
+   * - bionic:android10:amd64
+     - 1.10.1
+   * - bionic:android10:arm64
+     - 1.10.1

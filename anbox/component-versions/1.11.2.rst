@@ -1,0 +1,90 @@
+.. _component-versions-1.11.2:
+
+=============================
+Component versions for 1.11.2
+=============================
+
+Charms
+======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/lxd
+     - 89
+   * - cs:~anbox-charmers/ams
+     - 88
+   * - cs:~anbox-charmers/ams-node-controller
+     - 82
+   * - cs:~anbox-charmers/aar
+     - 75
+   * - cs:~anbox-charmers/anbox-stream-gateway
+     - 95
+   * - cs:~anbox-charmers/anbox-stream-agent
+     - 88
+   * - cs:~anbox-charmers/coturn
+     - 90
+   * - cs:~anbox-charmers/ams-load-balancer
+     - 79
+   * - cs:~anbox-charmers/anbox-cloud-dashboard
+     - 61
+
+
+Validated revisions of 3rd party charms
+=======================================
+n/a
+
+Bundles
+=======
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - cs:~anbox-charmers/anbox-cloud
+     - 83
+   * - cs:~anbox-charmers/anbox-cloud-core
+     - 69
+
+Snaps
+=====
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - ams
+     - 1.11.2
+   * - aar
+     - 1.11.2
+   * - ams-node-controller
+     - 1.11.2
+   * - anbox-cloud-dashboard
+     - 1.11.2
+   * - anboxstream-agent
+     - 1.11.2
+   * - anbox-stream-gateway
+     - 1.11.2
+   * - anbox-cloud-appliance
+     - 1.11.2
+
+Debian packages
+===============
+n/a
+
+Anbox images
+============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - bionic:android11:amd64
+     - 1.11.2
+   * - bionic:android11:arm64
+     - 1.11.2
+   * - bionic:android10:amd64
+     - 1.11.2
+   * - bionic:android10:arm64
+     - 1.11.2

@@ -11,126 +11,22 @@ Not all components are updated with each release. When components are
 not updated this is called out in the :ref:`release notes <release-notes>` and
 components are marked with ``n/a`` below.
 
-[Details=1.12.0]
+.. toctree::
+   :titlesonly:
+   :caption: Releases
 
-Charms
-======
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms-111
-     - 20.04 (focal)
-     - 1:1.12.0-stable1~focal0
-   * - anbox-modules-dkms-111
-     - 18.04 (bionic)
-     - 1:1.12.0-stable1~bionic0
-
-
-Anbox images
-============
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms-111
-     - 20.04 (focal)
-     - 1:1.11.0-stable1~focal0
-   * - anbox-modules-dkms-111
-     - 18.04 (bionic)
-     - 1:1.11.0-stable1~bionic0
-
-
-.. _anbox-images-5:
-
-Anbox images
-============
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms-110
-     - 20.04 (focal)
-     - 1:1.10.0~focal0
-   * - anbox-modules-dkms-110
-     - 18.04 (bionic)
-     - 1:1.10.0~bionic0
-
-
-.. _anbox-images-8:
-
-Anbox images
-============
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms-110
-     - 20.04 (focal)
-     - 1:1.10.0~focal0
-   * - anbox-modules-dkms-110
-     - 18.04 (bionic)
-     - 1:1.10.0~bionic0
-
-
-.. _anbox-images-9:
-
-Anbox images
-============
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms
-     - 20.04 (focal)
-     - 1:1.9.3~focal0
-   * - anbox-modules-dkms
-     - 18.04 (bionic)
-     - 1:1.9.3~bionic0
-
-
-.. _anbox-images-12:
-
-Anbox images
-============
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Ubuntu Release
-     - Version
-   * - anbox-modules-dkms
-     - 20.04 (focal)
-     - 1:1.9.1~focal0
-   * - anbox-modules-dkms
-     - 18.04 (bionic)
-     - 1:1.9.1~bionic0
-
-
-.. _anbox-images-14:
-
-Anbox images
-============
-
+   1.12.0 <component-versions/1.12.0>
+   1.11.4 <component-versions/1.11.4>
+   1.11.3 <component-versions/1.11.3>
+   1.11.2 <component-versions/1.11.2>
+   1.11.1 <component-versions/1.11.1>
+   1.11.0 <component-versions/1.11.0>
+   1.10.3 <component-versions/1.10.3>
+   1.10.2 <component-versions/1.10.2>
+   1.10.1 <component-versions/1.10.1>
+   1.10.0 <component-versions/1.10.0>
+   1.9.5 <component-versions/1.9.5>
+   1.9.4 <component-versions/1.9.4>
+   1.9.3 <component-versions/1.9.3>
+   1.9.2 <component-versions/1.9.2>
+   1.9.1 <component-versions/1.9.1>

@@ -1,0 +1,31 @@
+.. _component-versions-1.9.5:
+
+============================
+Component versions for 1.9.5
+============================
+
+Charms
+======
+n/a
+
+Bundles
+=======
+n/a
+
+Snaps
+=====
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Version
+   * - ams
+     - 1.9.5
+
+Debian packages
+===============
+n/a
+
+Anbox images
+============
+n/a

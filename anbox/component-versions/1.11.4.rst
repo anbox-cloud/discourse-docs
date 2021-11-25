@@ -1,0 +1,37 @@
+.. _component-versions-1.11.4:
+
+=============================
+Component versions for 1.11.4
+=============================
+
+Charms
+======
+n/a
+
+Bundles
+=======
+n/a
+
+Snaps
+=====
+n/a
+
+Debian packages
+===============
+n/a
+
+Anbox images
+============
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Revision
+   * - bionic:android11:amd64
+     - 1.11.4
+   * - bionic:android11:arm64
+     - 1.11.4
+   * - bionic:android10:amd64
+     - 1.11.4
+   * - bionic:android10:arm64
+     - 1.11.4
