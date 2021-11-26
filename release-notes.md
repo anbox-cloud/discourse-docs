@@ -2,6 +2,31 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.1]
+
+## 1.12.1 (November 29 2021)
+
+### New features & improvements
+
+ * Android WebView has been updated to [96.0.4664.45](https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html)
+ * Improved graphics stability on Arm64 machines with NVIDIA GPUs
+
+### Known issues
+
+* The Android 12 image currently comes without a functioning WebView. The WebView will become functional with the 1.12.2 release.
+
+### Bugs
+
+* AC-472 A native crash occurred to webview.apk after upgrading it to 94.0.4606.80
+* AC-505 Webrtc platform crashes in rtc::SocketDispatcher
+* AC-503 CUDA resources are not correctly freed
+* AC-508 Units in stats overlay are incorrect
+* AC-545 Find patch in Mesa which fixes the crash
+* AC-553 no Audio output after rejoining a session
+* AC-555 Telegraf fails to run iptables commands
+
+[/Details]
+
 [Details=1.12.0]
 
 ## 1.12.0 (November 16 2021)
