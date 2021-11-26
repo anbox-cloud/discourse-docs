@@ -92,9 +92,9 @@ Launching the new Application
 =============================
 
 Now that we have the application created in AMS we can go ahead and
-stream it through the UI of the Anbox Stream Gateway (see :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
+stream it through the UI of the Anbox Stream Gateway (see :ref:`tut_getting-started-dashboard`
 for more details) or your own custom client application built with the
-:ref:`Anbox Streaming SDK <ref_sdks-streaming-sdk>`.
+:ref:`ref_sdks-streaming-sdk`.
 
 .. figure:: /images/virtual_device_launch.png
    :alt: Launch a virtual device

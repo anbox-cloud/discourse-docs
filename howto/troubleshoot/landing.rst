@@ -70,7 +70,7 @@ When launching a container for an application I get “Published application ver
 If you launch a container by only specifying the application ID and the
 application has no publish version yet, you need to explicitly specify
 the version you want to launch or publish a version of the application.
-See :ref:`Launch application containers <howto_container_launch-application-containers>`.
+See :ref:`howto_container_launch-application-containers`.
 
 When creating an application I get an error like “no such file or directory”. Why?
 ==================================================================================

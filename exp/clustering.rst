@@ -177,7 +177,7 @@ reducing contention for GPU resources.
 Containers can be configured to use a hardware or software video encoder
 for video encoding. This can be done through the ``video-encoder`` field
 declared in the manifest file when creating an application as well. See
-:ref:`Video encoder <ref_application-manifest-video-encoder>`
+:ref:`ref_application-manifest-video-encoder`
 for more details.
 
 LXD auto scaling

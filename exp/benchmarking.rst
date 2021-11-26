@@ -131,21 +131,27 @@ You can configure a different display specification through the
 ``--user-data`` parameter when running the benchmark. The required
 format for the parameter varies based on the different platforms:
 
-+------------+---------------------+----------------------------------+
-| Platform   | Required format of  | Example                          |
-|            | user data           |                                  |
-+============+=====================+==================================+
-| Null       | Comma-separated     | ,,,                              |
-|            | values              |                                  |
-+------------+---------------------+----------------------------------+
-| Swrast     | Comma-separated     | ,,,                              |
-|            | values              |                                  |
-+------------+---------------------+----------------------------------+
-| WebRTC     | Json-based          | {“display_width”:                |
-|            |                     | ,“display_height”:               |
-|            |                     | ,“display_density”: ,“fps”:      |
-|            |                     | ,“render_only”: true }           |
-+------------+---------------------+----------------------------------+
+.. list-table::
+   :header-rows: 1
+
+   * - Platform
+     - Required format of user data
+     - Example
+   * - Null
+     - Comma-separated values
+     - <display_width>,<display_height>,<display_fps>,<display_density>
+   * - Swrast
+     - Comma-separated values
+     - <display_width>,<display_height>,<display_fps>,<display_density>
+   * - WebRTC
+     - Json-based
+     - | {
+       | "display_width": <display_width>,
+       | "display_height": <display_height>,
+       | "display_density": <display_density>,
+       | "fps": <display_fps>,
+       | "render_only": true
+       | }
 
 .. note::
    If you’re running a benchmark

@@ -13,7 +13,7 @@ The tutorial focuses on using the command line to work with Anbox Cloud,
 which gives you access to all features of Anbox Cloud. Alternatively,
 you can use the :ref:`web dashboard <howto_manage_web-dashboard>`, which
 provides a simpler user interface but does not support all
-functionality. See the :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
+functionality. See the :ref:`tut_getting-started-dashboard`
 tutorial for an introduction on how to use the web dashboard.
 
 .. important::
@@ -22,14 +22,14 @@ tutorial for an introduction on how to use the web dashboard.
    can continue with this tutorial. See the following documentation for
    installation instructions:
 
-   -  :ref:`Installing the Anbox Cloud Appliance <tut_installing-appliance>`
+   -  :ref:`tut_installing-appliance`
    -  :ref:`howto_install_landing`
 
 
 1. Run AMC
 ==========
 
-The Anbox Management Client :ref:`amc communicates with the Anbox Management Service (AMS) <exp_ams>`. You will use
+The Anbox Management Client ``amc`` communicates with the :ref:`Anbox Management Service (AMS) <exp_ams>`. You will use
 ``amc`` to manage all aspects of Anbox Cloud that are related to AMS.
 
 How and where to run ``amc`` depends on your use case:
@@ -204,7 +204,7 @@ and log on to it:
 
 You can test the virtual device by connecting to it from your local
 machine and mirroring its screen. To do so, use the ``scrcpy`` tool. See
-:ref:`Access a container with scrcpy <howto_container_access-scrcpy>`
+:ref:`howto_container_access-scrcpy`
 for more detailed instructions.
 
 If you do not have ``scrcpy`` installed on your local machine, enter the
@@ -276,7 +276,7 @@ app when creating the Anbox Cloud application.
 
 .. important::
    Not all Android apps are
-   compatible with Anbox Cloud. See :ref:`Issues when porting Android apps <exp_porting-issues>`
+   compatible with Anbox Cloud. See :ref:`exp_porting-issues`
    for more information.
 
 Complete the following steps to create an application from an APK:
@@ -453,9 +453,9 @@ You now know how to use the command line to create, launch and test
 applications in Anbox Cloud.
 
 If you are interested in a more easy-to-use interface, check out the
-:ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
+:ref:`tut_getting-started-dashboard`
 tutorial to learn how to manage Anbox Cloud using the :ref:`web dashboard <howto_manage_web-dashboard>`.
 
-Also see the documentation about :ref:`how to manage applications <howto_application_landing>`
-and :ref:`how to work with containers <howto_container_landing>`
+Also see the documentation about how to :ref:`howto_application_landing`
+and how to :ref:`howto_container_landing`
 for more in-depth information.

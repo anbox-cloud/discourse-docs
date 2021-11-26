@@ -23,7 +23,7 @@ files must contain:
    below).
 
 Other files in the addon directory are bundled with the addon. They can
-be accessed in a hook by using the :ref:`$ADDON_DIR environment variable <ref_addons-env-variables>`). For example:
+be accessed in a hook by using the :ref:`$ADDON_DIR environment variable <ref_addons-env-variables>`. For example:
 
 .. code:: bash
 
@@ -50,7 +50,7 @@ The following table lists the valid keys in an addon manifest:
    * - name
      - string
      - Name of the addon. Can be used to reference the addon.
-     - All characters except for the following: ``< > : " / \ | - ? *``, as well as space.
+     - All characters except for the following: ``<`` ``>`` ``:`` ``"`` ``/`` ``\`` ``|`` ``-`` ``?`` ``*``, as well as space.
    * - description
      - string
      - Description of the addon.

@@ -54,7 +54,7 @@ GPUs have limited capacity that can be shared amongst multiple
 containers. To fine-tune how many containers can run on a given node,
 configure the number of available GPU slots on the node.
 
-See :ref:`GPU slots <exp_clustering-gpu-slots>`
+See :ref:`exp_clustering-gpu-slots`
 for detailed information.
 
 Using GPUs inside a Container

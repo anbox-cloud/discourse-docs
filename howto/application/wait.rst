@@ -34,7 +34,7 @@ The supported conditions for an application are as follows:
 
 
 One example of using the ``amc wait`` command is to wait for the
-application :ref:`bootstrap process <exp_applications-bootstrap>`
+application :ref:`exp_applications-bootstrap`
 to be done, since the application bootstrap is performed asynchronously
 by the AMS service and takes some time to process. The application
 cannot be used until the bootstrap is complete and the status is marked

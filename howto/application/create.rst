@@ -85,7 +85,7 @@ following command:
    amc application create <path/to/application-content>
 
 When the ``create`` command returns, the application package is uploaded
-to the AMS service and the :ref:`bootstrap process <exp_applications-bootstrap>`
+to the AMS service and the :ref:`exp_applications-bootstrap`
 is started. The application is not yet ready to be used. You can watch
 the status of the application with the following command:
 
@@ -161,6 +161,6 @@ Once the tarball is created, you can create the application:
 
    amc application create foo.tar.bz2
 
-The AMS service now starts the application :ref:`bootstrap process <exp_applications-bootstrap>`.
+The AMS service now starts the application :ref:`exp_applications-bootstrap`.
 See :ref:`howto_application_wait`
 for information about how to monitor the application status.

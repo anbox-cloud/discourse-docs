@@ -8,7 +8,7 @@ This documents the versions of the different components for each Anbox
 Cloud release.
 
 Not all components are updated with each release. When components are
-not updated this is called out in the :ref:`release notes <release-notes>` and
+not updated this is called out in the :ref:`release-notes` and
 components are marked with ``n/a`` below.
 
 .. toctree::

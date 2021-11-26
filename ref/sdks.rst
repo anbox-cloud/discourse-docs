@@ -8,9 +8,9 @@ Anbox Cloud provides a series of Software Development Kits (SDKs) to
 facilitate integrating and extending Anbox Cloud for different use
 cases:
 
--  :ref:`Anbox Platform SDK <ref_sdks-anbox-platform-sdk>`
--  :ref:`AMS SDK <ref_sdks-ams-sdk>`
--  :ref:`Anbox Streaming SDK <ref_sdks-streaming-sdk>`
+-  :ref:`ref_sdks-anbox-platform-sdk`
+-  :ref:`ref_sdks-ams-sdk`
+-  :ref:`ref_sdks-streaming-sdk`
 
 .. _ref_sdks-anbox-platform-sdk:
 
@@ -147,19 +147,19 @@ Features
      - ✓
    * - Camera support
      - ✓
-     - 
+     -
    * - Sensor support
-     - 
-     - 
+     -
+     -
    * - Location support
      - ✓
-     - 
+     -
    * - Supported platforms
      - All
      - Linux, Android
    * - Zero Copy rendering and decoding
      - ✓
-     - 
+     -
    * - Supported codecs
      - VP8, H.264
      - VP8, H.264 (Android only)

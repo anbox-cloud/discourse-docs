@@ -5,7 +5,7 @@ Launch a container
 ==================
 
 You can launch a container for a registered application or image (see
-:ref:`Application containers vs. raw containers <exp_containers-application-vs-raw>`),
+:ref:`exp_containers-application-vs-raw`),
 either by using the ``amc`` tool or through another service over the
 REST API that the AMS service provides.
 

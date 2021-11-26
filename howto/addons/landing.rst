@@ -17,7 +17,7 @@ tutorial to learn how to write a simple addon.
 You can use addons to, for example:
 
 - Enable SSH access for automation tools (see :ref:`tut_creating-addon`)
-- Set up user-specific data when starting an application (see :ref:`Restore data <howto_addons_backup-and-restore-restore>`)
+- Set up user-specific data when starting an application (see :ref:`howto_addons_backup-and-restore-restore`)
 - Install additional tools in the container (see :ref:`howto_addons_install-tools`)
 - Back up data when the container is stopping (see :ref:`howto_addons_backup-and-restore`)
 - Configure the Android system before running the application (see :ref:`howto_addons_customise-android`)

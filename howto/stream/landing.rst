@@ -7,10 +7,10 @@ Implement streaming
 The guides in this section describe how to use the Streaming Stack to
 implement specific streaming features in your application.
 
-See :ref:`Streaming Android Applications <exp_application-streaming>`
+See :ref:`exp_application-streaming`
 for an introduction to the Streaming Stack.
 
-For an introduction to the Streaming SDK, see :ref:`Anbox Streaming SDK <ref_sdks-streaming-sdk>`.
+For an introduction to the Streaming SDK, see :ref:`ref_sdks-streaming-sdk`.
 
 
 .. toctree::

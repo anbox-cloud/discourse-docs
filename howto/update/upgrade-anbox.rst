@@ -67,7 +67,7 @@ you don’t use in your deployment:
 .. note::
    You can find a list of all charm,
    snap and Debian package versions for each Anbox Cloud relase in the
-   :ref:`component versions <component-versions>`
+   :ref:`component-versions`
    overview. This also includes the charm and bundle revisions for each
    release you want to replace ``<rev>`` in the commands below with.
 

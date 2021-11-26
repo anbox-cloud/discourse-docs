@@ -11,7 +11,7 @@ small scale deployments.
 .. note::
    There are differences between
    the Anbox Cloud Appliance and the full Anbox Cloud installation (see
-   :ref:`Variants <exp_anbox-cloud-variants>`).
+   :ref:`exp_anbox-cloud-variants`).
    This section focuses on the **Anbox Cloud Appliance**. For instructions
    on how to install **Anbox Cloud**, see :ref:`howto_install_landing`.
 
@@ -20,10 +20,10 @@ This tutorial guides you through the steps that are required to install
 and initialise the Anbox Cloud Appliance, either from the `AWS Marketplace <https://aws.amazon.com/marketplace/>`_ or from the
 `snap <https://snapcraft.io/anbox-cloud-appliance>`_:
 
-1. :ref:`Check the prerequisites <tut_installing-appliance-prerequisites>`
-2. :ref:`Install the appliance <tut_installing-appliance-install>`
-3. :ref:`Initialise the appliance <tut_installing-appliance-initialise>`
-4. :ref:`Register with the dashboard <tut_installing-appliance-register>`
+1. :ref:`tut_installing-appliance-prerequisites`
+2. :ref:`tut_installing-appliance-install`
+3. :ref:`tut_installing-appliance-initialise`
+4. :ref:`tut_installing-appliance-register`
 
 .. _tut_installing-appliance-prerequisites:
 
@@ -73,9 +73,9 @@ Install the appliance
 The Anbox Cloud Appliance is available through the AWS Marketplace and
 as a snap.
 
--  When installing on AWS, follow the steps in :ref:`Install from the AWS Marketplace <tut_installing-appliance-install-aws>`.
+-  When installing on AWS, follow the steps in :ref:`tut_installing-appliance-install-aws`.
 -  When installing on a local machine or in another cloud, follow the
-   steps in :ref:`Install the snap <tut_installing-appliance-install-snap>`.
+   steps in :ref:`tut_installing-appliance-install-snap`.
 
 .. _tut_installing-appliance-install-aws:
 
@@ -288,7 +288,7 @@ address in the instance details page. Use this IP address or the
 corresponding DNS name to access the status web page (in the following
 steps referred to as ``https://your-machine-address``).
 
-Next, continue with the instructions in :ref:`Initialise the appliance <tut_installing-appliance-initialise>`.
+Next, continue with the instructions in :ref:`tut_installing-appliance-initialise`.
 
 .. _tut_installing-appliance-install-snap:
 
@@ -501,8 +501,8 @@ Done!
 =====
 
 Your Anbox Cloud Appliance is now fully set up and ready to be used!
-Next, you should check out the :ref:`Getting started with Anbox Cloud (web dashboard) <tut_getting-started-dashboard>`
-or the :ref:`Getting started with Anbox Cloud (CLI) <tut_getting-started>` tutorial
+Next, you should check out the :ref:`tut_getting-started-dashboard`
+or the :ref:`tut_getting-started` tutorial
 to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the

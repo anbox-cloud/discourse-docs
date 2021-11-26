@@ -4,7 +4,7 @@
 Customise the installation
 ==========================
 
-The :ref:`Deploy Anbox Cloud with Juju <howto_install_deploy-juju>`
+The :ref:`howto_install_deploy-juju`
 documentation explains how to perform a quick and easy general install
 of Anbox Cloud. However, in some cases it may be useful to customise the
 installation:
@@ -22,12 +22,12 @@ What You Will Need
 
 The rest of this page assumes you already have Juju installed and have
 added credentials for a cloud and bootstrapped a controller. If you
-still need to do this, please take a look at the :ref:`Deploy Anbox Cloud with Juju <howto_install_deploy-juju>`,
+still need to do this, please take a look at the :ref:`howto_install_deploy-juju`,
 or, for custom clouds (OpenStack, MAAS), please consult the `Juju documentation <https://jaas.ai/docs>`__. In case that you want to deploy
 on bare metal, please have a look below.
 
 Before you start, please make sure you read about the
-:ref:`requirements <requirements>`
+:ref:`requirements`
 Anbox Cloud has.
 
 .. _howto_install_customise-available-juju-bundles:
@@ -143,7 +143,7 @@ For **anbox-cloud**:
    $ juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --map-machines existing,0=0,1=1,2=2,3=3
 
 To understand the ``map-machines`` parameters, please take a look at
-:ref:`Machine mapping <howto_install_customise-machinemapping>` section. If you strictly followed
+:ref:`howto_install_customise-machinemapping` section. If you strictly followed
 the instructions above you should have the machines registered correctly
 to match the command above.
 
@@ -303,7 +303,7 @@ bundle file locally and edit it with a standard text editor.
 
 The latest version of the Anbox Cloud bundles can always be retrieved by
 fetching the current stable version from the Juju Charm Store. See
-:ref:`Available Juju Bundles <howto_install_customise-available-juju-bundles>` for more details.
+:ref:`howto_install_customise-available-juju-bundles` for more details.
 
 Care should be taken when editing the YAML file as the format is very
 strict. For more details on the format used by Juju, see the `Juju bundle documentation <https://docs.jujucharms.com/stable/en/charms-bundles>`_.

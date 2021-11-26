@@ -14,7 +14,7 @@ requirements will be covered below:
 2. Juju based deployments
 
 See the
-:ref:`Variants <exp_anbox-cloud-variants>`
+:ref:`exp_anbox-cloud-variants`
 for a explanation of the differences between both variants.
 
 General requirements
@@ -42,7 +42,7 @@ Running Anbox Cloud on a Ubuntu Desktop installation is not supported.
 
 Supported Ubuntu versions:
 
--  18.04 (bionic) - see :ref:`Linux kernel <requirements-linux-kernel>` below for
+-  18.04 (bionic) - see :ref:`requirements-linux-kernel` below for
    limitations
 -  20.04 (focal)
 

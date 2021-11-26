@@ -51,7 +51,6 @@ Get started
        :ref:`tut_getting-started`
      - Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface
 
-
 What’s new
 ==========
 
@@ -72,6 +71,22 @@ with:
    * - :ref:`roadmap`
      - Planned updates and features for upcoming releases
 
+Contents
+========
+
+.. list-table::
+   :header-rows: 1
+
+   * -
+     -
+   * - :ref:`tut_landing`
+     - Get started - a hands-on introduction to Anbox Cloud for new users
+   * - :ref:`howto_landing`
+     - Instructional guides covering key operations and common tasks
+   * - :ref:`ref_landing`
+     - Technical guides describing architecture, components, commands, APIs
+   * - :ref:`exp_landing`
+     - Clarification and discussion of key topics to help you understand Anbox Cloud better
 
 .. toctree::
    :titlesonly:

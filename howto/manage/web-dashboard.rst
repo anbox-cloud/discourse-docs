@@ -102,7 +102,7 @@ Creating applications
 ---------------------
 
 Creating applications through the dashboard is done the same way as you
-would do with :ref:`amc (see Create an application <howto_application_create>`).
+would do with ``amc`` (see :ref:`howto_application_create`).
 Note that more advanced scenarios might not yet be possible via the
 dashboard and require going through ``amc``.
 
@@ -118,7 +118,7 @@ The dashboard comes with in-browser streaming capabilities through
 WebRTC.
 
 .. note::
-   The dashboard uses the :ref:`Streaming SDK <ref_sdks-streaming-sdk>`
+   The dashboard uses the :ref:`ref_sdks-streaming-sdk`
    under the hood.
 
 You can select any application you previously created and start a

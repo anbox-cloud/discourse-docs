@@ -136,5 +136,5 @@ You can now access your container via SSH:
 More information about addons
 =============================
 
--  :ref:`Addon reference <ref_addons>`
--  :ref:`Updating addons <howto_addons_update>`
+-  :ref:`ref_addons`
+-  :ref:`howto_addons_update`

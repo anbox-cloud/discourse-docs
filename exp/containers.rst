@@ -83,7 +83,7 @@ The whole launch process is successful only if all of the above steps
 succeed.
 
 If anything goes wrong during the container launch process, the status
-of the container changes to the :ref:`error status. You can view the available logs <howto_container_logs>`
+of the container changes to the ``error`` status. You can view the :ref:`available logs <howto_container_logs>`
 from the container for diagnosing the root cause of the problem.
 
 When a container is stopped, either because you deleted it or because an
@@ -132,7 +132,7 @@ Managing containers
 -  :ref:`howto_container_launch`
 -  :ref:`howto_container_wait`
 -  :ref:`howto_container_access`
--  :ref:`Expose services on a container <howto_container_expose-services>`
+-  :ref:`howto_container_expose-services`
 -  :ref:`howto_container_logs`
 -  :ref:`howto_container_delete`
 -  :ref:`howto_container_list`

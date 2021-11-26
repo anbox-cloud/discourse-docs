@@ -79,7 +79,7 @@ to know which Android application to start.
 
 ``gateway.url.net`` should be replaced with the Stream Gateway IP/Domain
 name. You can get this information by running ``juju status``.
-:ref:`YOUR_AUTH_TOKEN is a token generated with the Stream Gateway <howto_stream_access>`.
+``YOUR_AUTH_TOKEN`` is a token generated with the :ref:`Stream Gateway <howto_stream_access>`.
 ``com.foo.bar`` is the name of an application added via ``ams``. You can
 list all applications by running ``amc list``.
 

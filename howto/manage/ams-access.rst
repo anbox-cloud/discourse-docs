@@ -29,7 +29,7 @@ Install a trusted certificate
 
 Controlling AMS remotely requires trusted security certificates. You can
 generate self-signed certificates or use certificates signed by a
-Certificate Authority. See :ref:`Security certificates for remote clients <exp_ams-security-certificates>`
+Certificate Authority. See :ref:`exp_ams-security-certificates`
 for more information.
 
 Self-signed certificates

@@ -27,7 +27,7 @@ keyboard can send text to the Android container on the fly when typing:
 
 The following steps provide general instructions for integrating the
 client-side virtual keyboard feature into an Android application. See
-:ref:`Customising the virtual keyboard <howto_stream_client-side-keyboard-customising>` for additional
+:ref:`howto_stream_client-side-keyboard-customising` for additional
 implementation options.
 
 For the complete implementation details, refer to the

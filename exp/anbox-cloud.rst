@@ -70,10 +70,10 @@ variants:
      - ✓
      - ✓
    * - `Vendor support <https://anbox-cloud.io/contact-us>`_
-     - -
+     -
      - ✓
    * - :ref:`Monitoring <howto_monitor_landing>`
-     - -
+     -
      - ✓
 
 

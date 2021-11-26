@@ -13,9 +13,9 @@ information and alternative installation methods, see :ref:`howto_install_custom
 .. note::
    There are differences between
    the full Anbox Cloud installation and the Anbox Cloud Appliance (see
-   :ref:`Variants <exp_anbox-cloud-variants>`).
+   :ref:`exp_anbox-cloud-variants`).
    This section focuses on **Anbox Cloud**. For instructions on how to
-   install the **Anbox Cloud Appliance**, see :ref:`Installing the Anbox Cloud Appliance <tut_installing-appliance>`.
+   install the **Anbox Cloud Appliance**, see :ref:`tut_installing-appliance`.
 
 
 Prerequisites

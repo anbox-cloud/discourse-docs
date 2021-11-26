@@ -119,7 +119,7 @@ architectures.
 
 If you have support for real GPUs set the ``suites.ams.gpu-type`` item
 to the right GPU type (supported values are: ``nvidia``, ``amd``,
-:ref:`intel, none) and add GPU based instance types (see Instance types <ref_instance-types>` for more
+``intel``, ``none``) and add GPU based instance types (see :ref:`ref_instance-types` for more
 details) to the ``suites.ams.instance-types``.
 
 Run the Validation Tests

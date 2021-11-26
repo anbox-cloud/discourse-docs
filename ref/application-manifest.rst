@@ -18,7 +18,7 @@ The available attributes are listed in the following table:
      - Description
    * - ``name``
      - string
-     - Verbose name of the application. The following special characters are not allowed: ``< > : " / \ &#124; ? *``, as well as space
+     - Verbose name of the application. The following special characters are not allowed: ``<`` ``>`` ``:`` ``"`` ``/`` ``\`` ``|`` ``-`` ``?`` ``*``, as well as space
    * - ``version``
      - string
      - Version to encode with the application. Maximum length is 50 characters.

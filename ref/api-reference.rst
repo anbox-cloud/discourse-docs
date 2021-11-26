@@ -8,7 +8,7 @@ The documentation in this section provides a reference for the APIs that
 are used or provided by Anbox Cloud.
 
 Also see
-:ref:`SDKs <ref_sdks>` for a
+:ref:`ref_sdks` for a
 more detailed description of the SDKs that Anbox Cloud provides.
 
 
