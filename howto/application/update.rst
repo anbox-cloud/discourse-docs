@@ -156,8 +156,6 @@ the ``--yes`` flag to the command.
 Disable automatic application updates
 =====================================
 
-*since 1.11.0*
-
 AMS automatically updates an application whenever any of its
 dependencies (parent image, addons, global configuration) changes. This
 produces a new version for the application, which is automatically

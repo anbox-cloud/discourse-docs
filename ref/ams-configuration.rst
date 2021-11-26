@@ -132,8 +132,6 @@ similar to the following:
 System UI
 ---------
 
-*since 1.10.2*
-
 By default, Anbox hides the Android system UI when an application is
 running in foreground mode. In some use cases, however, it’s required to
 have the system UI available for navigation purposes. This can be
@@ -145,8 +143,6 @@ set.
 Virtual Keyboard
 ----------------
 
-*since 1.9.0*
-
 The Android virtual keyboard is disabled by default but can be enabled
 with the ``enable_virtual_keyboard`` feature flag.
 
@@ -157,7 +153,7 @@ because changes to allow the feature to work are only applied during the
 Wi-Fi
 -----
 
-*since 1.12.0*
+.. versionadded:: 1.12.0
 
 Wi-Fi support can be optionally enabled. Anbox will then set up a
 virtual Wi-Fi device, which sits on top of an ethernet connection and
@@ -169,7 +165,7 @@ once set.
 Android reboot
 --------------
 
-*since 1.12.0*
+.. versionadded:: 1.12.0
 
 By default, Android is not allowed to reboot. With the
 ``allow_android_reboot`` feature flag, this can be allowed.
