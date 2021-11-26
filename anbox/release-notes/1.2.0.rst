@@ -9,7 +9,7 @@
 New features & improvements
 ---------------------------
 
--  Full support for an `Application Registry <installation-registry.md>`_
+-  Full support for an :ref:`Application Registry <exp_aar>`
 -  Updated Android 7.x with all `security patches <https://source.android.com/security/bulletin>`_ as of Mar 5
    2019
 -  Support for Intel and AMD GPUs

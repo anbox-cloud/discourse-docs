@@ -8,7 +8,7 @@ Anbox Cloud provides a reference for a monitoring stack based on
 Prometheus, Grafana and Telegraf. In order to simplify and speed up the
 deployment of Anbox Cloud itself, the reference monitoring stack is
 provided as a separate
-`overlay <https://juju.is/docs/charm-bundles#heading--overlay-bundles>`_
+`overlay <https://juju.is/docs/sdk/bundle-reference#heading--overlay-bundles>`_
 file.
 
 Core Deployment

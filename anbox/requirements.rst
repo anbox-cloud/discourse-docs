@@ -214,7 +214,7 @@ recommendations:
 
 -  **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
 -  **HAProxy** (load balancer for the Stream Gateway and the dashboard):
-   https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
+   https://www.haproxy.com/documentation/hapee/latest/getting-started/hardware/
 
 Please note that these are just baselines and should be adapted to your
 workload. No matter the application, :ref:`measuring performances <howto_monitor_install>`

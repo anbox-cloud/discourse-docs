@@ -52,3 +52,6 @@ clean:
 
 serve:
 	cd _build/html; python3 -m http.server 8000
+
+linkcheck:
+	. $(VENV); $(SPHINXBUILD) -b linkcheck . _build/html
