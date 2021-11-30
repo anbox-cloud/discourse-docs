@@ -4,7 +4,7 @@ See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous
 
 [Details=1.12.1]
 
-## 1.12.1 (November 29 2021)
+## 1.12.1 (November 30 2021)
 
 ### New features & improvements
 
