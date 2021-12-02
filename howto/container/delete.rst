@@ -1,8 +1,8 @@
 .. _howto_container_delete:
 
-==================
-Delete a container
-==================
+=========================
+How to delete a container
+=========================
 
 A container can be deleted, which will cause any connected user to be
 disconnected immediately. The following command deletes a single

@@ -1,8 +1,8 @@
 .. _howto_aar_revoke:
 
-====================
-Revoke an AAR client
-====================
+===========================
+How to revoke an AAR client
+===========================
 
 If a client gets compromised, it’s important to block its access to the
 :ref:`Anbox Application Registry (AAR) <exp_aar>` by

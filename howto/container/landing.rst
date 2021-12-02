@@ -1,8 +1,8 @@
 .. _howto_container_landing:
 
-====================
-Work with containers
-====================
+===========================
+How to work with containers
+===========================
 
 The guides in this section describe how to work with containers.
 
@@ -13,12 +13,12 @@ for an introduction to how containers are used in Anbox Cloud.
 .. toctree::
    :titlesonly:
 
-   launch
-   wait
-   access
+   Launch a container <launch>
+   Wait for a container <wait>
+   Access a container <access>
    Expose services <expose-services>
-   logs
-   delete
-   list
-   geographic-location
-   backup-and-restore
+   View the container logs <logs>
+   Delete a container <delete>
+   List containers <list>
+   Configure geographic location <geographic-location>
+   Back up and restore application data <backup-and-restore>

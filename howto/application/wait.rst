@@ -1,8 +1,8 @@
 .. _howto_application_wait:
 
-=======================
-Wait for an application
-=======================
+==============================
+How to wait for an application
+==============================
 
 The ``amc wait`` command instructs AMS to wait for an application to
 reach a specific condition. If the condition is not satisfied within the

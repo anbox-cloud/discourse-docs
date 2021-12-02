@@ -1,8 +1,8 @@
 .. _howto_install_high-availability:
 
-========================
-Enable High Availability
-========================
+===============================
+How to enable High Availability
+===============================
 
 Anbox Cloud comes with support for High Availability (HA) for both Core
 and the Streaming Stack. Next to `Juju’s support for high availability of the Juju controller <https://juju.is/docs/controller-high-availability>`_, you
@@ -29,9 +29,9 @@ For example, to go from 1 to 5 ams units, you would run the following:
    By default Juju allocates small
    machines to limit costs, but you can request better resources by
    `enforcing constraints <https://juju.is/docs/constraints>`_:
-   
+
    ``$ juju set-constraints anbox-stream-gateway cores=4 memory=8GB.``
-   
+
    This is heavily recommended on production environments.
 
 Anbox Cloud Core
@@ -50,13 +50,13 @@ balancer to spread out requests:
    If you are using the ``amc`` snap
    on your machine, you can tell it to use the load balancer instead of
    talking directly to ams:
-   
+
    .. code:: bash
-   
+
       $ amc remote add lb https://10.75.96.23:8444
       $ amc remote set-default lb
-   
-   
+
+
 
 The port to use is always ``8444``, the same AMS is listening on.
 

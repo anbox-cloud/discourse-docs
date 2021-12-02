@@ -1,8 +1,8 @@
 .. _howto_install_landing:
 
-===================
-Install Anbox Cloud
-===================
+==========================
+How to install Anbox Cloud
+==========================
 
 The guides in this section describe how to install Anbox Cloud.
 
@@ -22,6 +22,6 @@ before you start your installation.
    :titlesonly:
 
    Deploy with Juju <deploy-juju>
-   customise
-   high-availability
-   validate
+   Customise the installation <customise>
+   Enable High Availability <high-availability>
+   Validate the deployment <validate>

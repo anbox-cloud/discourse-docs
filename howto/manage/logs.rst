@@ -1,8 +1,8 @@
 .. _howto_manage_logs:
 
-=========
-View logs
-=========
+================
+How to view logs
+================
 
 Broadly, there are two types of logs you may be interested in. On
 cluster or node level; for the applications you are running inside your

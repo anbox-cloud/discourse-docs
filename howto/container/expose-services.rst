@@ -1,8 +1,8 @@
 .. _howto_container_expose-services:
 
-==============================
-Expose services on a container
-==============================
+=====================================
+How to expose services on a container
+=====================================
 
 AMS allows a container to expose a service to the outer network. For
 that, it provides a feature called container services which let you

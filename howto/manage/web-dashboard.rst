@@ -1,8 +1,8 @@
 .. _howto_manage_web-dashboard:
 
-=====================
-Use the web dashboard
-=====================
+============================
+How to use the web dashboard
+============================
 
 The Anbox Cloud Dashboard offers a web GUI from where developers can
 create, manage, and even stream applications from their web browser. The

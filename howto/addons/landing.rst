@@ -1,8 +1,8 @@
 .. _howto_addons_landing:
 
-==========
-Use addons
-==========
+=================
+How to use addons
+=================
 
 Addons can be used to customise the images used for the containers. An
 addon has :ref:`hooks <ref_addons-hooks>`
@@ -31,10 +31,10 @@ to update your addons to use the new hooks.
    :titlesonly:
 
    Enable globally <enable-globally>
-   update
+   Update addons <update>
    Migrate from previous versions <migrate>
-   install-tools
-   backup-and-restore
-   customise-android
-   emulate-platforms
+   Example: Install tools <install-tools>
+   Example: Back up data <backup-and-restore>
+   Example: Customise Android <customise-android>
+   Example: Emulate platforms <emulate-platforms>
    Best practices <best-practices>

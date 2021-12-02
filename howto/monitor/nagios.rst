@@ -1,8 +1,8 @@
 .. _howto_monitor_nagios:
 
-==========
-Use Nagios
-==========
+=================
+How to use Nagios
+=================
 
 `Nagios <https://www.nagios.org/>`_ is widely used for monitoring
 networks, servers and applications. Using the Nagios Remote Plugin

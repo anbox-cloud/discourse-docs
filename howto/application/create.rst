@@ -1,8 +1,8 @@
 .. _howto_application_create:
 
-=====================
-Create an application
-=====================
+============================
+How to create an application
+============================
 
 Every application which should be available on an Anbox Cloud cluster
 must be created first.

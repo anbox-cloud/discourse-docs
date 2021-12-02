@@ -11,9 +11,9 @@ The following tutorials are available:
 .. toctree::
    :titlesonly:
 
-   Installing the appliance <installing-appliance>
-   Getting started (web dashboard) <getting-started-dashboard>
-   Getting started (CLI) <getting-started>
+   Install the appliance <installing-appliance>
+   Get started (web dashboard) <getting-started-dashboard>
+   Get (CLI) <getting-started>
    creating-addon
 
 

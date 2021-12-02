@@ -1,8 +1,8 @@
 .. _howto_install_customise:
 
-==========================
-Customise the installation
-==========================
+=================================
+How to customise the installation
+=================================
 
 The :ref:`howto_install_deploy-juju`
 documentation explains how to perform a quick and easy general install

@@ -1,8 +1,8 @@
 .. _howto_addons_customise-android:
 
-==========================
-Example: Customise Android
-==========================
+=================================
+Example: How to customise Android
+=================================
 
 If you need to do any customisation to the Android system that runs your
 application, you can use the ``anbox-shell`` tool within a hook. This

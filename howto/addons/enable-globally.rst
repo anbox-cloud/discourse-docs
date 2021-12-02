@@ -1,8 +1,8 @@
 .. _howto_addons_enable-globally:
 
-========================
-Enable an addon globally
-========================
+===============================
+How to enable an addon globally
+===============================
 
 To enable an addon for an application, you must add it to the
 :ref:`ref_application-manifest`.

@@ -1,8 +1,8 @@
 .. _howto_addons_install-tools:
 
-======================
-Example: Install tools
-======================
+=============================
+Example: How to install tools
+=============================
 
 Application images are designed to be as lightweight as possible, and as
 such, common tools you might expect to see in a regular cloud image

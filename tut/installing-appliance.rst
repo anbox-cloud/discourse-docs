@@ -1,8 +1,8 @@
 .. _tut_installing-appliance:
 
-====================
-Installing the |ACA|
-====================
+=================
+Install the |ACA|
+=================
 
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a
 single machine. This offering is well suited for initial prototype and

@@ -1,8 +1,8 @@
 .. _howto_container_list:
 
-===============
-List containers
-===============
+======================
+How to list containers
+======================
 
 To get an overview of which and how many containers are currently
 running on an Anbox Cloud deployment, run the ``amc ls`` command:

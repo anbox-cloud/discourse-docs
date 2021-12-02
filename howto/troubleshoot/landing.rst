@@ -1,8 +1,8 @@
 .. _howto_troubleshoot_landing:
 
-========================
-Troubleshoot Anbox Cloud
-========================
+===============================
+How to troubleshoot Anbox Cloud
+===============================
 
 This section covers some of the most commonly encountered problems and
 attempts to resolve them.

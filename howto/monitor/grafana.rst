@@ -1,8 +1,8 @@
 .. _howto_monitor_grafana:
 
-===========
-Use Grafana
-===========
+==================
+How to use Grafana
+==================
 
 If you added metrics collection support to your Anbox Cloud installation
 you can access the `Grafana <https://grafana.com/>`_ service to get

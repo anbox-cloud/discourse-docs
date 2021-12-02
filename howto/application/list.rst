@@ -1,8 +1,8 @@
 .. _howto_application_list:
 
-=================
-List applications
-=================
+========================
+How to list applications
+========================
 
 To list all available applications, use the following command:
 

@@ -1,8 +1,8 @@
 .. _howto_aar_deploy:
 
-=============
-Deploy an AAR
-=============
+====================
+How to deploy an AAR
+====================
 
 An :ref:`Anbox Application Registry (AAR) <exp_aar>`
 should be deployed on a single unit. After deploying, continue to

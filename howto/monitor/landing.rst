@@ -13,6 +13,6 @@ To check which metrics are available for monitoring, see :ref:`ref_prometheus`.
 .. toctree::
    :titlesonly:
 
-   install
-   grafana
-   nagios
+   Install the monitoring stack <install>
+   Use Grafana <grafana>
+   Use Nagios <nagios>

@@ -1,8 +1,8 @@
 .. _howto_container_geographic-location:
 
-=============================
-Configure geographic location
-=============================
+====================================
+How to configure geographic location
+====================================
 
 Anbox Cloud allows specifying a geographic location for an Android
 container. This location can either be specified statically through a

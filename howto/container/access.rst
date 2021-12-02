@@ -1,8 +1,8 @@
 .. _howto_container_access:
 
-==================
-Access a container
-==================
+=========================
+How to access a container
+=========================
 
 In some cases, it might be necessary to access an individual container
 for debugging reasons.

@@ -1,8 +1,8 @@
 .. _howto_manage_landing:
 
-==================
-Manage Anbox Cloud
-==================
+=========================
+How to manage Anbox Cloud
+=========================
 
 The guides in this section describe how to manage and work with your
 Anbox Cloud or Anbox Cloud Appliance installation.
@@ -11,7 +11,7 @@ Anbox Cloud or Anbox Cloud Appliance installation.
 .. toctree::
    :titlesonly:
 
-   web-dashboard
-   images
-   logs
-   ams-access
+   Use the web dashboard <web-dashboard>
+   Manage images <images>
+   View logs <logs>
+   Control AMS remotely <ams-access>

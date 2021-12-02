@@ -1,8 +1,8 @@
 .. _howto_manage_ams-access:
 
-====================
-Control AMS remotely
-====================
+===========================
+How to control AMS remotely
+===========================
 
 By default, the Anbox Management Client (AMC) runs on the same machine
 as the :ref:`Anbox Management Service (AMS) <exp_ams>` and connects

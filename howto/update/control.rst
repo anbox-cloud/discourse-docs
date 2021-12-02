@@ -1,8 +1,8 @@
 .. _howto_update_control:
 
-===============
-Control updates
-===============
+======================
+How to control updates
+======================
 
 For security reasons, you should keep your systems up-to-date at all
 times. To ensure this, `snaps <https://snapcraft.io/about>`_ update

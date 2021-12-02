@@ -1,8 +1,8 @@
 .. _howto_stream_landing:
 
-===================
-Implement streaming
-===================
+==========================
+How to implement streaming
+==========================
 
 The guides in this section describe how to use the Streaming Stack to
 implement specific streaming features in your application.
@@ -16,7 +16,7 @@ For an introduction to the Streaming SDK, see :ref:`ref_sdks-streaming-sdk`.
 .. toctree::
    :titlesonly:
 
-   access
+   Access the stream gateway <access>
    Implement a native client <native-client>
    Implement a web-based client <web-client>
    Exchange OOB data <oob-data>

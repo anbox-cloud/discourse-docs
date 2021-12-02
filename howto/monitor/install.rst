@@ -1,8 +1,8 @@
 .. _howto_monitor_install:
 
-============================
-Install the monitoring stack
-============================
+===================================
+How to install the monitoring stack
+===================================
 
 Anbox Cloud provides a reference for a monitoring stack based on
 Prometheus, Grafana and Telegraf. In order to simplify and speed up the

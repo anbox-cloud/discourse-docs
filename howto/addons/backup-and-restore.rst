@@ -1,8 +1,8 @@
 .. _howto_addons_backup-and-restore:
 
-=====================
-Example: Back up data
-=====================
+============================
+Example: How to back up data
+============================
 
 When a container is stopped, all the data and logs produced during the
 runtime are lost. To avoid this, you can use hooks to back up and

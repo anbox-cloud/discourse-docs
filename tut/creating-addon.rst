@@ -1,8 +1,8 @@
 .. _tut_creating-addon:
 
-=================
-Creating an addon
-=================
+===============
+Create an addon
+===============
 
 This tutorial guides you through the creation of a simple
 :ref:`addon <howto_addons_landing>`. The

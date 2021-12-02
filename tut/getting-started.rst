@@ -1,8 +1,8 @@
 .. _tut_getting-started:
 
-======================================
-Getting started with Anbox Cloud (CLI)
-======================================
+==================================
+Get started with Anbox Cloud (CLI)
+==================================
 
 This tutorial guides you through the first steps of managing Anbox Cloud
 from the command line. You will learn how to communicate with

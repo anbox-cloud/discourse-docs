@@ -1,8 +1,8 @@
 .. _howto_manage_images:
 
-=============
-Manage images
-=============
+====================
+How to manage images
+====================
 
 An image is the base for a container running in the Anbox Cloud. It
 contains all necessary components, like Anbox or the Android root file

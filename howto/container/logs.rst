@@ -1,8 +1,8 @@
 .. _howto_container_logs:
 
-=======================
-View the container logs
-=======================
+==============================
+How to view the container logs
+==============================
 
 If a container fails to start or a runtime error occurs, AMS collects
 relevant log files from the container and makes them available for

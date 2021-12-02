@@ -1,8 +1,8 @@
 .. _howto_container_launch:
 
-==================
-Launch a container
-==================
+=========================
+How to launch a container
+=========================
 
 You can launch a container for a registered application or image (see
 :ref:`exp_containers-application-vs-raw`),

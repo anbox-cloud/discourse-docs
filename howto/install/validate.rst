@@ -1,8 +1,8 @@
 .. _howto_install_validate:
 
-=======================
-Validate the deployment
-=======================
+==============================
+How to validate the deployment
+==============================
 
 Anbox Cloud includes a test suite which allows the validation of an
 Anbox Cloud deployment. It comes with various tests covering different

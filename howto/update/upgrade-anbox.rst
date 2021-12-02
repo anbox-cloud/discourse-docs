@@ -1,8 +1,8 @@
 .. _howto_update_upgrade-anbox:
 
-===================
-Upgrade Anbox Cloud
-===================
+==========================
+How to upgrade Anbox Cloud
+==========================
 
 .. note::
    If you’re interested in getting

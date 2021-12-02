@@ -1,8 +1,8 @@
 .. _howto_update_landing:
 
-========================
-Update your installation
-========================
+===============================
+How to update your installation
+===============================
 
 The guides in this section describe how to update your Anbox Cloud or
 Anbox Cloud Appliance installation.
@@ -11,6 +11,6 @@ Anbox Cloud Appliance installation.
 .. toctree::
    :titlesonly:
 
-   control
+   Control updates <control>
    Upgrade the appliance <upgrade-appliance>
-   upgrade-anbox
+   Upgrade Anbox Cloud <upgrade-anbox>

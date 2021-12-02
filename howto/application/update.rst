@@ -1,8 +1,8 @@
 .. _howto_application_update:
 
-=====================
-Update an application
-=====================
+============================
+How to update an application
+============================
 
 Updating an existing application works similar to creating a new one.
 Each time an existing application is updated, it is extended with a new

@@ -1,8 +1,8 @@
 .. _howto_addons_emulate-platforms:
 
-==========================
-Example: Emulate platforms
-==========================
+=================================
+Example: How to emulate platforms
+=================================
 
 If you want to provide support for platforms that are not natively
 supported by your application (for example, you want to run an x86_64

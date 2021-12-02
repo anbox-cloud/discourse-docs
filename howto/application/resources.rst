@@ -1,8 +1,8 @@
 .. _howto_application_resources:
 
-=============================
-Configure available resources
-=============================
+====================================
+How to configure available resources
+====================================
 
 Anbox Cloud provides a set of :ref:`ref_instance-types`
 that define the resources available to a container. For example, if you

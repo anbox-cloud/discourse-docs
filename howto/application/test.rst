@@ -1,8 +1,8 @@
 .. _howto_application_test:
 
-=====================
-Test your application
-=====================
+============================
+How to test your application
+============================
 
 Anbox Cloud enables you to run automated tests for Android applications
 at scale. In the following example, we make use of

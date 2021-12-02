@@ -1,8 +1,8 @@
 .. _howto_container_wait:
 
-====================
-Wait for a container
-====================
+===========================
+How to wait for a container
+===========================
 
 When launching a container, the container should not be considered
 started until it reaches the running state. Sometimes if you want to

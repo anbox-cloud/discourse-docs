@@ -1,8 +1,8 @@
 .. _howto_stream_access:
 
-=========================
-Access the stream gateway
-=========================
+================================
+How to access the stream gateway
+================================
 
 Similarly to :ref:`AMS <exp_ams>`,
 the Stream Gateway (see :ref:`exp_application-streaming`

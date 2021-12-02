@@ -1,8 +1,8 @@
 .. _howto_aar_configure:
 
-================
-Configure an AAR
-================
+=======================
+How to configure an AAR
+=======================
 
 The :ref:`Anbox Application Registry (AAR) <exp_aar>`
 uses a certificate-based authentication system that uses TLS server and

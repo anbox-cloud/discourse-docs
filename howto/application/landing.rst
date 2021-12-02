@@ -1,8 +1,8 @@
 .. _howto_application_landing:
 
-===================
-Manage applications
-===================
+==========================
+How to manage applications
+==========================
 
 The guides in this section describe how to manage your applications.
 
@@ -16,14 +16,14 @@ To check which configuration options are available for applications, see
 .. toctree::
    :titlesonly:
 
-   create
-   wait
-   update
-   resources
-   delete
-   list
-   ../aar/deploy
-   ../aar/configure
-   ../aar/revoke
-   test
+   Create an application <create>
+   Wait for an application <wait>
+   Update an application <update>
+   Configure available resources <resources>
+   Delete an application <delete>
+   List applications <list>
+   Deploy an AAR <../aar/deploy>
+   Configure an AAR <../aar/configure>
+   Revoke an AAR client <../aar/revoke>
+   Test your application <test>
    Create a virtual device <virtual-devices>

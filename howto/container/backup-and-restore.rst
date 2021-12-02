@@ -1,8 +1,8 @@
 .. _howto_container_backup-and-restore:
 
-====================================
-Back up and restore application data
-====================================
+===========================================
+How to back up and restore application data
+===========================================
 
 Backup and restoration of application data can be achieved easily with
 the ``aam`` (Anbox Application Manager) utility helper installed in the
