@@ -59,6 +59,9 @@ html_theme = 'vanilla'
 html_show_sphinx = False
 html_last_updated_fmt = ""
 
+html_static_path = ['_static']
+html_css_files = ['custom.css']
+
 # Uses global TOC for side nav instead of default local TOC
 html_sidebars = {
     '**': [
