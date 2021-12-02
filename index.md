@@ -184,6 +184,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | /docs/ams-configuration | /docs/ref/ams-configuration |
 | /docs/overview | /docs/exp/anbox-cloud |
 | /docs/manage/managing-applications | /docs/exp/applications |
+| /docs/manage/managing-addons | /docs/howto/addons/landing |
 | /docs/manage/application-registry | /docs/exp/aar |
 | /docs/manage/managing-containers | /docs/exp/containers |
 | /docs/manage/capacity-planning | /docs/exp/clustering |
