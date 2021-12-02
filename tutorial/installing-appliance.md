@@ -45,6 +45,7 @@ AWS supports running the Anbox Cloud Appliance on the [AWS Graviton](https://aws
 
 * AWS Graviton (Arm) and x86 offer equal performance for Android applications.
 * GPUs are available for both x86 and AWS Graviton (Arm).
+  [note type="information" status="Note"]To use GPUs with AWS Graviton (Arm), you must select a [G5g instance](https://aws.amazon.com/de/ec2/instance-types/g5g/). This instance type might not be available in all regions.[/note]
 * Not all Android applications support the x86 ABI. Therefore, some applications can run only on Arm.
 
 For detailed information about the offering, see the following pages on the AWS Marketplace:
