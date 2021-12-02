@@ -140,48 +140,23 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/loca
  * Operation: sync
  * Return: standard return value or standard error
 
-[note type="information" status="Note"]The latitude or longitude of geographic coordinates is expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example, whereas the NMEA-based data format is expressed in [ddmm.mm](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.[/note]
+[note type="information" status="Note"]The latitude or longitude of geographic coordinates can be expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example or in an NMEA-based data format as [ddmm.mm](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). Specify the format by setting the `format` field to either `"wgs84"` or `"nmea"`. If the field is omitted, its value defaults to `"wgs84"`. No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
+
+Both vertical and horizontal accuracy are measured in meters. The default value for GPS accuracy is 20 meters. [/note]
 
 Input:
 
 ```json
 {
-    "latitude": 52.4538982,         # Latitude of geographic coordinates
+    "latitude": 52.4538982,          # Latitude of geographic coordinates
     "longitude": 13.3857982,         # Longitude of geographic coordinates
     "altitude": 10.0,                # Altitude in meters
     "time": 1597237057,              # Current time in millisecond since 1970-01-01 00:00:00 UTC
     "speed": 0.0,                    # Speed in meters per second
     "bearing": 0.0,                  # Magnetic heading in degrees
-    "format": "wgs84"                # (optional) Location format; possible values are "nmea" or "wgs84". Defaults to "wgs84" if not specified{
-  "metadata": {
-    "active_sensors": [
-      {
-        "delay": 66,
-        "type": "proximity"
-      },
-      {
-        "delay": 200,
-        "type": "acceleration"
-      }
-    ],
-    "enabled": true,
-    "supported_sensors": [
-      "humidity",
-      "pressure",
-      "light",
-      "proximity",
-      "temperature",
-      "orientation",
-      "magnetic-field",
-      "gyroscope",
-      "acceleration"
-    ]
-  },
-  "status": "Success",
-  "status_code": 200,
-  "type": "sync"
-}
-
+    "format": "wgs84",               # (optional) Location format
+    "horizontal_accuracy": 20,       # (optional) Horizontal accuracy in meters
+    "vertical_accuracy": 20          # (optional) Vertical accuracy in meters
 }
 ```
 
@@ -209,12 +184,12 @@ Return value:
 $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .
 {
   "metadata": {
-    "data_available": false,  // <- The availability of camera data, only a jpeg format image is supported so far
-    "enabled": false,         // <- Is the camera support enabled in Anbox
-    "resolutions": [          // <- The supported camera resolutions
+    "data_available": false,  # The availability of camera data
+    "enabled": false,         # Is the camera support enabled in Anbox
+    "resolutions": [          # The supported camera resolutions
       {
-        "height": 720,        // <- The height of the resolution dimension
-        "width": 1280         // <- The width of the resolution dimension
+        "height": 720,        # The height of the resolution dimension
+        "width": 1280         # The width of the resolution dimension
       }
     ]
   },
@@ -340,7 +315,7 @@ $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc 
 $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors | jq .
 {
   "metadata": {
-    "active_sensors": [             // <- Active sensors in Android container
+    "active_sensors": [             # Active sensors in Android container
       {
         "delay": 66,
         "type": "proximity"
