@@ -71,6 +71,12 @@ html_sidebars = {
     ]
 }
 
+# Intersphinx
+
+intersphinx_mapping = {
+    'lxd': ('https://linuxcontainers.org/lxd/docs/master.new/', None)
+}
+
 # -- Redirects ---------------------------------------------------------------
 
 redirects = {
