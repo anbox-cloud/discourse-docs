@@ -77,9 +77,8 @@ variants:
      - ✓
 
 
-Which of both variants you choose depends on your needs. The appliance
-is well suited for quick prototyping and development or small scale
-deployments, whereas the regular Anbox Cloud is best to scale big.
+Which of both variants you choose depends on your needs.
+The appliance is well suited for quick prototyping and development or small scale deployments, whereas the regular Anbox Cloud is best to scale big.
 
 .. tip::
    We recommend to always start with
