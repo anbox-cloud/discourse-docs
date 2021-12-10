@@ -1,0 +1,45 @@
+Android [has a 100 MB limit on apps](https://developer.android.com/google/play/expansion-files.html). Applications for apps that are under that limit can be created using the [regular method](https://discourse.ubuntu.com/t/create-an-application/24198).
+
+Larger Android apps must be split up into the main part as an APK file and the expansion part as an OBB file:
+
+- APK: Contains the executables and native libraries (`*.so` files), plugins, basic assets and data required by the application to load for the first time.
+- OBB: Contains the remaining assets (high-fidelity graphics, media files or other large resource files) for the full user experience.
+
+Anbox Cloud supports creating applications for such apps, but it requires additional steps.
+
+Let's assume that you have an application that consists of an APK file and an OBB file:
+
+```
+.
+├── com.foo.bar.apk
+└── main.203779.com.foo.bar.obb
+```
+
+1. Rename `com.foo.bar.apk` to `app.apk`.
+1. Create a folder named `extra-data` and move the `.obb` file into that folder:
+
+   ```
+   .
+   ├── app.apk
+   ├── extra-data
+   │   └── main.203779.com.foo.bar.obb
+   ├── manifest.yaml
+   ```
+1. Declare the OBB file as extra data in the application manifest:
+
+   ```yaml
+   name: com.foo.bar
+   instance-type: a2.3
+   required-permissions: ['*']
+   extra-data:
+     main.203779.com.foo.bar.obb:
+       target: /sdcard/Android/obb/com.foo.bar/
+   ```
+
+   [note type="information" status="Note"]The target location of the OBB file varies depending on the app. Some apps load the OBB file from the SD card (`/sdcard/Android/obb/`), while others load it from the device's internal storage (`/data/media/obb`). If an OBB file is not properly installed in the container, the app might not function as expected. Some apps exit immediately if the required OBB file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) and causes the container to end up in an error state.[/note]
+
+1. Create the application:
+
+        amc application create .
+
+When installing the application, the `.obb` file is copied to the destination folder as defined in `manifest.yaml`. When launching a container from the application, the `.obb` file is loaded on startup.
