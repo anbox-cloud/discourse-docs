@@ -1,3 +1,23 @@
+You can view the Anbox and the Android system logs while a container is running, or check the collected logs if a container fails.
+[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from a container that failed to start or had an error at runtime.[/note]
+
+## View runtime logs
+
+While a container is running, you can use the `amc` command to access both the Anbox and the Android system logs. The following command shows the system log:
+
+    amc logs -t <log type>
+
+As `<log type>`, specify either `anbox` for the Anbox system log or `android` for the Android one. If you don't specify the log type, the Anbox system log is displayed by default.
+
+To follow the log and get automatic updates for new entries, add the `-f` argument:
+
+    amc logs -t anbox -f
+
+This will show the logs and update the output whenever new entries are added.
+
+
+## View stored logs
+
 If a container fails to start or a runtime error occurs, AMS collects relevant log files from the container and makes them available for inspection.
 
 Available logs can be listed with the `amc show <container_id>` command:
@@ -33,5 +53,3 @@ Jan 17 08:38:57 ams-bh03th0j1qm6416q0v30 acc[607]: 2019/01/17 08:38:57 Extractin
 Jan 17 08:38:58 ams-bh03th0j1qm6416q0v30 acc[607]: 2019/01/17 08:38:58 Waiting for Android container
 Jan 17 08:38:58 ams-bh03th0j1qm6416q0v30 acc[607]: 2019/01/17 08:38:58 Installing application com.canonical.candy from app.apk ...
 ```
-
-[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from a container which failed to start or had an error at runtime.[/note]
