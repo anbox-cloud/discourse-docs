@@ -1,14 +1,14 @@
 The following benchmarks give an overview of the performance that you can achieve with Anbox Cloud.
 
-The benchmarks are performed using the `amc benchmark` utility as described [here](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (colum "# Containers") delivering a stable frame rate (column "Avg. FPS"). Running more containers either gives to high variation in the provided frame rate or is not possible due to other hardware limitions (system memory, GPU memory, ...).
+The benchmarks were performed using the `amc benchmark` utility as described in [About benchmarking](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (column "# Containers") delivering a stable frame rate (column "Avg. FPS"). Running more containers either gives too high variation in the provided frame rate or is not possible due to other hardware limitations (system memory, GPU memory, ...).
 
-All benchmark include rendering and video encoding. On machines/VMs without a GPU rendering and video encoding are performed in software on the CPU.
+All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU.
 
-For most of the benchmarks below a special version of the application [BombSquad](https://www.froemling.net/apps/bombsquad) is used. It runs in a demo mode where the game provides random and automated simulated gameplay. This allows the benchmark to simulate a real world scenario where actual users would play the game instead of sitting on a static game scene without much variation across the Android instances.
+For most of the benchmarks below, a special version of the [BombSquad](https://www.froemling.net/apps/bombsquad) application was used. This version runs in a demo mode in which the game provides random and automated simulated gameplay. This allows the benchmark to simulate a real-world scenario where actual users would play the game, instead of sitting on a static game scene without much variation across the Android instances.
 
-All benchmarks are done with a variation of the following `amc benchmark` command
+All benchmarks are done with a variation of the following `amc benchmark` command:
 
-    mc benchmark --network-address 192.168.100.1 -n <number of containers> \
+    amc benchmark --network-address 192.168.100.1 -n <number of containers> \
         -p webrtc -f -s 0.1 --measure-time 5m \
         --userdata '{"display_width":1280,"display_height":720,"fps":30,"benchmark":{"enabled":true}}' \
         <app name>
