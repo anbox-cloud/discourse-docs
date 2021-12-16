@@ -27,6 +27,7 @@ Make sure you have the following accounts:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
 * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+  [note type="information" status="Note"]The quota for your AWS account must be sufficient for the instance types that you plan to use.[/note]
 
 <a name="prereq-snap"></a>
 ### Prerequisites when installing the snap
