@@ -2,6 +2,28 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.2]
+
+## 1.12.2 (December 16 2021)
+
+### New features & improvements
+
+ * Anbox container termination time was shortened by improving internal timeouts
+ * Explicit CUDA context selection on NVIDIA GPUs avoids cross-GPU usage of a single container
+ * Android security updates for December 2021 (see [Android Security Bulletin - December 2021](https://source.android.com/security/bulletin/2021-12-01) for more information)
+ * Android WebView has been updated to [96.0.4664.45](https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html)
+
+### Bugs
+
+* AC-313 Dashboard: self signed certificate cause web browser to print a warning
+* AC-402 Accessing the appliance via the public AWS IP address rather than DNS name breaks streaming
+* AC-408 Improve appliance upgrade message
+* AC-496 coturn charm doesn't detect changed public address after machine stop / start on AWS
+* AC-578 Settings app crashes when clicking on "Connected Devices"
+* AC-580 Android 12: Unhandled netlink message warnings in system log
+
+[/Details]
+
 [Details=1.12.1]
 
 ## 1.12.1 (November 30 2021)
