@@ -1,51 +1,65 @@
-This section covers some of the most commonly encountered problems and attempts to resolve them.
+This section covers some of the most commonly encountered problems and gives instructions for resolving them.
 
-### Several Juju units of my deployment show `hook: installation failure`. Why?
+## Initial setup
 
-You use the wrong Ubuntu Advantage token. Most likely you used  the *Ubuntu Advantage for **Infrastructure*** which every use gets for free limited personal use.
+You might encounter the following issues while setting up your system.
 
-In order to deploy Anbox Cloud you will need a commercial subscription for *Ubuntu Advantage for **Applications***. Using a different token will result in a failed deployment and is currently not recoverable.
+### Juju hook installation failure
 
-### A container failed to start. Where can I find more information why it failed to start?
+> Several Juju units of my deployment show `hook: installation failure`. Why?
 
-If a container failed to start its status is set to `error`. The AMS service automatically fetches several log files from the container and makes them available for further inspection. From the log files you can find out what went wrong. The reason is not always clear as several things play into the container startup, like the application the container is hosting, any installed addons etc.
+You used the wrong Ubuntu Advantage token. Most likely, you used the Ubuntu Advantage for **Infrastructure** token that every user gets for free limited personal use.
 
-See [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) for more details on how to access the container log files.
+To deploy Anbox Cloud, you need a commercial subscription for Ubuntu Advantage for **Applications**. Using a different token will result in a failed deployment. This failure is currently not recoverable.
 
-### I receive a socket permission error when trying to use the `amc` command. What is wrong?
+### Socket permission error for `amc`
 
-If you receive an error like
+> I receive the following socket permission error when trying to use the `amc` command:
+>
+> ```text
+> Post http://unix/1.0/images: dial unix /var/snap/ams/common/server/unix.socket: connect: permission denied
+> ```
+>
+> What is wrong?
 
-```text
-Post http://unix/1.0/images: dial unix /var/snap/ams/common/server/unix.socket: connect: permission denied
-```
+Most likely, you are trying to run the `amc` command as a user that is not part of the `ams` group. The socket has its ownership set to `root:ams`, so that only `root` or users that are part of the `ams` group are allowed to use the Unix domain socket.
 
-after you tried to use the `amc` command line utility you're mostly likely trying to run the command as a user which is not part of the `ams` group. The socket has its ownership set to `root:ams` so that only `root` or users part of the `ams` group are allowed to use the Unix domain socket.
+By default, Anbox Cloud automatically adds the `ubuntu` user to the `ams` group during the installation. You can manually add further users to the `ams` group with the following command:
 
-By default Anbox Cloud automatically adds the `ubuntu` user to the `ams` group on installation. You can manually add any further user to the `ams` group with a command like
+    sudo gpasswd -a <user_name> ams
 
-```bash
-$ sudo gpasswd -a <your user> ams
-```
+To apply the change, you might need to log out and back in.
 
-You make the change effective you may have to log out and back in.
+## Debugging container failures
 
-### Is there an automatic way to create a manifest for an application?
+The following issues should help you determining why your container failed.
 
-No. The application manifest describes necessary meta data on top of the Android application package which AMS needs. You can simplify the manifest to only container the `name` field but then loose a lot of control about how your application is being executed.
+### More information about failures
 
-### When launching a container for an application I get "Published application version not found". Why?
+> A container failed to start. Where can I find more information why it failed to start?
 
-If you launch a container by only specifying the application ID and the application has no publish version yet, you need to explicitly specify the version you want to launch or publish a version of the application. See [Launch application containers](https://discourse.ubuntu.com/t/launch-a-container/24327#application-containers).
+If a container fails to start, its status is set to `error`. AMS automatically fetches several log files from the container and makes them available for further inspection. From the log files, you can find out what went wrong. The reason is not always straightforward, because several things play into the container startup, for example, the application that the container is hosting or any installed addons.
 
-### When creating an application I get an error like “no such file or directory”. Why?
+See [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) for instructions on how to access the container log files.
 
-Due to Snap strict confinement, no matter which approaches you're going to take,  the folder or tarball file must be located home directory. The same applied to addon creation as well.
+### Published application version not found
 
-### Why I failed to dump logs to a single file with the  \`amc show-log\` command alongside with `>` operator?
+> When launching a container for an application, I get an error about the "published application version not found". Why?
 
-Due to a [bug](https://bugs.launchpad.net/snapd/+bug/1835805) in snapd, redirecting stdout and stderr to a single file with **>** operator won't work. Because of this, when you want to dump logs to a single file via `amc show-log` command, you now have to work around it by using tee command like this:
+If you launch a container by only specifying the application ID and the application has no published version yet, you must explicitly specify the version that you want to launch or publish a version of the application. See [Launch application containers](https://discourse.ubuntu.com/t/launch-a-container/24327#application-containers) and [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions) for more information.
 
-```bash
-$ amc show-log <container-id> system.log | tee system.log
-```
+## Creating applications
+
+You might encounter the following issues when creating an application.
+
+### Application manifest
+
+> Is there an automatic way to create a manifest for an application?
+
+No. The application manifest describes necessary metadata on top of the APK, which AMS needs. You can simplify the manifest to only contain the `name` field, but you will lose a lot of control about how your application is being executed.
+
+### No such file or directory
+
+> When creating an application, I get an error that there is “no such file or directory”. Why?
+
+Due to Snap strict confinement, the folder or tarball file must be located in the home directory. There is no workaround for this requirement. The same requirement applies to addon creation.

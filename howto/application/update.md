@@ -81,6 +81,7 @@ resources:
 Each version gets a monotonically increasing number assigned (here we have version `0` and version `1`).
 In addition, each version has a status which indicates the status of the bootstrap process AMS is performing for it. Once an application version is marked as `active`, it is ready to be used.
 
+<a name="publish-application-versions"></a>
 ## Publish application versions
 
 The most important part of an application version is the `published` field. If a version is marked as published, it is accessible to users of Anbox Cloud. Generally when launching containers by using the AMS REST API, if no specific application version is given, the last published version of an application is used to create the container.
