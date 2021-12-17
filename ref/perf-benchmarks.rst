@@ -1,3 +1,5 @@
+:sequential_nav: prev
+
 .. _ref_perf-benchmarks:
 
 ======================

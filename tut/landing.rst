@@ -1,3 +1,5 @@
+:sequential_nav: next
+
 .. _tut_landing:
 
 =========
@@ -13,7 +15,7 @@ The following tutorials are available:
 
    Install the appliance <installing-appliance>
    Get started (web dashboard) <getting-started-dashboard>
-   Get (CLI) <getting-started>
+   Get started (CLI) <getting-started>
    creating-addon
 
 

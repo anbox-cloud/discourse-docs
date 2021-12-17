@@ -1,3 +1,5 @@
+:sequential_nav: none
+
 =========================
 Anbox Cloud documentation
 =========================

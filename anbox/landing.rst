@@ -1,3 +1,5 @@
+:sequential_nav: next
+
 .. _anbox_landing:
 
 ===========

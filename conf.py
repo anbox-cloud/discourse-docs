@@ -45,8 +45,6 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv', '.theme-repo']
 
 rst_prolog = """
-:sequential_nav: both
-
 .. include:: /reuse/substitutions.txt
 """
 
@@ -69,6 +67,10 @@ html_sidebars = {
     '**': [
         'globaltoc.html',
     ]
+}
+
+html_context = {
+    "sequential_nav": "both"
 }
 
 # Intersphinx

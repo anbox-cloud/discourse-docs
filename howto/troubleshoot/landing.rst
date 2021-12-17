@@ -1,3 +1,5 @@
+:sequential_nav: prev
+
 .. _howto_troubleshoot_landing:
 
 ===============================
