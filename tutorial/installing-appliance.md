@@ -15,16 +15,30 @@ This tutorial guides you through the steps that are required to install and init
 <a name="prerequisites"></a>
 ## Check the prerequisites
 
-Before you start the installation, ensure that you have the required accounts and prerequisites:
+Before you start the installation, ensure that you have the required accounts and prerequisites. The prerequisites differ depending on if you install from the [AWS Marketplace](https://aws.amazon.com/marketplace/) or if you install the [snap](https://snapcraft.io/anbox-cloud-appliance).
+
+* When installing on AWS, check the [Prerequisites when installing from the AWS Marketplace](#prereq-aws).
+* When installing on a local machine or in another cloud, check the [Prerequisites when installing the snap](#prereq-snap).
+
+<a name="prereq-aws"></a>
+### Prerequisites when installing from the AWS Marketplace
+
+Make sure you have the following accounts:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
-* When installing from the [AWS Marketplace](https://aws.amazon.com/marketplace/):
-  * An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
-* When installing the [snap](https://snapcraft.io/anbox-cloud-appliance):
-  * A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
-    [note type="information" status="Note"]The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.[/note]
-  * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
-    [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+* An AWS account that you use to buy a subscription to the Anbox Cloud Appliance.
+  [note type="information" status="Note"]The quota for your AWS account must be sufficient for the instance types that you plan to use.[/note]
+
+<a name="prereq-snap"></a>
+### Prerequisites when installing the snap
+
+Make sure you have the following prerequisites:
+
+* An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
+* A virtual or bare metal machine running Ubuntu 20.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
+  [note type="information" status="Note"]The Anbox Cloud Appliance is currently supported on [AWS](https://aws.amazon.com/) and [Oracle Cloud (OCI)](https://www.oracle.com/cloud/). Official support for other clouds, namely Azure and Google Cloud, will be added soon.[/note]
+* Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
 <a name="install"></a>
 ## Install the appliance
