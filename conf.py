@@ -73,6 +73,8 @@ html_context = {
     "sequential_nav": "both"
 }
 
+templates_path = ["_templates"]
+
 # Intersphinx
 
 intersphinx_mapping = {
