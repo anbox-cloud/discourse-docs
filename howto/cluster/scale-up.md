@@ -21,12 +21,12 @@ This will trigger the deployment of the nodes. You can use the following command
 Due to internal implementation details, waiting for just the units to settle and report status “active” is not enough. You must also check that the unit is correctly added to AMS and is itself part of the LXD cluster. You can do that with code similar to the following script:
 
 ```bash
-#!/bin/sh -ex
+#!/bin/bash -ex
 unit=$1
 # Drop slash from the unit name
 node_name=${unit/\//}
 while true; do
-  if juju ssh ams/0 -- /snap/bin/amc node ls | grep -q "${node_name}.*online"
+  if juju ssh ams/0 -- /snap/bin/amc node ls | grep -q "${node_name}.*online" ; then
     break
   fi
   sleep 5
