@@ -47,7 +47,7 @@ When the application has been initialised and its status changes to `ready`, com
 
 To create an application for a specific Android app, follow the steps in [1. Create a virtual device](#virtual-device), but upload the APK of the Android app.
 
-[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Port Android apps](tbd) for more information.[/note]
+[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
 
 Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 

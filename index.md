@@ -71,11 +71,11 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 2 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
 | 2 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
-| 1 | howto/port/landing | [Port Android apps](tbd)|
-| 2 | howto/port/permissions | [Grant runtime permissions](tbd)|
-| 2 | howto/port/architecture | [Choose APK architecture](tbd)|
-| 2 | howto/port/obb-files | [Port APKs with OBB files](tbd)|
-| 2 | howto/port/configure-watchdog | [Configure the watchdog](tbd)|
+| 1 | howto/port/landing | [Port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776)|
+| 2 | howto/port/permissions | [Grant permissions](https://discourse.ubuntu.com/t/grant-runtime-permissions/26054)|
+| 2 | howto/port/architecture | [Choose APK architecture](https://discourse.ubuntu.com/t/choose-apk-architecture/26055)|
+| 2 | howto/port/obb-files | [Port APKs with OBB files](https://discourse.ubuntu.com/t/port-apks-with-obb-files/26056)|
+| 2 | howto/port/configure-watchdog | [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057)|
 | 1 | howto/container/landing | [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
 | 2 | howto/container/launch | [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
 | 2 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
