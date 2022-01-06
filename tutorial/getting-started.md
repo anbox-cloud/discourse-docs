@@ -170,7 +170,7 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
-[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Issues when porting Android apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776) for more information.[/note]
+[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Port Android apps](tbd) for more information.[/note]
 
 Complete the following steps to create an application from an APK:
 

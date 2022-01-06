@@ -71,6 +71,11 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 2 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
 | 2 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
+| 1 | howto/port/landing | [Port Android apps](tbd)|
+| 2 | howto/port/permissions | [Grant runtime permissions](tbd)|
+| 2 | howto/port/architecture | [Choose APK architecture](tbd)|
+| 2 | howto/port/obb-files | [Port APKs with OBB files](tbd)|
+| 2 | howto/port/configure-watchdog | [Configure the watchdog](tbd)|
 | 1 | howto/container/landing | [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
 | 2 | howto/container/launch | [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
 | 2 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
@@ -130,7 +135,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 1 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | exp/benchmarking | [About benchmarking](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 1 | exp/porting-issues | [Issues when porting apps](https://discourse.ubuntu.com/t/usecase-port-android-application-to-anbox-cloud/17776)|
 | 0 | | Anbox Cloud |
 | 1 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 1 | changelog | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
@@ -193,4 +197,5 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | /docs/manage/streaming-android-applications | /docs/exp/application-streaming |
 | /docs/usage/usecase-port-android-application-to-anbox-cloud | /docs/exp/porting-issues |
 | /docs/installation/installation-requirements | /docs/requirements |
+| /docs/exp/porting-issues | /docs/howto/port/landing |
 [/details]
