@@ -34,12 +34,12 @@ When the node is ready to be removed, use the following Juju command, where `<id
 Once you invoke the removal of the node, you **MUST** wait for the node to be fully removed before you attempt to remove the next node or add a new one. You can do that with a combination of `juju wait` and the following script (which is the inverse of the one for scaling up):
 
 ```bash
-#!/bin/sh -ex
+#!/bin/bash -ex
 unit=$1
 # Drop slash from the unit name
 node_name=${unit/\//}
 while true; do
-  if ! juju ssh ams/0 -- /snap/bin/amc node ls | grep -q “$node_name”
+  if ! juju ssh ams/0 -- /snap/bin/amc node ls | grep -q "$node_name" ; then
     break
   fi
   sleep 5
