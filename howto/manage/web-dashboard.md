@@ -1,8 +1,6 @@
 The Anbox Cloud Dashboard offers a web GUI from where developers can create, manage, and even stream applications from their web browser.
 The dashboard is useful if you are new to Anbox Cloud or want a simple management interface.
 
-Starting in 1.9.0, the dashboard replaces the old Dev UI.
-
 [note type="information" status="Note"]The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.[/note]
 
 ![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png)
