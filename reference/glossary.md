@@ -19,11 +19,12 @@
 - [Anbox Management Client](#amc)
 - [Anbox Management Service](#ams)
 - [Anbox Platform SDK](#anbox-platform-sdk)
+- [Anbox shell](#anbox-shell)
 - [Anbox Streaming SDK](#anbox-streaming-sdk)
+- [Android app](#android-app)
 - [Android Archive](#android-archive)
 - [Android Debug Bridge](#adb)
 - [Android Package Kit](#apk)
-- [Android app](#android-app)
 - [Appium](#appium)
 - [Application](#application)
 - [Application container](#application-container)
@@ -152,6 +153,13 @@ See https://discourse.ubuntu.com/t/anbox-management-service-ams/24321.
 A C/C++ SDK that provides support for developing custom platform plugins, which allows users to integrate Anbox with their existing infrastructure.
 
 See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk).
+
+<a name="anbox-shell"></a>
+### Anbox shell
+
+A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the container.
+
+See [Access a container with amc](https://discourse.ubuntu.com/t/access-a-container/17772#amc).
 
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
