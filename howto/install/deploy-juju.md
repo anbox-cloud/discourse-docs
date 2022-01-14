@@ -1,6 +1,6 @@
 Anbox Cloud supports various public clouds, such as AWS, Azure and Google. To deploy Anbox Cloud in a cloud environment, you use Juju.
 
-See the following sections for detailed instructions. For more general information and alternative installation methods, see [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747).
+See the following sections for detailed instructions. If you want to install Anbox Cloud on bare metal instead of a public cloud, see [Deploy Anbox Cloud on bare metal](tbd) instead.
 
 [note type="information" status="Note"]
 There are differences between the full Anbox Cloud installation and the Anbox Cloud Appliance (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This section focuses on **Anbox Cloud**. For instructions on how to install the **Anbox Cloud Appliance**, see [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
@@ -17,8 +17,6 @@ Before you start the installation, ensure that you have the required credentials
   * [Microsoft Azure](https://azure.microsoft.com/)
 * Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
-
-If you don't meet these requirements, you might still be able to install Anbox Cloud in a different way. See [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747) for details.
 
 ## Install Juju
 
@@ -44,7 +42,7 @@ For a different cloud, just substitute the cloud name (use the name returned by 
 
 ## Add a controller and model
 
-The Juju controller is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as *models*.
+The [Juju controller](https://juju.is/docs/olm/controllers) is used to manage the software deployed through Juju, from deployment to upgrades to day-two operations. One Juju controller can manage multiple projects or workspaces, which in Juju are known as [models](https://juju.is/docs/olm/models).
 
 For example, run the following command to bootstrap the controller for AWS:
 
@@ -56,6 +54,7 @@ A Juju model holds a specific deployment. It is a good idea to create a new one 
 
 You can have multiple models on each controller, which means that you can deploy multiple versions of Anbox Cloud, or other applications.
 
+<a name="ua-overlay"></a>
 ## Attach your Ubuntu Advantage subscription
 
 Every deployment of Anbox Cloud must be attached to the Ubuntu Advantage service Canonical provides. This provides your deployment with the correct licences you're granted as part of your licence agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
@@ -64,7 +63,7 @@ You can retrieve your *Ubuntu Advantage for **Applications*** token at https://u
 
 [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
-To provide your token when deploying with Juju, you need an overlay file named `ua.yaml`. For the `cs:~anbox-charmers/anbox-cloud` bundle, the `ua.yaml` file should look like this:
+To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `cs:~anbox-charmers/anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -109,23 +108,19 @@ You will use the overlay file during the deployment.
 
 To install Anbox Cloud, deploy the suitable Anbox Cloud bundle to the Juju model. This will add instances to the model and deploy the required applications.
 
-Choose between the following bundles:
+Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles):
 
-* The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient for smaller scale use cases, such as application testing or automation, or if you generally don't want to use the Anbox Cloud streaming stack.
-
-  Run the following command to deploy the minimal `anbox-cloud-core` bundle:
+* For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
         juju deploy cs:~anbox-charmers/anbox-cloud-core --overlay ua.yaml
 
-* The `anbox-cloud` bundle provides the full version of Anbox Cloud, including its streaming stack.
-
-  Run the following command to deploy the full `anbox-cloud` bundle:
+* For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
         juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml
 
 ## Customise the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another overlay file. Here you can, for example, specify AWS instance types, change the size of the root disk or other things.
+To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files). Here you can, for example, specify AWS instance types, change the size of the root disk or other things.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
