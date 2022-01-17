@@ -125,6 +125,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 1 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index)|
+| 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | Explanation |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
 | 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
