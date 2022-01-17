@@ -2,6 +2,7 @@ In some cases, it might be necessary to access an individual container for debug
 
 You can do this on the command line with the `amc` command, or you can use [scrcpy](https://github.com/Genymobile/scrcpy) for graphical access.
 
+<a name="amc"></a>
 ## Access a container with `amc`
 
 The `amc` command provides simple shell access to any container managed by AMS. To access a specific container you only need its ID:
