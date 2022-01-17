@@ -29,26 +29,14 @@ AMS configures a LXD container to passthrough a GPU device from the host. As of 
 
 If a GPU driver is available inside the container there are no further differences of how to use it in comparison to a regular environment.
 
-If you want to let an application use the GPU but are not interested in streaming its visual output, you can simply launch a container with the `webrtc` platform. The platform will automatically detect the underlying GPU and make use of it.
+If you want to let an application use the GPU (even if you are not interested in streaming the visual output), launch it with the `--enable-graphics` flag. With this flag, the command will launch the container using the `webrtc` platform, which will automatically detect the underlying GPU and make use of it.
 
 ```bash
-$ amc launch -p webrtc my-application
+$ amc launch --enable-graphics my-application
 ```
 
 ## Force Software Rendering and Video Encoding
 
 [note type="information" status="Note"]Software rendering and video encoding will utilize the CPU. This will mean you can run less containers on a system than you can, when you have a GPU.[/note]
 
-It is possible to force a container to run with software rendering. For that simply launch a container with
-
-```bash
-$ amc launch -p swrast my-application
-```
-
-This will start the container with the `swrast` platform which forces software based rendering.
-
-If you want to force an application to use software rendering and video encoding when streaming via the Anbox Stream Gateway you can simply set a an [instance type](https://discourse.ubuntu.com/t/instance-types/17764) which doesn't require a GPU slot. For example
-
-```bash
-$ amc application set my-app instance-type a4.3
-```
+It is possible to tell a container to run with software rendering. For that, simply change the [instance type](https://discourse.ubuntu.com/t/instance-types/17764) or [resources](https://discourse.ubuntu.com/t/configure-available-resources/24960) of the application to not require a GPU. Anbox will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.

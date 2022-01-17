@@ -53,9 +53,9 @@ By default, every container is scheduled by AMS onto a LXD node. Alternatively, 
 
 ## Launch a container with a different Anbox platform
 
-By default, every container starts with the `null` platform (see [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)). The selected platform cannot be changed at runtime and must be selected when the container is created. For example, you can launch a container with the `swrast` platform like this:
+By default, containers start with the `webrtc` platform if `--enable-graphics` is specified and with the `null` platform otherwise (see [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)). To select a different platform, specify it with the `-p` flag. The selected platform cannot be changed at runtime and must be selected when the container is created. For example, you can launch a container with the `webrtc` platform like this:
 
-    amc launch -p swrast <application-id>
+    amc launch -p webrtc <application-id>
 
 If you have built your own platform named `foo` and you built it via an addon into the container images, you can launch a container with the platform the same way:
 

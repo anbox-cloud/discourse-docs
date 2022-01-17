@@ -7,13 +7,13 @@ As most deployments don't include GPUs we're going to use the `swrast` software 
 If you want to automate the UI tests against an APK which is externally provided, you can launch a raw container:
 
 ```bash
-$ amc launch -s adb -p swrast -r default
+$ amc launch -s adb --enable-graphics -r default
 ```
 
 This will create a container which exposes the TCP port `5559` on its private address from the default image `default`. If you want to expose ADB on the public address of a node, you can add the `+` from the service endpoint specification. With that the command looks as follows:
 
 ```bash
-$ amc launch -s +adb -p swrast -r
+$ amc launch -s +adb --enable-graphics -r
 ```
 
 [note type="information" status="Hint"]If you're wondering about the syntax of the command used to launch a container, see [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
@@ -21,7 +21,7 @@ $ amc launch -s +adb -p swrast -r
 If you want to run the Appium tests against an Android application managed by AMS (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
 
 ```bash
-$ amc launch -s adb -p swrast --disable-watchdog app
+$ amc launch -s adb --enable-graphics --disable-watchdog app
 ```
 
 [note type="information" status="Hint"]The `--disable-watchdog` argument is important as by default Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this we need to disable the watchdog which is responsible for this.[/note]
@@ -102,7 +102,7 @@ EOF
 Once the application is fully bootstrapped by AMS, you can launch a container for it with the following command:
 
 ```bash
-$ amc launch -s +adb -p swrast --disable-watchdog app
+$ amc launch -s +adb --enable-graphics --disable-watchdog app
 ```
 
 After the container is up and running, you need to specify the proper `appPackage` and `appActivity` in the Appium preset, the installed Android application will be launched automatically in the container when a new session is created by Appium.
