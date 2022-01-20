@@ -2,6 +2,64 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.12.3]
+
+### Charms
+
+| Name | Revision |
+|----------|--------------|
+| cs:~anbox-charmers/lxd   |  106 |
+| cs:~anbox-charmers/ams    |  104 |
+| cs:~anbox-charmers/ams-node-controller    | 97 |
+| cs:~anbox-charmers/aar    |  90 |
+| cs:~anbox-charmers/anbox-stream-gateway   |  110 |
+| cs:~anbox-charmers/anbox-stream-agent  |  103  |
+| cs:~anbox-charmers/coturn  | 105 |
+| cs:~anbox-charmers/nats  |  9 |
+| cs:~anbox-charmers/ams-load-balancer | 94 |
+| cs:~anbox-charmers/anbox-cloud-dashboard | 76 |
+
+### Validated revisions of 3rd party charms
+
+| Name | Revision |
+|----------|--------------|
+| cs:~containers/easyrsa | 420 |
+| cs:~containers/etcd | 634 |
+
+### Bundles
+
+| Name | Revision |
+|----------|--------------|
+| cs:~anbox-charmers/anbox-cloud | 98 |
+| cs:~anbox-charmers/anbox-cloud-core | 84 |
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| ams    | 1.12.3 |
+| aar    | 1.12.3 |
+| ams-node-controller    | 1.12.3  |
+| anbox-stream-agent | 1.12.3 |
+| anbox-stream-gateway | 1.12.3 |
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| bionic:android12:amd64 | 1.12.3 |
+| bionic:android12:arm64 | 1.12.3 |
+| bionic:android11:amd64 | 1.12.3 |
+| bionic:android11:arm64 | 1.12.3 |
+| bionic:android10:amd64 | 1.12.3 |
+| bionic:android10:arm64 | 1.12.3 |
+
+[/Details]
+
 [Details=1.12.2]
 
 ### Charms

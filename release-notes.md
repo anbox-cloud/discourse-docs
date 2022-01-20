@@ -2,6 +2,28 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.3]
+
+## 1.12.3 (January 20 2022)
+
+### New features & improvements
+
+ * Android security updates for January 2022 (see [Android Security Bulletin - January 2022](https://source.android.com/security/bulletin/2022-01-01) for more information)
+ * Android WebView has been updated to [97.0.4692.87](https://chromereleases.googleblog.com/2022/01/stable-channel-update-for-desktop.html)
+
+### Bugs
+
+* AC-649 Don't return an error if JoinSession is called without a body
+* AC-648 Dashboard ends up with no certificates
+* AC-644 LP#1955986 Application version got stuck to "initializing" when changing an application attribute via `amc application set`
+* AC-627 GPU ends up with zero slots when added after initial node creation
+* AC-625 nvidia\_drm kernel module isn't loaded after appliance upgrade
+* AC-277 LP #1922889: The `system.log` and `android.log` are missing and not collected by AMS when the container ran into an error
+* AC-621 Anbox shutdown hangs in anbox::webrtc::metrics::TelegrafBackend::~TelegrafBackend
+* AC-559 Surfaceflinger fails to start at times
+
+[/Details]
+
 [Details=1.12.2]
 
 ## 1.12.2 (December 16 2021)
