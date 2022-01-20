@@ -9,6 +9,10 @@ The following steps provide general instructions for integrating the client-side
 
 For the complete implementation details, refer to the `enhanced_webview_streaming` example in the `example/android` folder.
 
+[note type="information" status="Note"]
+To enable the app running in the Android container to receive the texts sent from the client-side virtual keyboard, you must declare the feature `enable_anbox_ime` in the application manifest file when creating an application.
+[/note]
+
 ## 1. Import the AAR library
 
 Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub:
