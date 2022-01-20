@@ -16,7 +16,7 @@ For example, to go from 1 to 5 ams units, you would run the following:
 $ juju add-unit ams -n 4
 ```
 
-[note type="information" status="Hint"]By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/constraints):
+[note type="information" status="Hint"]By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/olm/constraints):
 
 `$ juju set-constraints anbox-stream-gateway cores=4 memory=8GB.`
 
