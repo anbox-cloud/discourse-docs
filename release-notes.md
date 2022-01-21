@@ -2,6 +2,21 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.4]
+
+## 1.12.4 (January 21 2022)
+
+#### New features & improvements
+
+None.
+
+#### Bugs
+
+* AC-657 Traefik listens on port 8080 for incoming API requests
+
+[/Details]
+
+
 [Details=1.12.3]
 
 ## 1.12.3 (January 20 2022)
