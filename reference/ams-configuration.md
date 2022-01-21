@@ -56,6 +56,14 @@ The Android virtual keyboard is disabled by default but can be enabled with the 
 
 For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
 
+#### Client-Side Virtual Keyboard
+
+*since 1.11.0*
+
+The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed [AnboxWebView](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard) which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
+
+For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
+
 #### Wi-Fi
 
 *since 1.12.0*
