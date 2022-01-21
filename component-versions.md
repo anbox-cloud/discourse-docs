@@ -2,6 +2,36 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.12.4]
+
+This is an Anbox Cloud Appliance only release. No other components are updated.
+
+### Charms
+
+n/a
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+n/a
+
+### Snaps
+
+n/a
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+n/a
+
+[/Details]
+
 [Details=1.12.3]
 
 ### Charms
