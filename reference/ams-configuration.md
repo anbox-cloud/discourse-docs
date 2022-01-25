@@ -68,7 +68,7 @@ For the feature to be considered, applications must be manually updated, because
 
 *since 1.12.0*
 
-Wi-Fi support can be optionally enabled. Anbox will then set up a virtual Wi-Fi device, which sits on top of an ethernet connection and simulates a real Wi-Fi connection.
+Wi-Fi support can be optionally enabled with the `enable_wifi` feature flag. Anbox will then set up a virtual Wi-Fi device, which sits on top of an ethernet connection and simulates a real Wi-Fi connection.
 
 The feature flag will be considered by all newly launched containers once set.
 
