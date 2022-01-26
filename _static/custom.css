@@ -91,29 +91,3 @@ ol.lowerroman li ul li, ol.upperroman li ul li, ol.loweralpha li ul li, ol.upper
 .versionadded {
     font-style: italic;
 }
-
-/** Fix for issue #11 & #13 **/
-
-aside.p-side-navigation--raw-html>ul>li:first-child>a {
-    display: none;
-}
-
-aside.p-side-navigation--raw-html li li>a {
-    padding-left: 1.5rem;
-}
-
-aside.p-side-navigation--raw-html li li li>a {
-    padding-left: 2.5rem;
-}
-
-aside.p-side-navigation--raw-html li li li li>a {
-     padding-left: 3.5rem;
-}
-
-aside.p-side-navigation--raw-html li li li li li {
-    display: none;
-}
-
-aside.p-side-navigation--raw-html h3 {
-    display: none;
-}
