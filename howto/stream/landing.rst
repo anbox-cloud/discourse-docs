@@ -1,3 +1,5 @@
+:hide-toc:
+
 .. _howto_stream_landing:
 
 ==========================

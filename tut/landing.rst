@@ -1,4 +1,5 @@
 :sequential_nav: next
+:hide-toc:
 
 .. _tut_landing:
 
