@@ -123,7 +123,7 @@ When the application for the virtual device is ready, you can launch it and log 
 6. Enter `exit` or press Ctrl+D once to exit the Android shell, and then again to exit the Linux container.
 
 <a name="scrcpy"></a>
-### 5. Test the virtual device
+## 5. Test the virtual device
 
 You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [Access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#scrcpy) for more detailed instructions.
 
