@@ -8,7 +8,7 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = _build
 VENV = .venv/bin/activate
-PORT = 8000
+PORT = 8001
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -21,22 +21,27 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-html:
+.PHONY: html doc-incremental
+html doc-incremental:
 	. $(VENV); $(SPHINXBUILD) -b dirhtml . _build/html -w warnings.txt
 
+.PHONY: doc
+doc: install html
+
 run:
-	. $(VENV); sphinx-autobuild $(ALLSPHINXOPTS) --ignore ".git/*" --ignore "*.scss" . -b dirhtml -a _build/html --host 0.0.0.0 --port 8000
+	. $(VENV); sphinx-autobuild $(ALLSPHINXOPTS) --ignore ".git/*" --ignore "*.scss" . -b dirhtml -a _build/html --host 0.0.0.0 --port $(PORT)
 
 spelling:
 	sphinx-build -b spelling "$(SOURCEDIR)" "$(BUILDDIR)"
 
+.PHONY: install
 install:
 	@echo "... setting up virtualenv"
 	python3 -m venv .venv
 	. $(VENV); pip install --upgrade -r requirements.txt
 	@echo "\n" \
 	  "--------------------------------------------------------------- \n" \
-      "* watch, build and serve the documentation on port 8000: make run \n" \
+      "* watch, build and serve the documentation on port $(PORT): make run \n" \
 	  "* check spelling: make spelling \n" \
 	  "\n" \
       "enchant must be installed in order for pyenchant (and therefore \n" \
@@ -50,8 +55,9 @@ clean:
 	rm -f vanilla
 	rm -f warnings.txt
 
-serve:
-	cd _build/html; python3 -m http.server 8000
+.PHONY: serve doc-serve
+serve doc-serve:
+	cd _build/html; python3 -m http.server $(PORT)
 
 linkcheck:
 	. $(VENV); $(SPHINXBUILD) -b linkcheck . _build/html
