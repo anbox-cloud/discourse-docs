@@ -2,6 +2,46 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.12.5]
+
+### Charms
+
+n/a
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+n/a
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| ams    | 1.12.5 |
+| aar    | 1.12.5 |
+| ams-node-controller    | 1.12.5  |
+| anbox-cloud-dashboard | 1.12.5 |
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| bionic:android12:amd64 | 1.12.5 |
+| bionic:android12:arm64 | 1.12.5 |
+| bionic:android11:amd64 | 1.12.5 |
+| bionic:android11:arm64 | 1.12.5 |
+| bionic:android10:amd64 | 1.12.5 |
+| bionic:android10:arm64 | 1.12.5 |
+
+[/Details]
+
 [Details=1.12.4]
 
 This is an Anbox Cloud Appliance only release. No other components are updated.
