@@ -4,7 +4,7 @@ In this setup, every LXD cluster node runs a Telegraf instance that gathers the 
 
 Prometheus gathers the metrics that are collected by the different Telegraf instances and combines them with the metrics provided directly by AMS. You can access, query and visualise the full metrics data through Grafana.
 
-![metrics|606x399](upload://36fg3QjJ4FUy6RWm79aa45pl63q.png)
+![Architecture for collecting metrics](../../images/collect-metrics.png)
 
 ## Deploy the solution
 
