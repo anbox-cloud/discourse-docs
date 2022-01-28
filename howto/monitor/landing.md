@@ -1,3 +1,12 @@
-The guides in this section describe how to monitor your Anbox Cloud or Anbox Cloud Appliance installation.
+Anbox Cloud gathers various performance metrics and makes them accessible through API endpoints. While Anbox Cloud does not provide its own observability solution, it supports implementing and integrating custom solutions for monitoring performance.
 
-To check which metrics are available for monitoring, see [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521).
+See [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521) for a list of available metrics and how to access them. [LXD Metric exporter for instances](https://discuss.linuxcontainers.org/t/lxd-metric-exporter-for-instances/11735) has a list of metrics available through LXD.
+
+The implementation of a monitoring or observability solution depends on your specific use case and the tools that you want to use. See [Open source observability for enterprises](https://ubuntu.com/observability) for an overview of observability tools and stacks that are recommended and supported by Canonical. In particular, see the [Canonical Observability Stack (LMA2)](https://juju.is/docs/lma2).
+
+Anbox Cloud includes the following reference implementations that you can use as a starting point for planning and integrating your custom observability solution:
+
+- [Example: Collect metrics](tbd)
+- [Example: Monitor status](tbd)
+
+These examples show how to set up an observability solution. They can also be used for a first test. Be aware though that these examples are provided for reference only. They are not fully supported and should not be used in a production environment.

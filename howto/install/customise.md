@@ -10,7 +10,7 @@ Saving a copy of the bundle file and editing that file means that your customisa
 <a name="overlay-files"></a>
 ## Use overlay files
 
-A *bundle overlay* is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
+An [overlay bundle](https://juju.is/docs/sdk/bundle-reference#heading--overlay-bundles) is a fragment of valid YAML that is dynamically merged on top of a bundle file before deployment, similar to a patch file. The fragment can contain additional or alternative YAML that is intelligible to Juju. For example, you could use a bundle overlay to specify custom instance types for the machines you use (note that the specified constraints are just an example and not a recommendation):
 
     machines:
       '0':
