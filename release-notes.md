@@ -2,6 +2,24 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.12.5]
+
+## 1.12.5 (January 27 2022)
+
+#### New features & improvements
+
+None.
+
+#### Bugs
+
+* AC-676 Launching containers on a specific node fails with "node not found"
+* AC-671 Application that was signed with a custom system image  can't access hidden APIs
+* AC-667 Multi touch is not working when streaming from webrtc platform
+* AC-663 Latest Firefox doesn't render in 1.12.x
+* AC-662 Android containers fail to start on Linux 5.13.x
+
+[/Details]
+
 [Details=1.12.4]
 
 ## 1.12.4 (January 21 2022)
