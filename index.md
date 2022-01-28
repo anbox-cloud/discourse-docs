@@ -47,6 +47,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 0 | | How to |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
+| 2 | howto/install/deploy-bare-metal | [Deploy on bare metal](tbd) |
 | 2 | howto/install/customise | [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747)|
 | 2 | howto/install/high-availability | [Enable High Availability](https://discourse.ubuntu.com/t/high-availability/17754)|
 | 2 | howto/install/validate | [Validate the deployment](https://discourse.ubuntu.com/t/validation/20329)|

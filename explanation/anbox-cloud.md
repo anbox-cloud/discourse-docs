@@ -74,3 +74,18 @@ The main components powering the streaming stack in Anbox Cloud are:
 **TURN/STUN servers**: Servers that find the most optimal network path between a client and the container running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
 **NATS**: A messaging system that the different components use to communicate (see the [project page](https://github.com/nats-io)).
+
+<a name="juju-bundles">
+## Juju bundles
+
+Anbox Cloud provides two different Juju bundles:
+
+* The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
+
+ For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud-core) and the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud-core/archive/bundle.yaml) file.
+
+* The `anbox-cloud` bundle provides the full version of Anbox Cloud, including its streaming stack.
+
+ For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud) and the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud/archive/bundle.yaml) file.
+
+If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See [Access a container](https://discourse.ubuntu.com/t/container-access/17772) for details.

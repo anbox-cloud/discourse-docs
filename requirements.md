@@ -80,6 +80,7 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 
 Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Follow the official [documentation](https://juju.is/docs/installing) to get it installed on your machine.
 
+<a name="minimum-hardware"></a>
 ### Minimum hardware
 
 While you can run Anbox Cloud on a single machine, we strongly recommend the following setup for a production environment:
