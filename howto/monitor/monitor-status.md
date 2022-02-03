@@ -1,5 +1,7 @@
 This example implementation provides a starting point for a monitoring stack that can be used to monitor the status of your Anbox Cloud cluster using [Nagios](https://www.nagios.org/), a tool that is widely used for monitoring networks, servers and applications. Using the Nagios Remote Plugin Executor (NRPE) on each node, it can monitor your cluster with machine-level detail.
 
+[note type="information" status="Important"]This reference implementation is provided for demonstration purposes only. It does not cover all aspects that you should consider for a production-level solution (for example, high availability).[/note]
+
 In this setup, Anbox Cloud integrates with Nagios and allows you to monitor the status of its services to be alerted when something goes wrong.
 
 Nagios monitors the following services:
@@ -25,13 +27,13 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    ```yaml
    applications:
      nagios:
-       charm: 'cs:nagios-35'
+       charm: 'cs:nagios'
        expose: true
        num_units: 1
        to:
          - '2'
      nrpe:
-      charm: 'cs:nrpe-62'
+      charm: 'cs:nrpe'
 
    relations:
      - ['ams', 'nrpe:nrpe-external-master']
@@ -56,13 +58,13 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    ```yaml
    applications:
      nagios:
-       charm: 'cs:nagios-35'
+       charm: 'cs:nagios'
        expose: true
        num_units: 1
        to:
          - '2'
      nrpe:
-      charm: 'cs:nrpe-62'
+      charm: 'cs:nrpe'
 
    relations:
      - ['ams', 'nrpe:nrpe-external-master']
@@ -94,6 +96,8 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    - For the `anbox-cloud` bundle:
 
          juju deploy cs:~anbox-charmers/anbox-cloud --overlay nagios.yaml
+
+   [note type="information" status="Note"]You can use the same command if you already deployed Anbox Cloud. In this case, Juju checks the existing deployment and only deploys new components.[/note]
 1. Wait until all added units are in `active` state.
 
 ### Use an existing Nagios service

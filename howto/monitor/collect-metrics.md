@@ -1,8 +1,10 @@
 This example implementation provides a starting point for a monitoring stack that can be used to gather metrics with [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) and [Prometheus](https://prometheus.io/) and access them through [Grafana](https://grafana.com/).
 
+[note type="information" status="Important"]This reference implementation is provided for demonstration purposes only. It does not cover all aspects that you should consider for a production-level solution (for example, high availability).[/note]
+
 In this setup, every LXD cluster node runs a Telegraf instance that gathers the machine metrics. All Anbox containers that exist on the node also report their metrics to the Telegraf instance.
 
-Prometheus gathers the metrics that are collected by the different Telegraf instances and combines them with the metrics provided directly by AMS. You can access, query and visualise the full metrics data through Grafana.
+Prometheus gathers the metrics provided by the different sources (the Telegraf instances, AMS, Anbox Stream Gateway and NATS) and stores them in its time series database. You can then access, query and visualise the full metrics data through Grafana.
 
 ![Architecture for collecting metrics](../../images/collect-metrics.png)
 
@@ -10,9 +12,9 @@ Prometheus gathers the metrics that are collected by the different Telegraf inst
 
 The monitoring stack is provided as an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) that you use when deploying Anbox Cloud.
 
-The overlay file adds a machine to the deployment (with ID `2` for the `anbox-cloud-core` bundle or ID `3` for the `anbox-cloud` bundle), which is used to run Grafana and Prometheus. In addition, the overlay installs and configures Telegraf for both AMS and the LXD nodes, and it creates the required relations.
+The overlay file adds a machine to the deployment (with ID `2` for the `anbox-cloud-core` bundle or ID `3` for the `anbox-cloud` bundle), which is used to run Grafana, Prometheus and HAProxy (as a reverse proxy that secures access to the internal endpoints of the other services). In addition, the overlay installs and configures Telegraf for both AMS and the LXD nodes, and it creates the required relations.
 
-The ideal requirements for the additional machine are as follows:
+The minimum requirements for the additional machine are as follows:
 
 Architecture   | CPU cores | RAM  | Disk       | GPUs | Components  |
 ---------------|-----------|------|------------|------|-------------|
@@ -54,25 +56,25 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          - '2'
 
      prometheus:
-       charm: 'cs:prometheus2-18'
+       charm: 'cs:prometheus2'
        num_units: 1
        to:
          - '2'
 
      ams-monitor:
-       charm: 'cs:telegraf-39'
+       charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
 
      lxd-monitor:
-       charm: 'cs:telegraf-39'
+       charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
 
      grafana:
-       charm: 'cs:grafana-36'
+       charm: 'cs:grafana'
        num_units: 1
        options:
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
@@ -134,25 +136,25 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          - '3'
 
      prometheus:
-       charm: 'cs:prometheus2-18'
+       charm: 'cs:prometheus2'
        num_units: 1
        to:
          - '3'
 
      ams-monitor:
-       charm: 'cs:telegraf-39'
+       charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
 
      lxd-monitor:
-       charm: 'cs:telegraf-39'
+       charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
 
      grafana:
-       charm: 'cs:grafana-36'
+       charm: 'cs:grafana'
        num_units: 1
        options:
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
@@ -186,6 +188,8 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
        constraints: "cpu-cores=4 mem=4G root-disk=100G"
    ```
    [/Details]
+
+   [note type="information" status="Note"]For a production-level solution, replace the automatically generated self-signed SSL credentials with proper ones.[/note]
 1. Deploy Anbox Cloud with the overlay file.
 
    - For the `anbox-cloud-core` bundle:
@@ -195,6 +199,8 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    - For the `anbox-cloud` bundle:
 
          juju deploy cs:~anbox-charmers/anbox-cloud --overlay monitoring.yaml
+
+   [note type="information" status="Note"]You can use the same command if you already deployed Anbox Cloud. In this case, Juju checks the existing deployment and only deploys new components.[/note]
 1. Wait until all added units are in `active` state.
 
 ## Access Grafana
