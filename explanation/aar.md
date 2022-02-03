@@ -1,5 +1,6 @@
 The Anbox Application Registry, or *AAR*, provides a central repository for applications created on Anbox Cloud. Using an AAR is very useful for larger deployments involving multiple regions, in order to keep applications in sync.
 
+<a name="aar-roles"></a>
 ## How does it work
 
 You can configure the AMS service to regularly look at an AAR and import any new application versions found there. When a new application version is found, AMS starts to import it. Once done, AMS makes it available for use.

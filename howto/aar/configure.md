@@ -6,11 +6,11 @@ AAR and AMS must exchange certificates to set up a trust relation. The recommend
 
 Use [Juju relations](https://jaas.ai/docs/relations) to register an instance with the AAR.
 
-To register an instance as client, use the following command:
+To register an instance as a client, use the following command:
 
     juju add-relation aar:client ams:registry-client
 
-To register an instance as publisher, use the following command:
+To register an instance as a publisher, use the following command:
 
     juju add-relation aar:publisher ams:registry-publisher
 
@@ -106,13 +106,21 @@ Use "aar trust [command] --help" for more information about a command.
 
 Every AMS instance has a registry-specific client certificate that is stored at `/var/snap/ams/common/registry/client.crt`. To manually register an AMS client, you'll need to copy this certificate to the machine hosting AAR and use the CLI to trust it.
 
-Use any of the following commands to do that:
+To add an AMS client as a trusted [publisher](https://discourse.ubuntu.com/t/application-registry/17761#aar-roles), use the following command:
 
-    cat client.crt | sudo aar trust add
+    sudo aar trust add client.crt --publisher
+
+To add an AMS client as a trusted [client](https://discourse.ubuntu.com/t/application-registry/17761#aar-roles), use the following command:
 
     sudo aar trust add client.crt
 
-[note type="information" status="Note"]Due to Snap strict confinement and the AAR sudo requirement, the second method requires certificates to be located in the root user home directory `/root`.[/note]
+[note type="information" status="Note"]Due to Snap strict confinement and the AAR sudo requirement, the command requires the certificates to be located in the root user home directory `/root`.
+
+To work around this requirement, use the following command:
+
+    cat client.crt | sudo aar trust add [--publisher]
+
+[/note]
 
 Finally, reboot the AAR:
 
