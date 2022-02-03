@@ -1,19 +1,17 @@
-To run Anbox Cloud you need to fulfil a few minimum requirements which are a bit different depending on which kind of deployment you choose.
+To run Anbox Cloud, you must fulfil a few minimum requirements, which differ depending on the kind of deployment you choose.
 
-The following two different deployment variants and their minimum requirements will be covered below:
+The [General requirements](#general) apply to all kinds of deployments. In addition, check the [requirements for the Anbox Cloud Appliance](#appliance) if you run the appliance or the [requirements for Juju-based deployments](#juju-based) if you run Anbox Cloud. See [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants) for an explanation of the differences between both variants.
 
-1. The Anbox Cloud Appliance
-2. Juju based deployments
-
-See the [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants) for a explanation of the differences between both variants.
-
+<a name="general"></a>
 ## General requirements
 
-The following requirements apply to all variants of Anbox Cloud
+The following requirements apply to all variants of Anbox Cloud.
 
-### Ubuntu Advantage Token
+### Ubuntu Advantage token
 
 After registering to Anbox Cloud, you should have received an [Ubuntu Advantage for Applications](https://ubuntu.com/advantage) token. If you haven't received one, please contact [support](https://support.canonical.com/) or your Canonical account representative as you'll need it to deploy Anbox Cloud.
+
+[note type="information" status="Note"]When [installing the Anbox Cloud Appliance from the AWS Marketplace](https://discourse.ubuntu.com/t/install-appliance/22681#install-aws), the Ubuntu Advantage token is included in the Anbox Cloud Appliance subscription and is used under the hood during the deployment. Therefore, you will not receive it separately.[/note]
 
 ### Ubuntu OS
 
@@ -72,13 +70,27 @@ For external access to the Anbox Cloud Appliance, a couple of network ports must
 
 How to allow incoming traffic on the listed ports is different depending on the cloud used. Please consult the documentation of the cloud for further information on how to change the firewall.
 
-## Juju based deployments
+<a name="juju-based"></a>
+## Juju-based deployments
 
 Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
 
-### Juju setup
+<a name="juju-version"></a>
+### Juju version
 
-Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Follow the official [documentation](https://juju.is/docs/installing) to get it installed on your machine.
+Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. The latest supported version is **2.9**.
+
+[note type="information" status="Note"]If you are using Anbox Cloud 1.11 or earlier, the required Juju version is **2.8**.[/note]
+
+You can install Juju 2.9 with the following command:
+
+    snap install --classic --channel=2.9/stable juju
+
+To switch to the 2.9 series, use the following command:
+
+    snap refresh --channel=2.9/stable juju
+
+See the [Juju documentation](https://juju.is/docs/installing) for more information.
 
 <a name="minimum-hardware"></a>
 ### Minimum hardware

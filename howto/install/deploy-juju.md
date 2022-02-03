@@ -26,7 +26,7 @@ To install Juju 2.9, enter the following command:
 
     sudo snap install --channel=2.9/stable juju
 
-See [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
+See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
 
 ## Authenticate with your cloud
 
