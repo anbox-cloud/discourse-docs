@@ -196,7 +196,7 @@ The appliance requires a few additional tools. Run the following commands to ins
     sudo snap install --classic --channel=2.9/stable juju
 
 [note type="information" status="Note"]
-See [Juju version](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
+See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
 [/note]
 
 
