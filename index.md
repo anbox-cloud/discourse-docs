@@ -60,6 +60,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 2 | howto/manage/images | [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 2 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 2 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
+| 2 | howto/manage/benchmarks | [Run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 2 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 2 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
@@ -135,7 +136,6 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 1 | exp/containers | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 1 | exp/clustering | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 1 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
-| 1 | exp/benchmarking | [About benchmarking](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 0 | | Anbox Cloud |
 | 1 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
@@ -200,4 +200,5 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | /docs/usage/usecase-port-android-application-to-anbox-cloud | /docs/exp/porting-issues |
 | /docs/installation/installation-requirements | /docs/requirements |
 | /docs/exp/porting-issues | /docs/howto/port/landing |
+| /docs/exp/benchmarking | /docs/howto/manage/benchmarks |
 [/details]

@@ -1,27 +1,47 @@
-Anbox Cloud provides different tools to allow benchmarking different aspects of a deployment. This pages describes the available tools and how to use them.
+Anbox Cloud provides tools for benchmarking different aspects of your deployment. These tools enable you to put Anbox Cloud under load and use the results to evaluate the performance for a well-defined workload.
 
-## Container Benchmarking
+See [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) for an overview of results that you can expect for selected hardware configurations.
 
-The `amc` command line utility comes with a subcommand to allow easy benchmarking of an Anbox Cloud deployment. It can be used to measure the time containers take to start up but also for measuring their frames per second. The benchmark enables you to put Anbox Cloud under load. The results can be used to evaluate the performance of Anbox Cloud for a well defined workload.
+[note type="information" status="Important"]Benchmarks provide useful information only if you run them with an application and workload that reflects your real-life scenario. For example, if you run the benchmark with an Android app that just sits idle and does not constantly refresh the screen by itself, you will get a low FPS number. This number does not reflect the real scenario though, because in reality, your users actually use the app and thus cause a higher workload.[/note]
 
-[note type="caution" status="Warning"]If your application is not constantly refreshing the screen by itself, like regular Android applications providing a simple user interface do, you will get a low FPS number. The benchmark can only provide useful information if you know your workload and how it should perform in an ideal scenario.[/note]
+## Run container benchmarks
 
-### Run the Benchmark
+The `amc` command line utility provides a `benchmark` subcommand to run benchmarks on an Anbox Cloud deployment. It measures the time containers take to start up and their average FPS (frames per second) rate.
 
-Have a look at the output of
+The results you get depend on the resources of the machines that host the containers. In addition, latency between the different nodes and the AMS services can impact the results
+
+Check the help output to see all available arguments and their purpose:
+
+    amc benchmark -h
+
+The benchmark command launches the specified number of containers on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
+
+ | Display spec            | Value |
+ | ----------------------- | ----- |
+ | Display width           | 1280  |
+ | Display height          | 720   |
+ | FPS                     | 60    |
+ | Display density         | 160   |
+
+You can configure a different display specification through the `--user-data` parameter when running the benchmark. The required format for the parameter varies based on the different platforms:
+
+| Platform              | Required format of user data          | Example                                                   |
+| --------------------- | ------------------------------------  | --------------------------------------------------------  |
+| null                  | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| swrast                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| webrtc                | JSON-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
+
+[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
+
+### Example
+
+The following command launches 15 containers for the application with ID `bh2q90vo3v1lt1ft4mlg`:
+
+    amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --containers-per-second=0.1 bh2q90vo3v1lt1ft4mlg
+
+The output for this command could look like this:
 
 ```bash
-$ amc benchmark -h
-```
-
-to learn more about the different arguments and their purpose.
-
-[note type="information" status="Hint"]Keep in mind that the success of container startup and the times you will get depend on  the underlying resources used on the machines hosting the containers. Latency between the different nodes and the AMS services also play their role.[/note]
-
-An example benchmark session looks like this:
-
-```bash
-$ amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --containers-per-second=0.1 bh2q90vo3v1lt1ft4mlg
 2019/01/21 11:11:49 Test environment:
 2019/01/21 11:11:49   AMS version: 1.7
 2019/01/21 11:11:49   Available nodes:
@@ -90,62 +110,43 @@ $ amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --contai
 2019/01/21 11:15:39     None
 ```
 
-The benchmark command launches 15 containers on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
+## Run stream benchmarks
 
- | Display Spec            | Value |
- | ----------------------- | ----- |
- | Display width           | 1280  |
- | Display height          | 720   |
- | FPS                     | 60    |
- | Display density         | 160   |
+A benchmark for streaming requires more automation than just starting containers. Therefore, Anbox Cloud provides a dedicated benchmark tool for this purpose. The tool automates the following tasks:
 
+- Create a streaming session
+- Receive the video/audio stream
+- Collect various statistics
+- Optional: Dump the received stream to a local file
 
-You can configure a different display specification through the `--user-data` parameter when running the benchmark. The required format for the parameter varies based on the different platforms:
+The benchmark tool is provided through the `anbox-cloud-tests` snap. Use the following command to install it:
 
-| Platform              | Required format of user data          | Example                                                   |
-| --------------------- | ------------------------------------  | --------------------------------------------------------  |
-| Null                  | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
-| Swrast                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
-| WebRTC                | Json-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
+    snap install anbox-cloud-tests
 
-[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
+Check the help output to see all available arguments and their purpose:
 
-## Stream Benchmarking
+    anbox-cloud-tests.benchmark -h
 
-As streaming involves more things to automate for a proper benchmark Anbox Cloud provides a dedicated benchmark tool which allows creating a streaming session, receiving the video/audio stream and collecting various statistics and optional also dumping the received stream to a local file.
+To run the benchmark, you must provide an authentication token for the Anbox Stream Gateway. Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
 
-[note type="caution" status="Warning"]Right now the benchmark tool is only supported on a Linux system supporting snaps and on 64 bit x86 systems. Support for 64 bit ARM systems will be added at a later point.[/note]
+If your Anbox Stream Gateway is behind a self-signed TLS certificate, you must specify the `--insecure-tls` option.
 
-The benchmark tool comes with the `anbox-cloud-tests` snap which you can install with
+By default, the results are printed out as text. Alternatively, you can change the output format to JSON with `--format=json` and save the results to a file with the `--report-path=/path/to/report.json` option.
 
-```bash
-$ snap install anbox-cloud-tests
-```
+### Example
 
-Once the snap is installed you can have a look at the supported command line options of the benchmark tool:
+The following command runs the benchmark against an existing Anbox Cloud deployment:
 
-```bash
-$ anbox-cloud-tests.benchmark -h
-```
+    anbox-cloud-tests.benchmark \
+      --screen-width=1280 \
+      --screen-height=720 \
+      --screen-fps=60 \
+      --stream-dump-path=/path/to/stream/dump/output \
+      --application=my-application \
+      --url=<https:// URL of the Anbox Stream Gateway> \
+      --auth-token=<valid auth token for the Anbox Stream Gateway> \
 
-To run the benchmark against an existing Anbox Cloud deployment, use the following as an example but check the other available options the benchmark offers too:
-
-```bash
-$ anbox-cloud-tests.benchmark \
-  --screen-width=1280 \
-  --screen-height=720 \
-  --screen-fps=60 \
-  --stream-dump-path=/path/to/stream/dump/output \
-  --application=my-application \
-  --url=<https:// URL of the Anbox Stream Gateway> \
-  --auth-token=<valid auth token for the Anbox Stream Gateway> \
-```
-
-[note type="information" status="Hint"]Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.[/note]
-
-If your Anbox Stream Gateway is behind a self-signed TLS certificate you also need to specify the `  --insecure-tls` option.
-
-The benchmark will emit various statistics once it finished:
+The output for this command could look like this:
 
 ```bash
 I0104 13:03:09.860428 556511 benchmark.cpp:165] Created new session bvpg7vbmend4td6moir0 in region cloud-0 for application bombsquad-stress-nvc
@@ -188,5 +189,3 @@ I0104 13:04:39.508816 556511 main.cpp:200] Finished benchmark, generating report
 Sample interval is 10 seconds
 Benchmark ran for 1 minutes
 ```
-
-The results can also be saved in a file with the `--report-path=/path/to/report.json` option and the format changed to JSON with `--format=json` for easier automated processing.
