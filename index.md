@@ -165,6 +165,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | /docs/howto/manage/managing-addons | /docs/howto/addons/landing |
 | /docs/howto/manage/managing-logs | /docs/howto/manage/logs |
 | /docs/howto/manage/managing-ams-access | /docs/howto/manage/ams-access |
+| /docs/manage/managing-ams-access | /docs/howto/manage/ams-access |
 | /docs/installation/installation-application-registry | /docs/howto/aar/deploy |
 | /docs/usage/usecase-application-testing | /docs/howto/application/test |
 | /docs/usage/usecase-virtual-devices | /docs/howto/application/virtual-devices |
