@@ -78,7 +78,7 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 <a name="juju-version"></a>
 ### Juju version
 
-Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. The latest supported version is **2.9**.
+Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Starting with Anbox Cloud 1.13, the required Juju version is **2.9**.
 
 [note type="information" status="Note"]If you are using Anbox Cloud 1.11 or earlier, the required Juju version is **2.8**.[/note]
 
