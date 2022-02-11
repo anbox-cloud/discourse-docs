@@ -45,6 +45,7 @@ unit-anbox-cloud-dashboard-0:
     started: 2021-02-10 14:04:44 +0000 UTC
 ```
 
+<a name="dashboard-access-appliance"></a>
 #### Register a Ubuntu One account in Anbox Cloud Appliance
 
 If you followed the instructions in [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.

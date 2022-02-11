@@ -222,6 +222,7 @@ Run the following commands to ensure that all installed packages on your system 
     sudo apt update
     sudo apt upgrade
 
+<a name="start-initialise"></a>
 ### 3. Start the initialisation process
 
 Invoke the initialisation process of the Anbox Cloud Appliance:
