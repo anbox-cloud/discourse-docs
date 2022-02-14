@@ -68,9 +68,9 @@ Run `juju list-machines` to display the available machines:
     0        started  192.168.0.9   i-09a2fdb5e7a2e8385   bionic  localhost-1a   running
     1        started  192.168.0.10  i-00a05065e2768be5d   bionic  localhost-1b   running
 
-The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0` is supposed to host the AMS service. `1` is used for LXD. See the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud-core/archive/bundle.yaml) file for details.
+The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0` is supposed to host the AMS service. `1` is used for LXD. Check the `bundle.yaml` file in the bundle for details.
 
-The `anbox-cloud` bundle requires an additional machine to host the extra services required for streaming. See the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud/archive/bundle.yaml) file for details.
+The `anbox-cloud` bundle requires an additional machine to host the extra services required for streaming. Check the `bundle.yaml` file in the bundle for details.
 
 The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2` for the `anbox-cloud` bundle.
 

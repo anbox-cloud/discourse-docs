@@ -82,10 +82,12 @@ Anbox Cloud provides two different Juju bundles:
 
 * The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
 
-  For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud-core) and the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud-core/archive/bundle.yaml) file.
+  For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud-core).
 
 * The `anbox-cloud` bundle provides the full version of Anbox Cloud, including its streaming stack.
 
-  For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud) and the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud/archive/bundle.yaml) file.
+  For more information, see the [charm page](https://charmhub.io/anbox-charmers-anbox-cloud).
+
+[note type="information" status="Tip"]For detailed information about the charm, check the `bundle.yaml` file in the bundle. You can download the bundle with `juju download <charm_name>`, thus `juju download anbox-charmers-anbox-cloud-core` or `juju download anbox-charmers-anbox-cloud`. Unzip the bundle to access the `bundle.yaml` file.[/note]
 
 If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See [Access a container](https://discourse.ubuntu.com/t/container-access/17772) for details.
