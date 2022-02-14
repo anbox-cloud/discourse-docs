@@ -72,7 +72,7 @@ The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0`
 
 The `anbox-cloud` bundle requires an additional machine to host the extra services required for streaming. See the [bundle.yaml](https://api.jujucharms.com/charmstore/v5/~anbox-charmers/bundle/anbox-cloud/archive/bundle.yaml) file for details.
 
-The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines existing,0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines existing,0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
+The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2` for the `anbox-cloud` bundle.
 
 ## Deploy Anbox Cloud
 
@@ -82,11 +82,11 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud-core --overlay ua.yaml --map-machines existing,0=0,1=1
+        juju deploy cs:~anbox-charmers/anbox-cloud-core --overlay ua.yaml --map-machines 0=0,1=1
 
 * For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --map-machines existing,0=0,1=1,2=2,3=3
+        juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2
 
 You can watch the status of the deployment with the following command:
 
