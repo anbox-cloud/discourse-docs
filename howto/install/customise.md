@@ -53,7 +53,7 @@ anbox-stream-gateway:
   to: ['0']
 ```
 
-The entries under `options` in this example assign a specific port for Prometheus and allow using self-signed TLS certificates. There are, however, a number of additional configuration options available (see the [charm documentation](https://jaas.ai/u/anbox-charmers/anbox-stream-gateway/64)). To add further configurations, specify the desired settings under `options`.
+The entries under `options` in this example assign a specific port for Prometheus and allow using self-signed TLS certificates. There are, however, a number of additional configuration options available (see the [charm documentation](https://charmhub.io/anbox-charmers-anbox-stream-gateway)). To add further configurations, specify the desired settings under `options`.
 
 For example, the following YAML fragment sets some proxy values:
 

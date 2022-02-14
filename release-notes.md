@@ -788,7 +788,7 @@ None
 ### New features & improvements
 
 * Anbox Cloud is now fully integrated with [Ubuntu Advantage](https://ubuntu.com/advantage)
-* TLS certificates are now managed through a common CA for all components ([easyrsa](https://jaas.ai/u/containers/easyrsa/303))
+* TLS certificates are now managed through a common CA for all components ([easyrsa](https://charmhub.io/containers-easyrsa))
 * GPS position updates can now be provided via a new  HTTP API endpoint Anbox exposes within
   the container or via the streaming SDK
 * Removed [KSM](https://www.kernel.org/doc/html/latest/admin-guide/mm/ksm.html) support
