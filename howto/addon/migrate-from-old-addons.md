@@ -1,6 +1,6 @@
 Starting with Anbox Cloud 1.12, the following hooks are deprecated and should be replaced:
 
-- `installed` should be replaced with `pre-start`
+- `install` should be replaced with `pre-start`
 - `prepare` should be replaced with `post-start`
 - `restore` should be replaced with `pre-start`
 - `backup` should be replaced with `post-stop`
