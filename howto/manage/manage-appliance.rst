@@ -19,7 +19,7 @@ The available commands for the ``anbox-cloud-appliance`` tool are:
   Generate a tarball that contains debug information.
 
 ``dashboard``
-  Manage the web dashboard and access to it. By default, the dashboard is enabled and exposed, but you can disable it. You can also register new users for the web dashboard. See :ref:`howto_manage_web-dashboard_register` for more information.
+  Manage the web dashboard and access to it. By default, the dashboard is enabled and exposed, but you can disable it. You can also register new users for the web dashboard. See :ref:`Register a Ubuntu One account <howto_manage_web-dashboard_register>` for more information.
 
 ``destroy``
   If you want to uninstall the Anbox Cloud Appliance, you must first destroy the deployment. Run this command before you uninstall the snap.

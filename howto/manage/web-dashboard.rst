@@ -51,54 +51,49 @@ If you haven’t registered an Ubuntu One account yet, you can do that at
 https://login.ubuntu.com/.
 
 Before you can log into the dashboard, you must register your Ubuntu One
-account with the dashboard to grant it access.
-
-Register a Ubuntu One account in Anbox Cloud
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-On a regular Anbox Cloud deployment, use the following Juju action to
-register a Ubuntu One account:
-
-::
-
-   juju run-action anbox-cloud-dashboard/0 --wait register-account email=<Ubuntu One email address>
-
-You will see output similar to the following:
-
-.. code:: sh
-
-   unit-anbox-cloud-dashboard-0:
-     UnitId: anbox-cloud-dashboard/0
-     id: "157"
-     results:
-       Stdout: |
-         Visit https://10.10.10.10/register?token=eyJ0...-Td7A to create the new user
-     status: completed
-     timing:
-       completed: 2021-02-10 14:04:46 +0000 UTC
-       enqueued: 2021-02-10 14:04:44 +0000 UTC
-       started: 2021-02-10 14:04:44 +0000 UTC
+account with the dashboard to grant it access:
 
 .. _howto_manage_web-dashboard_register:
 
-Register a Ubuntu One account in Anbox Cloud Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. tabs::
 
-If you followed the instructions in :ref:`tut_installing-appliance` to
-install the Anbox Cloud Appliance, you already registered your Ubuntu
-One account.
+   .. group-tab:: Anbox Cloud
 
-To add more accounts, use the following command:
+      On a regular Anbox Cloud deployment, use the following Juju action to register a Ubuntu One account:
 
-::
+      ::
 
-   $ anbox-cloud-appliance dashboard register <Ubuntu One email address>
+          juju run-action anbox-cloud-dashboard/0 --wait register-account email=<Ubuntu One email address>
 
-Accessing the resulting link will create the account and ask you to
-login via Ubuntu One. You only need to do this step once per user you
-want to grant access to the dashboard.
+       You will see output similar to the following:
 
-The generated link is valid for one hour.
+      .. code:: sh
+
+         unit-anbox-cloud-dashboard-0:
+           UnitId: anbox-cloud-dashboard/0
+           id: "157"
+           results:
+             Stdout: |
+               Visit https://10.10.10.10/register?token=eyJ0...-Td7A to create the new user
+           status: completed
+           timing:
+             completed: 2021-02-10 14:04:46 +0000 UTC
+             enqueued: 2021-02-10 14:04:44 +0000 UTC
+             started: 2021-02-10 14:04:44 +0000 UTC
+
+   .. group-tab:: Anbox Cloud Appliance
+
+      If you followed the instructions in :ref:`tut_installing-appliance` to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
+
+      To add more accounts, use the following command:
+
+      ::
+
+         $ anbox-cloud-appliance dashboard register <Ubuntu One email address>
+
+      Accessing the resulting link will create the account and ask you to login via Ubuntu One. You only need to do this step once per user you want to grant access to the dashboard.
+
+      The generated link is valid for one hour.
 
 Creating applications
 ---------------------
