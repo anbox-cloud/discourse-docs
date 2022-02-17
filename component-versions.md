@@ -303,6 +303,35 @@ n/a
 
 [/Details]
 
+[Details=1.11.5]
+
+### Charms
+
+n/a
+
+### Bundles
+
+n/a
+
+### Snaps
+
+n/a
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| bionic:android11:amd64 | 1.11.5 |
+| bionic:android11:arm64 | 1.11.5 |
+| bionic:android10:amd64 | 1.11.5 |
+| bionic:android10:arm64 | 1.11.5 |
+
+[/Details]
+
 [Details=1.11.4]
 
 ### Charms

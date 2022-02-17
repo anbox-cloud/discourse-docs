@@ -2,6 +2,20 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.11.5]
+
+## 1.11.5 (February 15 2022)
+
+#### New features & improvements
+
+None.
+
+#### Bugs
+
+* AC-662 Android containers fail to start on Linux 5.13.x
+
+[/Details]
+
 [Details=1.12.5]
 
 ## 1.12.5 (January 28 2022)
