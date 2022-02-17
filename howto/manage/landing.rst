@@ -13,6 +13,7 @@ Anbox Cloud or Anbox Cloud Appliance installation.
 .. toctree::
    :titlesonly:
 
+   Manage the appliance <manage-appliance>
    Use the web dashboard <web-dashboard>
    Manage images <images>
    View logs <logs>

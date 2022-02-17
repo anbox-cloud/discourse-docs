@@ -79,6 +79,8 @@ You will see output similar to the following:
        enqueued: 2021-02-10 14:04:44 +0000 UTC
        started: 2021-02-10 14:04:44 +0000 UTC
 
+.. _howto_manage_web-dashboard_register:
+
 Register a Ubuntu One account in Anbox Cloud Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

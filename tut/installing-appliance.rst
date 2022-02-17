@@ -391,6 +391,8 @@ system are up-to-date:
    sudo apt update
    sudo apt upgrade
 
+.. _tut_install_app_initialise:
+
 3. Start the initialisation process
 -----------------------------------
 
