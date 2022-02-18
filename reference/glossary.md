@@ -49,8 +49,10 @@
 - [Monitoring stack](#monitoring-stack)
 - [NATS](#nats)
 - [Nagios](#nagios)
+- [Nagios Remote Plugin Executor](#nrpe)
 - [Neural Autonomic Transport System](#nats)
 - [Node controller](#ams-node-controller)
+- [NRPE](#nrpe)
 - [Platform](#platform)
 - [Prometheus](#prometheus)
 - [Raw container](#raw-container)
@@ -323,9 +325,9 @@ See [the LXD website](https://linuxcontainers.org/).
 <a name="monitoring-stack"></a>
 ### Monitoring stack
 
-A reference implementation for basic monitoring functionality based on Prometheus, Grafana and Telegraf. Anbox Cloud does not provide a full monitoring solution, but the reference implementation can be used as a starting point for implementing a custom solution.
+A reference implementation for basic monitoring functionality. Anbox Cloud does not provide a monitoring solution, but it offers reference implementations that can be used as a starting point for implementing a custom solution.
 
-See https://discourse.ubuntu.com/t/install-the-monitoring-stack/17786.
+See https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338.
 
 <a name="nagios"></a>
 ### Nagios
@@ -340,6 +342,13 @@ See [the Nagios website](https://www.nagios.org/).
 An open-source messaging system that the components of the streaming stack use to communicate.
 
 See [the NATS website](https://nats.io/).
+
+<a name="nrpe"></a>
+### Nagios Remote Plugin Executor (NRPE)
+
+A Nagios agent that allows to execute Nagios plugins on a remote host to monitor the status and metrics on that machine.
+
+See [the NRPE project on GitHub](https://github.com/NagiosEnterprises/nrpe).
 
 <a name="platform"></a>
 ### Platform

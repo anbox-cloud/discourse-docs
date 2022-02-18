@@ -99,9 +99,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 2 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
 | 2 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
 | 1 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 2 | howto/monitor/install | [Install the monitoring stack](https://discourse.ubuntu.com/t/monitoring-installation/17786)|
-| 2 | howto/monitor/grafana | [Use Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
-| 2 | howto/monitor/nagios | [Use Nagios](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
+| 2 | howto/monitor/grafana | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
+| 2 | howto/monitor/nagios | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 1 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
 | 2 | howto/stream/access | [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) |
 | 2 | howto/stream/native-client | [Implement a native client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)|
@@ -174,7 +173,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | /docs/howto/container/view-log | /docs/howto/container/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/container/geographic-location |
 | /docs/howto/containers/backup-and-restore | /docs/howto/container/backup-and-restore |
-| /docs/monitoring/monitoring-installation | /docs/howto/monitor/install |
+| /docs/monitoring/monitoring-installation | /docs/howto/monitor/landing |
+| /docs/howto/monitor/install | /docs/howto/monitor/landing |
 | /docs/monitoring/monitoring-grafana | /docs/howto/monitor/grafana |
 | /docs/monitoring/monitoring-nagios | /docs/howto/monitor/nagios |
 | /docs/implement-android-native-streaming-client | /docs/howto/stream/native-client |
