@@ -26,6 +26,7 @@ $ cat << EOF > manifest.yaml
 name: vdev-support
 description: |
   Addon installing and configuring the Lawnchair launcher as the systems default one
+EOF
 $ touch hooks/post-start hooks/pre-start
 $ cat << EOF > hooks/pre-start
 #!/bin/sh -ex
