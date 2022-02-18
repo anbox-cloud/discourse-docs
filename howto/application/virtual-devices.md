@@ -27,13 +27,17 @@ name: vdev-support
 description: |
   Addon installing and configuring the Lawnchair launcher as the systems default one
 EOF
-$ touch hooks/post-start hooks/pre-start
 $ cat << EOF > hooks/pre-start
 #!/bin/sh -ex
 exit 0
 EOF
 $ cat << "EOF" > hooks/post-start
 #!/bin/sh -ex
+
+if  [ "$CONTAINER_TYPE" = "regular" ]; then
+  exit 0
+fi
+
 cp "$ADDON_DIR"/lawnchair.apk /var/lib/anbox/data/
 anbox-shell pm install -g -t /data/lawnchair.apk
 
