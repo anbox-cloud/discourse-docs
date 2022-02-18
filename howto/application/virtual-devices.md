@@ -31,7 +31,7 @@ $ cat << EOF > hooks/pre-start
 #!/bin/sh -ex
 exit 0
 EOF
-$ cat << EOF > hooks/post-start
+$ cat << "EOF" > hooks/post-start
 #!/bin/sh -ex
 cp "$ADDON_DIR"/lawnchair.apk /var/lib/anbox/data/
 anbox-shell pm install -g -t /data/lawnchair.apk
