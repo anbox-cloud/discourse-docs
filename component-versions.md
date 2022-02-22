@@ -2,6 +2,76 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.13.0]
+
+### Charms
+
+| Name | Revision |
+|----------|--------------|
+| cs:~anbox-charmers/anbox-cloud-dashboard | 81 |
+| cs:~anbox-charmers/ams-node-controller | 102 |
+| cs:~anbox-charmers/coturn | 110 |
+| cs:~anbox-charmers/ams | 109 |
+| cs:~anbox-charmers/aar | 95 |
+| cs:~anbox-charmers/anbox-stream-gateway | 115 |
+| cs:~anbox-charmers/ams-load-balancer | 99 |
+| cs:~anbox-charmers/lxd | 111 |
+| cs:~anbox-charmers/anbox-stream-agent | 108 |
+| cs:~anbox-charmers/nats  |  9 |
+
+### Validated revisions of 3rd party charms
+
+| Name | Revision |
+|----------|--------------|
+| cs:~containers/easyrsa | 384 |
+| cs:~containers/etcd | 594 |
+
+### Bundles
+
+| Name | Revision |
+|----------|--------------|
+| cs:~anbox-charmers/anbox-cloud | 103 |
+| cs:~anbox-charmers/anbox-cloud-core | 89 |
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| ams    | 1.13.0 |
+| aar    | 1.13.0 |
+| ams-node-controller    | 1.13.0  |
+| anbox-cloud-dashboard | 1.13.0 |
+| anbox-stream-agent | 1.13.0 |
+| anbox-stream-gateway | 1.13.0 |
+| anbox-cloud-appliance | 1.13.0 |
+
+### Debian packages
+
+| Name | Ubuntu Release | Version |
+|----------|--------------|-----------------|
+| anbox-modules-dkms-113 | 20.04 (focal) | 1:1.13.0-stable1~focal0 |
+| anbox-modules-dkms-113 |  18.04 (bionic) |  1:1.13.0-stable1~bionic0 |
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| bionic:android12:amd64 | 1.13.0 |
+| bionic:android12:arm64 | 1.13.0 |
+| bionic:android11:amd64 | 1.13.0 |
+| bionic:android11:arm64 | 1.13.0 |
+| bionic:android10:amd64 | 1.13.0 |
+| bionic:android10:arm64 | 1.13.0 |
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 470.x |
+| Mesa | 21.3.5 |
+
+[/Details]
+
 [Details=1.12.5]
 
 ### Charms
