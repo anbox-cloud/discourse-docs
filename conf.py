@@ -33,7 +33,8 @@ author = 'Canonical Ltd.'
 extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_tabs.tabs",
-    "sphinx_reredirects"
+    "sphinx_reredirects",
+    "sphinxext.opengraph"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -80,6 +81,12 @@ templates_path = ["_templates"]
 intersphinx_mapping = {
     'lxd': ('https://linuxcontainers.org/lxd/docs/master/', None)
 }
+
+# Open Graph configuration
+
+ogp_site_url = "https://anbox-cloud.readthedocs.io/en/latest/"
+ogp_site_name = "Anbox Cloud documentation"
+ogp_image = "https://assets.ubuntu.com/v1/ee29de9e-Anbox_favicon_64px.png"
 
 # -- Redirects ---------------------------------------------------------------
 
