@@ -6,6 +6,8 @@
 Glossary
 ========
 
+Terms, concepts and abbreviations that are relevant for Anbox Cloud.
+
 .. glossary::
 
 Addon
