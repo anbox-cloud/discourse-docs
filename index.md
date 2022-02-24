@@ -79,6 +79,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
 | 2 | howto/port/architecture | [Choose APK architecture](https://discourse.ubuntu.com/t/choose-apk-architecture/26055)|
 | 2 | howto/port/obb-files | [Port APKs with OBB files](https://discourse.ubuntu.com/t/port-apks-with-obb-files/26056)|
 | 2 | howto/port/configure-watchdog | [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057)|
+| 2 | howto/port/install-system-app | [Install APK as a system app](TBD)|
 | 1 | howto/container/landing | [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
 | 2 | howto/container/launch | [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
 | 2 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
