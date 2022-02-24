@@ -2,6 +2,78 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.13.0]
+
+## 1.13.0 (February 24 2022)
+
+#### New features & improvements
+
+* OpenGL ES 3.2 support for NVIDIA GPUs
+* Direct rendering for AMD and Intel GPUs
+* Android security updates for February 2022 (see [Android Security Bulletin - February 2022](https://source.android.com/security/bulletin/2022-02-01) for more information)
+* Android WebView has been updated to [98.0.4758.101](https://chromereleases.googleblog.com/2022/02/chrome-for-android-update_0839135123.html)
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+* AC-732 Anbox session(WebRTC platform) crashed when reconnecting the signaler(stream gateway)
+* AC-731 Stream SDK: getId() returns invalid ID
+* AC-727 Cast player: add implementation for canonicalLogout
+* AC-726 The aam inject-system-signature exited with an error when injecting system signature from an apk comes with none default RSA and SF files
+* AC-724 LXD cluster looses its ams0 storage pool when node failed to get added to the cluster
+* AC-719 Anbox session aborted due to stack smashing detected
+* AC-715 [Doc] Fix "Deploy on bare metal"
+* AC-712 Android crash in Mesa on not allowed sched_getaffinity syscall
+* AC-710 node-controller: add healthcheck for LXD event listener
+* AC-709 AMS charm attempts to use the service before it is ready which fails HA deployment
+* AC-707 gateway-multiple-clients deploys charm from charm store rather than the local one
+* AC-706 AMS becomes stuck and doesn't process objects after leadership handover
+* AC-703 Node remains marked as online even if it is removed from the LXD cluster
+* AC-698 Andorid prints glUtilsParamSize: unknow param 0x0000826d when running deqp tests
+* AC-697 Application versions are not correcctly handled when two versions share the same image
+* AC-696 NewPipe fails to load some videos
+* AC-695 Audio recording app cannot playback m4a recordings
+* AC-694 Bombsquad has artifacts at start because of invalid gyro
+* AC-692 Image alias of app version sharing image with another version is not removed
+* AC-690 Plex fails to reach server
+* AC-688 NewPipe fails to load any video
+* AC-686 Weather app fails to connect to the internet
+* AC-685 Recorder app crashes when saving the recording
+* AC-683 Streaming restart is delayed unnecessarily by a second
+* AC-682 Container shuts down when peer connection switches into failed state
+* AC-681 Can't stream video from NewPipe application
+* AC-680 Android log is spammed with glUtilsParamSize unknown param warning when running Firefox
+* AC-673 Android reports "Native format mismatch" error when running with Mesa and swrast
+* AC-670 Android crashes with dangling fd in Mesa
+* AC-664 Application watchdog was triggered in some cases when enabling the virtual keyboard
+* AC-656 Deleting an instance fails with FormatException
+* AC-655 Resuming instances fails with "instance is still active"
+* AC-653 spread/multiple-gateway-clients broken when using ua_source
+* AC-652 Remove deprecated enable_dev_ui option
+* AC-651 Anbox crashes in IOStream::read
+* AC-637 AMS Cannot Use AAR And Push Application To S3 : EntityTooLarge
+* AC-621 Anbox shutdown hangs in anbox::webrtc::metrics::TelegrafBackend::~TelegrafBackend
+* AC-620 Anbox session does not generate crashdump on crash
+* AC-600 Anbox leaks memory on NVIDIA GPUs
+* AC-586 Android 10 fails to boot up
+* AC-579 BPF support is enabled but should not
+* AC-577 Android 12 aborts in surfaceflinger with direct rendering on AMD GPUs
+* AC-574 Only restart coturn when necessary
+* AC-567 Node controller leaves old iptables rules
+* AC-565 camera-support:swrast test case fails with serious error
+* AC-559 Surfaceflinger fails to start at times
+* AC-558 Anbox crashes in glBindFramebuffer or swrast
+* AC-540 Race in the gateway signaler
+* AC-490 Fix documentation on scaling down
+* AC-473 Addons are not listed in the output of amc application ls for the bootstrapping application
+* AC-405 Collector logs many "Previous status (…) for container .. differs from cache" errors
+* AC-396 amc benchmark removes containers it hasn't created
+
+[/Details]
+
 [Details=1.11.5]
 
 ## 1.11.5 (February 15 2022)
