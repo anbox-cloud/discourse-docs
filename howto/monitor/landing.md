@@ -6,7 +6,7 @@ The implementation of a monitoring or observability solution depends on your spe
 
 Anbox Cloud includes the following reference implementations that you can use as a starting point for planning and integrating your custom observability solution:
 
-- [Example: Collect metrics](tbd)
-- [Example: Monitor status](tbd)
+- [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)
+- [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)
 
 These examples show how to set up an observability solution. They can also be used for a first test. Be aware though that these examples are provided for reference only. They are not fully supported and should not be used in a production environment.
