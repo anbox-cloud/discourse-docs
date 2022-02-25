@@ -194,11 +194,11 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
 
    - For the `anbox-cloud-core` bundle:
 
-         juju deploy cs:~anbox-charmers/anbox-cloud-core --overlay monitoring.yaml
+         juju deploy cs:~anbox-charmers/anbox-cloud-core-89 --overlay monitoring.yaml
 
    - For the `anbox-cloud` bundle:
 
-         juju deploy cs:~anbox-charmers/anbox-cloud --overlay monitoring.yaml
+         juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay monitoring.yaml
 
    [note type="information" status="Note"]You can use the same command if you already deployed Anbox Cloud. In this case, Juju checks the existing deployment and only deploys new components.[/note]
 1. Wait until all added units are in `active` state.
