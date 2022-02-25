@@ -112,11 +112,11 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud-core --overlay ua.yaml
+        juju deploy cs:~anbox-charmers/anbox-cloud-core-89 --overlay ua.yaml
 
 * For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml
+        juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml
 
 ## Customise the hardware configuration
 
@@ -151,7 +151,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
 
 ### Add GPU support
 
@@ -174,7 +174,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
 
 ### Use Arm instances
 
@@ -195,7 +195,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud --overlay ua.yaml --overlay overlay.yaml
+    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
 
 ## Monitor the deployment
 
