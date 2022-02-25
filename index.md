@@ -24,10 +24,10 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 
 ## What's new
 
-Along with bug fixes and general improvements, Anbox Cloud 1.12 comes with:
+Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 
-* Android 12
-* Improved density for NVIDIA GPUs
+* Direct rendering for Intel and AMD GPUs
+* OpenGL ES 3.2 support
 
 |  |  |
 |--|--|

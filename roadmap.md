@@ -14,11 +14,6 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.13 (~ February 2022)
-
-* Native rendering for Intel and AMD GPUs
-* OpenGL ES 3.2 support
-
 ### 1.13.1 (~ mid March 2022)
 
 * March 2022 security update for Android and Chrome
