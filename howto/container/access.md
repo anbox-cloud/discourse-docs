@@ -41,11 +41,9 @@ Scrcpy is not available from the official Ubuntu repositories. Therefore, you mu
 
 ### Launch container
 
-To interact with scrcpy, each container must be leveraging proper graphics drivers to work. At best the container is launched with a platform that has a proper GPU supported if the deployment includes the [GPU support](https://discourse.ubuntu.com/t/gpu-support/17768). Otherwise, you can use the `swrast` platform instead, which provides a software rendering graphics driver based on [swiftshader](https://swiftshader.googlesource.com/SwiftShader). The `swrast` platform has been included in the official released images that can be downloaded from an image server hosted by Canonical. We will use the `swrast` platform in the following example.
+First, launch a container with graphics enabled:
 
-First, launch a container with the `swrast` platform:
-
-    amc launch -s +adb -p swrast -r default
+    amc launch -s +adb --enable-graphics -r default
 
 The above command will launch a container from the default image. Since scrcpy requires ADB to establish the connection between your host and the container, the ADB service must be enabled by default. With the leading `+` symbol to the `adb` service, it exposes TCP port 5559 on the public address of the node.
 
@@ -86,7 +84,7 @@ In the above example, the ADB service is exposed directly over the internet. Thi
 
 To set up a secure connection, launch the container so that it doesn't expose the ADB service to the internet:
 
-    amc launch -s adb -p swrast -r default
+    amc launch -s adb --enable-graphics -r default
 
 As the ADB service is enabled for the launched container but without the leading `+`, the endpoint 10.226.4.168:10000/tcp shown via `amc ls` is not exposed to the public network:
 

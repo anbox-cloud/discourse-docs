@@ -135,9 +135,9 @@ See the [`scrcpy` documentation](https://github.com/Genymobile/scrcpy) for insta
 
 To connect to your virtual device with `scrcpy`, complete the following steps:
 
-1. Launch a container based on the virtual device application, with the ADB service exposed and using the [`swrast` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) that provides software rendering:
+1. Launch a container based on the virtual device application, with the ADB service exposed and graphics enabled: 
 
-        amc launch virtual-device-cli --service +adb --platform swrast
+        amc launch virtual-device-cli --service +adb --enable-graphics
 
 2. Enter the following command to monitor the progress:
 
