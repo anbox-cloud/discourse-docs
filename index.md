@@ -118,7 +118,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 2 | ref/ams-http-api | [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801)|
 | 2 | ref/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
 | 2 | ref/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/1.10/anbox-stream-gateway/index.html)|
-| 2 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html)|
+| 2 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html)|
 | 1 | ref/instance-types | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
 | 1 | ref/platforms | [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
 | 1 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
