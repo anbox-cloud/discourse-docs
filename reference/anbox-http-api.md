@@ -101,7 +101,7 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq 
  * Operation: sync
  * Return: Current location status
 
-[note type="information" status="Note"]After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://anbox-cloud.github.io/1.10/anbox-platform-sdk/index.html) won't be processed by Anbox until the location endpoint is disabled again.[/note]
+[note type="information" status="Note"]After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html) won't be processed by Anbox until the location endpoint is disabled again.[/note]
 
  Return value:
 
