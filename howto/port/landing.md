@@ -5,4 +5,4 @@ When porting an Android app to Anbox Cloud (usually in the form of an APK), ther
 * Mismatched architecture. See [Choose APK architecture](https://discourse.ubuntu.com/t/choose-apk-architecture/26055) for information on which architecture you should choose.
 * App size. See [Port APKs with OBB files](https://discourse.ubuntu.com/t/port-apks-with-obb-files/26056) for instructions on how to port large APKs.
 * Strict watchdog restrictions. See [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057) if you want to turn the watchdog off for debugging or configure it to not trigger for specific apps.
-* Install APK as a system app. See [Install APK as a system app](TBD) if you want to install a user app as a system app running in Android container.
+* Install an APK as a system app. See [Install an APK as a system app](TBD) if you want to install a user app as a system app running in an Android container.

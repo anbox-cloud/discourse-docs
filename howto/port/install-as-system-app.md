@@ -1,20 +1,25 @@
-Normally, a user app is signed by the developer and restricted to fewer permissions at runtime while a system app is usually [signed with the platform key](https://source.android.com/devices/tech/ota/sign_builds) when building an Android image, it's pre-installed under the system partition and running a process with some ["signature" protection level permissions](https://developer.android.com/guide/topics/manifest/permission-element.html#plevel) in Android container. An application must be running as a system app if it
+Usually, Anbox Cloud installs APKs as user apps in the Android container. It is possible to install apps as system apps though.
 
-- requires to access Android hidden APIs
-- gains some signature protection level permissions
+A user app is normally signed by the developer and has restricted permissions at runtime. A system app, on the other hand, is usually [signed with the platform key](https://source.android.com/devices/tech/ota/sign_builds) when building an Android image. It is pre-installed under the system partition and runs a process with some ["signature" protection level permissions](https://developer.android.com/guide/topics/manifest/permission-element.html#plevel) in the Android container.
 
-Anbox Cloud allows a user app to be installed as a system app in Android container. This can be done by
+An application must be running as a system app if:
 
-1. create an addon
-2. call the `aam install-system-app` command in the `pre-start` hook of the addon
-3. include the addon in an application after adding it to AMS
-4. enable `allow_custom_system_signatures` feature in application manifest file
-5. create the application
+- The app requires access to hidden Android APIs.
+- The app gains some "signature" protection level permissions.
 
-Then you will have the APK installed as system app in Android container after the application is created successfully.
+Installing a user app as a system app in an Android container requires the following preparations:
+
+1. Create an addon.
+2. Call the `aam install-system-app` command in the `pre-start` hook of the addon.
+3. Include the addon in an application after adding it to AMS.
+4. Enable the `allow_custom_system_signatures` feature in the application manifest file.
+5. Create the application.
+
+When the application is created successfully, the APK will be installed as a system app in the Android container.
 
 ### Make a system app
-To be a system app running a process with system privileges, you must add the attribute `android:sharedUserId="android.uid.system"` into the `<manifest>` tag in the AndroidManifest.xml file of your Android application.
+
+To build your app as a system app instead of a user app, add the attribute `android:sharedUserId="android.uid.system"` into the `<manifest>` tag in the `AndroidManifest.xml` file of your Android app. This attribute will allow the app to run a process with system privileges.
 
 ```xml
 ...
@@ -25,13 +30,13 @@ To be a system app running a process with system privileges, you must add the at
 ...
 ```
 
-Then build and sign the application alongside with other Android applications when building your Android image or sign it with [Android Studio](https://developer.android.com/studio/publish/app-signing). For the latter, the system platform key is not required and you can use the keys that are generated from Android Studio to sign the application.
+Then build and sign the application alongside with other Android applications when building your Android image. Alternatively, sign it with [Android Studio](https://developer.android.com/studio/publish/app-signing). This method does not require the system platform key. Instead, you can use the keys that are generated from Android Studio to sign the application.
 
 ### Create an addon
 
-By creating an addon and invoking the `aam install-system-app` command in a `pre-start` hook, the signed APK can be installed as a system app in the Android container.
+To install the signed APK as a system app in the Android container, create an addon and invoke the `aam install-system-app` command in a `pre-start` hook.
 
-Following the [tutorial](https://discourse.ubuntu.com/t/creating-an-addon/25284) and create the basic layout of an addon, which has a manifest.yaml file and hooks folder prepared in advance. Assumed that the APK file is named `app.apk`, place the APK into the addon folder and create a `pre-start` hook with the following content.
+Follow the [tutorial](https://discourse.ubuntu.com/t/creating-an-addon/25284) to create the basic layout of an addon, with a `manifest.yaml` file and a `hooks` folder. Place the APK into the addon folder and create a `pre-start` hook with the following content (assuming that the APK file is named `app.apk`):
 
 ```bash
 #!/bin/bash -ex
@@ -43,13 +48,13 @@ fi
 
 aam install-system-app \
   --apk="${ADDON_DIR}"/app.apk \
-  --permissions=<comma separated permissions list the appliation requires>  \
+  --permissions=<comma-separated list of permissions that the application requires> \
   --package-name=<package_name>
 ```
 
-The value to the `package_name` parameter must match the one defined in the AndroidManifest.xml file of the Android project, so must the `permissions` parameter. If the application requires to access Android hidden apis to function, you need to addd `--access-hidden-api` parameter to the above command. Use `aam install-system-app --help` for more details about this command.
+The values of the `package_name` and the `permissions` parameters must match the ones defined in the `AndroidManifest.xml` file of the Android project. If the app requires access to hidden Android APIs to function, add the `--access-hidden-api` parameter to the above command. Use `aam install-system-app --help` for details about this command.
 
-And the final layout of this addon is as follows:
+The final layout of the addon should look as follows:
 
 ```bash
 .
@@ -59,15 +64,14 @@ And the final layout of this addon is as follows:
 └── manifest.yaml
 ```
 
-Add this addon to the AMS with the following command:
+Add this addon to AMS with the following command:
 
-```bash
-amc addon add install-sys-app .
-```
+    amc addon add install-sys-app .
 
-### Include this addon to an application
+### Include the addon in an application
 
-To use this addon in an application, include the addon name under the `addons` in the application manifest file when creating an application. Beside this, you need to enable the feature `allow_custom_system_signatures` as well. This ensures that the command `aam install-sys-app` that is invoked in the `pre-start` hook of this addon works properly.
+To use this addon in an application, include the addon name under `addons` in the application manifest file when creating an application. You must also enable the feature `allow_custom_system_signatures`, which ensures that the `aam install-sys-app` command that is invoked in the `pre-start` hook of the addon works properly.
+
 ```yaml
 ...
 addons: [ install-sys-app ]
@@ -75,9 +79,8 @@ features: [ allow_custom_system_signatures ]
 ...
 ```
 
-Create the application afterward with `amc` command
-```bash
-amc application create .
-```
+Then create the application with the `amc` command:
 
-After the AMS application is created successfully, the APK is installed as a system app properly. The Android app will run as a system app in the Android container when you start it from a container launched from the newly created application.
+    amc application create .
+
+After the AMS application is created successfully, the APK is installed as a proper system app. It will run as a system app in the Android container when you start it from a container launched from the newly created application.
