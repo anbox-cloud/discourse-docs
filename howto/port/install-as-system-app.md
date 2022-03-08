@@ -66,15 +66,15 @@ The final layout of the addon should look as follows:
 
 Add this addon to AMS with the following command:
 
-    amc addon add install-sys-app .
+    amc addon add install-system-app .
 
 ### Include the addon in an application
 
-To use this addon in an application, include the addon name under `addons` in the application manifest file when creating an application. You must also enable the feature `allow_custom_system_signatures`, which ensures that the `aam install-sys-app` command that is invoked in the `pre-start` hook of the addon works properly.
+To use this addon in an application, include the addon name under `addons` in the application manifest file when creating an application. You must also enable the feature `allow_custom_system_signatures`, which ensures that the `aam install-system-app` command that is invoked in the `pre-start` hook of the addon works properly.
 
 ```yaml
 ...
-addons: [ install-sys-app ]
+addons: [ install-system-app ]
 features: [ allow_custom_system_signatures ]
 ...
 ```
