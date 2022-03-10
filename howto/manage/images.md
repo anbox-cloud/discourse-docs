@@ -66,7 +66,7 @@ With every new Anbox Cloud release, updated images are published. By default, th
 
 For instance, to fetch the arm64 Android 11 image of the 1.11.2 release:
 
-    amc image foobar bionic:android11:arm64@1.11.2
+    amc image add foobar bionic:android11:arm64@1.11.2
 
 You can then use the `foobar` image as you would any other image.
 
