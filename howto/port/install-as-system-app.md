@@ -52,7 +52,7 @@ aam install-system-app \
   --package-name=<package_name>
 ```
 
-The values of the `package_name` and the `permissions` parameters must match the ones defined in the `AndroidManifest.xml` file of the Android project. If the app requires access to hidden Android APIs to function, add the `--access-hidden-api` parameter to the above command. Use `aam install-system-app --help` for details about this command.
+The values of the `package-name` and the `permissions` parameters must match the ones defined in the `AndroidManifest.xml` file of the Android project. If the app requires access to hidden Android APIs to function, add the `--access-hidden-api` parameter to the above command. Use `aam install-system-app --help` for details about this command.
 
 The final layout of the addon should look as follows:
 
