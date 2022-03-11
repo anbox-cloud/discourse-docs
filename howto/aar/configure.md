@@ -1,10 +1,10 @@
 The [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761) uses a certificate-based authentication system that uses TLS server and client certificates to establish a trusted connection between the AAR and AMS.
 
-AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju, but it is also possible to do it manually.
+AAR and AMS must exchange certificates to set up a trust relation. The recommended way to do this is with Juju. If you are using the Anbox Cloud Appliance, however, you must register the clients manually.
 
 ## Register an instance using Juju (recommended)
 
-Use [Juju relations](https://jaas.ai/docs/relations) to register an instance with the AAR.
+If you are running a full Anbox Cloud deployment, use [Juju relations](https://jaas.ai/docs/relations) to register an instance with the AAR.
 
 To register an instance as a client, use the following command:
 
@@ -31,6 +31,8 @@ The second command returns the name of the generated offer, for example, `my-con
     juju relate ams <offer name>
 
 ## Register clients manually
+
+If you are running the Anbox Cloud Appliance, you must register the clients manually.
 
 Adding clients manually requires access to the machines hosting AMS and the AAR.
 
