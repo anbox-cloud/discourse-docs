@@ -2,6 +2,8 @@ While it is possible to install Anbox Cloud on a single machine, you usually wan
 
 Each worker node runs [LXD](https://linuxcontainers.org/) in clustering mode, and this LXD cluster is used to host the Android containers.
 
+[note type="information" status="Note"]Clustering is currently not available for the Anbox Cloud Appliance.[/note]
+
 ## Capacity planning
 
 Anbox Cloud is optimised to provide containers at high density per host. However, to provide enough underlying resources for a specific number of containers, you need to do some calculations to find out how many LXD machines (thus worker nodes) with how many resources you need.
