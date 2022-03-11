@@ -1,6 +1,6 @@
 This example implementation provides a starting point for a monitoring stack that can be used to monitor the status of your Anbox Cloud cluster using [Nagios](https://www.nagios.org/), a tool that is widely used for monitoring networks, servers and applications. Using the Nagios Remote Plugin Executor (NRPE) on each node, it can monitor your cluster with machine-level detail.
 
-[note type="information" status="Important"]This reference implementation is provided for demonstration purposes only. It does not cover all aspects that you should consider for a production-level solution (for example, high availability).[/note]
+[note type="information" status="Important"]This reference implementation is provided for demonstration purposes only. It does not cover all aspects that you should consider for a production-level solution (for example, high availability). It cannot be used with the Anbox Cloud Appliance.[/note]
 
 In this setup, Anbox Cloud integrates with Nagios and allows you to monitor the status of its services to be alerted when something goes wrong.
 
