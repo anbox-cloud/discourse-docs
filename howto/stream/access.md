@@ -12,19 +12,21 @@ For convenience, the Stream Gateway has a built-in client designed to communicat
 
 **Creating a token**
 
-```bash
-$ anbox-stream-gateway account create my-client
-AgEUYW5ib3gtc3RyZWFtLWdhdGV3YXkCBGFzZGYAAhkyMDIwLTA2LTIzVDA5OjMyOjE5KzAyOjAwAAAGIDcZMdTrdNdJB6kzjoXyx1_T6s8-0C1AQSyzaA_GHLYQ
-```
+If you are running a full Anbox Cloud deployment, use the following command to create a token:
+
+    anbox-stream-gateway account create my-client
+
+If you are running the Anbox Cloud Appliance, use the following command:
+
+    anbox-cloud-appliance gateway account create my-client
 
 **Deleting a token**
 
-```bash
-$ anbox-stream-gateway account delete my-client
-Account my-client deleted successfully
-```
+If you are running a full Anbox Cloud deployment, use the following command to delete a token:
 
-You can type `anbox-stream-gateway --help` to list all commands
+    anbox-stream-gateway account delete my-client
+
+Type `anbox-stream-gateway --help` to list all commands
 
 ### 2. Using the token in your requests
 
