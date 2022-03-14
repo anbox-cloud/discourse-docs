@@ -9,4 +9,4 @@ Anbox Cloud includes the following reference implementations that you can use as
 - [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)
 - [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)
 
-These examples show how to set up an observability solution. They can also be used for a first test. Be aware though that these examples are provided for reference only. They are not fully supported and should not be used in a production environment.
+These examples show how to set up an observability solution in a full Anbox Cloud deployment. They can also be used for a first test. Be aware though that these examples are provided for reference only. They are not fully supported and should not be used in a production environment. They cannot be used with the Anbox Cloud Appliance.

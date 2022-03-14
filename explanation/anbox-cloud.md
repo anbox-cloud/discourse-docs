@@ -78,7 +78,7 @@ The main components powering the streaming stack in Anbox Cloud are:
 <a name="juju-bundles"></a>
 ## Juju bundles
 
-Anbox Cloud provides two different Juju bundles:
+The regular Anbox Cloud variant provides two different Juju bundles:
 
 * The `anbox-cloud-core` bundle provides a minimised version of Anbox Cloud. This version is sufficient if you don't want to use the Anbox Cloud streaming stack.
 
