@@ -1,7 +1,20 @@
-To see how to deploy a monitoring stack in Anbox Cloud, refer to the instructions for [deploying Grafana](https://discourse.ubuntu.com/t/monitoring-grafana/17787). Those instructions will take you through the installation Prometheus and Grafana.
+Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. See [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) for detailed information.
 
-The base installation provides basic dashboards. You can however update them to fit your needs. Below is the list of all metrics returned to Prometheus by each component of Anbox Cloud.
+The reference implementation for Prometheus (see [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)) provides some basic dashboards. You can, however, update them to fit your needs. 
 
+The following sections list all metrics returned to Prometheus by each component of Anbox Cloud.
+
+## Endpoints
+
+The following table lists the API endpoints for every service that supports Prometheus metrics. You can use these endpoints to customise your monitoring solution.
+
+The network ports might be different on your deployment. Run the associated commands to get the appropriate ports.
+
+| Service              | Endpoint                                                | Command to get the current port                    |
+|----------------------|---------------------------------------------------------|----------------------------------------------------|
+| ams                  | `http://ams.example.com:9104/internal/1.0/metrics`      | `juju config ams prometheus_target_port`           |
+| anbox-stream-gateway | `https://gateway.example.com:9105/internal/1.0/metrics` | `juju config anbox-stream-gateway prometheus_port` |
+| lxd                  | `https://lxd.example.com:8443/1.0/metrics`              | `lxc config get core.https_address`                |
 
 ## AMS
 Metrics prefixed with `ams_cluster_` give information about the Anbox management system (AMS). They keep you informed about the status of your cluster.
