@@ -14,16 +14,20 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.13.1 (~ mid March 2022)
-
-* March 2022 security update for Android and Chrome
-* Bug fixes
-
 ### 1.13.2 (~ mid April 2022)
+
+Target date: April 13, 2022
 
 * April 2022 security update for Android and Chrome
 * Bug fixes
 
-### 1.14.0 (~ May 2022)
+### 1.14.0 (~ mid May 2022)
+
+Target date: May 18, 2022
 
  * Vulkan support for Intel and AMD GPUs
+ * Hook support for AMS application packages
+ * Switch to [Charmhub](https://charmhub.io) to host all Anbox Cloud charms
+ * Touch input emulation support in the JS SDK
+ * Android images based on Ubuntu 22.04 for all Android versions (10, 11 and 12)
+ * Multi-node support for the Anbox Cloud Appliance
