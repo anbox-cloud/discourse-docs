@@ -142,3 +142,8 @@ Check the `juju status` output. The status of the `ams/0` unit should switch bac
 
 To verify that the LXD cluster is still correctly in place, compare the output of `juju ssh ams/0 -- amc node ls`
 and `juju ssh lxd/0 -- lxc cluster ls`. Both commands should list the same LXD nodes.
+
+Finally, enable automatic retries again:
+
+    juju model-config automatically-retry-hooks=true
+
