@@ -1,5 +1,7 @@
 Similarly to [AMS](https://discourse.ubuntu.com/t/about-ams/24321), the Stream Gateway (see [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for more information) exposes its API over an HTTP interface. Clients can be anything from the provided web dashboard to any custom client you develop.
 
+[note type="information" status="Note"]To access the Stream Gateway, make sure that its HTTP API is exposed. This is the default configuration.[/note]
+
 ## Service accounts
 
 All calls to the Stream Gateway must be authenticated. Authentication takes the form of a single token per client you must embed in your requests.

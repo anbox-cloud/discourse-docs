@@ -41,6 +41,16 @@ To use a CA certificate, complete the following steps:
    - Copy the client certificate to `$HOME/snap/ams/current/client/client.crt`.
    - Copy the client key to `$HOME/snap/ams/current/client/client.key`
 
+## Expose the AMS HTTPS service
+
+To be able to access AMS remotely, its HTTPS service must be exposed.
+
+If you are running the Anbox Cloud Appliance, you can expose the service with the following command:
+
+    anbox-cloud-appliance ams expose
+
+If you are running a full Anbox Cloud deployment, the service is automatically exposed within the internal subnet. If this is sufficient, you do not need further configuration. If you want to access AMS from a machine that is in a different subnet, use `juju expose` to expose the service (see [How to expose a deployed application](https://juju.is/docs/olm/expose-a-deployed-application) for instructions). Note that if you expose services externally, you should also add a load balancer or proxy to your deployment.
+
 ## Configure AMC to connect to AMS
 
 After setting up the security certificates, configure AMC to connect to the remote AMS. To do this, choose a name for the remote and enter the following command:

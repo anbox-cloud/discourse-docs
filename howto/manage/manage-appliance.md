@@ -20,7 +20,7 @@ The available commands for the `anbox-cloud-appliance` tool are:
   [note type="caution" status="Warning"]This command resets the Anbox Cloud Appliance and destroys all data. Execution of the command cannot be undone.[/note]
 - `gateway`
 
-  Expose the HTTP API of the stream gateway and manage access to it. If the HTTP API is exposed, authenticated clients can connect to it. Authentication requires an access token that you can create with the `account create` subcommand. See [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) for more information.
+  Expose or unexpose the HTTP API of the stream gateway and manage access to it. If the HTTP API is exposed (which is the default), authenticated clients can connect to it. Authentication requires an access token that you can create with the `anbox-cloud-appliance gateway account create` command. See [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) for more information.
 - `help`
 
   Display detailed information about a command.
