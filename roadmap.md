@@ -26,3 +26,8 @@ Target date: April 13, 2022
 Target date: May 18, 2022
 
  * Vulkan support for Intel and AMD GPUs
+ * Hook support for AMS application packages
+ * Switch to [Charmhub](https://charmhub.io) to host all Anbox Cloud charms
+ * Touch input emulation support in the JS SDK
+ * Ubuntu 22.04 based Anbox images for all Android versions (10, 11 and 12)
+ * Multi node support for the Anbox Cloud Appliance
