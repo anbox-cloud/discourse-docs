@@ -2,6 +2,40 @@
 
 See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.13.1]
+
+## 1.13.1 (March 21 2022)
+
+### New features & improvements
+
+ * Android security updates for January 2022 (see [Android Security Bulletin - March 2022](https://source.android.com/security/bulletin/2022-03-01) for more information)
+ * Android WebView has been updated to [99.0.4844.58](https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html)
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+ * AC-786 Anbox crashes while a wayland resource is released
+ * AC-780 Appliance fails to deploy when monitoring is disabled
+ * AC-777 The command `anbox-cloud-appliance gateway account create <account>` returned a slice of bytes in the output
+ * AC-773 Redundant services fields displayed in the output of `amc show <container_id>`
+ * AC-768 Coturn has 2x "external-ip" entries
+ * AC-763 Task failed to be marked as failed when context has expired/got canceled
+ * AC-762 AMS fails to cancel container start/stop operations as they cannot be cancelled
+ * AC-759 Stored artifacts have incorrect permissions
+ * AC-758 AMS consumes too much memory during application creation
+ * AC-746 The hwservicemanager can't find  android.hardware.vibrator@1.0::IVibrator/default in either framework or device manifest
+ * AC-739 Dashboard fails to load when application failed
+ * AC-738 The scaling of the video frame that is captured from the camera is incorrect
+ * AC-717 SDK: experimental.disableBrowserBlock is not properly verified and not taken into account
+ * AC-713 Immersive mode confirmation dialog keeps popping up
+ * AC-705 AMS suddenly increases memory consumption and causes OOM kill
+ * AC-704 Mesa shader cache directory isn't accessible
+
+[/Details]
+
 [Details=1.13.0]
 
 ## 1.13.0 (February 24 2022)
