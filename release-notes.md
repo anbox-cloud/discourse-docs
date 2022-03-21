@@ -8,7 +8,7 @@ See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous
 
 ### New features & improvements
 
- * Android security updates for January 2022 (see [Android Security Bulletin - March 2022](https://source.android.com/security/bulletin/2022-03-01) for more information)
+ * Android security updates for March 2022 (see [Android Security Bulletin - March 2022](https://source.android.com/security/bulletin/2022-03-01) for more information)
  * Android WebView has been updated to [99.0.4844.58](https://chromereleases.googleblog.com/2022/03/stable-channel-update-for-desktop.html)
 
 ### Known issues
