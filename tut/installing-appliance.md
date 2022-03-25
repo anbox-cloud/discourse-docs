@@ -270,6 +270,8 @@ Is the appliance deployed behind a NAT and should be available on a public addre
 Do you have a DNS name you want to use instead of the IP address? [default=yes]
 Which DNS name you want to use (e.g. anbox-cloud.io)?  [default=ec2-18-185-179-72.eu-central-1.compute.amazonaws.com]
 
+Do you want to add support for monitoring? [default=yes]
+
 Configuration completed. Do you want to initiate the bootstrap process now? [default=yes]
 
 Everything configured, starting the bootstrap process now. You can
