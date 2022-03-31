@@ -100,8 +100,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 2 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
 | 2 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
 | 1 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 2 | howto/monitor/grafana | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
-| 2 | howto/monitor/nagios | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
+| 2 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
+| 2 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 1 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
 | 2 | howto/stream/access | [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) |
 | 2 | howto/stream/native-client | [Implement a native client](https://discourse.ubuntu.com/t/implement-android-native-streaming-client/21833)|
@@ -140,7 +140,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 0 | | About the project |
 | 1 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 1 | changelog | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 1 | release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
 | 1 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 1 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
 | 1 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
@@ -204,4 +204,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | /docs/installation/installation-requirements | /docs/requirements |
 | /docs/exp/porting-issues | /docs/howto/port/landing |
 | /docs/exp/benchmarking | /docs/howto/manage/benchmarks |
+| /docs/changelog | /docs/release-notes |
+| /docs/howto/monitor/grafana | /docs/howto/monitor/collect-metrics |
+| /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 [/details]
