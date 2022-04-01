@@ -45,7 +45,7 @@ Anbox Cloud takes care of all management aspects and provides both a fully funct
 
 The following figure gives an overview of the different components and their responsibility within the core stack of Anbox Cloud.
 
-![anbox-core-overview|690x398](upload://x0budFKybsbYLhiplNhF4R91Ght.png)
+![Anbox Cloud core stack|690x398](https://assets.ubuntu.com/v1/e74d1a49-anbox_cloud_core-stack.png)
 
 At the heart of Anbox Cloud sits the [**Anbox Management Service (AMS)**](https://discourse.ubuntu.com/t/about-ams/24321). **AMS** has the job to handle all aspects of the application and container life cycle (including application and image updates) while ensuring high density, performance and fast container startup times.
 
@@ -61,7 +61,7 @@ Starting from 1.4, Anbox Cloud comes with an easy to use streaming solution. The
 
 The following figure shows an overview of how the different components work together to enable this.
 
-![streaming-stack-overview|690x440](upload://qXJleBmvwQFi2cc1HuPF7P5S15b.png)
+![Anbox Cloud streaming stack|690x440](https://assets.ubuntu.com/v1/bcf90bb6-anbox_cloud_streaming-stack.png)
 
 The main components powering the streaming stack in Anbox Cloud are:
 

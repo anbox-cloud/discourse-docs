@@ -40,7 +40,7 @@ In general, the bootstrap process goes through the following steps in order:
 8. Install the extra data as listed in the application manifest.
 9. Execute the `post-start` hook provided by each addon listed in the application manifest.
 
-![Application bootstrap process|571x653](upload://bZZCt9U0YVBYD4le9S9TInMSvE9.png)
+![Application bootstrap process|571x653](https://assets.ubuntu.com/v1/7eed04fd-application-bootstrap.png)
 
 If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be marked with `error` and the application's status will end up with `error` as well.
 

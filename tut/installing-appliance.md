@@ -92,7 +92,7 @@ Open the [Amazon EC2 console](https://console.aws.amazon.com/ec2/) and log in.
 
 On the EC2 dashboard, click **Launch Instance** to start the Launch Instance Wizard.
 
-![Start the Launch Instance Wizard|690x451](upload://aTIoezIMs9zzlQksuXn6EJKcsz.png)
+![Start the Launch Instance Wizard|690x451](https://assets.ubuntu.com/v1/17073a3d-install_appliance_launch-wizard.png)
 
 [note type="information" status="Note"]You should go through all steps in the wizard before launching the instance. In most steps, you can accept the default configuration, but you must configure the required storage for the instance. Therefore, do not click **Review and Launch** until you reach the final page of the wizard.[/note]
 
@@ -102,7 +102,7 @@ To select the Amazon Machine Image (AMI), type "Anbox Cloud" in the search field
 
 Choose either the Arm variant or the x86 variant and click **Select**.
 
-![Select the Amazon Machine Image (AMI)|690x451](upload://v3EsHkiOyBBztNHtzWvMnHD8W3U.png)
+![Select the Amazon Machine Image (AMI)|690x451](https://assets.ubuntu.com/v1/ce51218c-install_appliance_select-ami.png)
 
 You will be presented with the pricing information. Click **Continue** to confirm.
 
@@ -112,7 +112,7 @@ AWS offers various instance types. The Anbox Cloud Appliance images are listed f
 
 Select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
 
-![Choose an instance type|690x451](upload://sGAxIzuf8vw3CsHlv8s3CsdNCFw.png)
+![Choose an instance type|690x451](https://assets.ubuntu.com/v1/f61efdc4-install_appliance_instance-type.png)
 
 In this example, we picked *g4dn.2xlarge*, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
 
@@ -122,7 +122,7 @@ Click **Next: Configure Instance Details** to continue.
 
 You do not need to customise any of the settings in the instance details, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
 
-![Configure the instance details|690x451](upload://xdZ9Evmd8luWHV2FRLo0MiA4Ldh.png)
+![Configure the instance details|690x451](https://assets.ubuntu.com/v1/3aed5594-install_appliance_configure-instance.png)
 
 Click **Next: Add Storage** to continue.
 
@@ -130,7 +130,7 @@ Click **Next: Add Storage** to continue.
 
 The Anbox Cloud instance requires sufficient storage to work correctly. The root disk should have at minimum 50 GB and for best performance, you should create an additional EBS volume of at least 50 GB. Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
 
-![Add storage|690x451](upload://q1ZMOzkRWUZo6OVhwRXDtI8AZz3.png)
+![Add storage|690x451](https://assets.ubuntu.com/v1/1ee4160c-install_appliance_add-storage.png)
 
 In this example, we use three storage volumes:
 
@@ -146,7 +146,7 @@ Click **Next: Add Tags** and then **Next: Configure Security Group** to continue
 
 To allow external access, you must open several ports in the security group attached to the AWS instance. The AMI already comes with the required configuration, so you don't need to do any changes. For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
 
-![Configure the security group|690x451](upload://kEb4lKrneccaRgP6lW2PNg88oco.png)
+![Configure the security group|690x451](https://assets.ubuntu.com/v1/2910cbd3-install_appliance_security-group.png)
 
 Click **Review and Launch** to continue.
 
@@ -156,11 +156,11 @@ You should now review the instance configuration. If everything is correct, clic
 
 You are prompted to select a key pair. You can choose an existing key pair or create one if you don't have one yet. Make sure to save the private key in a secure location.
 
-![Confirm to launch instances|690x451](upload://q7cWUi9lcViENauUFV6iYkj86hK.png)
+![Confirm to launch instances|690x451](https://assets.ubuntu.com/v1/c13f7244-install_appliance_launch-instances.png)
 
 Click **Launch Instances** to continue. AWS will verify your configuration, subscribe you to the product and launch the instance.
 
-![Launch status|690x451](upload://lDWrlb2AvahEdJellyKxDdEYW4f.png)
+![Launch status|690x451](https://assets.ubuntu.com/v1/5115a09d-install_appliance_launch-status.png)
 
 When the instance is successfully launched, you can find its public IP address in the instance details page. Use this IP address or the corresponding DNS name to access the status web page (in the following steps referred to as `https://your-machine-address`).
 
@@ -207,7 +207,7 @@ After the installation, access `https://your-machine-address`. This web page pro
 
 [note type="information" status="Note"]By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.[/note]
 
-![Appliance welcome screen|690x343, 100%](upload://yIGZThPljsjPyRAVQVFkZOiVVNF.png)
+![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
 
 The following instructions guide you through all relevant steps to initialise the Anbox Cloud Appliance.
 
@@ -278,7 +278,7 @@ watch https://ec2-18-185-179-72.eu-central-1.compute.amazonaws.com for progress 
 
 After the command has returned, the initialisation process will run fully automatically in the background. You can watch the status web page at `https://your-machine-address` for progress information.
 
-![Anbox Cloud deployment|690x442](upload://5Eti9Lj0Q4VpYmpEvVMzK4fjkxH.png)
+![Anbox Cloud deployment|690x442](https://assets.ubuntu.com/v1/279e12e3-install_appliance_status.png)
 
 Alternatively, use the `anbox-cloud-appliance status` command to monitor the progress information on the command line.
 
@@ -294,7 +294,7 @@ reboot-needed: false
 
 Once the initialisation process has finished, you are presented with a welcome page on `https://your-machine-address` with instructions on how to register a user account with your installation. This registration is needed to access the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
-![Instructions for registering Ubuntu SSO account|690x442](upload://l4EPbQr1NcsD78r3K03F3ISjiL2.png)
+![Instructions for registering Ubuntu SSO account|690x442](https://assets.ubuntu.com/v1/93b47634-install_appliance_register.png)
 
 ### 1. Register your Ubuntu SSO account
 

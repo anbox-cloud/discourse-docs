@@ -17,7 +17,7 @@ In the command output above the `update-available` field indicates an update is 
 
 The appliance will perform now all necessary steps to upgrade to the newer available version. You can watch for progress on the web interface
 
-![appliance-upgrade|690x435](upload://2mEtGPT2aVrhLvhDW7h9whoEiAT.png)
+![Upgrade the appliance|690x435](https://assets.ubuntu.com/v1/1093e239-update_appliance.png)
 
  or with the `anbox-cloud-appliance status` command you used above:
 

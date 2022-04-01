@@ -6,7 +6,7 @@ In this setup, every LXD cluster node runs a Telegraf instance that gathers the 
 
 Prometheus gathers the metrics provided by the different sources (the Telegraf instances, AMS, Anbox Stream Gateway and NATS) and stores them in its time series database. You can then access, query and visualise the full metrics data through Grafana.
 
-![Architecture for collecting metrics|462x312](upload://bGifLaBJzKGOkc4ijEvoSzaCTnK.png)
+![Architecture for collecting metrics|462x312](https://assets.ubuntu.com/v1/17a66908-collect-metrics.png)
 
 ## Deploy the solution
 

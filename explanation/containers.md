@@ -35,7 +35,7 @@ When you create a container by launching an application or an image, it executes
 5. Launch the Android container.
 6. Execute the `post-start` hook provided by the installed addons.
 
-![Container start|566x528](upload://bp1BNo5CKGjLmesP5TXj59faclr.png)
+![Container start|566x528](https://assets.ubuntu.com/v1/0f386949-container_start.png)
 
 The whole launch process is successful only if all of the above steps succeed.
 
@@ -47,7 +47,7 @@ When a container is stopped, either because you deleted it or because an error o
 2. Execute the `post-stop` hook provided by the installed addons.
 3. Shut down the container.
 
-![Container stop|551x385](upload://tqRdCg34qOVjmlJOZwiXqijXeov.png)
+![Container stop|551x385](https://assets.ubuntu.com/v1/821cbeae-container_stop.png)
 
 ### Possible container status
 
