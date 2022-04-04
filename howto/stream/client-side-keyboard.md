@@ -1,6 +1,6 @@
-The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like AnboxWebView, which extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
+The Anbox Streaming SDK enables developers to build a hybrid mobile application that can integrate the features that Anbox Cloud provides. It comes with an [Android library](https://developer.android.com/studio/projects/android-library) that offers easy-to-use native components like Anbox WebView, which extends the AOSP [WebView](https://developer.android.com/reference/android/webkit/WebView). It provides better handling of text input for the hybrid application that loads the Anbox Streaming JavaScript SDK with an embedded WebView for video streaming.
 
-You can use AnboxWebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
+You can use Anbox WebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
 
 * When the text editor of the application in the container gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
 * When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
@@ -36,9 +36,9 @@ After importing the AAR file, add the `AnboxWebView` element to the activity lay
 
 ## 3. Build communication bridge
 
-In your web application code, define the JavaScript functions that can be invoked from the Android Java layer (AnboxWebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK.
+In your web application code, define the JavaScript functions that can be invoked from the Android Java layer (Anbox WebView). Those functions are just wrappers of the APIs that are exposed from the JavaScript SDK.
 
-Adding the following JavaScript code snippet builds up a communication tunnel between the Android Java layer (AnboxWebView) and the JavaScript layer. It attaches the AnboxStream object to the global `window` object. The functions will automatically be invoked by the Android Java layer (AnboxWebView).
+Adding the following JavaScript code snippet builds up a communication tunnel between the Android Java layer (Anbox WebView) and the JavaScript layer. It attaches the `AnboxStream` object to the global `window` object. The functions will automatically be invoked by the Android Java layer (Anbox WebView).
 
    ```
    <script type="module">
@@ -49,7 +49,6 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
      ...
      });
    </script>
-
    <script>
      function sendIMECommittedText(text) {
        window.stream.sendIMECommittedText(text);
@@ -67,13 +66,12 @@ Adding the following JavaScript code snippet builds up a communication tunnel be
        window.stream.sendIMEComposingRegion(start, end);
      }
    </script>
-
    ```
 
 <a name="customising"></a>
 ## Customising the virtual keyboard
 
-You can take advantage of the interfaces that the AnboxWebView exposes to provide your own implementation of a client-side virtual keyboard that customises:
+You can take advantage of the interfaces that the Anbox WebView exposes to provide your own implementation of a client-side virtual keyboard that customises:
 
 * Input text processing
 * Handling of state changes of the virtual keyboard
@@ -82,7 +80,6 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
    ```
    import com.canonical.anbox.streaming_sdk.AnboxWebView;
    ...
-
    public class MainActivity extends AppCompatActivity implements AnboxWebView.VirtualKeyboardListener {
    ...
        protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +90,7 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        }
    ```
 
-2. When people start typing, one of the following methods from the AnboxWebView.VirtualKeyboardListener interfaces will be triggered. Implement the following methods for the AppInterface.ActionListener interfaces so that the application can respond to those events and send texts to the Android container:
+2. When people start typing, one of the following methods from the `AnboxWebView.VirtualKeyboardListener` interfaces will be triggered. Implement the following methods for the `AppInterface.ActionListener` interfaces so that the application can respond to those events and send texts to the Android container:
 
    ```
        /**
@@ -108,7 +105,9 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        @Override
        public void onVirtualKeyboardTextCommitted(String text) {
        }
+   ```
 
+   ```
        /**
         * Called as text is being composing from the virtual keyboard.
         *
@@ -120,7 +119,9 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        @Override
        public void onVirtualKeyboardTextComposing(String text) {
        }
+   ```
 
+   ```
        /**
         * Called as input text is deleted from the current text editor.
         *
@@ -129,7 +130,9 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        @Override
        public void onVirtualKeyboardTextDeleted(int counts) {
        }
+   ```
 
+   ```
        /**
         * Called as the region of composing text is changed.
         *
@@ -139,7 +142,9 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        @Override
        public void onVirtualKeyboardComposingTextRegionChanged(int start, int end) {
        }
+   ```
 
+   ```
        /**
         * Called as the state of the virtual keyboard is changed.
         *
@@ -153,7 +158,6 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
        @Override
        public void onVirtualKeyboardStateChanged(boolean visible, double displayRatio) {
        }
-
    ```
 
 3. Once the virtual keyboard pops up on the client side, the `onVirtualKeyboardStateChanged` callback function is triggered. To keep the display proportions correct for IME displaying on both the client and the server ends, the `show` action, which carries the display ratio, must be sent out to the server side.
@@ -173,7 +177,6 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
                mWebView.loadUrl(String.format("javascript:sendIMEAction(\"%s\")", action));
            }
        }
-
    ```
 
 4. When typing on the virtual keyboard, a text input event is triggered when one of the following scenarios occurs:
@@ -181,12 +184,11 @@ You can take advantage of the interfaces that the AnboxWebView exposes to provid
    - A text is currently being composed
    - A text is being deleted
 
-    In the above cases, the changed text must be sent to the server side through the JavaScript SDK. This can be done by calling JavaScript functions that are defined in HTML through AnboxWebView. For example, for committing text:
+    In the above cases, the changed text must be sent to the server side through the JavaScript SDK. This can be done by calling JavaScript functions that are defined in HTML through Anbox WebView. For example, for committing text:
 
    ```
        @Override
        public void onVirtualKeyboardTextCommitted(String text) {
            mWebView.loadUrl(String.format("javascript:sendIMECommittedText(\"%s\")", text));
        }
-
    ```

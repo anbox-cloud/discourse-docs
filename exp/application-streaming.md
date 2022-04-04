@@ -5,12 +5,12 @@ We also assume you know [how to get access to the Stream Gateway API](https://di
 
 ## Streaming Stack Overview
 
-The Streaming Stack is highly customizable but requires some knowledge about how it works.
+The Streaming Stack is highly customisable but requires some knowledge about how it works.
 Each component of the stack fills a specific role:
 
 | Gateway                                                                                                                                                             | Agent                                                                                                                         | NATS                                                  | Coturn                                                                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------------------------|
-| Provides the initial place where a client and a container go to start a peer to peer discussion. Those 'chatrooms' are called sessions and are central to the rest. | A middleware between the Gateway and AMS. It secures access to AMS, launches containers, relays status information, and more. | A messaging queue to allow components to communicate. | A STUN/TURN server needed for WebRTC to work behind NATs and firewalls. |
+| Provides the initial place where a client and a container go to start a peer to peer discussion. Those 'chat rooms' are called sessions and are central to the rest. | A middleware between the Gateway and AMS. It secures access to AMS, launches containers, relays status information, and more. | A messaging queue to allow components to communicate. | A STUN/TURN server needed for WebRTC to work behind NATs and firewalls. |
 
 You can see how each component interact when creating a new streaming session
 
@@ -18,29 +18,29 @@ You can see how each component interact when creating a new streaming session
 
 ## Streaming an Application
 
-As mentioned above, `sessions` are an important concept for the Streaming Stack. They contain userdata, application information and more, but most importantly, they provide an entrypoint for both the client and the container to start the [signaling process](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/).
-Signaling is a process by which both peers establish optimal codecs, network routes and content types.
+As mentioned above, `sessions` are an important concept for the Streaming Stack. They contain user data, application information and more, but most importantly, they provide an entry point for both the client and the container to start the [signalling process](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/).
+Signalling is a process by which both peers establish optimal codecs, network routes and content types.
 
 ### 1. Creating the session
 
 WebRTC is a peer to peer protocol, but clients have to find each other through a central server first.
-This is the primary purpose of the Stream Gateway. `Sessions` are equivalent to *chatrooms* that allow two peers to discover each other.
+This is the primary purpose of the Stream Gateway. `Sessions` are equivalent to *chat rooms* that allow two peers to discover each other.
 
-The session is created by calling the Gateway API at `POST /1.0/sessions`. The returned object contains information about the created session as well as a websocket `url` you have to use to start the signaling process.
+The session is created by calling the Gateway API at `POST /1.0/sessions`. The returned object contains information about the created session as well as a web socket `url` you have to use to start the signalling process.
 
-### 2. The signaling process
+### 2. The signalling process
 
-When they can contact each other, both peers have to agree on a number of parameters. This process of exchanging messages is called the `signaling process`.
+When they can contact each other, both peers have to agree on a number of parameters. This process of exchanging messages is called the `signalling process`.
 Details about exchanged messages aren't covered in this page, but you can find more information [here](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 The following provides an overview of the process:
 
  1. The container creates an offer containing the desired streams (video, audio, binary) as well as codec
     information.
  2. The client replies to that offer by accepting or refusing it.
- 3. At that point, both peers agreed on the media type, but don't know how to send data directly to each other (keep in mind that, so far, all communication is done through a websocket on the Gateway).
+ 3. At that point, both peers agreed on the media type, but don't know how to send data directly to each other (keep in mind that, so far, all communication is done through a web socket on the Gateway).
  4. They start going through the [ICE protocol](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) and interact with STUN servers to establish an optimal path.
  5. Each network path is bundled in an `ICE candidate`. There are usually multiple ICE candidates per peer and both sides negotiate the best candidate pair.
- 6. Both peer agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway websocket and talk directly to each other.
+ 6. Both peer agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway web socket and talk directly to each other.
 
 [note type="information" status="Hint"]The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other.[/note]
 
@@ -67,4 +67,4 @@ In the future we plan to add support for:
 
 When additional codecs become available depends on when they are supported by the GPU vendors in their hardware encoding solutions or if a viable software encoding solution exists.
 
-Anbox Cloud combines both software and hardware video encoding in order to utilize available resources in the best possible way. Hardware video encoders usually have limited capacity of how many simulatenous video streams they can encode for low latency scenarios. The Nvidia T4 can for example encode 37 video streams at 720p and 30 frames per second (see "[Turing H.264 Video Encoding Speed and Quality](https://devblogs.nvidia.com/turing-h264-video-encoding-speed-and-quality/)" for more details). Depending on the used CPU platform additional compute capacity might be available to support additional session via software encoding.
+Anbox Cloud combines both software and hardware video encoding in order to utilise available resources in the best possible way. Hardware video encoders usually have limited capacity of how many simultaneous video streams they can encode for low latency scenarios. The Nvidia T4 can for example encode 37 video streams at 720p and 30 frames per second (see "[Turing H.264 Video Encoding Speed and Quality](https://devblogs.nvidia.com/turing-h264-video-encoding-speed-and-quality/)" for more details). Depending on the used CPU platform additional compute capacity might be available to support additional session via software encoding.

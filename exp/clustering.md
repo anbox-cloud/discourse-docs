@@ -12,7 +12,7 @@ Each container will take a specific amount of resources defined by the instance 
 
 For a machine with 8 CPU cores and 16 GB of memory, you could only launch 4 containers before you run out of resources. As a single container will not use the dedicated CPU cores all time at 100%, AMS allows overcommitting available resources.
 
-Each node has two configuration items called `cpu-allocation-rate` and `memory-allocation-rate` of type float which define the multiplier used for overcomitting resources. By default, AMS sets `cpu-allocation-rate` to `4` and `memory-allocation-rate` to 2. This sums up the available resources to `4 * 8 CPU cores = 36 CPU Cores` and `2 * 16 GB memory = 32 GB memory`, which will allow 10 containers on the node.
+Each node has two configuration items called `cpu-allocation-rate` and `memory-allocation-rate` of type float which define the multiplier used for overcommitting resources. By default, AMS sets `cpu-allocation-rate` to `4` and `memory-allocation-rate` to 2. This sums up the available resources to `4 * 8 CPU cores = 36 CPU Cores` and `2 * 16 GB memory = 32 GB memory`, which will allow 10 containers on the node.
 
 The currently configured allocation rates for a specific node can be shown via the following command:
 

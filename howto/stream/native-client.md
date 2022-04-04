@@ -1,6 +1,6 @@
-This native SDK contains a header file to include in your C or C++ based program and the shared library to link against.  
+This native SDK contains a header file to include in your C or C++ based program and the shared library to link against.
 
-To integrate the native SDK to your program. You need to initialize AnboxStreamConfig object first, and set the concrete config items via the object.
+To integrate the native SDK to your program. You need to initialise the `AnboxStreamConfig` object first, and set the concrete configuration items via the object.
 
 ```bash
     std::unique_ptr<AnboxStreamConfig, void(*)(AnboxStreamConfig*)> cfg(

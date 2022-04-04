@@ -24,7 +24,9 @@ To use a self-signed certificate, complete the following steps:
 2. Locate the `$HOME/snap/ams/current/client/client.crt` certificate on the client machine and copy it to the machine that runs AMS.
 3. Log on to the machine that runs AMS and configure AMS to trust the new client by adding the client certificate:
 
-        amc config trust add client.crt
+   ```
+   amc config trust add client.crt
+   ```
 
 ### Certificate Authority (CA)
 

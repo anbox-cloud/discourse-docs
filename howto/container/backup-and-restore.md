@@ -1,4 +1,4 @@
-Backup and restoration of application data can be achieved easily with the `aam`  (Anbox Application Manager) utility helper installed in the image. The `aam` can bundle any necessary application data together into a tarball file or uncompress the tarball file to a particular application folder according to the specified package name.
+Backup and restoration of application data can be achieved easily with the `aam`  (Anbox Application Manager) utility helper installed in the image. The `aam` can bundle any necessary application data together into a tarball file or extract the tarball file to a particular application folder according to the specified package name.
 
 ## Back up application data
 
@@ -59,10 +59,10 @@ aam backup com.canonical.candy \
 
 The resulting tarball file will include the following files:
 
-- Files with *db* suffix below the folder /data/data/com.canonical.candy/cache
-- Files with *fixture* prefix below the folder /data/data/com.canonical.candy/new_level
+- Files with `db` suffix below the folder `/data/data/com.canonical.candy/cache`
+- Files with `fixture` prefix below the folder `/data/data/com.canonical.candy/new_level`
 
 And exclude the following files:
 
-* Files with *jpeg* suffix below the folder /sdcard/Android/data/com.canonical.candy/user_data
-* Files with *cfg* suffix below the folder /data/data/com.canonical.candy/new_level
+* Files with `jpeg` suffix below the folder `/sdcard/Android/data/com.canonical.candy/user_data`
+* Files with `cfg` suffix below the folder `/data/data/com.canonical.candy/new_level`

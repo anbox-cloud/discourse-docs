@@ -29,7 +29,7 @@ be disallowed and a security exception will be raised.
 
 ### Import Java Library
 
-Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from Github
+Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub
 
 ```
 $ git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
@@ -41,7 +41,7 @@ on how to import an external library into an Android application project.
 
 Alternatively, you can follow the steps below:
 
-Copy the `com.canonical.anbox.platform_api_skeleton.jar` to project_root/app/libs
+Copy the `com.canonical.anbox.platform_api_skeleton.jar` to the `project_root/app/libs`
 directory (If the folder doesn’t exist, just create it).
 
 Edit the `build.gradle` under the app folder by adding the following line
@@ -92,7 +92,7 @@ in JavaScript, C or C++ by using the Anbox Streaming SDK.
 For a web based application you can use the JavaScript SDK which you can find at
 [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk). To receive the data sent from the Android application
 running in the Anbox container you need to implement the `messageReceived` callback
-of the AnboxStream object:
+of the `AnboxStream` object:
 
 ```
     let stream = new AnboxStream({

@@ -19,12 +19,12 @@ To create the addon, you must provide `amc` with either the directory or a tarba
 
 The following table lists the valid keys in an addon manifest:
 
-| Name                 | Type         | Description                                                                                                                                                                                                                   | Allowed values                        |
-|----------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| name                 | string       | Name of the addon. Can be used to reference the addon.                                                                                       | All characters except for the following: `< > : " / \ \| ? *`, as well as space. |
-| description          | string       | Description of the addon.                                                                                                                                                                                                     |                                       |
-| provides             | object       | Additional capabilities that this addon provides to the container. See individual items for details.                                                                                                                          |                                       |
-| provides.abi-support | string array | Tells AMS that this addon adds support for the given architecture even if the application doesn't support it natively. Use this when your addon brings instruction translation or provides libraries for other architectures. | `arm64-v8a`, `armeabi-v7a`, `armeabi` |
+| Name                  | Type         | Description                                                                                                                                                                                                                   | Allowed values                        |
+|-----------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| `name`                | string       | Name of the addon. Can be used to reference the addon.                                                                                       | All characters except for the following: `< > : " / \ \| ? *`, as well as space. |
+| `description`         | string       | Description of the addon.                                                                                                                                                                                                     |                                       |
+| `provides`            | object       | Additional capabilities that this addon provides to the container. See individual items for details.                                                                                                                          |                                       |
+| `provides.abi-support`| string array | Tells AMS that this addon adds support for the given architecture even if the application doesn't support it natively. Use this when your addon brings instruction translation or provides libraries for other architectures. | `arm64-v8a`, `armeabi-v7a`, `armeabi` |
 
 
 <a name='env-variables'></a>
@@ -33,14 +33,14 @@ When addon hooks are invoked, several environment variables are set to provide c
 
 The following variables are available:
 
-| Name            | Description                                             | Possible values         |
-|-----------------|---------------------------------------------------------|-------------------------|
-| ADDON_DIR       | Directory of the addon whose hook is currently running. |                         |
-| ANBOX_DIR       | Path to the Anbox directory.                            | `/var/lib/anbox`        |
-| ANDROID_ROOTFS  | Path to the Android RootFS.                             | `/var/lib/anbox/rootfs` |
-| BOOT_PACKAGE    | Boot package of the APK.                                |                         |
-| CONTAINER_TYPE  | Type of container being run.                            | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
-| ANBOX_EXIT_CODE | *`post-stop` hook only:* Exit code of the Anbox process.| `0` if no error occurred, otherwise set to the actual return code.|
+| Name             | Description                                             | Possible values         |
+|------------------|---------------------------------------------------------|-------------------------|
+| `ADDON_DIR`      | Directory of the addon whose hook is currently running. |                         |
+| `ANBOX_DIR`      | Path to the Anbox directory.                            | `/var/lib/anbox`        |
+| `ANDROID_ROOTFS` | Path to the Android RootFS.                             | `/var/lib/anbox/rootfs` |
+| `BOOT_PACKAGE`   | Boot package of the APK.                                |                         |
+| `CONTAINER_TYPE` | Type of container being run.                            | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
+| `ANBOX_EXIT_CODE`| *`post-stop` hook only:* Exit code of the Anbox process.| `0` if no error occurred, otherwise set to the actual return code.|
 
 <a name='hooks'></a>
 ## Hooks

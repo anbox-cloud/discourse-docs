@@ -23,7 +23,7 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 
 The deployed Juju charms need to be upgraded next. Please execute the following commands in the exact same order as listed here but skip those you don't use in your deployment:
 
-[note type="information" status="Note"]You can find a list of all charm, snap and Debian package versions for each Anbox Cloud relase in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions for each release you want to replace `<rev>` in the commands below with.[/note]
+[note type="information" status="Note"]You can find a list of all charm, snap and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions for each release you want to replace `<rev>` in the commands below with.[/note]
 
 ```bash
 $ juju upgrade-charm easyrsa --revision=<rev>

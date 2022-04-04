@@ -11,7 +11,7 @@ $ curl --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0
 ## API versioning
 When Android container gets up and running, all REST API endpoints are served under the base path `/1.0/` inside of the container.
 
-The details of a version of the api can be retrieved using `GET s/1.0`.
+The details of a version of the API can be retrieved using `GET s/1.0`.
 
 The reason for a major API bump is if the API breaks backward compatibility.
 
@@ -220,7 +220,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/came
   "type": "sync"
 }
 ```
-The `video_stream_socket` field is a socket path that is exposed by Anbox. It can be used to stream video content (color-format=rgba) to Anbox to display in camera preview mode.
+The `video_stream_socket` field is a socket path that is exposed by Anbox. It can be used to stream video content (`color-format=rgba`) to Anbox to display in camera preview mode.
 
 The metadata that is recorded in camera information from the following query will indicate the camera is enabled.
 
@@ -234,7 +234,7 @@ true
 #### POST
 
 * Description: Upload a static image to Anbox
- After a camera is enabled,  a static image(only jpeg format is supported by far) can be uploaded to Anbox as camera data.
+ After a camera is enabled,  a static image (only jpeg format is supported by far) can be uploaded to Anbox as camera data.
  * Operation: sync
  * Return: standard return value or standard error
 
@@ -278,7 +278,7 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camer
 
 #### STREAM VIDEO
 
-Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw color-format(rgba) based video streaming and display in the camera preview.
+Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw colour format (rgba) based video streaming and display in the camera preview.
 
 ```bash
 $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq -r .metadata.video_stream_socket
@@ -295,7 +295,7 @@ $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -f rawvideo -r 24 - | nc -N -U /run/u
 
 The above command will yield out 24 frame rate raw video output and send them to Anbox via the exposed video stream socket.
 
-Similar to uploading a static image to anbox, the video frame size must match the one of the resolution you got from the camera information API. For example, if you get 1280(w) x 720(h) resolution from the response of the camera info API, and the size of the video frame encoded in the uploaded video file is 320x640, you have to scale the video frame to the required size in some manners, otherwise you may get artifacts.
+Similar to uploading a static image to anbox, the video frame size must match the one of the resolution you got from the camera information API. For example, if you get 1280(w) x 720(h) resolution from the response of the camera info API, and the size of the video frame encoded in the uploaded video file is 320x640, you have to scale the video frame to the required size in some manners, otherwise you may get artefacts.
 
 With ffmpeg, you can do:
 
@@ -456,7 +456,7 @@ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracin
 }
 ```
 
-With this, perfetto will start to collect performance traces from the Anbox.
+With this, Perfetto will start to collect performance traces from the Anbox.
 
 Issue the following request to stop tracing:
 

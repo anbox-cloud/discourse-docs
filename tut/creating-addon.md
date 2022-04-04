@@ -14,6 +14,7 @@ Next to your `manifest.yaml` file in the `ssh-addon` directory, create a `hooks`
 Hooks can be implemented in any language, but we are using a bash script here.
 
 In the `hooks` directory, create a `pre-start` file with the following content:
+
 ```bash
 #!/bin/bash
 

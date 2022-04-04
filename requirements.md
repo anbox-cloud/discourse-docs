@@ -37,11 +37,11 @@ The following table gives an overview of the available kernel versions for the d
 
 |CLOUD|KERNEL VERSION|UBUNTU PACKAGES||
 | --- | --- | --- | --- |
-|AWS|>= 5.4|linux-aws, linux-modules-extra-aws||
-|GCE|>= 5.4|linux-gcp, linux-modules-extra-gcp||
-|Azure|>= 5.4|linux-azure, linux-modules-extra-azure||
-|OCI|>= 5.4|linux-oracle, linux-modules-extra-oracle||
-|Private|>= 5.4|linux-generic||
+|AWS|>= 5.4|`linux-aws`, `linux-modules-extra-aws`||
+|GCE|>= 5.4|`linux-gcp`, `linux-modules-extra-gcp`||
+|Azure|>= 5.4|`linux-azure`, `linux-modules-extra-azure`||
+|OCI|>= 5.4|`linux-oracle`, `linux-modules-extra-oracle`||
+|Private|>= 5.4|`linux-generic`||
 
 <a name="appliance"></a>
 ## Anbox Cloud Appliance
@@ -61,12 +61,12 @@ For external access to the Anbox Cloud Appliance, a couple of network ports must
 
 | Port(s) | Protocol | Necessity | Description |
 |------------|--------------|----------------|-------------------|
-| 80 | tcp | mandatory  | HTTP (redirects to HTTPS on port 443)|
-| 443 | tcp | mandatory | HTTPS |
-| 5349 | udp | mandatory | STUN/TURN
-| 60000-60100 | udp | mandatory | TURN relay ports |
-| 10000-11000 | udp | optional | Service endpoints exposed by AMS |
-| 10000-11000 | tcp | optional | Service endpoints exposed by AMS |
+| 80 | TCP | mandatory  | HTTP (redirects to HTTPS on port 443)|
+| 443 | TCP | mandatory | HTTPS |
+| 5349 | UDP | mandatory | STUN/TURN
+| 60000-60100 | UDP | mandatory | TURN relay ports |
+| 10000-11000 | UDP | optional | Service endpoints exposed by AMS |
+| 10000-11000 | TCP | optional | Service endpoints exposed by AMS |
 
 How to allow incoming traffic on the listed ports is different depending on the cloud used. Please consult the documentation of the cloud for further information on how to change the firewall.
 
@@ -110,7 +110,7 @@ More CPU cores and more RAM on the machine hosting LXD will allow to run a highe
 If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
- - **etcd**: https://etcd.io/docs/v3.4.0/op-guide/hardware/
- - **HAProxy** (load balancer for the Stream Gateway and the dashboard): https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements
+ - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.4.0/op-guide/hardware/)
+ - **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements)
 
 Please note that these are just baselines and should be adapted to your workload. No matter the application, [measuring performances](https://discourse.ubuntu.com/t/monitoring-installation/17786) is always important.

@@ -16,7 +16,7 @@ Name            |  Value
 `tags`          |  Comma-separated list of tags.
 `published`      |  "true" or "false" indicating whether the application is published.
 `immutable`     |  "true" or "false" indicating whether the application is changeable.
-`status`        |  Application status, possible values: "error", "unknown", "initializing", "ready", "deleted"
+`status`        |  Application status, possible values: `error`, `unknown`, `initializing`, `ready`, `deleted`
 
 To list all applications with a tag called "game":
 
