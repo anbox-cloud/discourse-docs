@@ -14,7 +14,7 @@ Each component of the stack fills a specific role:
 
 You can see how each component interact when creating a new streaming session
 
-![streaming-stack-sequence|2400x1350](upload://wsIbNMDA3PLkdS54W5GIlUNfkWk.png)
+![Streaming stack sequence|2400x1350](https://assets.ubuntu.com/v1/e38476fe-application_streaming-stack.png)
 
 ## Streaming an Application
 

@@ -99,6 +99,6 @@ You can also view, edit and export bundles from the Juju GUI:
 
 Running this command will output login information and a URL for the GUI interface (the GUI actually runs on the Juju controller instance). When you visit the given URL and log in, you will see a graphical representation of the current model. To export the model as a YAML bundle, click on the **Export** button near the top left of the screen.
 
-![Anbox Cloud - Juju GUI|690x444](upload://bXqb0LwD7EBZDwL18CsZSBZqL5r.png)
+![Anbox Cloud - Juju GUI|690x444](https://assets.ubuntu.com/v1/53cf7db6-install_customise_juju-model.png)
 
 For more information on the Juju GUI, see the [Juju documentation](https://juju.is/docs/olm/accessing-the-dashboard).

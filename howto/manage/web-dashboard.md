@@ -3,7 +3,7 @@ The dashboard is useful if you are new to Anbox Cloud or want a simple managemen
 
 [note type="information" status="Note"]The web dashboard is more oriented toward developers than end-users. However, it only uses available APIs and SDKs, and can be a good example to build your own web-based platform.[/note]
 
-![Screenshot 2021-02-10 at 14.33.52|690x322](upload://azCr6HYSx9mJZ82K2CPdTb3IS34.png)
+![Anbox Cloud web dashboard|690x322](https://assets.ubuntu.com/v1/4a1c8531-manage_dashboard-applications.png)
 
 ## Installation
 
@@ -63,7 +63,7 @@ The generated link is valid for one hour.
 Creating applications through the dashboard is done the same way as you would do with `amc` (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)).
 Note that more advanced scenarios might not yet be possible via the dashboard and require going through `amc`.
 
-![image|690x438](upload://9fPqr5DXciTsKy8bw90FzBxguZH.png)
+![Create an application|690x438](https://assets.ubuntu.com/v1/40dda4a6-manage_dashboard-add-application.png)
 
 ### Streaming applications
 
@@ -73,6 +73,6 @@ The dashboard comes with in-browser streaming capabilities through WebRTC.
 
 You can select any application you previously created and start a streaming session.
 
-![image|690x352](upload://l2azfsITC0bCjN9D0Xe2IRIEQOI.png)
+![Start a streaming session|690x352](https://assets.ubuntu.com/v1/6087fbd9-gs_dashboard_start_session.png)
 
 For more information about the Streaming Stack, visit [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769).

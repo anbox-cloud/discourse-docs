@@ -59,7 +59,7 @@ An addon is a collection of hooks that are invoked at different points in time i
 
 The following figure shows when the different hooks are executed in the life cycle of a container (base container or regular container).
 
-![Hooks execution in the life cycle of a container|471x601](upload://hfTnyF3zn5Ok3e9WtVBXC7eq5MC.png)
+![Hooks execution in the life cycle of a container|471x601](https://assets.ubuntu.com/v1/bc9b1291-addons-reference-hook-order.png)
 
 ### Hook timeouts
 All hooks are subject to a 5 minute timeout to avoid blocking a container for too long.
