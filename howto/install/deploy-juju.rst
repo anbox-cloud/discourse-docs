@@ -1,3 +1,5 @@
+:discourse: 17744
+
 .. _howto_install_deploy-juju:
 
 ===================================

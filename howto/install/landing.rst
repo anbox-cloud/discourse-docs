@@ -1,4 +1,5 @@
 :hide-toc:
+:discourse: 24336
 
 .. _howto_install_landing:
 

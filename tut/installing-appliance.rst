@@ -1,3 +1,5 @@
+:relatedlinks: https://aws.amazon.com/marketplace/pp/prodview-aqmdt52vqs5qk, https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4
+
 .. _tut_installing-appliance:
 
 =================

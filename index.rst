@@ -1,4 +1,6 @@
 :sequential_nav: none
+:relatedlinks: https://anbox-cloud.io/
+:discourse: 17029
 
 =========================
 Anbox Cloud documentation

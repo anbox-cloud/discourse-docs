@@ -1,3 +1,5 @@
+:discourse: 17747
+
 .. _howto_install_customise:
 
 =================================
