@@ -1,19 +1,19 @@
-All the communications between AMS and its clients happen using a  RESTful API over HTTP which is then encapsulated over either TLS for  remote operations or a unix socket for local operations
+All the communications between AMS and its clients happen using a  RESTful API over HTTP which is then encapsulated over either TLS for  remote operations or a Unix socket for local operations
 
 Not all REST API endpoints require authentication:
 
-* GET to / is allowed for everyone
-* GET to /1.0 is allowed for everyone
-* GET to /1.0/version is allowed for everyone
+* GET to `/` is allowed for everyone
+* GET to `/1.0` is allowed for everyone
+* GET to `/1.0/version` is allowed for everyone
 
-Some endpoints require an additional authentication token to ensure that the requester is authorized to access the resource:
+Some endpoints require an additional authentication token to ensure that the requester is authorised to access the resource:
 
-* GET to /1.0/artifacts
-* PATCH to /1.0/containers/<name>
+* GET to `/1.0/artifacts`
+* PATCH to `/1.0/containers/<name>`
 
 
 ## API versioning
-The details of a version of the api can be retrieved using `GET /<version>`.
+The details of a version of the API can be retrieved using `GET /<version>`.
 For example `GET /1.0`
 
 The reason for a major API bump is if the API breaks backward compatibility.
@@ -62,7 +62,7 @@ The operation metadata structure looks like:
 ```json
 {
     "id": "c6832c58-0867-467e-b245-2962d6527876",           # UUID of the operation
-    "class": "task",                                        # Class of the operation (task, websocket or token)
+    "class": "task",                                        # Class of the operation (task, web socket or token)
     "created_at": "2018-04-02T16:49:36.341463206+02:00",    # When the operation was created
     "updated_at": "2018-04-02T16:49:36.341463206+02:00",    # Last time the operation was updated
     "status": "Running",                                    # String version of the operation's status
@@ -129,7 +129,7 @@ Code  | Meaning
 401   | Cancelled
 
 ## Recursion
-To optimize queries of large lists, recursion is implemented for collections. A `recursion` argument can be passed to a GET query against a collection.
+To optimise queries of large lists, recursion is implemented for collections. A `recursion` argument can be passed to a GET query against a collection.
 
 The default value is 0 which means that collection member URLs are returned. Setting it to 1 will have those URLs be replaced by the object they point to (typically a dict).
 
@@ -141,7 +141,7 @@ Any operation which may take more than a second to be done must be done in the b
 The client will then be able to either poll for a status update or wait for a notification using the long-poll API.
 
 ## Notifications
-A websocket based API is available for notifications, different notification types exist to limit the traffic going to the client.
+A web-socket based API is available for notifications, different notification types exist to limit the traffic going to the client.
 
 It's recommended that the client always subscribes to the operations notification type before triggering remote operations so that it doesn't have to then poll for their status.
 
@@ -150,16 +150,16 @@ The AMS API supports both PUT and PATCH to modify existing objects.
 
 PUT replaces the entire object with a new definition, it's typically called after the current object state was retrieved through GET.
 
-To avoid race conditions, the Etag header should be read from the GET response and sent as If-Match for the PUT request. This will cause AMS to fail the request if the object was modified between GET and PUT.
+To avoid race conditions, the ETag header should be read from the GET response and sent as If-Match for the PUT request. This will cause AMS to fail the request if the object was modified between GET and PUT.
 
 PATCH can be used to modify a single field inside an object by only specifying the property that you want to change. To unset a key, setting it to empty will usually do the trick, but there are cases where PATCH won't work and PUT needs to be used instead.
 
-## Authorization
-Some operation may require a token to be included in the HTTP Authorization header like this:
+## Authorisation
+Some operation may require a token to be included in the HTTP Authorisation header like this:
 
- * Authorization: bearer <token>
+ * `Authorization: bearer <token>`
 
-No matter if the request is already authenticated using a trusted certificate. If the token is not valid, the request is rejected by the server. This ensures that only authorized clients can access those endpoints.
+No matter if the request is already authenticated using a trusted certificate. If the token is not valid, the request is rejected by the server. This ensures that only authorised clients can access those endpoints.
 
 ## File upload
 Some operations require uploading a payload. To prevent the difficulties of handling multipart requests, another solution has been taken: A unique file is uploaded and its bytes are included in the body of the request. Some metadata associated with the file is included in extra HTTP headers:
@@ -284,7 +284,7 @@ For an addon upload, the `X-AMS-Request` header is comprised of:
 }
 ```
 
-The payload to upload must be a tarball compressed with bzip2. Also, it must contain a manifest.yaml which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntaxes. please refer to [addon creation](https://discourse.ubuntu.com/t/managing-addons/17759) for more details.
+The payload to upload must be a tarball compressed with bzip2. Also, it must contain a `manifest.yaml` which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntax, please refer to [addon creation](https://discourse.ubuntu.com/t/managing-addons/17759) for more details.
 
 Example:
 ```bash
@@ -547,16 +547,16 @@ In the HTTP application upload case, the following headers may be set by the cli
 * `Content-Type:`: application/octet-stream (mandatory field)
 * `X-AMS-Fingerprint:`: SHA-256 (if set, the uploaded payload must match)
 
-The payload to upload must be a tarball compressed with bzip2. Also it must contain a manifest.yaml which declares the basic application information for the creation. For the layout application tarball file and supported syntaxes. See [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
-To support the following syntaxes in the application manifest.yaml, the server requires a corresponding extension
+The payload to upload must be a tarball compressed with bzip2. Also it must contain a `manifest.yaml` which declares the basic application information for the creation. For the layout application tarball file and supported syntax, see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
+To support the following syntax in the application `manifest.yaml`, the server requires a corresponding extension
 
 Syntax in manifest            |   Extension
 ----------------|------------------------------------
-watchdog |  application_watchdog_settings
-resources |  application_resource_customization
-services    |  application_services_configuration
-version     |  application_manifest_version
-video-encoder | application_gpu_encoder
+watchdog |  `application_watchdog_settings`
+resources |  `application_resource_customization`
+services    |  `application_services_configuration`
+version     |  `application_manifest_version`
+video-encoder | `application_gpu_encoder`
 
 Example
 ```bash
@@ -675,8 +675,8 @@ an application in either way.
 
 Update methods            |  Content-Type
 ----------------|------------------------------------
-With a new package |  application/octet-stream
-With specified fields        |  application/json
+With a new package |  `application/octet-stream`
+With specified fields        |  `application/json`
 
 An application package can be uploaded with a bzip2 compressed payload if the former method is taken.
 
@@ -816,7 +816,7 @@ Example:
 ```bash
 $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app --output app-version.tar
 ```
-As a result, an application image that contains a piece of metadata.yaml and rootfs will be generated
+As a result, an application image that contains a piece of `metadata.yaml` and RootFS will be generated
 
 #### DELETE
  * Description: Removes an application version
@@ -925,7 +925,7 @@ To monitor the status of an application version update operation, please refer t
 ### `/1.0/applications/<id or name>/manifest`
 
 #### GET
- * Description: Get lastest application manifest file
+ * Description: Get latest application manifest file
  * Authentication: trusted
  * Operation: sync
  * Cancellable: no
@@ -1113,7 +1113,7 @@ To monitor the status of a certificate removal operation, please refer to [`/1.0
 <a name="heading--10config"></a>
 ### `/1.0/config`
 #### GET
- * Description: Retrieve list of all config items
+ * Description: Retrieve list of all configuration items
  * Authentication: trusted
  * Operation: sync
  * Cancellable: no
@@ -1164,7 +1164,7 @@ Output:
 ```
 
 #### PATCH
- * Description: Modify one specific config item
+ * Description: Modify one specific configuration item
  * Authentication: trusted
  * Operation: async
  * Cancellable: no
@@ -1508,26 +1508,26 @@ Output:
 <a name="heading--10events"></a>
 ### `/1.0/events`
 This URL isn't a real REST API endpoint, instead of doing a GET query on it
-will upgrade the connection to a websocket on which notifications will
+will upgrade the connection to a web socket on which notifications will
 be sent.
 
 #### GET
- * Description: websocket upgrade
+ * Description: web socket upgrade
  * Authentication: trusted
  * Operation: sync
  * Cancellable: no
 
 URL parameter | Description  |  Optional values
 ----------------|-------------------|-----------------
-type |   comma separated list of notifications to subscribe to (defaults to all) | operation, logging, lifecycle
+type |   comma separated list of notifications to subscribe to (defaults to all) | `operation`, `logging`, `lifecycle`
 
 The notification types are:
 
- * operation - notification about creation, updates and termination of all background operations
- * logging - every log entry from the server
- * lifecycle - container lifecycle events
+ * `operation` - notification about creation, updates and termination of all background operations
+ * `logging` - every log entry from the server
+ * `lifecycle` - container life cycle events
 
-As a result,  this API call upgrades the connection to a websocket on which notifications will be sent.
+As a result,  this API call upgrades the connection to a web socket on which notifications will be sent.
 
 This never returns. Each notification is sent as a separate JSON dict, for example:
 
@@ -1606,7 +1606,7 @@ For an image upload, the `X-AMS-Request` header is comprised of:
 }
 ```
 
-The payload to upload must be a tarball compressed with gzip, bzip2 or xz. It must contain a piece of `metadata.yaml` and rootfs for image registration.
+The payload to upload must be a tarball compressed with gzip, bzip2 or xz. It must contain a piece of `metadata.yaml` and RootFS for image registration.
 
 Example:
 ```bash
@@ -1652,7 +1652,7 @@ To monitor the status of an image registration operation, please refer to [`/1.0
  * Operation: sync
  * Cancellable: no
 
-Exxample:
+Example:
 ```bash
 $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/images/my-image
 ```
@@ -1703,8 +1703,8 @@ an image in either way.
 
 |Update methods|Content-Type|
 | --- | --- |
-|With a new package|application/octet-stream|
-|With specified fields|application/json|
+|With a new package|`application/octet-stream`|
+|With specified fields|`application/json`|
 
 An image package can be uploaded with one of the supported compress format payload(gzip, bzip2 or xz) if the former approach is taken. And X-AMS-Request header is comprised of as follows in this case:
 
@@ -1760,7 +1760,7 @@ To update an image with a specified field, a JSON format payload is accepted.
 ```
 URL parameter | Description  |  Optional values
 ----------------|-------------------|-----------------
-type |   comma separated list of notifications to subscribe to (defaults to all) | operation, logging, lifecycle
+type |   comma separated list of notifications to subscribe to (defaults to all) | `operation`, `logging`, `lifecycle`
 Example:
 ```bash
 $ curl -s --header "Content-Type: application/json"  -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/images/my-image
@@ -2034,16 +2034,16 @@ Output:
 In the HTTP node update case, a JSON format payload input is required from the client:
 
 Supported update field            |   Description
-----------------|------------------------------------
-public_address |  (string) LXD node public address
-cpus        |  (number) Number of CPU cores used by LXD node
-cpu_allocation_rate |  (number) Factor of CPU overcommitment. Overcommitting resources allow to run more containers per node
-memory | (string) Memory used by LXD node
-memory_allocation_rate | Factor of memory overcommitment.
-gpu_slots | (number) Slots on the GPU available to containers
-gpu_encoder_slots | (number) Slots on the GPU encoders available to containers
-tags | (string) User defined tags
-unscheduable | (boolean) Whether this LXD node is schedulable by AMS
+-----------------|------------------------------------
+`public_address` |  (string) LXD node public address
+`cpus`        |  (number) Number of CPU cores used by LXD node
+`cpu_allocation_rate` |  (number) Factor of CPU overcommitment. Overcommitting resources allow to run more containers per node
+`memory` | (string) Memory used by LXD node
+`memory_allocation_rate` | Factor of memory overcommitment.
+`gpu_slots` | (number) Slots on the GPU available to containers
+`gpu_encoder_slots` | (number) Slots on the GPU encoders available to containers
+`tags` | (string) User defined tags
+`unscheduable` | (Boolean) Whether this LXD node is schedulable by AMS
 
 A sample payload as follows:
 
@@ -2308,9 +2308,9 @@ Output:
 <a name="heading--10operationsuuidwebsocket"></a>
 ### `/1.0/operations/<uuid>/websocket`
 #### GET (`?secret=SECRET`)
- * Description: This connection is upgraded into a websocket connection
+ * Description: This connection is upgraded into a web socket connection
    speaking the protocol defined by the operation type. For example, in the
-   case of an exec operation, the websocket is the bidirectional pipe for
+   case of an exec operation, the web socket is the bidirectional pipe for
    stdin/stdout/stderr to flow to and from the process inside the container.
    In the case of migration, it will be the primary interface over which the
    migration information is communicated. The secret here is the one that was

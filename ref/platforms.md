@@ -1,12 +1,12 @@
-Anbox can make use of different [platforms](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html) to customize its behavior. Anbox Cloud currently supports 3 platforms. Which one to use depends on your needs.
+Anbox can make use of different [platforms](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html) to customise its behaviour. Anbox Cloud currently supports 3 platforms. Which one to use depends on your needs.
 
 ## Supported platforms
 
-| Name     	| Behavior                                                                                                                                            	|
+| Name     	| Behaviour                                                                                                                                            	|
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
 | `null`   	|  A headless-gl platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching a container.                                                                       	|
-| `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVidia GPUs as well as LLVMPipe based software rendering if no GPU is detected.  Support audio input/output. |
-| `swrast` 	| (DEPRECATED) **S**oft**w**are **Rast**erization platform. A LLVMPipe based software rendering platform. Useful for visual tests. No audio input/output.                                                               	|
+| `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and Nvidia GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
+| `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.                                                               	|
 
 ## Using platforms
 
@@ -19,9 +19,9 @@ Instructing a container to use a platform is done through the `--platform` (or `
 
 [note type="caution" status="Warning"]The `swrast` platform is deprecated and has been replaced with the `webrtc` platform starting with Anbox Cloud 1.13. You can still explicitly specify `swrast` as platform name, but internally, it is mapped to the `webrtc` platform. The `webrtc` platform provides backward compatibility with the display settings described below.[/note]
 
-Anbox Cloud provides a way of inserting user data to Android container upon its launch which can configure the display settings for swrast platform.
+Anbox Cloud provides a way of inserting user data to Android container upon its launch which can configure the display settings for `swrast` platform.
 
-By default when launching a container on the swrast platform without specifying the display settings through user data, the following display specification will be used:
+By default when launching a container on the `swrast` platform without specifying the display settings through user data, the following display specification will be used:
 
 Display specs   | Value
 ----------------|-------
@@ -46,7 +46,7 @@ Then the supplied display setting will be applied after the container gets start
 
 Display settings for the `null` can be configured in the same way as for the `swrast` platform.
 
-Instead of supplying the display settings via userdata through the `amc launch` command they can be alternatively written before the start of the Anbox runtime (e.g. in a `pre-start` hook) to `/var/lib/anbox/display_settings`. The format remains the same as when supplied as userdata.
+Instead of supplying the display settings via `userdata` through the `amc launch` command they can be alternatively written before the start of the Anbox runtime (e.g. in a `pre-start` hook) to `/var/lib/anbox/display_settings`. The format remains the same as when supplied as `userdata`.
 
 ### `webrtc` platform
 

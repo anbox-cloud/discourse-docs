@@ -86,7 +86,7 @@ To set up a secure connection, launch the container so that it doesn't expose th
 
     amc launch -s adb --enable-graphics -r default
 
-As the ADB service is enabled for the launched container but without the leading `+`, the endpoint 10.226.4.168:10000/tcp shown via `amc ls` is not exposed to the public network:
+As the ADB service is enabled for the launched container but without the leading `+`, the endpoint `10.226.4.168:10000/tcp` shown via `amc ls` is not exposed to the public network:
 
 ```bash
 +----------------------+---------------+---------+---------+------+---------------+-------------------------------------------------------+

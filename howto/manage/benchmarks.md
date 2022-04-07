@@ -27,9 +27,9 @@ You can configure a different display specification through the `--user-data` pa
 
 | Platform              | Required format of user data          | Example                                                   |
 | --------------------- | ------------------------------------  | --------------------------------------------------------  |
-| null                  | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
-| swrast                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
-| webrtc                | JSON-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
+| `null`                | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| `swrast`              | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
+| `webrtc`              | JSON-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
 
 [note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
 

@@ -54,25 +54,21 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
                - http-request redirect scheme https
        to:
          - '2'
-
      prometheus:
        charm: 'cs:prometheus2'
        num_units: 1
        to:
          - '2'
-
      ams-monitor:
        charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
-
      lxd-monitor:
        charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
-
      grafana:
        charm: 'cs:grafana'
        num_units: 1
@@ -80,7 +76,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
        to:
          - '2'
-
    relations:
      - ['ams:prometheus', 'prometheus:scrape']
      - ['grafana:grafana-source', 'prometheus:grafana-source']
@@ -90,7 +85,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['ams-monitor:prometheus-client', 'prometheus:target']
      - ['ams-monitor:juju-info', 'ams:juju-info']
      - ['ams:grafana', 'grafana:dashboards']
-
    machines:
      '0':
        series: focal
@@ -134,25 +128,21 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
                - http-request redirect scheme https
        to:
          - '3'
-
      prometheus:
        charm: 'cs:prometheus2'
        num_units: 1
        to:
          - '3'
-
      ams-monitor:
        charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
-
      lxd-monitor:
        charm: 'cs:telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
-
      grafana:
        charm: 'cs:grafana'
        num_units: 1
@@ -160,7 +150,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
        to:
          - '3'
-
    relations:
      - ['ams:prometheus', 'prometheus:scrape']
      - ['grafana:grafana-source', 'prometheus:grafana-source']
@@ -172,7 +161,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['ams:grafana', 'grafana:dashboards']
      - ['anbox-stream-gateway:prometheus', 'prometheus:scrape']
      - ['anbox-stream-gateway:grafana', 'grafana:dashboards']
-
    machines:
      '0':
        series: focal

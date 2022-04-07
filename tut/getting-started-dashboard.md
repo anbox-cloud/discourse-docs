@@ -23,7 +23,7 @@ Complete the following steps to create a virtual device:
    [note type="information" status="Note"]By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.[/note]
 2. Click **Add Application**.
 3. Enter a name for the application, for example, `virtual-device-web`.
-4. Keep the pre-selected instance type.
+4. Keep the preselected instance type.
 5. Select the Android image that you want to use, for example, `bionic:android11:arm64`.
 6. Do not upload an APK file.
 7. Click **Add Application**.

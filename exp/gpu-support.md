@@ -25,7 +25,7 @@ See [GPU slots](https://discourse.ubuntu.com/t/capacity-planning/17765#gpu-slots
 
 ## Using GPUs inside a Container
 
-AMS configures a LXD container to passthrough a GPU device from the host. As of right now all GPUs available to a machine are passed to every container owning a GPU slot. For Nvidia GPUs LXD uses the [Nvidia container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to a container. When GPUs from Intel or AMD are being used no GPU driver is made available automatically. It has to be provided by an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
+AMS configures a LXD container to pass through a GPU device from the host. As of right now all GPUs available to a machine are passed to every container owning a GPU slot. For Nvidia GPUs LXD uses the [Nvidia container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to a container. When GPUs from Intel or AMD are being used no GPU driver is made available automatically. It has to be provided by an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
 
 If a GPU driver is available inside the container there are no further differences of how to use it in comparison to a regular environment.
 
@@ -37,6 +37,6 @@ $ amc launch --enable-graphics my-application
 
 ## Force Software Rendering and Video Encoding
 
-[note type="information" status="Note"]Software rendering and video encoding will utilize the CPU. This will mean you can run less containers on a system than you can, when you have a GPU.[/note]
+[note type="information" status="Note"]Software rendering and video encoding will utilise the CPU. This will mean you can run less containers on a system than you can, when you have a GPU.[/note]
 
 It is possible to tell a container to run with software rendering. For that, simply change the [instance type](https://discourse.ubuntu.com/t/instance-types/17764) or [resources](https://discourse.ubuntu.com/t/configure-available-resources/24960) of the application to not require a GPU. Anbox will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.

@@ -90,7 +90,6 @@ The following issues might occur if you use clustering.
 > ```
 > unit-ams-0: 13:30:51 INFO unit.ams/0.juju-log Error adding LXD node lxd5 to AMS: 1 - Flag --timeout has been deprecated, Using the timeout argument has no longer an effect as cancelling cluster operations is not supported
 > Error: Get "https://10.25.83.151:8443": Unable to connect to: 10.25.83.151:8443
->
 > unit-ams-0: 13:30:51 ERROR unit.ams/0.juju-log Hook error:
 > Traceback (most recent call last):
 >   File "/var/lib/juju/agents/unit-ams-0/.venv/lib/python3.8/site-packages/charms/reactive/__init__.py", line 74, in main
@@ -146,4 +145,3 @@ and `juju ssh lxd/0 -- lxc cluster ls`. Both commands should list the same LXD n
 Finally, enable automatic retries again:
 
     juju model-config automatically-retry-hooks=true
-

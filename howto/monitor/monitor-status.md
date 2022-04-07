@@ -34,13 +34,11 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          - '2'
      nrpe:
       charm: 'cs:nrpe'
-
    relations:
      - ['ams', 'nrpe:nrpe-external-master']
      - ['lxd', 'nrpe:nrpe-external-master']
      - ['ams-node-controller', 'nrpe:nrpe-external-master']
      - ['nrpe', 'nagios']
-
    machines:
      '0':
        series: bionic
@@ -65,7 +63,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          - '2'
      nrpe:
       charm: 'cs:nrpe'
-
    relations:
      - ['ams', 'nrpe:nrpe-external-master']
      - ['lxd', 'nrpe:nrpe-external-master']
@@ -74,7 +71,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['anbox-stream-gateway', 'nrpe:nrpe-external-master']
      - ['anbox-stream-agent', 'nrpe:nrpe-external-master']
      - ['coturn', 'nrpe:nrpe-external-master']
-
    machines:
      '0':
        series: bionic

@@ -58,7 +58,7 @@ const connector = new AnboxStreamGatewayConnector({
 ```
 
 Behind the scenes, the SDK is actually comprised of two parts. The `connector` takes care of talking to the stream backend (in this case the Stream Gateway, but this could be replaced with your own middleware) and initiating the WebRTC setup.
-The `Anbox Stream` takes care of displaying the video and audio feed and handle controls, lifecycle events, and more.
+The `Anbox Stream` takes care of displaying the video and audio feed and handle controls, life-cycle events, and more.
 
 The distinction between the two is made to make it easier to plug your own software in the SDK rather than having to re-write everything again.
 
@@ -103,7 +103,7 @@ In this case you'd need to add the following to your HTML body:
 
 [note type="information" status="Note"]Make sure events can reach this element, otherwise controls will not work.[/note]
 
-The default behavior of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
+The default behaviour of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
 
 ```javascript
 screen: {
@@ -121,8 +121,8 @@ callbacks: {
 }
 ```
 
-The rest is mostly optional and is made to customize the stream. You can find a complete inline documentation in the SDK.
-Note that you can register callbacks to be notified at specific points in the stream lifecycle.
+The rest is mostly optional and is made to customise the stream. You can find a complete inline documentation in the SDK.
+Note that you can register callbacks to be notified at specific points in the stream life cycle.
 
 ```javascript
 stream.connect();

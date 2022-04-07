@@ -1,6 +1,6 @@
 Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. See [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) for detailed information.
 
-The reference implementation for Prometheus (see [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)) provides some basic dashboards. You can, however, update them to fit your needs. 
+The reference implementation for Prometheus (see [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)) provides some basic dashboards. You can, however, update them to fit your needs.
 
 The following sections list all metrics returned to Prometheus by each component of Anbox Cloud.
 
@@ -12,9 +12,9 @@ The network ports might be different on your deployment. Run the associated comm
 
 | Service              | Endpoint                                                | Command to get the current port                    |
 |----------------------|---------------------------------------------------------|----------------------------------------------------|
-| ams                  | `http://ams.example.com:9104/internal/1.0/metrics`      | `juju config ams prometheus_target_port`           |
-| anbox-stream-gateway | `https://gateway.example.com:9105/internal/1.0/metrics` | `juju config anbox-stream-gateway prometheus_port` |
-| lxd                  | `https://lxd.example.com:8443/1.0/metrics`              | `lxc config get core.https_address`                |
+| `ams`                  | `http://ams.example.com:9104/internal/1.0/metrics`      | `juju config ams prometheus_target_port`           |
+| `anbox-stream-gateway` | `https://gateway.example.com:9105/internal/1.0/metrics` | `juju config anbox-stream-gateway prometheus_port` |
+| `lxd`                  | `https://lxd.example.com:8443/1.0/metrics`              | `lxc config get core.https_address`                |
 
 ## AMS
 Metrics prefixed with `ams_cluster_` give information about the Anbox management system (AMS). They keep you informed about the status of your cluster.
@@ -40,7 +40,7 @@ Metrics prefixed with `anbox_stream_gateway_` give you information on your clust
 
 | Name                                             | Description                                                                                                                                                                             | Available since |
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| `anbox_stream_gateway_sessions_total`            | Total number of sessions, categorized by status                                                                                                                                         | 1.7.2           |
+| `anbox_stream_gateway_sessions_total`            | Total number of sessions, categorised by status                                                                                                                                         | 1.7.2           |
 | `anbox_stream_gateway_accounts_total`            | Total number of accounts                                                                                                                                                                | 1.7.2           |
 | `anbox_stream_gateway_agents_total`              | Number of active and unresponsive agents                                                                                                                                                | 1.7.2           |
 
@@ -56,11 +56,11 @@ See the [official W3C reference](https://www.w3.org/TR/webrtc-stats) for more in
 | `webrtc_total_encode_time`          | Total number of seconds that has been spent encoding the `webrtc_frames_encoded` frames. The average encode time can be calculated by dividing this value with `webrtc_frames_encoded`           | 1.8.0           |
 | `webrtc_target_bitrate`             | Reflects the current encoder target in bits per second                                                                                                                                           | 1.8.0           |
 | `webrtc_bytes_sent`                 | Total number of bytes sent for a specific [SSRC](https://tools.ietf.org/html/rfc3550#section-3) (a SSRC represents one resource sent over a WebRTC track. It can be video, audio or binary data) | 1.8.0           |
-| `webrtc_retransmitted_bytes_sent`   | The total number of bytes that were retransmitted for a specific SSRC, only including payload bytes                                                                                              | 1.8.0           |
-| `webrtc_retransmitted_packets_sent` | The total number of packets that were retransmitted for a specific SSRC                                                                                                                          | 1.8.0           |
+| `webrtc_retransmitted_bytes_sent`   | The total number of bytes that were re-transmitted for a specific SSRC, only including payload bytes                                                                                              | 1.8.0           |
+| `webrtc_retransmitted_packets_sent` | The total number of packets that were re-transmitted for a specific SSRC                                                                                                                          | 1.8.0           |
 | `webrtc_total_packet_send_delay`    | The total number of seconds that packets have spent buffered locally before being transmitted onto the network                                                                                   | 1.8.0           |
-| `webrtc_packets_sent`               | Total number of RTP packets sent for this SSRC. This includes retransmissions                                                                                                                    | 1.8.0           |
-| `webrtc_nack_count`                 | Count the total number of Negative ACKnowledgement (NACK) packets received by this sender                                                                                                        | 1.8.0           |
+| `webrtc_packets_sent`               | Total number of RTP packets sent for this SSRC. This includes re-transmissions                                                                                                                    | 1.8.0           |
+| `webrtc_nack_count`                 | Count the total number of Negative Acknowledgement (NACK) packets received by this sender                                                                                                        | 1.8.0           |
 | `webrtc_fir_count`                  | Only exists for video. Count the total number of Full Intra Request (FIR) packets received by this sender                                                                                        | 1.8.0           |
 | `webrtc_pli_count`                  | Only exists for video. Count the total number of Picture Loss Indication (PLI) packets received by this sender                                                                                   | 1.8.0           |
 | `webrtc_sli_count`                  | Only exists for video. Count the total number of Slice Loss Indication (SLI) packets received by this sender                                                                                     | 1.8.0           |
@@ -98,7 +98,7 @@ The different metrics available are as follow:
 | Name                                                        | Description                                           | Available since |
 |-------------------------------------------------------------|-------------------------------------------------------|-----------------|
 | `anbox_stream_gateway_http_in_flight_requests`              | Number of HTTP requests being processed at the moment | 1.9.0           |
-| `anbox_stream_gateway_http_request_duration_seconds_bucket` | The HTTP request latencies in seconds                 | 1.9.0           |
+| `anbox_stream_gateway_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                 | 1.9.0           |
 | `anbox_stream_gateway_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        | 1.9.0           |
 | `anbox_stream_gateway_http_requests_total`                  | Total number of HTTP requests made                    | 1.9.0           |
 | `anbox_stream_gateway_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      | 1.9.0           |
@@ -172,7 +172,7 @@ The different metrics available are as follow:
 | Name                                                        | Description                                           | Available since |
 |-------------------------------------------------------------|-------------------------------------------------------|-----------------|
 | `ams_http_in_flight_requests`              | Number of HTTP requests being processed at the moment | 1.10.0           |
-| `ams_http_request_duration_seconds_bucket` | The HTTP request latencies in seconds                 | 1.10.0           |
+| `ams_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                 | 1.10.0           |
 | `ams_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        | 1.10.0           |
 | `ams_http_requests_total`                  | Total number of HTTP requests made                    | 1.10.0           |
 | `ams_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      | 1.10.0           |

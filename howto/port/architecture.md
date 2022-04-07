@@ -10,4 +10,4 @@ There are several ways to detect for what architecture an APK's native libraries
 Which APK to use to create the Anbox Cloud application depends on the architecture of your Anbox Cloud deployment:
 
 - If the container layer runs on 64-bit x86 hardware, use an APK that supports the `x86` or `x86_64` architecture.
-- If the container layer runs on 64-bit Arm hardware, use an APK that supports the `armeabi-v7a` or `arm64-v8a` achitecture.
+- If the container layer runs on 64-bit Arm hardware, use an APK that supports the `armeabi-v7a` or `arm64-v8a` architecture.

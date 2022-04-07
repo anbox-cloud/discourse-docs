@@ -65,7 +65,7 @@
 - [Stream agent](#stream-agent)
 - [Stream gateway](#stream-gateway)
 - [Streaming stack](#streaming-stack)
-- [Swrast](#swrast)
+- [`swrast`](#swrast)
 - [Ubuntu Advantage for Applications](#ubuntu-advantage-for-applications)
 - [Ubuntu One](#ubuntu-one)
 - [Watchdog](#watchdog)
@@ -161,7 +161,7 @@ See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#a
 
 A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the container.
 
-See [Access a container with amc](https://discourse.ubuntu.com/t/access-a-container/17772#amc).
+See [Access a container with AMC](https://discourse.ubuntu.com/t/access-a-container/17772#amc).
 
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
@@ -187,7 +187,7 @@ See [Create an Android library](https://developer.android.com/studio/projects/an
 
 A command-line tool that is included in the Android SDK Platform-Tools package and that allows to connect to and communicate with an Android device from your computer.
 
-See [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) in the Android developer documentation.
+See [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) in the Android developer documentation.
 
 <a name="apk"></a>
 ### Android Package Kit (APK)
@@ -273,7 +273,7 @@ See [the Coturn project on GitHub](https://github.com/coturn/coturn).
 
 A tool for analytics and monitoring that allows to query and visualise the metrics of the cluster or individual containers and generate alerts based on the data.
 
-See https://discourse.ubuntu.com/t/use-grafana/17787 and [the Grafana website](https://grafana.com/).
+See [Example: Collect metrics](https://discourse.ubuntu.com/t/use-grafana/17787) and [the Grafana website](https://grafana.com/).
 
 <a name="gpu"></a>
 ### Graphics Processing Unit (GPU)
@@ -353,7 +353,7 @@ See [the NRPE project on GitHub](https://github.com/NagiosEnterprises/nrpe).
 <a name="platform"></a>
 ### Platform
 
-An abstraction layer that is provided by Anbox to access the hardware resources of the host system from the Android system. Anbox Cloud supports three platforms: null (without rendering), webrtc (WebRTC) and swrast (software rendering).
+An abstraction layer that is provided by Anbox to access the hardware resources of the host system from the Android system. Anbox Cloud supports three platforms: `null` (without rendering), `webrtc` (WebRTC) and `swrast` (software rendering).
 
 See https://discourse.ubuntu.com/t/anbox-platforms/18733.
 
@@ -400,7 +400,7 @@ A software package for a desktop, cloud or IoT application that is easy to insta
 See [the Snapcraft website](https://snapcraft.io/).
 
 <a name="swrast"></a>
-### Software Rasterization (swrast)
+### Software Rasterization (`swrast`)
 
 An LLVMpipe-based software rendering platform that is useful for visual tests but does not provide audio input/output.
 

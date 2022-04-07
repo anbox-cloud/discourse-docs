@@ -10,7 +10,7 @@ There are differences between the full Anbox Cloud installation and the Anbox Cl
 
 Before you start the installation, ensure that you have the required credentials and prerequisites:
 
-* An Ubuntu 18.04 LTS or 20.04 LTS environment to run the commands (or another operating system that supports snaps - see the [snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
+* An Ubuntu 18.04 LTS or 20.04 LTS environment to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)

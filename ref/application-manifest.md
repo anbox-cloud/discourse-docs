@@ -13,7 +13,7 @@ Name          | Value type | Description
 `tags` (optional) | array      | List of tags to be associated with the application.
 `boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present).
 `boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest).
-`video-encoder` (optional) | string     | Video encoder to be used by a container launched from the application  (default: gpu-preferred). Possible values are: gpu, gpu-preferred, software
+`video-encoder` (optional) | string     | Video encoder to be used by a container launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`
 `watchdog` (optional)    | map        | Watchdog settings to be configured on application installation.
 `services` (optional)    | array      | Services to be provided from the installed application.
 `resources` (optional)   | map        | Resources to be allocated on application installation.
@@ -78,7 +78,7 @@ Name           | Value type | Description
 ---------------|------------|-------------------------
 `name`         | string     | Name of service
 `port`         | integer    | Port number to be exposed by the service
-`protocols`    | array of strings | Protocols to be used by the service (Possible values are: tcp, udp)
+`protocols`    | array of strings | Protocols to be used by the service (Possible values are: `tcp`, `udp`)
 `expose`       | Boolean    | Expose service to be accessible externally or internally
 
 <a name="resources"></a>
@@ -133,16 +133,16 @@ It's recommended to let Anbox choose the right values for `owner` and `permissio
 
 Name          | App data installation directory | Type | Value
 --------------|---------------------------------|------|--------
-|`owner`       | sdcard      | File | package_uid:sdcard_rw
-|              | sdcard      | Dir  | package_uid:sdcard_rw
-|              | system data | File | package_uid:package_gid
-|             | system data | Dir  | package_uid:package_gid
+|`owner`       | sdcard      | File | `package_uid:sdcard_rw`
+|              | sdcard      | Dir  | `package_uid:sdcard_rw`
+|              | system data | File | `package_uid:package_gid`
+|             | system data | Dir  | `package_uid:package_gid`
 |`permissions` | sdcard      | File | 0660
 |              | sdcard      | Dir  | 0771
 |              | system data | File | 0660
 |              | system data | Dir  | boot package folder -> 0700, nested folders of boot package folder -> 0770
 
-Each item (file or folder) declared in the `extra-data` field of the manifest yaml file should be placed in a directory called `extra-data`.
+Each item (file or folder) declared in the `extra-data` field of the manifest YAML file should be placed in a directory called `extra-data`.
 
 For security reasons, the target location of the files and directories listed in the `extra-data` section is restricted to a few specific locations in the Android file system. These are:
 
@@ -151,7 +151,7 @@ For security reasons, the target location of the files and directories listed in
 * `/data/app/<apk-package-name>`
 * `/data/data/<apk-package-name>`
 
-The manifest and extra data in our example are placed next to the application package, which must be named **app.apk**:
+The manifest and extra data in our example are placed next to the application package, which must be named `app.apk`:
 
 ```bash
 $ tree

@@ -10,7 +10,7 @@ Name            |  Value
 `tags`          |  Comma-separated list of tags.
 `published`     |  "true" or "false" indicating whether the application is published.
 `immutable`     |  "true" or "false" indicating whether the application is changeable.
-`status`        |  Application status, possible values: "error", "unknown", "initializing", "ready", "deleted"
+`status`        |  Application status, possible values: `error`, `unknown`, `initializing`, `ready`, `deleted`
 
 One example of using the `amc wait` command is to wait for the application [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) to be done, since the application bootstrap is performed asynchronously by the AMS service and takes some time to process. The application cannot be used until the bootstrap is complete and the status is marked as `ready`.
 
