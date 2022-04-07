@@ -91,3 +91,7 @@ ol.lowerroman li ul li, ol.upperroman li ul li, ol.loweralpha li ul li, ol.upper
 .versionadded {
     font-style: italic;
 }
+
+.relatedlinks ul {
+    margin-left: 0;
+}

@@ -30,3 +30,4 @@ sphinx-tabs
 sphinx-reredirects
 gitpython
 sphinxext-opengraph>=0.6.1
+lxd_sphinx_extensions

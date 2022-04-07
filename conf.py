@@ -34,7 +34,9 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_tabs.tabs",
     "sphinx_reredirects",
-    "sphinxext.opengraph"
+    "sphinxext.opengraph",
+    "youtube-links",
+    "related-links"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -71,7 +73,8 @@ html_sidebars = {
 }
 
 html_context = {
-    "sequential_nav": "both"
+    "sequential_nav": "both",
+    "discourse_prefix": "https://discourse.ubuntu.com/t/"
 }
 
 templates_path = ["_templates"]
