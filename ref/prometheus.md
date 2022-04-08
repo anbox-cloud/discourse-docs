@@ -88,8 +88,8 @@ Here's the list of all routes and their corresponding label
 | `DELETE` | `/1.0/sessions/<id>`                | `delete_session`             |
 | `DELETE` | `/1.0/sessions`                     | `delete_sessions`            |
 | `POST`   | `/1.0/sessions/<id>/join`           | `join_session`               |
-| `GET`    | `/1.0/sessions/<id>/sockets/master` | `streaming_websocket_master` |
-| `GET`    | `/1.0/sessions/<id>/sockets/slave`  | `streaming_websocket_slave`  |
+| `GET`    | `/1.0/sessions/<id>/sockets/master` | `streaming_websocket_master`  <!-- wokeignore:rule=master --> |
+| `GET`    | `/1.0/sessions/<id>/sockets/slave`  | `streaming_websocket_slave`  <!-- wokeignore:rule=slave -->  |
 | `GET`    | `/1.0/applications`                 | `get_applications`           |
 | `GET`    | `/1.0/regions`                      | `get_regions`                |
 
