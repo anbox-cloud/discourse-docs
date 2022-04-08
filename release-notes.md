@@ -462,7 +462,7 @@ Existing deployments based on 1.9.x are not affected by this bug.
 ### New features & improvements
 
 * Android 11 was released back in 2020 by Google and is now available and fully supported in Anbox Cloud. With Android 11 various [new features](https://developer.android.com/about/versions/11/features) become available for developers and applications. From an Anbox perspective Android 11 provides the same feature set as for the existing Android 10 images and will be provided with monthly security updates starting with 1.10.1
-* In earlier Anbox Cloud versions the Juju charms and bundles for Anbox Cloud where only available after whitelisting user accounts for access. With 1.10 all charms and bundles are not available in the public on the Juju Charmstore.
+* In earlier Anbox Cloud versions the Juju charms and bundles for Anbox Cloud where only available after allow-listing user accounts for access. With 1.10 all charms and bundles are not available in the public on the Juju Charmstore.
 * Before 1.10 a deployment might have been automatically updated through a system package update to the next major or minor version of Anbox Cloud. With 1.10 this is no longer possible and upgrading to a new minor version of Anbox Cloud requires an explicit update to a newer charm as specified in [component versions](https://anbox-cloud.io/docs/component-versions).
 * Up until 1.10 streaming sessions managed by the Anbox Stream Gateway could be joined but new clients had to wait before an existing client disconnected to establish a connection. With 1.10 the Anbox Stream Gateway has gotten a new API which allows to force disconnect any currently connected client from an active session.
 * With 1.10 Anbox Cloud now by default uses the [server optimised Nvidia GPU drivers](https://launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460-server) as packaged in the Ubuntu archive by default on amd64 systems. On arm64 systems the Nvidia drivers are still coming from the Nvidia provided [CUDA archive](https://developer.nvidia.com/cuda-downloads).
@@ -1173,13 +1173,13 @@ None
   * Base containers are now correctly marked as stopped during the bootstrap process
     when the related LXD container is also stopped.
   * Fixed unhandled timeouts in the LXD API client implementation causing API calls
-    to hang forever.
+    to stall forever.
   * Added Android security fixes from April 2019. See the
     [Android Security Bulletins](https://source.android.com/security/bulletin) for more information.
   * Installing applications with an architecture not supported by the LXD cluster caused
-    the installation process to hang. AMS now checks on APK upload if the APK can be executed
+    the installation process to stall. AMS now checks on APK upload if the APK can be executed
     by the available machines in the LXD cluster. The installation process was updated to not
-    hang on unsupported APKs.
+    stall on unsupported APKs.
   * The Android WebView crashed in specific scenarios with SIGBUS on ARM64. This was caused
     by unaligned memory access in the OpenGL translation layer inside Anbox.
 

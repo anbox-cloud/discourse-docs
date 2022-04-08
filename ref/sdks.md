@@ -25,7 +25,7 @@ You need the following build dependencies:
 
 The Anbox Platform SDK provides a collection of example platform plugins to help developers get started with plugin development. The following examples are included:
 
-* `minimal` - A platform plugin that provides a dummy implementation of a minimal platform plugin to demonstrate the general plugin layout.
+* `minimal` - A platform plugin that provides a sample implementation of a minimal platform plugin to demonstrate the general plugin layout.
 * `audio_streaming` - A platform plugin that provides a more advanced example of how a platform plugin can process audio and input data.
 
 <a name="ams-sdk"></a>
