@@ -5,6 +5,7 @@ AAR
 AArch
 ABI
 ABIs
+adb
 ADB
 addon
 addons
@@ -67,6 +68,7 @@ dn
 DNS
 dnsmasq
 Dqlite
+DrArm
 drawio
 drm
 easyrsa
@@ -95,6 +97,7 @@ Graviton
 gzip
 HAProxy
 https
+hwcomposer
 HWE
 IAM
 IDR
@@ -122,6 +125,7 @@ lxd
 LXD
 MAAS
 middleware
+Minetest
 mutex
 NACK
 Nagios
@@ -229,11 +233,13 @@ validator
 vCPU
 vCPUs
 viewport
+wl
 VMs
 VNC
 VPC
 Vulkan
 Wayland
+webrtc
 WebRTC
 WebView
 WGS
