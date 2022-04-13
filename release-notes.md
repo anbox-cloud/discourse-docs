@@ -1,6 +1,38 @@
 [note type="information" status="Note"]If you're interested in getting notified for the latest Anbox Cloud releases, make sure you subscribe to notifications on the [announcements category](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55) on the Anbox Cloud discourse.[/note]
 
-See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for instructions on how to update your Anbox Cloud deployment.
+See [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [Upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
+instructions on how to update your Anbox Cloud deployment.
+
+[Details=1.13.2]
+
+## 1.13.2 (April 13 2022)
+
+### New features & improvements
+
+ * Android security updates for April 2022 (see [Android Security Bulletin - April 2022](https://source.android.com/security/bulletin/2022-04-01) for more information)
+ * Android WebView has been updated to [100.0.4896.79](https://chromereleases.googleblog.com/2022/04/chrome-for-android-update.html)
+ * The JavaScript Anbox Streaming SDK now has a `rotate` method to allow rotating the screen of the Android instance
+ * Addons can now specify an overall timeout for their hooks by setting the `hooks.timeout` key in the `manifest.yaml`
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+* AC-830 On a multi GPU system default number of slots is split across all GPUs
+* AC-829 AMS leaks ports for already removed containers
+* AC-828 Changing the parent image of an application in AMS returns with error
+* AC-811 Anbox hwcomposer crashes on highly loaded system with wl_abort
+* AC-809 Empty device name is shown up when running adb shell getevent
+* AC-788 DrArm is showing just a black screen
+* AC-782 Add support for missing GL parameter sizes
+* AC-765 Minetest crashes on 1.13.0 with SEGV in Anbox
+* AC-725 A segfault occurred from the webrtc stack during the anbox session runtime
+* AC-646 1.12 hooks: $CONTAINER_TYPE is empty for regular containers
+* AC-827 Failed to create an arm64 based application when Anbox Cloud deployment is capable with multiple architectures
+
+[/Details]
 
 [Details=1.13.1]
 
