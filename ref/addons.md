@@ -25,6 +25,7 @@ The following table lists the valid keys in an addon manifest:
 | `description`         | string       | Description of the addon.                                                                                                                                                                                                     |                                       |
 | `provides`            | object       | Additional capabilities that this addon provides to the container. See individual items for details.                                                                                                                          |                                       |
 | `provides.abi-support`| string array | Tells AMS that this addon adds support for the given architecture even if the application doesn't support it natively. Use this when your addon brings instruction translation or provides libraries for other architectures. | `arm64-v8a`, `armeabi-v7a`, `armeabi` |
+| `hooks.timeout`| string | Execution timeout for each hook that is included in an addon. By default, the timeout is set to 5 minutes. It can be extended to up to 15 minutes. Configure this option if a hook takes longer than 5 minutes to finish. | `10m` |
 
 
 <a name='env-variables'></a>
@@ -62,6 +63,15 @@ The following figure shows when the different hooks are executed in the life cyc
 ![Hooks execution in the life cycle of a container|471x601](https://assets.ubuntu.com/v1/bc9b1291-addons-reference-hook-order.png)
 
 ### Hook timeouts
-All hooks are subject to a 5 minute timeout to avoid blocking a container for too long.
+By default, all hooks are subject to a 5 minute timeout to avoid blocking a container for too long. The timeout can be configured through the `hooks.timeout` key in the addon manifest. For example:
+
+```yaml
+name: my-addon
+description: an example addon
+hooks:
+  timeout: 15m
+```
 
 A hook that runs into a timeout exits with an error.
+
+[note type="information" status="Note"]Values longer than 15 minutes are considered invalid.[/note]
