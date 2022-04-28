@@ -22,8 +22,8 @@ Not all components are updated with each release. When components are not update
 
 | Name | Revision |
 |----------|--------------|
-| cs:~containers/easyrsa | 384 |
-| cs:~containers/etcd | 594 |
+| cs:~containers/easyrsa | 420 |
+| cs:~containers/etcd | 634 |
 
 ### Bundles
 
@@ -89,8 +89,8 @@ n/a
 
 | Name | Revision |
 |----------|--------------|
-| cs:~containers/easyrsa | 384 |
-| cs:~containers/etcd | 594 |
+| cs:~containers/easyrsa | 420 |
+| cs:~containers/etcd | 634 |
 
 ### Bundles
 
@@ -156,8 +156,8 @@ n/a
 
 | Name | Revision |
 |----------|--------------|
-| cs:~containers/easyrsa | 384 |
-| cs:~containers/etcd | 594 |
+| cs:~containers/easyrsa | 420 |
+| cs:~containers/etcd | 634 |
 
 ### Bundles
 
