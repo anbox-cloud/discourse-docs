@@ -4,9 +4,7 @@ Anbox provides an HTTP API endpoint through a Unix socket at `/run/users/1000/an
 
 The API endpoint can be for example accessed via `curl` in the following way
 
-```bash
-$ curl --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0
-```
+    curl --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0
 
 ## API versioning
 When Android container gets up and running, all REST API endpoints are served under the base path `/1.0/` inside of the container.
@@ -71,10 +69,9 @@ HTTP code must be one of 400 or 500.
     - Fetch general information of the server
 * Return: Dict representing server state
 
-Return value:
+Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq .`:
 
 ```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq .
 {
     "metadata": {
         "api_extensions": [           # List of API extensions added after the API was marked stable
@@ -103,10 +100,9 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0 | jq 
 
 [note type="information" status="Note"]After enabling the location endpoint, any location updates provided via the [Anbox Platform API](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html) won't be processed by Anbox until the location endpoint is disabled again.[/note]
 
- Return value:
+ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location | jq .`:
 
 ```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location | jq .
 {
     "metadata": {
       "enabled": false,
@@ -124,10 +120,9 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/locat
 
 [note type="information" status="Note"]Location updates must be activated before posting any location data to Anbox via the `PATCH` method.  If location updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
 
-Return value:
+Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location --data '{"enable":true}' | jq .`:
 
 ```bash
-$ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/location --data '{"enable":true}' | jq .
 {
     "status": "Success",
     "status_code": 200,
@@ -180,10 +175,9 @@ Return value:
  * Operation: sync
  * Return: Current camera basic information
 
- Return value:
+ Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .`:
 
 ```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .
 {
   "metadata": {
     "data_available": false,  # The availability of camera data
@@ -207,10 +201,9 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camer
  * Operation: sync
  * Return: standard return value or standard error
 
- Return value:
+ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq .`:
 
 ```bash
-$ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq .
 {
   "metadata": {
     "video_stream_socket": "/run/user/1000/anbox/sockets/camera_video_stream_23a2a7e0cc"
@@ -222,12 +215,9 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/came
 ```
 The `video_stream_socket` field is a socket path that is exposed by Anbox. It can be used to stream video content (`color-format=rgba`) to Anbox to display in camera preview mode.
 
-The metadata that is recorded in camera information from the following query will indicate the camera is enabled.
+To determine if the camera is enabled, run the following query:
 
-```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.enabled
-true
-```
+    curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.enabled
 
 <a name="heading--10cameradata"></a>
 ### `/1.0/camera/data`
@@ -238,9 +228,8 @@ true
  * Operation: sync
  * Return: standard return value or standard error
 
-Return value:
+Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X POST s/1.0/camera/data --data-binary @/<jpeg image path> | jq .`:
 ```bash
-$ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X POST s/1.0/camera/data --data-binary @/<jpeg image path> | jq .
 {
   "status": "Created",
   "status_code": 201,
@@ -260,9 +249,9 @@ Here is a caveat about the size of a jpeg image to be uploaded to Anbox. Irrespe
  * Operation: sync
  * Return: standard return value or standard error
 
-Return value:
+Return value for `curl --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/camera/data`:
+
 ```bash
-$ curl --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/camera/data
 {
   "status": "Success",
   "status_code": 200,
@@ -270,18 +259,17 @@ $ curl --unix-socket /run/user/1000/anbox/sockets/api.unix -X DELETE s/1.0/camer
 }
 ```
 
-Since a static image is deleted,  the metadata that is recorded in camera information from the following query will indicate the camera data is unavailable anymore.
+Since a static image is deleted, the metadata that is recorded in camera information from the following query will indicate the camera data is unavailable anymore.
 
-```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.data_available
-```
+    curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera | jq .metadata.data_available
 
 #### STREAM VIDEO
 
 Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw colour format (rgba) based video streaming and display in the camera preview.
 
+For example, for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq -r .metadata.video_stream_socket`:
+
 ```bash
-$ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq -r .metadata.video_stream_socket
 /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
 ```
 
@@ -290,7 +278,7 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/came
 For example, you have a mp4 video file available in the container, to stream video content to Anbox
 
 ```bash
-$ ffmpeg -r 10 -i test.mp4 -vf format=rgba -f rawvideo -r 24 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
+ffmpeg -r 10 -i test.mp4 -vf format=rgba -f rawvideo -r 24 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
 ```
 
 The above command will yield out 24 frame rate raw video output and send them to Anbox via the exposed video stream socket.
@@ -300,7 +288,7 @@ Similar to uploading a static image to anbox, the video frame size must match th
 With ffmpeg, you can do:
 
 ```bash
-$ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
+ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream
 ```
 
 <a name="heading--10sensors"></a>
@@ -311,10 +299,9 @@ $ ffmpeg -r 10 -i test.mp4 -vf format=rgba -s 1280x720 -f rawvideo -r 25 - | nc 
  * Operation: sync
  * Return: Current sensors’ status and supported sensors by Anbox
 
- Return value:
+Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors | jq .`:
 
 ```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors | jq .
 {
   "metadata": {
     "active_sensors": [             # Active sensors in Android container
@@ -353,10 +340,9 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/senso
 
 [note type="information" status="Note"]Sensor updates must be activated before posting any sensor data to Anbox via the `PATCH` method.  If sensor updates are disabled, requests to provide updates to the Anbox HTTP API will fail.[/note]
 
-Return value:
+Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors --data '{"enable":true}' | jq .`:
 
 ```bash
-$ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sensors --data '{"enable":true}' | jq .
 {
     "status": "Success",
     "status_code": 200,
@@ -370,12 +356,9 @@ $ curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/sens
  * Operation: sync
  * Return: standard return value or standard error
 
- Return value:
+Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":-0.1, "z": 0.1},{"type": "pressure", "value": 1.0}]' | jq .`:
 
 ```bash
-$ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":
--0.1, "z": 0.1},{"type": "pressure", "value": 1.0}]' | jq .
-
 {
  "status": "Success",
  "status_code": 200,
@@ -400,19 +383,7 @@ Sensor Type       | JSON Data structure |
 
 Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
-[note type="information" status="Note"]If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the following error even if the sensor updates are activated:
-
-```bash
-$ curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/sensors --data '[{"type": "acceleration", "x": 0.3, "y":
--0.1, "z": 0.1},{"type": "pressure", "value": 1.0}]' | jq .
-
-{
-  "error": "Sensor 'acceleration' is not active",
-  "error_code": 400,
-  "type": "error"
-}
-
-```
+[note type="information" status="Note"]If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
 Issue GET method to sensor endpoint can check the current active sensors in Android container.
 [/note]
 
@@ -425,11 +396,9 @@ Issue GET method to sensor endpoint can check the current active sensors in Andr
  * Operation: sync
  * Return: Current tracing status
 
- Return value:
+Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing  | jq .`:
 
 ```bash
-$ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.
-0/tracing  | jq .
 {
  "metadata": {
    "active": false
@@ -445,10 +414,9 @@ $ curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.
  * Operation: sync
  * Return: standard return value or standard error
 
-Return value:
+Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing --data '{"enable":true}' | jq .`:
 
 ```bash
-curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing --data '{"enable":true}' | jq .
 {
   "status": "Success",
   "status_code": 200,
@@ -460,9 +428,11 @@ With this, Perfetto will start to collect performance traces from the Anbox.
 
 Issue the following request to stop tracing:
 
+    curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/tracing --data '{"enable":false}' | jq .
+
+Return value:
+
 ```bash
-curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1
-.0/tracing --data '{"enable":false}' | jq .
 {
  "metadata": {
    "path": "/var/lib/anbox/traces/anbox_468634.1"

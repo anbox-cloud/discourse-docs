@@ -31,9 +31,7 @@ be disallowed and a security exception will be raised.
 
 Check out the [Anbox Streaming SDK](https://github.com/anbox-cloud/anbox-streaming-sdk) from GitHub
 
-```
-$ git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
-```
+    git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
 
 To import the `com.canonical.anbox.platform_api_skeleton.jar` library into your
 Android project, please refer to the official [documentation](https://developer.android.com/studio/build/dependencies)

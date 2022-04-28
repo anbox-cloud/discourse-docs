@@ -53,10 +53,9 @@ Replace `aar0` in the policy with the name of your bucket.
 
 Once you created the IAM user, create an access key for the user, which the AAR will use. See the [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for more details on this.
 
-Finally, update the AAR configuration via the charm configuration:
+Add the credentials to the `config.yaml` file:
 
-```sh
-$ cat config.yaml
+```
 aar:
   storage_config: |
     storage:
@@ -65,8 +64,12 @@ aar:
         bucket: aar0
         access-key: <your access key>
         secret-access-key: <your secret access key>
-juju config aar -f config.yaml
 ```
+
+Finally, update the AAR configuration via the charm configuration:
+
+    juju config aar -f config.yaml
+
 
 <a name="cloudfront"></a>
 ### AWS CloudFront CDN support
@@ -75,10 +78,9 @@ The distribution of the images can be highly improved by adding support for the 
 
 Once you have set up a CloudFront distribution for your S3 bucket, you only need the base URL, public key and key pair ID to configure the AAR to use CloudFront to serve image downloads.
 
-Update the AAR configuration via the charm configuration:
+Add the credentials to the `config.yaml` file:
 
-```sh
-$ cat config.yaml
+```
 aar:
   storage_config: |
     storage:
@@ -95,5 +97,8 @@ aar:
             -----END RSA PRIVATE KEY-----
           keypair-id: ADF443JOEF3423JF
           duration: 1m
-$ juju config aar -f config.yaml
 ```
+
+Then update the AAR configuration via the charm configuration:
+
+    juju config aar -f config.yaml
