@@ -21,7 +21,7 @@ Name          | Value type | Description
 
 ## Image
 
-The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [Manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
+The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [How to manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
 
     amc image list
 

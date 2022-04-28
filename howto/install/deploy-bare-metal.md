@@ -1,4 +1,4 @@
-To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744).
+To deploy Anbox Cloud on a public cloud (such as AWS, Azure or Google) or using MAAS or OpenStack, see the instructions in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744).
 
 Alternatively, you can follow the instructions in this document to use the [manual cloud provider](https://jaas.ai/docs/manual-cloud) that Juju offers. This method allows you to deploy Anbox Cloud with Juju on a set of SSH connected machines.
 
@@ -54,7 +54,7 @@ Juju will add the machines to its list of usable machines, which you can display
 
 ## Attach your Ubuntu Advantage subscription
 
-Create an `ua.yaml` overlay file as described in [Deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744#ua-overlay).
+Create an `ua.yaml` overlay file as described in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744#ua-overlay).
 
 You must provide this file when deploying Anbox Cloud.
 

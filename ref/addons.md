@@ -1,4 +1,4 @@
-Addons provide a way to extend and customise images in Anbox Cloud. See [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759) and the [Creating an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial for instructions on how to use them.
+Addons provide a way to extend and customise images in Anbox Cloud. See [How to use addons](https://discourse.ubuntu.com/t/managing-addons/17759) and the [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial for instructions on how to use them.
 
 <a name='file-structure'></a>
 ## File structure

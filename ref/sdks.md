@@ -49,7 +49,7 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 
 ### Authentication setup
 
-Clients must authenticate to AMS before communicating with it. For more information, see [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub.
+Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub.
 
 <a name="streaming-sdk"></a>
 ## Anbox Streaming SDK

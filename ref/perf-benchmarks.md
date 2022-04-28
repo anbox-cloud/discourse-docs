@@ -1,6 +1,6 @@
 The following benchmarks give an overview of the performance that you can achieve with Anbox Cloud.
 
-The benchmarks were performed using the `amc benchmark` utility as described in [Run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (column "# Containers") delivering a stable frame rate (column "Avg. FPS"). Running more containers either gives too high variation in the provided frame rate or is not possible due to other hardware limitations (system memory, GPU memory, ...).
+The benchmarks were performed using the `amc benchmark` utility as described in [How to run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (column "# Containers") delivering a stable frame rate (column "Avg. FPS"). Running more containers either gives too high variation in the provided frame rate or is not possible due to other hardware limitations (system memory, GPU memory, ...).
 
 All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU.
 

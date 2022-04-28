@@ -48,7 +48,7 @@ unit-anbox-cloud-dashboard-0:
 <a name="dashboard-access-appliance"></a>
 #### Register a Ubuntu One account in Anbox Cloud Appliance
 
-If you followed the instructions in [Installing the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
+If you followed the instructions in [Install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) to install the Anbox Cloud Appliance, you already registered your Ubuntu One account.
 
 To add more accounts, use the following command:
 
@@ -60,7 +60,7 @@ The generated link is valid for one hour.
 
 ### Creating applications
 
-Creating applications through the dashboard is done the same way as you would do with `amc` (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)).
+Creating applications through the dashboard is done the same way as you would do with `amc` (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)).
 Note that more advanced scenarios might not yet be possible via the dashboard and require going through `amc`.
 
 ![Create an application|690x438](https://assets.ubuntu.com/v1/40dda4a6-manage_dashboard-add-application.png)

@@ -1,4 +1,4 @@
-Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. See [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) for detailed information.
+Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution. See [How to monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) for detailed information.
 
 The reference implementation for Prometheus (see [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)) provides some basic dashboards. You can, however, update them to fit your needs.
 
