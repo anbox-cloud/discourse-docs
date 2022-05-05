@@ -98,10 +98,10 @@ The SDK needs an HTML element where it can attach the video, `targetElement` is 
 In this case you'd need to add the following to your HTML body:
 
 ```html
-<div id="anbox-stream"></div>
+<div id="anbox-stream" style="width: 100vw; height: 100vh;"></div>
 ```
 
-[note type="information" status="Note"]Make sure events can reach this element, otherwise controls will not work.[/note]
+[note type="information" status="Note"]You should always specify both the height and the width attribute for the container of the video element. Otherwise the video element will not be displayed correctly. Also make sure events can reach this element, otherwise controls will not work.[/note]
 
 The default behaviour of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
 
