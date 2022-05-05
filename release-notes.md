@@ -9,10 +9,10 @@ instructions on how to update your Anbox Cloud deployment.
 
 ### New features & improvements
 
- * Android security updates for April 2022 (see [Android Security Bulletin - April 2022](https://source.android.com/security/bulletin/2022-04-01) for more information)
- * Android WebView has been updated to [100.0.4896.79](https://chromereleases.googleblog.com/2022/04/chrome-for-android-update.html)
- * The JavaScript Anbox Streaming SDK now has a `rotate` method to allow rotating the screen of the Android instance
- * Addons can now specify an overall timeout for their hooks by setting the `hooks.timeout` key in the `manifest.yaml`
+* Android security updates for April 2022 (see [Android Security Bulletin - April 2022](https://source.android.com/security/bulletin/2022-04-01) for more information)
+* Android WebView has been updated to [100.0.4896.79](https://chromereleases.googleblog.com/2022/04/chrome-for-android-update.html)
+* The JavaScript Anbox Streaming SDK now has a `rotate` method to allow rotating the screen of the Android instance
+* Addons can now specify an overall timeout for their hooks by setting the `hooks.timeout` key in the `manifest.yaml`
 
 ### Known issues
 
