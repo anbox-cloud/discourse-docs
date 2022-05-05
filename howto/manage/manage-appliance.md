@@ -6,7 +6,7 @@ The available commands for the `anbox-cloud-appliance` tool are:
 
 - `ams`
 
-  Expose the AMS HTTPS service on the public endpoint of the machine on which the appliance is running. If you do this, you can [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
+  Expose the AMS HTTPS service on the public endpoint of the machine on which the appliance is running. If you do this, you can [control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
 - `crashdump`
 
   Generate a tarball that contains debug information.
@@ -20,7 +20,7 @@ The available commands for the `anbox-cloud-appliance` tool are:
   [note type="caution" status="Warning"]This command resets the Anbox Cloud Appliance and destroys all data. Execution of the command cannot be undone.[/note]
 - `gateway`
 
-  Expose or unexpose the HTTP API of the stream gateway and manage access to it. If the HTTP API is exposed (which is the default), authenticated clients can connect to it. Authentication requires an access token that you can create with the `anbox-cloud-appliance gateway account create` command. See [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) for more information.
+  Expose or unexpose the HTTP API of the stream gateway and manage access to it. If the HTTP API is exposed (which is the default), authenticated clients can connect to it. Authentication requires an access token that you can create with the `anbox-cloud-appliance gateway account create` command. See [How to access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) for more information.
 - `help`
 
   Display detailed information about a command.
@@ -35,4 +35,4 @@ The available commands for the `anbox-cloud-appliance` tool are:
   Display status information for the Anbox Cloud Appliance.
 - `upgrade`
 
-  Upgrade the Anbox Cloud Appliance to the latest version. See [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for more information.
+  Upgrade the Anbox Cloud Appliance to the latest version. See [How to upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for more information.

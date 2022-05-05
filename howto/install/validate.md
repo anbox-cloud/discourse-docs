@@ -84,7 +84,7 @@ suites:
         gpu-type: none
 ```
 
-As mentioned by the command you have to store the printed configuration to a file so it can be used by the tests later on. Also you need to register the generated TLS certificate for the AMS tests with AMS. See [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) for more details on how to do that.
+As mentioned by the command you have to store the printed configuration to a file so it can be used by the tests later on. Also you need to register the generated TLS certificate for the AMS tests with AMS. See [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) for more details on how to do that.
 
 Depending on your deployment you can further customise the generated configuration. For example may your deployment only support a single architecture for the containers. For that make sure the `suites.ams.supported-architectures` field is set to the right list of architectures.
 

@@ -66,12 +66,12 @@ Status            |  Description
 
 ## Managing containers
 
- * [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)
- * [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)
- * [Access a container](https://discourse.ubuntu.com/t/access-containers-remotely/17772)
- * [Expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)
- * [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
- * [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
- * [List containers](https://discourse.ubuntu.com/t/list-containers/24328)
- * [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
- * [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)
+ * [How to launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)
+ * [How to wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)
+ * [How to access a container](https://discourse.ubuntu.com/t/access-containers-remotely/17772)
+ * [How to expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)
+ * [How to view the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
+ * [How to delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
+ * [How to list containers](https://discourse.ubuntu.com/t/list-containers/24328)
+ * [How to configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
+ * [How to back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)

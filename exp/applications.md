@@ -76,11 +76,11 @@ When the application bootstrap succeeds, the base container is automatically rem
 
 See the following documentation for instructions on how to manage your applications:
 
- * [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)
- * [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)
- * [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)
- * [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)
- * [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)
- * [List applications](https://discourse.ubuntu.com/t/list-applications/24200)
- * [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)
- * [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)
+ * [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)
+ * [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)
+ * [How to update an application](https://discourse.ubuntu.com/t/update-an-application/24201)
+ * [How to configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)
+ * [How to delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)
+ * [How to list applications](https://discourse.ubuntu.com/t/list-applications/24200)
+ * [How to test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)
+ * [How to create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)

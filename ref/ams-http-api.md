@@ -284,7 +284,7 @@ For an addon upload, the `X-AMS-Request` header is comprised of:
 }
 ```
 
-The payload to upload must be a tarball compressed with bzip2. Also, it must contain a `manifest.yaml` which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntax, please refer to [addon creation](https://discourse.ubuntu.com/t/managing-addons/17759) for more details.
+The payload to upload must be a tarball compressed with bzip2. Also, it must contain a `manifest.yaml` which declares the basic addon information and at least an install hook for the creation. For the layout addon tarball file and supported syntax, please refer to [How to use addons](https://discourse.ubuntu.com/t/managing-addons/17759) for more details.
 
 Example:
 ```bash
@@ -547,7 +547,7 @@ In the HTTP application upload case, the following headers may be set by the cli
 * `Content-Type:`: application/octet-stream (mandatory field)
 * `X-AMS-Fingerprint:`: SHA-256 (if set, the uploaded payload must match)
 
-The payload to upload must be a tarball compressed with bzip2. Also it must contain a `manifest.yaml` which declares the basic application information for the creation. For the layout application tarball file and supported syntax, see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
+The payload to upload must be a tarball compressed with bzip2. Also it must contain a `manifest.yaml` which declares the basic application information for the creation. For the layout application tarball file and supported syntax, see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
 To support the following syntax in the application `manifest.yaml`, the server requires a corresponding extension
 
 Syntax in manifest            |   Extension

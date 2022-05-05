@@ -47,4 +47,4 @@ You can access AMS either by IP or through a UNIX socket. The IP depends on your
 
 ## Remote access to AMS
 
-See [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) for instructions on how to set up an Anbox Management Client on a separate machine and configure it to remotely connect to AMS.
+See [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) for instructions on how to set up an Anbox Management Client on a separate machine and configure it to remotely connect to AMS.

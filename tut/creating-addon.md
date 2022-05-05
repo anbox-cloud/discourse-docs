@@ -89,4 +89,4 @@ ssh -i ~/ssh-addon-key root@<container_ip> -p <exposed port>
 ## More information about addons
 
 * [Addon reference](https://discourse.ubuntu.com/t/addons/25293)
-* [Updating addons](https://discourse.ubuntu.com/t/update-addons/25286)
+* [How to update addons](https://discourse.ubuntu.com/t/update-addons/25286)

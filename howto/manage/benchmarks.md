@@ -127,7 +127,7 @@ Check the help output to see all available arguments and their purpose:
 
     anbox-cloud-tests.benchmark -h
 
-To run the benchmark, you must provide an authentication token for the Anbox Stream Gateway. Check [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
+To run the benchmark, you must provide an authentication token for the Anbox Stream Gateway. Check [How to access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) if you haven't already created an authentication token.
 
 If your Anbox Stream Gateway is behind a self-signed TLS certificate, you must specify the `--insecure-tls` option.
 

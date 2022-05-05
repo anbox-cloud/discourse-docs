@@ -1,12 +1,12 @@
 This tutorial guides you through the first steps of managing Anbox Cloud from the command line. You will learn how to communicate with [AMS](https://discourse.ubuntu.com/t/about-ams/24321) and how to create and access a virtual Android device or an application.
 
-The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
+The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
 
 [note type="information" status="Important"]
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
-- [Installing the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
-- [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)
+- [Install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681)
+- [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)
 [/note]
 
 ## 1. Run AMC
@@ -23,7 +23,7 @@ How and where to run `amc` depends on your use case:
 
         juju ssh ams/0
 
-- If you want to run `amc` on your local Ubuntu-based development machine against a remote Anbox Cloud installation, follow the instructions in [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
+- If you want to run `amc` on your local Ubuntu-based development machine against a remote Anbox Cloud installation, follow the instructions in [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
 
 To ensure that `amc` is available, run the following command:
 
@@ -125,7 +125,7 @@ When the application for the virtual device is ready, you can launch it and log 
 <a name="scrcpy"></a>
 ## 5. Test the virtual device
 
-You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [Access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#scrcpy) for more detailed instructions.
+You can test the virtual device by connecting to it from your local machine and mirroring its screen. To do so, use the `scrcpy` tool. See [How to access a container with scrcpy](https://discourse.ubuntu.com/t/container-access/17772#scrcpy) for more detailed instructions.
 
 If you do not have `scrcpy` installed on your local machine, enter the following command to install it:
 
@@ -135,7 +135,7 @@ See the [`scrcpy` documentation](https://github.com/Genymobile/scrcpy) for insta
 
 To connect to your virtual device with `scrcpy`, complete the following steps:
 
-1. Launch a container based on the virtual device application, with the ADB service exposed and graphics enabled: 
+1. Launch a container based on the virtual device application, with the ADB service exposed and graphics enabled:
 
         amc launch virtual-device-cli --service +adb --enable-graphics
 
@@ -170,7 +170,7 @@ To connect to your virtual device with `scrcpy`, complete the following steps:
 
 Creating an application for a specific Android app is very similar to creating a virtual device, except that you provide an APK of the Android app when creating the Anbox Cloud application.
 
-[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [Port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
+[note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
 
 Complete the following steps to create an application from an APK:
 
@@ -200,7 +200,7 @@ When the application is ready, you can launch it and then test it in the same wa
 
 ## 7. Update an application
 
-You can have several versions of an application. See [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for detailed information.
+You can have several versions of an application. See [How to update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for detailed information.
 
 Complete the following steps to add a new version to your application:
 
@@ -285,6 +285,6 @@ While following this tutorial, you created several applications and containers. 
 
 You now know how to use the command line to create, launch and test applications in Anbox Cloud.
 
-If you are interested in a more easy-to-use interface, check out the [Getting started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
+If you are interested in a more easy-to-use interface, check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
-Also see the documentation about [how to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [how to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.
+Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.

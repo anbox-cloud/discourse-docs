@@ -16,9 +16,9 @@ This will create a container which exposes the TCP port `5559` on its private ad
 $ amc launch -s +adb --enable-graphics -r
 ```
 
-[note type="information" status="Hint"]If you're wondering about the syntax of the command used to launch a container, see [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
+[note type="information" status="Hint"]If you're wondering about the syntax of the command used to launch a container, see [How to launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
 
-If you want to run the Appium tests against an Android application managed by AMS (see [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
+If you want to run the Appium tests against an Android application managed by AMS (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
 
 ```bash
 $ amc launch -s adb --enable-graphics --disable-watchdog app
