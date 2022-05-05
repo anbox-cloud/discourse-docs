@@ -6,30 +6,23 @@ As most deployments don't include GPUs we're going to use the `swrast` software 
 
 If you want to automate the UI tests against an APK which is externally provided, you can launch a raw container:
 
-```bash
-$ amc launch -s adb --enable-graphics -r default
-```
+    amc launch -s adb --enable-graphics -r default
 
 This will create a container which exposes the TCP port `5559` on its private address from the default image `default`. If you want to expose ADB on the public address of a node, you can add the `+` from the service endpoint specification. With that the command looks as follows:
 
-```bash
-$ amc launch -s +adb --enable-graphics -r
-```
+    amc launch -s +adb --enable-graphics -r
 
 [note type="information" status="Hint"]If you're wondering about the syntax of the command used to launch a container, see [How to launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
 
 If you want to run the Appium tests against an Android application managed by AMS (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
 
-```bash
-$ amc launch -s adb --enable-graphics --disable-watchdog app
-```
+    amc launch -s adb --enable-graphics --disable-watchdog app
 
 [note type="information" status="Hint"]The `--disable-watchdog` argument is important as by default Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this we need to disable the watchdog which is responsible for this.[/note]
 
-Once the container is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the following command:
+Once the container is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the `amc ls` command:
 
 ```bash
-$ amc ls
 +----------------------+-------------+---------+---------+------+---------------+------------------------+
 |          ID          | APPLICATION |  TYPE   | STATUS  | NODE |    ADDRESS    |       ENDPOINTS        |
 +----------------------+-------------+---------+---------+------+---------------+------------------------+
@@ -46,22 +39,23 @@ As the endpoint `10.226.4.168:10000/tcp` shown above is not exposed to the publi
 
 On a Linux system you can setup a tunnel with the following command:
 
-```bash
-$ ssh -NL 10000:10.226.4.168:10000 ubuntu@10.180.45.183
-```
+    ssh -NL 10000:10.226.4.168:10000 ubuntu@10.180.45.183
 
 This will forward any connection to port `10000` on your localhost to port `10000` on the remote machine with the address `10.226.4.168` via the AMS machine with the address `10.180.45.183`. The AMS machine here is used as relay server to establish the connection with the Android container.
 
 Now you can connect to the remote machine via ADB with the following command:
 
+    $ANDROID_HOME/platform-tools/adb connect localhost:10000
+
+You should see output similar to the following:
+
 ```bash
-$ $ANDROID_HOME/platform-tools/adb connect localhost:10000
 * daemon not running; starting now at tcp:5037
 * daemon started successfully
 connected to localhost:10000
 ```
 
-[note type="caution" status="Warning"]Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first (`$ sudo apt purge -y adb`).[/note]
+[note type="caution" status="Warning"]Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first (`sudo apt purge -y adb`).[/note]
 
 ## Execute Tests with Appium
 
@@ -92,18 +86,14 @@ If you want to run test cases without installing the APK every time when startin
 
 In this example we use the following application `manifest.yaml`:
 
-```bash
-$ cat << EOF > manifest.yaml
+```
 name: app
 instance-type: a2.3
-EOF
 ```
 
 Once the application is fully bootstrapped by AMS, you can launch a container for it with the following command:
 
-```bash
-$ amc launch -s +adb --enable-graphics --disable-watchdog app
-```
+    amc launch -s +adb --enable-graphics --disable-watchdog app
 
 After the container is up and running, you need to specify the proper `appPackage` and `appActivity` in the Appium preset, the installed Android application will be launched automatically in the container when a new session is created by Appium.
 

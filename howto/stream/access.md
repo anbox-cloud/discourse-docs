@@ -37,14 +37,14 @@ When making requests to the Stream Gateway API you can either place the token in
 **Request headers**
 
 ```bash
-$ curl -X GET https://20.234.75.29:4000/1.0/sessions \
+curl -X GET https://20.234.75.29:4000/1.0/sessions \
     -H 'authorization=macaroon root=AgEUYW5ib3...QSyzaA_GHLYQ'
 ```
 
 **Query parameters**
 
 ```bash
-$ curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA_GHLYQ
+curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA_GHLYQ
 ```
 
 [note type="information" status="Hint"]The Anbox Stream SDK handles the token automatically for all its requests.[/note]

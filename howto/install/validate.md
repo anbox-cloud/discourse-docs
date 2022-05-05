@@ -16,16 +16,17 @@ The validation tests currently cover the following areas of an Anbox Cloud deplo
 
 The validation tests are packaged as a snap and are distributed via the Canonical snap store. You can install them via
 
-```bash
-$ snap install anbox-cloud-tests
-```
+    snap install anbox-cloud-tests
 
 ## Configure the Validation Tests
 
-In order to run the validation tests you need to generate a configuration file for it first. The tests include and interactive generator you can use to generate the configuration file:
+To run the validation tests, you must generate a configuration file for it first. The tests include an interactive generator that you can use to generate the configuration file. Run the following command:
+
+    anbox-cloud-tests -generate-config
+
+The generator will then guide you through the configuration:
 
 ```bash
-$ anbox-cloud-tests -generate-config
 Do you want to test AMS? [default=yes]
 What is the address of AMS? https://1.2.3.4:8444
 Generating TLS certificate and key for AMS ...
@@ -94,15 +95,11 @@ If you have support for real GPUs set the `suites.ams.gpu-type` item to the righ
 
 You can run the validation tests with the following command:
 
-```bash
-$ anbox-cloud-tests -config config.yaml -ginkgo.v
-```
+    anbox-cloud-tests -config config.yaml -ginkgo.v
 
 If you want to focus on a specific subset of the tests you can specify a focus for the tests:
 
-```bash
-$ anbox-cloud-tests -config config.yaml -ginkgo.v -ginkgo.focus=streaming
-```
+    anbox-cloud-tests -config config.yaml -ginkgo.v -ginkgo.focus=streaming
 
 The following focus areas are available
 

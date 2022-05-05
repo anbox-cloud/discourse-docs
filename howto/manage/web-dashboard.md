@@ -52,7 +52,7 @@ If you followed the instructions in [Install the Anbox Cloud Appliance](https://
 
 To add more accounts, use the following command:
 
-    $ anbox-cloud-appliance dashboard register <Ubuntu One email address>
+    anbox-cloud-appliance dashboard register <Ubuntu One email address>
 
 Accessing the resulting link will create the account and ask you to login via Ubuntu One. You only need to do this step once per user you want to grant access to the dashboard.
 

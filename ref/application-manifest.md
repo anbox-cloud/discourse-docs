@@ -154,7 +154,6 @@ For security reasons, the target location of the files and directories listed in
 The manifest and extra data in our example are placed next to the application package, which must be named `app.apk`:
 
 ```bash
-$ tree
 .
 ├── app.apk
 ├── extra-data

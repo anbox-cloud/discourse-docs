@@ -31,9 +31,7 @@ If a GPU driver is available inside the container there are no further differenc
 
 If you want to let an application use the GPU (even if you are not interested in streaming the visual output), launch it with the `--enable-graphics` flag. With this flag, the command will launch the container using the `webrtc` platform, which will automatically detect the underlying GPU and make use of it.
 
-```bash
-$ amc launch --enable-graphics my-application
-```
+    amc launch --enable-graphics my-application
 
 ## Force Software Rendering and Video Encoding
 

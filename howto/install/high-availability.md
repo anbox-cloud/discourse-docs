@@ -6,15 +6,11 @@ This will allocate a new machine, run new instances of the scaled application an
 
 Adding a unit is done with the following syntax:
 
-```bash
-$ juju add-unit <application name> -n <number of units to add>
-```
+    juju add-unit <application name> -n <number of units to add>
 
 For example, to go from 1 to 5 ams units, you would run the following:
 
-```bash
-$ juju add-unit ams -n 4
-```
+    juju add-unit ams -n 4
 
 [note type="information" status="Hint"]By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/olm/constraint): `juju set-constraints anbox-stream-gateway cores=4 memory=8GB`. This is heavily recommended on production environments.[/note]
 
@@ -23,18 +19,14 @@ $ juju add-unit ams -n 4
 
 Anbox Cloud Core HA requires additional AMS instances as well as a load balancer to spread out requests:
 
-```bash
-$ juju deploy cs:~anbox-charmers/ams-load-balancer-99
-$ juju relate ams ams-load-balancer
-$ juju add-unit ams -n 2
-```
+    juju deploy cs:~anbox-charmers/ams-load-balancer-99
+    juju relate ams ams-load-balancer
+    juju add-unit ams -n 2
 
 If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to ams:
 
-```bash
-$ amc remote add lb https://10.75.96.23:8444
-$ amc remote set-default lb
-```
+    amc remote add lb https://10.75.96.23:8444
+    amc remote set-default lb
 
 The port to use is always `8444`, the same AMS is listening on.
 
@@ -44,11 +36,9 @@ The port to use is always `8444`, the same AMS is listening on.
 
 In the Streaming Stack, both the Agent and the Gateway can be run in HA.
 
-```bash
-$ juju add-unit anbox-stream-gateway -n 2
-$ juju add-unit anbox-stream-agent -n 2
-$ juju relate anbox-stream-gateway:api anbox-stream-gateway-lb:reverseproxy
-```
+    juju add-unit anbox-stream-gateway -n 2
+    juju add-unit anbox-stream-agent -n 2
+    juju relate anbox-stream-gateway:api anbox-stream-gateway-lb:reverseproxy
 
 This would give you 3 instances of both the Stream Gateway and the Stream Agent.
 
@@ -90,8 +80,6 @@ anbox-stream-gateway/2      active    idle   4       10.212.218.136  4000/tcp,70
 Scaling down can be done by [removing units via Juju](https://juju.is/docs/scaling-applications#heading--scaling-down).
 Here you have to specifically target the unit you want to remove:
 
-```bash
-$ juju remove-unit anbox-stream-agent/2
-```
+    juju remove-unit anbox-stream-agent/2
 
 The cluster will reconfigure itself to work with the removed unit.

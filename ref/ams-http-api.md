@@ -209,7 +209,7 @@ Some operations require uploading a payload. To prevent the difficulties of hand
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0
 ```
 
 Output (if trusted):
@@ -244,7 +244,7 @@ Output (if trusted):
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons
 ```
 
 Output:
@@ -288,7 +288,7 @@ The payload to upload must be a tarball compressed with bzip2. Also, it must con
 
 Example:
 ```bash
-$ curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {"name": "my-addon"}' -X POST --insecure --cert client.crt --key client.key --data-binary @addon.tar.bz2 <AMS_SERVICE_URL>/1.0/addons
+curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {"name": "my-addon"}' -X POST --insecure --cert client.crt --key client.key --data-binary @addon.tar.bz2 <AMS_SERVICE_URL>/1.0/addons
 ```
 
 Output:
@@ -334,7 +334,7 @@ To monitor the status of an addon upload operation, please refer to [`/1.0/opera
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon
 ```
 
 Output:
@@ -370,7 +370,7 @@ Output:
 
 Example:
 ```bash
-$ curl -s -X DELETE --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon
+curl -s -X DELETE --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon
 ```
 
 Output:
@@ -425,7 +425,7 @@ For an addon patch, the `X-AMS-Request` header is comprised of an empty JSON obj
 
 Example
 ```bash
-$ curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {}' -X PATCH --insecure --cert client.crt --key client.key --data-binary @addon.tar.bz2 <AMS_SERVICE_URL>/1.0/addons/my-addon
+curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {}' -X PATCH --insecure --cert client.crt --key client.key --data-binary @addon.tar.bz2 <AMS_SERVICE_URL>/1.0/addons/my-addon
 ```
 
 Output:
@@ -471,7 +471,7 @@ To monitor the status of an addon update operation, please refer to [`/1.0/opera
 
 Example
 ```bash
-$ curl -s -X DELETE --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon/1
+curl -s -X DELETE --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/addons/my-addon/1
 ```
 
 Output:
@@ -517,7 +517,7 @@ To monitor the status of an addon version deletion operation, please refer to [`
 
 Example
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications
 ```
 
 Output:
@@ -560,7 +560,7 @@ video-encoder | `application_gpu_encoder`
 
 Example
 ```bash
-$ curl -s -X POST --header "Content-Type: application/octet-stream" --insecure --cert client.crt --key client.key --data-binary @app.tar.bz2 <AMS_SERVICE_URL>/1.0/applications
+curl -s -X POST --header "Content-Type: application/octet-stream" --insecure --cert client.crt --key client.key --data-binary @app.tar.bz2 <AMS_SERVICE_URL>/1.0/applications
 ```
 
 Output:
@@ -606,7 +606,7 @@ To monitor the status of an application  creation operation, please refer to [`/
 
 Example
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app
 ```
 
 Output:
@@ -682,7 +682,7 @@ An application package can be uploaded with a bzip2 compressed payload if the fo
 
 Example
 ```bash
-$ curl -s --header "Content-Type: application/octet-stream" -X PATCH --insecure --cert client.crt --key client.key --data-binary @app_1.tar.bz2 <AMS_SERVICE_URL>/1.0/applications/my-app
+curl -s --header "Content-Type: application/octet-stream" -X PATCH --insecure --cert client.crt --key client.key --data-binary @app_1.tar.bz2 <AMS_SERVICE_URL>/1.0/applications/my-app
 ```
 
 Output:
@@ -726,7 +726,7 @@ For the specific field update case, a JSON format payload is accepted.
 
 Example
 ```bash
-$ curl -s --header "Content-Type: application/json" -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/applications/my-app
+curl -s --header "Content-Type: application/json" -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/applications/my-app
 ```
 
 To monitor the status of an application update operation, please refer to [`/1.0/operations`](#heading--10operations)
@@ -766,7 +766,7 @@ In the HTTP application removal case, a JSON format payload input is required fr
 
 Example
 ```bash
-$ curl -s -X DELETE --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/applications/my-app
+curl -s -X DELETE --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/applications/my-app
 ```
 
 Output:
@@ -814,7 +814,7 @@ To monitor the status of an application removal operation, please refer to [`/1.
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app --output app-version.tar
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app --output app-version.tar
 ```
 As a result, an application image that contains a piece of `metadata.yaml` and RootFS will be generated
 
@@ -834,7 +834,7 @@ In the HTTP application version removal case, a JSON format payload input is req
 
 Example:
 ```bash
-$ curl -s -X DELETE --insecure --cert client.crt --key client.key --data "$payload" \<AMS_SERVICE_URL>/1.0/applications/my-app/1
+curl -s -X DELETE --insecure --cert client.crt --key client.key --data "$payload" \<AMS_SERVICE_URL>/1.0/applications/my-app/1
 ```
 
 Output:
@@ -887,7 +887,7 @@ In the HTTP application version update case, a JSON format payload input is requ
 
 Example:
 ```bash
-$ curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload" \<AMS_SERVICE_URL>/1.0/applications/my-app/1
+curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload" \<AMS_SERVICE_URL>/1.0/applications/my-app/1
 ```
 
 Output:
@@ -932,7 +932,7 @@ To monitor the status of an application version update operation, please refer t
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/manifest
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/manifest
 ```
 
 Output:
@@ -960,7 +960,7 @@ The use of this API requires the `application_manifest_download` extension is su
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/0/manifest
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/applications/my-app/0/manifest
 ```
 
 Output:
@@ -987,7 +987,7 @@ The use of this API requires the `application_manifest_download` extension is su
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/certificates
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/certificates
 ```
 
 Output:
@@ -1051,7 +1051,7 @@ Output:
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/certificates/<fingerprint>
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/certificates/<fingerprint>
 ```
 
 Output:
@@ -1120,7 +1120,7 @@ To monitor the status of a certificate removal operation, please refer to [`/1.0
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/config
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/config
 ```
 Output:
 
@@ -1181,7 +1181,7 @@ In the HTTP configuration modification case, a JSON format payload is required s
 
 Example:
 ```bash
-$ curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/config
+curl -s -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/config
 ```
 Output:
 
@@ -1461,7 +1461,7 @@ To monitor the status of a container removal operation, please refer to [`/1.0/o
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/containers/c00hvbgj1qm4f18jdkb0/logs
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/containers/c00hvbgj1qm4f18jdkb0/logs
 ```
 
 Output:
@@ -1492,7 +1492,7 @@ Output:
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/containers/c00hvbgj1qm4f18jdkb0/logs/android.log
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/containers/c00hvbgj1qm4f18jdkb0/logs/android.log
 ```
 
 Output:
@@ -1566,7 +1566,7 @@ This never returns. Each notification is sent as a separate JSON dict, for examp
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/images
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/images
 ```
 
 Return value:
@@ -1654,7 +1654,7 @@ To monitor the status of an image registration operation, please refer to [`/1.0
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/images/my-image
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/images/my-image
 ```
 
 Output:
@@ -1717,7 +1717,7 @@ An image package can be uploaded with one of the supported compress format paylo
 
 Example:
 ```bash
-$ curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {"name": "my-image", "default": false}' -X PATCH --insecure --cert client.crt --key client.key --data-binary @my-image.tar.bz2 <AMS_SERVICE_URL>/1.0/images/my-image
+curl -s --header "Content-Type: application/octet-stream"  --header 'X-AMS-Request: {"name": "my-image", "default": false}' -X PATCH --insecure --cert client.crt --key client.key --data-binary @my-image.tar.bz2 <AMS_SERVICE_URL>/1.0/images/my-image
 ```
 
 Output:
@@ -1763,7 +1763,7 @@ URL parameter | Description  |  Optional values
 type |   comma separated list of notifications to subscribe to (defaults to all) | `operation`, `logging`, `lifecycle`
 Example:
 ```bash
-$ curl -s --header "Content-Type: application/json"  -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/images/my-image
+curl -s --header "Content-Type: application/json"  -X PATCH --insecure --cert client.crt --key client.key --data "$payload" <AMS_SERVICE_URL>/1.0/images/my-image
 ```
 
 When updating an image with the above field, no new image version will be generated.
@@ -2330,7 +2330,7 @@ Output:
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/tasks
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/tasks
 ```
 
  Output:
@@ -2364,7 +2364,7 @@ $ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>
 
 Example:
 ```bash
-$ curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/version
+curl -s -X GET --insecure --cert client.crt --key client.key <AMS_SERVICE_URL>/1.0/version
 ```
 
 Output:
