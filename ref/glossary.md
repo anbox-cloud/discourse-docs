@@ -166,7 +166,7 @@ See [Access a container with AMC](https://discourse.ubuntu.com/t/access-a-contai
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
 
-An SDK that allows the development of custom streaming clients, using JavaScript or C/C++.
+An SDK that allows the development of custom streaming clients, using JavaScript.
 
 See [Anbox Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
 
