@@ -1,0 +1,21 @@
+Anbox Cloud implements support for various features that Android has. The following table provides an overview of which features are currently available as part of Anbox Cloud and which are not.
+
+| Feature           | Supported | Notes  |
+|--------------------|-----------------|-------------|
+| [OpenGL ES](https://source.android.com/devices/graphics/arch-egl-opengl) <= 3.2   |  ✓  | |
+| [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) |  ✓  | |
+| [Camera](https://source.android.com/devices/camera) |  ✓  | Currently, not working for Intel and AMD GPUs |
+| [Sensors](https://source.android.com/devices/sensors) |  ✓  | Currently, the sensors that a client device has are not connected to the Android container when streaming |
+| Location           |  ✓  |          |
+| NFC                |      |            |
+| [Bluetooth](https://source.android.com/devices/bluetooth) | | |
+| WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance |
+| [Multi-Display](https://source.android.com/devices/tech/display/multi_display) | | |
+| [Data use](https://source.android.com/devices/tech/datausage)| | |
+| Telephony / mobile connectivity | | |
+| Hardware-accelerated video decoding (H.264) | ✓ | |
+| Hardware-accelerated video encoding (H.264) | | |
+| [`fs-verity`](https://source.android.com/security/features/apk-verity) | | |
+| [Disk encryption](https://source.android.com/security/encryption) | | |
+| [Verified Boot](https://source.android.com/security/verifiedboot) | | |
+| [Trusted Execution Environment (TEE)](https://source.android.com/security/trusty) | | |
