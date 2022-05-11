@@ -21,7 +21,7 @@ To use a self-signed certificate, complete the following steps:
 1. Enter the following command on the client machine to generate the certificate:
 
         amc remote ls
-2. Locate the `$HOME/snap/ams/current/client/client.crt` certificate on the client machine and copy it to the machine that runs AMS.
+2. Locate the `$HOME/snap/amc/current/client/client.crt` certificate on the client machine and copy it to the machine that runs AMS.
 3. Log on to the machine that runs AMS and configure AMS to trust the new client by adding the client certificate:
 
    ```
@@ -40,8 +40,8 @@ To use a CA certificate, complete the following steps:
 4. For each client, generate a client key and certificate based on the CA certificate. You should use the same method for this as you did in the first step.
 5. Copy the generated credentials to the client machine:
 
-   - Copy the client certificate to `$HOME/snap/ams/current/client/client.crt`.
-   - Copy the client key to `$HOME/snap/ams/current/client/client.key`
+   - Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
+   - Copy the client key to `$HOME/snap/amc/current/client/client.key`
 
 ## Expose the AMS HTTPS service
 
