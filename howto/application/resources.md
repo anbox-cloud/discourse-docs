@@ -11,4 +11,13 @@ resources:
   disk-size: 5GB
 ```
 
+If you are using the instance type `g6.3` but require 3 GPU slots, use the following application manifest:
+
+```
+name: my-GPU-applicaton
+instance-type: g6.3
+resources:
+  gpu-slots: 3
+```
+
 See [Resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) for more information about how to use the `resources` directive to override the resources defined by the instance type in the application manifest.
