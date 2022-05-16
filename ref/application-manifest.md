@@ -18,6 +18,8 @@ Name          | Value type | Description
 `services` (optional)    | array      | Services to be provided from the installed application.
 `resources` (optional)   | map        | Resources to be allocated on application installation.
 `extra-data` (optional)  | array      | List of additional data to be installed on application installation.
+`hooks` (optional) | object | Hooks settings to be configured on application installation.
+`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation.
 
 ## Image
 
@@ -162,3 +164,33 @@ The manifest and extra data in our example are placed next to the application pa
 │       └── data.bin
 └── manifest.yaml
 ```
+
+## Hooks
+
+Hooks allow you to run custom scripts when a certain event is triggered in a container life cycle. Please refer to [Hooks](TBD) for more details about the usage of hooks in an application.
+
+## Bootstrap
+
+An application bootstrap can be fine tuned through the `bootstrap` field.
+
+The `bootstrap` attribute includes the following field definitions:
+
+Name                  | Value type | Description
+----------------------|------------|-------------------------
+`keep`                |  array     | Contents under the [APP_DIR](TDB) directory to be preserved in the application image after the bootstrap is finished. Wildcard pattern is supported, please refer to the [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
+
+Except for the metadata `manifest` and `hooks` directory (if present), all contents under the `APP_DIR` directory are removed by default after the application bootstrap is finished for the optimum application size. If files under the `APP_DIR` directory are required by a certain hook for the regular container runtime, you need to include them in the application image. For example:
+
+
+```yaml
+name: my-application
+instance-type: a4.3
+bootstrap:
+  keep:
+    - apks/*.apk
+    - scripts
+```
+
+This will include the `scripts` folder and all APK files under the `apks` folder into the application image when the bootstrap is done so they are available to use during the regular container runtime.
+
+[note type="information" status="Note"]As metadata, the `manifest.yaml` file and the `hooks` directory (if present) will not be removed after the application bootstrap is finished and be always kept in the application image even if they are not explicitly defined in the `keep` list under the `bootstrap` attribute.[/note]
