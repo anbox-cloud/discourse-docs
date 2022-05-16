@@ -19,7 +19,7 @@ For example, to go from 1 to 5 ams units, you would run the following:
 
 Anbox Cloud Core HA requires additional AMS instances as well as a load balancer to spread out requests:
 
-    juju deploy cs:~anbox-charmers/ams-load-balancer-99
+    juju deploy ams-load-balancer
     juju relate ams ams-load-balancer
     juju add-unit ams -n 2
 
