@@ -1,16 +1,16 @@
-Hooks are scripts that trigger actions automatically based on an event performed in the container life cycle. A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder as long as its name is one of the following:
+Hooks are scripts that automatically trigger actions based on an event performed in the container life cycle. A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder as long as its name is one of the following:
 
 | Name                 | Description                                                                                                          |
 |----------------------|----------------------------------------------------------------------------------------------------------------------|
-| pre-start            | Executed **before** Android is started. If the hook failed to execute, the container fails to start due to an error. |
-| post-start           | Executed **after** Android is started. If the hook failed to execute, the container aborts with an error.            |
-| post-stop            | Executed **after** Android is stopped. If the container failed to start, this hook will not be invoked. If the hook failed to execute, the container aborts with an error.  |
+| pre-start            | Executed **before** Android is started. If the hook fails to execute, the container fails to start due to an error.  |
+| post-start           | Executed **after** Android is started. If the hook fails to execute, the container stops with an error.              |
+| post-stop            | Executed **after** Android is stopped. If the container fails to start, this hook will not be invoked. If the hook fails to execute, the container stops with an error.  |
 | install (deprecated) | DEPRECATED: Use `pre-start` instead. Executed during the application bootstrap when the addon is installed.          |
 | prepare (deprecated) | DEPRECATED: Use `post-start` instead. Executed during the application bootstrap when Android is running.             |
 | restore (deprecated) | DEPRECATED: Use `pre-start` instead. Executed before Android starts.                                                 |
 | backup (deprecated)  | DEPRECATED: Use `post-stop` instead. Executed after Android shuts down.                                              |
 
-A failed hook will cause the container to abort immediately and end up in an error state. Please [view the container logs](https://anbox-cloud.io/docs/howto/container/logs) to further investigate the causes of failure.
+A failed hook will cause the container to stop immediately and end up in an error state. In this case, [view the container logs](https://anbox-cloud.io/docs/howto/container/logs) to further investigate the causes of failure.
 
 The following figure shows when the different hooks are executed in the life cycle of a container (base container or regular container).
 
@@ -18,7 +18,7 @@ The following figure shows when the different hooks are executed in the life cyc
 
 <a name='env-variables'></a>
 ## Environment variables
-When addon hooks are invoked, several environment variables are set to provide context to the addon.
+When hooks are invoked, several environment variables are set to provide context to the addon.
 
 The following variables are available:
 

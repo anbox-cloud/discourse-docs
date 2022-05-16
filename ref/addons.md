@@ -7,7 +7,7 @@ When creating or updating an addon, the directory containing your addon files mu
 - A file named `manifest.yaml`.
 - A directory named `hooks`. This directory must contain at least one executable file with a valid hook name (see [Hooks](#hooks) below).
 
-Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` [environment variable](#env-variables)). For example:
+Other files in the addon directory are bundled with the addon. They can be accessed in a hook by using the `$ADDON_DIR` [environment variable](tbd#env-variables)). For example:
 ```bash
 cat "$ADDON_DIR"/public_key.pem >> ~/.ssh/authorized_keys
 ```
@@ -30,4 +30,4 @@ The following table lists the valid keys in an addon manifest:
 
 <a name='hooks'></a>
 ## Hooks
-An addon is a collection of hooks that are invoked at different points in time in the life cycle of a container. Please refer to [Hooks](TBD) for more details about the usage of hooks in an addon.
+An addon is a collection of hooks that are invoked at different points in time in the life cycle of a container. See [Hooks](tbd) for more details about the usage of hooks in an addon.

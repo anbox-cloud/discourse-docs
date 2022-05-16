@@ -75,6 +75,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 2 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 2 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
 | 2 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
+| 2 | howto/application/extend | [Extend an application](tbd)|
 | 1 | howto/port/landing | [Port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776)|
 | 2 | howto/port/permissions | [Grant permissions](https://discourse.ubuntu.com/t/grant-runtime-permissions/26054)|
 | 2 | howto/port/architecture | [Choose APK architecture](https://discourse.ubuntu.com/t/choose-apk-architecture/26055)|
@@ -126,7 +127,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 1 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 1 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
-| 1 | ref/hooks | [Hooks](TBD)|
+| 1 | ref/hooks | [Hooks](tbd)|
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index) <!-- wokeignore:rule=master --> |
 | 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
