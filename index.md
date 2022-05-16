@@ -126,6 +126,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 1 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 1 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 1 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
+| 1 | ref/hooks | [Hooks](TBD)|
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index) <!-- wokeignore:rule=master --> |
 | 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
