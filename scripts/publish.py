@@ -6,11 +6,9 @@ import tempfile
 index_file = "index.md"
 index_file_ID = "17029"
 discourse_prefix = "https://discourse.ubuntu.com/"
-editor = "emacs"
+difftool = "meld"
 discedit = "discedit"
 
-if "EDITOR" in os.environ:
-    editor = os.environ['EDITOR']
 if "DISCEDIT" in os.environ:
     discedit = os.environ['DISCEDIT']
 
@@ -57,9 +55,10 @@ else:
             os.system("diff "+oldfile+" "+filename)
             os.unlink(oldfile)
 
-        # Open the file on disk in your editor and start discedit on
-        # the corresponding topic ID
-        os.system(editor+" "+filename+"&")
+        # Set the editor environment variable to the difftool plus the file
+        # on disk and start discedit on the corresponding topic ID
+        # to diff the disk file with the file opened by discedit
+        os.environ['EDITOR'] = difftool+" "+filename
         os.system(discedit+" "+discourse_prefix+"t/"+mapping[filename])
     else:
         print("The file name is not in the mapping file.")

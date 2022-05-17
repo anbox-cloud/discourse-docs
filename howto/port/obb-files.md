@@ -36,7 +36,11 @@ Let's assume that you have an application that consists of an APK file and an OB
        target: /sdcard/Android/obb/com.foo.bar/
    ```
 
-   [note type="information" status="Note"]The target location of the OBB file varies depending on the app. Some apps load the OBB file from the SD card (`/sdcard/Android/obb/`), while others load it from the device's internal storage (`/data/media/obb`). If an OBB file is not properly installed in the container, the app might not function as expected. Some apps exit immediately if the required OBB file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) and causes the container to end up in an error state.[/note]
+   [note type="information" status="Note"]
+   The target location of the OBB file varies depending on the app. Some apps load the OBB file from the SD card (`/sdcard/Android/obb/`), while others load it from the device's internal storage (`/data/media/obb`).
+
+   If an OBB file is not properly installed in the container, the app might not function as expected. Some apps exit immediately if the required OBB file is not found, which triggers the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) and causes the container to end up in an error state.
+   [/note]
 
 1. Create the application:
 

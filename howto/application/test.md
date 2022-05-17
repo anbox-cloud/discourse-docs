@@ -55,7 +55,11 @@ You should see output similar to the following:
 connected to localhost:10000
 ```
 
-[note type="caution" status="Warning"]Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first (`sudo apt purge -y adb`).[/note]
+[note type="caution" status="Warning"]
+Appium uses ADB as located in the Android SDK to establish a connection between the remote Android instance and the ADB daemon running on your machine. As mixing different versions of ADB is not supported you need to use ADB from the Android SDK in all cases. If you have the `adb` client installed from other sources, like the Ubuntu package archive, remove it first:
+
+`sudo apt purge -y adb`
+[/note]
 
 ## Execute Tests with Appium
 
