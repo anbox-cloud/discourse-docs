@@ -57,6 +57,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 2 | howto/update/upgrade-anbox | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
 | 1 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
 | 2 | howto/manage/manage-appliance | [Manage the appliance](https://discourse.ubuntu.com/t/manage-the-anbox-cloud-appliance/26725) |
+| 2 | howto/manage/appliance-tls-setup | [Set up TLS for appliance](TBD) |
 | 2 | howto/manage/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 2 | howto/manage/images | [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 2 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|

@@ -247,3 +247,5 @@ xz
 YAML
 ZFS
 zpool
+traefik
+systemd
