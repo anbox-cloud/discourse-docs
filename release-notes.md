@@ -3,6 +3,42 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.14.0]
+
+## 1.14.0 (May 23 2022)
+
+### New features & improvements
+
+* All charms are now migrated to [Charmhub](https://charmhub.io)
+* Anbox images based on Ubuntu 22.04
+* Hook support for AMS applications
+* Vulkan support for AMD and Intel GPUs
+* Multi node support for the Anbox Cloud Appliance (experimental)
+* Android security updates for May 2022 (see [Android Security Bulletin - May 2022](https://source.android.com/security/bulletin/2022-05-01) for more information)
+* Android WebView has been updated to [101.0.4951.41](https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html)
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+* AC-877 Fix the bugs of JS SDK after the recent refactor
+* AC-867 Android 12 image ships com.android.emulator.multidisplay
+* AC-836 vkcube crashes without support for HAL\_PIXEL\_FORMAT\_RGBA\_1010102
+* AC-835 Memory leaks happened to Anbox session process after a container running for a long time
+* AC-833 anbox host not set in /etc/hosts in Android 12
+* AC-832 Android CTS tests report /proc isn't mounted with hidepid=2
+* AC-821 CTS test cases for system features fail
+* AC-814 AMS dashboard doesn't load on the Appliance
+* AC-810 Failing gateway docs build fails and doesn't stop CI from succeeding
+* AC-741 End touch/mouse events when leaving the SDK container
+* AC-699 dEQP-GLES3.functional.texture.shadow.cube.linear.greater\_or\_equal\_depth24\_stencil8 fails on swrast
+* AC-693 SDK is broken on iOS on 4G only
+* AC-548 Colors with direct software rendering in scrcpy are incorrect
+
+[/Details]
+
 [Details=1.13.2]
 
 ## 1.13.2 (April 13 2022)
