@@ -54,7 +54,7 @@ Clients must authenticate to AMS before communicating with it. For more informat
 <a name="streaming-sdk"></a>
 ## Anbox Streaming SDK
 
-The Anbox Streaming SDK allows the development of custom streaming clients, using JavaScript or C/C++.
+The Anbox Streaming SDK allows the development of custom streaming clients using JavaScript.
 
 ### Components
 
