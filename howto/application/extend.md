@@ -1,4 +1,4 @@
-You can extend an application by adding an [addon](https://discourse.ubuntu.com/t/addons/25293) or [hooks](tbd).
+You can extend an application by adding an [addon](https://discourse.ubuntu.com/t/addons/25293) or [hooks](https://discourse.ubuntu.com/t/hooks/28555).
 
 If your extension contains common functionality that you want to share among multiple applications, you should create an addon. You can then add the addon to all applications that should use the functionality.
 
@@ -50,7 +50,7 @@ The following example shows how to use application hooks to change the Android s
 
         chmod +x hooks/*
 
-   [note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](tbd#hooks).[/note]
+   [note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](https://discourse.ubuntu.com/t/hooks/28555).[/note]
 
 
 1. Then create the application in AMS:

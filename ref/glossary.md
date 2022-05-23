@@ -292,7 +292,7 @@ See https://discourse.ubuntu.com/t/enable-high-availability/17754.
 
 Code that is invoked at different points in time in the life cycle of a container. Hooks are part of addons or applications.
 
-See [Hooks](tbd).
+See [Hooks](https://discourse.ubuntu.com/t/hooks/28555).
 
 <a name="image"></a>
 ### Image

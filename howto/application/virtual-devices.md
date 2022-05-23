@@ -13,6 +13,8 @@ instance-type: a4.3
 
 [note type="information" status="Note"]If you want to use a GPU for containers created for your new `vdev` application, use an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) with GPU support like `g4.3`.[/note]
 
+## Extend the Application with Addons
+
 You can also extend the application with [addons](https://discourse.ubuntu.com/t/addons/25293) which install additional applications you want to offer as part of your default experience. You can for example replace the standard Android launcher with a custom one like [Lawnchair](https://lawnchair.app/).
 
 1. Create the addon directory:

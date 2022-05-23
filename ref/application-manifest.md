@@ -167,7 +167,7 @@ The manifest and extra data in our example are placed next to the application pa
 
 ## Hooks
 
-Hooks allow you to run custom scripts when a certain event is triggered in a container life cycle. See [Hooks](tbd) for more details about the usage of hooks in an application.
+Hooks allow you to run custom scripts when a certain event is triggered in a container life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more details about the usage of hooks in an application.
 
 <a name="bootstrap"></a>
 ## Bootstrap
@@ -178,7 +178,7 @@ The `bootstrap` attribute includes the following field definitions:
 
 Name                  | Value type | Description
 ----------------------|------------|-------------------------
-`keep`                |  array     | Contents under the [APP_DIR](TDB) directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
+`keep`                |  array     | Contents under the [APP_DIR](https://discourse.ubuntu.com/t/hooks/28555#env-variables) directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
 
 To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved (the `manifest.yaml` file and the `hooks` directory, if present). If a hook requires any other files under the `APP_DIR` directory during the regular container runtime, you must include them in the application image.
 
