@@ -18,8 +18,8 @@ instructions on how to update your Anbox Cloud deployment.
 * Implemented syscall interception through LXC `seccomp` notification support. This enables Anbox to handle different syscalls like `setpriority` or `sched_set_scheduler` for processes inside the Android container.
 * Unified the pointer input model by using pointer events to handle mouse and touch events.
 * Switched the memory allocator from `glibc` (the default) to `tcmalloc`, to decrease the memory footprint and optimise the memory consumption for the Anbox session.
-* Android security updates for May 2022 (see [Android Security Bulletin - May 2022](https://source.android.com/security/bulletin/2022-05-01) for more information)
-* Android WebView has been updated to [101.0.4951.41](https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html)
+* Added Android security updates for May 2022 (see [Android Security Bulletin - May 2022](https://source.android.com/security/bulletin/2022-05-01) for more information).
+* Updated Android WebView to [101.0.4951.41](https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html).
 * Updated Anbox Cloud to default to the 5.0 LTS release of LXD for all new deployments. The 4.0 release of LXD remains supported, so existing deployments can continue to use 4.0.
 
 ### Known issues

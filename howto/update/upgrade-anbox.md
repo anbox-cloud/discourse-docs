@@ -24,9 +24,13 @@ If your deployment uses an earlier Juju version, you must upgrade your controlle
 The deployed Juju charms need to be upgraded next.
 
 [note type="information" status="Note"]
+
 - You can find a list of all charm, snap and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
+
 - Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--switch --channel=1.14/stable` arguments instruct Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
+
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
+
 [/note]
 
 Run the following commands in the exact same order as listed here but skip those you don't use in your deployment:
