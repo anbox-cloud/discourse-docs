@@ -2,6 +2,83 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.14.0]
+
+### Charms
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| anbox-cloud-dashboard | 1.14/stable | 19 |
+| ams-node-controller | 1.14/stable | 20 |
+| coturn | 1.14/stable | 19 |
+| ams | 1.14/stable | 21 |
+| aar | 1.14/stable | 20 |
+| anbox-stream-gateway | 1.14/stable | 21 |
+| ams-load-balancer | 1.14/stable | 17 |
+| ams-lxd | 1.14/stable | 21 |
+| anbox-stream-agent | 1.14/stable | 21 |
+| nats  |  1.14/stable | 9 |
+
+### Validated revisions of 3rd party charms
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| containers-easyrsa | latest/stable | 420 |
+| etcd | latest/stable | 634 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| anbox-cloud | 1.14/stable | 14 |
+| anbox-cloud-core | 1.14/stable | 18 |
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| ams    | 1.14.0 |
+| aar    | 1.14.0 |
+| ams-node-controller    | 1.14.0  |
+| anbox-cloud-dashboard | 1.14.0 |
+| anbox-stream-agent | 1.14.0 |
+| anbox-stream-gateway | 1.14.0 |
+| anbox-cloud-appliance | 1.14.0 |
+
+### Debian packages
+
+| Name | Ubuntu Release | Version |
+|----------|--------------|-----------------|
+| anbox-modules-dkms-114 | 20.04 (jammy) | 1:1.14.0-stable1~jammy0 |
+| anbox-modules-dkms-114 | 20.04 (focal) | 1:1.14.0-stable1~focal0 |
+| anbox-modules-dkms-114 |  18.04 (bionic) |  1:1.14.0-stable1~bionic0 |
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| jammy:android12:amd64 | 1.14.0 |
+| jammy:android12:arm64 | 1.14.0 |
+| jammy:android11:amd64 | 1.14.0 |
+| jammy:android11:arm64 | 1.14.0 |
+| jammy:android10:amd64 | 1.14.0 |
+| jammy:android10:arm64 | 1.14.0 |
+| bionic:android12:amd64 | 1.14.0 |
+| bionic:android12:arm64 | 1.14.0 |
+| bionic:android11:amd64 | 1.14.0 |
+| bionic:android11:arm64 | 1.14.0 |
+| bionic:android10:amd64 | 1.14.0 |
+| bionic:android10:arm64 | 1.14.0 |
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 510.x |
+| Mesa | 22.0.1 |
+
+[/Details]
+
 [Details=1.13.2]
 
 ### Charms

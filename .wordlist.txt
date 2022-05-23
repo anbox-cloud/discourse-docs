@@ -8,6 +8,7 @@ ABIs
 ADB
 addon
 addons
+allocator
 Altra
 AMC
 amd
@@ -75,6 +76,7 @@ easyrsa
 EBS
 EGL
 EINVAL
+EOL
 ETag
 etcd
 executables
@@ -99,6 +101,7 @@ HAProxy
 https
 HWE
 IAM
+idmapped
 IDR
 IME
 Intra
@@ -120,6 +123,7 @@ LLVMpipe
 LMA
 localhost
 LTS
+LXC
 lxd
 LXD
 MAAS
@@ -209,6 +213,7 @@ sudo
 Surfaceflinger
 swiftshader
 syscall
+syscalls
 sysctl
 systemd
 TCP
