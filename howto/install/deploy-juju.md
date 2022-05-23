@@ -63,7 +63,7 @@ You can retrieve your *Ubuntu Advantage for **Applications*** token at https://u
 
 [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
-To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `cs:~anbox-charmers/anbox-cloud` bundle, the `ua.yaml` file should look like this:
+To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -87,7 +87,7 @@ applications:
       ua_token: <your token>
 ```
 
-For the `cs:~anbox-charmers/anbox-cloud-core` bundle, the `ua.yaml` file should look like this:
+For the `anbox-cloud-core` bundle, the `ua.yaml` file should look like this:
 
 ```yaml
 applications:
@@ -112,11 +112,11 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 * For a minimised version of Anbox Cloud without the streaming stack, run the following command to deploy the `anbox-cloud-core` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud-core-89 --overlay ua.yaml
+        juju deploy anbox-cloud-core --overlay ua.yaml
 
 * For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
-        juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml
+        juju deploy anbox-cloud --overlay ua.yaml
 
 ## Customise the hardware configuration
 
@@ -151,7 +151,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
+    juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ### Add GPU support
 
@@ -174,7 +174,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
+    juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ### Use Arm instances
 
@@ -195,7 +195,7 @@ machines:
 
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
-    juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay ua.yaml --overlay overlay.yaml
+    juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
 
 ## Monitor the deployment
 

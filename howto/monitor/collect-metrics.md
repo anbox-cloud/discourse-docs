@@ -28,7 +28,7 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    ```yaml
    applications:
      grafana-proxy:
-       charm: 'cs:haproxy'
+       charm: 'haproxy'
        num_units: 1
        expose: true
        options:
@@ -55,22 +55,22 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
        to:
          - '2'
      prometheus:
-       charm: 'cs:prometheus2'
+       charm: 'prometheus2'
        num_units: 1
        to:
          - '2'
      ams-monitor:
-       charm: 'cs:telegraf'
+       charm: 'telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
      lxd-monitor:
-       charm: 'cs:telegraf'
+       charm: 'telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
      grafana:
-       charm: 'cs:grafana'
+       charm: 'grafana'
        num_units: 1
        options:
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
@@ -102,7 +102,7 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
    ```yaml
    applications:
      grafana-proxy:
-       charm: 'cs:haproxy'
+       charm: 'haproxy'
        num_units: 1
        expose: true
        options:
@@ -129,22 +129,22 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
        to:
          - '3'
      prometheus:
-       charm: 'cs:prometheus2'
+       charm: 'prometheus2'
        num_units: 1
        to:
          - '3'
      ams-monitor:
-       charm: 'cs:telegraf'
+       charm: 'telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20003"
      lxd-monitor:
-       charm: 'cs:telegraf'
+       charm: 'telegraf'
        options:
          tags: region=cloud-0
          prometheus_output_port: "20004"
      grafana:
-       charm: 'cs:grafana'
+       charm: 'grafana'
        num_units: 1
        options:
          root_url: '%(protocol)s://%(domain)s:%(http_port)s/grafana'
@@ -182,11 +182,11 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
 
    - For the `anbox-cloud-core` bundle:
 
-         juju deploy cs:~anbox-charmers/anbox-cloud-core-89 --overlay monitoring.yaml
+         juju deploy anbox-cloud-core --overlay monitoring.yaml
 
    - For the `anbox-cloud` bundle:
 
-         juju deploy cs:~anbox-charmers/anbox-cloud-103 --overlay monitoring.yaml
+         juju deploy anbox-cloud --overlay monitoring.yaml
 
    [note type="information" status="Note"]You can use the same command if you already deployed Anbox Cloud. In this case, Juju checks the existing deployment and only deploys new components.[/note]
 1. Wait until all added units are in `active` state.
