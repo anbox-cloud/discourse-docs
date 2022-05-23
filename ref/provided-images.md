@@ -10,12 +10,18 @@ The official image server has a set of images available. The following table lis
 
 | Name                        | Android Version | Ubuntu Version | Support Status     | Available since |
 |-----------------------------|-----------------|----------------|------------|---------------|
+| `jammy:android12:amd64`     | 12              | 22.04          | supported | 1.14 |
+| `jammy:android12:arm64`     | 12              | 22.04          | supported | 1.14 |
+| `jammy:android11:amd64`     | 11              | 22.04          | supported | 1.14 |
+| `jammy:android11:arm64`     | 11              | 22.04          | supported | 1.14 |
+| `jammy:android10:amd64`     | 10              | 22.04          | supported | 1.14 |
+| `jammy:android10:arm64`     | 10              | 22.04          | supported | 1.14 |
 | `bionic:android12:amd64`    | 12              | 18.04          | supported | 1.12 |
 | `bionic:android12:arm64`    | 12              | 18.04          | supported | 1.12 |
 | `bionic:android11:amd64`    | 11              | 18.04          | supported | 1.10 |
 | `bionic:android11:arm64`    | 11              | 18.04          | supported | 1.10 |
-| `bionic:android10:amd64`    | 10              | 18.04          | supported | 1.0
-| `bionic:android10:arm64`    | 10              | 18.04          | supported | 1.0
+| `bionic:android10:amd64`    | 10              | 18.04          | supported | 1.0  |
+| `bionic:android10:arm64`    | 10              | 18.04          | supported | 1.0  |
 | `bionic:android7:amd64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
 | `bionic:android7:arm64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
 
