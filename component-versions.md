@@ -29,9 +29,9 @@ Not all components are updated with each release. When components are not update
 ### Bundles
 
 | Name | Channel | Revision |
-|----------|--------------|
-| anbox-cloud | 1.14/stable | 13 |
-| anbox-cloud-core | 1.14/stable | 17 |
+|----------|--------------|--------------|
+| anbox-cloud | 1.14/stable | 14 |
+| anbox-cloud-core | 1.14/stable | 18 |
 
 ### Snaps
 

@@ -9,13 +9,18 @@ instructions on how to update your Anbox Cloud deployment.
 
 ### New features & improvements
 
-* All charms are now migrated to [Charmhub](https://charmhub.io)
-* Anbox images based on Ubuntu 22.04
-* Hook support for AMS applications
-* Vulkan support for AMD and Intel GPUs
-* Multi node support for the Anbox Cloud Appliance (experimental)
+* Migrated all charms to [Charmhub](https://charmhub.io).
+* Added Anbox images based on Ubuntu 22.04.
+* Added hook support for AMS applications.
+* Added Vulkan support for AMD and Intel GPUs.
+* Added multi-node support for the Anbox Cloud Appliance (experimental).
+* Made the NVIDIA 510.x driver series the default.
+* Implemented syscall interception through LXC `seccomp` notification support. This enables Anbox to handle different syscalls like `setpriority` or `sched_set_scheduler` for processes inside the Android container.
+* Unified the pointer input model by using pointer events to handle mouse and touch events.
+* Switched the memory allocator from `glibc` (the default) to `tcmalloc`, to decrease the memory footprint and optimise the memory consumption for the Anbox session.
 * Android security updates for May 2022 (see [Android Security Bulletin - May 2022](https://source.android.com/security/bulletin/2022-05-01) for more information)
 * Android WebView has been updated to [101.0.4951.41](https://chromereleases.googleblog.com/2022/04/stable-channel-update-for-desktop_26.html)
+* Updated Anbox Cloud to default to the 5.0 LTS release of LXD for all new deployments. The 4.0 release of LXD remains supported, so existing deployments can continue to use 4.0.
 
 ### Known issues
 
@@ -24,18 +29,18 @@ n/a
 #### Bugs
 
 * AC-877 Fix the bugs of JS SDK after the recent refactor
-* AC-867 Android 12 image ships com.android.emulator.multidisplay
-* AC-836 vkcube crashes without support for HAL\_PIXEL\_FORMAT\_RGBA\_1010102
+* AC-867 Android 12 image ships `com.android.emulator.multidisplay`
+* AC-836 `vkcube` crashes without support for `HAL_PIXEL_FORMAT_RGBA_1010102`
 * AC-835 Memory leaks happened to Anbox session process after a container running for a long time
-* AC-833 anbox host not set in /etc/hosts in Android 12
-* AC-832 Android CTS tests report /proc isn't mounted with hidepid=2
+* AC-833 Anbox host not set in `/etc/hosts` in Android 12
+* AC-832 Android CTS tests report `/proc` isn't mounted with `hidepid=2`
 * AC-821 CTS test cases for system features fail
 * AC-814 AMS dashboard doesn't load on the Appliance
 * AC-810 Failing gateway docs build fails and doesn't stop CI from succeeding
 * AC-741 End touch/mouse events when leaving the SDK container
-* AC-699 dEQP-GLES3.functional.texture.shadow.cube.linear.greater\_or\_equal\_depth24\_stencil8 fails on swrast
+* AC-699 `dEQP-GLES3.functional.texture.shadow.cube.linear.greater_or_equal_depth24_stencil8` fails on `swrast`
 * AC-693 SDK is broken on iOS on 4G only
-* AC-548 Colors with direct software rendering in scrcpy are incorrect
+* AC-548 Colours with direct software rendering in scrcpy are incorrect
 
 [/Details]
 
