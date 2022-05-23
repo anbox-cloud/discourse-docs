@@ -58,27 +58,24 @@ The Anbox Streaming SDK allows the development of custom streaming clients, usin
 
 ### Components
 
-The Anbox Streaming SDK provides the following alternative SDKs:
-
-- A JavaScript SDK designed to help you get started with the development of a web-based client. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.
-- A native SDK offering a C API that provides the same full-featured video streaming as the JavaScript SDK, but aims for a low latency for your application based on Anbox Cloud. The native SDK is intended for C and C++ based applications. It currently supports Android and Linux.
+The Anbox Streaming SDK provides a JavaScript SDK designed to help you get started with the development of a web-based client. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.
 
 #### Features
 
-| Feature                                          | JavaScript SDK | Native SDK |
-|--------------------------------------------------|:--------------:|:----------:|
-| Video streaming                                  |        ✓       |      ✓     |
-| Audio streaming                                  |        ✓       |      ✓     |
-| Microphone support                               |        ✓       |      ✓     |
-| Dynamically change Android foreground activity   |        ✓       |      ✓     |
-| Send commands to the Android container           |        ✓       |      ✓     |
-| Game pad support                                 |        ✓       |      ✓     |
-| Camera support                                   |        ✓       |            |
-| Sensor support                                   |                |            |
-| Location support                                 |        ✓       |            |
-| Supported platforms                              |       All  | Linux, Android |
-| Zero Copy rendering and decoding                 |        ✓       |            |
-| Supported codecs                      | VP8, H.264 | VP8, H.264 (Android only) |
+| Feature                                          | JavaScript SDK |
+|--------------------------------------------------|:--------------:|
+| Video streaming                                  |        ✓       |
+| Audio streaming                                  |        ✓       |
+| Microphone support                               |        ✓       |
+| Dynamically change Android foreground activity   |        ✓       |
+| Send commands to the Android container           |        ✓       |
+| Game pad support                                 |        ✓       |
+| Camera support                                   |        ✓       |
+| Sensor support                                   |                 |
+| Location support                                 |        ✓       |
+| Supported platforms                              |       All       |
+| Zero Copy rendering and decoding                 |        ✓       |
+| Supported video codecs                           | VP8, H.264      |
 
 ### Download and installation
 

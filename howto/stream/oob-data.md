@@ -104,22 +104,3 @@ of the `AnboxStream` object:
       }
     });
 ```
-
-### Native Application
-
-For a native application you can use the native SDK from [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk).
-To receive the data sent from the Android application running in the Anbox
-container you need to register a callback via the `anbox_stream_set_message_received_callback` method:
-
-```
-    ...
-    anbox_stream_set_message_received_callback(ctx.stream, [](
-        const char* type, size_t type_size,
-        const char* data, size_t data_size, void *user_data){
-      std::cout << "Received message from container type: '"<< std::string(type, type_size) << "'" << std::endl;
-    }, nullptr));
-    ...
-```
-
-With those, whenever a message is sent from an Android application, the
-native application will receive the message and print it to its standard output.
