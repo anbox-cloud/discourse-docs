@@ -22,7 +22,7 @@ First, connect and SSH into your appliance instance, and install the `certbot` s
 
     sudo snap install --classic certbot
 
-Before generating your certificate using `certbot`, stop the traefik service from listening on port 80 for the certificate creation:
+Before generating your certificate using `certbot`, stop the Traefik service from listening on port 80 for the certificate creation:
 
     sudo snap stop anbox-cloud-appliance.traefik
 
@@ -48,7 +48,7 @@ Copy the generated certificate to the `/var/snap/anbox-cloud-appliance/common/tr
     sudo cp /etc/letsencrypt/live/<your domain name>/fullchain.pem /var/snap/anbox-cloud-appliance/common/traefik/tls/cert.pem
     sudo cp /etc/letsencrypt/live/<your domain name>/privkey.pem   /var/snap/anbox-cloud-appliance/common/traefik/tls/key.pem
 
-Then start the traefik service:
+Then start the Traefik service:
 
     sudo snap start anbox-cloud-appliance.traefik
 
@@ -58,7 +58,7 @@ With the certificate installed on the appliance, you now can access the applianc
 
 The `certbot` snap packages installed on your machine already set up a systemd timer that will automatically renew your certificates before they expire. However, in order to get the certificate renewed successfully for the appliance, you must complete the following steps:
 
-1. Stop the traefik service to release port 80 right before the certificate is going to be renewed. This can be done through the `pre-hook`:
+1. Stop the Traefik service to release port 80 right before the certificate is going to be renewed. This can be done through the `pre-hook`:
 
    ```bash
    cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/pre/001-stop-traefik.sh
@@ -68,7 +68,7 @@ The `certbot` snap packages installed on your machine already set up a systemd t
    sudo chmod +x /etc/letsencrypt/renewal-hooks/pre/001-stop-traefik.sh
    ```
 
-2. Install the certificate right after it has been renewed and start the traefik service through the `post-hook`:
+2. Install the certificate right after it has been renewed and start the Traefik service through the `post-hook`:
 
    ```bash
    cat <<EOF | sudo tee /etc/letsencrypt/renewal-hooks/post/001-start-traefik.sh
