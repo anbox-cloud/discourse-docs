@@ -27,7 +27,7 @@ Make the file executable. To do so, enter the following command (in the `ssh-add
 chmod +x hooks/pre-start
 ```
 
-[note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](https://discourse.ubuntu.com/t/addons/25293#hooks).[/note]
+[note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](tbd#hooks).[/note]
 
 Create an SSH key in your addon directory and move the private key to a location outside of the addon directory (for example, your home directory):
 ```bash

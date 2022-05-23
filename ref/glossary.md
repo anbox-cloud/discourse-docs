@@ -290,9 +290,9 @@ See https://discourse.ubuntu.com/t/enable-high-availability/17754.
 <a name="hook"></a>
 ### Hook
 
-Code that is invoked at different points in time in the life cycle of a container. Hooks are part of addons.
+Code that is invoked at different points in time in the life cycle of a container. Hooks are part of addons or applications.
 
-See [Hooks](https://discourse.ubuntu.com/t/addons/25293#hooks).
+See [Hooks](tbd).
 
 <a name="image"></a>
 ### Image
