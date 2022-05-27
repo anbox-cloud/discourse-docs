@@ -1,38 +1,48 @@
-You can extend an application by adding an [addon](https://discourse.ubuntu.com/t/addons/25293) or [hooks](https://discourse.ubuntu.com/t/hooks/28555).
+You can extend an application either by adding [hooks](#application-hooks) directly to the application or by creating an [addon](#addon) that includes one or more hooks and adding it to the application.
 
-If your extension contains common functionality that you want to share among multiple applications, you should create an addon. You can then add the addon to all applications that should use the functionality.
+- If you want to extend one application only, you should use application hooks. They are easy and quick to set up and do not require creating an addon.
+- If your extension contains common functionality that you want to share among multiple applications, you should create an addon that includes one or more hooks. You can then add the addon to all applications that should use the functionality.
 
-If you want to extend one application only, use application hooks instead. They are easier to create and do not require creating an addon.
+For both options, you must create one or more hooks first. The options differ in how you add these hooks to your application.
 
-## Extend an application with addons
+<a name="create-hook"></a>
+## Create a hook
 
-See [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) for detailed instructions.
+A hook is a script file that runs a series of commands at a specific time in the application life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for detailed information.
 
-## Extend an application with hooks
+The general steps for creating a hook are as follows:
 
-The following example shows how to use application hooks to change the Android system locale.
+1. Create or download any files or applications that the hook needs. For example, this could be configuration files or Android applications that you want to run.
+1. In a `hooks/` sub-directory, create a script file with the commands that you want to run. As file name, use the name of the hook.
 
-1. In a new `app` directory, create a `manifest.yaml` file with the following content:
+   [note type="information" status="Tip"]
+   - Supported hooks are `pre-start`, `post-start` and `post-stop`.
+   - Use the `CONTAINER_TYPE` variable to distinguish between regular and base containers.
 
-   ```
-   name: custom-locale
-   instance-type: a2.3
-   ```
+   See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more information.
+   [/note]
+1. Make the hook file executable.
 
-1. Build the [CustomLocale](https://android.googlesource.com/platform/development/+/master/apps/CustomLocale) application from the AOSP project and move the compiled APK to the `app` folder.
+You must then add the hook file to your application, either [as an application hook](#application-hooks) or [through an addon](#addon).
 
-1. Create the `hooks` directory next to the application manifest file:
+The following sections give some examples for hooks.
 
-        mkdir -p hooks
+### Create a hook for changing the Android system locale
 
-1. Create a `post-start` script file in the `hooks` directory with the following content:
+Complete the following steps to create a hook that changes the Android system locale to Korean:
+
+1. Build the [CustomLocale](https://android.googlesource.com/platform/development/+/master/apps/CustomLocale) application from the AOSP project and move the compiled APK to a folder of your choice.
+1. In your folder, create a `hooks` sub-directory:
+
+        mkdir -p hooks && cd hooks
+1. In the `hooks` directory, create a `post-start` script file with the following content:
 
    ```
    #!/bin/sh -ex
    if  [ "$CONTAINER_TYPE" = "regular" ]; then
      exit 0
    fi
-   cp "$APP_DIR"/*.apk $ANDROID_ROOTFS/data
+   cp "<working_dir>"/*.apk $ANBOX_DIR/data
    anbox-shell pm install -t -g /data/CustomLocale.apk && sleep 5
    # Start CustomLocale2 application after installation, this aims to
    # initialize all available locales in the app, otherwise the following
@@ -46,17 +56,124 @@ The following example shows how to use application hooks to change the Android s
    sleep 5
    ```
 
-1. Make the hooks executable:
+   [note type="information" status="Important"]
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   [/note]
+1. Make all files in the `hooks` directory executable:
 
-        chmod +x hooks/*
+        cd .. && chmod +x hooks/*
 
-   [note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](https://discourse.ubuntu.com/t/hooks/28555).[/note]
+### Create a hook to replace the standard Android launcher
 
+Complete the following steps to create a hook that replaces the standard Android launcher with the custom launcher [Lawnchair](https://lawnchair.app/):
 
-1. Then create the application in AMS:
+1. Download Lawnchair to a folder of your choice:
 
-        amc application create app
+        curl -o lawnchair.apk https://f-droid.org/repo/ch.deletescape.lawnchair.plah_2001.apk
 
-After the application is created successfully, launch a container, and you can see the system locale is changed to Korean.
+1. In your folder, create a `hooks` sub-directory:
 
-[note type="information" status="Tip"]By default, the `CustomLocale` APK file is removed automatically from the application image after the [application bootstrap](https://anbox-cloud.io/docs/exp/applications#bootstrap) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular container. [/note]
+        mkdir -p hooks && cd hooks
+
+1. In the `hooks` directory, create a `post-start` script file with the following content:
+
+   ```
+   #!/bin/sh -ex
+   if  [ "$CONTAINER_TYPE" = "regular" ]; then
+     exit 0
+   fi
+   cp "<working_dir>"/*.apk $ANBOX_DIR/data/
+   anbox-shell pm install -g -t /data/lawnchair.apk
+   #
+   # We need to wait until the system has settled after the package installation
+   sleep 10
+   #
+   # Setup lawnchair as our default launcher
+   LAUNCHER_ACTIVITY="ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.Launcher"
+   anbox-shell cmd package set-home-activity "$LAUNCHER_ACTIVITY"
+   #
+   # Once we applied all of our changes we give Android a moment. If we directly
+   # return here the Android container will be immediately shutdown.
+   sleep 20
+   ```
+
+   [note type="information" status="Important"]
+   In the file, replace `<working_dir>` with the [environment variable](https://discourse.ubuntu.com/t/hooks/28555#env-variables) that points to the current working directory for the hook. If you plan to run the hook [as an application hook](#application-hooks), use `$APP_DIR`. If you plan to run the hook [through an addon](#addon), use `$ADDON_DIR`.
+   [/note]
+1. Make all files in the `hooks` directory executable:
+
+        cd .. && chmod +x hooks/*
+
+<a name="application-hooks"></a>
+## Use hooks in an application
+
+You can add your hooks directly to an application. To do so, complete the following steps:
+
+1. In a new `my-app` directory, create a `manifest.yaml` file for your application. For example, you could use the following content to create a virtual device:
+
+   ```
+   name: my-app
+   instance-type: a2.3
+   ```
+
+1. Prepare one or more hooks as described in [Create a hook](#create-hook).
+
+1. Move the `hooks` directory and any other files that are required by the hook into the `app` directory. The folder structure should look like this:
+
+   ```
+   app
+   |__ manifest.yaml
+   |__ <files required for the hooks>
+   |__ hooks
+       |__ <hook files>
+   ```
+
+1. Create the application in AMS:
+
+        amc application create my-app
+
+After the application is created, launch a container. You should see that the hook is executed and that, for example, the system locale is changed or the standard Android launcher is replaced.
+
+[note type="information" status="Important"]
+By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://anbox-cloud.io/docs/exp/applications#bootstrap) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular container.
+[/note]
+
+<a name="addon"></a>
+## Create an addon with hooks
+
+If you want to use your hooks in multiple applications, you should include them in an addon. To do so, complete the following steps:
+
+1. In a new `my-addon` directory, prepare one or more hooks as described in [Create a hook](#create-hook).
+1. Create a `manifest.yaml` file in the `my-addon` directory with the following content:
+
+   ```
+   name: my-addon
+   description: |
+     <Description of your addon>
+   ```
+1. Ensure that the folder structure looks like this:
+
+   ```
+   my-addon
+   |__ manifest.yaml
+   |__ <files required for the hooks>
+   |__ hooks
+       |__ <hook files>
+   ```
+1. Add the addon:
+
+        amc addon add my-addon .
+
+Once the addon is uploaded to AMS, you can reference it from any application manifest:
+
+```
+name: my-app
+instance-type: a4.3
+addons: [my-addon]
+```
+
+The application will now execute the hook and you should see that, for example, the system locale is changed or the standard Android launcher is replaced.
+
+[note type="information" status="Tip"]
+See [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) for detailed instructions on how to create an addon, and the [addon reference](https://discourse.ubuntu.com/t/addons/25293) for further information.
+[/note]

@@ -86,7 +86,8 @@ ssh -i ~/ssh-addon-key root@<container_ip> -p <exposed port>
 
 [note type="information" status="Note"] The exposed port can be found be running `amc ls`, under the `ENDPOINTS` column. Exposed ports usually start around port 10000.[/note]
 
-## More information about addons
+## More information
 
 * [Addon reference](https://discourse.ubuntu.com/t/addons/25293)
 * [How to update addons](https://discourse.ubuntu.com/t/update-addons/25286)
+* [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)
