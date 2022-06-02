@@ -46,7 +46,7 @@ If one of the steps fails, AMS will interrupt the bootstrap process and make the
 
 [note type="information" status="Note"]An application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the status of application is set to `error` too.[/note]
 
-When a base container runs into an error status, you can see what has gone wrong there by checking the error message with `amc show <application ID>`:
+When a base container runs into an error status, you can see what has gone wrong there by checking the error message with `amc show <container ID>`:
 
 ```bash
 id: bq78a3oj1qm02cebmof0
