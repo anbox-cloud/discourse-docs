@@ -187,8 +187,8 @@ name: my-application
 instance-type: a4.3
 bootstrap:
   keep:
-    - apks/*.apk
-    - scripts
+    - 'apks/*.apk'
+    - 'scripts'
 ```
 
 This will include the `scripts` folder and all APK files under the `apks` folder in the application image when the bootstrap is done, so that they are available to use during the regular container runtime.
