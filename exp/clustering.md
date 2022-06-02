@@ -6,7 +6,7 @@ Each worker node runs [LXD](https://linuxcontainers.org/) in clustering mode, an
 
 ## Cluster capacity
 
-Anbox Cloud is optimised to provide containers at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See [About capacity planning](tbd) for more information.
+Anbox Cloud is optimised to provide containers at high density per host. To determine how many cluster nodes you need and what resources they should have, you must estimate the capacity that you require for your use case. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for more information.
 
 ## LXD auto scaling
 

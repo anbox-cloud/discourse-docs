@@ -110,7 +110,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 2 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
 | 2 | howto/stream/client-side-keyboard | [Use a client-side keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
 | 1 | howto/cluster/landing | [Manage cluster nodes](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) |
-| 2 | howto/cluster/configure-nodes | [Configure cluster nodes](tbd) |
+| 2 | howto/cluster/configure-nodes | [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) |
 | 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
 | 1 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
@@ -139,7 +139,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.13 comes with:
 | 1 | exp/aar | [About the AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 1 | exp/containers | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 1 | exp/clustering | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
-| 1 | exp/capacity-planning | [About capacity planning](tbd) |
+| 1 | exp/capacity-planning | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 1 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 0 | | About the project |

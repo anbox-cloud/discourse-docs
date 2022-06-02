@@ -33,7 +33,7 @@ config:
 
 AMS allows over-committing available resources on a node. This mechanism improves resource usage, because usually, containers don't use 100% of their dedicated resources all of the time.
 
-By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`. See [Over-committing](tbd#overcommitting) for more information.
+By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`. See [Over-committing](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting) for more information.
 
 You can configure the allocation rates with the `cpu-allocation-rate` and `memory-allocation-rate` configuration items.
 
@@ -45,7 +45,7 @@ Use the following commands to set the allocation rates on a node (for example, `
 <a name="configure-gpu-slots"></a>
 ## Configure GPU slots
 
-GPU slots are used to share GPUs amongst containers. See [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) and [GPU slots](tbd#gpu-slots) for more information.
+GPU slots are used to share GPUs amongst containers. See [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
 
 Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See [Node-specific configuration](https://discourse.ubuntu.com/t/ams-configuration/20872#node-specific) for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
 

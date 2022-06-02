@@ -21,7 +21,7 @@ Anbox Cloud will automatically detect GPU devices on deployment and configure th
 
 GPUs have limited capacity that can be shared amongst multiple containers. To fine-tune how many containers can run on a given node, configure the number of available GPU slots on the node.
 
-See [GPU slots](tbd#gpu-slots) for detailed information.
+See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for detailed information.
 
 ## Using GPUs inside a Container
 
