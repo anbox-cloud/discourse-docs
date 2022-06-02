@@ -26,6 +26,21 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `registry.url` | string | - | URL of the application registry to use |
 | `scheduler.strategy` | string | spread | Strategy the internal container scheduler in AMS is using to distribute container across available LXD nodes. Possible values are: `binpack`, `spread` |
 
+<a name="node-specific"></a>
+## Node-specific configuration
+
+In a cluster setup, there are configuration items that can be customised for each node. The following table lists the most relevant items; see `amc node set --help` for a full list.
+
+| Name | Type | Default |  Description            |
+|------|------|---------|-------------------------|
+| `cpu-allocation-rate` | integer | 4 | CPU allocation rate used for [over-committing resources](tbd#overcommitting) |
+| `gpu-encoder-slots` | integer | 0 (for nodes without GPU or with AMD GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with Intel GPU)| Number of GPU encoder slots available on the node |
+| `gpu-slots` | integer | 0 (for nodes without GPU)<br/>32 (for nodes with NVIDIA GPU)<br/>10 (for nodes with AMD or Intel GPU)| Number of [GPU slots](tbd#gpu-slots) available on the node |
+| `memory-allocation-rate` | integer | 2 | Memory allocation rate used for [over-committing resources](tbd#overcommitting) |
+| `tags` | string | - | Tags to identify the node |
+
+See [Configure cluster nodes](tbd) for instructions on how to set these configuration items.
+
 ## Features
 
 Anbox Cloud includes some features which are not enabled by default but can be conditionally enabled. The features are enabled by flags which are configured through AMS. You can configure the feature flags either globally for all containers or per application.
