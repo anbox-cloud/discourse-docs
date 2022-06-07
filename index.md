@@ -24,10 +24,10 @@ See the [official Anbox Cloud website](https://anbox-cloud.io/) for more informa
 
 ## What's new
 
-Along with bug fixes and general improvements, Anbox Cloud 1.14 comes with:
+Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the following changes:
 
-* All Charms have been migrated to [Charmhub](https://charmhub.io)
-* Anbox LXD images are now available based on Ubuntu 22.04
+* All charms have been migrated to [Charmhub](https://charmhub.io).
+* Anbox Cloud now includes Anbox LXD images based on Ubuntu 22.04.
 * Hook support for AMS applications.
 * Vulkan support for AMD and Intel GPUs.
 * Multi-node support for the Anbox Cloud Appliance (experimental).
