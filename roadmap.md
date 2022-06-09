@@ -14,13 +14,34 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.14.0 (~ mid May 2022)
+### 1.14.1 (June 2022)
 
-Target date: May 18, 2022
+Target date: June 15, 2022
 
- * Vulkan support for Intel and AMD GPUs
- * Hook support for AMS application packages
- * Switch to [Charmhub](https://charmhub.io) to host all Anbox Cloud charms
- * Touch input emulation support in the JS SDK
- * Android images based on Ubuntu 22.04 for all Android versions (10, 11 and 12)
- * Multi-node support for the Anbox Cloud Appliance
+* Android security updates for June 2022
+* Bug fixes
+
+### 1.14.2 (July 2022)
+
+Target date: July 13, 2022
+
+* Android security updates for July 2022
+* Bug fixes
+
+### 1.15.0 (August 2022)
+
+Target date: August 24, 2022
+
+* Minimum TLS version of 1.3 for AMS
+
+   [note type="information" status="Important"]
+   With the new requirement, LXD images from Anbox Cloud versions prior to 1.15 will stop functioning. To ease transition, it will be possible to temporarily force the minimum TLS version back to 1.2.
+   [/note]
+* Extended Android CTS coverage
+* Bidirectional out-of-band data exchange for WebRTC
+
+### 1.16.0 (November 2022)
+
+Target date: November 16, 2022
+
+* LXD images for Android 13
