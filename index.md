@@ -1,26 +1,15 @@
-Anbox Cloud provides a rich software stack that enables you to run Android applications in the cloud for all kinds of different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
+Anbox Cloud makes it possible to run Android apps in the cloud and supports all kinds of different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
 
-Using container technology, Anbox Cloud is scalable from a single-machine installation that can run scores of single Android systems to an entire cluster of machines. It is based on powerful and battle-proven software from Canonical like [LXD](https://linuxcontainers.org/) and [Juju](https://jujucharms.com/).
+Using container technology, Anbox Cloud manages the application life cycle while optimising for high density, performance and fast container boot times. It is scalable from a single-machine installation that can run scores of single Android systems to an entire cluster of machines. Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures. Deploying the solution is simple and straightforward, and it is based on powerful and battle-proven software from Canonical like [LXD](https://linuxcontainers.org/) and [Juju](https://jujucharms.com/).
 
-## Core features
+Anbox Cloud uses system containers to emulate Android systems. This method results in an isolation and security level similar to virtual machines with an overhead as low as process containers. Therefore, Anbox Cloud can provide at least twice the container density compared to other Android emulation solutions, and can serve up to 100 Android instances per server.
 
-* Simple and straightforward deployment
-* Management of the container and application life cycle while optimising for high density, performance and fast container boot times
-* Platform integration tools to allow, for example, integration of existing streaming solutions
-* Support for both x86 and Arm64 hardware, providing the same set of features
+You should consider using Anbox Cloud if you want to deliver mobile applications that don't depend on the capabilities of your user's devices and that offload compute, storage and energy-intensive applications from the end device to the cloud. Typical use cases include mobile game streaming services, corporate application streaming, application automation and Android application testing.
 
-See the [official Anbox Cloud website](https://anbox-cloud.io/) for more information.
-
-## Get started
-
-|  |  |
+| | |
 |--|--|
-| [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) | Learn about the differences between Anbox Cloud and the Anbox Cloud Appliance and about the components and architecture of the offering |
-| [About AMS](https://discourse.ubuntu.com/t/about-ams/24321) | Understand the Anbox Management Service (AMS), which handles all aspects of the application and container life cycle |
-| [Install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681) | Install the Anbox Cloud Appliance, which is well suited for initial prototype and small scale deployments |
-| [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) | Deploy the full Anbox Cloud solution to a public cloud |
-| [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)<br>[Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container to familiarise yourself with Anbox Cloud, by using either the web dashboard or the command line interface |
-
+|  [Tutorials]()</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides]() </br> Step-by-step guides covering key operations and common tasks |
+|  [Explanation]() </br> Concepts - discussion and clarification of key topics  | [Reference]() </br> Technical information - specifications, APIs, architecture |
 
 ## What's new
 
@@ -32,22 +21,29 @@ Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the fol
 * Vulkan support for AMD and Intel GPUs.
 * Multi-node support for the Anbox Cloud Appliance (experimental).
 
-|  |  |
-|--|--|
-| [Release notes](https://discourse.ubuntu.com/t/release-notes/17842) | All new features, improvements and bug fixes |
-| [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359) | Planned updates and features for upcoming releases |
+For detailed information, see the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
+
+## Project and community
+
+Anbox Cloud is a Canonical product. It originally grew out of the Anbox open-source project, but its code base is now completely independent.
+
+- [Get support through Ubuntu Advantage](https://ubuntu.com/support)
+- [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
+- [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
+
+Thinking about using Anbox Cloud for your next project? [Get in touch!](https://anbox-cloud.io/contact-us)
 
 ## Navigation
 
 [details=Navigation]
 | Level | Path | Navlink |
 | -- | -- | -- |
-| 0 | | Tutorials |
+| 0 | tut/landing | [Tutorials](tbd) |
 | 1 | tut/installing-appliance | [Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 1 | tut/getting-started-dashboard | [Get started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 1 | tut/getting-started | [Get started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 1 | tut/creating-addon | [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
-| 0 | | How to |
+| 0 | howto/landing | [How-to guides](tbd) |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
 | 2 | howto/install/deploy-bare-metal | [Deploy on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378) |
@@ -117,7 +113,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the fol
 | 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
 | 1 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
-| 0 | | Reference |
+| 0 | ref/landing | [Reference](tbd) |
 | 1 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 1 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
 | 1 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
@@ -136,9 +132,9 @@ Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the fol
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index) <!-- wokeignore:rule=master --> |
 | 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
-| 0 | | Explanation |
+| 0 | exp/landing | [Explanation](tbd) |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
-| 1 | exp/ams | [About AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
+| 1 | exp/ams | [About the AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 1 | exp/applications | [About applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 1 | exp/aar | [About the AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 1 | exp/containers | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
@@ -146,7 +142,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the fol
 | 1 | exp/capacity-planning | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 1 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 0 | | About the project |
+| 0 | anbox/landing | [About the project](tbd) |
 | 1 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 1 | release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
 | 1 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
