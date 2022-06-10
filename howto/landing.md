@@ -14,4 +14,4 @@ The how-to guides in this section give directions on how to achieve your goals w
 | [How to manage cluster nodes](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) | Instructions for distributing the load of your Anbox Cloud installation over several machines in a cluster |
 | [How to troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)| Answers to common questions and issues |
 
-Make sure to also check out the [Tutorials](tbd) for step-by-step instructions that help you get familiar with Anbox Cloud, as well as the [Reference](tbd) and [Explanation](tbd) sections for other helpful information.
+Make sure to also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.

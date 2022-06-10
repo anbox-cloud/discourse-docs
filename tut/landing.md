@@ -7,4 +7,4 @@ The tutorials in this section give step-by-step instructions that help you get f
 | [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) | Go through the first steps of launching and accessing an Android container from the command line interface to familiarise yourself with Anbox Cloud |
 | [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) | Learn how to create your first addon
 
-Make sure to also check out the [How-to guides](tbd) for instructions on how to achieve specific goals when using Anbox Cloud, as well as the [Reference](tbd) and [Explanation](tbd) sections for other helpful information.
+Make sure to also check out the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.

@@ -12,4 +12,4 @@ The explanatory guides in this section introduce you to the concepts used in Anb
 | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)| Understand which GPUs are supported and how they are used |
 | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)| Learn about the architecture of the Streaming Stack and supported video codecs |
 
-Make sure to also check out the [Tutorials](tbd) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](tbd) for instructions on how to achieve specific goals when using Anbox Cloud and the [Reference](tbd) section for reference material.
+Make sure to also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud and the [Reference](https://discourse.ubuntu.com/t/reference/28828) section for reference material.

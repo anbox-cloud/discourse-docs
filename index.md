@@ -8,8 +8,8 @@ You should consider using Anbox Cloud if you want to deliver mobile applications
 
 | | |
 |--|--|
-|  [Tutorials]()</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides]() </br> Step-by-step guides covering key operations and common tasks |
-|  [Explanation]() </br> Concepts - discussion and clarification of key topics  | [Reference]() </br> Technical information - specifications, APIs, architecture |
+|  [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) </br> Step-by-step guides covering key operations and common tasks |
+|  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs, architecture |
 
 ## What's new
 
@@ -38,12 +38,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 [details=Navigation]
 | Level | Path | Navlink |
 | -- | -- | -- |
-| 0 | tut/landing | [Tutorials](tbd) |
+| 0 | tut/landing | [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) |
 | 1 | tut/installing-appliance | [Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 1 | tut/getting-started-dashboard | [Get started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 1 | tut/getting-started | [Get started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
 | 1 | tut/creating-addon | [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
-| 0 | howto/landing | [How-to guides](tbd) |
+| 0 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
 | 1 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 2 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
 | 2 | howto/install/deploy-bare-metal | [Deploy on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378) |
@@ -113,7 +113,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 2 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
 | 1 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
-| 0 | ref/landing | [Reference](tbd) |
+| 0 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 1 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 1 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
 | 1 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
@@ -132,7 +132,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index) <!-- wokeignore:rule=master --> |
 | 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
-| 0 | exp/landing | [Explanation](tbd) |
+| 0 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
 | 1 | exp/ams | [About the AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 1 | exp/applications | [About applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
@@ -142,7 +142,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 1 | exp/capacity-planning | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 1 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 1 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 0 | anbox/landing | [About the project](tbd) |
+| 0 | anbox/landing | [About the project](https://discourse.ubuntu.com/t/about-the-project/28830) |
 | 1 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 1 | release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
 | 1 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
