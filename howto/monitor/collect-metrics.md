@@ -87,13 +87,13 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['ams:grafana', 'grafana:dashboards']
    machines:
      '0':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=4 mem=8G root-disk=100G"
      '1':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=8 mem=16G root-disk=200G"
      '2':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=4 mem=4G root-disk=100G"
    ```
    [/Details]
@@ -163,16 +163,16 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['anbox-stream-gateway:grafana', 'grafana:dashboards']
    machines:
      '0':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=4 mem=4G root-disk=100G"
      '1':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=4 mem=8G root-disk=100G"
      '2':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=8 mem=16G root-disk=200G"
      '3':
-       series: focal
+       series: jammy
        constraints: "cpu-cores=4 mem=4G root-disk=100G"
    ```
    [/Details]

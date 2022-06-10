@@ -127,10 +127,10 @@ For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 ```
 machines:
   '0':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
 ```
 
@@ -139,13 +139,13 @@ For the `anbox-cloud` bundle, the `overlay.yaml` file includes one more machine 
 ```
 machines:
   '0':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.2xlarge root-disk=50G"
 ```
 
@@ -162,13 +162,13 @@ The `overlay.yaml` file for the `anbox-cloud` bundle looks like this:
 ```
 machines:
   '0':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: focal
+    series: jammy
     constraints: "instance-type=g4dn.2xlarge root-disk=50G"
 ```
 
@@ -189,7 +189,7 @@ applications:
 machines:
   ...
   '2':
-    series: focal
+    series: jammy
     constraints: "instance-type=m6g.2xlarge root-disk=50G"
 ```
 
