@@ -4,12 +4,12 @@ Anbox Cloud implements support for various features that Android has. The follow
 |--------------------|-----------------|-------------|
 | [OpenGL ES](https://source.android.com/devices/graphics/arch-egl-opengl) <= 3.2   |  ✓  | |
 | [Vulkan](https://source.android.com/devices/graphics/arch-vulkan) |  ✓  | |
-| [Camera](https://source.android.com/devices/camera) |  ✓  | Currently, not working for Intel and AMD GPUs |
-| [Sensors](https://source.android.com/devices/sensors) |  ✓  | Currently, the sensors that a client device has are not connected to the Android container when streaming |
+| [Camera](https://source.android.com/devices/camera) |  ✓  | Currently not working for Intel and AMD GPUs. |
+| [Sensors](https://source.android.com/devices/sensors) |  ✓  | Currently, the sensors that a client device has are not connected to the Android container when streaming. |
 | Location           |  ✓  |          |
 | NFC                |      |            |
 | [Bluetooth](https://source.android.com/devices/bluetooth) | | |
-| WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance |
+| WiFi               |  ✓  | Only simulated WiFi is provided to the Android instance. |
 | [Multi-Display](https://source.android.com/devices/tech/display/multi_display) | | |
 | [Data use](https://source.android.com/devices/tech/datausage)| | |
 | Telephony / mobile connectivity | | |
