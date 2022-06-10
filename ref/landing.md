@@ -14,7 +14,7 @@ The reference material in this section provides technical descriptions of Anbox 
 | [Addons](https://discourse.ubuntu.com/t/addons/25293)| Documentation of the addon mechanism |
 | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)| Documentation of hooks for addons or applications |
 | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
-| [LXD documentation](https://linuxcontainers.org/lxd/docs/master/) | Link to the LXD documentation (external) |
+| [LXD documentation](https://linuxcontainers.org/lxd/docs/master/) | Link to the LXD documentation (external) <!-- wokeignore:rule=master --> |
 | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)| Terms and definitions you should know when working with Anbox Cloud or the Anbox Cloud Appliance |
 
 Make sure to also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud and the [Explanation](https://discourse.ubuntu.com/t/explanation/28829) section for background information.
