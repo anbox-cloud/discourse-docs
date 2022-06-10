@@ -16,6 +16,7 @@ The general steps for creating a hook are as follows:
 1. In a `hooks/` sub-directory, create a script file with the commands that you want to run. As file name, use the name of the hook.
 
    [note type="information" status="Tip"]
+
    - Supported hooks are `pre-start`, `post-start` and `post-stop`.
    - Use the `CONTAINER_TYPE` variable to distinguish between regular and base containers.
 
