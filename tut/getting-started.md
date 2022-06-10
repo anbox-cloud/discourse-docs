@@ -38,13 +38,21 @@ To check if `amc` is set up to access the correct AMS, run the following command
 Next, check whether AMS has synchronised all images from the Canonical hosted image server. You can list all synchronised images with the `amc image ls` command:
 
 ```bash
-+----------------------+-----------------------------+--------+----------+--------------+---------+
-| ID                   | NAME                        | STATUS | VERSIONS | ARCHITECTURE | DEFAULT |
-+----------------------+-----------------------------+--------+----------+--------------+---------+
-| c4b4djkrorjohh948dfg | bionic:android11:arm64      | active | 1        | aarch64      | true    |
-+----------------------+-----------------------------+--------+----------+--------------+---------+
-| c4b4ev4rorjohh948dg0 | bionic:android10:arm64      | active | 1        | aarch64      | false   |
-+----------------------+-----------------------------+--------+----------+--------------+---------+
++----------------------+------------------------+--------+----------+--------------+---------+
+|          ID          |          NAME          | STATUS | VERSIONS | ARCHITECTURE | DEFAULT |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6s5l07mps24asmii0 | jammy:android12:arm64  | active | 1        | aarch64      | true    |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6scl07mps24asmiig | jammy:android11:arm64  | active | 1        | aarch64      | false   |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6sil07mps24asmij0 | jammy:android10:arm64  | active | 1        | aarch64      | false   |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6sol07mps24asmijg | bionic:android12:arm64 | active | 1        | aarch64      | false   |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6t2d07mps24asmik0 | bionic:android11:arm64 | active | 1        | aarch64      | false   |
++----------------------+------------------------+--------+----------+--------------+---------+
+| caa6ta507mps24asmikg | bionic:android10:arm64 | active | 1        | aarch64      | false   |
++----------------------+------------------------+--------+----------+--------------+---------+
 ```
 
 See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for more information.

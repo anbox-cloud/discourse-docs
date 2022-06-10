@@ -84,7 +84,7 @@ You must choose a name for the image when uploading it. If you update the image 
 
 Adding an image to AMS can be done with the following command:
 
-    amc image add default anbox-lxd-bionic_1.7_amd64.tar.xz
+    amc image add default anbox-lxd-jammy_x.y_amd64.tar.xz
 
 `default` is the name assigned to the new image. The name can be used by applications to reference the image.
 
@@ -107,7 +107,7 @@ Similar to applications managed by AMS (see [About applications](https://discour
 
 Use the following command to update a manually uploaded image in AMS:
 
-    amc image update default anbox-lxd-bionic_1.7_amd64.tar.xz
+    amc image update default anbox-lxd-jammy_x.y_amd64.tar.xz
 
 `default` is the name assigned to the existing image. Uploading the new image to the connected LXD cluster will take a moment. Once the upload has finished, the image is marked as `active`.
 

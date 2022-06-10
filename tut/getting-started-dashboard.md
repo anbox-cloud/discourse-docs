@@ -24,7 +24,7 @@ Complete the following steps to create a virtual device:
 2. Click **Add Application**.
 3. Enter a name for the application, for example, `virtual-device-web`.
 4. Keep the preselected instance type.
-5. Select the Android image that you want to use, for example, `bionic:android11:arm64`.
+5. Select the Android image that you want to use, for example, `jammy:android12:arm64`.
 6. Do not upload an APK file.
 7. Click **Add Application**.
 
