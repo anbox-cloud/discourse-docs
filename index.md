@@ -119,6 +119,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.14 includes the fol
 | 1 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
 | 0 | | Reference |
 | 1 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
+| 1 | refs/android-features | [Supported Android features](tbd)|
 | 1 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 1 | ref/api-reference | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) |
 | 2 | ref/ams-http-api | [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801)|
