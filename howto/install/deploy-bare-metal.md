@@ -49,8 +49,8 @@ The user (for example, `ubuntu`) must have administrator rights on the machine a
 Juju will add the machines to its list of usable machines, which you can display with the `juju list-machines` command. Make sure that all machines are in the `started` state before you proceed. If any of the machines are still in `down` state, wait until they switch to `started`:
 
     Machine  State    DNS           Inst id              Series AZ Message
-    0        started  192.168.1.9   manual:192.168.1.9   bionic    Manually provisioned machine
-    1        started  192.168.1.10  manual:192.168.1.10  bionic    Manually provisioned machine
+    0        started  192.168.1.9   manual:192.168.1.9   jammy     Manually provisioned machine
+    1        started  192.168.1.10  manual:192.168.1.10  jammy     Manually provisioned machine
 
 ## Attach your Ubuntu Pro subscription
 
@@ -65,8 +65,8 @@ When running the deployment command, you must map the machines to the ones descr
 Run `juju list-machines` to display the available machines:
 
     Machine  State    DNS            Inst id              Series  AZ             Message
-    0        started  192.168.0.9   i-09a2fdb5e7a2e8385   bionic  localhost-1a   running
-    1        started  192.168.0.10  i-00a05065e2768be5d   bionic  localhost-1b   running
+    0        started  192.168.0.9   i-09a2fdb5e7a2e8385   jammy   localhost-1a   running
+    1        started  192.168.0.10  i-00a05065e2768be5d   jammy   localhost-1b   running
 
 The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0` is supposed to host the AMS service. `1` is used for LXD. Check the `bundle.yaml` file in the bundle for details.
 
