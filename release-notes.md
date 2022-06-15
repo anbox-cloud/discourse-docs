@@ -3,6 +3,34 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.14.1]
+
+## 1.14.1 (June 16 2022)
+
+#### New features & improvements
+
+* Android security updates for June 2022 (see [Android Security Bulletin - June 2022](https://source.android.com/security/bulletin/2022-06-01) for more information)
+* Android WebView has been updated to [102.0.5005.78](https://chromereleases.googleblog.com/2022/05/chrome-for-android-update_28.html)
+* The Android [system app installation process](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086) now supports the [APK Signature Scheme v2](https://source.android.com/security/apksigning/v2)
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+* AC-930 AMS doesn't retry stripping a container when LXD returns not matching ETag
+* AC-936 AMS is misbehaving when LXD cluster fails to process requests
+* AC-929 Node controller doesn't start due to missing route utility
+* AC-928 Use the `ip` command rather than `ifconfig` to parse the IP address of the network device in Anbox container
+* AC-917 Anbox inside jammy images doesn't start on the jammy 5.15 kernel
+* AC-913 Dashboard ended up to a blank screen when stopping a session at times
+* AC-909 AAR leaves `aar_upload_*` files in `/tmp`
+* AC-905 Images are not synchronised on 1.14 appliance
+* AC-818 Show Android boot animation properly
+
+[/Details]
+
 [Details=1.14.0]
 
 ## 1.14.0 (May 23 2022)
