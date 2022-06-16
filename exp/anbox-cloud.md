@@ -11,7 +11,7 @@ Anbox Cloud comes in two different variants that serve different purposes:
 
 **Anbox Cloud Appliance**
 
-The Anbox Cloud Appliance is a self-contained, single-machine deployment variant of Anbox Cloud. It uses a sensible standard configuration to hide the complexity and flexibility of [Juju](https://juju.is/). In this way, the Anbox Cloud Appliance allows simple and fast development and prototyping.
+The Anbox Cloud Appliance is a self-contained deployment variant of Anbox Cloud. It uses a sensible standard configuration to hide the complexity and flexibility of [Juju](https://juju.is/). In this way, the Anbox Cloud Appliance allows simple and fast development and prototyping.
 
 **Anbox Cloud**
 

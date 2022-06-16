@@ -7,6 +7,9 @@ The available commands for the `anbox-cloud-appliance` tool are:
 - `ams`
 
   Expose the AMS HTTPS service on the public endpoint of the machine on which the appliance is running. If you do this, you can [control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774).
+- `cluster`
+
+  Manage cluster members for the Anbox Cloud Appliance by generating join tokens for new members or removing members from the cluster. See [How to join a machine to the Anbox Cloud Appliance](tbd) for more information.
 - `crashdump`
 
   Generate a tarball that contains debug information.

@@ -1,44 +1,51 @@
-An existing Anbox Cloud Appliance can be extended with additional machines to extend available container capacity.
+If you're running the Anbox Cloud Appliance and you want to extend the available container capacity, you can join additional machines to the appliance.
 
-This does currently not include support for high availability (HA).
+The following instructions describe how to add a machine. Also see [Multi-node support for the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/capacity-planning/17765#clustering-anbox-cloud).
 
 ## Allow internal network communication
 
-The appliance will use [FAN networking](https://wiki.ubuntu.com/FanNetworking) to spawn an overlay network to allow containers to communicate with each other. For that to work we need to allow incoming traffic on the internal network the machines sit on so they can communicate with each other.
+To allow communication between the different machines, you must configure the internal network that the machines use to allow incoming traffic.
 
-On AWS you can modify the security group attached to the instance to allow all incoming traffic on the internal subnet it sits on:
+How to do this depends on your network configuration. On AWS, for example, you can modify the security group attached to the instance to allow all incoming traffic on the internal subnet that it sits on:
 
-![AWS security group](images/appliance_multi_node_aws_ports.png)
+![AWS security group](https://assets.ubuntu.com/v1/0e1ce070-appliance_multi_node_aws_ports.png)
 
-In this example incoming traffic is allowed when it orginates in the internal subnet `172.31.16.0/20`.
+In this example, incoming traffic is allowed when it originates in the internal subnet `172.31.0.0/16`.
 
-## Generate join token
+## Generate a join token
 
-First, we have to generate a token on the existing machine running the Anbox Cloud Appliance to provide necessary information and authentication details for the new machine we want to join:
+To add a machine to the appliance, you need a join token that provides the necessary information and authentication details to join the appliance.
+
+You must generate such a token on the existing machine that runs the Anbox Cloud Appliance. Use the following command:
 
     anbox-cloud-appliance cluster add <name>
 
-The name you pick here is important as it will represent the name which will be used to identify the node in both LXD and AMS.
+The name you pick here is important because it will identify the node in both LXD and AMS.
 
-## Join new machine
+[note status="information" status="Tip"]
+The first node of the appliance is always called `lxd0`. It can be helpful to name additional nodes `lxd<n>` for consistency reasons.
+[/note]
 
-For joining a new machine to an existing Anbox Cloud Appliance we have to run through the init process as normal but this time have to answer the question about clustering with "yes" and provide the join token we have previously generated:
+## Join a machine
 
-    ubuntu@ip-172-31-31-72:~$ sudo anbox-cloud-appliance init
-    Welcome to the Anbox Cloud Appliance!
+To join a machine to an existing Anbox Cloud Appliance, run `sudo anbox-cloud-appliance init` as usual to start the initialisation process. When you are asked whether you want to join the node to an existing Anbox Cloud Appliance, answer "yes" and provide the join token that you generated:
 
-    The following questions will guide you through the initial setup of the
-    appliance. If you don't care about answering any of them you can just
-    accept the defaults.
+```
+Welcome to the Anbox Cloud Appliance!
 
-    For any further questions please have a look a the official Anbox Cloud
-    documentation at https://anbox-cloud.io/docs
+The following questions will guide you through the initial setup of the
+appliance. If you don't care about answering any of them you can just
+accept the defaults.
 
-    Are you joining this node to an existing Anbox Cloud Appliance installation? (EXPERIMENTAL) [default=no] yes
-    Please enter the join token: eyJsdCI6ImV5SnpaWEoyWlhKZmJtRnRaU0k2SW14NFpERWlMQ0ptYVc1blpYSndjbWx1ZENJNkltWXhPVEpqTm1Ga09XVm1PVGRoTXpnNU9XVmxOelF6WW1NeU5ESmxaak5sWkRaaVpXTm1abUV4T0dFNFlqRTVNalE1TjJaalkyRTBaREUzWlRRMk5HWWlMQ0poWkdSeVpYTnpaWE1pT2xzaU1UY3lMak14TGpJeExqVTZPRFEwTXlKZExDSnpaV055WlhRaU9pSmxOMlZrTldZd00yWTVPVEF5WXpKbVpETmlNRFV6TmpJeE5tTmpOV1JsWmprelptVTVPV05pTWpBM1lqRXlOekk1TVRneU1UTTVOV1EwTWpNeVpqQXdJbjA9IiwianQiOiJNRTRUQ1d4NFpERXROMkUyWXpBVUV4SXlOREF1TWpFdU5TNHlNelk2TVRjd056QUVJSmhzeVo5QjlrWGRKX0dOOWJQd09pTHlLV1VXdXM1Y092cDdST29INzdIWEV3bGhjSEJzYVdGdVkyVUEiLCJmIjp7Im0iOnRydWV9fQ==
+For any further questions please have a look a the official Anbox Cloud
+documentation at https://anbox-cloud.io/docs
 
-    ...
+Are you joining this node to an existing Anbox Cloud Appliance installation? (EXPERIMENTAL) [default=no] yes
+Please enter the join token: eyJsdCI6ImV5SnpaWEoyWlhKZmJtRnRaU0k2SW14NFpERWlMQ0ptYVc1blpYSndjbWx1ZENJNkltWXhPVEpqTm1Ga09XVm1PVGRoTXpnNU9XVmxOelF6WW1NeU5ESmxaak5sWkRaaVpXTm1abUV4T0dFNFlqRTVNalE1TjJaalkyRTBaREUzWlRRMk5HWWlMQ0poWkdSeVpYTnpaWE1pT2xzaU1UY3lMak14TGpJeExqVTZPRFEwTXlKZExDSnpaV055WlhRaU9pSmxOMlZrTldZd00yWTVPVEF5WXpKbVpETmlNRFV6TmpJeE5tTmpOV1JsWmprelptVTVPV05pTWpBM1lqRXlOekk1TVRneU1UTTVOV1EwTWpNeVpqQXdJbjA9IiwianQiOiJNRTRUQ1d4NFpERXROMkUyWXpBVUV4SXlOREF1TWpFdU5TNHlNelk2TVRjd056QUVJSmhzeVo5QjlrWGRKX0dOOWJQd09pTHlLV1VXdXM1Y092cDdST29INzdIWEV3bGhjSEJzYVdGdVkyVUEiLCJmIjp7Im0iOnRydWV9fQ==
 
-Afterwards the machine will automatically connect to the existing appliance and set everything up. The initialization process should run much quicker than for the first machine and should finish with a few minutes at maximum.
+...
+```
 
-Once the initialization process has finished, the second machine is ready to be used.
+Afterwards, the machine automatically connects to the existing appliance and sets everything up. The initialisation process should be quicker than for the first machine. It should finish after no more than a few minutes.
+
+Once the initialisation has finished, the second machine is ready to be used. To access the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), you can use the IP or DNS of any node in the cluster.

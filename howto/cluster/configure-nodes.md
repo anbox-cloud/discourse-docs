@@ -1,4 +1,4 @@
-Your cluster might contain nodes with different resources and different capacity. Therefore, each node can be configured separately.
+Your cluster or multi-node appliance might contain nodes with different resources and different capacity. Therefore, each node can be configured separately.
 
 ## Show node configuration
 
