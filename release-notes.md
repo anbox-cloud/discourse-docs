@@ -28,6 +28,7 @@ n/a
 * AC-909 AAR leaves `aar_upload_*` files in `/tmp`
 * AC-905 Images are not synchronised on 1.14 appliance
 * AC-818 Show Android boot animation properly
+* LP #1971945 AnboxCloud WebRTC handshake failed error
 
 [/Details]
 
