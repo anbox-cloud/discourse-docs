@@ -117,7 +117,7 @@ To add an AMS client as a trusted [client](https://discourse.ubuntu.com/t/applic
     sudo aar trust add client.crt
 
 [note type="information" status="Note"]
-Due to Snap strict confinement and the AAR sudo requirement, the command requires the certificates to be located in the root user home directory `/root`. To work around this requirement, use the following command:
+Due to Snap strict confinement and the AAR `sudo` requirement, the command requires the certificates to be located in the root user home directory `/root`. To work around this requirement, use the following command:
 
 `cat client.crt | sudo aar trust add [--publisher]`
 [/note]

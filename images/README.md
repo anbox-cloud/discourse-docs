@@ -169,6 +169,6 @@ Configure custom styles and colours:
 
 # Conventions
 
-- Use font "ubuntu".
+- Use font `ubuntu`.
 - Standard font size: 15pt
 - Use only the provided colours. See the colour palette at https://design.ubuntu.com/brand/colour-palette/ .

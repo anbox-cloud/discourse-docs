@@ -81,7 +81,7 @@ Due to Snap strict confinement, the folder or tarball file must be located in th
 The following issues might occur if you use clustering.
 
 <a name="ams-lxd-relation-changed-failed"></a>
-### AMS hook failed: "lxd-relation-changed"
+### AMS hook failed: `lxd-relation-changed`
 
 *Applies to: Anbox Cloud*
 

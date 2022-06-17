@@ -136,7 +136,7 @@ Return value for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
  * Return: standard return value or standard error
 
 [note type="information" status="Note"]
-The latitude or longitude of geographic coordinates can be expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example or in an NMEA-based data format as [ddmm.mm](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). Specify the format by setting the `format` field to either `"wgs84"` or `"nmea"`. If the field is omitted, its value defaults to `"wgs84"`. No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
+The latitude or longitude of geographic coordinates can be expressed in [decimal degree](https://en.wikipedia.org/wiki/Decimal_degrees) form (WGS84 data format) as shown below in the example or in an NMEA-based data format as [`ddmm.mm`](https://en.wikipedia.org/wiki/Geographic_coordinate_conversion) (d refers to degrees, m refers to minutes). Specify the format by setting the `format` field to either `"wgs84"` or `"nmea"`. If the field is omitted, its value defaults to `"wgs84"`. No matter which format you use, northern latitudes or eastern longitudes are positive, southern latitudes or western longitudes are negative.
 
 Both vertical and horizontal accuracy are measured in meters. The default value for GPS accuracy is 20 meters.
 [/note]
@@ -224,7 +224,7 @@ To determine if the camera is enabled, run the following query:
 #### POST
 
 * Description: Upload a static image to Anbox
- After a camera is enabled,  a static image (only jpeg format is supported by far) can be uploaded to Anbox as camera data.
+ After a camera is enabled,  a static image (only JPEG format is supported by far) can be uploaded to Anbox as camera data.
  * Operation: sync
  * Return: standard return value or standard error
 
@@ -239,7 +239,7 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 
 After this, when opening a camera application, the uploaded image should be displayed in the preview.
 
-Here is a caveat about the size of a jpeg image to be uploaded to Anbox. Irrespective of the screen orientation is in landscape or portrait, the size of the uploaded jpeg image must match one of the resolutions you got from the response to the camera info request, Anbox will rotate the image automatically for you based on current screen orientation.
+Here is a caveat about the size of a JPEG image to be uploaded to Anbox. Irrespective of the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request, Anbox will rotate the image automatically for you based on current screen orientation.
 
 [note type="information" status="Note"]If a static image already exists in Anbox, when you issue the above request next time, the image will be overridden.[/note]
 
@@ -265,7 +265,7 @@ Since a static image is deleted, the metadata that is recorded in camera informa
 
 #### STREAM VIDEO
 
-Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw colour format (rgba) based video streaming and display in the camera preview.
+Whenever you enable camera support in Anbox, you will get a video stream socket that can be eligible to receive raw colour format (RGBA) based video streaming and display in the camera preview.
 
 For example, for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/camera --data '{"enable":true}' | jq -r .metadata.video_stream_socket`:
 
@@ -283,7 +283,7 @@ ffmpeg -r 10 -i test.mp4 -vf format=rgba -f rawvideo -r 24 - | nc -N -U /run/use
 
 The above command will yield out 24 frame rate raw video output and send them to Anbox via the exposed video stream socket.
 
-Similar to uploading a static image to anbox, the video frame size must match the one of the resolution you got from the camera information API. For example, if you get 1280(w) x 720(h) resolution from the response of the camera info API, and the size of the video frame encoded in the uploaded video file is 320x640, you have to scale the video frame to the required size in some manners, otherwise you may get artefacts.
+Similar to uploading a static image to Anbox, the video frame size must match the one of the resolution you got from the camera information API. For example, if you get 1280(w) x 720(h) resolution from the response of the camera info API, and the size of the video frame encoded in the uploaded video file is 320x640, you have to scale the video frame to the required size in some manners, otherwise you may get artefacts.
 
 With ffmpeg, you can do:
 
