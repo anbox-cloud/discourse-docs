@@ -131,7 +131,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 1 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 1 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 1 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
-| 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/master/index) <!-- wokeignore:rule=master --> |
+| 1 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/index)|
 | 1 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 1 | exp/anbox-cloud | [About Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |

@@ -26,9 +26,9 @@ All benchmarks are done with a variation of the following `amc benchmark` comman
 
 | Instance type | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # Containers | Avg. FPS |
 |---------------|---------------------|----------------------|------------|---------------------|--------------|---------|
-| m6g.2xlarge   | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 20      |
-| m5a.2xlarge   | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 13      |
-| g5g.metal     | 1.12.1 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad) | 55 | 28 |
-| g5g.metal     | 1.12.1 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad) | 40 | 55 |
-| g5g.metal     | 1.12.1 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad) | 40 | 27 |
-| g5g.metal     | 1.12.1 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad) | 20 | 57 |
+| `m6g.2xlarge` | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 20      |
+| `m5a.2xlarge` | 1.11.2 (appliance)  | software / software  | 720p       | Android 10 Launcher | 3            | 13      |
+| `g5g.metal`   | 1.12.1 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad) | 55 | 28 |
+| `g5g.metal`   | 1.12.1 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad) | 40 | 55 |
+| `g5g.metal`   | 1.12.1 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad) | 40 | 27 |
+| `g5g.metal`   | 1.12.1 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad) | 20 | 57 |

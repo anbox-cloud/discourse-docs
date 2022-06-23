@@ -98,7 +98,7 @@ n/a
 * AC-788 DrArm is showing just a black screen
 * AC-782 Add support for missing GL parameter sizes
 * AC-765 Minetest crashes on 1.13.0 with SEGV in Anbox
-* AC-725 A segfault occurred from the WebRTC stack during the anbox session runtime
+* AC-725 A segfault occurred from the WebRTC stack during the Anbox session runtime
 * AC-646 1.12 hooks: $CONTAINER_TYPE is empty for regular containers
 * AC-827 Failed to create an arm64 based application when Anbox Cloud deployment is capable with multiple architectures
 
@@ -159,7 +159,7 @@ n/a
 * AC-731 Stream SDK: `getId()` returns invalid ID
 * AC-727 Cast player: add implementation for `canonicalLogout`
 * AC-726 The AAM inject-system-signature exited with an error when injecting system signature from an APK comes with none default RSA and SF files
-* AC-724 LXD cluster looses its ams0 storage pool when node failed to get added to the cluster
+* AC-724 LXD cluster looses its `ams0` storage pool when node failed to get added to the cluster
 * AC-719 Anbox session aborted due to stack smashing detected
 * AC-715 [Doc] Fix "Deploy on bare metal"
 * AC-712 Android crash in Mesa on not allowed `sched_getaffinity` syscall
@@ -183,7 +183,7 @@ n/a
 * AC-681 Can't stream video from NewPipe application
 * AC-680 Android log is spammed with `glUtilsParamSize unknown param` warning when running Firefox
 * AC-673 Android reports "Native format mismatch" error when running with Mesa and `swrast`
-* AC-670 Android crashes with dangling fd in Mesa
+* AC-670 Android crashes with dangling file descriptor in Mesa
 * AC-664 Application watchdog was triggered in some cases when enabling the virtual keyboard
 * AC-656 Deleting an instance fails with FormatException
 * AC-655 Resuming instances fails with "instance is still active"
@@ -197,7 +197,7 @@ n/a
 * AC-586 Android 10 fails to boot up
 * AC-579 BPF support is enabled but should not
 * AC-577 Android 12 aborts in Surfaceflinger with direct rendering on AMD GPUs
-* AC-574 Only restart coturn when necessary
+* AC-574 Only restart Coturn when necessary
 * AC-567 Node controller leaves old iptables rules
 * AC-565 camera-support:`swrast` test case fails with serious error
 * AC-559 Surfaceflinger fails to start at times
@@ -295,7 +295,7 @@ None.
 * AC-313 Dashboard: self signed certificate cause web browser to print a warning
 * AC-402 Accessing the appliance via the public AWS IP address rather than DNS name breaks streaming
 * AC-408 Improve appliance upgrade message
-* AC-496 coturn charm doesn't detect changed public address after machine stop / start on AWS
+* AC-496 Coturn charm doesn't detect changed public address after machine stop / start on AWS
 * AC-578 Settings app crashes when clicking on "Connected Devices"
 * AC-580 Android 12: Unhandled netlink message warnings in system log
 
@@ -347,7 +347,7 @@ None.
 ### Bug fixes
 
 * AC-467 AMS fails to import image with multiple instances
-* AC-174 LP #1927233 anbox-stream-gateway-lb has no open ports when deployed via Juju 2.9
+* AC-174 LP #1927233 `anbox-stream-gateway-lb` has no open ports when deployed via Juju 2.9
 * AC-293 Anbox leaks after `CtsGraphicsTestCases` has finished
 * AC-294 WebRTC platform crashes on `glDeleteTextures`
 * AC-446 Container fails to start: This operation can't be cancelled
@@ -356,7 +356,7 @@ None.
 * AC-501 A kernel crash occurred in `virt_wifi` kernel module
 * AC-502 Grafana fails in dashboard-relation-joined
 * AC-504 LXD nodes fail to be added if relation hook is run before AMS is configured
-* LP #1922918 LXD charm crashes with TypeError in count_lxd_nodes_in_cluster
+* LP #1922918 LXD charm crashes with TypeError in `count_lxd_nodes_in_cluster`
 * LP #1926118 Using invalid UA token causes hook error instead of proper error
 
 [/Details]
@@ -409,8 +409,8 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 #### Bugs
 
  * LP #1938761 Anbox WebView lost focus for unknown reasons and causes client side virtual keyboard hidden in the end
- * LP #1940807 Failed to launch anbox sessions with WebRTC platform (drm backend)
- * LP #1940853 anbox-cloud-dashboard-51 charm fails to deploy
+ * LP #1940807 Failed to launch Anbox sessions with WebRTC platform (`drm` backend)
+ * LP #1940853 `anbox-cloud-dashboard-51` charm fails to deploy
  * LP #1942677 Audio/Video recording is broken on Anbox `swrast` platform
  * AC-304 Dashboard reports "Could not get response from Anbox Stream Gateway"
  * AC-303 Dashboard lists non active images in application form
@@ -431,7 +431,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 * LP #1939277 `lxc-attach` fails on sendfile with EINVAL on 5.11
 * LP #1938877 Native crash occurred when creating an application from Android 11 after finishing application bootstrap
 * LP #1939274 Anbox crashes after "Failed to put memory protection in place"
-* LP #1939666 Bootstrap fails because of missing /dev/fd0
+* LP #1939666 Bootstrap fails because of missing `/dev/fd0`
 * LP #1939129 The `anbox-stream-sdk.js` file is missing from Android WebView based projects
 * LP #1938901 Appliance upgrade fails with Juju 2.9.x
 
@@ -458,7 +458,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 * LP #1936345 Appliance fails to bootstrap when NIC is on a /22 network
 * LP #1936799 text should be instantly shown up in the input edit widget when it's sent from the client side virtual keyboard
 * LP #1936835 Audio processing is enabled in WebRTC
-* LP #1936934 Ensure ubuntu user is allowed to talk to LXD
+* LP #1936934 Ensure Ubuntu user is allowed to talk to LXD
 * LP #1937005 AMS crashed when updating an image with the same fingerprint
 * LP #1938118 A refresh container that was launched from an application contains `tombstone_00` file
 * LP #1938288 Outbound audio stream remains after microphone is disabled
@@ -470,7 +470,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 * LP #1933489 Camera is not connected after rejoin
 * LP #1935809 Appliance `init` command can be run again while the appliance is initialising
 * LP #1936171 Missing `ISoundTriggerHw` in Android 11 images
-* LP #1936801 Support to run hooks after anbox session is fully up and running
+* LP #1936801 Support to run hooks after Anbox session is fully up and running
 * LP #1937266 Web socket connect to gateway fails with "Invalid UTF-8 sequence in header value" on iOS
 * LP #1913425 Provide an informative message when removing a certificate by running `amc config trust remove`
 * LP #1913560 Image version deletion only supports to perform the operation with image id
@@ -490,7 +490,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 ### Bug fixes
 
  * LP #1933195 Sensor device doesn't handle sync and guest_sync commands
- * LP #1932362 [appliance] public address of the lxd node in AMS is not set
+ * LP #1932362 [appliance] public address of the LXD node in AMS is not set
  * LP #1934877 A wrong main activity was used for some APKs
 
 [/Details]
@@ -533,7 +533,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 ### Bug fixes
 
 * LP #1926695 Task reaper fails to deleted container because of "target is busy"
-* LP #1927234 Sysctl settings for new LXD nodes are not applied
+* LP #1927234 `sysctl` settings for new LXD nodes are not applied
 * LP #1927910 Public status endpoint of the appliance returns internal endpoints without authentication
 * LP #1927342 `wifi-service.odex` is marked as imported but is not found for Android 11
 
@@ -582,7 +582,7 @@ Existing deployments based on 1.9.x are not affected by this bug.
 
 * LP #1883526 NATs reconnects quite often on a LXD deployment
 * LP #1912172 WebRTC platform hangs forever on peer connection release
-* LP #1885708 ams fails to start on deploy
+* LP #1885708 AMS fails to start on deploy
 * LP #1920999 IP addresses of LXD containers used by the appliance change after a reboot
 * LP #1921835 On systems with multiple Nvidia GPUs Anbox fails to start with WebRTC platform
 * LP #1922208 `juju config lxd images_compression_algorithm` does not work
@@ -591,7 +591,7 @@ Existing deployments based on 1.9.x are not affected by this bug.
 * LP #1924234 Failed to trigger action even if the proper actions were given
 * LP #1924891 Appliance CF template misses AWS regions
 * LP #1925121 The incompatible CUDA libraries were installed when deploying Anbox Cloud on a Nvidia GPU supported environment
-* LP #1926113 AMS is still leaking fds when constantly scaling LXD cluster
+* LP #1926113 AMS is still leaking FDS when constantly scaling LXD cluster
 * LP #1926696 Currently synchronised images never show up in `amc image ls`
 * LP #1905747 Check for Debian package before attempting to remove it
 * LP #1915139 Grafana dashboard doesn't provide Regions selector
@@ -627,7 +627,7 @@ No bugs were fixed in this release.
 
 ### New features & improvements
 
-* The LXD charm can now take a lxd-binary resource which allows attaching and detaching custom build LXD binaries
+* The LXD charm can now take a LXD-binary resource which allows attaching and detaching custom build LXD binaries
 * `amc delete` has now a `--force` flag which allows deleting container without gracefully stopping them
 * The number of internal workers in AMS responsible to delete and stop containers in parallel is now increased to 10
 * The Android `rild` service is now disabled but default as it was never intended to be active
@@ -653,7 +653,7 @@ No bugs were fixed in this release.
 * LP #1875542 The spread test `aam-backup-restore:exclude_files` is flaky sometimes
 * LP #1899948 Stream gateway: DB patches can run into race conditions
 * LP #1912757 Anbox Streaming Stack dashboard does not show "Agents" pane
-* LP #1920120 AMS charm should not try to manage the cluster when related to lxd-integrator
+* LP #1920120 AMS charm should not try to manage the cluster when related to `lxd-integrator`
 * LP #1922311 Anbox HTTP API server accepts empty sensor data
 * LP #1922313 `rild` service auto-started when Android system fully boot-up
 * LP #1916047 Daemon subcommand of the appliance is not hidden
@@ -670,11 +670,11 @@ No bugs were fixed in this release.
 
 ### Bug fixes
 
-* LP #1910676 AMS leaks fds
+* LP #1910676 AMS leaks FDS
 * LP #1917862 AMS charm tries to add/remove node when AMS service is not available
 * LP #1917867 LXD charm doesn't respect configured channel
 * LP #1917869 AMS fails to get started due to error `tls: private key does not match public key` when multiple AMS units are deployed
-* LP #1918089 Failed to remove lxd node from cluster
+* LP #1918089 Failed to remove LXD node from cluster
 * LP #1918431 Container logs are missing in a HA AMS
 * LP #1918675 Image synchronisation is not triggered in AMS when relevant configuration items change
 * LP #1918676 Image server configuration can be stale in HA AMS
@@ -687,9 +687,9 @@ No bugs were fixed in this release.
 
 ### New features & improvements
 
-* The coturn charm is now able to figure out the public address of a manually added
+* The Coturn charm is now able to figure out the public address of a manually added
   machine in a Juju model when deployed on AWS
-* The coturn charm does now allow customising the UDP relay port range
+* The Coturn charm does now allow customising the UDP relay port range
 * The AMS charm now has a `storage_pool` configuration option allowing AMS to configure
   LXD to use an existing storage pool
 * WebView based on [upstream 88.0.4324.181 release](https://chromereleases.googleblog.com/2021/02/chrome-for-android-update_16.html)
@@ -717,7 +717,7 @@ No bugs were fixed in this release.
 * LP #1917526 Native SDK crashes when signalling server uses DNS name instead of IP address
 * LP #1915245 UA layer doesn't print the "Missing UA Token" when deploying Anbox Cloud
 * LP #1915600 AMS configuration is not updated when port range is changed
-* LP #1917053 `linux-modules-extra` package should be installed as the dependency of anbox-module-dkms when bootstrap lxd charm
+* LP #1917053 `linux-modules-extra` package should be installed as the dependency of `anbox-module-dkms` when bootstrap LXD charm
 * LP #1917286 no audio output for streaming on iOS and Mac OS
 
 [/Details]
@@ -774,28 +774,28 @@ No bugs were fixed in this release.
  * LP #1897300 Rare ICE errors on iOS Safari when streaming
  * LP #1901035 Nvidia GPUs cannot host more than 12-13 Anbox containers
  * LP #1903518 Inconsistent Session object returned by the Gateway API
- * LP #1903991 coturn reports Unauthorised for users when stream was already established
+ * LP #1903991 Coturn reports Unauthorised for users when stream was already established
  * LP #1905734 WebRTC streaming fails in Firefox
  * LP #1908240 AMS timing issue when fetching an image before assigning it an alias
- * LP #1908404 Images are not synchronised from images.anbox-cloud.io
+ * LP #1908404 Images are not synchronised from `images.anbox-cloud.io`
  * LP #1910203 Dashboard charm crashes with KeyError on certificates relation
  * LP #1911202 Container delete fails with ZFS busy error
  * LP #1912113 WebRTC platform aborts with unhandled exception
- * LP #1912143 Port 3000 will not get opened after exposing aar (AMS registry)
- * LP #1912146 when NRPE relation is added to aar, 'Check AAR https endpoint' will always fail with 401 Unauthorised
+ * LP #1912143 Port 3000 will not get opened after exposing `aar` (AMS registry)
+ * LP #1912146 when NRPE relation is added to AAR, 'Check AAR HTTPS endpoint' will always fail with 401 Unauthorised
  * LP #1912267 WebRTC platform crashes in `eglReleaseThread` in `libEGL_mesa.so.0` on termination
  * LP #1912302 Container doesn't not terminate correctly
  * LP #1912470 The latest WebRTC platform is broken on Nvidia based GPU machine
  * LP #1912521 Dashboard charm does not set application version
- * LP #1912588 anbox-cloud-tests for gateway, sometime fails to launch container
+ * LP #1912588 `anbox-cloud-tests` for gateway, sometime fails to launch container
  * LP #1912732 Anbox cloud dashboard does not show all of the panes correctly
  * LP #1912784 Dashboard register URL is still on `http://`
  * LP #1912785 AMC failed to create container with error, however in LXD it was successfully created
  * LP #1912787 Status message of a session with status error is empty when container crashed
- * LP #1912932 CTS tests claims EGL_KHR_image extension is missing
+ * LP #1912932 CTS tests claims `EGL_KHR_image` extension is missing
  * LP #1912956 Native SDK example crashes when trying to lock destroyed mutex
  * LP #1913017 SEGV when terminating the streaming on Android client built against native SDK
- * LP #1913020 FORTIFY: pthread_mutex_lock called on a destroyed mutex on AudioTrack thread
+ * LP #1913020 FORTIFY: `pthread_mutex_lock` called on a destroyed mutex on AudioTrack thread
  * LP #1913058 `gpu-support.sh` script unloads kernel drivers when current driver is already the correct one
  * LP #1913264 Anbox Cloud Dashboard stuck on "waiting for UA" even with UA source configured
  * LP #1913305 Charm stays in blocked when UA attach failed
@@ -826,11 +826,11 @@ No bugs were fixed in this release.
 
  * Android security fixes from January 2021 (patch level `2021-01-05`, see [here](https://source.android.com/security/bulletin/2021-01-01) for more details)
  * WebView update to upstream release `87.0.4280.141` (see [here](https://chromereleases.googleblog.com/2021/01/chrome-for-android-update.html) for more details)
- * Various improvements to the coturn charm to allow proper use behind [AWS Elastic Load Balancers](https://aws.amazon.com/elasticloadbalancing/)
+ * Various improvements to the Coturn charm to allow proper use behind [AWS Elastic Load Balancers](https://aws.amazon.com/elasticloadbalancing/)
 
 ### Bug fixes
 
- * LP #1910583 Anbox-stream-gateway gets stuck and demands restart after some time of use
+ * LP #1910583 `anbox-stream-gateway` gets stuck and demands restart after some time of use
  * LP #1912342 Gateway reports database locked errors for various operations
 
 [/Details]
@@ -867,12 +867,12 @@ No bugs were fixed in this release.
 *  LP #1903510 `nagios_context` and `nagios_servicegroups` are never used in any charm
 *  LP #1885926 One touch point always stays when another touch event was fired
 *  LP #1902282 Idle timer in the WebRTC platform is not reinitialised after the first client disconnected
-*  LP #1902494 A malformed UA source blocked the anbox cloud deployment on AWS
+*  LP #1902494 A malformed UA source blocked the Anbox Cloud deployment on AWS
 *  LP #1902665 The latest `anbox-stream-sdk.js` broke the keyboard/mouse/touch input events to be propagated to the container
 *  LP #1902693 `inhibit-auto-updates` setting never worked
 *  LP #1902996 Time doesn't get refreshed in the status bar but the it does in the System settings
 *  LP #1903492 charm-upgrade hook implementation is missing apt update call
-*  LP #1903525 Invalid service dir permissions for the stream gateway
+*  LP #1903525 Invalid service directory permissions for the stream gateway
 *  LP #1903559 Gateway service is restarted when new units are added
 *  LP #1903676 Failed to remove LXD charm because zpool command is missing
 *  LP #1903747 Host composition is causing flickering in Anbox when streaming with LLVMpipe
@@ -899,7 +899,7 @@ No bugs were fixed in this release.
 * Anbox provides support for [Perfetto](https://perfetto.dev/) based tracing via its HTTP API
 * A custom expiration timeout can now be set for service accounts created for the Anbox Stream Gateway
 * HA support in the Anbox Stream Gateway was improved and stabilised
-* The coturn charm now support HA
+* The Coturn charm now support HA
 * Applications in AMS can now provide a free-form version field in their manifest to allow users to identify which application version is based on which APK version
 
 
@@ -907,7 +907,7 @@ No bugs were fixed in this release.
 
  * LP #1898180 AMS fails when related to Anbox registry due to missing certificate
  * LP #1901513 Don't join Dqlite cluster if gateway is not able to start
- * LP #1901573 coturn charm does not remove Debian package and configuration
+ * LP #1901573 Coturn charm does not remove Debian package and configuration
  * LP #1900704 HA attach fails if other application was already attached on same machine
  * LP #1901185 Manually pulling an application from registry crashes AMS
  * LP #1901511 UA layer fails in HA
@@ -915,7 +915,7 @@ No bugs were fixed in this release.
  * LP #1889923 Stream stops when browser window is resized
  * LP #1895009 UA Token is printed when attach failed
  * LP #1896813 Picture recorded via the camera app is corrupted
- * LP #1896953 Make getevent Android tool work with Unix sockets in /dev/input
+ * LP #1896953 Make `getevent` Android tool work with Unix sockets in `/dev/input`
  * LP #1897085 Take a picture from the `uber` driver application causes the application crash
  * LP #1897277 Streaming gives a black screen on iOS Safari
  * LP #1898220 A native crash occurs when doing a video recording from camera applications
@@ -923,15 +923,15 @@ No bugs were fixed in this release.
  * LP #1898740 LXD unit fails to stop when storage pool still has containers
  * LP #1899324 Video recording doesn't work out on `swrast` platform
  * LP #1899658 SensorManager thread run into a busy loop
- * LP #1901021 checksum of dmp file is different from the original log file pulled out from the lxd container
+ * LP #1901021 checksum of dump file is different from the original log file pulled out from the LXD container
  * LP #1901194 Anbox Stream Gateway doesn't register dashboard with Grafana
  * LP #1901197 Android streaming example hangs after adding the audio support
  * LP #1901668 Stream SDK should time out if WebRTC connection is not established in time
  * LP #1901744 Anbox hangs at time when container is terminated
  * LP #1884498 Improve error when application has an APK with unsupported ABIs
  * LP #1888383 Supply `extra-properties` upon Anbox session startup broke the Android container startup
- * LP #1892410 Containers hangs after anbox-system-update failed
- * LP #1896789 uiautomator crashes in anbox-shell
+ * LP #1892410 Containers hangs after `anbox-system-update` failed
+ * LP #1896789 `uiautomator` crashes in `anbox-shell`
  * LP #1897790 Read UA token from include-file://
  * LP #1898697 `anbox-stream-sdk._unregisterControls` is not working correctly
  * LP #1894978 Sanitise prepare hook upon an addon creation
@@ -1010,7 +1010,7 @@ None
 ### New features & improvements
 
 * Anbox Cloud is now fully integrated with [Ubuntu Advantage](https://ubuntu.com/advantage)
-* TLS certificates are now managed through a common CA for all components ([easyrsa](https://charmhub.io/containers-easyrsa))
+* TLS certificates are now managed through a common CA for all components ([Easy-RSA](https://charmhub.io/containers-easyrsa))
 * GPS position updates can now be provided via a new  HTTP API endpoint Anbox exposes within
   the container or via the streaming SDK
 * Removed [KSM](https://www.kernel.org/doc/html/latest/admin-guide/mm/ksm.html) support
@@ -1062,7 +1062,7 @@ None
 
 * LP #1885107: Automatic application updates were missing configured resources, watchdog
   or service information
-* LP #1885257: anboxd was using 100% of a single CPU core due to a spinning loop
+* LP #1885257: `anboxd` was using 100% of a single CPU core due to a spinning loop
 
 [/Details]
 
@@ -1118,7 +1118,7 @@ None
 * Containers are now gracefully terminated to ensure the backup hook is executed
 * Support to start a container with one specific application version from Anbox Stream Gateway UI
 * Support numpad and mouse wheel input for the WebRTC based Streaming Stack
-* Collecting basic statistics (fps, rtt and bandwidth) while streaming and display them in Anbox Stream Gateway UI
+* Collecting basic statistics (FPS, RTT and bandwidth) while streaming and display them in Anbox Stream Gateway UI
 * Stream Gateway will not directly be exposed to the public network but only accessible via a reverse proxy
 * Dropped the monitoring stack from the default Juju bundle. It is now available via an overlay
 
@@ -1177,7 +1177,7 @@ None
 
 ### New features & improvements
 
-* Generating thumbnails within libstagefright in the Android 7 images is now working
+* Generating thumbnails within `libstagefright` in the Android 7 images is now working
   reliable where it was generating single coloured images at times before.
 * Error messages are now presented via the AMS REST API for application versions.
 * The configuration of a container was created with (platform, boot package, ...)
@@ -1248,9 +1248,9 @@ None
   for raw container launches or applications
 * Initial support for event monitoring of the AMS service via `amc monitor` and the REST API
 * The `swrast` platform is now part of the default image and doesn't need to be installed via an addon
-* The binder and ashmem kernel modules are now supported on the HWE 5.0 kernel coming with Ubuntu 18.04.3
+* The `binder` and `ashmem` kernel modules are now supported on the HWE 5.0 kernel coming with Ubuntu 18.04.3
 * Services a container provides can now be named to help identifying them
-* The Android container is now further secured with a more narrow [seccomp](https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt)
+* The Android container is now further secured with a more narrow [`seccomp`](https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt)
   profile than the outer Anbox container.
 * Addons can now declare that they add support for specific Android ABIs not supported by the hardware
   via software based binary translation

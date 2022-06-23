@@ -128,7 +128,7 @@ When the application for the virtual device is ready, you can launch it and log 
         anbox-shell
 
 5. Enter some commands. For example, enter `ls` to display the files inside the Android container, or `logcat` to display the logs.
-6. Enter `exit` or press Ctrl+D once to exit the Android shell, and then again to exit the Linux container.
+6. Enter `exit` or press `Ctrl`+`D` once to exit the Android shell, and then again to exit the Linux container.
 
 <a name="scrcpy"></a>
 ## 5. Test the virtual device

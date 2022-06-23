@@ -8,7 +8,7 @@ Adding a unit is done with the following syntax:
 
     juju add-unit <application name> -n <number of units to add>
 
-For example, to go from 1 to 5 ams units, you would run the following:
+For example, to go from 1 to 5 AMS units, you would run the following:
 
     juju add-unit ams -n 4
 
@@ -29,7 +29,7 @@ Anbox Cloud Core HA requires additional AMS instances as well as a load balancer
     juju relate ams ams-load-balancer
     juju add-unit ams -n 2
 
-If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to ams:
+If you are using the `amc` snap on your machine, you can tell it to use the load balancer instead of talking directly to AMS:
 
     amc remote add lb https://10.75.96.23:8444
     amc remote set-default lb

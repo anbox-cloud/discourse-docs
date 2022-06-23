@@ -103,6 +103,6 @@ If you want to focus on a specific subset of the tests you can specify a focus f
 
 The following focus areas are available
 
-* streaming
-* gateway
-* ams
+* `streaming`
+* `gateway`
+* `ams`

@@ -135,12 +135,12 @@ It's recommended to let Anbox choose the right values for `owner` and `permissio
 
 Name          | App data installation directory | Type | Value
 --------------|---------------------------------|------|--------
-|`owner`       | sdcard      | File | `package_uid:sdcard_rw`
-|              | sdcard      | Dir  | `package_uid:sdcard_rw`
+|`owner`       | SD card      | File | `package_uid:sdcard_rw`
+|              | SD card      | Dir  | `package_uid:sdcard_rw`
 |              | system data | File | `package_uid:package_gid`
 |             | system data | Dir  | `package_uid:package_gid`
-|`permissions` | sdcard      | File | 0660
-|              | sdcard      | Dir  | 0771
+|`permissions` | SD card      | File | 0660
+|              | SD card      | Dir  | 0771
 |              | system data | File | 0660
 |              | system data | Dir  | boot package folder -> 0700, nested folders of boot package folder -> 0770
 

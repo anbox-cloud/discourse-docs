@@ -113,7 +113,7 @@ Select the instance type that is most suitable for what you're planning to do. F
 
 ![Choose an instance type|690x451](https://assets.ubuntu.com/v1/f61efdc4-install_appliance_instance-type.png)
 
-In this example, we picked *g4dn.2xlarge*, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
+In this example, we picked `g4dn.2xlarge`, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
 
 Click **Next: Configure Instance Details** to continue.
 
@@ -134,7 +134,7 @@ The Anbox Cloud instance requires sufficient storage to work correctly. The root
 In this example, we use three storage volumes:
 
 * `/dev/sda1` as root disk with a size of 50 GB.
-* An ephemeral `/dev/nvme0n1` disk (part of the g4dn instance), which is ignored by the Anbox Cloud Appliance.
+* An ephemeral `/dev/nvme0n1` disk (part of the `g4dn` instance), which is ignored by the Anbox Cloud Appliance.
 * `/dev/sdb` as EBS volume with a size of 100 GB.
 
 If you don't have any specific requirements, we recommend choosing the same configuration.
