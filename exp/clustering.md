@@ -13,7 +13,7 @@ The appliance uses [FAN networking](https://wiki.ubuntu.com/FanNetworking) to sp
 
 This setup extends the capacity, but currently, it does not provide support for high availability (HA).
 
-See [How to join a machine to the Anbox Cloud Appliance](tbd) for instructions on how to add machines to the appliance.
+See [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054) for instructions on how to add machines to the appliance.
 
 <a name="clustering-anbox-cloud"></a>
 ## Clustering for full Anbox Cloud deployments

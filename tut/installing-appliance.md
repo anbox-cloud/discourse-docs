@@ -311,4 +311,4 @@ Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you s
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
 
-If you want to increase the capacity of your Anbox Cloud Appliance deployment, you can add more machines to it. See [How to join a machine to the Anbox Cloud Appliance](tbd) for instructions.
+If you want to increase the capacity of your Anbox Cloud Appliance deployment, you can add more machines to it. See [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054) for instructions.
