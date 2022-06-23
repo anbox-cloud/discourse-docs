@@ -11,7 +11,6 @@ This tutorial guides you through the steps that are required to install and init
 3. [Initialise the appliance](#initialise)
 4. [Register with the dashboard](#register)
 
-
 <a name="prerequisites"></a>
 ## Check the prerequisites
 
@@ -311,3 +310,5 @@ The output provides a link that you must open in your web browser to finish the 
 Your Anbox Cloud Appliance is now fully set up and ready to be used! Next, you should check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) or the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to familiarise yourself with how to use Anbox Cloud.
 
 You can find more information about how to use the appliance in the documentation. The appliance installation is nearly identical to installing via Juju, so all the commands and examples not relating directly to Juju will apply.
+
+If you want to increase the capacity of your Anbox Cloud Appliance deployment, you can add more machines to it. See [How to join a machine to the Anbox Cloud Appliance](tbd) for instructions.

@@ -131,7 +131,7 @@ See https://discourse.ubuntu.com/t/about-anbox-cloud/17802.
 <a name="anbox-cloud-appliance"></a>
 ### Anbox Cloud Appliance
 
-A self-contained, single-machine deployment variant of Anbox Cloud.
+A self-contained deployment variant of Anbox Cloud.
 
 See [Variants](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#variants).
 

@@ -53,7 +53,7 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 40 GB of disk space for the OS
 * optional, but strongly recommended: >= 50GB block volume to host container storage
 
-The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an explanation on how to plan for a specific capacity on your appliance.
+The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
 
 On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
 
@@ -105,7 +105,7 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 
 The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
-More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765) for an introduction of how many resources are necessary to host a specific number of containers.
+More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
 
 If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
 
