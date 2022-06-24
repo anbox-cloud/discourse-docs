@@ -18,6 +18,10 @@ In the `hooks` directory, create a `pre-start` file with the following content:
 ```bash
 #!/bin/bash
 
+if [ "$CONTAINER_TYPE" = "regular" ]; then
+  exit 0
+fi
+
 mkdir -p ~/.ssh
 cat "$ADDON_DIR"/ssh-addon-key.pub >> ~/.ssh/authorized_keys
 ```
@@ -27,7 +31,13 @@ Make the file executable. To do so, enter the following command (in the `ssh-add
 chmod +x hooks/pre-start
 ```
 
-[note type="information" status="Tip"]Supported hooks are `pre-start`, `post-start` and `post-stop`. Read more about them [here](https://discourse.ubuntu.com/t/hooks/28555).[/note]
+[note type="information" status="Tip"]
+
+- Supported hooks are `pre-start`, `post-start` and `post-stop`.
+- Use the `CONTAINER_TYPE` variable to distinguish between regular and base containers.
+
+See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more information.
+[/note]
 
 Create an SSH key in your addon directory and move the private key to a location outside of the addon directory (for example, your home directory):
 ```bash
