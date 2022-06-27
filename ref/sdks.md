@@ -9,7 +9,7 @@ Anbox Cloud provides a series of Software Development Kits (SDKs) to facilitate 
 
 The Anbox Platform SDK provides support for developing custom platform plugins, which allows cloud providers to integrate Anbox with their existing infrastructure. The SDK provides several integration points for things like rendering, audio or input processing.
 
-For more details about custom platform plugins, refer to the [Anbox Platform SDK API documentation](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html).
+For more details about custom platform plugins, refer to the [Anbox Platform SDK API documentation](https://anbox-cloud.github.io/latest/anbox-platform-sdk/).
 
 ### Download and installation
 
