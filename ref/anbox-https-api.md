@@ -57,6 +57,7 @@ HTTP code must be one of 400 or 500.
      * [`/1.0/camera/data`](#heading--10cameradata)
    * [`/1.0/sensors`](#heading--10sensors)
    * [`/1.0/tracing`](#heading--10tracing)
+   * [`/1.0/platform`](#heading--10platform)
 
 ## API details
 <a name="heading--10"></a>
@@ -364,7 +365,6 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
  "status_code": 200,
  "type": "sync"
 }
-
 ```
 
 The sensor data is in the form of the following JSON  data structure and all values in the data are represented as floating-point data.
@@ -445,3 +445,48 @@ Return value:
 
 As a result, a trace file can be found from the given path recorded in the response.
 You can pull that file from the container and import it to [Perfetto Trace Viewer](https://ui.perfetto.dev/#!/viewer) for further analysis.
+
+<a name="heading--10platform"></a>
+### `/1.0/platform`
+#### GET
+
+* Description: Get information about the current platform that Anbox uses
+* Operation: sync
+* Return: Information about the current Anbox platform
+
+Return value for `curl -s -X GET --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0/platform | jq .`:
+
+```bash
+{
+  "metadata": {
+    "name": "webrtc",
+    "config": {
+      ...
+    }
+ },
+  "status": "Success",
+  "status_code": 200,
+  "type": "sync"
+}
+```
+
+#### PATCH
+ * Description: Update configuration of the platform currently used by Anbox
+ * Operation: sync
+ * Return: Standard return value or standard error
+
+Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X PATCH s/1.0/platform --data '{"config":{"rtc_log":true}}' | jq .`:
+
+```bash
+{
+ "status": "Success",
+ "status_code": 200,
+ "type": "sync"
+}
+```
+
+The available configuration items depend on the platform being used by Anbox and are dynamically registered. The following table shows a list of items available with the platforms shipping with Anbox Cloud.
+
+Platform | Field name        | JSON type | Description        |
+---------|-------------------|-----------|-
+`webrtc` | `rtc_log`         | Boolean   | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the Anbox container. |
