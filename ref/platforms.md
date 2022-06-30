@@ -1,4 +1,4 @@
-Anbox can make use of different [platforms](https://anbox-cloud.github.io/1.13/anbox-platform-sdk/index.html) to customise its behaviour. Anbox Cloud currently supports 3 platforms. Which one to use depends on your needs.
+Anbox can make use of different [platforms](https://anbox-cloud.github.io/latest/anbox-platform-sdk/) to customise its behaviour. Anbox Cloud currently supports 3 platforms. Which one to use depends on your needs.
 
 ## Supported platforms
 
