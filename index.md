@@ -145,6 +145,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/aar | [About the AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 2 | exp/containers | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 2 | exp/clustering | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 2 | exp/performance | [About performance](tbd)
 | 2 | exp/capacity-planning | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 2 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
