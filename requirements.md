@@ -113,4 +113,4 @@ Applications not maintained by Anbox Cloud may have different hardware recommend
  - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)
  - **HAProxy** (load balancer for the Stream Gateway and the dashboard): [Installation](https://www.haproxy.com/documentation/hapee/latest/installation/getting-started/os-hardware/#hardware-requirements)
 
-Please note that these are just baselines and should be adapted to your workload. No matter the application, [monitoring and tuning the performance]() is always important.
+Please note that these are just baselines and should be adapted to your workload. No matter the application, [monitoring and tuning the performance](https://discourse.ubuntu.com/t/about-performance/29416) is always important.

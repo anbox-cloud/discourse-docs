@@ -8,7 +8,7 @@ The explanatory guides in this section introduce you to the concepts used in Anb
 | [About the AAR](https://discourse.ubuntu.com/t/application-registry/17761)| Understand the Anbox Application Registry (AAR) |
 | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)| Understand the different container types and the container life cycle |
 | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)| Learn about clustering |
-| [About performance](tbd) | Understand the aspects that are relevant for tuning the performance of Anbox Cloud |
+| [About performance](https://discourse.ubuntu.com/t/about-performance/29416) | Understand the aspects that are relevant for tuning the performance of Anbox Cloud |
 | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) | Learn how to estimate the required capacity for your Anbox Cloud deployment |
 | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)| Understand which GPUs are supported and how they are used |
 | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)| Learn about the architecture of the Streaming Stack and supported video codecs |
