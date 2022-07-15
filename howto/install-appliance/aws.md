@@ -56,73 +56,72 @@ On the EC2 dashboard, click **Launch Instance** to start the Launch Instance Wiz
 
 ![Start the Launch Instance Wizard|690x451](https://assets.ubuntu.com/v1/17073a3d-install_appliance_launch-wizard.png)
 
-[note type="information" status="Note"]You should go through all steps in the wizard before launching the instance. In most steps, you can accept the default configuration, but you must configure the required storage for the instance. Therefore, do not click **Review and Launch** until you reach the final page of the wizard.[/note]
-
 ### 2. Select the AMI
 
-To select the Amazon Machine Image (AMI), type "Anbox Cloud" in the search field.
+To select the Amazon Machine Image (AMI), type "Anbox Cloud" in the search field of the **Application and OS Images** section.
+
+![Search for the Anbox Cloud Appliance AMI|690x451](../../images/install_appliance_search-ami.png)
 
 Choose either the Arm variant or the x86 variant and click **Select**.
 
-![Select the Amazon Machine Image (AMI)|690x451](https://assets.ubuntu.com/v1/ce51218c-install_appliance_select-ami.png)
+![Select the Amazon Machine Image (AMI)|690x451](../../images/install_appliance_select-ami.png)
 
 You will be presented with the pricing information. Click **Continue** to confirm.
 
 ### 3. Choose an instance type
 
-AWS offers various instance types. The Anbox Cloud Appliance images are listed for a subset of the available instance types only.
+AWS offers various instance types. The Anbox Cloud Appliance images are supported for a subset of the available instance types only.
 
-Select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
+In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
 
-![Choose an instance type|690x451](https://assets.ubuntu.com/v1/f61efdc4-install_appliance_instance-type.png)
+![Choose an instance type|690x451](../../images/install_appliance_instance-type.png)
 
 In this example, we picked `g4dn.2xlarge`, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
 
-Click **Next: Configure Instance Details** to continue.
+### 4. Select a key pair
 
-### 4. Configure the instance details
+In the **Key pair (login)** section, choose an existing key pair or create one if you don't have one yet. Make sure to save the private key in a secure location.
 
-You do not need to customise any of the settings in the instance details, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
+![Choose or create a key pair|690x451](../../images/install_appliance_key-pair.png)
 
-![Configure the instance details|690x451](https://assets.ubuntu.com/v1/3aed5594-install_appliance_configure-instance.png)
+### 5. Configure the network
 
-Click **Next: Add Storage** to continue.
+You do not need to customise any of the settings in the **Network settings** section, but you can fine-tune things. For example, you might want to put the instance onto a different VPC or subnet.
 
-### 5. Add storage
+To allow external access, several ports in the security group attached to the AWS instance must be open. The AMI already comes with the required configuration, so you don't need to do any changes. However, for security reasons, you might want to limit access to specific source IPs or subnets.
 
-The Anbox Cloud instance requires sufficient storage to work correctly. The root disk should have at minimum 50 GB and for best performance, you should create an additional EBS volume of at least 50 GB. Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
+For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
 
-![Add storage|690x451](https://assets.ubuntu.com/v1/1ee4160c-install_appliance_add-storage.png)
+![Configure the security group|690x451](../../images/install_appliance_security-group.png)
+
+### 6. Add storage
+
+The Anbox Cloud instance requires sufficient storage to work correctly. For optimal performance, we recommend the following setup:
+
+* A root disk with a minimum of 50 GB (required)
+* An additional EBS volume of at least 50 GB (strongly recommended)
+
+Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
+
+![Add storage|690x451](../../images/install_appliance_add-storage.png)
 
 In this example, we use three storage volumes:
 
-* `/dev/sda1` as root disk with a size of 50 GB.
-* An ephemeral `/dev/nvme0n1` disk (part of the `g4dn` instance), which is ignored by the Anbox Cloud Appliance.
-* `/dev/sdb` as EBS volume with a size of 100 GB.
+* Volume 1 at `/dev/sda1` as root disk with a size of 50 GB
+* Volume 2 at `/dev/sdb` as EBS volume with a size of 100 GB
+* Volume 3, an ephemeral disk at `/dev/nvme0n1`, which is part of the `g4dn` instance and which is ignored by the Anbox Cloud Appliance
 
 If you don't have any specific requirements, we recommend choosing the same configuration.
 
-Click **Next: Add Tags** and then **Next: Configure Security Group** to continue.
-
-### 6. Configure the security group
-
-To allow external access, you must open several ports in the security group attached to the AWS instance. The AMI already comes with the required configuration, so you don't need to do any changes. For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
-
-![Configure the security group|690x451](https://assets.ubuntu.com/v1/2910cbd3-install_appliance_security-group.png)
-
-Click **Review and Launch** to continue.
-
 ### 7. Review and launch
 
-You should now review the instance configuration. If everything is correct, click **Launch**.
+You should now review the instance summary. If everything is correct, click **Launch instance**.
 
-You are prompted to select a key pair. You can choose an existing key pair or create one if you don't have one yet. Make sure to save the private key in a secure location.
+![Launch the instance|690x451](../../images/install_appliance_launch-instance.png)
 
-![Confirm to launch instances|690x451](https://assets.ubuntu.com/v1/c13f7244-install_appliance_launch-instances.png)
+AWS will verify your configuration, subscribe you to the product and launch the instance.
 
-Click **Launch Instances** to continue. AWS will verify your configuration, subscribe you to the product and launch the instance.
-
-![Launch status|690x451](https://assets.ubuntu.com/v1/5115a09d-install_appliance_launch-status.png)
+![Launch status|690x451](../../images/install_appliance_launch-status.png)
 
 ## Access the appliance
 
