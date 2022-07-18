@@ -3,6 +3,29 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.14.2]
+
+## 1.14.2 (July 18 2022)
+
+#### New features & improvements
+
+* Included Android security updates for July 2022 (see [Android Security Bulletin - July 2022](https://source.android.com/security/bulletin/2022-07-01) for more information).
+* Updated Android WebView to [103.0.5060.71](https://chromereleases.googleblog.com/2022/07/chrome-for-android-update.html).
+* [Join URLs](https://anbox-cloud.github.io/latest/anbox-stream-gateway/#/session/handle-join-session) handed out by the Anbox Stream Gateway to the Anbox container instances will now not expire anymore. This allows sessions to run forever, if needed.
+* The Anbox Cloud Appliance now supports deploying behind a HTTP proxy through the `--proxy` argument available for the `anbox-cloud-appliance init` command.
+
+### Known issues
+
+n/a
+
+#### Bugs
+
+* AC-945 An unhandled exception is raised when starting Anbox
+* AC-943 No WebRTC metrics data are collected in the Grafana dashboard of the appliance
+* AC-932 Anbox aborts due to assert in `libsoup` being triggered
+
+[/Details]
+
 [Details=1.14.1]
 
 ## 1.14.1 (June 16 2022)
