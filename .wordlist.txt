@@ -38,6 +38,7 @@ bzip
 cancellable
 CDN
 Centriq
+CFS
 cgroup
 Charmhub
 Charmstore

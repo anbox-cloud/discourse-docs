@@ -25,6 +25,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `registry.mode` | string | pull | Mode the registry client in AMS operates in. Possible values are: manual, pull, push|
 | `registry.url` | string | - | URL of the application registry to use |
 | `scheduler.strategy` | string | spread | Strategy the internal container scheduler in AMS is using to distribute container across available LXD nodes. Possible values are: `binpack`, `spread` |
+| `cpu.limit_mode` | string | scheduler | Mode AMS uses to limit CPU access for a container. Have a look [here]](https://discourse.ubuntu.com/t/about-performance/29416) for more details. Possible values are: `scheduler`, `pinning` |
 
 <a name="node-specific"></a>
 ## Node-specific configuration
