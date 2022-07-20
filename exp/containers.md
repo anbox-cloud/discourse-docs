@@ -63,6 +63,13 @@ Status            |  Description
 `deleted` | The container is deleted and will be removed from the AMS database soon.
 `error` | An error occurred while processing the container. The container is stopped. Further information about the error can be viewed with `amc show <container id>`.
 
+## Development mode
+
+AMS allows to start a container in a development mode. This will turn off certain features, which are active in a container otherwise. The mode is mainly useful for development of addons inside an Anbox container.
+
+When development mode is turned on, the container will not send status updates to AMS when the Anbox runtime is terminated. This allows you to restart the Anbox runtime inside the container providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or other extensions.
+
+Inside an Anbox container development mode can be detected by looking at the `devmode` field in the `/var/lib/anbox/session.yaml` configuration file. If it is set to `true` then development mode is active, otherwise it is not.
 
 ## Managing containers
 

@@ -61,6 +61,7 @@ customisable
 CustomLocale
 deprecations
 Dev
+devmode
 DNS
 dnsmasq
 Dqlite
