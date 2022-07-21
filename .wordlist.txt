@@ -91,6 +91,7 @@ IDR
 IME
 Intra
 IoT
+IPs
 iptables
 JS
 JSON
@@ -184,6 +185,7 @@ stdout
 subcommand
 subcommands
 subnet
+subnets
 Surfaceflinger
 swiftshader
 syscall
