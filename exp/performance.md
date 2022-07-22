@@ -26,10 +26,10 @@ Generally, applications should use the smallest suitable instance type. However,
 
 AMS has different modes to grant CPU access to a container. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
 
-* `scheduler` - This will use the LXD [`limits.cpu.allowance`](https://linuxcontainers.org/lxd/docs/master/instances/#cpu-limits) <!-- wokeignore:rule=master --> configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
-* `pinning` - This will use the LXD [`limits.cpu`](https://linuxcontainers.org/lxd/docs/master/instances/#cpu-limits) <!-- wokeignore:rule=master --> configuration option to pin a set of CPU cores to a container. LXD is responsible to allocate a specific number of cores to a container and load balance all running containers on all available cores.
+* `scheduler` - This mode uses the LXD [`limits.cpu.allowance`](https://linuxcontainers.org/lxd/docs/latest/instances/#cpu-limits) configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
+* `pinning` - This mode uses the LXD [`limits.cpu`](https://linuxcontainers.org/lxd/docs/latest/instances/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balance all running containers on all available cores.
 
-By default AMS uses the `scheduler` option as it provides the most generic solution to a large set of use cases Anbox Cloud supports. However in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
+By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases  that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
 
 <a name="hardware-setup"></a>
 ## Hardware and network setup
