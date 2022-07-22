@@ -8,6 +8,7 @@ The reference material in this section provides technical descriptions of Anbox 
 | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) | Documentation for the APIs that Anbox Cloud provides |
 | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)| A list of predefined instance types |
 | [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)| A description of the supported Anbox platforms |
+| [WebRTC Streamer](TBD)| Documentation of the WebRTC streamer configuration |
 | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)| Documentation of the performance metrics that Anbox Cloud provides |
 | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)| A list of AMS configuration options |
 | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)| A list of the attributes that can be specified in the application manifest |
