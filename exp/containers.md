@@ -65,11 +65,11 @@ Status            |  Description
 
 ## Development mode
 
-AMS allows to start a container in a development mode. This will turn off certain features, which are active in a container otherwise. The mode is mainly useful for development of addons inside an Anbox container.
+AMS allows to start a container in development mode. This mode turns off some features that are usually active in a container. It is mainly useful when developing addons inside a container.
 
-When development mode is turned on, the container will not send status updates to AMS when the Anbox runtime is terminated. This allows you to restart the Anbox runtime inside the container providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or other extensions.
+When development mode is enabled, the container does not send status updates to AMS when the Anbox runtime is terminated. This allows you to restart the Anbox runtime inside the container, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or other extensions.
 
-Inside an Anbox container development mode can be detected by looking at the `devmode` field in the `/var/lib/anbox/session.yaml` configuration file. If it is set to `true` then development mode is active, otherwise it is not.
+To check whether development mode is enabled, run `amc show <container_ID>` or look at the `/var/lib/anbox/session.yaml` file in the container. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
 ## Managing containers
 

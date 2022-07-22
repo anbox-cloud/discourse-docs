@@ -63,7 +63,7 @@ If you have built your own platform named `foo` and you built it via an addon in
 
 ## Launch a container with development mode enabled
 
-Containers can be launched with development features turned on. This needs to be specified when a container is launched and can not be turned off afterwards. It's strongly recommended not to enable development mode for containers used in a production environment.
+You can launch containers with additional development features turned on. This development mode must be enabled when a container is launched, and it cannot be turned off afterwards. You should never enable development mode for containers used in a production environment.
 
 To launch a container with development mode enabled, add the `--devmode` flag to the launch command:
 
