@@ -29,7 +29,7 @@ The available commands for the `anbox-cloud-appliance` tool are:
   Display detailed information about a command.
 - `init`
 
-  Configure and initialise the Anbox Cloud Appliance. See [Start the initialisation process](https://discourse.ubuntu.com/t/install-appliance/22681#start-initialise) for more information.
+  Configure and initialise the Anbox Cloud Appliance. See [Initialise the appliance](tbd#initialise) for more information.
 - `monitor`
 
   Expose or unexpose the monitoring dashboard, if you deployed it during the initialisation. By default, the monitoring dashboard is exposed.

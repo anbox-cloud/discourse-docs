@@ -172,3 +172,20 @@ Configure custom styles and colours:
 - Use font `ubuntu`.
 - Standard font size: 15pt
 - Use only the provided colours. See the colour palette at https://design.ubuntu.com/brand/colour-palette/ .
+
+# Upload images to the asset manager
+
+Images should be uploaded to https://manager.assets.ubuntu.com/ .
+
+To do this from the command line, get an API token and install https://github.com/canonical/canonicalwebteam.upload-assets
+
+Export the required environment variables:
+
+    export UPLOAD_ASSETS_API_TOKEN=<api_token>
+    export UPLOAD_ASSETS_API_DOMAIN=assets.ubuntu.com
+
+Then upload with the following command:
+
+    upload-assets -t "Anbox Cloud" images/<file_name(s)>
+
+Add more tags if it makes sense (as a comma-separated list).

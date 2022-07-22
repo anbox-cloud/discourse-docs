@@ -11,7 +11,7 @@ The following requirements apply to all variants of Anbox Cloud.
 
 After registering to Anbox Cloud, you should have received an [Ubuntu Advantage for Applications](https://ubuntu.com/advantage) token. If you haven't received one, please contact [support](https://support.canonical.com/) or your Canonical account representative as you'll need it to deploy Anbox Cloud.
 
-[note type="information" status="Note"]When [installing the Anbox Cloud Appliance from the AWS Marketplace](https://discourse.ubuntu.com/t/install-appliance/22681#install-aws), the Ubuntu Advantage token is included in the Anbox Cloud Appliance subscription and is used under the hood during the deployment. Therefore, you will not receive it separately.[/note]
+[note type="information" status="Note"]When [installing the Anbox Cloud Appliance from the AWS Marketplace](tbd), the Ubuntu Advantage token is included in the Anbox Cloud Appliance subscription and is used under the hood during the deployment. Therefore, you will not receive it separately.[/note]
 
 ### Ubuntu OS
 
