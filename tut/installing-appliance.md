@@ -1,7 +1,7 @@
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
 [note type="information" status="Note"]
-There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a local machine. To install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](tbd).
+There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a local machine. To install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702).
 
 For instructions on how to install **Anbox Cloud**, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336).
 [/note]
@@ -70,7 +70,7 @@ After the installation, access the appliance in your web browser by entering the
 
 ![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
 
-See [How to finalise the installation](tbd) for detailed information about the initialisation process.
+See [How to finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) for detailed information about the initialisation process.
 
 ### 1. Start the initialisation process
 

@@ -48,7 +48,7 @@ unit-anbox-cloud-dashboard-0:
 <a name="dashboard-access-appliance"></a>
 #### Register a Ubuntu One account in Anbox Cloud Appliance
 
-If you followed the instructions in the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](tbd), you already registered your Ubuntu One account.
+If you followed the instructions in the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702), you already registered your Ubuntu One account.
 
 To add more accounts, use the following command:
 

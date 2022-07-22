@@ -5,7 +5,7 @@ The web dashboard provides an easy-to use interface to Anbox Cloud. However, it 
 [note type="information" status="Important"]
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
-- [How to install the Anbox Cloud Appliance](tbd)
+- [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
 - [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) (note that you must install the streaming stack for the web dashboard to be available)
 [/note]
 

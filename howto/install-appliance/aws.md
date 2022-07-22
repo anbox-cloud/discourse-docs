@@ -138,4 +138,4 @@ To finalise the installation, you must log on to the machine that hosts the appl
 
 ## Finalise the installation
 
-After the installation is complete, you must initialise the appliance and register your Ubuntu SSO account with the dashboard of the appliance. See [How to finalise the installation](tbd) for instructions.
+After the installation is complete, you must initialise the appliance and register your Ubuntu SSO account with the dashboard of the appliance. See [How to finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) for instructions.
