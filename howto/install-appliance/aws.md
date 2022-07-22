@@ -60,11 +60,11 @@ On the EC2 dashboard, click **Launch Instance** to start the Launch Instance Wiz
 
 To select the Amazon Machine Image (AMI), type "Anbox Cloud" in the search field of the **Application and OS Images** section.
 
-![Search for the Anbox Cloud Appliance AMI|690x451](../../images/install_appliance_search-ami.png)
+![Search for the Anbox Cloud Appliance AMI](https://assets.ubuntu.com/v1/ab7e13d9-install_appliance_search-ami.png)
 
 Choose either the Arm variant or the x86 variant and click **Select**.
 
-![Select the Amazon Machine Image (AMI)|690x451](../../images/install_appliance_select-ami.png)
+![Select the Amazon Machine Image (AMI)](https://assets.ubuntu.com/v1/bf6e7864-install_appliance_select-ami.png)
 
 You will be presented with the pricing information. Click **Continue** to confirm.
 
@@ -74,7 +74,7 @@ AWS offers various instance types. The Anbox Cloud Appliance images are supporte
 
 In the **Instance type** section, select the instance type that is most suitable for what you're planning to do. For example, if you just want to try out the Anbox Cloud Appliance, an instance type with GPU support and limited CPU and memory is sufficient. See the [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734#appliance) for the minimum hardware requirements.
 
-![Choose an instance type|690x451](../../images/install_appliance_instance-type.png)
+![Choose an instance type](https://assets.ubuntu.com/v1/e967ac16-install_appliance_instance-type.png)
 
 In this example, we picked `g4dn.2xlarge`, which provides 8 vCPUs, 32 GB of memory and a single NVIDIA Tesla T4 GPU.
 
@@ -82,7 +82,7 @@ In this example, we picked `g4dn.2xlarge`, which provides 8 vCPUs, 32 GB of memo
 
 In the **Key pair (login)** section, choose an existing key pair or create one if you don't have one yet. Make sure to save the private key in a secure location.
 
-![Choose or create a key pair|690x451](../../images/install_appliance_key-pair.png)
+![Choose or create a key pair](https://assets.ubuntu.com/v1/b58cd719-install_appliance_key-pair.png)
 
 ### 5. Configure the network
 
@@ -92,7 +92,7 @@ To allow external access, several ports in the security group attached to the AW
 
 For reference, all required ports are documented [here](https://discourse.ubuntu.com/t/requirements/17734).
 
-![Configure the security group|690x451](../../images/install_appliance_security-group.png)
+![Configure the security group](https://assets.ubuntu.com/v1/f0af08ae-install_appliance_security-group.png)
 
 ### 6. Add storage
 
@@ -103,7 +103,7 @@ The Anbox Cloud instance requires sufficient storage to work correctly. For opti
 
 Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
 
-![Add storage|690x451](../../images/install_appliance_add-storage.png)
+![Add storage](https://assets.ubuntu.com/v1/9b717248-install_appliance_add-storage.png)
 
 In this example, we use three storage volumes:
 
@@ -117,11 +117,11 @@ If you don't have any specific requirements, we recommend choosing the same conf
 
 You should now review the instance summary. If everything is correct, click **Launch instance**.
 
-![Launch the instance|690x451](../../images/install_appliance_launch-instance.png)
+![Launch the instance](https://assets.ubuntu.com/v1/8a7a34d1-install_appliance_launch-instance.png)
 
 AWS will verify your configuration, subscribe you to the product and launch the instance.
 
-![Launch status|690x451](../../images/install_appliance_launch-status.png)
+![Launch status](https://assets.ubuntu.com/v1/1ccac988-install_appliance_launch-status.png)
 
 ## Access the appliance
 
