@@ -60,3 +60,11 @@ By default, containers start with the `webrtc` platform if `--enable-graphics` i
 If you have built your own platform named `foo` and you built it via an addon into the container images, you can launch a container with the platform the same way:
 
     amc launch -p foo <application-id>
+
+## Launch a container with development mode enabled
+
+You can launch containers with additional development features turned on. This development mode must be enabled when a container is launched, and it cannot be turned off afterwards. You should never enable development mode for containers used in a production environment.
+
+To launch a container with development mode enabled, add the `--devmode` flag to the launch command:
+
+    amc launch --devmode <application-id>
