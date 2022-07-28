@@ -33,6 +33,7 @@ balancers
 benchmarking
 binderfs
 BombSquad
+bool
 BPF
 bzip
 cancellable
