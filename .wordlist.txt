@@ -40,6 +40,8 @@ CDN
 Centriq
 CFS
 cgroup
+cgroup-v1
+cgroup-v2
 Charmhub
 Charmstore
 CLI
