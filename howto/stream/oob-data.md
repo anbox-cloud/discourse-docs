@@ -1,4 +1,6 @@
-The exchange of out-of-band data transmission between Android and Anbox (WebRTC platform) enables Android application developers to trigger an action from an Android application and forward it to Anbox(WebRTC platform). Once Anbox receives the action, as one peer of WebRTC platform, the action will be propagated from the Anbox to the remote peer(WebRTC client) through WebRTC data channel so that client can react to the action received from the remote peer and respond accordingly on the UI.
+[note type="caution" status="Warning"]The v1 of the out-of-band data exchange between an Android application and WebRTC client is deprecated. Currently, there is no plan to remove it soon or discontinue its support, but it's recommended to migrate your integration of v1 of the OOB data exchange to [v2](tbd) for full-duplex data transmission and better performance. [/note]
+
+The exchange of out-of-band data transmission between an Android application and a WebRTC client enables Android application developers to trigger an action from an Android application and forward it to a WebRTC client through Anbox WebRTC platform. Once Anbox receives the action, as one peer of WebRTC platform, the action will be propagated from the Anbox to the remote peer(WebRTC client) through WebRTC data channel so that client can react to the action received from the remote peer and respond accordingly on the UI.
 
 This document will walk you through how to send a message from an Android application
 running in the container to the client application developed with the Anbox Streaming
