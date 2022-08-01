@@ -13,6 +13,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 |`container.security_updates` | Boolean | true | If set to `true` automatic Ubuntu security updates are applied during the application bootstrap process. `false` will disable this.|
 |`core.proxy_http` | string | - | HTTP proxy to use for HTTP requests AMS performs|
 |`core.proxy_https` | string | - | HTTPS proxy to use for HTTPS requests AMS performs |
+| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for a container. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
 |`gpu.allocation_mode` | string |  all | `all` tells AMS to allocate all available GPUs on a system to a container and `single` will only allocate a single GPU.|
 |`images.allow_insecure`| Boolean | false | If set to true this allow accepting untrusted certificates provides by the configure image server|
 |`images.auth` | string | - | Authentication details for AMS to access the image server. A Boolean value will be presented when the item is read indicated if the item is set or not to not expose credentials. |
@@ -25,7 +26,6 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `registry.mode` | string | pull | Mode the registry client in AMS operates in. Possible values are: manual, pull, push|
 | `registry.url` | string | - | URL of the application registry to use |
 | `scheduler.strategy` | string | spread | Strategy the internal container scheduler in AMS is using to distribute container across available LXD nodes. Possible values are: `binpack`, `spread` |
-| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for a container. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
 
 <a name="node-specific"></a>
 ## Node-specific configuration
