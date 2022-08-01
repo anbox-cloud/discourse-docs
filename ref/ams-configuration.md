@@ -16,6 +16,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `core.proxy_https` | string | - | HTTPS proxy to use for HTTPS requests that AMS performs. |
 | `core.proxy_ignore_hosts` | string | - | Comma-separated list that defines the hosts for which a configured proxy is not used. |
 | `core.trust_password` | string | - | The AMS trust password. |
+| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for a container. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
 | `gpu.allocation_mode` | string | `all` | Method of allocating GPUs: `all` tells AMS to allocate all available GPUs on a system to a container. `single` allocates only a single GPU. |
 | `gpu.type` | string | `none` | Type of GPU: `none`, `intel`, `nvidia`, `amd` |
 | `images.allow_insecure`| bool | false | If set to `true`, AMS allows accepting untrusted certificates provided by the configured image server. |
@@ -25,7 +26,6 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `images.version_lockstep` | bool | true | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
 | `node.queue_size` | integer | 100 | Maximum size of the queue containing requests to start and stop container per LXD node. Changing the value requires a restart of AMS. |
 | `node.workers_per_queue` | integer | 4 | Number of workers processing container start and stop requests. Changing the value requires a restart of AMS. |
-| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for a container. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
 | `registry.filter` | string |  - | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
 | `registry.fingerprint` | string | - | Fingerprint of the certificate that the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) uses to TLS-secure its HTTPS endpoint. This is used by AMS for mutual TLS authentication with the registry. |
 | `registry.mode` | string | `pull` | Mode in which the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761) client in AMS operates: `manual`, `pull`, `push` |
