@@ -3,7 +3,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 
 | Name | Type | Default |  Description            |
 |------|------|---------|-------------------------|
-| `application.addons` | string | -  | Comma-separated listed of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
+| `application.addons` | string | -  | Comma-separated list of addons that every application managed by AMS will use. See [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285). |
 | `application.auto_publish` | bool | true | If set to `true`, AMS automatically published new application versions when the bootstrap process is finished. `false` disables this. See [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions). |
 | `application.auto_update` | bool | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Disable automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#disable-automatic-updates). |
 | `application.default_abi` | string | - | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
