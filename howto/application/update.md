@@ -106,6 +106,7 @@ Each version takes up space on the LXD nodes. To free up space and remove old an
 
 The command will ask for your approval before the version is removed as it might affect your users. If you want to bypass the check, you can add the `--yes` flag to the command.
 
+<a name="disable-automatic-updates"></a>
 ## Disable automatic application updates
 
 *since 1.11.0*
