@@ -3,6 +3,7 @@ The how-to guides in this section give directions on how to achieve your goals w
 |  |  |
 |--|--|
 | [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)| Instructions for deploying and configuring Anbox Cloud |
+| [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)| Instructions for deploying and configuring the Anbox Cloud Appliance on a cloud platform|
 | [How to update your installation](https://discourse.ubuntu.com/t/update-your-installation/24331)| Instructions for updating Anbox Cloud or the Anbox Cloud Appliance|
 | [How to manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) | Instructions for managing and working with Anbox Cloud or the Anbox Cloud Appliance |
 | [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) | Instructions for  managing applications and the Anbox Application Registry (AAR) |

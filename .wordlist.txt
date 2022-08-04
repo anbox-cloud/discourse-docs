@@ -33,6 +33,7 @@ balancers
 benchmarking
 binderfs
 BombSquad
+bool
 BPF
 bzip
 cancellable
@@ -94,6 +95,7 @@ IDR
 IME
 Intra
 IoT
+IPs
 iptables
 JS
 JSON
@@ -157,6 +159,7 @@ RGBA
 roadmap
 RootFS
 RSA
+RTC
 RTP
 RTT
 runtime
@@ -187,6 +190,7 @@ stdout
 subcommand
 subcommands
 subnet
+subnets
 Surfaceflinger
 swiftshader
 syscall
