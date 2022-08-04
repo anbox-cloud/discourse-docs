@@ -107,11 +107,3 @@ By default, Android is not allowed to reboot. With the `allow_android_reboot` fe
 Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
 
 The feature flag will be considered by all newly launched containers once set.
-
-### Tracing
-
-*since 1.14.0*
-
-By default, the [Perfetto](https://perfetto.dev/)-based tracing for Anbox is disabled but can be enabled with the `enable_tracing` feature flag. The feature should be used only for performance analysis or profiling purposes. See [Anbox HTTP API](https://anbox-cloud.io/docs/ref/anbox-https-api#heading--10tracing) for information on how to capture traces in the Anbox container.
-
-The feature flag will be considered by all newly launched containers once set.
