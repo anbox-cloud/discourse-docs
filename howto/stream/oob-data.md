@@ -2,15 +2,15 @@ Enabling out-of-band (OOB) data transmission between an Android application and 
 
 Anbox Cloud provides two versions of this OOB data exchange:
 
-- [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+- [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in a container and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
-  This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
-- [Version 2](#oob-v2), which is currently in a draft state, provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
+  This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
+- [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
+
+  Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
 
 [note type="caution" status="Warning"]
-[Version 1](#oob-v1) of the out-of-band data exchange between an Android application and a WebRTC client is deprecated. Currently, there is no plan to remove it or discontinue its support, but you should migrate your integration of version 1 of the OOB data exchange to [version 2](#oob-v2) for full-duplex data transmission and better performance.
-
-Note, however, that the implementation of version 2 is not complete yet.
+[Version 1](#oob-v1) of the out-of-band data exchange between an Android application and a WebRTC client is deprecated. Support for it will be discontinued in a future release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#oob-v2) for full-duplex data transmission and better performance.
 [/note]
 
 See the instructions for exchanging OOB data using a specific implementation version below:
@@ -180,7 +180,7 @@ When establishing a peer connection, a number of data channels are set up in the
 
 At the same time, a number of Unix domain sockets are created under the `/run/user/1000/anbox/sockets` folder. They use the format `webrtc_data_<channel_name>` and represent the established communication bridge between a WebRTC client and the Anbox WebRTC platform. Those Unix domain sockets can be used by a service or daemon to:
 
-- Receive the data sent from a WebRTC client over the data channel and forward it to an Android application.
+- Receive data sent from a WebRTC client over the data channel and forward it to an Android application.
 - Receive data sent from an Android application and forward it to a WebRTC client over the data channel.
 
 A trivial example to simulate the data transmission between an Anbox container and a WebRTC client is using the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
@@ -197,9 +197,11 @@ A trivial example to simulate the data transmission between an Anbox container a
 1. Observe that the message is displayed in the console of a web browser, responding to the message event:
 
         data received: hello world
+
 1. To test the other direction of the communication, send a message from a WebRTC client to the Anbox WebRTC platform through the data channel:
 
         session.sendData('foo', 'anbox cloud')
+
 1. Observe that the received data is printed out in the `socat` TCP session:
 
    ```
