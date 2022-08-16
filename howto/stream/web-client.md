@@ -19,16 +19,16 @@ Detailed explanations can be found below.
         session: {
             app: "com.foo.bar",
         },
+        screen: {
+            width: 1280,
+            height: 720,
+            fps: 25,
+        }
     });
 
     let stream = new AnboxStream({
         connector: connector,
         targetElement: "anbox-stream",
-        screen: {
-            width: 1280,
-            height: 720,
-            fps: 25,
-        },
         controls: {
             keyboard: true
         },
@@ -54,6 +54,11 @@ const connector = new AnboxStreamGatewayConnector({
     session: {
         app: "com.foo.bar",
     },
+    screen: {
+        width: 1280,
+        height: 720,
+        fps: 25,
+    }
 });
 ```
 
@@ -67,16 +72,12 @@ In this case, the connector is made to talk directly to the Stream Gateway and t
 `gateway.url.net` should be replaced with the Stream Gateway IP/Domain name. You can get this information by running `juju status`.
 `YOUR_AUTH_TOKEN` is a token [generated with the Stream Gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784).
 `com.foo.bar` is the name of an application added via `ams`. You can list all applications by running `amc list`.
+The `screen` setting allows you to define the display resolution and frame rate for the Android container.
 
 ```javascript
 let stream = new AnboxStream({
     connector: connector,
     targetElement: "anbox-stream",
-    screen: {
-        width: 1280,
-        height: 720,
-        fps: 25,
-    },
     controls: {
         keyboard: true
     },
@@ -106,11 +107,6 @@ In this case you'd need to add the following to your HTML body:
 The default behaviour of the video is to fill the maximum space given by this element while keeping aspect ratio intact.
 
 ```javascript
-screen: {
-    width: 1280,
-    height: 720,
-    fps: 25,
-},
 controls: {
     keyboard: true
 },
