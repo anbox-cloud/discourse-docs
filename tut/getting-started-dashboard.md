@@ -28,7 +28,7 @@ Complete the following steps to create a virtual device:
 6. Do not upload an APK file.
 7. Click **Add Application**.
 
-   ![Add a virtual device|690x312](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
+   ![Add a virtual device](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
 8. Wait until the application status changes to `ready`.
 
 ## 2. Launch and test the virtual device
@@ -37,11 +37,13 @@ When the application has been initialised and its status changes to `ready`, com
 
 1. In the list of applications, click the play button (labelled **New session**) for the application to start a new session.
 
-   ![Start a new session|690x222](https://assets.ubuntu.com/v1/04944ce7-gs_dashboard_new_session.png)
+   ![Start a new session](https://assets.ubuntu.com/v1/04944ce7-gs_dashboard_new_session.png)
 2. Accept the default settings and click **New Session**.
 
-   ![Start with default settings|690x322](https://assets.ubuntu.com/v1/6087fbd9-gs_dashboard_start_session.png)
+   ![Start with default settings](https://assets.ubuntu.com/v1/6087fbd9-gs_dashboard_start_session.png)
 3. When the stream has loaded, you can interact with your virtual device.
+
+   ![Stream the virtual device](https://assets.ubuntu.com/v1/bfa831b4-gs_dashboard_streaming.png)
 
 ## 3. Create an application from an APK
 
@@ -51,7 +53,7 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 
 Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
-![Add an application|690x316](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
+![Add an application](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
 
 You can launch and test the application in the same way as you did for the virtual device.
 
@@ -64,7 +66,7 @@ Complete the following steps to add a new version to your application:
 1. Open `https://<your-machine-address>/applications` in your browser.
 2. Click the **Edit application** button next to the application for which you want to add a new version.
 
-   ![Update an application|690x227](https://assets.ubuntu.com/v1/891e16e9-gs_dashboard_edit_application.png)
+   ![Update an application](https://assets.ubuntu.com/v1/891e16e9-gs_dashboard_edit_application.png)
 3. Upload a new APK, or do other changes to the configuration.
 4. Click **Update application**.
 
