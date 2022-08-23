@@ -3,6 +3,51 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.15.0]
+
+## 1.15.0 (August 25 2022)
+
+#### New features & improvements
+
+* All snaps are now based on the [`core20`](https://snapcraft.io/core20) snap.
+* AMS now provides support for a [development mode](https://anbox-cloud.io/docs/exp/containers#dev-mode).
+* TLS 1.3 is now enforced by default by AMS.
+* New `cpu.limit_mode` AMS configuration option allows to enable CPU core pinning.
+* Configuration of an external load balancer for containers spawned by AMS.
+* The [WebRTC streamer configuration](https://anbox-cloud.io/docs/ref/webrtc-streamer) can now be customised.
+* A new HTTP `/1.0/platform` API allows runtime configuration of the currently loaded platform.
+* Anbox now uses the recently released [LXC 5.0](https://discuss.linuxcontainers.org/t/lxc-5-0-lts-has-been-released/14381).
+* The WebRTC streamer now allows streaming only audio, only video or neither of them.
+* Anbox now uses [`jemalloc`](https://github.com/jemalloc/jemalloc) as memory allocator
+* A new OOB version 2 implementation allows bi-directional communication with the Anbox container through the use of data channels
+* Added Android security updates for August 2022 (see [Android Security Bulletin - August 2022](https://source.android.com/docs/security/bulletin/2022-08-01) for more information).
+* Updated the Android WebView to [103.0.5060.129](https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html).
+* Updated the Mesa graphics driver stack to [22.0.5](https://docs.mesa3d.org/relnotes/22.0.5.html).
+* The `ashmem` kernel module is now optional for all supported Android versions.
+* Updated dqlite to its latest [1.11.1 release](https://github.com/canonical/dqlite/releases/tag/v1.11.1).
+* The Anbox Cloud Appliance now supports deployment on Ubuntu 22.04.
+* The minimum required storage size is now 20 GB for the Anbox Cloud Appliance.
+* On Ubuntu 22.04, the NVIDIA driver is now installed from the Ubuntu archive on arm64 systems instead of from the NVIDIA CUDA archive.
+* The WebRTC benchmark tool (`anbox-cloud-tests.benchmark`) can now:
+  * Attach to existing sessions (`--session=<id>`).
+  * Mark sessions to be kept alive after the benchmark is done (`--keep-session`).
+  * Set the WebRTC log level to gain low-level insight (`--log-level=<level>`).
+
+## Known issues
+
+n/a
+
+## Bug fixes
+
+* AC-1036 A native crash happens when streaming from the camera on Safari (iOS device)
+* AC-1034 Fix race condition between `init.ranchu.rc` and SurfaceFlinger causing a crash
+* AC-1028 User-defined resources are overridden when both `instance-type` and `resources` specs are specified in `session.yaml`
+* AC-1015 Can't access the service that is exposed internally over IP forward
+* AC-1003 The network endpoint and port persist in the database even after the container is deleted from AMS
+* AC-966 Anbox tries to initialise the video decoder when a stream is being established
+
+[/Details]
+
 [Details=1.14.2]
 
 ## 1.14.2 (July 18 2022)
