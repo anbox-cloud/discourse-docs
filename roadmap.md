@@ -14,24 +14,19 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.14.2 (July 2022)
+### 1.15.1 (September 2022)
 
-Target date: July 13, 2022
+Target date: September 14, 2022
 
-* Android security updates for July 2022
+* Android security updates for September 2022
 * Bug fixes
 
-### 1.15.0 (August 2022)
+### 1.15.2 (October 2022)
 
-Target date: August 24, 2022
+Target date: October 12, 2022
 
-* Minimum TLS version of 1.3 for AMS
-
-   [note type="information" status="Important"]
-   With the new requirement, LXD images from Anbox Cloud versions prior to 1.15 will stop functioning. To ease transition, it will be possible to temporarily force the minimum TLS version back to 1.2.
-   [/note]
-* Extended Android CTS coverage
-* Bidirectional out-of-band data exchange for WebRTC
+* Android security updates for October 2022
+* Bug fixes
 
 ### 1.16.0 (November 2022)
 
