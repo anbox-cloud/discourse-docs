@@ -264,11 +264,11 @@ n/a
 * AC-600 Anbox leaks memory on NVIDIA GPUs
 * AC-586 Android 10 fails to boot up
 * AC-579 BPF support is enabled but should not
-* AC-577 Android 12 aborts in Surfaceflinger with direct rendering on AMD GPUs
+* AC-577 Android 12 aborts in SurfaceFlinger with direct rendering on AMD GPUs
 * AC-574 Only restart Coturn when necessary
 * AC-567 Node controller leaves old iptables rules
 * AC-565 camera-support:`swrast` test case fails with serious error
-* AC-559 Surfaceflinger fails to start at times
+* AC-559 SurfaceFlinger fails to start at times
 * AC-558 Anbox crashes in `glBindFramebuffer` or `swrast`
 * AC-540 Race in the gateway signaller
 * AC-490 Fix documentation on scaling down
@@ -343,7 +343,7 @@ None.
 * AC-625 `nvidia_drm` kernel module isn't loaded after appliance upgrade
 * AC-277 LP #1922889: The `system.log` and `android.log` are missing and not collected by AMS when the container ran into an error
 * AC-621 Anbox shutdown hangs in `anbox::webrtc::metrics::TelegrafBackend::~TelegrafBackend`
-* AC-559 Surfaceflinger fails to start at times
+* AC-559 SurfaceFlinger fails to start at times
 
 [/Details]
 
