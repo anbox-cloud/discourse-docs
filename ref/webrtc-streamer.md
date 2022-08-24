@@ -17,7 +17,7 @@ The configuration file uses the JSON format. It has the following structure:
 
 See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/nvenc-video-encoder-api-prog-guide/) documentation for more details on the `nvidia_h264` options.
 
-<a name="#video-bitrate-limits"/></a>
+<a name="video-bitrate-limits"/></a>
 ## Video bitrate limits
 
 Bitrate limits allow to fine-tune which minimum and maximum bitrate the WebRTC streamer will use to dynamically decide the target bitrate for the encoded video stream. As network conditions are constantly changing, WebRTC automatically tries to adapt the video bitrate to find a configuration with best throughput, quality and latency. The bitrate limits allow changing the default values that WebRTC will use as the lower and upper bound for its decision.

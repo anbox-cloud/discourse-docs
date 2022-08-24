@@ -138,7 +138,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
-| 2 | ref/webrtc-streamer | [WebRTC streamer](TBD)|
+| 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
 | 2 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/index)|
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
