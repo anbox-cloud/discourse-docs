@@ -3,6 +3,51 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.15.0]
+
+## 1.15.0 (August 24 2022)
+
+#### New features & improvements
+
+* All snaps are now based on the [`core20`](https://snapcraft.io/core20) snap.
+* AMS now provides support for a [development mode](https://anbox-cloud.io/docs/exp/containers#dev-mode).
+* TLS 1.3 is now enforced by default by AMS.
+* New `cpu.limit_mode` AMS configuration option allows to enable CPU core pinning.
+* Configuration of an external load balancer for containers spawned by AMS.
+* The [WebRTC streamer configuration](https://anbox-cloud.io/docs/ref/webrtc-streamer) can now be customised.
+* A new HTTP `/1.0/platform` API allows runtime configuration of the currently loaded platform.
+* Anbox now uses the recently released [LXC 5.0](https://discuss.linuxcontainers.org/t/lxc-5-0-lts-has-been-released/14381).
+* The WebRTC streamer now allows streaming only audio, only video or neither of them.
+* Anbox now uses [`jemalloc`](https://github.com/jemalloc/jemalloc) as memory allocator.
+* A new OOB version 2 implementation allows bi-directional communication with the Anbox container through the use of data channels.
+* Added Android security updates for August 2022 (see [Android Security Bulletin - August 2022](https://source.android.com/docs/security/bulletin/2022-08-01) for more information).
+* Updated the Android WebView to [103.0.5060.129](https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html).
+* Updated the Mesa graphics driver stack to [22.0.5](https://docs.mesa3d.org/relnotes/22.0.5.html).
+* The `ashmem` kernel module is now optional for all supported Android versions.
+* Updated Dqlite to its latest [1.11.1 release](https://github.com/canonical/dqlite/releases/tag/v1.11.1).
+* The Anbox Cloud Appliance now supports deployment on Ubuntu 22.04.
+* The minimum required storage size is now 20 GB for the Anbox Cloud Appliance.
+* On Ubuntu 22.04, the NVIDIA driver is now installed from the Ubuntu archive on arm64 systems instead of from the NVIDIA CUDA archive.
+* The WebRTC benchmark tool (`anbox-cloud-tests.benchmark`) can now:
+  * Attach to existing sessions (`--session=<id>`).
+  * Mark sessions to be kept alive after the benchmark is done (`--keep-session`).
+  * Set the WebRTC log level to gain low-level insight (`--log-level=<level>`).
+
+## Known issues
+
+n/a
+
+## Bug fixes
+
+* AC-1036 A native crash happens when streaming from the camera on Safari (iOS device)
+* AC-1034 Fix race condition between `init.ranchu.rc` and SurfaceFlinger causing a crash
+* AC-1028 User-defined resources are overridden when both `instance-type` and `resources` specs are specified in `session.yaml`
+* AC-1015 Can't access the service that is exposed internally over IP forward
+* AC-1003 The network endpoint and port persist in the database even after the container is deleted from AMS
+* AC-966 Anbox tries to initialise the video decoder when a stream is being established
+
+[/Details]
+
 [Details=1.14.2]
 
 ## 1.14.2 (July 18 2022)
@@ -219,11 +264,11 @@ n/a
 * AC-600 Anbox leaks memory on NVIDIA GPUs
 * AC-586 Android 10 fails to boot up
 * AC-579 BPF support is enabled but should not
-* AC-577 Android 12 aborts in Surfaceflinger with direct rendering on AMD GPUs
+* AC-577 Android 12 aborts in SurfaceFlinger with direct rendering on AMD GPUs
 * AC-574 Only restart Coturn when necessary
 * AC-567 Node controller leaves old iptables rules
 * AC-565 camera-support:`swrast` test case fails with serious error
-* AC-559 Surfaceflinger fails to start at times
+* AC-559 SurfaceFlinger fails to start at times
 * AC-558 Anbox crashes in `glBindFramebuffer` or `swrast`
 * AC-540 Race in the gateway signaller
 * AC-490 Fix documentation on scaling down
@@ -298,7 +343,7 @@ None.
 * AC-625 `nvidia_drm` kernel module isn't loaded after appliance upgrade
 * AC-277 LP #1922889: The `system.log` and `android.log` are missing and not collected by AMS when the container ran into an error
 * AC-621 Anbox shutdown hangs in `anbox::webrtc::metrics::TelegrafBackend::~TelegrafBackend`
-* AC-559 Surfaceflinger fails to start at times
+* AC-559 SurfaceFlinger fails to start at times
 
 [/Details]
 

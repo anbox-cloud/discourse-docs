@@ -16,6 +16,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `core.proxy_https` | string | - | HTTPS proxy to use for HTTPS requests that AMS performs. |
 | `core.proxy_ignore_hosts` | string | - | Comma-separated list that defines the hosts for which a configured proxy is not used. |
 | `core.trust_password` | string | - | The AMS trust password. |
+| `cpu.limit_mode` | string | scheduler | The mode AMS uses to limit CPU access for a container. See [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details. Possible values are: `scheduler`, `pinning` |
 | `gpu.allocation_mode` | string | `all` | Method of allocating GPUs: `all` tells AMS to allocate all available GPUs on a system to a container. `single` allocates only a single GPU. |
 | `gpu.type` | string | `none` | Type of GPU: `none`, `intel`, `nvidia`, `amd` |
 | `images.allow_insecure`| bool | false | If set to `true`, AMS allows accepting untrusted certificates provided by the configured image server. |
@@ -23,6 +24,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `images.update_interval` | string | `5m` | Frequency of image updates (for example: 1h, 30m). |
 | `images.url` | string | `https://images.anbox-cloud.io/stable/` | URL of the image server to use. |
 | `images.version_lockstep` | bool | true | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
+| `load_balancer.url` | string | - | URL of the load balancer behind which AMS sits. The URL is handed to containers started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
 | `node.queue_size` | integer | 100 | Maximum size of the queue containing requests to start and stop container per LXD node. Changing the value requires a restart of AMS. |
 | `node.workers_per_queue` | integer | 4 | Number of workers processing container start and stop requests. Changing the value requires a restart of AMS. |
 | `registry.filter` | string |  - | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
@@ -105,13 +107,5 @@ The feature flag will be considered by all newly launched containers once set.
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
 Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
-
-The feature flag will be considered by all newly launched containers once set.
-
-### Tracing
-
-*since 1.14.0*
-
-By default, the [Perfetto](https://perfetto.dev/)-based tracing for Anbox is disabled but can be enabled with the `enable_tracing` feature flag. The feature should be used only for performance analysis or profiling purposes. See [Anbox HTTP API](https://anbox-cloud.io/docs/ref/anbox-https-api#heading--10tracing) for information on how to capture traces in the Anbox container.
 
 The feature flag will be considered by all newly launched containers once set.

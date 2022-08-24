@@ -5,6 +5,7 @@ To measure the performance based on different parameters, you should [run perfor
 The main areas for performance tuning are:
 
 - [Container density](#container-density)
+- [Container CPU access](#container-cpu-access)
 - [Hardware and network setup](#hardware-setup)
 - [Container startup time](#startup-time)
 - [Client devices](#client-devices)
@@ -19,6 +20,20 @@ Of course, the container density depends a lot on the available hardware. See [A
 In addition, check your applications and make sure they use the resources in a fair way. Applications should avoid spikes in GPU utilisation, because such spikes require the application to reserve more resources and therefore reduce the container density.
 
 Generally, applications should use the smallest suitable instance type. However, if you see an overall bad performance when running the application, using a more powerful instance type usually helps (even though it reduces the container density). As an example, consider an application that runs on an Anbox Cloud deployment that does not have any GPUs installed. In this case, the rendering workload is put on the CPU instead of the GPU, and if the instance type of the application does not have a sufficient number of vCPU cores, the performance of the application is impacted. This can show, for example, in the virtual keyboard being really slow. By switching to a more powerful instance type, the container density is reduced, but the performance of each application container is increased.
+
+<a name="container-cpu-access"></a>
+## Container CPU access
+
+AMS has different modes to grant CPU access to a container. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
+
+* `scheduler` - This mode uses the LXD [`limits.cpu.allowance`](https://linuxcontainers.org/lxd/docs/latest/instances/#cpu-limits) configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
+* `pinning` - This mode uses the LXD [`limits.cpu`](https://linuxcontainers.org/lxd/docs/latest/instances/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balance all running containers on all available cores.
+
+By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases  that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
+
+[note type="information" status="Note"]
+Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default starting with Ubuntu 22.04 and can be enabled on Ubuntu 20.04 by booting with `systemd.unified_cgroup_hierarchy=1` added to [the kernel boot parameters](https://wiki.ubuntu.com/Kernel/KernelBootParameters).
+[/note]
 
 <a name="hardware-setup"></a>
 ## Hardware and network setup
