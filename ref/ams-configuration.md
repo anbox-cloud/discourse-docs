@@ -24,6 +24,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `images.update_interval` | string | `5m` | Frequency of image updates (for example: 1h, 30m). |
 | `images.url` | string | `https://images.anbox-cloud.io/stable/` | URL of the image server to use. |
 | `images.version_lockstep` | bool | true | Whether to put the version of the latest pulled image and the AMS version in a lockstep. This ensures that a deployment is not automatically updated to newer image versions if AMS is still at an older version. This only applies for new major and minor but not patch version updates. |
+| `load_balancer.url` | string | - | URL of the load balancer behind which AMS sits. The URL is handed to containers started by AMS to allow them to contact AMS through the load balancer and not via the address of an individual AMS instance. |
 | `node.queue_size` | integer | 100 | Maximum size of the queue containing requests to start and stop container per LXD node. Changing the value requires a restart of AMS. |
 | `node.workers_per_queue` | integer | 4 | Number of workers processing container start and stop requests. Changing the value requires a restart of AMS. |
 | `registry.filter` | string |  - | Comma-separated list of tags to filter for when applications are fetched from the [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761). If empty, no filter is applied. |
