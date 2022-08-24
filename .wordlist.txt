@@ -32,6 +32,8 @@ balancer
 balancers
 benchmarking
 binderfs
+bitrate
+bitrates
 BombSquad
 bool
 BPF
@@ -98,6 +100,7 @@ JS
 JSON
 Juju
 Juju's
+kb
 KeyError
 KSM
 Lawnchair
