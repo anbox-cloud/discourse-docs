@@ -29,7 +29,7 @@ The deployed Juju charms need to be upgraded next.
 
 - Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--switch --channel=1.14/stable` arguments instruct Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
 
-- Starting with the 1.15 release AMS will enforce TLS 1.3 on its HTTPS endpoint. Images older than 1.15.0 will fail to reach AMS in this case. To still allow older images to work with the newer AMS you can temporarily enable TLS 1.2 support again in AMS by setting the `force_tls12` [configuration option of the AMS charm](https://charmhub.io/ams/configure?channel=1.15/stable#force_tls12).
+- Starting with the 1.15 release, AMS enforces TLS 1.3 on its HTTPS endpoint. Images older than 1.15.0 will fail to reach AMS in this case. To still allow older images to work with AMS, you can temporarily enable TLS 1.2 support again in AMS by setting the `force_tls12` [configuration option of the AMS charm](https://charmhub.io/ams/configure?channel=1.15/stable#force_tls12).
 
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 
