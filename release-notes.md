@@ -5,7 +5,7 @@ instructions on how to update your Anbox Cloud deployment.
 
 [Details=1.15.0]
 
-## 1.15.0 (August 25 2022)
+## 1.15.0 (August 24 2022)
 
 #### New features & improvements
 

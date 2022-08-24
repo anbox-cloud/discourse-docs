@@ -137,6 +137,7 @@ OBB
 observability
 OCI
 OES
+OOB
 OOM
 OpenGL
 OpenStack
@@ -233,4 +234,3 @@ xz
 YAML
 ZFS
 zpool
-OOB
