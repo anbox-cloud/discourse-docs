@@ -29,28 +29,28 @@ In your web-based client application, import the [Anbox Streaming SDK](https://d
 Create a data channel (named `foo` in the following example) under the `dataChannels` property of an `AnboxStream` object and register event handlers that respond to the events sent from an Android application:
 
 ```
-    let stream = new AnboxStream({
-      ...
-      ...
-      dataChannels: {
-        "foo": {
-          callbacks: {
-            close: () => {
-              console.log('data channel is closed')
-            },
-            open: () => {
-              console.log('data channel is open')
-            },
-            error: (err) => {
-              console.log(`error: ${err}`)
-            },
-            message: (data) => {
-              console.log(`data received: ${data}`)
-            }
-          }
+let stream = new AnboxStream({
+  ...
+  ...
+  dataChannels: {
+    "foo": {
+      callbacks: {
+        close: () => {
+          console.log('data channel is closed')
+        },
+        open: () => {
+          console.log('data channel is open')
+        },
+        error: (err) => {
+          console.log(`error: ${err}`)
+        },
+        message: (data) => {
+          console.log(`data received: ${data}`)
         }
       }
-    });
+    }
+  }
+});
 ```
 
 [note type="information" status="Note"]
@@ -62,7 +62,7 @@ To launch a new WebRTC session, the client must call `stream.connect()`. The `An
 To send data to an Android application through the channel, the client must use the member function `sendData` of the `AnboxStream` class:
 
 ```
-        stream.sendData('foo', 'hello world');
+stream.sendData('foo', 'hello world');
 ```
 
 
@@ -79,27 +79,27 @@ A trivial example to simulate the data transmission between an Anbox container a
 
 1. Connect the Unix domain socket:
 
-        socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
+       socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
 
 1. After the Unix domain socket is connected, type a message and hit the `Enter` key:
 
-        hello world
+       hello world
 
    The data is now sent from the Anbox WebRTC platform over the data channel to the WebRTC client.
 1. Observe that the message is displayed in the console of a web browser, responding to the message event:
 
-        data received: hello world
+       data received: hello world
 
 1. To test the other direction of the communication, send a message from a WebRTC client to the Anbox WebRTC platform through the data channel:
 
-        session.sendData('foo', 'anbox cloud')
+       session.sendData('foo', 'anbox cloud')
 
 1. Observe that the received data is printed out in the `socat` TCP session:
 
    ```
-      socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
-      hello world <--  the sent data
-      anbox cloud <--  the received data
+   socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
+   hello world <--  the sent data
+   anbox cloud <--  the received data
    ```
 
 ### Anbox data proxy
