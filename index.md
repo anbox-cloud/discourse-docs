@@ -15,10 +15,10 @@ You should consider using Anbox Cloud if you want to deliver mobile applications
 
 Along with bug fixes and general improvements, Anbox Cloud 1.15 includes the following changes:
 
-* The Anbox Cloud Appliance now supports Ubuntu 22.04
+* Support for Ubuntu 22.04 in the Anbox Cloud Appliance
 * [Out-of-band data version 2](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)
 * Audio-only streaming support
-* Development mode support in AMS for containers
+* Support for a development mode for containers in AMS
 
 For detailed information, see the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
 

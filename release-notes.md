@@ -18,13 +18,13 @@ instructions on how to update your Anbox Cloud deployment.
 * A new HTTP `/1.0/platform` API allows runtime configuration of the currently loaded platform.
 * Anbox now uses the recently released [LXC 5.0](https://discuss.linuxcontainers.org/t/lxc-5-0-lts-has-been-released/14381).
 * The WebRTC streamer now allows streaming only audio, only video or neither of them.
-* Anbox now uses [`jemalloc`](https://github.com/jemalloc/jemalloc) as memory allocator
-* A new OOB version 2 implementation allows bi-directional communication with the Anbox container through the use of data channels
+* Anbox now uses [`jemalloc`](https://github.com/jemalloc/jemalloc) as memory allocator.
+* A new OOB version 2 implementation allows bi-directional communication with the Anbox container through the use of data channels.
 * Added Android security updates for August 2022 (see [Android Security Bulletin - August 2022](https://source.android.com/docs/security/bulletin/2022-08-01) for more information).
 * Updated the Android WebView to [103.0.5060.129](https://chromereleases.googleblog.com/2022/07/chrome-for-android-update_01510389319.html).
 * Updated the Mesa graphics driver stack to [22.0.5](https://docs.mesa3d.org/relnotes/22.0.5.html).
 * The `ashmem` kernel module is now optional for all supported Android versions.
-* Updated dqlite to its latest [1.11.1 release](https://github.com/canonical/dqlite/releases/tag/v1.11.1).
+* Updated Dqlite to its latest [1.11.1 release](https://github.com/canonical/dqlite/releases/tag/v1.11.1).
 * The Anbox Cloud Appliance now supports deployment on Ubuntu 22.04.
 * The minimum required storage size is now 20 GB for the Anbox Cloud Appliance.
 * On Ubuntu 22.04, the NVIDIA driver is now installed from the Ubuntu archive on arm64 systems instead of from the NVIDIA CUDA archive.
