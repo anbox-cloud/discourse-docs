@@ -79,7 +79,9 @@ A trivial example to simulate the data transmission between an Anbox container a
 
 1. Connect the Unix domain socket:
 
-       socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
+   ```
+   socat - UNIX-CONNECT:/run/user/1000/anbox/sockets/webrtc_data_foo
+   ```
 
 1. After the Unix domain socket is connected, type a message and hit the `Enter` key:
 
@@ -92,7 +94,9 @@ A trivial example to simulate the data transmission between an Anbox container a
 
 1. To test the other direction of the communication, send a message from a WebRTC client to the Anbox WebRTC platform through the data channel:
 
-       session.sendData('foo', 'anbox cloud')
+   ```
+   session.sendData('foo', 'anbox cloud')
+   ```
 
 1. Observe that the received data is printed out in the `socat` TCP session:
 
