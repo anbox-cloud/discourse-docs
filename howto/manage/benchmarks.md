@@ -23,7 +23,7 @@ The benchmark command launches the specified number of containers on the Anbox [
  | FPS                     | 60    |
  | Display density         | 160   |
 
-You can configure a different display specification through the `--user-data` parameter when running the benchmark. The required format for the parameter varies based on the different platforms:
+You can configure a different display specification through the `--userdata` parameter when running the benchmark. The required format for the parameter varies based on the different platforms:
 
 | Platform              | Required format of user data          | Example                                                   |
 | --------------------- | ------------------------------------  | --------------------------------------------------------  |
