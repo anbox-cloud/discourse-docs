@@ -11,9 +11,10 @@ Anbox Cloud includes the following reference implementations that you can use as
 
 These examples show how to set up an observability solution in a full Anbox Cloud deployment. They can also be used for a first test. Be aware though that these examples are provided for reference only. They are not fully supported and should not be used in a production environment. They cannot be used with the Anbox Cloud Appliance.
 
+<a name="monitoring-dashboard"></a>
 ## Monitoring dashboard in the Anbox Cloud Appliance
 
-The Anbox Cloud Appliance comes with a basic monitoring dashboard that displays the metrics collected through Prometheus.
+The Anbox Cloud Appliance comes with a basic monitoring dashboard that displays the metrics collected through Telegraf and Prometheus.
 
 To access the dashboard, complete the following steps:
 
@@ -29,3 +30,5 @@ To access the dashboard, complete the following steps:
 3. Access the monitoring dashboard at `https://<your-machine-address>/monitor/` and log on with the user account that you created.
 4. Click the search symbol on the left-hand side and go to the **Search dashboards** page.
 5. Select the dashboard that contains the information you're interested in to display it.
+
+If you want to monitor additional metrics and events, you can do so by adding plugins to Telegraf. See [How to configure Telegraf](tbd) for more information.

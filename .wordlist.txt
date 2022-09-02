@@ -181,6 +181,7 @@ shiftfs
 SIGBUS
 simplestreams
 SLI
+SMI
 Snapcraft
 snapd
 spammy
