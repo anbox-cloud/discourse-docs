@@ -26,8 +26,10 @@ See the following table for a comparison of features for the different variants:
 | [Android API version](https://discourse.ubuntu.com/t/provided-images/24185) | 10, 11, 12 | 10, 11, 12 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/anbox-cloud/) | ✓ | ✓ |
-| [Vendor support](https://anbox-cloud.io/contact-us) | - | ✓ |
+| [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
 | [Monitoring](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) | - | ✓ |
+
+*\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the standard Ubuntu Pro subscription does not include vendor support.*
 
 Which of both variants you choose depends on your needs. The appliance is well suited for quick prototyping and development or small scale deployments, whereas the regular Anbox Cloud is best to scale big.
 
