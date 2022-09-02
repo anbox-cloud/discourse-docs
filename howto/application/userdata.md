@@ -19,7 +19,7 @@ When you start a streaming session, you can pass in custom data through the Anbo
 
 * When starting the session through the web dashboard, provide your custom data through the "Extra data" field.
 
-  ![Specify extra data in the web dashboard](../../images/manage_applications_extra-data.png)
+  ![Specify extra data in the web dashboard](https://assets.ubuntu.com/v1/16e9a133-manage_applications_extra-data.png)
 
 * When starting the session through the Stream Gateway API, provide your custom data through the `extra_data` field. See [Create session](https://anbox-cloud.github.io/latest/anbox-stream-gateway/#/session/handle-new-session) in the Anbox Stream Gateway documentation.
 
