@@ -31,4 +31,4 @@ To access the dashboard, complete the following steps:
 4. Click the search symbol on the left-hand side and go to the **Search dashboards** page.
 5. Select the dashboard that contains the information you're interested in to display it.
 
-If you want to monitor additional metrics and events, you can do so by adding plugins to Telegraf. See [How to configure Telegraf](tbd) for more information.
+If you want to monitor additional metrics and events, you can do so by adding plugins to Telegraf. See [How to configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365) for more information.

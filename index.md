@@ -106,7 +106,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
 | 3 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
 | 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 3 | howto/monitor/telegraf | [Configure Telegraf](tbd)
+| 3 | howto/monitor/telegraf | [Configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365)
 | 3 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
 | 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 2 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
