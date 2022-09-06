@@ -55,7 +55,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/install-appliance/landing | [Install the appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) |
 | 3 | howto/install-appliance/aws | [Install on AWS](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) |
 | 3 | howto/install-appliance/finalise | [Finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) |
-| 2 | howto/update/landing | [Update your installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
+| 2 | howto/update/landing | [Update an installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
 | 3 | howto/update/control | [Control updates](https://discourse.ubuntu.com/t/control-updates/24959)|
 | 3 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
 | 3 | howto/update/upgrade-anbox | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
@@ -115,7 +115,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/stream/web-client | [Implement a web-based client](https://discourse.ubuntu.com/t/implement-web-based-streaming-client/21835)|
 | 3 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
 | 3 | howto/stream/client-side-keyboard | [Use a client-side keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
-| 2 | howto/cluster/landing | [Manage cluster nodes](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) |
+| 2 | howto/cluster/landing | [Manage the cluster](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) |
 | 3 | howto/cluster/appliance | [Join a machine to the appliance](https://discourse.ubuntu.com/t/how-to-join-a-machine-to-the-anbox-cloud-appliance/29054) |
 | 3 | howto/cluster/configure-nodes | [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) |
 | 3 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
