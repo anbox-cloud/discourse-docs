@@ -6,7 +6,7 @@ Alternatively, you can follow the instructions in this document to use the [manu
 
 Before you start the installation, ensure that you have the required prerequisites:
 
-* At least three Ubuntu 20.04 LTS machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for details and recommendations.
+* At least three Ubuntu machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for details and recommendations.
 * Your Ubuntu Pro token for either a full Ubuntu Pro subscription or a Ubuntu Pro (Apps-only) subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, sign in on https://ubuntu.com/pro to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 

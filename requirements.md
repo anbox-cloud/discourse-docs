@@ -75,8 +75,9 @@ Anbox Cloud supports the following Ubuntu versions:
 
 * 18.04 (bionic) - see [Linux kernel](#linux-kernel) below for limitations
 * 20.04 (focal)
+* 22.04 (jammy)
 
-For new deployments, Ubuntu 20.04 (focal) is preferred.
+For new deployments, Ubuntu 22.04 (jammy) is preferred.
 
 <a name="linux-kernel"></a>
 #### Linux kernel
