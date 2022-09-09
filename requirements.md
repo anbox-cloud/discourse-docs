@@ -19,29 +19,7 @@ Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating sys
 
 You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on a Ubuntu Desktop installation is not supported.
 
-Supported Ubuntu versions:
-
-* 18.04 (bionic) - see [Linux kernel](#linux-kernel) below for limitations
-* 20.04 (focal)
-
-For new deployments, Ubuntu 20.04 (focal) is preferred.
-
-<a name="linux-kernel"></a>
-### Linux kernel
-
-Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported.
-
-AppArmor support must be enabled in the kernel as it's mandatory for the Anbox containers to run.
-
-The following table gives an overview of the available kernel versions for the different supported clouds:
-
-|CLOUD|KERNEL VERSION|UBUNTU PACKAGES||
-| --- | --- | --- | --- |
-|AWS|>= 5.4|`linux-aws`, `linux-modules-extra-aws`||
-|GCE|>= 5.4|`linux-gcp`, `linux-modules-extra-gcp`||
-|Azure|>= 5.4|`linux-azure`, `linux-modules-extra-azure`||
-|OCI|>= 5.4|`linux-oracle`, `linux-modules-extra-oracle`||
-|Private|>= 5.4|`linux-generic`||
+See [Ubuntu version for the Anbox Cloud Appliance](#appliance-ubuntu-version) or [Ubuntu version for Juju-based deployments](#ac-ubuntu-version) for information about the supported Ubuntu versions.
 
 <a name="appliance"></a>
 ## Anbox Cloud Appliance
@@ -70,10 +48,45 @@ For external access to the Anbox Cloud Appliance, a couple of network ports must
 
 How to allow incoming traffic on the listed ports is different depending on the cloud used. Please consult the documentation of the cloud for further information on how to change the firewall.
 
+<a name="appliance-ubuntu-version"></a>
+### Ubuntu version
+
+The Anbox Cloud Appliance supports the following Ubuntu versions:
+
+* 20.04 (focal)
+* 22.04 (jammy)
+
 <a name="juju-based"></a>
 ## Juju-based deployments
 
 Anbox Cloud deployments are managed by Juju. They can be created on all the [supported clouds](https://juju.is/docs/clouds) as well as manually provided machines as long as they follow the required minimums.
+
+<a name="ac-ubuntu-version"></a>
+### Ubuntu version
+
+Anbox Cloud supports the following Ubuntu versions:
+
+* 18.04 (bionic) - see [Linux kernel](#linux-kernel) below for limitations
+* 20.04 (focal)
+
+For new deployments, Ubuntu 20.04 (focal) is preferred.
+
+<a name="linux-kernel"></a>
+#### Linux kernel
+
+Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported.
+
+AppArmor support must be enabled in the kernel as it's mandatory for the Anbox containers to run.
+
+The following table gives an overview of the available kernel versions for the different supported clouds:
+
+|CLOUD|KERNEL VERSION|UBUNTU PACKAGES||
+| --- | --- | --- | --- |
+|AWS|>= 5.4|`linux-aws`, `linux-modules-extra-aws`||
+|GCE|>= 5.4|`linux-gcp`, `linux-modules-extra-gcp`||
+|Azure|>= 5.4|`linux-azure`, `linux-modules-extra-azure`||
+|OCI|>= 5.4|`linux-oracle`, `linux-modules-extra-oracle`||
+|Private|>= 5.4|`linux-generic`||
 
 <a name="juju-version"></a>
 ### Juju version
