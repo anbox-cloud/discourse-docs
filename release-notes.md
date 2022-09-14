@@ -3,6 +3,28 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.15.1]
+
+## 1.15.1 (September 14 2022)
+
+#### New features & improvements
+
+* Included Android security updates for September 2022 (see [Android Security Bulletin - September 2022](https://source.android.com/security/bulletin/2022-09-01) for more information).
+* Updated Android WebView to [105.0.5195.79](https://chromereleases.googleblog.com/2022/09/chrome-for-android-update_5.html).
+
+## Known issues
+
+n/a
+
+#### Bugs
+
+* AC-1087 Can't delete an application when the application bootstrap ends up in an error state
+* AC-1079 Not possible to stream container anymore after Android rebooted
+* AC-1078 No input is possible after rebooting Android
+* AC-1069 Transport channel closed error occurred when disconnecting a stream on Android client
+
+[/Details]
+
 [Details=1.15.0]
 
 ## 1.15.0 (August 24 2022)
