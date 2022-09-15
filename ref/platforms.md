@@ -50,7 +50,7 @@ Instead of supplying the display settings via `userdata` through the `amc launch
 
 ### `webrtc` platform
 
-The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when a container is launched with `--enabled-graphics`, or via the Anbox Stream Gateway.
+The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when a container is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
 
 #### Configuration
 
