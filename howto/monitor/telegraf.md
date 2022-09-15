@@ -2,7 +2,7 @@
 
 Anbox Cloud automatically deploys Telegraf on every machine and configures it to collect basic metrics. You can then access these metrics through the [monitoring dashboard](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338#monitoring-dashboard) in the Anbox Cloud Appliance, or through the observability solution that you implement for your full Anbox Cloud deployment (see [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)).
 
-You can customise the Telegraf configuration and add and configure plugins that you want to use. For example, you might want to add an input plugin that collects GPU statistics (like the [Nvidia System Management Interface (SMI) Input Plugin](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/nvidia_smi)), or the `file` output plugin to write the metrics to an output file. See the [Telegraf documentation](https://docs.influxdata.com/telegraf/) for available plugins and configurations.
+You can customise the Telegraf configuration and add and configure plugins that you want to use. For example, you might want to add an input plugin that collects GPU statistics (like the [NVIDIA System Management Interface (SMI) Input Plugin](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/nvidia_smi)), or the `file` output plugin to write the metrics to an output file. See the [Telegraf documentation](https://docs.influxdata.com/telegraf/) for available plugins and configurations.
 
 ## Configure Telegraf in the Anbox Cloud Appliance
 

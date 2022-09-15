@@ -534,7 +534,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 ### New features & improvements
 
 * Client side virtual keyboard
-* Hardware accelerated video decoding (H.264, Nvidia GPUs only)
+* Hardware accelerated video decoding (H.264, NVIDIA GPUs only)
 * Experimental WiFi support
 * Automatic application updates can now be disabled in AMS
 * Old image versions can now be imported in AMS
@@ -544,7 +544,7 @@ A bug in the Anbox runtime caused random WebView-based applications to crash whe
 ### Bug fixes
 
 * LP #1926148 Anbox Session crashed when running with null platform (Angle EGL/GL drivers))
-* LP #1927313 Fail to launch more than 44 containers on two Nvidia GPUs
+* LP #1927313 Fail to launch more than 44 containers on two NVIDIA GPUs
 * LP #1936345 Appliance fails to bootstrap when NIC is on a /22 network
 * LP #1936799 text should be instantly shown up in the input edit widget when it's sent from the client side virtual keyboard
 * LP #1936835 Audio processing is enabled in WebRTC
@@ -657,7 +657,7 @@ Existing deployments based on 1.9.x are not affected by this bug.
 * In earlier Anbox Cloud versions the Juju charms and bundles for Anbox Cloud where only available after allow-listing user accounts for access. With 1.10 all charms and bundles are not available in the public on the Juju Charmstore.
 * Before 1.10 a deployment might have been automatically updated through a system package update to the next major or minor version of Anbox Cloud. With 1.10 this is no longer possible and upgrading to a new minor version of Anbox Cloud requires an explicit update to a newer charm as specified in [component versions](https://anbox-cloud.io/docs/component-versions).
 * Up until 1.10 streaming sessions managed by the Anbox Stream Gateway could be joined but new clients had to wait before an existing client disconnected to establish a connection. With 1.10 the Anbox Stream Gateway has gotten a new API which allows to force disconnect any currently connected client from an active session.
-* With 1.10 Anbox Cloud now by default uses the [server optimised Nvidia GPU drivers](https://launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460-server) as packaged in the Ubuntu archive by default on amd64 systems. On arm64 systems the Nvidia drivers are still coming from the Nvidia provided [CUDA archive](https://developer.nvidia.com/cuda-downloads).
+* With 1.10 Anbox Cloud now by default uses the [server optimised NVIDIA GPU drivers](https://launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460-server) as packaged in the Ubuntu archive by default on amd64 systems. On arm64 systems the NVIDIA drivers are still coming from the NVIDIA provided [CUDA archive](https://developer.nvidia.com/cuda-downloads).
 * Applications can now be managed from the Anbox Cloud Dashboard. The feature was already available in 1.9 but disabled by default due to a few limitations. As part of 1.10 this is now fully available by default and allows the creation, modification and deletion of applications via simple web based user interface.
 * If a container has multiple service endpoints defined, allocation of node ports is now quicker. For containers with a high number of service endpoints (100+) the startup time was delayed by more than 70 seconds and is now down to a couple of seconds at maximum.
 * A `juju crashdump` now collects additional debug information from LXD and AMS about available containers, addons, applications and cluster configuration
@@ -674,13 +674,13 @@ Existing deployments based on 1.9.x are not affected by this bug.
 * LP #1912172 WebRTC platform hangs forever on peer connection release
 * LP #1885708 AMS fails to start on deploy
 * LP #1920999 IP addresses of LXD containers used by the appliance change after a reboot
-* LP #1921835 On systems with multiple Nvidia GPUs Anbox fails to start with WebRTC platform
+* LP #1921835 On systems with multiple NVIDIA GPUs Anbox fails to start with WebRTC platform
 * LP #1922208 `juju config lxd images_compression_algorithm` does not work
 * LP #1923204 Handle Juju timeout error
 * LP #1923300 Shader compilation error in Android 11 because of missing GL_OES_EGL_image_external in `swrast`/`webrtc`
 * LP #1924234 Failed to trigger action even if the proper actions were given
 * LP #1924891 Appliance CF template misses AWS regions
-* LP #1925121 The incompatible CUDA libraries were installed when deploying Anbox Cloud on a Nvidia GPU supported environment
+* LP #1925121 The incompatible CUDA libraries were installed when deploying Anbox Cloud on a NVIDIA GPU supported environment
 * LP #1926113 AMS is still leaking FDS when constantly scaling LXD cluster
 * LP #1926696 Currently synchronised images never show up in `amc image ls`
 * LP #1905747 Check for Debian package before attempting to remove it
@@ -833,15 +833,15 @@ No bugs were fixed in this release.
 * Android security updates for February 2021 (see [here](https://source.android.com/security/bulletin/2021-02-01) for more details)
 * Out of band data allowing to send custom data from applications running inside the Android container to the client connected over WebRTC
 * Support for streaming the clients camera to the Android container over WebRTC
-* Hardware video encoding support for Nvidia on Arm
+* Hardware video encoding support for NVIDIA on Arm
 * Support in AMS for existing LXD clusters
 * New recursive=<bool> parameter to GET /sessions on the Stream Gateway to return the full session objects rather than just their ID
 * Streaming sessions can now be deleted in batch and asynchronously
 * Introduce the container.features configuration item in AMS to enable specified features in Android container
 * Bump key size to 4096 to work with 20.04 stronger security defaults
-* Anbox now uses Vulkan as a backend renderer API on Nvidia GPUs on both x86 and Arm. This improves performance, stability and compatibility.
-* Improved density on Nvidia Tesla T4 cards. With Anbox Cloud < 1.9.0 the maximum of containers possible was around 10-12 due to bugs in the GPU firmware when using the OpenGL ES client API. With the switch to Vulkan the firmware bugs are no longer triggered and up to a maximum of 32 simultaneous containers are possible (subject to their actual use of the GPU)
-* Updated Nvidia GPU driver to the 460 series for both x86 and Arm
+* Anbox now uses Vulkan as a backend renderer API on NVIDIA GPUs on both x86 and Arm. This improves performance, stability and compatibility.
+* Improved density on NVIDIA Tesla T4 cards. With Anbox Cloud < 1.9.0 the maximum of containers possible was around 10-12 due to bugs in the GPU firmware when using the OpenGL ES client API. With the switch to Vulkan the firmware bugs are no longer triggered and up to a maximum of 32 simultaneous containers are possible (subject to their actual use of the GPU)
+* Updated NVIDIA GPU driver to the 460 series for both x86 and Arm
 * A default virtual keyboard is now included in the provided Android images and can be conditionally enabled
 * A launch activity can now be specified when new sessions are created or existing joined. This allows switching to specific activities within the application.
 * Stripped down unnecessary dependencies to speed up deployment time
@@ -862,7 +862,7 @@ No bugs were fixed in this release.
  * LP #1873393 Close of unknown file descriptor in `gralloc` modules causes crash
  * LP #1892693 Provide better error message when web socket connect to gateway fails
  * LP #1897300 Rare ICE errors on iOS Safari when streaming
- * LP #1901035 Nvidia GPUs cannot host more than 12-13 Anbox containers
+ * LP #1901035 NVIDIA GPUs cannot host more than 12-13 Anbox containers
  * LP #1903518 Inconsistent Session object returned by the Gateway API
  * LP #1903991 Coturn reports Unauthorised for users when stream was already established
  * LP #1905734 WebRTC streaming fails in Firefox
@@ -875,7 +875,7 @@ No bugs were fixed in this release.
  * LP #1912146 when NRPE relation is added to AAR, 'Check AAR HTTPS endpoint' will always fail with 401 Unauthorised
  * LP #1912267 WebRTC platform crashes in `eglReleaseThread` in `libEGL_mesa.so.0` on termination
  * LP #1912302 Container doesn't not terminate correctly
- * LP #1912470 The latest WebRTC platform is broken on Nvidia based GPU machine
+ * LP #1912470 The latest WebRTC platform is broken on NVIDIA based GPU machine
  * LP #1912521 Dashboard charm does not set application version
  * LP #1912588 `anbox-cloud-tests` for gateway, sometime fails to launch container
  * LP #1912732 Anbox cloud dashboard does not show all of the panes correctly
@@ -903,7 +903,7 @@ No bugs were fixed in this release.
  * LP #1914276 JS SDK reports "Unknown message type error" at times in Firefox
  * LP #1914435 Anbox Stream JS SDK always get `rear` facing mode no matter people switch the camera face mode to "front" or "rear"
  * LP #1914448 Dashboard register command gives private IP instead of public one
- * LP #1914811 Nvidia kernel modules are not loaded after deployment
+ * LP #1914811 NVIDIA kernel modules are not loaded after deployment
  * LP #1914991 Latest gateway API changes break dashboard
 
 [/Details]
@@ -983,7 +983,7 @@ No bugs were fixed in this release.
 * Sensors exposed to Android can now be provided with data via the Anbox HTTP API
 * Prometheus endpoint of the Anbox Stream Gateway now supports TLS and HTTP basic authentication
 * AMS now supports multiple architectures in the connected LXD cluster
-* Nvidia GPU support for ARM (rendering only, encode will come with 1.9)
+* NVIDIA GPU support for ARM (rendering only, encode will come with 1.9)
 * Upgrade to etcd 3.4
 * Anbox Stream SDK now supports native applications (Linux, Android)
 * Anbox provides support for [Perfetto](https://perfetto.dev/) based tracing via its HTTP API
@@ -1295,7 +1295,7 @@ None
 * Integrated Android security fixes for September and October 2019. See the
   [Android Security Bulletins](https://source.android.com/security/bulletin) for more information.
 * Added `prepare` hook to allow customising Android while it's running as part of the bootstrap process
-* Updated LXD charm to install latest Nvidia CUDA drivers
+* Updated LXD charm to install latest NVIDIA CUDA drivers
 
 [/Details]
 

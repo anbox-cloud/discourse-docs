@@ -5,12 +5,12 @@ If no GPU is available, Anbox Cloud automatically falls back to the [`null` plat
 <a name="supported-gpus"></a>
 ## Supported GPUs
 
-Anbox Clouds allows access to GPUs from Intel, AMD and Nvidia inside the Anbox container. Concrete support for the individual GPU depends on the platform being using for Anbox. The included `webrtc` platform currently supports the following GPUs:
+Anbox Clouds allows access to GPUs from Intel, AMD and NVIDIA inside the Anbox container. Concrete support for the individual GPU depends on the platform being using for Anbox. The included `webrtc` platform currently supports the following GPUs:
 
 | Vendor | Model                 | Render | Hardware video encode |
 |--------|-----------------------|--------|-----------------------|
 | AMD    | WX5100, WX4100        | Yes    | No                    |
-| Nvidia | Quadro, Tesla, Ampere | Yes    | Yes                   |
+| NVIDIA | Quadro, Tesla, Ampere | Yes    | Yes                   |
 
 For GPUs on which Anbox Cloud doesn't support hardware video encoding, a software-based video encoding fallback is available.
 
@@ -30,7 +30,7 @@ See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu
 
 ## Using GPUs inside a container
 
-AMS configures each LXD container to pass through a GPU device from the host. As of right now, all GPUs that are available to a machine are passed to every container that owns a GPU slot. For Nvidia GPUs, LXD uses the [Nvidia container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to the container.
+AMS configures each LXD container to pass through a GPU device from the host. As of right now, all GPUs that are available to a machine are passed to every container that owns a GPU slot. For NVIDIA GPUs, LXD uses the [NVIDIA container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to the container.
 
 Check the [list of supported GPUs](#supported-gpus) to see if Anbox Cloud includes a driver for your GPU device. If a GPU driver is available inside the container, there are no further differences in how to use it in comparison to a regular environment. If no GPU driver is available, you must provide it through an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
 

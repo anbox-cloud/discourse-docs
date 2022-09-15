@@ -130,7 +130,7 @@ NMEA
 NRPE
 numpad
 NvEnc
-Nvidia
+NVIDIA
 NVMe
 OAuth
 OBB
