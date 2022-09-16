@@ -2,87 +2,206 @@ Anbox Cloud gathers various performance metrics that you can access through API 
 
 The reference implementation for Prometheus (see [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)) provides some basic dashboards. You can, however, update them to fit your needs.
 
-The following sections list all metrics returned to Prometheus by each component of Anbox Cloud.
-
-## Endpoints
-
-The following table lists the API endpoints for every service that supports Prometheus metrics. You can use these endpoints to customise your monitoring solution.
-
-The network ports might be different on your deployment. Run the associated commands to get the appropriate ports.
-
-| Service              | Endpoint                                                | Command to get the current port                    |
-|----------------------|---------------------------------------------------------|----------------------------------------------------|
-| `ams`                  | `http://ams.example.com:9104/internal/1.0/metrics`      | `juju config ams prometheus_target_port`           |
-| `anbox-stream-gateway` | `https://gateway.example.com:9105/internal/1.0/metrics` | `juju config anbox-stream-gateway prometheus_port` |
-| `lxd`                  | `https://lxd.example.com:8443/1.0/metrics`              | `lxc config get core.https_address`                |
+The following sections list all metrics returned to Prometheus by the Anbox Cloud services that support Prometheus metrics.
 
 ## AMS
-Metrics prefixed with `ams_cluster_` give information about the Anbox management system (AMS). They keep you informed about the status of your cluster.
 
-| Name                                             | Description                                                                                                                                                                             | Available since |
-|--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| `ams_cluster_nodes_total`                        | Number of nodes in the cluster                                                                                                                                                          | 1.0.0           |
-| `ams_cluster_applications_total`                 | Number of applications                                                                                                                                                                  | 1.0.0           |
-| `ams_cluster_containers_total`                   | Number of containers currently in the cluster                                                                                                                                           | 1.0.0           |
-| `ams_cluster_container_boot_time_seconds_count`  | Number of container boot time measured                                                                                                                                                  | 1.0.0           |
-| `ams_cluster_container_boot_time_seconds_sum`    | Sum of all container boot times. Can be used to compute the average boot time                                                                                                           | 1.0.0           |
-| `ams_cluster_container_boot_time_seconds_bucket` | Container boot times bucket. Can be used for alerting when above a threshold. See the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information | 1.0.0           |
-| `ams_cluster_containers_per_application_total`   | Number of containers per application                                                                                                                                                    | 1.0.0           |
-| `ams_cluster_containers_per_status_total`        | Number of containers per container status                                                                                                                                               | 1.0.0           |
-| `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node                                                                                                                                                | 1.0.0           |
-| `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                                                                                                                                                           | 1.0.0           |
-| `ams_cluster_available_memory_total`             | Total memory available in each worker node                                                                                                                                              | 1.0.0           |
-| `ams_cluster_used_memory_total`                  | Used memory in each worker node                                                                                                                                                         | 1.0.0           |
+The Anbox Management Service provides metrics about the Anbox Cloud cluster (or the Anbox Cloud Application server) and the AMS API access.
+
+### AMS metrics endpoint
+
+You can access the AMS metrics from any machine that is on the same network as your Anbox Cloud installation. Use the following endpoint:
+
+    http://<AMS_server>:<AMS_port>/internal/1.0/metrics
+
+Replace `<AMS_server>` with the IP address of your AMS server, which you can determine by running one of the following commands:
+
+* For a full Anbox Cloud deployment: `juju run --unit ams/0 -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit ams/0 -- unit-get private-address`
+
+Replace `<AMS_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
+
+* For a full Anbox Cloud deployment: `juju config ams prometheus_target_port`
+* For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud ams prometheus_target_port`
+
+You can then access the endpoint with `curl`, for example:
+
+    curl http://192.0.2.55:20002/internal/1.0/metrics
+
+### AMS cluster metrics
+
+Metrics prefixed with `ams_cluster_` keep you informed about the status of your Anbox Cloud cluster.
+These metrics are available since Anbox Cloud 1.0.0.
+
+| Name                                             | Description                                   |
+|--------------------------------------------------|-----------------------------------------------|
+| `ams_cluster_nodes_total`                        | Number of nodes in the cluster                |
+| `ams_cluster_applications_total`                 | Number of applications                        |
+| `ams_cluster_containers_total`                   | Number of containers currently in the cluster |
+| `ams_cluster_container_boot_time_seconds_count`  | Number of container boot time measured        |
+| `ams_cluster_container_boot_time_seconds_sum`    | Sum of all container boot times (can be used to compute the average boot time) |
+| `ams_cluster_container_boot_time_seconds_bucket` | Container boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |
+| `ams_cluster_containers_per_application_total`   | Number of containers per application          |
+| `ams_cluster_containers_per_status_total`        | Number of containers per container status     |
+| `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node      |
+| `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                 |
+| `ams_cluster_available_memory_total`             | Total memory available in each worker node    |
+| `ams_cluster_used_memory_total`                  | Used memory in each worker node               |
+
+### AMS API metrics
+
+Metrics prefixed with `ams_http_` allow to track access to the API.
+These metrics are available since Anbox Cloud 1.10.0.
+
+| Name                                       | Description                                           |
+|--------------------------------------------|-------------------------------------------------------|
+| `ams_http_in_flight_requests`              | Number of HTTP requests being processed at the moment |
+| `ams_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                   |
+| `ams_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        |
+| `ams_http_requests_total`                  | Total number of HTTP requests made                    |
+| `ams_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      |
+
+#### API handlers
+
+To give a more granular approach to monitoring, the AMS API metrics contain handlers that identify the kind of API access.
+
+The AMS API can be accessed through HTTP/HTTPS or a Unix domain socket. Therefore, the API metrics distinguish between `http`, `https` and `unix`. For example:
+
+    ams_http_request_duration_seconds_bucket{handler="http_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
+    ams_http_request_duration_seconds_bucket{handler="https_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
+    ams_http_request_duration_seconds_bucket{handler="unix_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
+
+All handler labels adopt the convention `<transport method>_<object>_<http method>`, for example, `unix_containers_POST`.
+
+The following table contains all routes and their corresponding labels (ignoring the communication method prefix).
+
+| Method  | Route                                       | Label                              |
+|---------|---------------------------------------------|------------------------------------|
+| `GET`   | `/1.0`                                      | `service_GET`                      |
+| `GET`   | `/1.0/addons`                               | `addons_GET`                       |
+| `POST`  | `/1.0/addons`                               | `addons_POST`                      |
+| `GET`   | `/1.0/addons/<id>`                          | `addon_GET`                        |
+| `PATCH` | `/1.0/addons/<id>`                          | `addon_PATCH`                      |
+| `DELETE`| `/1.0/addons/<id>`                          | `addon_DELETE`                     |
+| `DELETE`| `/1.0/addons/<id>/<version>`                | `addon_version_DELETE`             |
+| `GET`   | `/1.0/applications`                         | `applications_GET`                 |
+| `POST`  | `/1.0/applications`                         | `applications_POST`                |
+| `GET`   | `/1.0/applications/<id>`                    | `application_GET`                  |
+| `PATCH` | `/1.0/applications/<id>`                    | `application_PATCH`                |
+| `DELETE`| `/1.0/applications/<id>`                    | `application_DELETE`               |
+| `GET`   | `/1.0/applications/<id>/<version>`          | `application_version_GET`          |
+| `PATCH` | `/1.0/applications/<id>/<version>`          | `application_version_PATCH`        |
+| `DELETE`| `/1.0/applications/<id>/<version>`          | `application_version_DELETE`       |
+| `GET`   | `/1.0/applications/<id>/manifest`           | `application_manifest_GET`         |
+| `GET`   | `/1.0/applications/<id>/<version>/manifest` | `application_version_manifest_GET` |
+| `GET`   | `/1.0/containers`                           | `containers_GET`                   |
+| `POST`  | `/1.0/containers`                           | `containers_POST`                  |
+| `GET`   | `/1.0/containers/<id>`                      | `container_GET`                    |
+| `DELETE`| `/1.0/containers/<id>`                      | `container_DELETE`                 |
+| `POST`  | `/1.0/containers/<id>/exec`                 | `container_exec_POST`              |
+| `GET`   | `/1.0/containers/<id>/logs`                 | `container_logs_GET`               |
+| `GET`   | `/1.0/containers/<id>/logs/<name>`          | `container_log_GET`                |
+| `GET`   | `/1.0/version`                              | `version_GET`                      |
+| `GET`   | `/1.0/nodes`                                | `nodes_GET`                        |
+| `POST`  | `/1.0/nodes`                                | `nodes_POST`                       |
+| `GET`   | `/1.0/nodes/<id>`                           | `node_GET`                         |
+| `PATCH` | `/1.0/nodes/<id>`                           | `node_PATCH`                       |
+| `DELETE`| `/1.0/nodes/<id>`                           | `node_DELETE`                      |
+| `GET`   | `/1.0/images`                               | `images_GET`                       |
+| `POST`  | `/1.0/images`                               | `images_POST`                      |
+| `GET`   | `/1.0/images/<id>`                          | `image_GET`                        |
+| `PATCH` | `/1.0/images/<id>`                          | `image_PATCH`                      |
+| `DELETE`| `/1.0/images/<id>`                          | `image_DELETE`                     |
+| `DELETE`| `/1.0/images/<id>/<version>`                | `image_version_DELETE`             |
+| `GET`   | `/1.0/config`                               | `config_GET`                       |
+| `PATCH` | `/1.0/config`                               | `config_PATCH`                     |
+| `GET`   | `/1.0/tasks`                                | `tasks_GET`                        |
+| `GET`   | `/1.0/registry/applications`                | `registry_applications_GET`        |
+| `DELETE`| `/1.0/registry/applications/<id>`           | `registry_application_DELETE`      |
+| `POST`  | `/1.0/registry/applications/<id>/push`      | `registry_application_push_POST`   |
+| `POST`  | `/1.0/registry/applications/<id>/pull`      | `registry_application_pull_POST`   |
+| `GET`   | `/1.0/artifacts/<id>`                       | `internal_artifacts_GET`           |
+| `PATCH` | `/1.0/containers/<id>`                      | `internal_containers_PATCH`        |
 
 
 ## Anbox Stream Gateway
-Metrics prefixed with `anbox_stream_gateway_` give you information on your cluster related to streaming: number of sessions, agents, etc.
 
-| Name                                             | Description                                                                                                                                                                             | Available since |
-|--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| `anbox_stream_gateway_sessions_total`            | Total number of sessions, categorised by status                                                                                                                                         | 1.7.2           |
-| `anbox_stream_gateway_accounts_total`            | Total number of accounts                                                                                                                                                                | 1.7.2           |
-| `anbox_stream_gateway_agents_total`              | Number of active and unresponsive agents                                                                                                                                                | 1.7.2           |
+The Anbox Stream Gateway provides metrics about the streaming activities of your cluster or server and the Anbox Stream Gateway API access.
 
+### Anbox Stream Gateway endpoint
 
-## WebRTC metrics
-Metrics prefixed with `webrtc_` give you detailed insight of the WebRTC protocol for every streaming instance.
-See the [official W3C reference](https://www.w3.org/TR/webrtc-stats) for more information.
+You can access the Anbox Stream Gateway metrics from any machine that is on the same network as your Anbox Cloud installation. Use the following endpoint:
 
-| Name                                | Description                                                                                                                                                                                      | Available since |
-|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| `webrtc_frames_encoded`             | Total number of frames successfully encoded                                                                                                                                                      | 1.8.0           |
-| `webrtc_key_frames_encoded`         | Total number of key frames, such as key frames in VP8 or IDR-frames in H.264. `webrtc_key_frames_encoded - webrtc_frames_encoded` will give you the number of delta frames                       | 1.8.0           |
-| `webrtc_total_encode_time`          | Total number of seconds that has been spent encoding the `webrtc_frames_encoded` frames. The average encode time can be calculated by dividing this value with `webrtc_frames_encoded`           | 1.8.0           |
-| `webrtc_target_bitrate`             | Reflects the current encoder target in bits per second                                                                                                                                           | 1.8.0           |
-| `webrtc_bytes_sent`                 | Total number of bytes sent for a specific [SSRC](https://tools.ietf.org/html/rfc3550#section-3) (a SSRC represents one resource sent over a WebRTC track. It can be video, audio or binary data) | 1.8.0           |
-| `webrtc_retransmitted_bytes_sent`   | The total number of bytes that were re-transmitted for a specific SSRC, only including payload bytes                                                                                              | 1.8.0           |
-| `webrtc_retransmitted_packets_sent` | The total number of packets that were re-transmitted for a specific SSRC                                                                                                                          | 1.8.0           |
-| `webrtc_total_packet_send_delay`    | The total number of seconds that packets have spent buffered locally before being transmitted onto the network                                                                                   | 1.8.0           |
-| `webrtc_packets_sent`               | Total number of RTP packets sent for this SSRC. This includes re-transmissions                                                                                                                    | 1.8.0           |
-| `webrtc_nack_count`                 | Count the total number of Negative Acknowledgement (NACK) packets received by this sender                                                                                                        | 1.8.0           |
-| `webrtc_fir_count`                  | Only exists for video. Count the total number of Full Intra Request (FIR) packets received by this sender                                                                                        | 1.8.0           |
-| `webrtc_pli_count`                  | Only exists for video. Count the total number of Picture Loss Indication (PLI) packets received by this sender                                                                                   | 1.8.0           |
-| `webrtc_sli_count`                  | Only exists for video. Count the total number of Slice Loss Indication (SLI) packets received by this sender                                                                                     | 1.8.0           |
+    https://<gateway_server>:<gateway_port>/internal/1.0/metrics
 
-## HTTP Metrics
+Replace `<gateway_server>` with the IP address of your Anbox Stream Gateway server, which you can determine by running one of the following commands:
 
-Anbox Cloud services that include an HTTP API are monitored.
+* For a full Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit anbox-stream-gateway/0 -- unit-get private-address`
 
-### Anbox Stream Gateway
+Replace `<gateway_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
 
-A few metrics are available to instrument the API. Routes are indicated in the labels, e.g.:
-```
-anbox_stream_gateway_http_request_duration_seconds_bucket{handler="get_sessions",host="juju-2db13b-1",method="get",le="0.5"} 1
-```
-The route name would be `get_sessions` in this case.
+* For a full Anbox Cloud deployment: `juju config anbox-stream-gateway prometheus_port`
+* For the Anbox Cloud Appliance: `juju config -m appliance:anbox-cloud anbox-stream-gateway prometheus_port`
 
-Here's the list of all routes and their corresponding label
+The Anbox Stream Gateway endpoint is on HTTPS, and therefore you must authenticate to access it. You can retrieve the credentials from the `/var/snap/anbox-stream-gateway/common/service/config.yaml` file on the gateway server:
 
-| Method   | Route                             | Label                        |
-|----------|-----------------------------------|------------------------------|
-| `GET`    | `/1.0/status`                      | `get_service_status`         |
-| `POST`   |` /1.0/sessions`                     | `create_new_session`         |
+* For a full Anbox Cloud deployment:
+
+  ```
+  juju ssh anbox-stream-gateway/0
+  sudo cat /var/snap/anbox-stream-gateway/common/service/config.yaml
+  ```
+
+* For the Anbox Cloud Appliance:
+
+  ```
+  juju ssh -m appliance:anbox-cloud anbox-stream-gateway/0
+  sudo cat /var/snap/anbox-stream-gateway/common/service/config.yaml
+  ```
+
+You can then access the endpoint with `curl`, for example:
+
+    curl -k -u prometheusadmin:thepassword https://192.0.2.55:9105/internal/1.0/metrics
+
+### Anbox Stream Gateway metrics
+
+Metrics prefixed with `anbox_stream_gateway_` give information about your cluster related to streaming, for example, the number of sessions and agents.
+These metrics are available since Anbox Cloud 1.7.2.
+
+| Name                                  | Description                                     |
+|---------------------------------------|-------------------------------------------------|
+| `anbox_stream_gateway_sessions_total` | Total number of sessions, categorised by status |
+| `anbox_stream_gateway_accounts_total` | Total number of accounts                        |
+| `anbox_stream_gateway_agents_total`   | Number of active and unresponsive agents        |
+
+### Anbox Stream Gateway API metrics
+
+Metrics prefixed with `anbox_stream_gateway_http_` allow to track access to the streaming API.
+These metrics are available since Anbox Cloud 1.9.0.
+
+| Name                                                        | Description                                           |
+|-------------------------------------------------------------|-------------------------------------------------------|
+| `anbox_stream_gateway_http_in_flight_requests`              | Number of HTTP requests being processed at the moment |
+| `anbox_stream_gateway_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                   |
+| `anbox_stream_gateway_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        |
+| `anbox_stream_gateway_http_requests_total`                  | Total number of HTTP requests made                    |
+| `anbox_stream_gateway_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      |
+
+#### API handlers
+
+To give a more granular approach to monitoring, the Anbox Stream Gateway API metrics contain handlers that identify the route that is accessed. The routes are indicated in the handler labels. For example:
+
+    anbox_stream_gateway_http_request_duration_seconds_bucket{handler="get_sessions",host="juju-2db13b-1",method="get",le="0.5"} 1
+
+In this case, the label for the route is `get_sessions`.
+
+The following table contains all routes and their corresponding labels.
+
+| Method   | Route                               | Label                        |
+|----------|-------------------------------------|------------------------------|
+| `GET`    | `/1.0/status`                       | `get_service_status`         |
+| `POST`   | `/1.0/sessions`                     | `create_new_session`         |
 | `GET`    | `/1.0/sessions`                     | `get_sessions`               |
 | `GET`    | `/1.0/sessions/<id>`                | `get_session`                |
 | `DELETE` | `/1.0/sessions/<id>`                | `delete_session`             |
@@ -93,86 +212,63 @@ Here's the list of all routes and their corresponding label
 | `GET`    | `/1.0/applications`                 | `get_applications`           |
 | `GET`    | `/1.0/regions`                      | `get_regions`                |
 
-The different metrics available are as follow:
 
-| Name                                                        | Description                                           | Available since |
-|-------------------------------------------------------------|-------------------------------------------------------|-----------------|
-| `anbox_stream_gateway_http_in_flight_requests`              | Number of HTTP requests being processed at the moment | 1.9.0           |
-| `anbox_stream_gateway_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                 | 1.9.0           |
-| `anbox_stream_gateway_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        | 1.9.0           |
-| `anbox_stream_gateway_http_requests_total`                  | Total number of HTTP requests made                    | 1.9.0           |
-| `anbox_stream_gateway_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      | 1.9.0           |
+## LXD
 
-### AMS
+LXD provides metrics about the LXD cluster that Anbox Cloud uses.
 
-AMS can either be reached via HTTP/S or via a Unix domain socket. The API metrics are separate between `http`, `https` and `unix`:
-```
-ams_http_request_duration_seconds_bucket{handler="http_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
-ams_http_request_duration_seconds_bucket{handler="https_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
-ams_http_request_duration_seconds_bucket{handler="unix_applications_GET",host="juju-2db13b-1",method="get",le="0.5"} 1
-```
-This distinction gives a more granular approach to monitoring.
+LXD metrics have been available since LXD version 4.19. You cannot access LXD metrics if you are running an older version of LXD.
 
-All handler names adopt the following convention `<transport method>_<object>_<http method>`. E.g.: `unix_containers_POST`
-Here's the list of all routes and their corresponding label (ignoring the communication method prefix)
+### LXD metrics endpoint
 
-| Method   | Route                             | Label                        |
-|---------------|-----------------------------------|------------------------------|
-| `GET`       | `/1.0`                      | `service_GET`         |
-| `GET`       |` /1.0/addons`                     | `addons_GET`         |
-| `POST`    | `/1.0/addons`                     | `addons_POST`               |
-| `GET`       |` /1.0/addons/<id>`                     | `addon_GET`         |
-| `PATCH`  |` /1.0/addons/<id>`                     | `addon_PATCH`         |
-| `DELETE`| `/1.0/addons/<id>`                     | `addon_DELETE`               |
-| `DELETE`| `/1.0/addons/<id>/<version>`| `addon_version_DELETE`                |
-| `GET`       | `/1.0/applications`                | `applications_GET`             |
-| `POST`    | `/1.0/applications`                     | `applications_POST`            |
-| `GET`       |` /1.0/applications/<id>`                     | `application_GET`         |
-| `PATCH`  | `/1.0/applications/<id>`                     | `application_PATCH`               |
-| `DELETE`| `/1.0/applications/<id>`| `application_DELETE`                |
-| `GET`       |` /1.0/applications/<id>/<version>`                     | `application_version_GET`         |
-| `PATCH`  | `/1.0/applications/<id>/<version>`                     | `application_version_PATCH`               |
-| `DELETE`| `/1.0/applications/<id>/<version>`| `application_version_DELETE`                |
-| `GET`       |` /1.0/applications/<id>/manifest`                     | `application_manifest_GET`         |
-| `GET`       |` /1.0/applications/<id>/<version>/manifest`  | `application_version_manifest_GET`         |
-| `GET`       | `/1.0/containers`                | `containers_GET`             |
-| `POST`    | `/1.0/containers`                | `containers_POST`             |
-| `GET`       | `/1.0/containers/<id>`                | `container_GET`             |
-| `DELETE`| `/1.0/containers/<id>`                | `container_DELETE`             |
-| `POST`    | `/1.0/containers/<id>/exec`                | `container_exec_POST`             |
-| `GET`       | `/1.0/containers/<id>/logs`                | `container_logs_GET`             |
-| `GET`       | `/1.0/containers/<id>/logs/<name>`                | `container_log_GET`             |
-| `GET`       | `/1.0/version`                | `version_GET`             |
-| `GET`       | `/1.0/nodes`                | `nodes_GET`             |
-| `POST`    | `/1.0/nodes`                | `nodes_POST`             |
-| `GET`       | `/1.0/nodes/<id>`                | `node_GET`             |
-| `PATCH`  | `/1.0/nodes/<id>`                | `node_PATCH`             |
-| `DELETE`| `/1.0/nodes/<id>`                | `node_DELETE`             |
-| `GET`| `/1.0/images`                | `images_GET`             |
-| `POST`| `/1.0/images`                | `images_POST`             |
-| `GET`| `/1.0/images/<id>`                | `image_GET`             |
-| `PATCH`| `/1.0/images/<id>`                | `image_PATCH`             |
-| `DELETE`| `/1.0/images/<id>`                | `image_DELETE`             |
-| `DELETE`| `/1.0/images/<id>/<version>`                | `image_version_DELETE`             |
-| `GET`| `/1.0/config`                | `config_GET`             |
-| `PATCH`| `/1.0/config`                | `config_PATCH`             |
-| `GET`| `/1.0/tasks`                | `tasks_GET`             |
-| `GET`| `/1.0/registry/applications`                | `registry_applications_GET`             |
-| `DELETE`| `/1.0/registry/applications/<id>`                | `registry_application_DELETE`             |
-| `POST`| `/1.0/registry/applications/<id>/push`                | `registry_application_push_POST`             |
-| `POST`| `/1.0/registry/applications/<id>/pull`                | `registry_application_pull_POST`             |
-| `GET`| `/1.0/artifacts/<id>`                | `internal_artifacts_GET`             |
-| `PATCH`| `/1.0/containers/<id>`                | `internal_containers_PATCH`             |
+You can access the LXD metrics through the following endpoint:
 
+     https://<LXD_server>:8443/1.0/metrics
 
+Replace `<LXD_server>` with the IP address of your LXD server, which you can determine by running one of the following commands:
 
+* For a full Anbox Cloud deployment: `juju run --unit lxd/0 -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
 
-The different metrics available are as follow:
+The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://linuxcontainers.org/lxd/docs/latest/metrics/#create-metrics-certificate) in the LXD documentation for instructions on how to create a certificate.
 
-| Name                                                        | Description                                           | Available since |
-|-------------------------------------------------------------|-------------------------------------------------------|-----------------|
-| `ams_http_in_flight_requests`              | Number of HTTP requests being processed at the moment | 1.10.0           |
-| `ams_http_request_duration_seconds_bucket` | The HTTP request latency in seconds                 | 1.10.0           |
-| `ams_http_request_size_bytes_bucket`       | The HTTP request size in bytes                        | 1.10.0           |
-| `ams_http_requests_total`                  | Total number of HTTP requests made                    | 1.10.0           |
-| `ams_http_response_size_bytes_bucket`      | The HTTP response sizes in bytes                      | 1.10.0           |
+Alternatively, if you are using the Anbox Cloud Appliance, you can also access the LXD metrics through the local Unix socket. In this case, you don't need authentication. To use this method, enter the following command:
+
+    curl --unix-socket /var/snap/lxd/common/lxd/unix.socket s/1.0/metrics
+
+### LXD metrics
+
+You can find the list of metrics that LXD provides in the [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/metrics/#provided-metrics).
+
+## WebRTC
+
+The WebRTC metrics are collected by Telegraf on every cluster member.
+
+### WebRTC metrics endpoint
+
+You can access the WebRTC metrics as part of the metrics that Telegraf collects and provides to Prometheus. You can access them from any machine that is on the same network as your Anbox Cloud installation. To find the endpoint, check the `/var/snap/anbox-cloud-appliance/common/telegraf/main.conf` file on each cluster member and look for the `listen` address and the `path` in the `[[outputs.prometheus_client]]` section.
+
+You can then access the endpoint with `curl`, for example:
+
+    curl http://192.0.2.1:9001/metrics
+
+### WebRTC metrics
+
+Metrics prefixed with `webrtc_` give you detailed insight about the WebRTC protocol for every streaming instance. See the [official W3C reference](https://www.w3.org/TR/webrtc-stats) for more information.
+These metrics are available since Anbox Cloud 1.8.0.
+
+| Name                                | Description                                                                                                |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------|
+| `webrtc_frames_encoded`             | Total number of frames successfully encoded                                                                |
+| `webrtc_key_frames_encoded`         | Total number of key frames, such as key frames in VP8 or IDR-frames in H.264 (`webrtc_key_frames_encoded - webrtc_frames_encoded` gives the number of delta frames) |
+| `webrtc_total_encode_time`          | Total number of seconds that has been spent encoding the `webrtc_frames_encoded` frames (the average encode time can be calculated by dividing this value with `webrtc_frames_encoded`) |
+| `webrtc_target_bitrate`             | The current encoder target in bits per second                                                              |
+| `webrtc_bytes_sent`                 | Total number of bytes sent for a specific [SSRC](https://tools.ietf.org/html/rfc3550#section-3) (a SSRC represents one resource - video, audio or binary data - sent over a WebRTC track) |
+| `webrtc_retransmitted_bytes_sent`   | Total number of bytes that were re-transmitted for a specific SSRC, only including payload bytes           |
+| `webrtc_retransmitted_packets_sent` | Total number of packets that were re-transmitted for a specific SSRC                                       |
+| `webrtc_total_packet_send_delay`    | Total number of seconds that packets have spent buffered locally before being transmitted onto the network |
+| `webrtc_packets_sent`               | Total number of RTP packets sent for this SSRC (includes re-transmissions)                                 |
+| `webrtc_nack_count`                 | Total number of Negative Acknowledgement (NACK) packets received by this sender                            |
+| `webrtc_fir_count`                  | Total number of Full Intra Request (FIR) packets received by this sender (video only)                      |
+| `webrtc_pli_count`                  | Total number of Picture Loss Indication (PLI) packets received by this sender (video only)                 |
+| `webrtc_sli_count`                  | Total number of Slice Loss Indication (SLI) packets received by this sender (video only)                   |
