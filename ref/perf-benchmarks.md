@@ -17,10 +17,10 @@ All benchmarks are done with a variation of the following `amc benchmark` comman
 
 | Hardware                            | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # Containers | Avg. FPS |
 |-------------------------------------|---------------------|----------------------|------------|---------------------|--------------|---------|
-| Ampere Altra + 1x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 30           | 29      |
-| Ampere Altra + 2x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 55           | 29      |
-| Ampere Altra + 1x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 20           | 28      |
-| Ampere Altra + 2x Nvidia Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 50           | 26      |
+| Ampere Altra + 1x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 30           | 29      |
+| Ampere Altra + 2x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 55           | 29      |
+| Ampere Altra + 1x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 20           | 28      |
+| Ampere Altra + 2x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 1080p      | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 50           | 26      |
 
 ## AWS
 

@@ -155,7 +155,7 @@ To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
 ### Add GPU support
 
-On most clouds, adding GPU support is done by picking a specific instance type. The following example uses the `g4dn.xlarge` instance type on AWS, which includes an Nvidia Tesla T4 GPU.
+On most clouds, adding GPU support is done by picking a specific instance type. The following example uses the `g4dn.xlarge` instance type on AWS, which includes an NVIDIA Tesla T4 GPU.
 
 The `overlay.yaml` file for the `anbox-cloud` bundle looks like this:
 
