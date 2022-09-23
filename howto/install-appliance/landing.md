@@ -13,5 +13,5 @@ The Anbox Cloud Appliance is currently available for the following cloud platfor
 
 Other clouds are also supported, but the Anbox Cloud Appliance is not available from their application directories yet. Therefore, to install the appliance on such a cloud, install the Anbox Cloud Appliance snap on a cloud machine. See the following instructions:
 
-* For [Azure](https://azure.microsoft.com/): [How to install the appliance on Azure](tbd)
+* For [Azure](https://azure.microsoft.com/): [How to install the appliance on Azure](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-azure/30824)
 * For [Google Cloud](https://cloud.google.com/) or [Oracle Cloud (OCI)](https://www.oracle.com/cloud/): [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/install-appliance/22681)
