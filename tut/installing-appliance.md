@@ -35,7 +35,21 @@ Run the following commands to ensure that all installed packages on your system 
     sudo apt update
     sudo apt upgrade
 
-### 2. Attach your machine to the UA subscription
+### 2. Install dependencies
+
+The Anbox Cloud Appliance requires LXD >= 5.0. Check which version you have currently installed:
+
+    lxd --version
+
+If LXD is not installed, run:
+
+    snap install --channel=5.0/stable lxd
+
+If LXD is already installed but the version is older than 5.0, run:
+
+    snap refresh --channel=5.0/stable lxd
+
+### 3. Attach your machine to the UA subscription
 
 The Anbox Cloud Appliance requires a valid Ubuntu Advantage for Applications subscription.
 
@@ -43,14 +57,14 @@ Before installing the appliance, you must attach the machine on which you want t
 
     sudo ua attach <UA_token>
 
-### 3. Install the snap
+### 4. Install the snap
 
 Run the following command to install the `anbox-cloud-appliance` snap, which handles the installation and deployment of the Anbox Cloud Appliance:
 
     sudo snap install --classic anbox-cloud-appliance
 
 <a name="additional-tools"></a>
-### 4. Install additional tools
+### 5. Install additional tools
 
 The appliance requires a few additional tools. Run the following commands to install them:
 
