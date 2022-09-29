@@ -1,5 +1,20 @@
 After installing the Anbox Cloud Appliance, you must initialise it and register your Ubuntu SSO account with the dashboard.
 
+<a name="install-requirements"></a>
+## Install requirements
+
+The Anbox Cloud Appliance requires LXD >=5.0. Check which version you have currently installed:
+
+    lxd --version
+
+If LXD is not installed, run:
+
+    snap install --channel=5.0/stable lxd
+
+If LXD is already installed but the version is older than 5.0, run:
+
+    snap refresh --channel=5.0/stable lxd
+
 <a name="initialise"></a>
 ## Initialise the appliance
 
