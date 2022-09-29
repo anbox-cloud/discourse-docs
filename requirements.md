@@ -61,7 +61,7 @@ The Anbox Cloud Appliance supports the following Ubuntu versions:
 
 The Anbox Cloud Appliance currently supports the following LXD versions:
 
-* >= 5.0
+* &gt;= 5.0
 
 <a name="juju-based"></a>
 ## Juju-based deployments
@@ -77,13 +77,6 @@ Anbox Cloud supports the following Ubuntu versions:
 * 20.04 (focal)
 
 For new deployments, Ubuntu 20.04 (focal) is preferred.
-
-<a name="juju-lxd-version"></a>
-### LXD version
-
-Anbox Cloud currently supports the following LXD versions:
-
-* >= 4.0
 
 <a name="linux-kernel"></a>
 #### Linux kernel
@@ -101,6 +94,13 @@ The following table gives an overview of the available kernel versions for the d
 |Azure|>= 5.4|`linux-azure`, `linux-modules-extra-azure`||
 |OCI|>= 5.4|`linux-oracle`, `linux-modules-extra-oracle`||
 |Private|>= 5.4|`linux-generic`||
+
+<a name="juju-lxd-version"></a>
+### LXD version
+
+Anbox Cloud currently supports the following LXD versions:
+
+* &gt;= 4.0
 
 <a name="juju-version"></a>
 ### Juju version
