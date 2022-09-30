@@ -7,6 +7,7 @@ The explanatory guides in this section introduce you to the concepts used in Anb
 | [About applications](https://discourse.ubuntu.com/t/managing-applications/17760)| Learn about application requirements and the application bootstrap process |
 | [About the AAR](https://discourse.ubuntu.com/t/application-registry/17761)| Understand the Anbox Application Registry (AAR) |
 | [About containers](https://discourse.ubuntu.com/t/managing-containers/17763)| Understand the different container types and the container life cycle |
+| [About security](tbd)| Understand the aspects that are important to keep your Anbox Cloud deployment secure |
 | [About clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)| Learn about clustering |
 | [About performance](https://discourse.ubuntu.com/t/about-performance/29416) | Understand the aspects that are relevant for tuning the performance of Anbox Cloud |
 | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) | Learn how to estimate the required capacity for your Anbox Cloud deployment |
