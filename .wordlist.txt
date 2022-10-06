@@ -227,6 +227,7 @@ viewport
 VMs
 VNC
 VPC
+VPN
 Vulkan
 Wayland
 WebRTC
