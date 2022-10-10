@@ -32,6 +32,7 @@ balancer
 balancers
 benchmarking
 binderfs
+biometrics
 bitrate
 bitrates
 BombSquad
@@ -60,6 +61,7 @@ CTS
 CUDA
 customisable
 CustomLocale
+DDoS
 deprecations
 Dev
 DNS
@@ -106,6 +108,7 @@ Juju
 Juju's
 kb
 KeyError
+keystore
 KSM
 Lawnchair
 Livepatch
@@ -175,6 +178,7 @@ scrcpy
 SDK
 SDKs
 SEGV
+SELinux
 sendfile
 SensorManager
 SHA
@@ -213,6 +217,7 @@ TypeError
 UA
 UDP
 UI
+unencrypted
 unexpose
 unhandled
 unpublish
