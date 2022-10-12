@@ -3,6 +3,26 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.15.2]
+
+# 1.15.2 (October 12 2022)
+
+#### New features & improvements
+
+* Included Android security updates for October 2022 (see [Android Security Bulletin - October 2022](https://source.android.com/security/bulletin/2022-10-01) for more information).
+
+## Known issues
+
+n/a
+
+#### Bugs
+
+* AC-1136 All container were gone after the appliance snap got refreshed
+* AC-1130 Cannot reconnect to stream session after client with unsupported video codecs tried
+* AC-1087 Can't delete an application when the application bootstrap ends up in an error state
+
+[/Details]
+
 [Details=1.15.1]
 
 ## 1.15.1 (September 14 2022)

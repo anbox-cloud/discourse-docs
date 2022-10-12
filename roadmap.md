@@ -14,13 +14,6 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.15.2 (October 2022)
-
-Target date: October 12, 2022
-
-* Android security updates for October 2022
-* Bug fixes
-
 ### 1.16.0 (November 2022)
 
 Target date: November 16, 2022
