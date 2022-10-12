@@ -17,7 +17,7 @@ n/a
 
 #### Bugs
 
-* AC-1136 All container were gone after the appliance snap got refreshed
+* AC-1136 All containers were gone after the appliance snap got refreshed
 * AC-1130 Cannot reconnect to stream session after client with unsupported video codecs tried
 * AC-1087 Can't delete an application when the application bootstrap ends up in an error state
 
