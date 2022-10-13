@@ -95,6 +95,15 @@ This is the *main* class. It takes the previously created connector and prepares
 targetElement: "anbox-stream",
 ```
 
+[note type="information" status="Tip"]
+If you experience any streaming issues, you can turn on debug information by adding the following option to the main class:
+```javascript
+   experimental: {
+       debug: true,
+   }
+```
+[/note]
+
 The SDK needs an HTML element where it can attach the video, `targetElement` is the ID of that element.
 In this case you'd need to add the following to your HTML body:
 
