@@ -19,12 +19,13 @@ If you are using the web dashboard and, for example, creating an application wor
 
 In the WebRTC logs, check whether the connection was established.
 
-![Screen capture (Chrome) showing that the connection was established](../../images/stream_webrtc-connected.png)
+![Screen capture (Chrome) showing that the connection was established](https://assets.ubuntu.com/v1/f80697ef-stream_webrtc-connected.png)
 *(Screen capture taken in Chrome)*
+<br/>
 
 If the connection could not be established, check the table of ICE candidates. The ICE state of the different candidates should help you identify where the problem lies.
 
-![Screen capture (Firefox) showing ICE stats and candidates](../../images/stream_webrtc-candidates.png)
+![Screen capture (Firefox) showing ICE stats and candidates](https://assets.ubuntu.com/v1/4bc262ee-stream_webrtc-candidates.png)
 *(Screen capture taken in Firefox)*
 
 ## Streaming works badly and stalls

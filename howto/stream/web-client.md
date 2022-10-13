@@ -97,7 +97,7 @@ targetElement: "anbox-stream",
 
 [note type="information" status="Tip"]
 If you experience any streaming issues, you can turn on debug information by adding the following option to the main class:
-```javascript
+```
    experimental: {
        debug: true,
    }
