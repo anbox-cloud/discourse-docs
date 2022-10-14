@@ -26,7 +26,7 @@ For detailed information, see the [Release notes](https://discourse.ubuntu.com/t
 
 Anbox Cloud is a Canonical product. It originally grew out of the Anbox open-source project, but its code base is now completely independent.
 
-- [Get support through Ubuntu Advantage](https://ubuntu.com/support)
+- [Get support through Ubuntu Pro](https://ubuntu.com/support)
 - [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
 - [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
 

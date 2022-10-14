@@ -66,7 +66,7 @@
 - [Stream gateway](#stream-gateway)
 - [Streaming stack](#streaming-stack)
 - [`swrast`](#swrast)
-- [Ubuntu Advantage for Applications](#ubuntu-advantage-for-applications)
+- [Ubuntu Pro](#ubuntu-pro)
 - [Ubuntu One](#ubuntu-one)
 - [Watchdog](#watchdog)
 - [Web dashboard](#web-dashboard)
@@ -432,17 +432,17 @@ See https://discourse.ubuntu.com/t/about-application-streaming/17769.
 
 A server that finds the most optimal network path between a client and the container running its application.
 
-<a name="ubuntu-advantage-for-applications"></a>
-### Ubuntu Advantage for Applications
+<a name="ubuntu-pro"></a>
+### Ubuntu Pro
 
-Canonical’s service package for Ubuntu that provides enterprise security and support for open-source applications, with managed service offerings available. Note the difference between Ubuntu Advantage for Infrastructure and Ubuntu Advantage for Applications; Anbox Cloud requires a Ubuntu Advantage for Applications subscription.
+Canonical’s service package for Ubuntu that provides enterprise security and support for open-source applications, with managed service offerings available. Note the difference between Ubuntu Pro (Infra-only) and Ubuntu Pro (Apps-only); Anbox Cloud requires a full Ubuntu Pro or a Ubuntu Pro (Apps-only) subscription.
 
-See [Ubuntu Advantage](https://ubuntu.com/support).
+See [Ubuntu Pro](https://ubuntu.com/support).
 
 <a name="ubuntu-one"></a>
 ### Ubuntu One
 
-A central user account system used by all Canonical sites and services. You need a Ubuntu One account to purchase the Ubuntu Advantage for Applications subscription that is required to run Anbox Cloud, and to log into the web dashboard.
+A central user account system used by all Canonical sites and services. You need a Ubuntu One account to purchase the Ubuntu Pro (Apps-only) subscription that is required to run Anbox Cloud, and to log into the web dashboard.
 
 See [Ubuntu One](https://login.ubuntu.com/).
 

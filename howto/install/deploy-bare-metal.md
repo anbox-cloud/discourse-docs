@@ -7,8 +7,8 @@ Alternatively, you can follow the instructions in this document to use the [manu
 Before you start the installation, ensure that you have the required prerequisites:
 
 * At least three Ubuntu 20.04 LTS machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for details and recommendations.
-* Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+* Your Ubuntu Pro token for either a full Ubuntu Pro subscription or a Ubuntu Pro (Apps-only) subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, sign in on https://ubuntu.com/pro to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
 ## Install Juju
 
@@ -52,7 +52,7 @@ Juju will add the machines to its list of usable machines, which you can display
     0        started  192.168.1.9   manual:192.168.1.9   bionic    Manually provisioned machine
     1        started  192.168.1.10  manual:192.168.1.10  bionic    Manually provisioned machine
 
-## Attach your Ubuntu Advantage subscription
+## Attach your Ubuntu Pro subscription
 
 Create an `ua.yaml` overlay file as described in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/deploy-anbox-cloud-with-juju/17744#ua-overlay).
 

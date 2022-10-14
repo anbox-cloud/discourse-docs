@@ -9,6 +9,6 @@ See the [Anbox Cloud Roadmap](https://discourse.ubuntu.com/t/release-roadmap/193
 
 ## Professional support
 
-If you are looking for additional support, find out about [Ubuntu Advantage](https://ubuntu.com/support).
+If you are looking for additional support, find out about [Ubuntu Pro](https://ubuntu.com/support).
 
 Canonical can also provide [managed solutions](https://ubuntu.com/managed) for Anbox Cloud.

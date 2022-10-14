@@ -15,8 +15,8 @@ Before you start the installation, ensure that you have the required credentials
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
-* Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+* Your Ubuntu Pro token for either a full Ubuntu Pro subscription or a Ubuntu Pro (Apps-only) subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, sign in on https://ubuntu.com/pro to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
 ## Install Juju
 
@@ -55,13 +55,13 @@ A Juju model holds a specific deployment. It is a good idea to create a new one 
 You can have multiple models on each controller, which means that you can deploy multiple versions of Anbox Cloud, or other applications.
 
 <a name="ua-overlay"></a>
-## Attach your Ubuntu Advantage subscription
+## Attach your Ubuntu Pro subscription
 
-Every deployment of Anbox Cloud must be attached to the Ubuntu Advantage service Canonical provides. This provides your deployment with the correct licences you're granted as part of your licence agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
+Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canonical provides. This provides your deployment with the correct licences you're granted as part of your licence agreement with Canonical, next to other services available through your subscription like [Livepatch](https://ubuntu.com/livepatch).
 
-You can retrieve your *Ubuntu Advantage for **Applications*** token at https://ubuntu.com/advantage after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
+You can retrieve your Ubuntu Pro token at https://ubuntu.com/pro after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
-[note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+[note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 
 To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
