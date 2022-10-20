@@ -6,6 +6,43 @@ Not all components are updated with each release. When components are not update
 
 ### Charms
 
+n/a
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+n/a
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| `anbox-cloud-appliance` | 1.15.3 |
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+n/a
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 510.x |
+| Mesa | 22.0.5 |
+
+[/Details]
+
+[Details=1.15.2]
+
+### Charms
+
 | Name | Channel | Revision |
 |----------|--------------|--------------|
 | `anbox-cloud-dashboard` | `1.15/stable` | 46 |
