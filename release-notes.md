@@ -9,7 +9,7 @@ instructions on how to update your Anbox Cloud deployment.
 
 #### New features & improvements
 
-* Workaround a bug in Juju 2.9.35 which prevents the Anbox Cloud Appliance deploying its software stack entirely. The workaround includes a Juju binary of a previous release inside the appliance snap to make the deployment process independent of the Juju snap installed on the host system.
+* Work around a bug in Juju 2.9.35 that prevents the Anbox Cloud Appliance from deploying its software stack entirely. The workaround makes the deployment process independent of the Juju snap that is installed on the host system by including a Juju binary of a previous release inside the appliance snap.
 
 #### Bugs
 
