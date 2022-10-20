@@ -3,6 +3,20 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.15.3]
+
+# 1.15.3 (October 20 2022)
+
+#### New features & improvements
+
+* Workaround a bug in Juju 2.9.35 which prevents the Anbox Cloud Appliance deploying its software stack entirely. The workaround includes a Juju binary of a previous release inside the appliance snap to make the deployment process independent of the Juju snap installed on the host system.
+
+#### Bugs
+
+* [LP:1993137](https://bugs.launchpad.net/juju/+bug/1993137) Juju 2.9.35 breaks LXD deployment
+
+[/Details]
+
 [Details=1.15.2]
 
 # 1.15.2 (October 12 2022)
