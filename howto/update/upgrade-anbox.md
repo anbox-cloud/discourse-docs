@@ -55,9 +55,9 @@ Once the commands are executed, Juju will perform all necessary upgrade steps au
 
 After Juju has settled the workload status will be marked as `blocked` and the status will show `UA token missing`.
 
-Since the 1.7.0 release of Anbox Cloud a valid Ubuntu Advantage token including the Anbox Cloud entitlement is mandatory. Generally you can get your Ubuntu Advantage token on [Ubuntu Advantage](https://ubuntu.com/advantage) but your account has to specifically whitelisted to be entitled for Anbox Cloud. If your account has not yet whitelisted or you're unsure, please speak with your Canonical account representative.
+Anbox Cloud requires a valid Ubuntu Pro token including the Anbox Cloud entitlement, thus a full Ubuntu Pro or a Ubuntu Pro (Apps-only) subscription. You can get your Ubuntu Pro token on [Ubuntu Pro](https://ubuntu.com/pro). Please speak with your Canonical account representative.
 
-When you have your Ubuntu Advantage token you can apply it for all relevant charms with the following commands:
+When you have your Ubuntu Pro token, you can apply it for all relevant charms with the following commands:
 
     juju config ams ua_token=<your token>
     juju config lxd ua_token=<your token>
@@ -91,9 +91,9 @@ You can check for the status of an existing application by running
 
 ## Image server access
 
-Starting with Anbox Cloud 1.9.0 you do not need to manually configure the `images.auth` configuration option in AMS anymore with your personal username and password. Authentication to the image server is now fully automated via your Ubuntu Advantage subscription.
+Starting with Anbox Cloud 1.9.0 you do not need to manually configure the `images.auth` configuration option in AMS anymore with your personal username and password. Authentication to the image server is now fully automated via your Ubuntu Pro subscription.
 
-Existing deployments will be automatically migrated to the new image server endpoint `https://images.anbox-cloud.io/stable/` and authentication based on your Ubuntu Advantage subscription will be setup during the AMS charm upgrade process as well. All you need to have configured for this is the Ubuntu Advantage token on the AMS charm you set during deploying with the deploying command:
+Existing deployments will be automatically migrated to the new image server endpoint `https://images.anbox-cloud.io/stable/` and authentication based on your Ubuntu Pro subscription will be setup during the AMS charm upgrade process as well. All you need to have configured for this is the Ubuntu Pro token on the AMS charm you set during deploying with the deploying command:
 
     juju config ams ua_token=<your token>
 

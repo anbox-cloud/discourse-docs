@@ -11,8 +11,8 @@ Check the hardware requirements for the Anbox Cloud Appliance [here](https://dis
 In addition, make sure you have the following prerequisites:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
-* Your *Ubuntu Advantage for **Applications*** token. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a UA Applications token, sign in on https://ubuntu.com/advantage to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Advantage for **Infrastructure*** token that every user gets for free for personal use does **NOT** work and will result in a failed deployment. You must purchase a *Ubuntu Advantage for **Applications*** subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+* Your Ubuntu Pro token for either a full Ubuntu Pro subscription or a Ubuntu Pro (Apps-only) subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, sign in on https://ubuntu.com/pro to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
 * An Azure account that you use to create the virtual machine.
 
 ## Create a virtual machine
