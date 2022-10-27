@@ -46,6 +46,8 @@ If one of the steps fails, AMS will interrupt the bootstrap process and make the
 
 [note type="information" status="Note"]An application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the status of application is set to `error` too.[/note]
 
+The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the container is marked with the status `error`.
+
 When a base container runs into an error status, you can see what has gone wrong there by checking the error message with `amc show <container ID>`:
 
 ```bash
