@@ -1,0 +1,22 @@
+name: Check for files that should not be edited
+
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - 'ref/ams-configuration.md'
+  pull_request:
+    paths:
+      - 'ref/ams-configuration.md'
+
+jobs:
+  check:
+    name: Fail
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print error
+        run: echo "::error file=ref/ams-configuration.md::Never edit ref/ams-configuration.md manually - edit ref/ams-configuration.tmpl.md or ref/ams-configuration.yaml instead!"
+
+      - name: Exit
+        run: exit 1
