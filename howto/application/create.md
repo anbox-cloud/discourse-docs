@@ -12,7 +12,7 @@ To create a new application, you must first create a manifest file to define the
 
 ```yaml
 name: candy
-instance-type: a2.3
+instance-type: a4.3
 image: default
 boot-activity: com.canonical.candy.GameApp
 required-permissions:
@@ -69,7 +69,7 @@ name: candy
 status: initializing
 published: false
 config:
-  instance-type: a2.3
+  instance-type: a4.3
   boot-package: com.canonical.candy
 versions:
   0:

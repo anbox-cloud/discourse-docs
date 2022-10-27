@@ -71,7 +71,7 @@ Create an application manifest file (`my-application/manifest.yaml`) and include
 
 ```yaml
 name: my-application
-instance-type: a2.3
+instance-type: a4.3
 addons:
   - ssh
 ```

@@ -55,7 +55,7 @@ When a container is launched, Anbox enables an application watchdog by default f
 
 ```yaml
 name: candy
-instance-type: a2.3
+instance-type: a4.3
 image: default
 watchdog:
   disabled: true
@@ -95,11 +95,11 @@ Name           | Value type | Minimum value  | Description
 `disk-size`    | string     |     3 GB       | Disk size to be assigned to the application
 `gpu-slots`(optional) | integer |     0      | Number of GPU slots to be assigned to the application
 
-In the following application manifest file, the application is created with `a2.3` instance type, which will be assigned 2 vCPU cores, 3 GB of memory and a disk size of 3 GB. With the following resources defined in the manifest file, the allocated memory and disk size will end up at 4 GB and 8 GB, respectively, on application installation, and the number of vCPU cores remains the same:
+In the following application manifest file, the application is created with `a4.3` instance type, which will be assigned 4 vCPU cores, 3 GB of memory and a disk size of 3 GB. With the following resources defined in the manifest file, the allocated memory and disk size will end up at 4 GB and 8 GB, respectively, on application installation, and the number of vCPU cores remains the same:
 
 ```yaml
 name: candy
-instance-type: a2.3
+instance-type: a4.3
 resources:
   memory: 4GB
   disk-size: 8GB

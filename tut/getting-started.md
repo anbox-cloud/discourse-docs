@@ -184,7 +184,7 @@ Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
 
-2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g2.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
    For example, the file could look like this:
 

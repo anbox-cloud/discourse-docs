@@ -29,7 +29,7 @@ Let's assume that you have an application that consists of an APK file and an OB
 
    ```yaml
    name: com.foo.bar
-   instance-type: a2.3
+   instance-type: a4.3
    required-permissions: ['*']
    extra-data:
      main.203779.com.foo.bar.obb:
