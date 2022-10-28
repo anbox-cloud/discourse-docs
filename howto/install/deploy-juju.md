@@ -106,6 +106,12 @@ You will use the overlay file during the deployment.
 
 ## Deploy Anbox Cloud
 
+[note type="information" status="Note"]
+This section explains how to start the Anbox Cloud deployment without any customisation. However, in most cases you will want to include a custom configuration when you start the deployment.
+
+Therefore, make sure to check the following sections before you run the deploy command.
+[/note]
+
 To install Anbox Cloud, deploy the suitable Anbox Cloud bundle to the Juju model. This will add instances to the model and deploy the required applications.
 
 Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#juju-bundles):
@@ -120,7 +126,7 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 ## Customise the hardware configuration
 
-To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files). Here you can, for example, specify AWS instance types, change the size of the root disk or other things.
+To customise the machine configuration Juju will use for the deployment, create another [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files). Here you can, for example, specify AWS instance types, change the size or source of the root disk or other things. See the [complete list of constraints](https://juju.is/docs/olm/constraint#heading--complete-list-of-constraints) in the Juju documentation for details.
 
 For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 
@@ -155,6 +161,39 @@ machines:
 To deploy, add `--overlay overlay.yaml` to your deploy command. For example:
 
     juju deploy anbox-cloud --overlay ua.yaml --overlay overlay.yaml
+
+<a name="customise-storage"></a>
+### Customise storage
+
+By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
+
+The easiest way to do this is to use a storage device defined by Juju:
+
+1. Decide which Juju storage pool you want to use.
+
+   See [View the available storage pools](https://juju.is/docs/olm/manage-storage-pools#heading--view-the-available-storage-pools) in the Juju documentation for instructions on how to display existing storage pools. If you are running on AWS, for example, you can use the existing `ebs-ssd` pool.
+
+   If you want to use a new pool, see [Create a storage pool](https://juju.is/docs/olm/manage-storage-pools#heading--create-a-storage-pool) in the Juju documentation for instructions. It can also be useful to create a Juju storage pool if you want to use a specific volume type that is optimised for your setup. For example, AWS provides [EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html) that are optimised for different purposes.
+
+   If you decide to create a pool, make sure to do so before you start the deployment.
+1. Configure the `ams-lxd` charm to use the Juju storage pool.
+
+   The `ams-lxd` charm defines an optional storage pool (see the `metadata.yaml` file in the `ams-lxd` charm). To make the LXD charm use this storage pool, you must configure a [storage constraint](https://juju.is/docs/olm/storage-constraint) for it.
+
+   For example, to use the AWS `ebs-ssd` Juju storage pool for LXD storage, use an overlay file with the following storage constraint:
+
+   ```
+   applications:
+     lxd:
+       storage:
+         pool: ebs-ssd,100GB,1
+   ```
+
+   [note type="information" status="Note"]
+   You can add only one storage pool.
+   [/note]
+
+When you deploy Anbox Cloud with this configuration, Juju allocates the requested storage and attaches it to LXD. During initialisation, AMS then configures LXD to create a ZFS storage pool on the configured storage.
 
 ### Add GPU support
 

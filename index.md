@@ -68,6 +68,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 3 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 3 | howto/manage/benchmarks | [Run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
+| 3 | howto/manage/resize-storage | [Resize LXD storage](tbd)|
 | 2 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 3 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 3 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|

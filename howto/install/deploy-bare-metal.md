@@ -74,6 +74,55 @@ The `anbox-cloud` bundle requires two additional machines to host the load balan
 
 The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
 
+<a name="customise-storage"></a>
+### Customise storage
+
+By default, Anbox Cloud uses a loop file with an automatically calculated size for LXD storage. For optimal performance, however, you should use a dedicated block storage device. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
+
+There are different ways of configuring a dedicated block storage device:
+
+- Use an existing LXD storage pool (recommended - see [Existing storage pool](#existing-storage-pool) below)
+- Use a dedicated storage device (see [Dedicated storage device](#dedicated-storage-device) below)
+- Use a storage device defined by Juju (see the *Customise storage* section in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744#customise-storage) for instructions)
+
+<a name="existing-storage-pool"></a>
+### Existing storage pool
+
+To use an existing LXD storage pool, set the [`storage_pool`](https://charmhub.io/ams/configure#storage_pool) configuration on the AMS charm to the name of the LXD storage pool that you want Anbox Cloud to use.
+
+For example, to use an existing LXD storage pool with the name `my-zfs-pool`, use an overlay file with the following content:
+
+```
+applications:
+  ams:
+    options:
+      storage_pool: my-zfs-pool
+```
+
+[note type="information" status="Important"]
+The LXD storage pool must use the ZFS storage driver. Other storage drivers are not supported by Anbox Cloud.
+[/note]
+
+<a name="dedicated-storage-device"></a>
+### Dedicated storage device
+
+To use a dedicated storage device that is not defined by Juju for LXD storage, set the [`storage_device`](https://charmhub.io/ams/configure#storage_device) configuration on the AMS charm to the path of the storage device.
+
+For example, to use `/dev/sdb` as the dedicated storage device, use an overlay file with the following content:
+
+```
+applications:
+  ams:
+    options:
+      storage_device: /dev/sdb
+```
+
+[note type="information" status="Important"]
+The path to the dedicated storage device must be identical for all machines that are part of the cluster.
+[/note]
+
+You do not need to prepare the storage device in any way. AMS takes care of creating the LXD storage pool on the device.
+
 ## Deploy Anbox Cloud
 
 Now you can deploy Anbox Cloud. The deployment is entirely handled by Juju and does not need any manual involvement other than running the actual deploy command.
