@@ -17,7 +17,7 @@ list all available applications with the `amc application ls` command:
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
 |          ID          |      NAME      | INSTANCE TYPE | ADDONS | PUBLISHED | STATUS |    LAST UPDATED     |
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
-| bdp7kmahmss3p9i8huu0 |      candy     | a2.3          | ssh    | false     | ready  | 2018-08-14 08:44:41 |
+| bdp7kmahmss3p9i8huu0 |      candy     | a4.3          | ssh    | false     | ready  | 2018-08-14 08:44:41 |
 +----------------------+----------------+---------------+--------+-----------+--------+---------------------+
 ```
 If the application for which you want to launch a container is not yet published (see [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201) for more details), the launch command will fail as it only allows launching a container for a published application. However, you can work around this by specifying a specific version of an application:

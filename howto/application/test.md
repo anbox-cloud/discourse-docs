@@ -92,7 +92,7 @@ In this example we use the following application `manifest.yaml`:
 
 ```
 name: app
-instance-type: a2.3
+instance-type: a4.3
 ```
 
 Once the application is fully bootstrapped by AMS, you can launch a container for it with the following command:

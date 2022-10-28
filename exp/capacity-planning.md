@@ -21,7 +21,7 @@ The instance type specifies the resources that are available to the application:
 
 If none of the provided instance types fits for your application, you can also manually [configure the resources](https://discourse.ubuntu.com/t/how-to-configure-available-resources/24960) according to your requirements.
 
-When a container for an application is launched, it takes the specified amount of resources. For example, if an application uses the `a2.3` instance type, it requires 2 vCPU cores, 3 GB of memory, 3 GB of disk space and no GPU slot. AMS internally summarises the amount of resources used by containers on a single machine and disallows launching additional containers when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In this case, you will see the following error message when trying to launch a new container:
+When a container for an application is launched, it takes the specified amount of resources. For example, if an application uses the `a4.3` instance type, it requires 4 vCPU cores, 3 GB of memory, 3 GB of disk space and no GPU slot. AMS internally summarises the amount of resources used by containers on a single machine and disallows launching additional containers when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In this case, you will see the following error message when trying to launch a new container:
 
     No suitable node to satisfy container requirement available
 

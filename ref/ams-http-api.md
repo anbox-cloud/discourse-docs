@@ -624,7 +624,7 @@ Output:
     "name": "my-app",
     "status_code": 2,
     "status": "ready",        // Application status
-    "instance_type": "a2.3",  // Instance type
+    "instance_type": "a4.3",  // Instance type
     "boot_package": "com.lolo.io.onelist",  // Boot application
     "parent_image_id": "btavtegj1qm58qg7ru50",
     "published": true,
@@ -939,7 +939,7 @@ Output:
 ```yaml
 name: my-app
 image: Android10
-instance-type: a2.3
+instance-type: a4.3
 boot-package: com.lolo.io.onelist
 video-encoder: gpu-preferred
 watchdog:
@@ -967,7 +967,7 @@ Output:
 ```yaml
 name: my-app
 image: Android10
-instance-type: a2.3
+instance-type: a4.3
 boot-package: com.lolo.io.onelist
 video-encoder: gpu-preferred
 watchdog:
@@ -1284,7 +1284,7 @@ Payload:
 ```json
 {
     "image_id": "Android_10",                 # (string | mandatory) Identifier or name of the application this container belongs to.
-    "instance_type": "a2.3",                  # (string | mandatory)  Instance type to use for the container. Please refer to https://anbox-cloud.io/docs/manage/instance-types-reference for all available instance types.
+    "instance_type": "a4.3",                  # (string | mandatory)  Instance type to use for the container. Please refer to https://anbox-cloud.io/docs/manage/instance-types-reference for all available instance types.
     "image_version": 0,                       # (number | optional) Version of the image this container uses.
     "user_data": "",                          # (string | optional) Additional data to be put into the container when bootstrapped.
     "node": "lxd1",                           # (string | optional) Lxd node to use for the container to launch

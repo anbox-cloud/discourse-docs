@@ -114,7 +114,7 @@ You can add your hooks directly to an application. To do so, complete the follow
 
    ```
    name: my-app
-   instance-type: a2.3
+   instance-type: a4.3
    ```
 
 1. Prepare one or more hooks as described in [Create a hook](#create-hook).

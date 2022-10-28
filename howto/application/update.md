@@ -22,7 +22,7 @@ name: candy
 status: ready
 published: false
 config:
-  instance-type: a2.3
+  instance-type: a4.3
   boot-package: com.canonical.candy
 versions:
   0:
