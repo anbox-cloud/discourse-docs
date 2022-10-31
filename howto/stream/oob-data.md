@@ -118,6 +118,43 @@ The `anbox-webrtc-data-proxy` system daemon runs in the Anbox container and regi
 
 [note type="information" status="Note"]To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be [installed as a system app](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086). [/note]
 
+#### Get notified about the availability of data channels
+
+To get notified about the availability of data channels, an Android application can register the following broadcast receiver in the `AndroidManifest.xml` file:
+
+```
+<receiver
+    android:name=".DataChannelEventReceiver"
+    android:enabled="true"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="com.canonical.anbox.BROADCAST_DATA_CHANNELS_STATUS"/>
+    </intent-filter>
+</receiver>
+```
+
+Whenever the availability of data channels changes, a broadcast is sent out to the Android application. The broadcast contains the following parameters:
+
+| Parameters               | Type                                            | Description                                                                                                                                                                |
+| ------------------------ | ----------------------------------------------- | -----------------------------------------------                                                                                                                            |
+| `event`                  | string                                          | Can be `created` (which means the data channels are created and open for Android applications to use) or `destroyed` (which means that the data channels are closed and destroyed) |
+| `data-channel-names`     | string array                                    | Comma-separated list of data channel names that identify the changed data channels
+
+The Android application should implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
+
+```
+public class DataChannelEventReceiver extends BroadcastReceiver {
+    private static final String TAG = "EventReceiver";
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Bundle extras = intent.getExtras();
+        String event = extras.getString("event");
+        String[] names = extras.getStringArray("data-channel-names");
+        Log.i(TAG, "channels: [" + TextUtils.join(",", names) + "] event type: " + event);
+    }
+}
+```
 
 #### Access the data proxy service
 
