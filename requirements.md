@@ -79,6 +79,11 @@ Anbox Cloud supports the following Ubuntu versions:
 
 For new deployments, Ubuntu 22.04 (jammy) is preferred.
 
+[note type="information" status="Note"]
+The HAProxy load balancer currently has no support for Ubuntu 22.04. Therefore, the Juju bundle uses Ubuntu 20.04 for the machine that runs the load balancer.
+[/note]
+
+
 <a name="linux-kernel"></a>
 #### Linux kernel
 
@@ -123,19 +128,34 @@ See the [Juju documentation](https://juju.is/docs/installing) for more informati
 <a name="minimum-hardware"></a>
 ### Minimum hardware
 
-While you can run Anbox Cloud on a single machine, we strongly recommend the following setup for a production environment:
+While you can run Anbox Cloud on a single machine, we strongly recommend using several machines for a production environment.
+
+To run a full Anbox Cloud deployment including the streaming stack, we recommend the following setup:
 
 ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 ---|----------------|-----------|------|------------|------|------------|
-0  | amd64          | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://discourse.juju.is/t/controllers/1111)  |
-1  | amd64          | 4         | 8GB  | 100GB SSD  | no   |  Host the management layer of Anbox Cloud  |
-2  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node. Hosts the actual Anbox containers  |
+-  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://discourse.juju.is/t/controllers/1111)  |
+0  | amd64 or arm64 | 2         | 2GB  | 100GB SSD  | no   |  Hosts the load balancer |
+1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the streaming stack control plane |
+2  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
+3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
 
-The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
+To run the core version of Anbox Cloud without the streaming stack, we recommend the following setup:
 
-More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
+ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
+---|----------------|-----------|------|------------|------|------------|
+-  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://discourse.juju.is/t/controllers/1111)  |
+0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS)  |
+1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
 
-If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
+Some additional information:
+
+- The ID in the table corresponds to the ID that the Juju bundle uses.
+- You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
+- The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
+
+  More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
+- If you require GPU support, see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)

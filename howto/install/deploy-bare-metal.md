@@ -70,9 +70,9 @@ Run `juju list-machines` to display the available machines:
 
 The `anbox-cloud-core` deployment bundle requires two machines: `0` and `1`. `0` is supposed to host the AMS service. `1` is used for LXD. Check the `bundle.yaml` file in the bundle for details.
 
-The `anbox-cloud` bundle requires an additional machine to host the extra services required for streaming. Check the `bundle.yaml` file in the bundle for details.
+The `anbox-cloud` bundle requires two additional machines to host the load balancer (`0`) and the extra services required for streaming (`1`). For this bundle, the AMS machine is `2` and the LXD machine is `3`. Check the `bundle.yaml` file in the bundle for details.
 
-The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2` for the `anbox-cloud` bundle.
+The `--map-machine` argument for the `juju deploy` command maps the machines defined inside the bundle to those your Juju controller has registered in the model. See the [Juju documentation](https://jaas.ai/docs/charm-bundles) for more details. If you added the machines in the order Juju expects them, the mapping is very straight-forward: `--map-machines 0=0,1=1` for the `anbox-cloud-core` bundle or `--map-machines 0=0,1=1,2=2,3=3` for the `anbox-cloud` bundle.
 
 ## Deploy Anbox Cloud
 
@@ -86,7 +86,7 @@ Choose between the available [Juju bundles](https://discourse.ubuntu.com/t/about
 
 * For the full version of Anbox Cloud, run the following command to deploy the `anbox-cloud` bundle:
 
-        juju deploy anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2
+        juju deploy anbox-cloud --overlay ua.yaml --map-machines 0=0,1=1,2=2,3=3
 
 You can watch the status of the deployment with the following command:
 

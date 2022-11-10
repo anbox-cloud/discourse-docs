@@ -146,6 +146,9 @@ machines:
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
     series: jammy
+    constraints: "instance-type=m4.xlarge root-disk=40G"
+  '3':
+    series: jammy
     constraints: "instance-type=m4.2xlarge root-disk=50G"
 ```
 
@@ -169,6 +172,9 @@ machines:
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
     series: jammy
+    constraints: "instance-type=m4.xlarge root-disk=40G"
+  '3':
+    series: jammy
     constraints: "instance-type=g4dn.2xlarge root-disk=50G"
 ```
 
@@ -188,7 +194,7 @@ applications:
     constraints: "arch=arm64"
 machines:
   ...
-  '2':
+  '3':
     series: jammy
     constraints: "instance-type=m6g.2xlarge root-disk=50G"
 ```
