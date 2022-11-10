@@ -37,6 +37,13 @@ all:
       Maximum number of published versions per application. If the
       number of versions of an application exceeds this configuration,
       AMS will automatically clean up older versions.
+  container.apt_mirror:
+    type: "string"
+    default: "-"
+    description: >-
+      APT mirror to use within the containers. By default
+      `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com`
+      (arm64) is being used
   container.default_platform:
     type: "string"
     default: "-"
