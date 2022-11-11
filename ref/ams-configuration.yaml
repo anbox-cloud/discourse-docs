@@ -41,9 +41,9 @@ all:
     type: "string"
     default: "-"
     description: >-
-      APT mirror to use within the containers. By default
+      APT mirror to use within the containers. By default,
       `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com`
-      (arm64) is being used
+      (arm64) is used.
   container.default_platform:
     type: "string"
     default: "-"
