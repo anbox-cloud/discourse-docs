@@ -73,7 +73,6 @@ Anbox Cloud deployments are managed by Juju. They can be created on all the [sup
 
 Anbox Cloud supports the following Ubuntu versions:
 
-* 18.04 (bionic) - see [Linux kernel](#linux-kernel) below for limitations
 * 20.04 (focal)
 * 22.04 (jammy)
 
@@ -82,24 +81,6 @@ For new deployments, Ubuntu 22.04 (jammy) is preferred.
 [note type="information" status="Note"]
 The HAProxy load balancer currently has no support for Ubuntu 22.04. Therefore, the Juju bundle uses Ubuntu 20.04 for the machine that runs the load balancer.
 [/note]
-
-
-<a name="linux-kernel"></a>
-#### Linux kernel
-
-Anbox Cloud is only supported on the Ubuntu variant of the Linux kernel starting with version 5.4. The GA kernel for Ubuntu 18.04 (based on 4.15) is not supported.
-
-AppArmor support must be enabled in the kernel as it's mandatory for the Anbox containers to run.
-
-The following table gives an overview of the available kernel versions for the different supported clouds:
-
-|CLOUD|KERNEL VERSION|UBUNTU PACKAGES||
-| --- | --- | --- | --- |
-|AWS|>= 5.4|`linux-aws`, `linux-modules-extra-aws`||
-|GCE|>= 5.4|`linux-gcp`, `linux-modules-extra-gcp`||
-|Azure|>= 5.4|`linux-azure`, `linux-modules-extra-azure`||
-|OCI|>= 5.4|`linux-oracle`, `linux-modules-extra-oracle`||
-|Private|>= 5.4|`linux-generic`||
 
 <a name="juju-lxd-version"></a>
 ### LXD version
