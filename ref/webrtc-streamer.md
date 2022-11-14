@@ -12,8 +12,10 @@ The configuration file uses the JSON format. It has the following structure:
 |------|------------|---------|-------------|
 | `video.bitrate_limits` | array of objects | `[]` | [Bitrate limits](#video-bitrate-limits) to apply to the video encoder. |
 | `nvidia_h264.multipass` | bool | `false` | If set to true, multi-pass encoding is enabled. |
+| `nvidia_h264.multipass_quarter_resolution` | bool | `false` | If set to true, multi-pass encoding will be only run for a quarter of a frames resolution. |
 | `nvidia_h264.aq` | bool | `false` | If set to true, adaptive quantisation is enabled. |
 | `nvidia_h264.aq_strength` | integer | `0` | Strength of adaptive quantisation: a value from `1` (least aggressive) to `15` (most aggressive). `0` means the encoder will automatically decide. |
+| `nvidia_h264.preset` | integer | `0` | Preset to use: a value from `1` to `7`. `0` means Anbox will automatically decide. |
 
 See the [NVENC Video Encoder API](https://docs.nvidia.com/video-technologies/video-codec-sdk/nvenc-video-encoder-api-prog-guide/) documentation for more details on the `nvidia_h264` options.
 
@@ -24,15 +26,28 @@ Bitrate limits allow to fine-tune which minimum and maximum bitrate the WebRTC s
 
 As different resolutions require different bitrates, the bitrate limits allow defining a minimum and maximum bitrate for frames having up to the specified number of pixels. This puts aside the actual geometry of the frame and solely concentrates on the amount of pixels the frame has.
 
-The WebRTC streamer will pick the closest limit for the configured resolution by comparing the number of pixels. If more than one limit is specified, it selects the nearest limit with a number of pixels higher than the number of pixels that a frame of the given resolution has.
+The WebRTC streamer will pick the closest limit for the configured resolution by comparing the number of pixels and frame rate. The following rules apply:
+
+* If more than one limit is specified, it selects the nearest limit with a number of pixels higher than the number of pixels that a frame of the given resolution has.
+* If multiple limits have the same number of pixels the streamer will sort limits descending by frame rate and apply the nearest.
 
 The JSON object defining a bitrate limit has the following possible fields:
 
 | Name | Value type | Default | Description |
 |------|------------|---------|-------------|
-| `num_pixels` | integer | 0 | Number of pixels up to which the limit is considered. |
-| `min_kbps` | integer | 0 | Minimum bitrate in kb/s. |
-| `max_kbps` | integer | 0 | Maximum bitrate in kb/s. |
+| `num_pixels` | integer | `0` | Number of pixels up to which the limit is considered. |
+| `fps` | integer | `0` | Frame rate the limit applies for |
+| `min_kbps` | integer | `0` | Minimum bitrate in kb/s. |
+| `max_kbps` | integer | `0` | Maximum bitrate in kb/s. |
+
+If no limits are specified, the default limits from the following table will be used:
+
+| Resolution | Number of pixels | Frame rate | Minimum bitrate | Maximum bitrate |
+|------------|------------------|------------|-----------------|-----------------|
+| 720p       | `921600`         | `30`       | 1000 kb/s       | 3000 kb/s       |
+| 720p       | `921600`         | `60`       | 2500 kb/s       | 5000 kb/s       |
+| 1080p      | `2073600`        | `30`       | 3000 kb/s       | 6000 kb/s       |
+| 1080p      | `2073600`        | `60`       | 3000 kb/s       | 7000 kb/s       |
 
 ## Example configuration
 
@@ -41,7 +56,7 @@ The following example shows a configuration for the WebRTC streamer:
     {
         "video": {
             "bitrate_limits": [
-                { "num_pixels": 921600, "min_kbps": 1000, "max_kbps": 4500 },
+                { "num_pixels": 921600, "fps": 60, "min_kbps": 1000, "max_kbps": 4500 },
             ],
             "nvidia_h264": {
                 "multipass": true,
