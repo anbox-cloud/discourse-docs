@@ -14,8 +14,25 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.16.0 (November 2022)
+### 1.16.1 (December 2022)
 
-Target date: November 16, 2022
+Target date: December 14, 2022
 
-* LXD images for Android 13
+* Android security updates for December 2022
+* Bug fixes
+
+### 1.16.2 (January 2023)
+
+Target date: January 11, 2023
+
+* Android security updates for January 2023
+* Bug fixes
+
+### 1.17.0 (February 2023)
+
+Target date: February 15, 2023
+
+* Android security updates for February 2023
+* Experimental Vulkan support for NVIDIA GPUs
+* Container and node support in the Anbox Cloud Dashboard
+* Bug fixes
