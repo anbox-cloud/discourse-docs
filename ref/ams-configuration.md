@@ -10,6 +10,7 @@ AMS provides various configuration items to customise its behaviour. The followi
 | `application.auto_update` | bool | true | If set to `true`, AMS automatically updates applications whenever any dependencies (parent image, addons, global configuration) change. `false` disables this. See [Disable automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#disable-automatic-updates). |
 | `application.default_abi` | string | - | Default Android ABI that applications should use. See [Android ABIs](https://developer.android.com/ndk/guides/abis) for a list of available ABIs. |
 | `application.max_published_versions` | integer | 3 | Maximum number of published versions per application. If the number of versions of an application exceeds this configuration, AMS will automatically clean up older versions. |
+| `container.apt_mirror` | string | - | APT mirror to use within the containers. By default, `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com` (arm64) is used. |
 | `container.default_platform` | string | - | The name of the platform that Anbox uses by default to launch containers. |
 | `container.features` | string | - | Comma-separated list of features to enable (see list below). |
 | `container.network_proxy` | string | - | Network proxy to use inside the containers. |
