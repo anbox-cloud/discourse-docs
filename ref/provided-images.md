@@ -10,6 +10,8 @@ The following table lists all images that are available on the official image se
 
 | Name                        | Android Version | Ubuntu Version | Support Status     | Available since |
 |-----------------------------|-----------------|----------------|------------|---------------|
+| `jammy:android13:amd64`     | 13              | 22.04          | supported | 1.16 |
+| `jammy:android13:arm64`     | 13              | 22.04          | supported | 1.16 |
 | `jammy:android12:amd64`     | 12              | 22.04          | supported | 1.14 |
 | `jammy:android12:arm64`     | 12              | 22.04          | supported | 1.14 |
 | `jammy:android11:amd64`     | 11              | 22.04          | supported | 1.14 |

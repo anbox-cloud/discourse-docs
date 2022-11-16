@@ -4,6 +4,7 @@ AAR
 AArch
 ABI
 ABIs
+ACLs
 ADB
 addon
 addons
@@ -60,6 +61,8 @@ Crashpad
 CTS
 CUDA
 customisable
+customisation
+customisations
 CustomLocale
 DDoS
 deprecations
@@ -81,6 +84,7 @@ favicon
 FDS
 ffmpeg
 FormatException
+frontend
 fullscreen
 gamepad
 gameplay
@@ -102,6 +106,7 @@ Intra
 IoT
 IPs
 iptables
+jitter
 JS
 JSON
 Juju
@@ -162,6 +167,7 @@ Rasterization
 README
 rebased
 renderer
+RenderThread
 RESTful
 RFE
 RGBA

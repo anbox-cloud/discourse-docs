@@ -3,6 +3,45 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.16.0]
+
+# 1.16.0 (November 16 2022)
+
+#### New features & improvements
+
+* Added support for Android 13.
+* Updated Anbox to provide a serial ID derived from the container ID to satisfy Android's conformance requirements.
+* Switched the AMD and Intel GPU support to be based on Vulkan and to use [ANGLE](https://chromium.googlesource.com/angle/angle) as the EGL/OpenGL ES frontend driver.
+* Updated Mesa for AMD and Intel GPUs to the [22.2.2](https://docs.mesa3d.org/relnotes/22.2.2.html) release.
+* Split Android's system and vendor directories.
+* Added a bug report utility inside the Anbox container.
+* Included various WebRTC streaming improvements.
+* Introduced the WebRTC data proxy server to enable full-duplex bidirectional data transmission between Android and a WebRTC-based client.
+* Added full support for Ubuntu 22.04 for regular and appliance deployments.
+* Updated AMS to allow configuring a custom APT mirror for all containers.
+* Added a new AMS charm configuration `use_network_acl` to allow for experimental use of [LXD network ACLs](https://linuxcontainers.org/lxd/docs/latest/howto/network_acls/) instead of the AMS node controller to restrict network access of Anbox containers.
+* Included Android security updates for November 2022 (see [Android Security Bulletin - November 2022](https://source.android.com/docs/security/bulletin/2022-11-01) for more information).
+* Updated Android WebView to [107.0.5304.105](https://chromereleases.googleblog.com/2022/11/chrome-for-android-update.html).
+* Updated the used NVIDIA driver series to [515](https://docs.nvidia.com/datacenter/tesla/index.html), which is supported until May 2023.
+* Updated the appliance to deploy LXD containers based on Ubuntu 22.04 on new deployments (existing deployments keep their existing containers based on Ubuntu 20.04).
+* Updated the [`ams-lxd`](https://charmhub.io/ams-lxd) Juju charm and the Anbox Cloud Appliance to automatically detect AMD GPU support and configure the kernel `amdgpu` driver for best performance and support.
+* Added support for the [AWS `g4ad` instance types](https://aws.amazon.com/ec2/instance-types/g4/) (equipped with AMD v520 GPUs) to the [Anbox Cloud Appliance images](https://aws.amazon.com/marketplace/pp/prodview-3lx6xyaapstz4) that are available through the AWS marketplace.
+* Updated the appliance so that it can be initialised as any Ubuntu user, not just the `ubuntu` one.
+
+#### Bugs
+
+* AC-1066 Security rules are not applied properly when deploying Anbox Cloud with clustering set up
+* AC-1101 Fingerprint support is marked as enabled
+* AC-1102 Android has `ro.serialno` not set
+* AC-1181 RenderThread is stopped when `/dev/anbox_sync` cannot be opened
+* AC-1197 WebRTC data proxy fails with `4/NOPERMISSION` on stop
+* AC-1204 The agent sets incorrect region value for provided metrics
+* AC-1205 Playout delay set via RTP header causes error/warning on receiver
+* AC-1207 Supervisor does not reconnect after agent was down for longer and terminates Anbox
+* AC-1208 `MESA_GLSL_CACHE_DIR` is deprecated; use `MESA_SHADER_CACHE_DIR` instead
+
+[/Details]
+
 [Details=1.15.3]
 
 # 1.15.3 (October 20 2022)
