@@ -16,7 +16,7 @@ Juju is a tool for deploying, configuring and operating complex software on publ
 
 You must install a Juju client on the machine that you use to run the deployment commands. To install Juju 2.9, enter the following command:
 
-    sudo snap install --channel=2.9/stable juju
+    sudo snap install --classic --channel=2.9/stable juju
 
 See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
 
