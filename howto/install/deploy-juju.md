@@ -10,7 +10,7 @@ There are differences between the full Anbox Cloud installation and the Anbox Cl
 
 Before you start the installation, ensure that you have the required credentials and prerequisites:
 
-* An Ubuntu 18.04 LTS or 20.04 LTS environment to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
+* An Ubuntu 22.04 LTS (preferred) or 20.04 LTS environment to run the commands (or another operating system that supports snaps - see the [Snapcraft documentation](https://snapcraft.io/docs/installing-snapd)).
 * Account credentials for one of the following public clouds:
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
@@ -127,10 +127,10 @@ For the `anbox-cloud-core` bundle, such an `overlay.yaml` file looks like this:
 ```
 machines:
   '0':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
 ```
 
@@ -142,10 +142,13 @@ machines:
     series: focal
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: focal
+    series: jammy
+    constraints: "instance-type=m4.xlarge root-disk=40G"
+  '3':
+    series: jammy
     constraints: "instance-type=m4.2xlarge root-disk=50G"
 ```
 
@@ -165,10 +168,13 @@ machines:
     series: focal
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '1':
-    series: focal
+    series: jammy
     constraints: "instance-type=m4.xlarge root-disk=40G"
   '2':
-    series: focal
+    series: jammy
+    constraints: "instance-type=m4.xlarge root-disk=40G"
+  '3':
+    series: jammy
     constraints: "instance-type=g4dn.2xlarge root-disk=50G"
 ```
 
@@ -188,8 +194,8 @@ applications:
     constraints: "arch=arm64"
 machines:
   ...
-  '2':
-    series: focal
+  '3':
+    series: jammy
     constraints: "instance-type=m6g.2xlarge root-disk=50G"
 ```
 
@@ -206,8 +212,6 @@ After starting the deployment, Juju will create instances, install software and 
 ## Perform necessary reboots
 
 In some cases, a reboot of the LXD machines is necessary.
-
-For example, a reboot is required when the Ubuntu 18.04 GA kernel is selected when deploying on AWS. This kernel is based on the upstream 4.15 release. As Anbox Cloud requires a Ubuntu kernel with a minimum version of 5.0, the kernel needs to be changed. The LXD charm already takes care of installing a newer kernel, but the final reboot must be performed manually.
 
 Check the output of the `juju status` command to see whether you need to reboot:
 
