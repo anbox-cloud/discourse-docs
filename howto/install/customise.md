@@ -17,13 +17,13 @@ An [overlay bundle](https://juju.is/docs/sdk/bundle-reference#heading--overlay-b
         series: focal
         constraints: "instance-type=m5.xlarge root-disk=40G"
       '1':
-        series: focal
+        series: jammy
         constraints: "instance-type=m5.xlarge root-disk=40G"
       '2':
-        series: focal
+        series: jammy
         constraints: "instance-type=g4dn.2xlarge root-disk=100G"
       '3':
-        series: focal
+        series: jammy
         constraints: "instance-type=m5.xlarge root-disk=100G"
 
 See the [Juju bundle documentation](https://juju.is/docs/sdk/bundle-reference) for more information about Juju's bundle format and valid YAML.

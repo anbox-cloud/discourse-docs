@@ -10,7 +10,7 @@ Anbox Cloud provides two versions of this OOB data exchange:
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
 [note type="caution" status="Warning"]
-[Version 1](#oob-v1) of the out-of-band data exchange between an Android application and a WebRTC client is deprecated. Support for it will be discontinued in a future release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#oob-v2) for full-duplex data transmission and better performance.
+The support for [version 1](#oob-v1) of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release. Therefore, you should migrate your integration of version 1 of the OOB data exchange to [version 2](#oob-v2) for full-duplex data transmission and better performance.
 [/note]
 
 See the instructions for exchanging OOB data using a specific implementation version below:
@@ -106,18 +106,175 @@ A trivial example to simulate the data transmission between an Anbox container a
    anbox cloud <--  the received data
    ```
 
-### Anbox data proxy
+### Anbox WebRTC data proxy
 
-To build up the communication bridge between an Android application and the Anbox WebRTC platform, you must implement a service or daemon that is responsible for:
+To build up the communication bridge between an Android application and the Anbox WebRTC platform, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`. This daemon is responsible for:
 
- - The socket connection
- - Polling events
- - Forwarding data between both ends
+ - Accepting connection requests from an Android application
+ - Connecting to one specific data channel via the Unix domain socket exposed by the Anbox WebRTC platform
+ - Passing the connected socket as a file descriptor to the Android application
 
-A system service named `anbox-data-proxy`, which covers all the above functionalities, will be implemented in the 1.16.0 release of Anbox Cloud. It makes use of [`gbinder`](https://github.com/mer-hybris/libgbinder) to set up a communication bridge and provide reliable and high-efficiency data transmission between the Android system and the Anbox WebRTC platform.
+The `anbox-webrtc-data-proxy` system daemon runs in the Anbox container and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
+
+[note type="information" status="Note"]To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be [installed as a system app](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086). [/note]
+
+#### Get notified about the availability of data channels
+
+To get notified about the availability of data channels, an Android application can register the following broadcast receiver in the `AndroidManifest.xml` file:
+
+```
+<receiver
+    android:name=".DataChannelEventReceiver"
+    android:enabled="true"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="com.canonical.anbox.BROADCAST_DATA_CHANNELS_STATUS"/>
+    </intent-filter>
+</receiver>
+```
+
+Whenever the availability of data channels changes, a broadcast is sent out to the Android application. The broadcast contains the following parameters:
+
+| Parameters               | Type                                            | Description                                                                                                                                                                |
+| ------------------------ | ----------------------------------------------- | -----------------------------------------------                                                                                                                            |
+| `event`                  | string                                          | Can be `created` (which means the data channels are created and open for Android applications to use) or `destroyed` (which means that the data channels are closed and destroyed) |
+| `data-channel-names`     | string array                                    | Comma-separated list of data channel names that identify the changed data channels
+
+The Android application should implement a subclass of the [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#effects-process-state), which responds to the above events that are sent by the Android system.
+
+```
+public class DataChannelEventReceiver extends BroadcastReceiver {
+    private static final String TAG = "EventReceiver";
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Bundle extras = intent.getExtras();
+        String event = extras.getString("event");
+        String[] names = extras.getStringArray("data-channel-names");
+        Log.i(TAG, "channels: [" + TextUtils.join(",", names) + "] event type: " + event);
+    }
+}
+```
+
+#### Access the data proxy service
+
+There are two ways to access the `org.anbox.webrtc.IDataProxyService` from an Android application:
+
+- If you develop the application with Android studio, you can access the service by using Android's reflection API.
+
+    ```
+    IBinder getDataProxyService() {
+        IBinder service = null;
+        try {
+            Method method = Class.forName("android.os.ServiceManager").getMethod("getService", String.class);
+            service = (IBinder) method.invoke(null, "org.anbox.webrtc.IDataProxyService");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return service;
+    }
+    ```
+
+-  If you ship the Android application inside of the AOSP source tree and [build](https://source.android.com/docs/setup/build/building) it from there, you can use Android's hidden API to access the service.
+
+    ```
+    IBinder getDataProxyService() {
+        return ServiceManager.getService("org.anbox.webrtc.IDataProxyService");
+    }
+    ```
+
+#### Connect the data channel
+
+To fetch the file descriptor that refers to one data channel, send a request to the data proxy service through a binder transaction:
+
+```
+ParcelFileDescriptor mFd = null;
+String channel = "foo";   // denotes data channel name
+Parcel data = Parcel.obtain();
+Parcel reply = Parcel.obtain();
+try {
+    data.writeInterfaceToken("org.anbox.webrtc.IDataProxyService@1.0");
+    data.writeString(channel);
+    mService.transact(TRANSACTION_connect, data, reply, 0);
+    mFd = reply.readFileDescriptor();
+    if (mFd.getFd() < 0) {
+        Log.e(TAG, "Invalid file descriptor");
+        return;
+    }
+    ...
+    ...
+} catch (RemoteException ex) {
+    Log.e(TAG, "Failed to connect data channel '" +  channel + "': " + ex.getMessage());
+} finally {
+    data.recycle();
+    reply.recycle();
+}
+```
+
+#### Receive data from the Anbox WebRTC platform
+
+Once the valid file descriptor is returned, launch an asynchronous task to read data from the Anbox WebRTC platform:
+
+```
+public class DataReadTask extends AsyncTask<Void, Void, Void> {
+    ...
+    ...
+    @Override
+    protected Void doInBackground(Void... parameters) {
+        try (InputStream in = new ParcelFileDescriptor.AutoCloseInputStream(mFd)) {
+            byte[] data = new byte[1024];
+            while (!isCancelled()) {
+                int read_size = in.read(data);
+                if (read_size < 0) {
+                    Log.e(TAG, "Failed to read data");
+                    break;
+                } else if (read_size == 0) {
+                    // EOF reached
+                    break;
+                }
+
+                byte [] readBytes = Arrays.copyOfRange(data, 0, read_size);
+                ...
+                ...
+            }
+        } catch (IOException ex) {
+            if (!isCancelled())
+                Log.e(TAG, "Failed to read data: " + ex);
+        }
+
+        return null;
+    }
+}
+```
+
+#### Send data to the Anbox WebRTC platform
+
+To send data to the Anbox WebRTC platform through the file descriptor:
+
+```
+OutputStream ostream = new FileOutputStream(mFd.getFileDescriptor());
+try {
+    ostream.write(data.getBytes(), 0, data.length());
+} catch (IOException ex) {
+    Log.i(TAG, "Failed to write data: " + ex.getMessage());
+    ex.printStackTrace();
+}
+```
+
+For a complete Android example, see the [out_of_band_v2](https://github.com/anbox-cloud/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
 <a name="oob-v1"></a>
 ## Version 1
+
+[note type="caution" status="Warning"]
+The support for version 1 of the out-of-band data exchange between an Android application and a WebRTC client has been removed in the Anbox Cloud 1.16 release.
+[/note]
 
 The following instructions will walk you through how to send a message from an Android application
 running in a container to the client application developed with the Anbox Streaming
