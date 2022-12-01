@@ -20,6 +20,7 @@ Name          | Value type | Description
 `extra-data` (optional)  | array      | List of additional data to be installed on application installation.
 `hooks` (optional) | object | Hooks settings to be configured on application installation.
 `bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation.
+`features` (optional) | array | List of feature flags to be defined for containers created from the application.
 
 ## Image
 
