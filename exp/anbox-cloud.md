@@ -41,6 +41,9 @@ We recommend to always start with the Anbox Cloud Appliance for first tests. You
 
 Anbox Cloud is composed of different components that interact with one another.
 
+The core stack includes all components that are required for a basic deployment of Anbox Cloud to work. The streaming stack is a set of components needed to provide streaming functionality.
+For containerisation, Anbox Cloud includes LXD.
+
 ### Core stack
 
 Anbox Cloud takes care of all management aspects and provides both a fully functional implementation and an integration model to support existing infrastructure and service implementations.
@@ -76,6 +79,42 @@ The main components powering the streaming stack in Anbox Cloud are:
 **TURN/STUN servers**: Servers that find the most optimal network path between a client and the container running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
 **NATS**: A messaging system that the different components use to communicate (see the [project page](https://github.com/nats-io)).
+
+### LXD
+
+Anbox Cloud includes LXD for hosting and managing the Ubuntu containers that run the nested Android containers.
+
+LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), which adds some Anbox-specific configuration to LXD. AMS configures LXD automatically and fully manages it, which means that in most scenarios, you do not need to worry about LXD at all.
+
+If you want to check what LXD is doing, you can always run `lxc list` to display the existing containers. For the full deployment, LXD is used to host the AMS containers. If you run the Anbox Cloud Appliance, LXD is in addition used to containerise the Anbox Cloud deployment, which means that it hosts containers for the different Juju machines that Anbox Cloud requires:
+
+```
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+|           NAME           |  STATE  |          IPV4          | IPV6 |   TYPE    | SNAPSHOTS | LOCATION |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+| ams-cdr3292j841mb72gksog | RUNNING | 192.168.96.1 (eth0)    |      | CONTAINER | 0         | lxd0     |
+|                          |         | 192.168.250.1 (anbox0) |      |           |           |          |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+| juju-73e292-0            | RUNNING | 240.0.233.254 (eth0)   |      | CONTAINER | 0         | lxd0     |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+| juju-73e292-1            | RUNNING | 240.0.98.38 (eth0)     |      | CONTAINER | 0         | lxd0     |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+| juju-73e292-2            | RUNNING | 240.0.61.208 (eth0)    |      | CONTAINER | 0         | lxd0     |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+| juju-34631c-0            | RUNNING | 240.0.180.30 (eth0)    |      | CONTAINER | 0         | lxd0     |
++--------------------------+---------+------------------------+------+-----------+-----------+----------+
+```
+
+<a name="lxd-storage"></a>
+#### LXD storage
+
+For LXD storage, Anbox Cloud uses a ZFS storage pool, which it creates automatically. This storage pool can be located on either a dedicated block storage device or a loop file. See [Data storage location](https://linuxcontainers.org/lxd/docs/latest/explanation/storage/#data-storage-location) in the LXD documentation for more information.
+
+While a loop file is easy to set up, it is much slower than a block device. Therefore, we recommend using a block device that is dedicated to LXD storage only.
+
+If you are doing a full deployment, configure the storage before starting the deployment. See the *Customise storage* section in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744#customise-storage) or [How to deploy Anbox Cloud on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378#customise-storage) for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
+
+If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, thus both the Juju containers and the AMS containers.
 
 <a name="juju-bundles"></a>
 ## Juju bundles
