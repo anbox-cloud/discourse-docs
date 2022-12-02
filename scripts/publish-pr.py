@@ -12,5 +12,8 @@ else:
     data = json.loads(url.text)
 
     for one in data:
-        print("Publish "+one['filename'])
-        subprocess.call("./publish.sh "+one['filename'], shell=True)
+        filename = one['filename']
+        if (filename == "ref/ams-configuration.yaml") or (filename == "ref/ams-configuration.tmpl.md"):
+            filename = "ref/ams-configuration.md"
+        print("Publish "+filename)
+        subprocess.call("./publish.sh "+filename, shell=True)
