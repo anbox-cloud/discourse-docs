@@ -123,6 +123,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/cluster/configure-nodes | [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) |
 | 3 | howto/cluster/scale-up | [Scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322)|
 | 3 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
+| 2 | howto/anbox/landing | [How to work with the Anbox runtime](TBD) |
+| 3 | howto/anbox/develop-platform | [How to develop a platform plugin](TBD) |
 | 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
 | 3 | howto/troubleshoot/collect-info | [Collect information](https://discourse.ubuntu.com/t/how-to-collect-troubleshooting-information/32263)|
 | 0 | | |

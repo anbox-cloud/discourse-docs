@@ -19,7 +19,7 @@ The Anbox Platform SDK can be downloaded via Git from GitHub:
 
 You need the following build dependencies:
 
-    sudo apt install cmake-extras libavcodec-dev libavformat-dev libelf-dev libegl1-mesa-dev
+    sudo apt install -y --no-install-recommends cmake build-essential ninja-build dh-exec cmake-extras libgmock-dev libelf-dev
 
 ### Examples
 
