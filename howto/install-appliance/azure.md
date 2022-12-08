@@ -54,20 +54,13 @@ Click **Next: Networking** to continue to the next tab.
 
 ### 4. Configure networking
 
-For networking, the Anbox Cloud Appliance requires the following changes to the default settings:
+For networking, the Anbox Cloud Appliance requires the following change to the default settings:
 
-* Configure the public IP with a basic SKU. The default standard SKU does not work.
+1. For the **NIC network security group**, select **Advanced** and create a network security group.
+1. Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
+1. Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
 
-  To do so, create a public IP and select **Basic** under **SKU**.
-
-  ![Public IP configuration](https://assets.ubuntu.com/v1/7ff0f4de-azure_config-SKU-co.png)
-* For the **NIC network security group**, select **Advanced** and create a network security group.
-
-  Add an inbound security rule that allows access to the following destination port ranges: `80,443,8444,5349,10000-11000,60000-60100`
-
-  Change the name of the rule and, if relevant for your setup, adapt the priority of the rule.
-
-  ![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
+![Network security group configuration](https://assets.ubuntu.com/v1/a7be81a2-azure_config-secgroup-co.png)
 
 ### 5. Finalise the configuration
 
