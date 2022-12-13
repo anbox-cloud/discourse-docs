@@ -3,6 +3,26 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.16.1]
+
+## 1.16.1 (December 14 2022)
+
+#### New features & improvements
+
+* Included Android security updates for December 2022 (see [Android Security Bulletin - December 2022](https://source.android.com/security/bulletin/2022-12-01) for more information).
+* Updated Android WebView to [108.0.5359.79](https://chromereleases.googleblog.com/2022/12/chrome-for-android-update.html).
+
+#### Bug
+
+* AC-1222 `ext4` online metadata check service is active but should not be
+* AC-1229 Appliance bootstrap doesn't fail when an Juju unit ends up in an error status
+* AC-1230 The `gpu-slots` remains 0 occasionally even after AMS detects NVIDIA GPU type
+* AC-1235 ANGLE for `null` platform attempts to initialise Vulkan renderer
+* AC-1264 Fatal exception occurred to `com.android.systemui` when launching an application (Android 13 based) with boot package
+* AC-1267 Data channels fail to connect
+
+[/Details]
+
 [Details=1.16.0]
 
 # 1.16.0 (November 16 2022)
