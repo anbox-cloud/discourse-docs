@@ -12,7 +12,7 @@ instructions on how to update your Anbox Cloud deployment.
 * Included Android security updates for December 2022 (see [Android Security Bulletin - December 2022](https://source.android.com/security/bulletin/2022-12-01) for more information).
 * Updated Android WebView to [108.0.5359.79](https://chromereleases.googleblog.com/2022/12/chrome-for-android-update.html).
 
-#### Bug
+#### Bugs
 
 * AC-1222 `ext4` online metadata check service is active but should not be
 * AC-1229 Appliance bootstrap doesn't fail when an Juju unit ends up in an error status
