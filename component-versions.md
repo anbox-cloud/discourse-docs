@@ -2,6 +2,90 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.16.1]
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.16/stable` | 68 |
+| `ams-node-controller` | `1.16/stable` | 76 |
+| `coturn` | `1.16/stable` | 71 |
+| `ams` | `1.16/stable` | 81 |
+| `aar` | `1.16/stable` | 74 |
+| `anbox-stream-gateway` | `1.16/stable` | 86 |
+| `ams-load-balancer` | `1.16/stable` | 76 |
+| `ams-lxd` | `1.16/stable` | 74 |
+| `anbox-stream-agent` | `1.16/stable` | 81 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.16/stable` | 67 |
+| `ams-node-controller` | `1.16/stable` | 75 |
+| `coturn` | `1.16/stable` | 70 |
+| `ams` | `1.16/stable` | 80 |
+| `aar` | `1.16/stable` | 73 |
+| `anbox-stream-gateway` | `1.16/stable` | 85 |
+| `ams-load-balancer` | `1.16/stable` | 75 |
+| `ams-lxd` | `1.16/stable` | 73 |
+| `anbox-stream-agent` | `1.16/stable` | 80 |
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.16/stable` | 53 |
+| `anbox-cloud-core` | `1.16/stable` | 58 |
+
+### Snaps
+
+| Name | Version |
+|----------|--------------|
+| `ams`    | 1.16.1 |
+| `aar`    | 1.16.1 |
+| `ams-node-controller` | 1.16.1  |
+| `anbox-cloud-appliance` | 1.16.1 |
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.16.1 |
+| `jammy:android13:arm64` | 1.16.1 |
+| `jammy:android12:amd64` | 1.16.1 |
+| `jammy:android12:arm64` | 1.16.1 |
+| `jammy:android11:amd64` | 1.16.1 |
+| `jammy:android11:arm64` | 1.16.1 |
+| `jammy:android10:amd64` | 1.16.1 |
+| `jammy:android10:arm64` | 1.16.1 |
+| `bionic:android12:amd64` | 1.16.1 |
+| `bionic:android12:arm64` | 1.16.1 |
+| `bionic:android11:amd64` | 1.16.1 |
+| `bionic:android11:arm64` | 1.16.1 |
+| `bionic:android10:amd64` | 1.16.1 |
+| `bionic:android10:arm64` | 1.16.1 |
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 515.x |
+| Mesa | 22.2.2 |
+
+[/Details]
+
 [Details=1.16.0]
 
 ### Charms
