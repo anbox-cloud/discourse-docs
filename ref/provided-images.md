@@ -27,4 +27,10 @@ The following table lists all images that are available on the official image se
 | `bionic:android7:amd64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
 | `bionic:android7:arm64`     | 7               | 18.04          | unsupported as of 1.10 | 1.0 |
 
-The `bionic:android7:arm64` and `bionic:android7:amd64` images are not receiving Android security updates anymore as Google stopped supporting Android 7 in 2019. They are only provided for legacy reasons and have been dropped with Anbox Cloud 1.10 in April 2021.
+## Image support
+
+Anbox Cloud provides images based on two different Ubuntu versions, currently 18.04 (bionic) and 22.04 (jammy). The bionic images are deprecated and will receive their last update with the Anbox Cloud 1.18 release.
+
+Android versions are supported as long as Google provides security updates for the respective version. This means that the Android 10 images will be deprecated in Anbox Cloud 1.17 and will be dropped with Anbox Cloud 1.19. The `bionic:android7:arm64` and `bionic:android7:amd64` images are not receiving Android security updates anymore as Google stopped supporting Android 7 in 2019. They are listed only for legacy reasons and have been dropped with Anbox Cloud 1.10 in April 2021.
+
+Deprecations are announced at least two releases in advance.
