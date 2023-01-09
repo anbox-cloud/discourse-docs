@@ -122,18 +122,18 @@ In the case of the Anbox Cloud Appliance, we want the traffic routed to the AWS 
 
    The following example shows a public hosted zone for an example domain name. The two DNS records are added automatically after creation:
 
-   ![AWS public hosted zone](../../images/manage_tls_public-hosted-zone.png)
+   ![AWS public hosted zone](https://assets.ubuntu.com/v1/28d5d0ad-manage_tls_public-hosted-zone.png)
 1. To change the DNS service for your domain registration, you must specify the custom name servers that Amazon Route 53 allocated for the domain name. You can find them in the "NS" record for your public hosted zone.
 
    The following example shows the custom name servers for the example domain:
 
-   ![Custom name servers in Amazon Route 53](../../images/manage_tls_custom-name-servers.png)
+   ![Custom name servers in Amazon Route 53](https://assets.ubuntu.com/v1/2dfee5bd-manage_tls_custom-name-servers.png)
 
    Go to your domain provider and configure the DNS settings for your domain there. Specify the name servers listed in Amazon Route 53 as the custom name servers.
 
    The following example shows this configuration for the example domain:
 
-   ![Configure custom name servers for your domain with your domain provider](../../images/manage_tls_enter-nameservers.png)
+   ![Configure custom name servers for your domain with your domain provider](https://assets.ubuntu.com/v1/433fdfd9-manage_tls_enter-nameservers.png)
 
 <a name="step2"></a>
 ### 2. Create a public certificate
@@ -144,14 +144,14 @@ To create a public certificate using the AWS Certificate Manager, you must first
 
    The following example shows a certificate for the example domain name that is pending validation:
 
-   ![Certificate that is pending validation](../../images/manage_tls_cname-record.png)
+   ![Certificate that is pending validation](https://assets.ubuntu.com/v1/5caeac31-manage_tls_cname-record.png)
 1. To validate the certificate, follow the instructions in [Validating domain ownership](https://docs.aws.amazon.com/acm/latest/userguide/domain-ownership-validation.html) in the AWS Certificate Manager documentation.
 
    Since you have a public hosted zone for your domain in Amazon Route 53 (see [step 1](#step1)), you can follow the steps for creating records in Route 53.
 
 DNS propagation usually takes a while. When it completes and the validation is successful, the status of the certificate changes to issued, and it is ready to use.
 
-![Valid certificate in AWS Certification Manager](../../images/manage_tls_certificate-status.png)
+![Valid certificate in AWS Certification Manager](https://assets.ubuntu.com/v1/b95943aa-manage_tls_certificate-status.png)
 
 <a name="step3"></a>
 ### 3. Create a load balancer
@@ -179,13 +179,13 @@ To use the Anbox Cloud Appliance through your domain name, AWS must route the HT
 
       The following example shows a target for the Anbox Cloud Appliance:
 
-      ![Create a target group for the appliance](../../images/manage_tls_register-targets.png)
+      ![Create a target group for the appliance](https://assets.ubuntu.com/v1/14995bdf-manage_tls_register-targets.png)
    1. Click **Create target group** to finish the target group creation.
 
 1. Back in the **Listeners and routing** sections on the load balancer creation page, select the target group that you just created for the default action.
 1. In the **Secure listener settings** section, select the public certificate that you created through the AWS Certificate Manager.
 
-   ![Listener settings](../../images/manage_tls_listener-settings.png)
+   ![Listener settings](https://assets.ubuntu.com/v1/3308aa3a-manage_tls_listener-settings.png)
 1. Check the **Summary**, and if everything looks correct, click **Create load balancer**.
 
 <a name="step4"></a>
@@ -193,7 +193,7 @@ To use the Anbox Cloud Appliance through your domain name, AWS must route the HT
 
 When the load balancer is created, AWS assigns it an automatic DNS name. The following example shows where to find it:
 
-![DNS name of the load balancer](../../images/manage_tls_dns-name.png)
+![DNS name of the load balancer](https://assets.ubuntu.com/v1/040220cb-manage_tls_dns-name.png)
 
 You now need to route the traffic that goes to your domain name to the load balancer.
 
@@ -208,13 +208,13 @@ You now need to route the traffic that goes to your domain name to the load bala
 
    The following example shows the record creation for the example domain:
 
-   ![Define simple record](../../images/manage_tls_a-record.png)
+   ![Define simple record](https://assets.ubuntu.com/v1/36bcce7f-manage_tls_a-record.png)
 
 1. Click **Define simple record** to create the DNS record for your public hosted zone.
 
 The following example shows the DNS record with type `A` for the example domain:
 
-![DNS records for the public hosted zone](../../images/manage_tls_dns-records.png)
+![DNS records for the public hosted zone](https://assets.ubuntu.com/v1/5a4986bd-manage_tls_dns-records.png)
 
 <a name="step5"></a>
 ### 5. Configure the appliance to use the domain name
@@ -237,4 +237,4 @@ You can now use the new domain name to access the Anbox Cloud Appliance.
 
 The following example shows the certificate for the example domain:
 
-![Certificate for the domain](../../images/manage_tls_result.png)
+![Certificate for the domain](https://assets.ubuntu.com/v1/cd4c0316-manage_tls_result.png)
