@@ -13,7 +13,7 @@ The how-to guides in this section give directions on how to achieve your goals w
 | [How to monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) | Instructions for implementing a monitoring solution for Anbox Cloud |
 | [How to implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) | Instructions for using the Streaming Stack to implement streaming features in your application |
 | [How to manage cluster nodes](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) | Instructions for distributing the load of your Anbox Cloud installation over several machines in a cluster |
-| [How to work with the Anbox runtime](TBD) | Instructions for working with the Anbox runtime |
+| [How to work with the Anbox runtime](https://discourse.ubuntu.com/t/how-to-work-with-the-anbox-runtime/33098) | Instructions for working with the Anbox runtime |
 | [How to troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)| Answers to common questions and issues |
 
 Make sure to also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.
