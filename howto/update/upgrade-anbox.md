@@ -40,7 +40,7 @@ The deployed Juju charms need to be upgraded next.
 Run the following commands in the exact same order as listed here but skip those you don't use in your deployment:
 
     juju upgrade-charm easyrsa --revision=<rev>
-    juju upgrade-charm etcd --revision<rev>
+    juju upgrade-charm etcd --revision=<rev>
     juju upgrade-charm --channel=1.16/stable lxd
     juju upgrade-charm --channel=1.16/stable ams
     juju upgrade-charm --channel=1.16/stable ams-node-controller
