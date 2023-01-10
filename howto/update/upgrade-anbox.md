@@ -27,7 +27,9 @@ The deployed Juju charms need to be upgraded next.
 
 - You can find a list of all charm, snap and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
 
-- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--switch --channel=1.14/stable` arguments instruct Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
+- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--channel=1.16/stable` arguments instruct Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
+
+- With the 1.14 release, the name of the `lxd` charm changed to `ams-lxd`. If you run a deployment older than 1.14 and want to upgrade, add `--switch=ams-lxd` to the upgrade command to make Juju switch to the new charm. The charm itself remains identical with the same functionality and features.
 
 - Starting with the 1.15 release, AMS enforces TLS 1.3 on its HTTPS endpoint. Images older than 1.15.0 will fail to reach AMS in this case. To still allow older images to work with AMS, you can temporarily enable TLS 1.2 support again in AMS by setting the `force_tls12` [configuration option of the AMS charm](https://charmhub.io/ams/configure?channel=1.15/stable#force_tls12).
 
@@ -39,17 +41,17 @@ Run the following commands in the exact same order as listed here but skip those
 
     juju upgrade-charm easyrsa --revision=<rev>
     juju upgrade-charm etcd --revision<rev>
-    juju upgrade-charm --switch --channel=1.15/stable lxd lxd
-    juju upgrade-charm --switch --channel=1.15/stable ams ams
-    juju upgrade-charm --switch --channel=1.15/stable ams-node-controller ams-node-controller
-    juju upgrade-charm --switch --channel=1.15/stable aar aar
+    juju upgrade-charm --channel=1.16/stable lxd
+    juju upgrade-charm --channel=1.16/stable ams
+    juju upgrade-charm --channel=1.16/stable ams-node-controller
+    juju upgrade-charm --channel=1.16/stable aar
 
 If you have the streaming stack deployed you have to upgrade also the following charms:
 
-    juju upgrade-charm --switch --channel=1.15/stable anbox-stream-gateway anbox-stream-gateway
-    juju upgrade-charm --switch --channel=1.15/stable anbox-stream-agent anbox-stream-agent
-    juju upgrade-charm --switch --channel=1.15/stable coturn coturn
-    juju upgrade-charm --switch --channel=1.15/stable nats nats
+    juju upgrade-charm --channel=1.16/stable anbox-stream-gateway
+    juju upgrade-charm --channel=1.16/stable anbox-stream-agent
+    juju upgrade-charm --channel=1.16/stable coturn
+    juju upgrade-charm --channel=1.16/stable nats
 
 Once the commands are executed, Juju will perform all necessary upgrade steps automatically.
 
@@ -66,7 +68,6 @@ When you have your Ubuntu Pro token, you can apply it for all relevant charms wi
     juju config anbox-stream-gateway ua_token=<your token>
     juju config anbox-stream-agent ua_token=<your token>
     juju config anbox-cloud-dashboard ua_token=<your token>
-
 
 When the token is set Juju will continue to upgrade Anbox Cloud and install the latest version of the software components.
 
