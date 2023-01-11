@@ -3,6 +3,23 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.16.2]
+
+## 1.16.2 (January 11 2023)
+
+#### New features & improvements
+
+* Included Android security updates for January 2023 (see [Android Security Bulletin - January 2023](https://source.android.com/security/bulletin/2023-01-01) for more information).
+* Updated Android WebView to [108.0.5359.128](https://chromereleases.googleblog.com/2022/12/chrome-for-android-update_13.html).
+
+#### Bugs
+
+* AC-1276 `finalrd.service`: Failed with result 'exit-code'.
+* AC-1277 The pre-start/install hook to modify Android's root file system always failed
+* [LP #2002020](https://bugs.launchpad.net/charm-etcd/+bug/2002020): anbox-cloud-core: etcd/jammy: hook failed: "install" due to "error in Tempita setup command: use_2to3 is invalid."
+
+[/Details]
+
 [Details=1.16.1]
 
 ## 1.16.1 (December 14 2022)

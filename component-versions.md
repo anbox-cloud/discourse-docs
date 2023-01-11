@@ -2,6 +2,58 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.16.2]
+
+### Charms
+
+n/a
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-core` | `1.16/stable` | 62 |
+
+### Snaps
+
+n/a
+
+### Debian packages
+
+n/a
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.16.2 |
+| `jammy:android13:arm64` | 1.16.2 |
+| `jammy:android12:amd64` | 1.16.2 |
+| `jammy:android12:arm64` | 1.16.2 |
+| `jammy:android11:amd64` | 1.16.2 |
+| `jammy:android11:arm64` | 1.16.2 |
+| `jammy:android10:amd64` | 1.16.2 |
+| `jammy:android10:arm64` | 1.16.2 |
+| `bionic:android12:amd64` | 1.16.2 |
+| `bionic:android12:arm64` | 1.16.2 |
+| `bionic:android11:amd64` | 1.16.2 |
+| `bionic:android11:arm64` | 1.16.2 |
+| `bionic:android10:amd64` | 1.16.2 |
+| `bionic:android10:arm64` | 1.16.2 |
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 515.x |
+| Mesa | 22.2.2 |
+
+[/Details]
+
 [Details=1.16.1]
 
 ### Charms
