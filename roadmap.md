@@ -14,20 +14,6 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.16.1 (December 2022)
-
-Target date: December 14, 2022
-
-* Android security updates for December 2022
-* Bug fixes
-
-### 1.16.2 (January 2023)
-
-Target date: January 11, 2023
-
-* Android security updates for January 2023
-* Bug fixes
-
 ### 1.17.0 (February 2023)
 
 Target date: February 15, 2023
