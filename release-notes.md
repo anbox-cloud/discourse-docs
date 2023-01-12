@@ -5,7 +5,7 @@ instructions on how to update your Anbox Cloud deployment.
 
 [Details=1.16.2]
 
-## 1.16.2 (January 11 2023)
+## 1.16.2 (January 12 2023)
 
 #### New features & improvements
 
@@ -16,7 +16,7 @@ instructions on how to update your Anbox Cloud deployment.
 
 * AC-1276 `finalrd.service`: Failed with result 'exit-code'.
 * AC-1277 The pre-start/install hook to modify Android's root file system always failed
-* [LP #2002020](https://bugs.launchpad.net/charm-etcd/+bug/2002020): anbox-cloud-core: etcd/jammy: hook failed: "install" due to "error in Tempita setup command: use_2to3 is invalid."
+* [LP #2002020](https://bugs.launchpad.net/charm-etcd/+bug/2002020): `anbox-cloud-core`: `etcd/jammy`: hook failed: "install" due to `error in Tempita setup command: use_2to3 is invalid.`
 
 [/Details]
 
