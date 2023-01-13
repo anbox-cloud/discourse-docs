@@ -91,6 +91,7 @@ gameplay
 GCE
 GL
 Golang
+GPG
 GPUs
 Grafana
 Graviton
