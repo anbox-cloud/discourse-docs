@@ -3,6 +3,20 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.16.3]
+
+## 1.16.3 (January 17 2023)
+
+#### New features & improvements
+
+n/a
+
+#### Bugs
+
+* [LP #2002776](https://bugs.launchpad.net/charm-grafana/+bug/2002776): Grafana APT repository key was rotated and charm needs to adapt
+
+[/Details]
+
 [Details=1.16.2]
 
 ## 1.16.2 (January 12 2023)
