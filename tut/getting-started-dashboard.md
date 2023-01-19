@@ -24,26 +24,26 @@ Complete the following steps to create a virtual device:
 2. Click **Add Application**.
 3. Enter a name for the application, for example, `virtual-device-web`.
 4. Keep the preselected instance type.
-5. Select the Android image that you want to use, for example, `jammy:android12:arm64`.
+5. Select the Android image that you want to use, for example, `jammy:android13:arm64`.
 6. Do not upload an APK file.
 7. Click **Add Application**.
 
-   ![Add a virtual device](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
-8. Wait until the application status changes to `ready`.
+   ![Add a virtual device](https://assets.ubuntu.com/v1/8560991b-gs_dashboard_add_virtual_device.png)
+8. You are redirected to the application view. Wait until the application status changes to `ready`.
 
 ## 2. Launch and test the virtual device
 
 When the application has been initialised and its status changes to `ready`, complete the following steps to launch and test the virtual device:
 
-1. In the list of applications, click the play button (labelled **New session**) for the application to start a new session.
+1. In the list of applications, click the play button (labelled **New session**) in the **Actions** column for the application to start a new session.
 
-   ![Start a new session](https://assets.ubuntu.com/v1/04944ce7-gs_dashboard_new_session.png)
+   ![Start a new session](https://assets.ubuntu.com/v1/d6380c07-gs_dashboard_new_session.png)
 2. Accept the default settings and click **New Session**.
 
-   ![Start with default settings](https://assets.ubuntu.com/v1/6087fbd9-gs_dashboard_start_session.png)
+   ![Start with default settings](https://assets.ubuntu.com/v1/b27e8be8-gs_dashboard_start_session.png)
 3. When the stream has loaded, you can interact with your virtual device.
 
-   ![Stream the virtual device](https://assets.ubuntu.com/v1/bfa831b4-gs_dashboard_streaming.png)
+   ![Stream the virtual device](https://assets.ubuntu.com/v1/1d1fc6ef-gs_dashboard_streaming.png)
 
 ## 3. Create an application from an APK
 
@@ -53,7 +53,7 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 
 Choose an [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
-![Add an application](https://assets.ubuntu.com/v1/f220bcb2-gs_dashboard_add_application.png)
+![Add an application](https://assets.ubuntu.com/v1/2ccd2c00-gs_dashboard_add_application.png)
 
 You can launch and test the application in the same way as you did for the virtual device.
 
@@ -64,11 +64,51 @@ You can have several versions of an application. See [How to update an applicati
 Complete the following steps to add a new version to your application:
 
 1. Open `https://<your-machine-address>/applications` in your browser.
-2. Click the **Edit application** button next to the application for which you want to add a new version.
+2. Click the **Edit application** button  in the **Actions** column next to the application for which you want to add a new version.
 
-   ![Update an application](https://assets.ubuntu.com/v1/891e16e9-gs_dashboard_edit_application.png)
+   ![Update an application](https://assets.ubuntu.com/v1/7365d305-gs_dashboard_edit_application.png)
 3. Upload a new APK, or do other changes to the configuration.
 4. Click **Update application**.
+
+## 5. Delete an application
+
+While following this tutorial, you created several applications. You can see them in the application view at `https://<your-machine-address>/applications`.
+
+To delete an application, click the **Delete application** button in the **Actions** column and confirm the deletion.
+
+![Delete an application](https://assets.ubuntu.com/v1/584a5f70-gs_dashboard_delete_application.png)
+
+[note type="information" status="Tip"]
+To skip the confirmation window, hold **Shift** when clicking the **Delete application** button.
+[/note]
+
+## 6. Inspect containers
+
+Every time you start a session for an application, Anbox Cloud creates a container. The container keeps running even if you exit the stream, until you either stop the session by clicking **Stop session** or delete the container.
+
+You can see all containers in the container view at `https://<your-machine-address>/containers`.
+
+![Container view](https://assets.ubuntu.com/v1/55b5f36f-gs_dashboard_containers.png)
+
+Complete the following steps to inspect a container:
+
+1. Click on the ID of one of the running containers to see detailed information for the container.
+
+   ![Container information](https://assets.ubuntu.com/v1/60de9b54-gs_dashboard_container_overview.png)
+1. Switch to the **Terminal** tab. You will see a terminal for the Linux container that runs the Android container.
+
+   You can run commands in the Linux container, or you can enter `anbox-shell` to access the nested Android container (enter `exit` to go back to the Linux container).
+
+   ![Use the container terminal](https://assets.ubuntu.com/v1/286a95da-gs_dashboard_container_terminal.png)
+1. Switch to the **Logs** tab. You will not see any logs, because log files are available only for containers that are in an error state, not for running containers.
+
+   To simulate a failure for the container, switch to the **Terminal** tab and enter the following command:
+
+        amsctl notify-status error --message="My error message"
+
+   Go back to the container overview, and when the container status changes to **error**, click on the container ID and switch to the **Logs** tab. You can now see the error logs for the container.
+
+   ![Container logs](https://assets.ubuntu.com/v1/5ee5624c-gs_dashboard_container_logs.png)
 
 ## Done!
 
