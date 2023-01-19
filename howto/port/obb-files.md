@@ -1,6 +1,4 @@
-Android [has a 100 MB limit on apps](https://developer.android.com/google/play/expansion-files.html). Applications for apps that are under that limit can be created using the [regular method](https://discourse.ubuntu.com/t/create-an-application/24198).
-
-Larger Android apps must be split up into the main part as an APK file and the expansion part as an OBB file:
+Google Play has a limit on how big an APK file can be (see [APK Expansion Files](https://developer.android.com/google/play/expansion-files.html)). Larger Android apps must be split up into the main part as an APK file and the expansion part as an OBB file:
 
 - APK: Contains the executables and native libraries (`*.so` files), plugins, basic assets and data required by the application to load for the first time.
 - OBB: Contains the remaining assets (high-fidelity graphics, media files or other large resource files) for the full user experience.
