@@ -3,6 +3,19 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.16.4]
+## 1.16.4 (January 24 2023)
+
+#### New features & improvements
+
+n/a
+
+#### Bugs
+
+* AC-1320 Anbox containers fail to start with LXD 5.0.2
+
+[/Details]
+
 [Details=1.16.3]
 
 ## 1.16.3 (January 17 2023)
