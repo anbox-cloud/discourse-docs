@@ -35,18 +35,7 @@ The above defines a minimum of what is necessary to run the Anbox Cloud Applianc
 
 On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
 
-For external access to the Anbox Cloud Appliance, a couple of network ports must be exposed on the machine it's running on. The following table lists all ports.
-
-| Port(s) | Protocol | Necessity | Description |
-|------------|--------------|----------------|-------------------|
-| 80 | TCP | mandatory  | HTTP (redirects to HTTPS on port 443)|
-| 443 | TCP | mandatory | HTTPS |
-| 5349 | UDP | mandatory | STUN/TURN
-| 60000-60100 | UDP | mandatory | TURN relay ports |
-| 10000-11000 | UDP | optional | Service endpoints exposed by AMS |
-| 10000-11000 | TCP | optional | Service endpoints exposed by AMS |
-
-How to allow incoming traffic on the listed ports is different depending on the cloud used. Please consult the documentation of the cloud for further information on how to change the firewall.
+For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](tbd#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
 
 <a name="appliance-ubuntu-version"></a>
 ### Ubuntu version
