@@ -51,7 +51,7 @@ If you have the streaming stack deployed you have to upgrade also the following 
     juju upgrade-charm --channel=1.16/stable anbox-stream-gateway
     juju upgrade-charm --channel=1.16/stable anbox-stream-agent
     juju upgrade-charm --channel=1.16/stable coturn
-    juju upgrade-charm --channel=1.16/stable nats
+    juju upgrade-charm nats
 
 Once the commands are executed, Juju will perform all necessary upgrade steps automatically.
 
