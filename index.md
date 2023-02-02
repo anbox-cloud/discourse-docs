@@ -142,7 +142,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
-| 2 | ref/network-ports | [Network ports](tbd)|
+| 2 | ref/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
 | 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|

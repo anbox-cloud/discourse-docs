@@ -35,7 +35,7 @@ The above defines a minimum of what is necessary to run the Anbox Cloud Applianc
 
 On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
 
-For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](tbd#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
+For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](https://discourse.ubuntu.com/t/network-ports/33650#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
 
 <a name="appliance-ubuntu-version"></a>
 ### Ubuntu version

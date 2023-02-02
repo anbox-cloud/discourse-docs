@@ -12,7 +12,7 @@ The reference material in this section provides technical descriptions of Anbox 
 | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)| Documentation of the performance metrics that Anbox Cloud provides |
 | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)| A list of AMS configuration options |
 | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)| A list of the attributes that can be specified in the application manifest |
-| [Network ports](tbd)| A list of network ports that Anbox Cloud exposes for each service |
+| [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)| A list of network ports that Anbox Cloud exposes for each service |
 | [Addons](https://discourse.ubuntu.com/t/addons/25293)| Documentation of the addon mechanism |
 | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)| Documentation of hooks for addons or applications |
 | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
