@@ -442,7 +442,7 @@ See [Ubuntu Pro](https://ubuntu.com/support).
 <a name="ubuntu-one"></a>
 ### Ubuntu One
 
-A central user account system used by all Canonical sites and services. You need a Ubuntu One account to purchase the Ubuntu Pro (Apps-only) subscription that is required to run Anbox Cloud, and to log into the web dashboard.
+A central user account system used by all Canonical sites and services. You need a Ubuntu One account to purchase the full Ubuntu Pro subscription that is required to run Anbox Cloud, and to log in to the web dashboard.
 
 See [Ubuntu One](https://login.ubuntu.com/).
 
