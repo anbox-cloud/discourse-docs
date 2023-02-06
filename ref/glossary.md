@@ -435,7 +435,7 @@ A server that finds the most optimal network path between a client and the conta
 <a name="ubuntu-pro"></a>
 ### Ubuntu Pro
 
-Canonical’s service package for Ubuntu that provides enterprise security and support for open-source applications, with managed service offerings available. Note the difference between Ubuntu Pro (Infra-only) and Ubuntu Pro (Apps-only); Anbox Cloud requires a full Ubuntu Pro or a Ubuntu Pro (Apps-only) subscription.
+Canonical’s service package for Ubuntu that provides enterprise security and support for open-source applications, with managed service offerings available. Note the difference between Ubuntu Pro (Infra-only) and full Ubuntu Pro subscriptions. Anbox Cloud requires a full Ubuntu Pro subscription.
 
 See [Ubuntu Pro](https://ubuntu.com/support).
 

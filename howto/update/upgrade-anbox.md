@@ -57,7 +57,7 @@ Once the commands are executed, Juju will perform all necessary upgrade steps au
 
 After Juju has settled the workload status will be marked as `blocked` and the status will show `UA token missing`.
 
-Anbox Cloud requires a valid Ubuntu Pro token including the Anbox Cloud entitlement, thus a full Ubuntu Pro or a Ubuntu Pro (Apps-only) subscription. You can get your Ubuntu Pro token on [Ubuntu Pro](https://ubuntu.com/pro). Please speak with your Canonical account representative.
+Anbox Cloud requires a valid Ubuntu Pro token for a full Ubuntu Pro subscription which includes the Anbox Cloud entitlement. You can get your Ubuntu Pro token on [Ubuntu Pro](https://ubuntu.com/pro). Please speak with your Canonical account representative.
 
 When you have your Ubuntu Pro token, you can apply it for all relevant charms with the following commands:
 

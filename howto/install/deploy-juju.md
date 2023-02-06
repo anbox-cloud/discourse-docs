@@ -15,8 +15,8 @@ Before you start the installation, ensure that you have the required credentials
   * [Amazon Web Services](https://aws.amazon.com/) (including AWS-China)
   * [Google Cloud platform ](https://cloud.google.com/)
   * [Microsoft Azure](https://azure.microsoft.com/)
-* Your Ubuntu Pro token for either a full Ubuntu Pro subscription or a Ubuntu Pro (Apps-only) subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, sign in on https://ubuntu.com/pro to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+* Your Ubuntu Pro token for a full Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need a full Ubuntu Pro subscription.[/note]
 
 ## Install Juju
 
@@ -61,7 +61,7 @@ Every deployment of Anbox Cloud must be attached to the Ubuntu Pro service Canon
 
 You can retrieve your Ubuntu Pro token at https://ubuntu.com/pro after logging in. You should record the token as you will need it for every deployment of Anbox Cloud.
 
-[note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token that every user gets for free does **NOT** work and will result in a failed deployment. You must purchase a full *Ubuntu Pro* or a *Ubuntu Pro (Apps-only)* subscription by [contacting Canonical](https://anbox-cloud.io/contact-us).[/note]
+[note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token will result in a failed deployment. You need a full *Ubuntu Pro* subscription.[/note]
 
 To provide your token when deploying with Juju, you need an [overlay file](https://discourse.ubuntu.com/t/installation-customizing/17747#overlay-files) named `ua.yaml`. For the `anbox-cloud` bundle, the `ua.yaml` file should look like this:
 
