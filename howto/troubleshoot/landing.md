@@ -12,7 +12,7 @@ You might encounter the following issues while setting up your system.
 
 You used the wrong Ubuntu Pro token. Using the Ubuntu Pro (Infra-only) token will result in a failed deployment.
 
-To deploy Anbox Cloud, you need a commercial subscription for full Ubuntu Pro. Using a different token will result in a failed deployment. This failure is currently not recoverable.
+To deploy Anbox Cloud, you need an Ubuntu Pro subscription. Using a different token will result in a failed deployment. This failure is currently not recoverable.
 
 ### Socket permission error for `amc`
 

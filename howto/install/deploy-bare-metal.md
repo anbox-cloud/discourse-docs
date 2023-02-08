@@ -7,7 +7,7 @@ Alternatively, you can follow the instructions in this document to use the [manu
 Before you start the installation, ensure that you have the required prerequisites:
 
 * At least three Ubuntu machines. See [Minimum hardware](https://discourse.ubuntu.com/t/requirements/17734#minimum-hardware) for details and recommendations.
-* Your Ubuntu Pro token for a full Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
   [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need a full *Ubuntu Pro* subscription.[/note]
 
 ## Install Juju

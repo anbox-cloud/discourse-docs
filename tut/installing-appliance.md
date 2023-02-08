@@ -20,8 +20,8 @@ Make sure you have the following prerequisites:
 
 * An Ubuntu SSO account. If you don't have one yet, create it [here](https://login.ubuntu.com).
 * A virtual or bare metal machine running Ubuntu 20.04 or 22.04. See the detailed requirements [here](https://discourse.ubuntu.com/t/requirements/17734).
-* Your Ubuntu Pro token for a full Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
-  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need a full *Ubuntu Pro* subscription.[/note]
+* Your Ubuntu Pro token for an Ubuntu Pro subscription. If you don't have one yet, [speak to your Canonical representative](https://anbox-cloud.io/contact-us). If you already have a valid Ubuntu Pro token, log in to https://ubuntu.com/pro to retrieve it.
+  [note type="caution" status="Warning"]The *Ubuntu Pro (Infra-only)* token does **NOT** work and will result in a failed deployment. You need an *Ubuntu Pro* subscription.[/note]
 
 <a name="install"></a>
 ## Install the appliance
@@ -51,7 +51,7 @@ If LXD is already installed but the version is older than 5.0, run:
 
 ### 3. Attach your machine to the Ubuntu Pro subscription
 
-The Anbox Cloud Appliance requires a valid full Ubuntu Pro subscription.
+The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
 
 Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Pro token:
 
