@@ -17,7 +17,7 @@ After registering to Anbox Cloud, you should have received a [Ubuntu Pro](https:
 
 Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported.
 
-You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on a Ubuntu Desktop installation is not supported.
+You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on an Ubuntu Desktop installation is not supported.
 
 See [Ubuntu version for the Anbox Cloud Appliance](#appliance-ubuntu-version) or [Ubuntu version for Juju-based deployments](#ac-ubuntu-version) for information about the supported Ubuntu versions.
 

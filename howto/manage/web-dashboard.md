@@ -23,9 +23,9 @@ If you haven't registered an Ubuntu One account yet, you can do that at https://
 
 Before you can log into the dashboard, you must register your Ubuntu One account with the dashboard to grant it access.
 
-#### Register a Ubuntu One account in Anbox Cloud
+#### Register an Ubuntu One account in Anbox Cloud
 
-On a regular Anbox Cloud deployment, use the following Juju action to register a Ubuntu One account:
+On a regular Anbox Cloud deployment, use the following Juju action to register an Ubuntu One account:
 
     juju run-action anbox-cloud-dashboard/0 --wait register-account email=<Ubuntu One email address>
 
@@ -46,7 +46,7 @@ unit-anbox-cloud-dashboard-0:
 ```
 
 <a name="dashboard-access-appliance"></a>
-#### Register a Ubuntu One account in Anbox Cloud Appliance
+#### Register an Ubuntu One account in Anbox Cloud Appliance
 
 If you followed the instructions in the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial or in [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702), you already registered your Ubuntu One account.
 
