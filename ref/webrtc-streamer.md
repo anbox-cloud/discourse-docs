@@ -56,7 +56,7 @@ The following example shows a configuration for the WebRTC streamer:
     {
         "video": {
             "bitrate_limits": [
-                { "num_pixels": 921600, "fps": 60, "min_kbps": 1000, "max_kbps": 4500 },
+                { "num_pixels": 921600, "fps": 60, "min_kbps": 1000, "max_kbps": 4500 }
             ],
             "nvidia_h264": {
                 "multipass": true,
