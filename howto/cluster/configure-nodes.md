@@ -43,12 +43,27 @@ Use the following commands to set the allocation rates on a node (for example, `
     amc node set <node> memory-allocation-rate <value>
 
 <a name="configure-gpu-slots"></a>
-## Configure GPU slots
+## Configure GPU slots and GPU encoder slots
 
 GPU slots are used to share GPUs amongst containers. See [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
 
 Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See [Node-specific configuration](https://discourse.ubuntu.com/t/ams-configuration/20872#node-specific) for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
 
-Use the following command to change the number of GPU slots for a node  (for example, `lxd0`):
+Use the following commands to change the number of GPU slots and GPU encoder slots for a node:
 
     amc node set <node> gpu-slots <number>
+    amc node set <node> gpu-encoder-slots <number>
+
+where,
+`<node>` is the node name (For example, `lxd0`),
+`<number>` is the number of slots.
+
+Use the following commands to set the number of GPU slots and GPU encoder slots for each GPU of a node:
+
+    amc node set <node>.gpus.<n>.slots <number>
+    amc node set <node>.gpus.<n>.encoder-slots <number>
+
+where,
+`<node>` is the node name (For example, `lxd0`),
+`<n>` is the GPU number,
+`<number>` is the number of slots.
