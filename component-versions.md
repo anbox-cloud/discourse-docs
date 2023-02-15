@@ -2,6 +2,102 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+
+[Details=1.17.0]
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.17/stable` | 94 |
+| `ams-node-controller` | `1.17/stable` | 102 |
+| `coturn` | `1.17/stable` | 97 |
+| `ams` | `1.17/stable` | 107 |
+| `aar` | `1.17/stable` | 100 |
+| `anbox-stream-gateway` | `1.17/stable` | 112 |
+| `ams-load-balancer` | `1.17/stable` | 102 |
+| `ams-lxd` | `1.17/stable` | 99 |
+| `anbox-stream-agent` | `1.17/stable` | 107 |
+| `nats ` | ` latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.17/stable` | 93 |
+| `ams-node-controller` | `1.17/stable` | 101 |
+| `coturn` | `1.17/stable` | 96 |
+| `ams` | `1.17/stable` | 106 |
+| `aar` | `1.17/stable` | 99 |
+| `anbox-stream-gateway` | `1.17/stable` | 111 |
+| `ams-load-balancer` | `1.17/stable` | 101 |
+| `ams-lxd` | `1.17/stable` | 98 |
+| `anbox-stream-agent` | `1.17/stable` | 106 |
+| `nats ` | ` latest/stable` | 11 |
+
+### Validated revisions of 3rd party charms
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `easyrsa` | `latest/stable` | 26 |
+| `etcd` | `latest/stable` | 718 |
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.17/stable` | 65 |
+| `anbox-cloud-core` | `1.17/stable` | 70 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|
+| `ams`    | `1.17/stable` | 1.17.0 |
+| `aar`    | `1.17/stable` | 1.17.0 |
+| `ams-node-controller` | `1.17/stable` | 1.17.0  |
+| `anbox-cloud-dashboard` | `1.17/stable` | 1.17.0 |
+| `anbox-stream-agent` | `1.17/stable` | 1.17.0 |
+| `anbox-stream-gateway` | `1.17/stable` | 1.17.0 |
+| `anbox-cloud-appliance` | `1.17/stable` | 1.17.0 |
+
+### Debian packages
+
+| Name | Ubuntu Release | Version |
+|----------|--------------|-----------------|
+| `anbox-modules-dkms-117` | 22.04 (jammy) | 1:1.17.0-stable1~jammy0 |
+| `anbox-modules-dkms-117` | 20.04 (focal) | 1:1.17.0-stable1~focal0 |
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.17.0 |
+| `jammy:android13:arm64` | 1.17.0 |
+| `jammy:android12:amd64` | 1.17.0 |
+| `jammy:android12:arm64` | 1.17.0 |
+| `jammy:android11:amd64` | 1.17.0 |
+| `jammy:android11:arm64` | 1.17.0 |
+| `jammy:android10:amd64` | 1.17.0 |
+| `jammy:android10:arm64` | 1.17.0 |
+| `bionic:android12:amd64` | 1.17.0 |
+| `bionic:android12:arm64` | 1.17.0 |
+| `bionic:android11:amd64` | 1.17.0 |
+| `bionic:android11:arm64` | 1.17.0 |
+| `bionic:android10:amd64` | 1.17.0 |
+| `bionic:android10:arm64` | 1.17.0 |
+
+### Supported graphics drivers
+
+| Name | Version |
+|------|---------|
+| NVIDIA | 525.x |
+| Mesa | 23.0.0-rc3 |
+
+[/Details]
+
 [Details=1.16.4]
 
 ### Charms

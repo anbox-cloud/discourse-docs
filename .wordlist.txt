@@ -72,6 +72,7 @@ dnsmasq
 Dqlite
 DrArm
 drawio
+DRM
 Easy-RSA
 EBS
 EGL
@@ -99,6 +100,7 @@ gRPC
 gzip
 HAProxy
 HTTPS
+HW
 HWE
 IAM
 idmapped
@@ -108,6 +110,7 @@ Intra
 IoT
 IPs
 iptables
+Javascript
 jitter
 JS
 JSON
@@ -118,6 +121,8 @@ KeyError
 keystore
 KSM
 Lawnchair
+Libsoup
+libwayland
 Livepatch
 LLVMpipe
 LMA
@@ -139,6 +144,7 @@ NewPipe
 NIC
 NMEA
 NRPE
+NUMA
 numpad
 NvEnc
 NVIDIA
@@ -166,6 +172,7 @@ preselected
 Quadro
 Quickstart
 Rasterization
+rc
 README
 rebased
 renderer
@@ -193,6 +200,7 @@ SHA
 shader
 shiftfs
 SIGBUS
+signaling
 simplestreams
 SKU
 SLI
@@ -237,6 +245,7 @@ validator
 vCPU
 vCPUs
 viewport
+virglrenderer
 VMs
 VNC
 VPC
@@ -244,6 +253,7 @@ VPN
 Vulkan
 Wayland
 WebRTC
+websocket
 WebView
 WGS
 workspaces
