@@ -13,12 +13,12 @@ You should consider using Anbox Cloud if you want to deliver mobile applications
 
 ## What's new
 
-Along with bug fixes and general improvements, Anbox Cloud 1.16 includes the following changes:
+Along with bug fixes and general improvements, Anbox Cloud 1.17 includes the following changes:
 
-* Added support for Android 13.
-* Switched the AMD and Intel GPU support to be based on Vulkan and to use [ANGLE](https://chromium.googlesource.com/angle/angle) as the EGL/OpenGL ES frontend driver.
-* Introduced the WebRTC data proxy server to enable full-duplex bidirectional data transmission between Android and a WebRTC-based client.
-* Added full support for Ubuntu 22.04 for regular and appliance deployments.
+* Enablement work of Vulkan support for NVIDIA GPUs
+* Dynamic screen resolution support
+* Start and sto for containers in AMS
+* Various dashboard improvements
 
 For detailed information, see the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
 

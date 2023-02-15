@@ -3,6 +3,41 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+
+[Details=1.17.0]
+
+# 1.17.0 (February 15 2023)
+
+#### New features & improvements
+
+* Enabling work of Vulkan support for NVIDIA GPUs
+* Dynamic screen resolution support
+* Start and stop for containers in AMS
+* Various dashboard improvements
+* Experimental support for software accelerated AV1 encoding is now available behind a [feature flag](https://anbox-cloud.io/docs/ref/ams-configuration) (`experimental.force_av1_software_encoding`).
+* Containers now connect to Anbox Stream Agent instead of Anbox Stream Gateway for WebRTC signaling.
+* HTTPS fingerprint checks were added to the Anbox runtime for deployment scenarios where the Anbox Stream Agent is not deployed with a certificate signed by a trusted CA.
+* Initial support for NUMA has been added to AMS. If a system has multiple NUMA nodes, AMS will select a node based on the locality of an additionally allocated GPU. If a container is not allocated with a GPU or if `cpu.limit_mode` is set to `pinning`, no specific NUMA is being selected.
+* To allow scheduling containers for applications onto specific nodes in a LXD cluster, an application in AMS can now add a `node-selector` part into its manifest. This will tell the scheduler in AMS to schedule a container for the application onto a node only if it matches the criteria of the node selector. The node selector currently supports tag based selection only.
+* Android still requires cgroup v1 but Ubuntu only supports cgroup v2 since Ubuntu 22.04. To still enable Android to function correctly, initial work for a translation layer to support cgroup v1 on cgroup v2 only systems via a new `anbox-fs` utility written in Rust has been added. By default, the translation layer is not yet enabled but will be in a future release.
+* Libsoup based websocket support for WebRTC signaling has been replaced with a custom implementation providing better stability.
+* The Android HW composer module based on Wayland is now in use for all supported GPU drivers (NVIDIA, AMD and Intel).
+* Android security updates for February 2023 (see [Android Security Bulletin - February 2023](https://source.android.com/docs/security/bulletin/2023-02-01) for more information).
+* The Android WebView has been updated to [110.0.5481.61](https://chromereleases.googleblog.com/2023/02/early-stable-update-for-android.html).
+
+
+#### Bugs
+
+* [LP:2001901](https://bugs.launchpad.net/anbox-cloud/+bug/2001901) Anbox crashes with: elf_dynamic_array_reader.h tag not found
+* [LP:1998471](https://bugs.launchpad.net/anbox-cloud/+bug/1998471) Custom `streamer.json` didn't apply to WebRTC streamer
+* AC-1287 `hwcomposer.anbox` crashes inside libwayland
+* AC-1288 Anbox crashes with `Main process exited, code=killed, status=11/SEGV`
+* AC-1304 Trigger an action from an Anbox platform would fail with `RPC timeout` always even after the action was executed successfully in Android container
+* AC-1348 JS SDK tries to apply ICE candidates without a remote description applied
+* AC-1350 Anbox browser activity does not allow Javascript
+
+[/Details]
+
 [Details=1.16.4]
 ## 1.16.4 (January 24 2023)
 

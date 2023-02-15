@@ -27,7 +27,7 @@ The deployed Juju charms need to be upgraded next.
 
 - You can find a list of all charm, snap and Debian package versions for each Anbox Cloud release in the [component versions](https://discourse.ubuntu.com/t/component-versions/21413) overview. This also includes the charm and bundle revisions and channels for each release.
 
-- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--channel=1.16/stable` argument instructs Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
+- Starting with the 1.14 release, all charms come from [Charmhub](https://charmhub.io) and use the concept of [channels](https://snapcraft.io/docs/channels) to track particular versions. The instructions below address how to upgrade from a 1.13.x release, where charms were still from the old Juju charm store. The `--channel=1.17/stable` argument instructs Juju to switch to the [Charmhub](https://charmhub.io) version of the charm and track the right channel.
 
 - With the 1.14 release, the name of the `lxd` charm changed to `ams-lxd`. If you run a deployment older than 1.14 and want to upgrade, add `--switch=ams-lxd` to the upgrade command to make Juju switch to the new charm. The charm itself remains identical with the same functionality and features.
 
@@ -41,16 +41,16 @@ Run the following commands in the exact same order as listed here but skip those
 
     juju upgrade-charm easyrsa --revision=<rev>
     juju upgrade-charm etcd --revision=<rev>
-    juju upgrade-charm --channel=1.16/stable lxd
-    juju upgrade-charm --channel=1.16/stable ams
-    juju upgrade-charm --channel=1.16/stable ams-node-controller
-    juju upgrade-charm --channel=1.16/stable aar
+    juju upgrade-charm --channel=1.17/stable lxd
+    juju upgrade-charm --channel=1.17/stable ams
+    juju upgrade-charm --channel=1.17/stable ams-node-controller
+    juju upgrade-charm --channel=1.17/stable aar
 
 If you have the streaming stack deployed you have to upgrade also the following charms:
 
-    juju upgrade-charm --channel=1.16/stable anbox-stream-gateway
-    juju upgrade-charm --channel=1.16/stable anbox-stream-agent
-    juju upgrade-charm --channel=1.16/stable coturn
+    juju upgrade-charm --channel=1.17/stable anbox-stream-gateway
+    juju upgrade-charm --channel=1.17/stable anbox-stream-agent
+    juju upgrade-charm --channel=1.17/stable coturn
     juju upgrade-charm nats
 
 Once the commands are executed, Juju will perform all necessary upgrade steps automatically.
