@@ -112,3 +112,11 @@ By default, Android is not allowed to reboot. With the `allow_android_reboot` fe
 Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
 
 The feature flag will be considered by all newly launched containers once set.
+
+#### AV1 software encoder
+
+*since 1.17.0*
+
+The AV1 software encoder is disabled by default but can be enabled with the `experimental.force_av1_software_encoding` feature flag. To transcode the video stream encoded in AV1 codec, all clients must support AV1 decoding.
+
+Once set, this feature flag will be considered by all newly launched containers.
