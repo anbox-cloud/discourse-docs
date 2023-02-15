@@ -1,4 +1,4 @@
-When a container is either initialised with the `amc init` (see [Create a container](https://anbox-cloud.io/docs/howto/container/launch)) command or stopped with the `amc stop` command (See [Stop a container](TBD)), you must start it explicitly with the `amc start` command:
+When a container is either initialised with the `amc init` (see [Create a container](https://anbox-cloud.io/docs/howto/container/launch)) command or stopped with the `amc stop` command (See [Stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)), you must start it explicitly with the `amc start` command:
 
     amc start <container id>
 

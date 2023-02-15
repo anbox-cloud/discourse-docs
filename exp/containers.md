@@ -35,7 +35,7 @@ When you [create a container](https://discourse.ubuntu.com/t/launch-a-container/
 1. Launch the Android container.
 1. Execute the `post-start` hook provided by the installed addons.
 
-![Container start|584x646](TBD)
+![Container start|584x646](https://assets.ubuntu.com/v1/230fd172-container_start.png)
 
 The whole launch process is successful only if all of the above steps succeed.
 
@@ -54,7 +54,7 @@ When a container is stopped, it executes the following steps in order:
 3. Shut down the container.
 
 Beyond that, the container will be removed from AMS either because you deleted it or because an error occurred during its runtime.
-![Container stop|575x521](TBD)
+![Container stop|575x521](https://assets.ubuntu.com/v1/0377512e-container_stop.png)
 
 ### Possible container status
 
@@ -82,12 +82,12 @@ To check whether development mode is enabled, run `amc show <container_ID>` or l
 ## Managing containers
 
  * [How to create a container](https://discourse.ubuntu.com/t/launch-a-container/24327)
- * [How to start a container](TBD)
+ * [How to start a container](https://discourse.ubuntu.com/t/how-to-start-a-container/33924)
  * [How to wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)
  * [How to access a container](https://discourse.ubuntu.com/t/access-containers-remotely/17772)
  * [How to expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)
  * [How to view the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
- * [How to stop a container](TBD)
+ * [How to stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)
  * [How to delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
  * [How to list containers](https://discourse.ubuntu.com/t/list-containers/24328)
  * [How to configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
