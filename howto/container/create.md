@@ -1,6 +1,8 @@
-You can launch a container for a registered application or image (see [Application containers vs. raw containers](https://discourse.ubuntu.com/t/managing-containers/17763#application-vs-raw)), either by using the `amc` tool or through another service over the REST API that the AMS service provides.
+You can either launch a container with `amc launch` or initialise a container with the `amc init` command for a registered application or image (see [Application containers vs. raw containers](https://discourse.ubuntu.com/t/managing-containers/17763#application-vs-raw)), by using the `amc` tool or through another service over the REST API that the AMS service provides. The `amc init` command only creates the instance, while the `amc launch` command creates and starts it.
 
 By default, the container will run headless. See [How to access a container](https://discourse.ubuntu.com/t/container-access/17772) for instructions on how to access it for debugging purposes, and [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769) for information about the streaming stack.
+
+[note type="information" status="Note"] The following examples use `amc launch`, but you can use `amc init` in the same way.[/note]
 
 <a name="application-containers"></a>
 ## Launch application containers

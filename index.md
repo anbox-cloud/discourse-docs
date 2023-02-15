@@ -90,11 +90,13 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/port/configure-watchdog | [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057)|
 | 3 | howto/port/install-system-app | [Install APK as a system app](https://discourse.ubuntu.com/t/install-an-apk-as-a-system-app/27086)|
 | 2 | howto/container/landing | [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
-| 3 | howto/container/launch | [Launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
+| 3 | howto/container/create | [Create a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
+| 3 | howto/container/start | [Start a container](TBD)|
 | 3 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
 | 3 | howto/container/access | [Access a container](https://discourse.ubuntu.com/t/container-access/17772)|
 | 3 | howto/container/expose-services | [Expose services](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)|
 | 3 | howto/container/logs | [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)|
+| 3 | howto/container/stop | [Stop a container](TBD)|
 | 3 | howto/container/delete | [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)|
 | 3 | howto/container/list | [List containers](https://discourse.ubuntu.com/t/list-containers/24328)|
 | 3 | howto/container/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
@@ -232,4 +234,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/changelog | /docs/release-notes |
 | /docs/howto/monitor/grafana | /docs/howto/monitor/collect-metrics |
 | /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
+| /docs/howto/container/launch | /docs/howto/container/create |
 [/details]
