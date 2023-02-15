@@ -272,3 +272,4 @@ These metrics are available since Anbox Cloud 1.8.0.
 | `webrtc_fir_count`                  | Total number of Full Intra Request (FIR) packets received by this sender (video only)                      |
 | `webrtc_pli_count`                  | Total number of Picture Loss Indication (PLI) packets received by this sender (video only)                 |
 | `webrtc_sli_count`                  | Total number of Slice Loss Indication (SLI) packets received by this sender (video only)                   |
+| `webrtc_relay_in_use`               | Boolean value indicating if a relay ICE candidate type is in use for the stream                            |
