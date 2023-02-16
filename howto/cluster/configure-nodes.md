@@ -54,16 +54,11 @@ Use the following commands to change the number of GPU slots and GPU encoder slo
     amc node set <node> gpu-slots <number>
     amc node set <node> gpu-encoder-slots <number>
 
-where,
-`<node>` is the node name (For example, `lxd0`),
-`<number>` is the number of slots.
+Replace `<node>` with the node name (for example, `lxd0`), and `<number>` with the number of slots.
 
 Use the following commands to set the number of GPU slots and GPU encoder slots for each GPU of a node:
 
     amc node set <node>.gpus.<n>.slots <number>
     amc node set <node>.gpus.<n>.encoder-slots <number>
 
-where,
-`<node>` is the node name (For example, `lxd0`),
-`<n>` is the GPU number,
-`<number>` is the number of slots.
+Replace `<node>` with the node name (for example, `lxd0`), `<n>` with the GPU number, and `<number>` with the number of slots.
