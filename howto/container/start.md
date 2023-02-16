@@ -4,6 +4,10 @@ When a container is either initialised with the `amc init` (see [Create a contai
 
 `<container id>` is the ID of the container that you want to start.
 
+[note type="information" status="Important"]
+Do not use the `lxd` command to start a container. Always use the `amc` command instead. Anbox Cloud containers have their own lifecycle and using the `lxd` command to start a container can cause the container to be out of sync.
+[/note]
+
 By default, the `amc start` command waits 5 minutes for a container to run before the operation times out. When starting a container, you can specify a custom wait time with the `--timeout` option.
 
     amc start <container id> --timeout 10m
