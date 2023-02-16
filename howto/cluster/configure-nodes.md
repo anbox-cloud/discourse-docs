@@ -42,6 +42,15 @@ Use the following commands to set the allocation rates on a node (for example, `
     amc node set <node> cpu-allocation-rate <value>
     amc node set <node> memory-allocation-rate <value>
 
+<a name="configure-node-accept-new-containers"></a>
+## Configure if a node can accept new containers
+
+You can configure a node to stop accepting new containers. This is especially important in certain scenarios such as [scaling down a LXD cluster](https://discourse.ubuntu.com/t/how-to-scale-down-a-lxd-cluster/24323). When you want to remove a node from the LXD cluster, the node must not have any containers. Hence, all running containers must be removed or disconnected and AMS must stop considering the node for new containers.
+
+Use the following command to prevent the node from accepting new containers:
+
+    amc node set <node> unscheduable true  
+
 <a name="configure-gpu-slots"></a>
 ## Configure GPU slots and GPU encoder slots
 
