@@ -108,8 +108,10 @@ IDR
 IME
 Intra
 IoT
+IPC
 IPs
 iptables
+interprocess
 Javascript
 jitter
 JS
@@ -123,6 +125,7 @@ KSM
 Lawnchair
 Libsoup
 libwayland
+lifecycle
 Livepatch
 LLVMpipe
 LMA
@@ -168,6 +171,7 @@ playout
 Plex
 PLI
 pre
+preconfigured
 preselected
 Quadro
 Quickstart
@@ -215,6 +219,8 @@ SSRC
 stderr
 stdin
 stdout
+subcluster
+subclusters
 subcommand
 subcommands
 subnet
@@ -224,6 +230,7 @@ swiftshader
 syscall
 syscalls
 systemd
+transcode
 TCP
 Telegraf
 Tensorflow
@@ -262,6 +269,6 @@ xz
 YAML
 ZFS
 zpool
-IPC
-interprocess
-transcode
+
+
+
