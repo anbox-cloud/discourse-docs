@@ -73,6 +73,7 @@ Dqlite
 DrArm
 drawio
 DRM
+easyrsa
 Easy-RSA
 EBS
 EGL
