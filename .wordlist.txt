@@ -125,7 +125,6 @@ KSM
 Lawnchair
 Libsoup
 libwayland
-lifecycle
 Livepatch
 LLVMpipe
 LMA
@@ -171,7 +170,6 @@ playout
 Plex
 PLI
 pre
-preconfigured
 preselected
 Quadro
 Quickstart
