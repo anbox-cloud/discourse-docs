@@ -55,11 +55,11 @@ Inside the Anbox subcluster, the following components are present:
 
 * **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and container life cycle, including application and image update, while ensuring high density, performance, and fast container startup times.
 
-  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting and releasing resources as per demand. 
+  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting, and releasing resources as per demand. 
 
 * **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to [control AMS remotely](https://discourse.ubuntu.com/t/how-to-control-ams-remotely/17774), but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
       
-* **etcd** - etcd is the database that is used to store the data managed by AMS. It provides a reliable way to store data across a cluster of machines. It gracefully handles primary node selections during network partitions and will tolerate machine failure. For more information, see [etcd](https://etcd.io/).
+* **etcd** - etcd is the database that is used to store the data managed by AMS. It provides a reliable way to store data across a cluster of machines. It gracefully handles primary node selections when a network is split into subnets and will tolerate machine failure. For more information, see [etcd](https://etcd.io/).
 
 The AMS, AMC, and etcd make up the management layer of Anbox Cloud. 
 
@@ -67,7 +67,7 @@ Each Anbox subcluster also has a number of LXD worker nodes that form a LXD clus
 
 * **LXD** - The LXD daemon spawns a number of LXD containers containing Anbox-related configuration. These containers provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD container runs exactly one Android container that the end user can access/stream. 
 
-[note type="information" status="Note"] The term LXD containers or LXD images in Anbox Cloud documentation means that they are LXD containers or images that contain Anbox-related configuration.[/note]
+    [note type="information" status="Note"] The term LXD containers or LXD images in Anbox Cloud documentation means that they are LXD containers or images that contain Anbox-related configuration.[/note]
 
 * **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when a container is started or stopped to control ingress and egress traffic.
 
@@ -93,7 +93,7 @@ You also need an additional machine to host the streaming stack control plane wi
   * **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
   * **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
 	
-	[note type="information" status="Note"] Currently, these two components must actually be hosted on different machines because they have different operating system requirements.[/note]
+[note type="information" status="Note"] Currently, these two components must actually be hosted on different machines because they have different operating system requirements.[/note]
 
 You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as, selecting a game.
 
