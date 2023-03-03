@@ -49,19 +49,19 @@ The diagram below depicts the core stack and its components:
 
 ![Anbox Cloud core stack|690x398](https://assets.ubuntu.com/v1/e74d1a49-anbox_cloud_core-stack.png)
 
-The core stack contains an Anbox subcluster, a Juju controller, and the Anbox Application Registry (AAR).
+The core stack contains one or more Anbox subclusters, a Juju controller, and the Anbox Application Registry (AAR).
 
-Inside the Anbox subcluster, the following components are present:
+Inside each Anbox subcluster, the following components are present:
 
 * **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and container life cycle, including application and image update, while ensuring high density, performance, and fast container startup times.
 
-  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting, and releasing resources as per demand. 
+  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting and releasing resources as per demand. 
 
 * **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to [control AMS remotely](https://discourse.ubuntu.com/t/how-to-control-ams-remotely/17774), but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
       
 * **etcd** - etcd is the database that is used to store the data managed by AMS. It provides a reliable way to store data across a cluster of machines. It gracefully handles primary node selections when a network is split into subnets and will tolerate machine failure. For more information, see [etcd](https://etcd.io/).
 
-The AMS, AMC, and etcd make up the management layer of Anbox Cloud. 
+* **Control node** - Control node is the machine on which the AMS, AMC, and etcd are installed. These three components inside the control node make up the management layer of Anbox Cloud. 
 
 Each Anbox subcluster also has a number of LXD worker nodes that form a LXD cluster. Each LXD worker node runs the following components:
 
