@@ -9,7 +9,7 @@ You should consider using Anbox Cloud if you want to deliver mobile applications
 | | |
 |--|--|
 |  [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) </br> Step-by-step guides covering key operations and common tasks |
-|  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs, architecture |
+|  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics, architecture  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs |
 
 ## What's new
 
