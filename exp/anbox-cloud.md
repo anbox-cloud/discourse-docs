@@ -23,7 +23,7 @@ See the following table for a comparison of features for the different variants:
 |---------|-----------------------|-------------|
 | [Streaming capabilities](https://discourse.ubuntu.com/t/streaming-android-applications/17769) | ✓ | ✓ |
 | [Web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871) | ✓ | ✓ |
-| [Android API version](https://discourse.ubuntu.com/t/provided-images/24185) | 10, 11, 12 | 10, 11, 12 |
+| [Android API version](https://discourse.ubuntu.com/t/provided-images/24185) | 10, 11, 12, 13 | 10, 11, 12, 13 |
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/anbox-cloud/) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
