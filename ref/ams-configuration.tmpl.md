@@ -57,7 +57,7 @@ WiFi support can be optionally enabled with the `enable_wifi` feature flag. Anbo
 
 The feature flag will be considered by all newly launched containers once set.
 
-### Android reboot
+#### Android reboot
 
 *since 1.12.0*
 
