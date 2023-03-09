@@ -72,7 +72,7 @@ Use the following commands to set the number of GPU slots and GPU encoder slots 
 
 Replace `<node>` with the node name (for example, `lxd0`), `<n>` with the GPU number and `<number>` with the number of slots.
 
-<a name="configure-tags">
+<a name="configure-tags"></a>
 ## Tags
 
 A node can have a set of tags which can be used for different purposes. Use the following command to set the tags for a specific node:
