@@ -17,7 +17,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.17 includes the fol
 
 * Enablement work of Vulkan support for NVIDIA GPUs
 * Dynamic screen resolution support
-* Start and sto for containers in AMS
+* Start and stop for containers in AMS
 * Various dashboard improvements
 
 For detailed information, see the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
