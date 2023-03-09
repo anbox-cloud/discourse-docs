@@ -57,7 +57,7 @@ WiFi support can be optionally enabled with the `enable_wifi` feature flag. Anbo
 
 The feature flag will be considered by all newly launched containers once set.
 
-### Android reboot
+#### Android reboot
 
 *since 1.12.0*
 
@@ -72,5 +72,13 @@ The feature flag will be considered by all newly launched containers once set.
 *since 1.17.0*
 
 The AV1 software encoder is disabled by default but can be enabled with the `experimental.force_av1_software_encoding` feature flag. To transcode the video stream encoded in AV1 codec, all clients must support AV1 decoding.
+
+Once set, this feature flag will be considered by all newly launched containers.
+
+#### Development settings
+
+*since 1.18.0*
+
+The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag.
 
 Once set, this feature flag will be considered by all newly launched containers.
