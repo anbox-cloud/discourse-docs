@@ -4,7 +4,26 @@ Anbox Cloud allows upgrades from older versions to newer version. This describes
 
 The upgrade instructions detail the revisions each charm needs to be upgraded to, to bring it to the latest version. Next to the upgrade of the charms any used images or addons need to be updated as well.
 
-[note type="caution" status="Warning"]Before you perform the upgrade ensure that you perform a backup of critical data you don't want to lose.[/note]
+## Before you begin
+
+As with all upgrades, there is a possibility that there may be unforeseen difficulties. It is highly recommended that you make a backup of any important data, including any running workloads.
+
+You should also make sure that:
+
+* Your deployment is running normally.
+* Your Juju client and controller/models are running the latest version.
+* You have read the release notes for the version you are upgrading to, which will alert you to any important changes to the operation of your cluster.
+
+[note type="information" status="Note"]
+
+The following assume you're using Juju >= 3.1. If you're using Juju 2.9, you have to map the following commands:
+
+| Juju 3.x | Juju 2.9 |
+|----------|----------|
+| `juju refresh` | `juju upgrade-charm` |
+| `juju exec` | `juju run` |
+
+[/note]
 
 ## Upgrade OS
 
@@ -12,6 +31,10 @@ Before you run the upgrade of the charms, you should make sure all packages on t
 
     sudo apt update
     sudo apt upgrade
+
+You can either run the package update manually or use the Juju command to run it for all machines.
+
+    juju exec --all -- /bin/sh -c 'sudo apt update && sudo apt upgrade -y'
 
 ## Check Juju version
 
@@ -37,39 +60,84 @@ The deployed Juju charms need to be upgraded next.
 
 [/note]
 
-Run the following commands in the exact same order as listed here but skip those you don't use in your deployment:
+For any of the charm upgrades, you can watch the upgrade status by running:
 
-    juju upgrade-charm easyrsa --revision=<rev>
-    juju upgrade-charm etcd --revision=<rev>
-    juju upgrade-charm --channel=1.17/stable lxd
-    juju upgrade-charm --channel=1.17/stable ams
-    juju upgrade-charm --channel=1.17/stable ams-node-controller
-    juju upgrade-charm --channel=1.17/stable aar
+    `juju status`
 
-If you have the streaming stack deployed you have to upgrade also the following charms:
+Continue with the next step only when the current step has completed successfully and all units in the output are marked as **active**.
 
-    juju upgrade-charm --channel=1.17/stable anbox-stream-gateway
-    juju upgrade-charm --channel=1.17/stable anbox-stream-agent
-    juju upgrade-charm --channel=1.17/stable coturn
-    juju upgrade-charm nats
+[note type="information" status="Note"]
+If you don't run Anbox Cloud in a high availability configuration, upgrading the charms will cause a short down time of individual service components during the process.
+[/note]
 
-Once the commands are executed, Juju will perform all necessary upgrade steps automatically.
+### Upgrade infrastructure components
 
-After Juju has settled the workload status will be marked as `blocked` and the status will show `UA token missing`.
+As a first step, we will update all infrastructure components. This includes deployed internal certificate authorities and etcd.
 
-Anbox Cloud requires a valid Ubuntu Pro token for an Ubuntu Pro subscription which includes the Anbox Cloud entitlement. You can get your Ubuntu Pro token on [Ubuntu Pro](https://ubuntu.com/pro). Please speak with your Canonical account representative.
+First we update easyrsa:
 
-When you have your Ubuntu Pro token, you can apply it for all relevant charms with the following commands:
+    ```
+    juju refresh internal-ca --revision=26
+    juju refresh etcd-ca --revision=26
 
-    juju config ams ua_token=<your token>
-    juju config lxd ua_token=<your token>
-    juju config ams-node-controller ua_token=<your token>
-    juju config aar ua_token=<your token>
-    juju config anbox-stream-gateway ua_token=<your token>
-    juju config anbox-stream-agent ua_token=<your token>
-    juju config anbox-cloud-dashboard ua_token=<your token>
+### Upgrade application registry
 
-When the token is set Juju will continue to upgrade Anbox Cloud and install the latest version of the software components.
+The Anbox Application Registry (AAR) can be updated independently of the other services. The upgrade process will cause a short down time of the service providing the registry API but connected AMS instances will retry connecting with it automatically.
+
+To upgrade the registry, run
+
+    juju refresh --channel=1.17/stable aar
+
+### Upgrade control plane
+
+If you have the streaming stack deployed, you need to update the charms responsible for the control plane next. If you do not use the streaming stack, you can skip this step.
+
+[note type="information" status="Note"]
+If you don't run any of the services in a high availability configuration, upgrading the charms will cause a short down time of the service.
+[/note]
+
+To upgrade all charms, run the following commands:
+
+    juju refresh --channel=1.17/stable anbox-cloud-dashboard
+    juju refresh --channel=1.17/stable anbox-stream-gateway
+    juju refresh --channel=1.17/stable anbox-stream-agent
+    juju refresh --channel=1.17/stable coturn
+    juju refresh nats
+
+### Upgrade AMS
+
+The AMS service needs to be updated independently of the other service components to ensure minimal down time. The charm can be upgraded by running the following command.
+
+    juju refresh --channel=1.17/stable ams
+
+### Upgrade LXD
+
+As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not restart running containers but it's recommended to take a backup before continuing.
+
+As the first step, you need to upgrade the AMS node controller by running:
+
+    juju refresh --channel=1.17/stable ams-node-controller
+
+Once the upgrade is completed, you can continue upgrading LXD:
+
+    juju refresh --channel=1.17/stable lxd
+
+In some cases, specifically when you maintain bigger LXD clusters or want to keep a specific set of LXD nodes active until users have dropped, it makes sense to run the upgrade process manually on a per node basis. To enable this, you can set the following configuration option for the LXD charm before running the refresh command above:
+
+    juju config lxd enable_manual_upgrade=true
+
+This will allow you to run the actual upgrade process for each deployed LXD instance separately. After the charm has been refreshed, the upgrade for a single LXD deployment unit can be triggered by running:
+
+    juju run --wait=30m lxd/0 upgrade
+
+Once the upgrade has completed, the unit will be marked as active.
+
+For major and minor version upgrades, an update of the LXD charm may upgrade kernel modules or GPU drivers. This requires stopping any running containers before applying the upgrade and performing a reboot of the machine once the upgrade completed.
+
+In case a reboot of the machine is required, a status message will be shown. When the machine has been rebooted, the status message can be cleared by running:
+
+    juju run --wait=1m lxd/0 clear-notification
+
 
 ## Upgrade Debian packages
 
@@ -80,7 +148,7 @@ Some parts of Anbox Cloud are distributed as Debian packages coming from the [An
 
 or apply the updates via [Landscape](https://landscape.canonical.com/) if available.
 
-## Upgrade LXD image
+## Upgrade LXD images
 
 LXD images are automatically being fetched by AMS from the image server once they are published.
 
@@ -89,13 +157,3 @@ Existing applications will be automatically updated by AMS as soon as the new im
 You can check for the status of an existing application by running
 
     amc application show <application id or name>
-
-## Image server access
-
-Starting with Anbox Cloud 1.9.0 you do not need to manually configure the `images.auth` configuration option in AMS anymore with your personal username and password. Authentication to the image server is now fully automated via your Ubuntu Pro subscription.
-
-Existing deployments will be automatically migrated to the new image server endpoint `https://images.anbox-cloud.io/stable/` and authentication based on your Ubuntu Pro subscription will be setup during the AMS charm upgrade process as well. All you need to have configured for this is the Ubuntu Pro token on the AMS charm you set during deploying with the deploying command:
-
-    juju config ams ua_token=<your token>
-
-To verify the migration you can validate that the `images.url` configuration option in AMS is now changed to `https://images.anbox-cloud.io/stable/` and the 1.10 images are successfully downloaded.
