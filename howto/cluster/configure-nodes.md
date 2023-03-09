@@ -49,7 +49,7 @@ You can configure a node to stop accepting new containers. This is especially im
 
 Use the following command to prevent the node from accepting new containers:
 
-    amc node set <node> unscheduable true  
+    amc node set <node> unscheduable true
 
 <a name="configure-gpu-slots"></a>
 ## Configure GPU slots and GPU encoder slots
@@ -71,3 +71,10 @@ Use the following commands to set the number of GPU slots and GPU encoder slots 
     amc node set <node>.gpus.<n>.encoder-slots <number>
 
 Replace `<node>` with the node name (for example, `lxd0`), `<n>` with the GPU number and `<number>` with the number of slots.
+
+<a name="configure-tags">
+## Tags
+
+A node can have a set of tags which can be used for different purposes. Use the following command to set the tags for a specific node:
+
+    amc node set <node> tags <comma-separated list of tags>

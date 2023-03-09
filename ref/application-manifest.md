@@ -21,12 +21,26 @@ Name          | Value type | Description
 `hooks` (optional) | object | Hooks settings to be configured on application installation.
 `bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation.
 `features` (optional) | array | List of feature flags to be defined for containers created from the application.
+`node-selector` (optional) | array | List of selectors which will limit what node a container for the application can be scheduled on. |
 
 ## Image
 
 The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [How to manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
 
     amc image list
+
+<a name="node-selector"></a>
+## Node selector
+
+The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which a container for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#configure-tags) specified for each node.
+
+The following manifest specifies a node selector that instructs the AMS to schedule only those containers having the tags `foo` and `bar`, onto a node:
+
+```
+name: candy
+instance-type: a4.3
+node-selector: [foo, bar]
+```
 
 <a name="video-encoder"></a>
 ## Video encoder
