@@ -36,6 +36,14 @@ You can either run the package update manually or use the Juju command to run it
 
     juju exec --all -- /bin/sh -c 'sudo apt update && sudo apt upgrade -y'
 
+If the LXD charm is deployed on a machine that has an NVIDIA GPU installed, running the above command for the machine may upgrade the NVIDIA drivers, which accidentally suspends running containers with GPU support. Starting with the 1.17.1 release, the NVIDIA drivers are held from being upgraded until you upgrade the LXD charm using the Juju command. To check if the currently installed NVIDIA drivers are held from being upgraded:
+
+    apt-mark showhold "libnvidia-.*-$(nvidia-smi --query-gpu=driver_version --format=csv,noheader | cut -d'.' -f1)"
+
+If they are not, run the following command to do so:
+
+    sudo apt-mark hold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
+
 ## Check Juju version
 
 Before you upgrade, check the required [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version).
@@ -138,6 +146,21 @@ In case a reboot of the machine is required, a status message will be shown. Whe
 
     juju run --wait=1m lxd/0 clear-notification
 
+If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running containers due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to:
+1. Stop all running containers.
+2. Unhold the NVIDIA drivers to allow an upgrade:
+
+        sudo apt-mark unhold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
+
+3. Update OS:
+
+        sudo apt update && sudo apt upgrade -y
+
+4. Hold the NVIDIA drivers from being updated again:
+
+        sudo apt-mark hold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
+
+A Juju action that simplifies the manual upgrade for NVIDIA drivers will be added in a future release.
 
 ## Upgrade Debian packages
 
