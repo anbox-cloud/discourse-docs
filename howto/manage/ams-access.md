@@ -18,9 +18,12 @@ Controlling AMS remotely requires trusted security certificates. You can generat
 
 To use a self-signed certificate, complete the following steps:
 
-1. Enter the following command on the client machine to generate the certificate:
+1. Invoke an `amc` command on the client machine, for example:
 
         amc remote ls
+
+    To generate a self-signed certificate, you can invoke any `amc` command because AMC automatically generates a self-signed certificate the first time it is invoked.
+
 2. Locate the `$HOME/snap/amc/current/client/client.crt` certificate on the client machine and copy it to the machine that runs AMS.
 3. Log on to the machine that runs AMS and configure AMS to trust the new client by adding the client certificate:
 
