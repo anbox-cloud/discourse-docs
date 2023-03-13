@@ -85,6 +85,7 @@ executables
 favicon
 FDS
 ffmpeg
+Filebeat
 FormatException
 frontend
 fullscreen
@@ -97,6 +98,7 @@ GPG
 GPUs
 Grafana
 Graviton
+Graylog
 gRPC
 gzip
 HAProxy
@@ -112,6 +114,7 @@ IoT
 IPC
 IPs
 iptables
+init
 interprocess
 Javascript
 jitter
@@ -147,6 +150,7 @@ NewPipe
 NIC
 NMEA
 NRPE
+nrpe
 NUMA
 numpad
 NvEnc
@@ -260,6 +264,7 @@ Vulkan
 Wayland
 WebRTC
 websocket
+websockets
 WebView
 WGS
 workspaces
@@ -268,6 +273,8 @@ xz
 YAML
 ZFS
 zpool
+
+
 
 
 
