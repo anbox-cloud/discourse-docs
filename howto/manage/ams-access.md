@@ -35,7 +35,7 @@ To use a self-signed certificate, complete the following steps:
 
 To use a CA certificate, complete the following steps:
 
-1. Generate a CA certificate and key. There are different ways of how to do this. For example, you can use a PKI like [Easy-RSA](https://github.com/OpenVPN/easy-rsa).
+1. Generate a CA certificate and key. There are different ways of how to do this. For example, you can use a PKI like [easy-rsa](https://github.com/OpenVPN/easy-rsa).
 2. Copy the generated CA certificate to the machine that runs AMS.
 3. Log on to the machine that runs AMS and configure AMS to trust the CA certificate (and with that, all certificates that are based on it):
 
