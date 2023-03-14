@@ -43,8 +43,8 @@ To use a CA certificate, complete the following steps:
 4. For each client, generate a client key and certificate based on the CA certificate. You should use the same method for this as you did in the first step.
 5. Copy the generated credentials to the client machine:
 
-   - Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
-   - Copy the client key to `$HOME/snap/amc/current/client/client.key`
+   * Copy the client certificate to `$HOME/snap/amc/current/client/client.crt`.
+   * Copy the client key to `$HOME/snap/amc/current/client/client.key`
 
 ## Expose the AMS HTTPS service
 
@@ -62,7 +62,7 @@ After setting up the security certificates, configure AMC to connect to the remo
 
     amc remote add <your remote name> https://<IP address of the AMS machine>:8444
 
-[note type="information" status="Hint"]If you haven't changed the port AMS is listening on, it's 8444 by default.[/note]
+[note type="information" status="Tip"]If you haven't changed the port AMS is listening on, it's 8444 by default.[/note]
 
 The command connects to AMS and shows you the fingerprint of the server certificate. If it matches what you expect, acknowledge the fingerprint by typing "yes".
 

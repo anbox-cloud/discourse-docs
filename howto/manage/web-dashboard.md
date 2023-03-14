@@ -13,7 +13,7 @@ The dashboard comes pre-installed when you deploy [Anbox Cloud with the streamin
 
 To access the dashboard, go to `https://<your-machine-address>/`.
 
-[note type="information" status="Hint"]The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.[/note]
+[note type="information" status="Note"]The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.[/note]
 
 ### Granting access
 
@@ -67,9 +67,7 @@ Note that more advanced scenarios might not yet be possible via the dashboard an
 
 ### Streaming applications
 
-The dashboard comes with in-browser streaming capabilities through WebRTC.
-
-[note type="information" status="Note"]The dashboard uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk) under the hood.[/note]
+The dashboard comes with in-browser streaming capabilities through WebRTC. It uses the [Streaming SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk) under the hood.
 
 You can select any application you previously created and start a streaming session.
 

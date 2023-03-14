@@ -14,7 +14,7 @@ To register an instance as a publisher, use the following command:
 
     juju add-relation aar:publisher ams:registry-publisher
 
-[note type="information" status="Hint"]Run `amc config show` to check that the AAR configuration items were changed.[/note]
+[note type="information" status="Tip"]Run `amc config show` to check that the AAR configuration items were changed.[/note]
 
 ### Register units deployed in another model
 
