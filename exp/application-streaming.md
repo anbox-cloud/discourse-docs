@@ -42,7 +42,7 @@ The following provides an overview of the process:
  5. Each network path is bundled in an `ICE candidate`. There are usually multiple ICE candidates per peer and both sides negotiate the best candidate pair.
  6. Both peer agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway web socket and talk directly to each other.
 
-[note type="information" status="Hint"]The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other.[/note]
+[note type="information" status="Note"]The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other.[/note]
 
 ### 3. Establishing the stream
 
