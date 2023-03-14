@@ -186,6 +186,7 @@ RGBA
 roadmap
 RootFS
 RSA
+rsa
 RTC
 RTP
 RTT
