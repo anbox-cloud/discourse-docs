@@ -2,10 +2,10 @@ Enabling out-of-band (OOB) data transmission between an Android application and 
 
 Anbox Cloud provides two versions of this OOB data exchange:
 
-- [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
+* [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
   Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-- [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in a container and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in a container and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
@@ -14,8 +14,8 @@ The support for [version 1](#oob-v1) of the out-of-band data exchange between an
 [/note]
 
 See the instructions for exchanging OOB data using a specific implementation version below:
-- [Version 2](#oob-v2)
-- [Version 1](#oob-v1)
+* [Version 2](#oob-v2)
+* [Version 1](#oob-v1)
 
 <a name="oob-v2"></a>
 ## Version 2
@@ -110,9 +110,9 @@ A trivial example to simulate the data transmission between an Anbox container a
 
 To build up the communication bridge between an Android application and the Anbox WebRTC platform, Anbox Cloud provides a system daemon named `anbox-webrtc-data-proxy`. This daemon is responsible for:
 
- - Accepting connection requests from an Android application
- - Connecting to one specific data channel via the Unix domain socket exposed by the Anbox WebRTC platform
- - Passing the connected socket as a file descriptor to the Android application
+ * Accepting connection requests from an Android application
+ * Connecting to one specific data channel via the Unix domain socket exposed by the Anbox WebRTC platform
+ * Passing the connected socket as a file descriptor to the Android application
 
 The `anbox-webrtc-data-proxy` system daemon runs in the Anbox container and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
 
@@ -160,7 +160,7 @@ public class DataChannelEventReceiver extends BroadcastReceiver {
 
 There are two ways to access the `org.anbox.webrtc.IDataProxyService` from an Android application:
 
-- If you develop the application with Android studio, you can access the service by using Android's reflection API.
+* If you develop the application with Android studio, you can access the service by using Android's reflection API.
 
     ```
     IBinder getDataProxyService() {
@@ -181,7 +181,7 @@ There are two ways to access the `org.anbox.webrtc.IDataProxyService` from an An
     }
     ```
 
--  If you ship the Android application inside of the AOSP source tree and [build](https://source.android.com/docs/setup/build/building) it from there, you can use Android's hidden API to access the service.
+*  If you ship the Android application inside of the AOSP source tree and [build](https://source.android.com/docs/setup/build/building) it from there, you can use Android's hidden API to access the service.
 
     ```
     IBinder getDataProxyService() {

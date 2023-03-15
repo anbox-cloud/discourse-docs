@@ -56,7 +56,7 @@ Images that are synchronised from the image server are marked as immutable. To d
 
 If you're not using `--force`, the command will fail.
 
-[note type="information" status="Hint"]Note that unless you have only one image left, you cannot delete an image that is marked as default. You must set a new default image first.[/note]
+[note type="information" status="Note"]Unless you have only one image left, you cannot delete an image that is marked as default. You must set a new default image first.[/note]
 
 ### Delete an image version
 
@@ -78,6 +78,6 @@ For instance, to fetch the arm64 Android 11 image of the 1.11.2 release:
 
 You can then use the `foobar` image as you would any other image.
 
-[note type="information" status="Tip"]
+[note type="information" status="Important"]
 Image updates contain important security patches and optimisations. Use older images only when strictly necessary.
 [/note]

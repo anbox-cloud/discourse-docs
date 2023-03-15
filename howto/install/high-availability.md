@@ -12,8 +12,8 @@ For example, to go from 1 to 5 AMS units, you would run the following:
 
     juju add-unit ams -n 4
 
-[note type="information" status="Hint"]
-By default Juju allocates small machines to limit costs, but you can request better resources by [enforcing constraints](https://juju.is/docs/olm/constraints):
+[note type="information" status="Tip"]
+By default, Juju allocates small machines to limit costs but you can request better resources by [enforcing constraints](https://juju.is/docs/olm/constraints):
 
 `juju set-constraints anbox-stream-gateway cores=4 memory=8GB`
 
@@ -83,8 +83,7 @@ anbox-stream-gateway/2      active    idle   4       10.212.218.136  4000/tcp,70
 
 ## Scaling down
 
-Scaling down can be done by [removing units via Juju](https://juju.is/docs/scaling-applications#heading--scaling-down).
-Here you have to specifically target the unit you want to remove:
+Scaling down can be done by [removing units via Juju](https://juju.is/docs/scaling-applications#heading--scaling-down). You have to specifically target the unit that you want to remove:
 
     juju remove-unit anbox-stream-agent/2
 

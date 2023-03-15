@@ -47,4 +47,4 @@ curl -X GET https://20.234.75.29:4000/1.0/sessions \
 curl -X GET https://20.234.75.29:4000/1.0/sessions?api_token=AgEUYW5ib3...QSyzaA_GHLYQ
 ```
 
-[note type="information" status="Hint"]The Anbox Stream SDK handles the token automatically for all its requests.[/note]
+[note type="information" status="Note"]The Anbox Stream SDK handles the token automatically for all its requests.[/note]
