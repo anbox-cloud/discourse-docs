@@ -12,6 +12,8 @@ The architecture of Anbox Cloud has been designed in a way that ensures secure c
 
 All communication between services uses TLS encryption and authentication. Access is controlled through secure authentication tokens or temporary passwords. There are no insecure HTTP endpoints, but all HTTP communication is secured by TLS and happens over HTTPS.
 
+Secure communication is achieved using TLS and public-key encryption with a chain of trust up to a shared root Certificate Authority (CA). However, when the cluster is being brought up or a new unit is being added, the chain of trust and certificates required must be bootstrapped into the machines.
+
 The following table shows the authentication methods that are in place for the different components.
 
 | Component             | Authentication method        |
@@ -42,6 +44,13 @@ While containers are fully isolated, all containers currently use the same GPU r
 
 See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
 [/note]
+
+### Secure communication with the Juju controller
+
+All communication between Juju units and the Juju controller happens over TLS-encrypted websockets. The certificate for the TLS connection to the controller is added as explicitly trusted to each machine as part of the bootstrap process using a combination of cloud-init and SSH.
+
+With this secure channel, Juju charms can communicate with each other using relation data. The data published by one unit is sent to the controller, which then makes it available for all other units on the same relation. The data for each relation is scoped by ID and is only visible to units participating in the specific relation on which it is set.
+
 
 ### Security updates
 
