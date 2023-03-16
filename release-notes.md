@@ -3,6 +3,26 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.17.1]
+
+# 1.17.1 (March 16 2023)
+
+#### New features & improvements
+
+* To minimize reboot of a machine or stopping of all containers, an internal check whether the GPU driver needs to be updated is in place. This also presents a status to the user indication the need to reboot the machine after a GPU driver update. The users can also ask if a pending upgrade will require a macine reboot or containers to be stopped. 
+* If the LXD charm is deployed on a machine that has an NVIDIA GPU installed, running the `sudo apt update && sudo apt upgrade -y` command for the machine may upgrade the NVIDIA drivers, which accidentally suspends running containers with GPU support. Hence, the NVIDIA drivers are held from being upgraded until you upgrade the LXD charm using the Juju command. You can check if the NVIDIA drivers are being held from being upgraded and when required, you can update them manually. 
+* Android security updates for March 2023 (see [Android Security Bulletin - March 2023](https://source.android.com/docs/security/bulletin/2023-03-01) for more information). Starting this month, Android 10 will no longer receive security updates as Google stops providing security patches for Android 10. 
+* The Android WebView has been updated to [111.0.5563.49](https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android.html).
+
+#### Bug fixes
+
+* [AC-1380](https://warthogs.atlassian.net/browse/AC-1380) Android system UI crashes due to missing permissions.
+* [AC-1435](https://warthogs.atlassian.net/browse/AC-1435) Connection timer stays alive after connection attempt failed.
+* [AC-1447](https://warthogs.atlassian.net/browse/AC-1447) Anbox runtime becomes blocked when stopped before being fully started.
+* [AC-1444](https://warthogs.atlassian.net/browse/AC-1444) The `quote` keycode doesn't get handled in Anbox Streaming JS SDK when interacting with the container.
+
+[/Details]
+
 
 [Details=1.17.0]
 
