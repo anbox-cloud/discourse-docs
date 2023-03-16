@@ -67,7 +67,7 @@ Each Anbox subcluster also has a number of LXD worker nodes that form a LXD clus
 
 * **LXD** - The LXD daemon spawns a number of LXD containers containing Anbox-related configuration. These containers provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD container runs exactly one Android container that the end user can access/stream. 
 
-    [note type="information" status="Note"] The term LXD containers or LXD images in Anbox Cloud documentation means that they are LXD containers or images that contain Anbox-related configuration.[/note]
+    [note type="information" status="Note"] The term LXD containers means that they are LXD containers that contain Anbox-related configuration. Within the context of Anbox Cloud, the term Anbox containers/images is synonymous with LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.[/note]
 
 * **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when a container is started or stopped to control ingress and egress traffic.
 
