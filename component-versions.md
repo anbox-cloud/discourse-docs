@@ -82,13 +82,6 @@ Not all components are updated with each release. When components are not update
 | `bionic:android10:amd64` | 1.17.1 |
 | `bionic:android10:arm64` | 1.17.1 |
 
-### Supported graphics drivers
-
-| Name | Version |
-|------|---------|
-| NVIDIA | 525.x |
-| Mesa | 23.0.0-rc3 |
-
 [/Details]
 
 [Details=1.17.0]
