@@ -14,10 +14,10 @@ Anbox Cloud deployments require the Ubuntu operating system. You should consider
 
 Consider the following questions to decide your networking requirements:
 
-* In your deployment, how many virtual private clouds do you need per cluster?
+* In your deployment, how should your network structure and topology look like?
 * Do you need subnets? If yes, what is the range of the subnets that you want to define?
-* For each cluster, how do you want to map the subnets within the virtual private clouds into Juju spaces?
-* Where is your Anbox Application Registry (AAR) deployed? How will the AMS in other clusters connect to AAR? Define your virtual private cloud peering requirements based on the number of clusters you have and where AAR is deployed. To know more about AAR, see the following links:
+* Do you require a virtual network and plan Juju spaces on top of it?
+* Where is your Anbox Application Registry (AAR) deployed? How will the AMS in other clusters connect to AAR? Define any peering requirements that you may have, based on the number of clusters you have and where AAR is deployed. To know more about AAR, see the following links:
     * [Anbox Application Registry](https://discourse.ubuntu.com/t/anbox-application-registry-aar/17761)
     * [How to deploy an AAR](https://discourse.ubuntu.com/t/how-to-deploy-an-aar/17749) 
     * [How to configure an AAR](https://discourse.ubuntu.com/t/how-to-configure-an-aar/24319)
