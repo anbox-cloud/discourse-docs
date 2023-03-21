@@ -164,6 +164,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/capacity-planning | [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 2 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
+| 2 | exp/production | [About production planning](https://discourse.ubuntu.com/t/about-production-planning/34648)
 | 0 | | |
 | 1 | anbox/landing | [About the project](https://discourse.ubuntu.com/t/about-the-project/28830) |
 | 2 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
@@ -171,7 +172,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 2 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
 | 2 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
-| 2 | exp/production | [About production planning](https://discourse.ubuntu.com/t/about-production-planning/34648)
+
 [/details]
 
 ## Redirects
