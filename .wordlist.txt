@@ -80,6 +80,7 @@ EGL
 EINVAL
 EmuGL
 EOL
+ERD
 ETag
 etcd
 executables
