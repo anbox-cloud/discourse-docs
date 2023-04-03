@@ -78,6 +78,7 @@ Easy-RSA
 EBS
 EGL
 EINVAL
+EmuGL
 EOL
 ETag
 etcd
@@ -93,6 +94,7 @@ gamepad
 gameplay
 GCE
 GL
+GLES
 Golang
 GPG
 GPUs

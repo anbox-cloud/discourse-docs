@@ -1,6 +1,6 @@
 # Supported GPU vendors
 
-Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data center. We currently support the following GPU vendors:
+Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
 
 * NVIDIA
 * Intel
@@ -37,7 +37,7 @@ For communication between the hardware composer module on the Android side and A
 
 This NVIDIA pipeline uses the EmuGL stack. EmuGL is the hardware GLES emulation that is implemented with a mix of translator libraries, system libraries, and other rendering components. To understand more about EmuGL, see [EmuGL design overview](https://android.googlesource.com/platform/external/qemu/+/refs/heads/emu-master-dev/android/android-emugl/DESIGN). 
 
-For NVIDIA, we cannot use the NVIDIA driver inside the Android container because of compatibility issues. Hence, we use the ERD NVIDIA driver that is available on every Ubuntu installation. So by using the EmuGL stack, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the ubuntu container and not in the Android space. 
+For NVIDIA, we cannot use the NVIDIA driver inside the Android container because of compatibility issues. Hence, we use the Enterprise Ready NVIDIA driver that is available on every Ubuntu installation. So by using the EmuGL stack, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the Ubuntu container and not in the Android space. 
 
 ## For Intel and AMD
 
