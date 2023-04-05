@@ -6,7 +6,7 @@ Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for 
 * Intel
 * AMD
 
-Anbox Cloud is extensively tested using NVIDIA GPUs and when needed, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice.
+Anbox Cloud is extensively tested using NVIDIA GPUs and when needed, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the [Anbox Platform SDK](https://anbox-cloud.io/docs/ref/sdks#anbox-platform-sdk).
 
 # Supported GPU drivers
 
@@ -17,7 +17,7 @@ See [Component versions](https://anbox-cloud.io/docs/component-versions) to refe
 
 # Supported APIs
 
-For NVIDIA GPUs Anbox Cloud uses OpenGL ES 3.2 and EGL graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses Vulkan 1.3. Both OpenGL and EGL are high level APIs while Vulkan is a lower level API that allows a better, granular level control over certain aspects of GPU management.
+For NVIDIA GPUs Anbox Cloud uses OpenGL ES 3.2 and EGL 1.5 graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses Vulkan 1.3.
 
 # Rendering architecture
 
@@ -29,7 +29,7 @@ To have a better understanding of the rendering architecture of Anbox Cloud, it 
 
 Anbox Cloud has two rendering pipeline models - one for NVIDIA and the other for Intel and AMD. However, irrespective of the GPU that you use, the path of a frame typically looks like this: Android application > SurfaceFlinger > Hardware composer > Anbox Cloud > Display on screen or send it to streaming component.
 
-For communication between the hardware composer module on the Android side and Anbox runtime, we use [Wayland](https://wayland.freedesktop.org/). So Anbox Cloud really functions as a compositor for Android i.e., the hardware composer module receives frames from the SurfaceFlinger and submits them to the Anbox runtime using Wayland. The Anbox runtime then submits the frame towards its output, which is either the screen or the streaming component.
+For communication between the hardware composer module on the Android side and Anbox runtime, we use [Wayland](https://wayland.freedesktop.org/). So Anbox Cloud really functions as a compositor for Android i.e., the hardware composer module receives frames from the SurfaceFlinger and notifies Anbox runtime using Wayland. The Anbox runtime then submits the frame towards its output, which is either the screen or the streaming component.
 
 ## For NVIDIA
 
@@ -37,7 +37,9 @@ For communication between the hardware composer module on the Android side and A
 
 This NVIDIA pipeline uses the EmuGL stack. EmuGL is the hardware GLES emulation that is implemented with a mix of translator libraries, system libraries, and other rendering components. To understand more about EmuGL, see [EmuGL design overview](https://android.googlesource.com/platform/external/qemu/+/6654d90be28d0059baf854caccd4caf9f7033ccb/android/android-emugl/DESIGN). 
 
-For NVIDIA, we cannot use the NVIDIA driver inside the Android container because of compatibility issues. Hence, we use the Enterprise Ready NVIDIA driver that is available on every Ubuntu installation. So by using the EmuGL stack, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the Ubuntu container and not in the Android space. 
+For NVIDIA, we cannot use the NVIDIA driver inside the Android container because of compatibility issues. Hence, we use the Enterprise Ready NVIDIA driver that is available on every Ubuntu installation. So by using the EmuGL stack, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the Ubuntu container and not in the Android space.
+
+In terms of performance, compared to how rendering is done on Intel or AMD GPUs using Vulkan on top of ANGLE, using the EmuGL stack is suboptimal as it leads to unnecessary overhead due to transmission of GL calls from the Android space to Anbox runtime.
 
 ## For Intel and AMD
 
