@@ -232,6 +232,7 @@ subcommand
 subcommands
 subnet
 subnets
+suboptimal
 SurfaceFlinger
 swiftshader
 syscall
