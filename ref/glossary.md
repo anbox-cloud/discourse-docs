@@ -149,7 +149,7 @@ A deployment of the Anbox Cloud, either just the core stack or the core stack al
 <a name="anbox-cloud-subcluster"></a>
 ### Anbox Cloud subcluster
 
-The group of components that is made up of the management layer (AMS, AMC, etcd), control node, LXD, AMS node controller.
+The group of components that is made up of LXD, AMS node controller, and the [control node](#control-node) hosting the AMS, AMC, and etcd.
 
 <a name="anbox-container"></a>
 ### Anbox container
@@ -351,12 +351,12 @@ See [the LXD website](https://linuxcontainers.org/).
 <a name="lxd-cluster"></a>
 ### LXD cluster
 
-A set of LXD servers that share the same distributed database that holds the configuration for the cluster members and their instances.
+A set of LXD nodes that share the same distributed database that holds the configuration for the cluster members and their instances.
 
 <a name="lxd-worker-node"></a>
 ### LXD worker node
 
-In a clustering setup for a full Anbox Cloud deployment, all nodes other than the one that is dedicated to host the AMS service (management node) are worker nodes. If you have a streaming stack, all nodes other than the management node and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
+In a clustering setup for a full Anbox Cloud deployment, all nodes other than the [control node](#control-node) are worker nodes. If you have a streaming stack, all nodes other than the [control node](#control-node) and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
 
 <a name="monitoring-stack"></a>
 ### Monitoring stack
