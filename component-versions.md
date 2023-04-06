@@ -2,6 +2,12 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.17.2]
+
+
+
+[/Details]
+
 [Details=1.17.1]
 
 ### Charms
