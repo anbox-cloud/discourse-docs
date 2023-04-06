@@ -16,6 +16,9 @@
 - [Anbox Application Registry](#aar)
 - [Anbox Cloud](#anbox-cloud)
 - [Anbox Cloud Appliance](#anbox-cloud-appliance)
+- [Anbox Cloud cluster](#anbox-cloud-cluster)
+- [Anbox Cloud subcluster](#anbox-cloud-subcluster)
+- [Anbox container](#anbox-container)
 - [Anbox Management Client](#amc)
 - [Anbox Management Service](#ams)
 - [Anbox Platform SDK](#anbox-platform-sdk)
@@ -33,6 +36,7 @@
 - [Boot package](#boot-package)
 - [Bootstrap process](#bootstrap-process)
 - [Container](#container)
+- [Control node](#control-node)
 - [Core stack](#core-stack)
 - [Coturn](#coturn)
 - [GPU](#gpu)
@@ -45,6 +49,8 @@
 - [Instance type](#instance-type)
 - [Juju](#juju)
 - [LXD](#lxd)
+- [LXD cluster](#lxd-cluster)
+- [LXD worker node](#lxd-worker-node)
 - [Manifest](#application-manifest)
 - [Monitoring stack](#monitoring-stack)
 - [NATS](#nats)
@@ -134,6 +140,21 @@ See https://discourse.ubuntu.com/t/about-anbox-cloud/17802.
 A self-contained deployment variant of Anbox Cloud.
 
 See [Variants](https://discourse.ubuntu.com/t/about-anbox-cloud/17802#variants).
+
+<a name="anbox-cloud-cluster"></a>
+### Anbox Cloud cluster
+
+A deployment of the Anbox Cloud, either just the core stack or the core stack along with the streaming stack.
+
+<a name="anbox-cloud-subcluster"></a>
+### Anbox Cloud subcluster
+
+The group of components that is made up of LXD, AMS node controller, and the [control node](#control-node) hosting the AMS, AMC, and etcd.
+
+<a name="anbox-container"></a>
+### Anbox container
+
+Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system. Within the context of Anbox Cloud, the term Anbox containers/images can mean LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.
 
 <a name="amc"></a>
 ### Anbox Management Client (AMC)
@@ -248,6 +269,11 @@ One of the main objects of Anbox Cloud. Every time you launch an application or 
 
 See https://discourse.ubuntu.com/t/about-containers/17763.
 
+<a name="control-node"></a>
+### Control node
+
+The machine on which the components that make up the management layer, AMS, AMC, and etcd, are installed.
+
 <a name="core-stack"></a>
 ### Core stack
 
@@ -321,6 +347,16 @@ See [the Juju website](https://juju.is/).
 A system container and virtual machine manager that offers a unified user experience around full Linux systems running inside containers or virtual machines. Anbox Cloud is based on LXD.
 
 See [the LXD website](https://linuxcontainers.org/).
+
+<a name="lxd-cluster"></a>
+### LXD cluster
+
+A set of LXD nodes that share the same distributed database that holds the configuration for the cluster members and their instances.
+
+<a name="lxd-worker-node"></a>
+### LXD worker node
+
+In a clustering setup for a full Anbox Cloud deployment, all nodes other than the [control node](#control-node) are worker nodes. If you have a streaming stack, all nodes other than the [control node](#control-node) and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
 
 <a name="monitoring-stack"></a>
 ### Monitoring stack
