@@ -38,7 +38,7 @@ When making requests to the Stream Gateway API you can either place the token in
 
 ```bash
 curl -X GET https://20.234.75.29:4000/1.0/sessions \
-    -H 'authorization=macaroon root=AgEUYW5ib3...QSyzaA_GHLYQ'
+    -H 'authorization:macaroon root=AgEUYW5ib3...QSyzaA_GHLYQ'
 ```
 
 **Query parameters**
