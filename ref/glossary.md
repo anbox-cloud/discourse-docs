@@ -35,7 +35,6 @@
 - [Base container](#base-container)
 - [Boot package](#boot-package)
 - [Bootstrap process](#bootstrap-process)
-- [Container](#container)
 - [Control node](#control-node)
 - [Core stack](#core-stack)
 - [Coturn](#coturn)
@@ -154,7 +153,9 @@ The group of components that is made up of LXD, AMS node controller, and the [co
 <a name="anbox-container"></a>
 ### Anbox container
 
-Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system. Within the context of Anbox Cloud, the term Anbox containers/images can mean LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.
+One of the main objects of Anbox Cloud. Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system. Within the context of Anbox Cloud, the term Anbox containers/images can mean LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.
+
+See https://discourse.ubuntu.com/t/about-containers/17763.
 
 <a name="amc"></a>
 ### Anbox Management Client (AMC)
@@ -261,13 +262,6 @@ The package to launch in an application container once the system has booted.
 The process that builds the application and optimises it to run on Anbox Cloud.
 
 See [Bootstrap process](https://discourse.ubuntu.com/t/about-applications/17760#bootstrap).
-
-<a name="container"></a>
-### Container
-
-One of the main objects of Anbox Cloud. Every time you launch an application or image, Anbox Cloud creates a container for it. Every container provides a full Android system.
-
-See https://discourse.ubuntu.com/t/about-containers/17763.
 
 <a name="control-node"></a>
 ### Control node
