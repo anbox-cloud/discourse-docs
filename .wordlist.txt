@@ -78,7 +78,9 @@ Easy-RSA
 EBS
 EGL
 EINVAL
+EmuGL
 EOL
+ERD
 ETag
 etcd
 executables
@@ -93,6 +95,7 @@ gamepad
 gameplay
 GCE
 GL
+GLES
 Golang
 GPG
 GPUs
@@ -229,6 +232,7 @@ subcommand
 subcommands
 subnet
 subnets
+suboptimal
 SurfaceFlinger
 swiftshader
 syscall
