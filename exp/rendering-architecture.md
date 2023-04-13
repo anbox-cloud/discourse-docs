@@ -17,11 +17,11 @@ See [Component versions](https://anbox-cloud.io/docs/component-versions) to refe
 
 # Supported APIs
 
-For NVIDIA GPUs Anbox Cloud uses OpenGL ES 3.2 and EGL 1.5 graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses Vulkan 1.3.
+For NVIDIA GPUs Anbox Cloud uses [OpenGL ES 3.2](https://www.khronos.org/opengles/) and [EGL 1.5](https://www.khronos.org/egl/) graphical interfaces. For Intel and AMD GPUs, Anbox Cloud uses [Vulkan 1.3](https://vulkan.org/).
 
 # Rendering architecture
 
-For NVIDIA GPUs, Anbox Cloud driver stacks currently have a native OpenGL driver. For AMD and Intel GPUs, an OpenGL or EGL driver is layered on top of the Vulkan API. Since Vulkan API provides better GPU management at a lower level than OpenGL or EGL, this approach is beneficial and preferred by many users.
+For NVIDIA GPUs, Anbox Cloud driver stacks currently have a native OpenGL ES driver. For AMD and Intel GPUs, an OpenGL ES or EGL driver is layered on top of the Vulkan API. Since Vulkan API provides better GPU management at a lower level than OpenGL ES or EGL, this approach is beneficial and preferred by many users.
 
 To have a better understanding of the rendering architecture of Anbox Cloud, it is important to understand what the Android framework offers in terms of rendering. In Android, applications interact with the SurfaceFlinger which is the system compositor that is responsible for composing a frame together from all the outputs rendered by different applications. The frame is then submitted to the hardware composer which renders the frames on a screen. For more information on Android graphics components and how they work, see https://source.android.com/docs/core/graphics. 
 
@@ -37,13 +37,13 @@ For communication between the hardware composer module on the Android side and A
 
 For NVIDIA, as we cannot use the NVIDIA driver inside the Android container because of compatibility issues, we use the Enterprise Ready NVIDIA driver that is available on every Ubuntu installation. Instead, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the Ubuntu container and not in the Android space.
 
-In terms of performance, this could be perceived to have some transmission overhead when compared to the rendering on Intel and AMD GPUs. However, Anbox Cloud is optimised to keep this overhead minimal and the additional overhead due to the transmission of OpenGL calls from the Android space to Anbox runtime is not significant enough to affect most use cases.
+In terms of performance, this could be perceived to have some transmission overhead when compared to the rendering on Intel and AMD GPUs. However, Anbox Cloud is optimised to keep this overhead minimal and the additional overhead due to the transmission of OpenGL ES calls from the Android space to Anbox runtime is not significant enough to affect most use cases.
 
 ## For Intel and AMD
 
 ![Anbox Cloud Intel and AMD pipeline|690x440](https://assets.ubuntu.com/v1/7aa9aff1-Intel_AMD_pipeline.png)
 
-For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use ANGLE on top of Vulkan to circumvent OpenGL and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA. 
+For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use ANGLE on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA. 
 
 
 
