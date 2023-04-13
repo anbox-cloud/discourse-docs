@@ -165,6 +165,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/gpu-support | [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 2 | exp/application-streaming | [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 2 | exp/production | [About production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
+| 2 | exp/rendering-architecture | [About rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
 | 0 | | |
 | 1 | anbox/landing | [About the project](https://discourse.ubuntu.com/t/about-the-project/28830) |
 | 2 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
