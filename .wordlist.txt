@@ -124,6 +124,7 @@ JSON
 Juju
 Juju's
 kb
+keybinding
 KeyError
 keystore
 KSM
