@@ -23,7 +23,7 @@ Target date: May 17, 2023
 
 ### 1.18.1 (June 2023)
 
-Target date: TBD
+Target date: June 20, 2023
 
 * Android security updates for June 2023
 * Bug fixes
