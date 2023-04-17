@@ -48,6 +48,7 @@ CFS
 cgroup
 cgroup-v1
 cgroup-v2
+config
 Charmhub
 Charmstore
 CLI
@@ -126,12 +127,15 @@ JSON
 Juju
 Juju's
 kb
+keybinding
 KeyError
 keystore
 KSM
 Lawnchair
 Libsoup
 libwayland
+Linux
+linux
 Livepatch
 LLVMpipe
 LMA
@@ -158,6 +162,7 @@ NUMA
 numpad
 NvEnc
 NVIDIA
+nvidia  
 NVMe
 OAuth
 OBB
@@ -213,6 +218,7 @@ shiftfs
 SIGBUS
 signaling
 simplestreams
+SkiaPipeline
 SKU
 SLI
 SMI
@@ -239,6 +245,7 @@ syscall
 syscalls
 systemd
 transcode
+tryCapture
 TCP
 Telegraf
 Tensorflow

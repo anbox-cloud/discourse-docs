@@ -3,6 +3,33 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.17.2]
+
+# 1.17.2 (April 17 2023)
+
+## New features & improvements
+
+* The security patch level is set separately for the vendor and system images. This ensures that the security patch level set by the Android system always takes precedence over the one set by vendor image.
+* Removed `ashmem_linux` kernel module to align with mainstream updates.
+* Until now, the `linux-modules-nvidia-xx package` was held even if the `use_prebuilt_nvidia_kernel_modules` config item default was set to false. This has been changed so that the Linux NVIDIA kernel module package will not be held by default. 
+* Android security updates for April 2023 (see [Android Security Bulletin - April 2023](https://source.android.com/docs/security/bulletin/2023-04-01)).
+* The Android WebView has been updated to [112.0.5615.48](https://chromereleases.googleblog.com/2023/03/early-stable-update-for-android_01850485126.html).
+
+## Bug fixes
+
+* [AC-1511](https://warthogs.atlassian.net/browse/AC-1511) Gallery2 app crashed when editing an picture on Android 12 and 13.
+* [AC-1494](https://warthogs.atlassian.net/browse/AC-1494) The **Sessions** pane in the Anbox Streaming Stack dashboard showed only the sessions that were in *created* status.
+* [AC-1486](https://warthogs.atlassian.net/browse/AC-1486) Settings app crashes in SkiaPipeline::tryCapture
+* [AC-1496](https://warthogs.atlassian.net/browse/AC-1496) GPU render node name is not updated when it has changed.
+* [AC-1493](https://warthogs.atlassian.net/browse/AC-1493) The Grafana Anbox Cloud dashboard shows inflated metrics when there are multiple AMS nodes.
+* The known issue in Anbox Cloud 1.17.1 that the security patch level for Android 10 was 2023-03-05 instead of 2023-02-05 has been fixed.
+* For Android 11, the following two commits from the [latest security tag](https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-security-11.0.0_r65) are applied:
+    - https://android.googlesource.com/platform/frameworks/base/+/0340c219c094cbd0a07600eac471cfeeaceba60e
+    - https://android.googlesource.com/platform/frameworks/base/+/523926b137a69b3a12da18b66dfd24afbf00f445
+
+
+[/Details]
+
 [Details=1.17.1]
 
 # 1.17.1 (March 16 2023)

@@ -1,6 +1,85 @@
 This documents the versions of the different components for each Anbox Cloud release.
 
-Not all components are updated with each release. When components are not updated this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
+Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
+
+[Details=1.17.2]
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.17/stable` | 102 |
+| `ams-node-controller` | `1.17/stable` | 111 |
+| `coturn` | `1.17/stable` | 105 |
+| `ams` | `1.17/stable` | 115 |
+| `aar` | `1.17/stable` | 108 |
+| `anbox-stream-gateway` | `1.17/stable` | 120 |
+| `ams-load-balancer` | `1.17/stable` | 110 |
+| `ams-lxd` | `1.17/stable` | 107 |
+| `anbox-stream-agent` | `1.17/stable` | 115 |
+| `nats ` | ` latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.17/stable` | 101 |
+| `ams-node-controller` | `1.17/stable` | 110 |
+| `coturn` | `1.17/stable` | 104 |
+| `ams` | `1.17/stable` | 114 |
+| `aar` | `1.17/stable` | 107 |
+| `anbox-stream-gateway` | `1.17/stable` | 119 |
+| `ams-load-balancer` | `1.17/stable` | 109 |
+| `ams-lxd` | `1.17/stable` | 106 |
+| `anbox-stream-agent` | `1.17/stable` | 114 |
+| `nats ` | ` latest/stable` | 11 |
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.17/stable` | 70 |
+| `anbox-cloud-core` | `1.17/stable` | 75 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|
+| `ams`    | `1.17/stable` | 1.17.2 |
+| `aar`    | `1.17/stable` | 1.17.2 |
+| `ams-node-controller` | `1.17/stable` | 1.17.2  |
+| `anbox-cloud-dashboard` | `1.17/stable` | 1.17.2 |
+| `anbox-stream-agent` | `1.17/stable` | 1.17.2 |
+| `anbox-stream-gateway` | `1.17/stable` | 1.17.2 |
+| `anbox-cloud-appliance` | `1.17/stable` | 1.17.2 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.17.2 |
+| `jammy:android13:arm64` | 1.17.2 |
+| `jammy:android12:amd64` | 1.17.2 |
+| `jammy:android12:arm64` | 1.17.2 |
+| `jammy:android11:amd64` | 1.17.2 |
+| `jammy:android11:arm64` | 1.17.2 |
+| `jammy:android10:amd64` | 1.17.2 |
+| `jammy:android10:arm64` | 1.17.2 |
+| `bionic:android12:amd64` | 1.17.2 |
+| `bionic:android12:arm64` | 1.17.2 |
+| `bionic:android11:amd64` | 1.17.2 |
+| `bionic:android11:arm64` | 1.17.2 |
+| `bionic:android10:amd64` | 1.17.2 |
+| `bionic:android10:arm64` | 1.17.2 |
+
+[/Details]
 
 [Details=1.17.1]
 
