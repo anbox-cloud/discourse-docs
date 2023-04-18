@@ -1,3 +1,5 @@
+The rendering pipeline of Anbox Cloud can vary depending on the GPU used. The aim of this topic is to list various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
+
 # Supported GPU vendors
 
 Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for a data centre. We currently support the following GPU vendors:
@@ -6,7 +8,7 @@ Being a cloud solution, Anbox Cloud is optimised for GPUs that are designed for 
 * Intel
 * AMD
 
-Anbox Cloud is extensively tested using NVIDIA GPUs and when needed, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the [Anbox Platform SDK](https://anbox-cloud.io/docs/ref/sdks#anbox-platform-sdk).
+Anbox Cloud is extensively tested using NVIDIA GPUs and occasionally, on Intel and AMD GPUs. However, if you want to use a different GPU vendor, you can customise and configure Anbox Cloud for the GPU vendor of your choice using the [Anbox Platform SDK](https://anbox-cloud.io/docs/ref/sdks#anbox-platform-sdk).
 
 # Supported GPU drivers
 
@@ -14,6 +16,16 @@ For NVIDIA GPUs, Anbox Cloud uses the [Enterprise Ready Driver (ERD) from NVIDIA
 For AMD and Intel GPUs, Anbox Cloud uses the [Mesa driver](https://www.mesa3d.org/).
 
 See [Component versions](https://anbox-cloud.io/docs/component-versions) to refer to the actual version supported for any particular Anbox Cloud release.
+
+# Supported platforms
+
+For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
+
+`swrast` is a software rasterisation platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. When you set `swrast` with LLVMpipe as your backend in the `session.yaml` file, the rendering pipeline uses this platform irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
+
+`null` is a backend renderer of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing.
+
+For more information on the platforms supported by Anbox Cloud and how to configure them, see [Anbox platforms](https://anbox-cloud.io/docs/ref/platforms).
 
 # Supported APIs
 

@@ -158,6 +158,7 @@ NIC
 NMEA
 NRPE
 nrpe
+null
 NUMA
 numpad
 NvEnc
@@ -241,6 +242,7 @@ subnets
 suboptimal
 SurfaceFlinger
 swiftshader
+swrast
 syscall
 syscalls
 systemd
