@@ -21,7 +21,7 @@ See [Component versions](https://anbox-cloud.io/docs/component-versions) to refe
 
 For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
 
-`swrast` is a software rasterisation platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. When you set `swrast` with LLVMpipe as your backend in the `session.yaml` file, the rendering pipeline uses this platform irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
+`swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. When you set `swrast` with LLVMpipe as your backend in the `session.yaml` file, the rendering pipeline uses this platform irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
 
 `null` is a backend renderer of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing.
 
