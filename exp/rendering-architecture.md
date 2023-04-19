@@ -21,9 +21,9 @@ See [Component versions](https://anbox-cloud.io/docs/component-versions) to refe
 
 For rendering, you can use the `swrast` or the `null` platforms depending on your requirements.
 
-`swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. When you set `swrast` with LLVMpipe as your backend in the `session.yaml` file, the rendering pipeline uses this platform irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
+`swrast` is a software rasterization platform, which is a rendering implementation of the Mesa driver with support for LLVMpipe. It can be utilised for use cases that require a visual output without a GPU. When you launch an Anbox container with the `swrast` platform using the `amc launch -p swrast <app_id>` command, the rendering pipeline uses this platform irrespective of any available GPUs. The rendering pipe for the `swrast` or `null` platform is not different than the one for the `webrtc` platform with NVIDIA GPU support except for the fact that it's irrespective of any available GPUs. To know more about this implementation, see [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html).
 
-`null` is a backend renderer of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing.
+`null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing.
 
 For more information on the platforms supported by Anbox Cloud and how to configure them, see [Anbox platforms](https://anbox-cloud.io/docs/ref/platforms).
 
