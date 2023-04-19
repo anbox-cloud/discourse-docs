@@ -188,6 +188,7 @@ preselected
 Quadro
 Quickstart
 Rasterization
+rasterization
 rc
 README
 rebased
