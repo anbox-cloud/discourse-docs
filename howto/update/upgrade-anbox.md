@@ -70,7 +70,7 @@ The deployed Juju charms need to be upgraded next.
 
 For any of the charm upgrades, you can watch the upgrade status by running:
 
-    `juju status`
+     juju status
 
 Continue with the next step only when the current step has completed successfully and all units in the output are marked as **active**.
 
@@ -84,7 +84,6 @@ As a first step, we will update all infrastructure components. This includes dep
 
 First we update easyrsa:
 
-    ```
     juju refresh internal-ca --revision=26
     juju refresh etcd-ca --revision=26
 
