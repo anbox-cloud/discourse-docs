@@ -145,21 +145,9 @@ In case a reboot of the machine is required, a status message will be shown. Whe
 
     juju run --wait=1m lxd/0 clear-notification
 
-If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running containers due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to:
-1. Stop all running containers.
-2. Unhold the NVIDIA drivers to allow an upgrade:
-
-        sudo apt-mark unhold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
-
-3. Update OS:
-
-        sudo apt update && sudo apt upgrade -y
-
-4. Hold the NVIDIA drivers from being updated again:
-
-        sudo apt-mark hold 'linux-modules-nvidia-*' 'nvidia-*' 'libnvidia-*'
-
-A Juju action that simplifies the manual upgrade for NVIDIA drivers will be added in a future release.
+If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running containers due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to run the following Juju action:
+    
+    juju run --wait=30m lxd/0 upgrade-gpu-drivers
 
 ## Upgrade Debian packages
 
