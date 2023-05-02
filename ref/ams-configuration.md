@@ -53,7 +53,7 @@ In a cluster setup, there are configuration items that can be customised for eac
 | `public-address` | string | - | The public, reachable address of the node. |
 | `subnet` | string | - | The network subnet of the machine where the node runs. |
 | `tags` | string | - | Tags to identify the node. |
-| `unscheduable` | bool | false | If set to `true`, the node cannot be scheduled, which prevents new containers from being launched on it. |
+| `unschedulable` | bool | false | If set to `true`, the node cannot be scheduled, which prevents new containers from being launched on it. |
 
 See [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716) for instructions on how to set these configuration items.
 
