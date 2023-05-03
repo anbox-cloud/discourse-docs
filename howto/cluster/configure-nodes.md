@@ -49,7 +49,7 @@ You can configure a node to stop accepting new containers. This is especially im
 
 Use the following command to prevent the node from accepting new containers:
 
-    amc node set <node> unscheduable true
+    amc node set <node> unschedulable true
 
 <a name="configure-gpu-slots"></a>
 ## Configure GPU slots and GPU encoder slots

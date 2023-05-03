@@ -8,9 +8,7 @@ There are two important requirements when scaling down:
 
 First, pick the node you want to remove and tell AMS to stop considering this node for new containers:
 
-    amc node set lxd0 unscheduable true
-
-(Note that the typo in the command will be fixed in a future Anbox Cloud release.)
+    amc node set lxd0 unschedulable true
 
 Now the node won't be considered for any further container launches.
 

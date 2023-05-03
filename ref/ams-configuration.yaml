@@ -258,7 +258,7 @@ node:
     default: "-"
     description: >-
       Tags to identify the node.
-  unscheduable:
+  unschedulable:
     type: "bool"
     default: "false"
     description: >-

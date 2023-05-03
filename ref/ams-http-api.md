@@ -1904,7 +1904,7 @@ Output:
       "gpu_slots": 0,
       "gpu_encoder_slots": 0,
       "tags": [],
-      "unscheduable": false,
+      "unschedulable": false,
       "architecture": "x86_64",
       "storage_pool": "ams0",
       "managed": true
@@ -2017,7 +2017,7 @@ Output:
     "gpu_slots": 0,
     "gpu_encoder_slots": 0,
     "tags": [],
-    "unscheduable": false,
+    "unschedulable": false,
     "architecture": "x86_64",
     "storage_pool": "ams0",
     "managed": true
@@ -2043,7 +2043,7 @@ Supported update field            |   Description
 `gpu_slots` | (number) Slots on the GPU available to containers
 `gpu_encoder_slots` | (number) Slots on the GPU encoders available to containers
 `tags` | (string) User defined tags
-`unscheduable` | (Boolean) Whether this LXD node is schedulable by AMS
+`unschedulable` | (Boolean) Whether this LXD node is schedulable by AMS
 
 A sample payload as follows:
 
