@@ -4,7 +4,7 @@ The available attributes are listed in the following table:
 
 Name          | Value type | Description
 --------------|------------|-------------------------
-`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ &#124; ? *`, as well as space
+`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space
 `version`       | string     | Version to encode with the application. Maximum length is 50 characters.
 `instance-type` | string     | Container instance type that all containers created for the application will use.
 `required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation.
