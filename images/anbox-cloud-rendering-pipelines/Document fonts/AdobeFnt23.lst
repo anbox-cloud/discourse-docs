@@ -1,0 +1,59 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Naylor_Drive_1TB/Ubuntu/Anbox illustration brief/Anbox illus part 2/anbox_v5 Folder/Document fonts/AdobeFnt23.lst
+FileLength:1147
+FileModTime:704712886
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Ubuntu-Light
+FamilyName:Ubuntu
+StyleName:Light
+MenuName:Ubuntu Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Ubuntu Light
+WritingScript:Roman
+OutlineFileName:/Volumes/Naylor_Drive_1TB/Ubuntu/Anbox illustration brief/Anbox illus part 2/anbox_v5 Folder/Document fonts/Ubuntu-L.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:415552
+FileModTime:571134580
+NameArray:0,Mac,18,Ubuntu Light
+NameArray:0,Mac,4,Ubuntu Light
+NameArray:0,Win,1,Ubuntu Light
+NameArray:0,Win,16,Ubuntu
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Ubuntu
+FamilyName:Ubuntu
+StyleName:Regular
+MenuName:Ubuntu
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Ubuntu
+WritingScript:Roman
+OutlineFileName:/Volumes/Naylor_Drive_1TB/Ubuntu/Anbox illustration brief/Anbox illus part 2/anbox_v5 Folder/Document fonts/Ubuntu-R.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:353824
+FileModTime:571134580
+NameArray:0,Mac,4,Ubuntu
+NameArray:0,Win,1,Ubuntu
+%EndFont
+
