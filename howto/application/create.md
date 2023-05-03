@@ -45,11 +45,7 @@ See [Application manifest](https://discourse.ubuntu.com/t/application-manifest/2
 
 ## Create from a directory
 
-When creating an application from a directory, the directory should contain the required components for the creation:
-
-* `manifest.yaml`
-* `app.apk`
-* `extra-data` (optional)
+When creating an application from a directory, the directory should contain the `manifest.yaml` component and optionally, `app.apk` and `extra-data` components.
 
 [note type="information" status="Note"]Due to Snap strict confinement, the directory must be located in the home directory.[/note]
 
