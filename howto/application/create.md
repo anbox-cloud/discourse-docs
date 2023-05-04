@@ -107,7 +107,7 @@ Once the status of the application switches to `ready`, the application is ready
 
 ## Create from a zip archive or a tarball file
 
-An application can also be created from a zip archive or a tarball file. It is recommended to use a zip archive instead of a tarball file for better optimisation. The files must fulfill the following requirements:
+An application can also be created from a zip archive or a tarball file. It is recommended to use a zip archive instead of a tarball file for better optimisation. The files must fulfil the following requirements:
 
 * In case of a tarball file, the file must be compressed with bzip2 and must use the same components and structure as the directory.
 * In case of a zip archive, the file must use the same components and structure as the directory.
