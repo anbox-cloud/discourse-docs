@@ -45,7 +45,7 @@ For communication between the hardware composer module on the Android side and A
 
 ## For NVIDIA
 
-![Anbox Cloud NVIDIA pipeline|690x440](https://assets.ubuntu.com/v1/3ba1fddd-NVIDIA_pipeline.png)
+![Anbox Cloud NVIDIA pipeline|690x440](https://assets.ubuntu.com/v1/a7a3e357-NVIDIA_pipeline.png)
 
 For NVIDIA, as we cannot use the NVIDIA driver inside the Android container because of compatibility issues, we use the Enterprise Ready NVIDIA driver that is available on every Ubuntu installation. Instead, we have an Anbox Cloud GPU driver which is a standard OpenGL ES or EGL driver that receives the API calls and converts them to remote procedure calls to the NVIDIA driver. The actual rendering and actions on the NVIDIA driver happens on the Anbox runtime side inside the Ubuntu container and not in the Android space.
 
@@ -53,7 +53,7 @@ In terms of performance, this could be perceived to have some transmission overh
 
 ## For Intel and AMD
 
-![Anbox Cloud Intel and AMD pipeline|690x440](https://assets.ubuntu.com/v1/7aa9aff1-Intel_AMD_pipeline.png)
+![Anbox Cloud Intel and AMD pipeline|690x440](https://assets.ubuntu.com/v1/c6e7b6b5-Intel_AMD_pipeline.png)
 
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use ANGLE on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA. 
 
