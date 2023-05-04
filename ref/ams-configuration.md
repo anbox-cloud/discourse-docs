@@ -128,3 +128,18 @@ Once set, this feature flag will be considered by all newly launched containers.
 The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag.
 
 Once set, this feature flag will be considered by all newly launched containers.
+
+#### Custom Android ID
+
+*since 1.18.0*
+
+To enable the Android container to use a custom Android ID, add the feature flag `android.allow_custom_android_id` upon application creation. A system app can influence the Android ID of a specific app during the Android runtime by setting the system property in the format of:
+  ```
+  `anbox.custom_android_id.<index>=<package_name>:<android_id>`
+  ```
+
+  The `<index>` is a number in the range from 0 to 126, which allows you to have multiple overrides for different packages. If the same `<package_name>` with the different `<android_id>` is given for multiple system properties `anbox.custom_android_id.<index>`, the Android ID read from the system property which has the highest suffixing index that will be used in the end.
+  The `<package_name>` is the package name of the application.
+  The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
+
+Once set, this feature flag will be considered by all newly launched containers.
