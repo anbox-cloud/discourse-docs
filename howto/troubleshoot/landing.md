@@ -74,7 +74,7 @@ No. The application manifest describes necessary metadata on top of the APK, whi
 
 > When creating an application, I get an error that there is “no such file or directory”. Why?
 
-Due to Snap strict confinement, the folder or tarball file must be located in the home directory. There is no workaround for this requirement. The same requirement applies to addon creation.
+Due to Snap strict confinement, the directory, the tarball file, or the zip archive file must be located in the home directory. There is no workaround for this requirement. The same requirement applies to addon creation.
 
 ## LXD cluster
 

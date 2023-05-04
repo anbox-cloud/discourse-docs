@@ -11,7 +11,7 @@ If the application fulfils all of the requirements above, it is ready to run on 
 <a name="bootstrap"></a>
 ### Bootstrap process
 
-When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) either from a directory or a tarball, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits the bootstrap process provides:
+When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
 
   * It enables AMS to launch a container for an application without installing the APK every time.
   * It dramatically speeds up the startup time of a regular container.
