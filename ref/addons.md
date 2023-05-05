@@ -12,7 +12,10 @@ Other files in the addon directory are bundled with the addon. They can be acces
 cat "$ADDON_DIR"/public_key.pem >> ~/.ssh/authorized_keys
 ```
 
-To create the addon, you must provide `amc` with either the directory or a tarball containing the same file structure.
+To create the addon, you must provide `amc` with either of the following:
+* The directory 
+* A tarball containing the same file structure
+* A zip archive containing the same file structure
 
 <a name='manifest'></a>
 ## Addon manifest

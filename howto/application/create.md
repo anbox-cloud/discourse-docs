@@ -100,18 +100,35 @@ resources:
 
 Once the status of the application switches to `ready`, the application is ready and can be used. See [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
 
-## Create from a tarball
 
-An application can also be created from a tarball file. The tarball file must be compressed with bzip2 and must use the same components and structure as the directory.
+## Create from a zip archive or a tarball file
 
-[note type="information" status="Note"]Due to Snap strict confinement, the tarball file must be located in the home directory.[/note]
+An application can also be created from a zip archive or a tarball file. It is recommended to use a zip archive instead of a tarball file for better optimisation. The files must fulfil the following requirements:
 
-For example, a tarball can be created with the following command:
+* In case of a tarball file, the file must be compressed with bzip2 and must use the same components and structure as the directory.
+* In case of a zip archive, the file must use the same components and structure as the directory.
+
+[note type="information" status="Note"]Due to Snap strict confinement, the tarball or the zip archive file must be located in the home directory.[/note]
+
+### Example: Create an application from a zip archive file
+
+A zip archive file can be created with the following command:
+
+    zip -r foo.zip <package-folder-path> app.apk extra-data manifest.yaml
+
+Once the zip archive file is created, you can create the application:
+
+    amc application create foo.zip
+
+### Example: Create an application from a tarball file
+
+A tarball can be created with the following command:
 
     tar cvjf foo.tar.bz2 -C <package-folder-path> app.apk extra-data manifest.yaml
 
 Once the tarball is created, you can create the application:
 
     amc application create foo.tar.bz2
+
 
 The AMS service now starts the application [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). See [How to wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202) for information about how to monitor the application status.
