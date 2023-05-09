@@ -97,3 +97,11 @@ To enable the Android container to use a custom Android ID, add the feature flag
   The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
 
 Once set, this feature flag will be considered by all newly launched containers.
+
+#### Disable cgroup v1 Emulation
+
+*since 1.19.0*
+
+Android requires a number of cgroup v1 controllers, which Anbox emulates on top of cgroup v2. If your kernel still has support for cgroup v1, you can disable cgroup v1 emulation by setting the `disable_cgroup_emulation` feature flag.
+
+Once set, this feature flag will be considered by all newly launched containers.
