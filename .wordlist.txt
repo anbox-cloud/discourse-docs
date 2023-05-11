@@ -252,6 +252,7 @@ tryCapture
 TCP
 Telegraf
 Tensorflow
+timebase
 TLS
 Traefik
 TypeError
@@ -275,6 +276,7 @@ VMs
 VNC
 VPC
 VPN
+vsync
 Vulkan
 Wayland
 WebRTC

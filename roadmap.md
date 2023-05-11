@@ -14,16 +14,16 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.18 (May 2023)
-
-Target date: May 17, 2023
-
-* Android security updates for May 2023
-* Bug fixes
-
 ### 1.18.1 (June 2023)
 
 Target date: June 20, 2023
 
 * Android security updates for June 2023
+* Bug fixes
+
+### 1.18.2 (July 2023)
+
+Target date: July 20, 2023
+
+* Android security updates for May 2023
 * Bug fixes

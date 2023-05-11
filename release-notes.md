@@ -3,6 +3,65 @@
 See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186) for
 instructions on how to update your Anbox Cloud deployment.
 
+[Details=1.18.0]
+
+# 1.18.0 (May 17 2023)
+
+## New features and improvements
+
+### Streaming improvements
+
+* The Streaming SDK now reports well defined error codes.<!--AC-1307-->
+* When the agent restarts, the container state is synchronised to the session state. This avoids the containers being stopped and sessions still being active after a reboot.<!--AC-290-->
+* The freeze time is reduced during packet loss situations. <!--AC-1472 and AC-1473--> <!--Simon to provide a video cut of the before and after-->
+
+
+### Dashboard improvements
+
+* The new **Edit** button allows editing the node configuration.
+* The sessions web page has pagination.
+* Streaming on mobile matches the device resolution.
+* Quick actions such as **Start**, **Stop**, and **Join** are available for the containers list view.
+* Editing of `manifest.yaml` upon creating an application is possible using the dashboard.
+* The general layout of the web pages and forms has been enhanced to improve user experience and accessibility.
+
+
+### Anbox Management Service (AMS)
+<!-- wokeignore:rule=master --> 
+* The AMS node list output has a `master` column that is not user-relevant and is removed.<!--AC-1395-->
+* The `unscheduable` configuration item for a node is corrected to `unschedulable`. The existing configurations using `unscheduable` are still supported to maintain backward compatibility but the configuration item `unscheduable` is deprecated as of the 1.18 release. <!--AC-1346-->
+* In addition to creating applications or addons from a folder or a tarball file, you can create applications or addons using a file of `zip` format. This helps in optimising the performance of AMS.<!--AC-1500-->
+
+
+### Other
+
+* The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag. Once set, this feature flag will be considered by all newly launched containers. <!--AC-1364 and AC-1379-->
+* The host ICE candidate IP address is no longer shared with the remote peer. <!--AC-1487-->
+* The Mesa driver is upgraded to the [latest 23.0.3](https://lists.freedesktop.org/archives/mesa-dev/2023-April/225982.html). <!--AC-1534-->
+* The feature flag `android.allow_custom_android_id` is introduced to enable the Android container to use a custom Android ID. Add this feature flag upon application creation to identify users by their corresponding `android_id`. <!--AC-1520-->
+* You can now start a stopped container that is in an `error` state.<!--AC-1438-->
+* Since the NVIDIA package is being held from upgrading when performing `apt upgrade`, this leads to the drivers missing the security patch. A Juju action is implemented to simplify this manual upgrade and perform the NVIDIA drivers upgrade on demand. <!--AC-1436-->
+* Android security updates for May 2023 (see [Android Security Bulletin - May 2023](https://source.android.com/docs/security/bulletin/2023-05-01) for more information).
+
+## Bug fixes
+
+The following issues were fixed as part of the Anbox Cloud 1.18 release:
+
+* The following timestamp issue was reported by Android framework:
+
+    Choreographer: Frame time is 0.278502 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+<!--AC-1354-->
+* An agent that is highly available and deployed behind a load balancer is incorrectly addressed by the gateway because the gateway was addressing the agent for supervisor message by the agent id rather than the session id.<!--AC-1432-->
+* Streaming the Anbox application fails because of an unreliable websocket connection. <!--AC-1433-->
+* The user action buttons were not visible without scrolling when using the web dashboard on mobile. <!--AC-1566-->
+* Anbox Application Registry (AAR) does not log authorisation errors <!--AC-1523-->
+* On the **Containers** page of the web dashboard, the application name was not displayed for containers launched from a raw image. <!--AC-1559-->
+* Vendor image browser activity identifies itself as Android WebView. This behaviour is not allowed by several web services.<!--AC-1488-->
+* Initialising the Anbox Cloud appliance involves renaming the `/tmp` directory when the source and the location are not on the same device and this leads to a failure in the initialisation of the Anbox Cloud Appliance.<!--AC-1522-->
+* AMS does not reflect the updated instance details after resizing the LXD node. <!--AC-1524-->
+
+[/Details]
+
 [Details=1.17.2]
 
 # 1.17.2 (April 17 2023)
