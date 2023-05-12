@@ -128,7 +128,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/anbox/landing | [Work with the Anbox runtime](https://discourse.ubuntu.com/t/how-to-work-with-the-anbox-runtime/33098) |
 | 3 | howto/anbox/develop-platform | [Develop a platform plugin](https://discourse.ubuntu.com/t/how-to-develop-a-platform-plugin/33099) |
 | 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
-| 3 | howto/troubleshoot/collect-info | [Collect information](https://discourse.ubuntu.com/t/how-to-collect-troubleshooting-information/32263)|
+| 3 | howto/troubleshoot/ctroubleshoot-initial-setup | [Troubleshoot initial setup](tbd)|
+| 3 | howto/troubleshoot/troubleshoot-application-creation | [Troubleshoot application creation](tbd)|
+| 3 | howto/troubleshoot/troubleshoot-container-failures | [Troubleshoot container failures](tbd)|
+| 3 | howto/troubleshoot/troubleshoot-lxd-cluster | [Troubleshoot LXD cluster](tbd)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
