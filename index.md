@@ -176,7 +176,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 2 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
 | 2 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
-
 [/details]
 
 ## Redirects
