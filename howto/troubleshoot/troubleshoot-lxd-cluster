@@ -1,7 +1,5 @@
 The following issues might occur if you use clustering.
 
-<a name="ams-lxd-relation-changed-failed"></a>
-
 ### AMS hook failed: `lxd-relation-changed`
 
 *Applies to: Anbox Cloud*

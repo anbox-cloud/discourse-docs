@@ -6,7 +6,7 @@ You might encounter the following issues when creating an application.
 
 > Is there an automatic way to create a manifest for an application?
 
-No. The application manifest describes necessary metadata on top of the APK, which AMS needs. You can simplify the manifest to only contain the `name` field, but you will lose a lot of control about how your application is being executed.
+No. The application manifest describes necessary metadata on top of the APK, which AMS needs. You can simplify the manifest to only contain the `name` and `instance-type` fields or the `name` and `resources` fields, but you will lose a lot of control about how your application is being executed.
 
 ### No such file or directory
 

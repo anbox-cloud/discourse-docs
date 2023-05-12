@@ -1,4 +1,4 @@
-This topics in this guide describes some commonly encountered problems with Anbox Cloud and provides instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
+The topics in this guide describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
 
 * [Troubleshooting issues during initial setup](tbd)
 * [Troubleshooting container failures](tbd)
