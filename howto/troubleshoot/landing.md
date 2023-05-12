@@ -1,9 +1,9 @@
 The topics in this guide describe some commonly encountered problems with Anbox Cloud and provide instructions for resolving them. If you encounter an issue with Anbox Cloud, check if any of the following scenarios help in resolving your issue.
 
-* [Troubleshooting issues during initial setup](tbd)
-* [Troubleshooting container failures](tbd)
-* [Troubleshooting issues when creating an application](tbd)
-* [Troubleshooting LXD clustering](tbd)
+* [Troubleshoot issues with initial setup](https://discourse.ubuntu.com/t/troubleshoot-issues-with-initial-setup/35704)
+* [Troubleshoot container failures](https://discourse.ubuntu.com/t/troubleshoot-container-failures/35703)
+* [Troubleshoot issues with application creation](https://discourse.ubuntu.com/t/troubleshoot-issues-with-application-creation/35702)
+* [Troubleshoot issues with LXD clustering](https://discourse.ubuntu.com/t/troubleshoot-issues-with-lxd-clustering/35705)
 
 If you still need help, use the following instructions to collect troubleshooting information from the container and report an issue.
 
