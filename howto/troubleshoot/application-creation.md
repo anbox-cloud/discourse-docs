@@ -1,6 +1,6 @@
 You might encounter the following issues when creating an application.
 
-### Application manifest
+## Application manifest
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
@@ -8,7 +8,7 @@ You might encounter the following issues when creating an application.
 
 No. The application manifest describes necessary metadata on top of the APK, which AMS needs. You can simplify the manifest to only contain the `name` and `instance-type` fields or the `name` and `resources` fields, but you will lose a lot of control about how your application is being executed.
 
-### No such file or directory
+## No such file or directory
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 

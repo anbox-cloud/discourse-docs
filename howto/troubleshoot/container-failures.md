@@ -1,6 +1,6 @@
 The following information should help you in determining why your container failed.
 
-### More information on container failures
+## More information on container failures
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
@@ -10,7 +10,7 @@ If a container fails to start, its status is set to `error`. Anbox Management Se
 
 See [How to view the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) for instructions on how to access the container log files.
 
-### Published application version not found
+## Published application version not found
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 

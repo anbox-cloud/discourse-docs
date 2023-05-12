@@ -1,6 +1,6 @@
 You might encounter the following issues while setting up your system.
 
-### Juju hook installation failure
+## Juju hook installation failure
 
 *Applies to: Anbox Cloud*
 
@@ -10,7 +10,7 @@ You used the wrong Ubuntu Pro token. Using the Ubuntu Pro (Infra-only) token wil
 
 To deploy Anbox Cloud, you need an Ubuntu Pro subscription. Using a different token will result in a failed deployment. This failure is currently not recoverable.
 
-### Socket permission error for `amc`
+## Socket permission error for `amc`
 
 *Applies to: Anbox Cloud*
 
