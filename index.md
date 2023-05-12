@@ -127,8 +127,11 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/cluster/scale-down | [Scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323)|
 | 2 | howto/anbox/landing | [Work with the Anbox runtime](https://discourse.ubuntu.com/t/how-to-work-with-the-anbox-runtime/33098) |
 | 3 | howto/anbox/develop-platform | [Develop a platform plugin](https://discourse.ubuntu.com/t/how-to-develop-a-platform-plugin/33099) |
-| 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-faq/17837)|
-| 3 | howto/troubleshoot/collect-info | [Collect information](https://discourse.ubuntu.com/t/how-to-collect-troubleshooting-information/32263)|
+| 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)|
+| 3 | howto/troubleshoot/initial-setup | [Troubleshoot initial setup](tbd)|
+| 3 | howto/troubleshoot/application-creation | [Troubleshoot application creation](tbd)|
+| 3 | howto/troubleshoot/container-failures | [Troubleshoot container failures](tbd)|
+| 3 | howto/troubleshoot/lxd-cluster | [Troubleshoot LXD cluster](tbd)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
@@ -213,6 +216,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/exchange-out-of-band-data | /docs/howto/stream/oob-data |
 | /docs/integrate-keyboard | /docs/howto/stream/client-side-keyboard |
 | /docs/faq | /docs/howto/troubleshoot/landing |
+| /docs/howto/troubleshoot/collect-info | /docs/howto/troubleshoot/landing |
 | /docs/sdks | /docs/ref/sdks |
 | /docs/reference/ams-rest-api-reference | /docs/ref/ams-http-api |
 | /docs/reference/anbox-http-api-reference | /docs/ref/anbox-https-api |
