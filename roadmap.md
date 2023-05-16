@@ -25,5 +25,5 @@ Target date: June 20, 2023
 
 Target date: July 20, 2023
 
-* Android security updates for May 2023
+* Android security updates for July 2023
 * Bug fixes

@@ -49,10 +49,7 @@ instructions on how to update your Anbox Cloud deployment.
 
 The following issues were fixed as part of the Anbox Cloud 1.18 release:
 
-* The following timestamp issue was reported by Android framework:
-
-    Choreographer: Frame time is 0.278502 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
-<!--AC-1354-->
+* Fix the incorrect vsync timestamps in Anbox hardware composer.<!--AC-1354-->
 * An agent that is highly available and deployed behind a load balancer is incorrectly addressed by the gateway because the gateway was addressing the agent for supervisor message by the agent id rather than the session id.<!--AC-1432-->
 * Streaming the Anbox application fails because of an unreliable websocket connection. <!--AC-1433-->
 * The user action buttons were not visible without scrolling when using the web dashboard on mobile. <!--AC-1566-->

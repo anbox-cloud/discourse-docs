@@ -50,7 +50,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|---------|
 | `ams`    | `1.18/stable` | 1.18.0 |
 | `aar`    | `1.18/stable` | 1.18.0 |
 | `ams-node-controller` | `1.18/stable` | 1.18.0 |
@@ -130,7 +130,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|---------------|
 | `ams`    | `1.17/stable` | 1.17.2 |
 | `aar`    | `1.17/stable` | 1.17.2 |
 | `ams-node-controller` | `1.17/stable` | 1.17.2  |
@@ -212,7 +212,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|------------|
 | `ams`    | `1.17/stable` | 1.17.1 |
 | `aar`    | `1.17/stable` | 1.17.1 |
 | `ams-node-controller` | `1.17/stable` | 1.17.1  |
@@ -294,7 +294,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|----------|
 | `ams`    | `1.17/stable` | 1.17.0 |
 | `aar`    | `1.17/stable` | 1.17.0 |
 | `ams-node-controller` | `1.17/stable` | 1.17.0  |
