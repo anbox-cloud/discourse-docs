@@ -31,10 +31,12 @@ instructions on how to update your Anbox Cloud deployment.
 * The AMS node list output has a `master` column that is not user-relevant and is removed.<!--AC-1395-->
 * The `unscheduable` configuration item for a node is corrected to `unschedulable`. The existing configurations using `unscheduable` are still supported to maintain backward compatibility but the configuration item `unscheduable` is deprecated as of the 1.18 release. <!--AC-1346-->
 * In addition to creating applications or addons from a folder or a tarball file, you can create applications or addons using a file of `zip` format. This helps in optimising the performance of AMS.<!--AC-1500-->
+* Container devices and resources are dynamically allocated/deallocated when starting/stopping a container for effective resource management by AMS.<!--AC-1506-->
 
 
 ### Other
 
+* Investigations on performance improvements to our OpenGL translation layer revealed that on the decoding side, some workloads were spending between 23% and 30% of their total cycles allocating memory. It has now been reduced to account for only around 2.5% of their total cycle count. This could lead to lower power consumption, thereby lower costs and higher density. Such optimisation efforts are a work in progress and we will further tune them in the future releases. <!--AC-1411-->
 * The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag. Once set, this feature flag will be considered by all newly launched containers. <!--AC-1364 and AC-1379-->
 * The host ICE candidate IP address is no longer shared with the remote peer. <!--AC-1487-->
 * The Mesa driver is upgraded to the [latest 23.0.3](https://lists.freedesktop.org/archives/mesa-dev/2023-April/225982.html). <!--AC-1534-->

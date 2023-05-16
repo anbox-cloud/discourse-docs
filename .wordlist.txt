@@ -65,6 +65,8 @@ customisable
 customisation
 customisations
 CustomLocale
+deallocate
+deallocated
 DDoS
 deprecations
 Dev
