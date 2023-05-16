@@ -11,7 +11,7 @@ The topics in this guide describe some commonly encountered problems with Anbox 
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
 
-# Juju crashdump
+## Juju crashdump
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
@@ -25,7 +25,7 @@ Use the following command to generate a crash dump:
 
 The Anbox Management Service (AMS) charm implements the `debug-layer` addon which will add a `debug-*.tar.gz` archive to the crash dump for the AMS units. The tarball may contain container logs for the containers that are in `error` state in AMS and other information about the Anbox runtime process.
 
-# Anbox Cloud bug report utility
+## Anbox Cloud bug report utility
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance since 1.16.0*
 
@@ -41,7 +41,7 @@ amc exec <container_id> -- bash -c 'cat "$(anbox-bug-report)"' > "<target_file>"
 This command builds a zip archive that contains the container report. It then
 saves it to the local `<target_file>`. This process might take a few seconds.
 
-# Stored container logs
+## Stored container logs
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
