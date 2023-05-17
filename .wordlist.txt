@@ -89,6 +89,7 @@ etcd
 executables
 favicon
 FDS
+FEC
 ffmpeg
 Filebeat
 FormatException

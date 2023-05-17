@@ -12,7 +12,7 @@ instructions on how to update your Anbox Cloud deployment.
 ### Streaming improvements
 
 * The Streaming SDK now reports well defined error codes.<!--AC-1307-->
-* When the agent restarts, the container state is synchronized to the session state. This avoids the containers being stopped and sessions still being active after a reboot.<!--AC-290-->
+* When the agent restarts, the container state is synchronised to the session state. This avoids the containers being stopped and sessions still being active after a reboot.<!--AC-290-->
 * Server side support for Forward Error Correction (FEC) is enabled by default and the corresponding controller is better optimised for networks with higher packet loss. FEC is an error recovery mechanism that allows WebRTC to recover lost RTP packets by using error correction codes. <!--AC-1397 and AC-1440-->
 * Client side freeze time in case of high packet loss is reduced to ~200 milliseconds from up to 3 seconds to recover quicker from these situations and allow smoother playback. <!--AC-1472 and AC-1473-->
 
@@ -52,13 +52,13 @@ The following issues were fixed as part of the Anbox Cloud 1.18 release:
 
 * [LP #2009811](https://bugs.launchpad.net/anbox-cloud/+bug/2009811) An agent that is highly available and deployed behind a load balancer is incorrectly addressed by the gateway because the gateway was addressing the agent for supervisor message by the agent id rather than the session id.<!--AC-1432-->
 * [LP #2009811](https://bugs.launchpad.net/anbox-cloud/+bug/2009811) Streaming the Anbox application fails because of an unreliable websocket connection. <!--AC-1433-->
-* [LP #2015712](https://bugs.launchpad.net/anbox-cloud/+bug/2015712) Anbox Application Registry (AAR) does not log authorization errors <!--AC-1523-->
+* [LP #2015712](https://bugs.launchpad.net/anbox-cloud/+bug/2015712) Anbox Application Registry (AAR) does not log authorisation errors <!--AC-1523-->
 * [LP #2016044](https://bugs.launchpad.net/anbox-cloud/+bug/2016044) Initialising the Anbox Cloud appliance involves renaming the `/tmp` directory when the source and the location are not on the same device and this leads to a failure in the initialisation of the Anbox Cloud Appliance.<!--AC-1522-->
 * [LP #2012989](https://bugs.launchpad.net/anbox-cloud/+bug/2012989) AMS does not reflect the updated instance details after resizing the LXD node. <!--AC-1524-->
 * Fix incorrect vsync timestamps in Anbox hardware composer. <!--AC-1354-->
 * The user action buttons were not visible without scrolling when using the web dashboard on mobile. <!--AC-1566-->
 * On the **Containers** page of the web dashboard, the application name was not displayed for containers launched from a raw image. <!--AC-1559-->
-* Vendor image browser activity identifies itself as Android webview. This behaviour is not allowed by several web services.<!--AC-1488-->
+* Vendor image browser activity identifies itself as Android WebView. This behaviour is not allowed by several web services.<!--AC-1488-->
 
 ## Known issues
 The following issues are known to occur with the 1.18.0 version of Anbox Cloud and are being investigated and planned to be fixed in a future release:
