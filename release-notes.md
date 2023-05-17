@@ -12,8 +12,9 @@ instructions on how to update your Anbox Cloud deployment.
 ### Streaming improvements
 
 * The Streaming SDK now reports well defined error codes.<!--AC-1307-->
-* When the agent restarts, the container state is synchronised to the session state. This avoids the containers being stopped and sessions still being active after a reboot.<!--AC-290-->
-* The freeze time is reduced during packet loss situations. <!--AC-1472 and AC-1473--> <!--Simon to provide a video cut of the before and after-->
+* When the agent restarts, the container state is synchronized to the session state. This avoids the containers being stopped and sessions still being active after a reboot.<!--AC-290-->
+* Server side support for Forward Error Correction (FEC) is enabled by default and the corresponding controller is better optimised for networks with higher packet loss. FEC is an error recovery mechanism that allows WebRTC to recover lost RTP packets by using error correction codes. <!--AC-1397 and AC-1440-->
+* Client side freeze time in case of high packet loss is reduced to ~200 milliseconds from up to 3 seconds to recover quicker from these situations and allow smoother playback. <!--AC-1472 and AC-1473-->
 
 
 ### Dashboard improvements
@@ -30,7 +31,7 @@ instructions on how to update your Anbox Cloud deployment.
 <!-- wokeignore:rule=master --> 
 * The AMS node list output has a `master` column that is not user-relevant and is removed.<!--AC-1395-->
 * The `unscheduable` configuration item for a node is corrected to `unschedulable`. The existing configurations using `unscheduable` are still supported to maintain backward compatibility but the configuration item `unscheduable` is deprecated as of the 1.18 release. <!--AC-1346-->
-* In addition to creating applications or addons from a folder or a tarball file, you can create applications or addons using a file of `zip` format. This helps in optimising the performance of AMS.<!--AC-1500-->
+* In addition to creating applications or addons from a folder or a tarball file, you can create applications or addons using a file of `zip` format. This helps in optimising the performance of AMS.See [How to create an application](https://anbox-cloud.io/docs/howto/application/create) and [Addons](https://anbox-cloud.io/docs/ref/addons).<!--AC-1500-->
 * Container devices and resources are dynamically allocated/deallocated when starting/stopping a container for effective resource management by AMS.<!--AC-1506-->
 
 
@@ -40,24 +41,31 @@ instructions on how to update your Anbox Cloud deployment.
 * The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag. Once set, this feature flag will be considered by all newly launched containers. <!--AC-1364 and AC-1379-->
 * The host ICE candidate IP address is no longer shared with the remote peer. <!--AC-1487-->
 * The Mesa driver is upgraded to the [latest 23.0.3](https://lists.freedesktop.org/archives/mesa-dev/2023-April/225982.html). <!--AC-1534-->
-* The feature flag `android.allow_custom_android_id` is introduced to enable the Android container to use a custom Android ID. Add this feature flag upon application creation to identify users by their corresponding `android_id`. <!--AC-1520-->
+* The feature flag `android.allow_custom_android_id` is introduced to enable the Android container to use a custom Android ID. Add this feature flag upon application creation to identify users by their corresponding `android_id`. See [AMS configuration](https://anbox-cloud.io/docs/ref/ams-configuration).<!--AC-1520-->
 * You can now start a stopped container that is in an `error` state.<!--AC-1438-->
-* Since the NVIDIA package is being held from upgrading when performing `apt upgrade`, this leads to the drivers missing the security patch. A Juju action is implemented to simplify this manual upgrade and perform the NVIDIA drivers upgrade on demand. <!--AC-1436-->
+* Since the NVIDIA package is being held from upgrading when performing `apt upgrade`, this leads to the drivers missing the security patch. A Juju action is implemented to simplify this manual upgrade and perform the NVIDIA drivers upgrade on demand. See [How to Upgrade Anbox Cloud](https://anbox-cloud.io/docs/howto/update/upgrade-anbox). <!--AC-1436-->
 * Android security updates for May 2023 (see [Android Security Bulletin - May 2023](https://source.android.com/docs/security/bulletin/2023-05-01) for more information).
 
 ## Bug fixes
 
 The following issues were fixed as part of the Anbox Cloud 1.18 release:
 
-* Fix the incorrect vsync timestamps in Anbox hardware composer.<!--AC-1354-->
-* An agent that is highly available and deployed behind a load balancer is incorrectly addressed by the gateway because the gateway was addressing the agent for supervisor message by the agent id rather than the session id.<!--AC-1432-->
-* Streaming the Anbox application fails because of an unreliable websocket connection. <!--AC-1433-->
+* [LP #2009811](https://bugs.launchpad.net/anbox-cloud/+bug/2009811) An agent that is highly available and deployed behind a load balancer is incorrectly addressed by the gateway because the gateway was addressing the agent for supervisor message by the agent id rather than the session id.<!--AC-1432-->
+* [LP #2009811](https://bugs.launchpad.net/anbox-cloud/+bug/2009811) Streaming the Anbox application fails because of an unreliable websocket connection. <!--AC-1433-->
+* [LP #2015712](https://bugs.launchpad.net/anbox-cloud/+bug/2015712) Anbox Application Registry (AAR) does not log authorization errors <!--AC-1523-->
+* [LP #2016044](https://bugs.launchpad.net/anbox-cloud/+bug/2016044) Initialising the Anbox Cloud appliance involves renaming the `/tmp` directory when the source and the location are not on the same device and this leads to a failure in the initialisation of the Anbox Cloud Appliance.<!--AC-1522-->
+* [LP #2012989](https://bugs.launchpad.net/anbox-cloud/+bug/2012989) AMS does not reflect the updated instance details after resizing the LXD node. <!--AC-1524-->
+* Fix incorrect vsync timestamps in Anbox hardware composer. <!--AC-1354-->
 * The user action buttons were not visible without scrolling when using the web dashboard on mobile. <!--AC-1566-->
-* Anbox Application Registry (AAR) does not log authorisation errors <!--AC-1523-->
 * On the **Containers** page of the web dashboard, the application name was not displayed for containers launched from a raw image. <!--AC-1559-->
-* Vendor image browser activity identifies itself as Android WebView. This behaviour is not allowed by several web services.<!--AC-1488-->
-* Initialising the Anbox Cloud appliance involves renaming the `/tmp` directory when the source and the location are not on the same device and this leads to a failure in the initialisation of the Anbox Cloud Appliance.<!--AC-1522-->
-* AMS does not reflect the updated instance details after resizing the LXD node. <!--AC-1524-->
+* Vendor image browser activity identifies itself as Android webview. This behaviour is not allowed by several web services.<!--AC-1488-->
+
+## Known issues
+The following issues are known to occur with the 1.18.0 version of Anbox Cloud and are being investigated and planned to be fixed in a future release:
+
+* When streaming an application that changes the configuration during the runtime, if the [`watchdog`](https://anbox-cloud.io/docs/ref/application-manifest) attribute is enabled, it may be triggered because the application is relaunched to adapt to the changes to the configuration. You can work around this problem by disabling the `watchdog` attribute.
+* In the session view of the Anbox Cloud web dashboard, the session ID may appear truncated. <!--AC-1611-->
+* When using the Anbox Cloud web dashboard, occasionally, the navigation bar of the Android system may not appear. You can work around this by changing the aspect ratio of the browser window.<!--AC-1612-->
 
 [/Details]
 

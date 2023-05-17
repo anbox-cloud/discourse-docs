@@ -15,7 +15,6 @@ You should consider using Anbox Cloud if you want to deliver mobile applications
 
 Along with bug fixes and general improvements, Anbox Cloud 1.18 includes the following changes:
 
-* Vulkan support for NVIDIA GPUs
 * Streaming improvements
 * Support for the Android container to use a custom Android ID
 * Updated Mesa driver 
