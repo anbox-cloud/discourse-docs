@@ -14,16 +14,28 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ## Roadmap
 
-### 1.18 (May 2023)
-
-Target date: May 17, 2023
-
-* Android security updates for May 2023
-* Bug fixes
-
 ### 1.18.1 (June 2023)
 
 Target date: June 20, 2023
 
 * Android security updates for June 2023
+* Bug fixes
+
+### 1.18.2 (July 2023)
+
+Target date: July 20, 2023
+
+* Android security updates for July 2023
+* Bug fixes
+
+### 1.19.0 (August 2023)
+
+Target date: August 16, 2023
+
+* Pagination / filtering support for parts of the AMS API (containers + applications)
+* AV1 hardware accelerated video encoding on NVIDIA GPUs
+* OpenAPI based documentation of the AMS API
+* cgroup-v1 compatibility layer to support Android on cgroup-v2 only systems
+* Vulkan support for NVIDIA GPUs (alpha)
+* Android security updates for August 2023
 * Bug fixes

@@ -2,6 +2,86 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.18.0]
+
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.18/stable` | 116 |
+| `ams-node-controller` | `1.18/stable` | 125 |
+| `coturn` | `1.18/stable` | 119 |
+| `ams` | `1.18/stable` | 129 |
+| `aar` | `1.18/stable` | 122 |
+| `anbox-stream-gateway` | `1.18/stable` | 134 |
+| `ams-load-balancer` | `1.18/stable` | 124 |
+| `ams-lxd` | `1.18/stable` | 121 |
+| `anbox-stream-agent` | `1.18/stable` | 129 |
+| `nats ` | ` latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.18/stable` | 115 |
+| `ams-node-controller` | `1.18/stable` | 124 |
+| `coturn` | `1.18/stable` | 118 |
+| `ams` | `1.18/stable` | 128 |
+| `aar` | `1.18/stable` | 121 |
+| `anbox-stream-gateway` | `1.18/stable` | 133 |
+| `ams-load-balancer` | `1.18/stable` | 123 |
+| `ams-lxd` | `1.18/stable` | 120 |
+| `anbox-stream-agent` | `1.18/stable` | 128 |
+| `nats ` | ` latest/stable` | 11 |
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.18/stable` | 82 |
+| `anbox-cloud-core` | `1.18/stable` | 87 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.18/stable` | 1.18.0 |
+| `aar`    | `1.18/stable` | 1.18.0 |
+| `ams-node-controller` | `1.18/stable` | 1.18.0 |
+| `anbox-cloud-dashboard` | `1.18/stable` | 1.18.0 |
+| `anbox-stream-agent` | `1.18/stable` | 1.18.0 |
+| `anbox-stream-gateway` | `1.18/stable` | 1.18.0 |
+| `anbox-cloud-appliance` | `1.18/stable` | 1.18.0 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.18.0 |
+| `jammy:android13:arm64` | 1.18.0 |
+| `jammy:android12:amd64` | 1.18.0 |
+| `jammy:android12:arm64` | 1.18.0 |
+| `jammy:android11:amd64` | 1.18.0 |
+| `jammy:android11:arm64` | 1.18.0 |
+| `jammy:android10:amd64` | 1.18.0 |
+| `jammy:android10:arm64` | 1.18.0 |
+| `bionic:android12:amd64` | 1.18.0 |
+| `bionic:android12:arm64` | 1.18.0 |
+| `bionic:android11:amd64` | 1.18.0 |
+| `bionic:android11:arm64` | 1.18.0 |
+| `bionic:android10:amd64` | 1.18.0 |
+| `bionic:android10:arm64` | 1.18.0 |
+
+[/Details]
+
+
 [Details=1.17.2]
 
 ### Charms
@@ -50,7 +130,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|---------------|
 | `ams`    | `1.17/stable` | 1.17.2 |
 | `aar`    | `1.17/stable` | 1.17.2 |
 | `ams-node-controller` | `1.17/stable` | 1.17.2  |
@@ -132,7 +212,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|------------|
 | `ams`    | `1.17/stable` | 1.17.1 |
 | `aar`    | `1.17/stable` | 1.17.1 |
 | `ams-node-controller` | `1.17/stable` | 1.17.1  |
@@ -214,7 +294,7 @@ n/a
 ### Snaps
 
 | Name |  Channel | Version |
-|----------|--------------|
+|----------|--------------|----------|
 | `ams`    | `1.17/stable` | 1.17.0 |
 | `aar`    | `1.17/stable` | 1.17.0 |
 | `ams-node-controller` | `1.17/stable` | 1.17.0  |

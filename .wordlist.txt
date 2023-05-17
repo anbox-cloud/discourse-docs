@@ -65,6 +65,7 @@ customisable
 customisation
 customisations
 CustomLocale
+deallocate
 deallocated
 DDoS
 deprecations
@@ -174,6 +175,7 @@ OCI
 OES
 OOB
 OOM
+OpenAPI
 OpenGL
 OpenStack
 overcommitment
@@ -254,6 +256,7 @@ tryCapture
 TCP
 Telegraf
 Tensorflow
+timebase
 TLS
 Traefik
 TypeError
@@ -277,6 +280,7 @@ VMs
 VNC
 VPC
 VPN
+vsync
 Vulkan
 vsync
 Wayland
