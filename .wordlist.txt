@@ -282,6 +282,7 @@ VPC
 VPN
 vsync
 Vulkan
+vsync
 Wayland
 WebRTC
 websocket

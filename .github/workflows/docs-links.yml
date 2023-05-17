@@ -1,0 +1,36 @@
+name: Check for links pointing to Anbox docs
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  check:
+    name: Check docs links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files_ignore: |
+            .github
+            announcements
+      
+      - name: Find Anbox Cloud docs links
+        id: find-anbox-cloud-docs-links
+        run: |
+          awk '{
+            # Use match explicitly to have access to retrieve column numbers
+            # with RSTART and RLENGTH
+            if (match($0, "anbox-cloud.io/docs") != 0)
+              print "::error file="FILENAME\
+                    ",line="FNR\
+                    ",col="RSTART\
+                    ",endColumn="RSTART+RLENGTH\
+                    ",title=Incorrect docs link"\
+                    "::Documentation links should point to Discourse"
+          }' ${{ steps.changed-files.outputs.all_changed_files }}
