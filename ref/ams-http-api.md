@@ -548,6 +548,7 @@ In the HTTP application upload case, the following headers may be set by the cli
 * `X-AMS-Fingerprint:`: SHA-256 (if set, the uploaded payload must match)
 
 The payload to upload must be a tarball compressed with bzip2 or a zip archive. Also it must contain a `manifest.yaml` which declares the basic application information for the creation. For the layout of the application and supported syntax, see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198) for more details.
+
 To support the following syntax in the application `manifest.yaml`, the server requires a corresponding extension
 
 Syntax in manifest            |   Extension
