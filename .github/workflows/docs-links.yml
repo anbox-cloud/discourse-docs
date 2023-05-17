@@ -16,7 +16,9 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v35
         with:
-          files_ignore: .github
+          files_ignore: |
+            .github
+            announcements
       
       - name: Find Anbox Cloud docs links
         id: find-anbox-cloud-docs-links
