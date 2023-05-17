@@ -175,6 +175,7 @@ OCI
 OES
 OOB
 OOM
+OpenAPI
 OpenGL
 OpenStack
 overcommitment
