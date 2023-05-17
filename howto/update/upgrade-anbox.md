@@ -62,7 +62,7 @@ The deployed Juju charms need to be upgraded next.
 
 - With the 1.14 release, the name of the `lxd` charm changed to `ams-lxd`. If you run a deployment older than 1.14 and want to upgrade, add `--switch=ams-lxd` to the upgrade command to make Juju switch to the new charm. The charm itself remains identical with the same functionality and features.
 
-- Starting with the 1.15 release, AMS enforces TLS 1.3 on its HTTPS endpoint. Images older than 1.15.0 will fail to reach AMS in this case. To still allow older images to work with AMS, you can temporarily enable TLS 1.2 support again in AMS by setting the `force_tls12` [configuration option of the AMS charm](https://charmhub.io/ams/configure?channel=1.15/stable#force_tls12).
+- Starting with the 1.15 release, Anbox Management Service (AMS) enforces TLS 1.3 on its HTTPS endpoint. Images older than 1.15.0 will fail to reach AMS in this case. To still allow older images to work with AMS, you can temporarily enable TLS 1.2 support again in AMS by setting the `force_tls12` [configuration option of the AMS charm](https://charmhub.io/ams/configure?channel=1.15/stable#force_tls12).
 
 - If you want to deploy a particular revision of a charm, you can do so by adding `--revision=<rev>` to the `juju upgrade-charm` command.
 
@@ -133,7 +133,11 @@ In some cases, specifically when you maintain bigger LXD clusters or want to kee
 
     juju config lxd enable_manual_upgrade=true
 
-This will allow you to run the actual upgrade process for each deployed LXD instance separately. After the charm has been refreshed, the upgrade for a single LXD deployment unit can be triggered by running:
+This will allow you to run the actual upgrade process for each deployed LXD instance separately. 
+
+If you want to remove any nodes from the LXD cluster as part of the manual upgrade process, follow the instructions in [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/how-to-scale-down-a-lxd-cluster/24323) to prepare a node for removal and then remove it from the cluster.
+
+Once the unnecessary nodes are dropped, the upgrade for a single LXD deployment unit can be triggered by running:
 
     juju run --wait=30m lxd/0 upgrade
 
