@@ -13,9 +13,11 @@ If you still need help, use any of the following utilities to collect troublesho
 
 ## Juju crashdump
 
-*Applies to: Anbox Cloud, Anbox Cloud Appliance*
+*Applies to: Anbox Cloud*
 
-If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump) installed, you can collect troubleshooting information from the deployment model. A Juju crash dump may include the following debugging information:
+If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump) installed, you can collect troubleshooting information from the deployment model. The Juju crash dump gives you a high level overview of the issue and is the recommended option to provide debugging information when you report an issue with your Anbox Cloud deployment.
+
+A Juju crash dump may include the following debugging information:
 * Additional information provided by the Anbox Cloud charms
 * Information about any Anbox containers that crashed
 
@@ -24,6 +26,14 @@ Use the following command to generate a crash dump:
     juju crashdump -s -a debug-layer 
 
 The Anbox Management Service (AMS) charm implements the `debug-layer` addon which will add a `debug-*.tar.gz` archive to the crash dump for the AMS units. The tarball may contain container logs for the containers that are in `error` state in AMS and other information about the Anbox runtime process.
+
+## `anbox-cloud-appliance.buginfo` command
+
+*Applies to: Anbox Cloud Appliance*
+
+Use the `anbox-cloud-appliance.buginfo` command to obtain debugging information for issues with the Anbox Cloud Appliance.
+
+This is the recommended option to provide debugging information when you report an issue with the Anbox Cloud Appliance.
 
 ## Anbox Cloud bug report utility
 
