@@ -41,6 +41,6 @@ Learn how to monitor Anbox Cloud so that you can further optimise your deploymen
 Learn resolutions for common issues with Anbox Cloud and how to collect useful debugging information before reporting an issue.
 |  |  |
 |--|--|
-| [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)| Answers to common questions and issues |
+| [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)| Collect debugging information from Anbox Cloud and report an issue. |
 
 Make sure to also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, as well as the [Reference](https://discourse.ubuntu.com/t/reference/28828) and [Explanation](https://discourse.ubuntu.com/t/explanation/28829) sections for other helpful information.
