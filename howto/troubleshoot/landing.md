@@ -58,3 +58,8 @@ saves it to the local `<target_file>`. This process might take a few seconds.
 If a container fails to start or a runtime error occurs, AMS collects relevant log files from the container and makes them available for inspection. 
 
 Use `amc show <container_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/how-to-view-the-container-logs/24329#view-stored-logs) for an example of such a stored log.
+
+## Related topics
+
+* [View Anbox Cloud logs](https://discourse.ubuntu.com/t/17771)
+* [View container logs](https://discourse.ubuntu.com/t/24329)
