@@ -22,7 +22,7 @@ all:
       If set to `true`, AMS automatically updates applications
       whenever any dependencies (parent image, addons, global
       configuration) change. `false` disables this. See
-      [Disable automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#disable-automatic-updates).
+      [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-updates).
   application.default_abi:
     type: "string"
     default: "-"

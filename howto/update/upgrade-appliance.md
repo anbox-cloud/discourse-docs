@@ -15,7 +15,11 @@ In the command output above the `update-available` field indicates an update is 
 
     anbox-cloud-appliance upgrade
 
-The appliance will perform now all necessary steps to upgrade to the newer available version. You can watch for progress on the web interface
+The appliance will now perform all necessary steps to upgrade to the newer available version. 
+
+[note type="information" status="Note"]In case automatic updates are disabled for applications, Anbox Management Service (AMS) cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-updates) to enable automatic updates or to manually update the applications.[/note]
+
+You can watch the upgrade progress on the web interface:
 
 ![Upgrade the appliance|690x435](https://assets.ubuntu.com/v1/1093e239-update_appliance.png)
 

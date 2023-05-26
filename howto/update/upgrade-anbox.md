@@ -168,6 +168,8 @@ LXD images are automatically being fetched by AMS from the image server once the
 
 Existing applications will be automatically updated by AMS as soon as the new image is uploaded. Watch out for new versions being added for any of the existing applications based on the new image version.
 
-You can check for the status of an existing application by running
+You can check for the status of an existing application by running:
 
     amc application show <application id or name>
+
+In case automatic updates are disabled for applications, AMS cannot update the application. See [Configure automatic application updates](https://discourse.ubuntu.com/t/24201#configure-automatic-updates) to enable automatic updates or to manually update the applications.
