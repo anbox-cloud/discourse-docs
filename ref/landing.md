@@ -1,4 +1,8 @@
-The reference material in this section provides technical descriptions of Anbox Cloud and the related tools.
+The reference material in this section provides additional information about using Anbox Cloud, available configuration options and performance metrics and benchmarks.
+
+## Usage
+
+Understand the difference aspects of using Anbox Cloud such as supported Android features, provided SDKs, images, APIs, available network ports for communication, extending Anbox Cloud through addons and hooks.
 
 |  |  |
 |--|--|
@@ -8,14 +12,29 @@ The reference material in this section provides technical descriptions of Anbox 
 | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) | Documentation for the APIs that Anbox Cloud provides |
 | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)| A list of predefined instance types |
 | [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)| A description of the supported Anbox platforms |
-| [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)| Documentation of the WebRTC streamer configuration |
-| [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)| Documentation of the performance metrics that Anbox Cloud provides |
-| [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)| A list of AMS configuration options |
-| [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)| A list of the attributes that can be specified in the application manifest |
-| [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)| A list of network ports that Anbox Cloud exposes for each service |
 | [Addons](https://discourse.ubuntu.com/t/addons/25293)| Documentation of the addon mechanism |
 | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)| Documentation of hooks for addons or applications |
+| [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)| A list of network ports that Anbox Cloud exposes for each service |
+
+## Configuration
+Know the configuration options that can be defined for various components of Anbox Cloud.
+
+|  |  |
+|--|--|
+| [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)| A list of AMS configuration options |
+| [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)| A list of the attributes that can be specified in the application manifest |
+| [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)| Documentation of the WebRTC streamer configuration |
+
+## Performance
+Learn about the available metrics and benchmarks for measuring performance.
+|  |  |
+|--|--|
+| [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)| Documentation of the performance metrics that Anbox Cloud provides |
 | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
+
+## Other related information
+|  |  |
+|--|--|
 | [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/) | Link to the LXD documentation (external) |
 | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)| Terms and definitions you should know when working with Anbox Cloud or the Anbox Cloud Appliance |
 
