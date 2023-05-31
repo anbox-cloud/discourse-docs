@@ -6,8 +6,8 @@ On the **Sessions** page, you could see a session with an **Error** status when 
 ![Session with an Error status|690x440](https://assets.ubuntu.com/v1/91739759-session-error.png)
 
 Try the following actions:
-* Verify if you have [sufficient resources](https://anbox-cloud.io/docs/exp/capacity-planning) for container/application creation.
-* Check if all the nodes are in [`unschedulable`](https://anbox-cloud.io/docs/ref/ams-configuration) mode.
+* Verify if you have [sufficient resources](https://discourse.ubuntu.com/t/capacity-planning/28717) for container/application creation.
+* Check if all the nodes are in [`unschedulable`](https://discourse.ubuntu.com/t/ams-configuration/20872) mode.
 
 ## Session does not start
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
@@ -16,7 +16,7 @@ A session does not start and the session details page displays the following err
 
 ![Session does not start|690x440](https://assets.ubuntu.com/v1/52b32f73-session-does-not-start.png)
 
-[Check the container logs](https://anbox-cloud.io/docs/howto/container/logs) to find reasons for the session failure.
+[Check the container logs](https://discourse.ubuntu.com/t/how-to-view-the-container-logs/24329) to find reasons for the session failure.
 
 
 ## Container(s) in Error status
@@ -33,7 +33,7 @@ Click on the corresponding **CONTAINER ID** and check the container details page
 ![Container details page|690x440](https://assets.ubuntu.com/v1/0ff0d3ff-container-details-error.png)
 
 The **Error Message field** can give you a starting point for identifying the issue. Some reasons for a container to go into error status could be:
-* Insufficient resources. Refer [Capacity planning](https://anbox-cloud.io/docs/exp/capacity-planning).
+* Insufficient resources. Refer [Capacity planning](https://discourse.ubuntu.com/t/capacity-planning/28717).
 * Occasionally, access to Ubuntu archives could be a problem when creating an application. As an immediate workaround, you could disable the security update by running `amc config set container.security_updates false` or explicitly set `amc config set container.api_mirror <mirror_address>`.
  
 If the reason for the container failure is not obvious from the **Error Message**, check the **Logs** tab for more information.
@@ -47,7 +47,7 @@ Logs  are unavailable for a container when:
 * The container is not in error status.
 * Occasionally, the container could have ended up with an error status due to insufficient resources but there are no log files because the application bootstrap process succeeded.
 
-Normally, the logs are available if the container is in an error state. If the container is in the error state and yet there are no logs available, [check if you have enough resources](https://anbox-cloud.io/docs/exp/capacity-planning).
+Normally, the logs are available if the container is in an error state. If the container is in the error state and yet there are no logs available, [check if you have enough resources](https://discourse.ubuntu.com/t/capacity-planning/28717).
 
 ## Terminal is unavailable for a container
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
