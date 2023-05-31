@@ -1,4 +1,4 @@
-In order to plan for new updates of the Anbox Cloud software stack, this page gives you insight into the general release cycle and planned features for the next versions of Anbox Cloud. However don't consider the roadmap to be complete or set in stone.
+In order to plan for new updates of the Anbox Cloud software stack, this page gives you insight into the general release cycle and planned features for the next versions of Anbox Cloud. However, the roadmap dates are not final and can change depending on various factors such as availability of the Android security patches.
 
 ## Release Cycle
 
@@ -16,14 +16,14 @@ A patch release for Anbox Cloud is released at the beginning of every month and 
 
 ### 1.18.1 (June 2023)
 
-Target date: June 20, 2023
+Target date: June 14, 2023
 
 * Android security updates for June 2023
 * Bug fixes
 
 ### 1.18.2 (July 2023)
 
-Target date: July 20, 2023
+Target date: July 12, 2023
 
 * Android security updates for July 2023
 * Bug fixes
