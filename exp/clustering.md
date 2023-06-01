@@ -37,12 +37,11 @@ The current release of Anbox Cloud has no builtin auto scaling implementation bu
 The following guidelines are both recommended and must-have aspects of an auto scaling implementation. Make sure that your auto scaling implementation follows these to stay within a supported and tested scope.
 
 1. Don't scale the LXD cluster below three nodes. You should keep three active nodes at all times to ensure the database LXD uses can achieve a quorum and is highly available. If you run below three nodes, your cluster is very likely to get into a non-functional state or be lost completely (see [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/clustering#recover-from-quorum-loss) for more information).
-2. A single LXD cluster should take no more than 40 nodes.
-3. If you need more than 40 nodes, you should create a separate cluster in a separate Juju model with its own AMS.
-4. Scaling a cluster up with multiple new nodes in parallel is fine and recommended if you need to quickly increase your cluster capacity.
-5. Scaling down **MUST** strictly happen in a sequential order with no other scaling operations (for example, scale up) running in parallel.
-6. You **MUST NOT** remove a LXD database node (check `lxc cluster ls` on any LXD node) when scaling down. Due to issues in [LXD](https://linuxcontainers.org/lxd/introduction/) and its [raft implementation](https://github.com/canonical/raft), this might lead to an unhealthy cluster in some cases. These issues are currently (March 2021) being worked on by the LXD engineering team.
-7. Before removing a LXD node from the cluster you **MUST** delete all containers on it first.
+1. A single LXD cluster should take no more than 40 nodes.
+1. If you need more than 40 nodes, you should create a separate cluster in a separate Juju model with its own AMS.
+1. Scaling a cluster up with multiple new nodes in parallel is fine and recommended if you need to quickly increase your cluster capacity.
+1. Scaling down **MUST** strictly happen in a sequential order with no other scaling operations (for example, scale up) running in parallel.
+1. Before removing a LXD node from the cluster you **MUST** delete all containers on it first.
 
 #### Scaling up or down
 
