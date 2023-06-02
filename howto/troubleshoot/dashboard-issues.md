@@ -43,7 +43,7 @@ If the reason for the container failure is not obvious from the **Error Message*
 
 ![Container logs unavailable|690x440](https://assets.ubuntu.com/v1/db938c41-logs-unavailable-for-container.png)
 
-Logs  are unavailable for a container when:
+Logs are unavailable for a container when:
 * The container is not in error status.
 * Occasionally, the container could have ended up with an error status due to insufficient resources but there are no log files because the application bootstrap process succeeded.
 
