@@ -27,7 +27,7 @@ Please see [component versions](https://anbox-cloud.io/docs/component-versions) 
 
 < In addition to the below placeholder points, list minor features that are part of the release but were not elaborated as separate sections >
 
-* Android security updates for < insert-month-year > (see [Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
+* Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
 * The Android WebView has been updated to < insert-version-along-with-link >.
 
 
@@ -48,7 +48,7 @@ Please see [component versions](https://anbox-cloud.io/docs/component-versions) 
 
 ## Bug fixes
 
-< List bugs that were part of the current release. Include Jira or Launchpad IDs and links for the bugs >
+< Describe bug fixes in 1-2 lines. For customer reported bugs, include Jira or Launchpad IDs with links. >
 
 ## Upgrade instructions
 
