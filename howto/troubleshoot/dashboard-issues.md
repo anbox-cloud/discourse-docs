@@ -34,7 +34,7 @@ Click on the corresponding **CONTAINER ID** and check the container details page
 
 The **Error Message field** can give you a starting point for identifying the issue. Some reasons for a container to go into error status could be:
 * Insufficient resources. Refer [Capacity planning](https://discourse.ubuntu.com/t/capacity-planning/28717).
-* Occasionally, access to Ubuntu archives could be a problem when creating an application. As an immediate workaround, you could disable the security update by running `amc config set container.security_updates false` or explicitly set `amc config set container.api_mirror <mirror_address>`.
+* Occasionally, access to Ubuntu archives could be a problem when creating an application. As an immediate workaround, you could disable the security update by running `amc config set container.security_updates false` or explicitly set `amc config set container.api_mirror <mirror_address>` to configure a container to use a different APT mirror. See [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872) for more details.
  
 If the reason for the container failure is not obvious from the **Error Message**, check the **Logs** tab for more information.
 
@@ -54,12 +54,4 @@ Normally, the logs are available if the container is in an error state. If the c
 
 ![Terminal unavailable for container|690x440](https://assets.ubuntu.com/v1/e85fb9ab-terminal-unavailable-for-container.png)
 
-Terminal is not available if the container has any other status apart from **running** and **started**.  
-
-
-
-
-
-
-
-
+Terminal is not available if the container has any other status apart from **running** and **started**.
