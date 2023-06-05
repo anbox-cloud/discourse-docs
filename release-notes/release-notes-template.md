@@ -25,11 +25,11 @@ Please see [component versions](https://anbox-cloud.io/docs/component-versions) 
 * Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
 * The Android WebView has been updated to < insert-version-along-with-link >.
 
-### Removed functionality
+## Removed functionality
 
 < List features that were part of Anbox Cloud so far or that were on the deprecation path for a while and have been removed for the current release >
 
-### Deprecations
+## Deprecations
 
 < List deprecated features. Provide an alternative, if any, for the users to use instead of the deprecated features >
 
