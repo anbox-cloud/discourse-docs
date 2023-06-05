@@ -1,4 +1,4 @@
-Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be available to users.
+Updating an existing application works similar to creating a new one. Each time an existing application is updated, it is extended with a new version. All versions that an application currently has are individually usable, but only one can be launched at a time.
 
 When you want to update an existing application with a new manifest or APK, provide both in the same format as when the application was created. The `amc application update` command accepts both a directory and an absolute file path.
 
@@ -84,7 +84,7 @@ In addition, each version has a status which indicates the status of the bootstr
 <a name="publish-application-versions"></a>
 ## Publish application versions
 
-The most important part of an application version is the `published` field. If a version is marked as published, it is accessible to users of Anbox Cloud. Generally when launching containers by using the AMS REST API, if no specific application version is given, the last published version of an application is used to create the container.
+The most important part of an application version is the `published` field. If a version is marked as published, it is available to launch and use. Generally when launching containers by using the AMS REST API, if no specific application version is given, by default, the latest published version of an application is used to create the container.
 
 If [`application.auto_publish`](https://discourse.ubuntu.com/t/ams-configuration/20872) is set to `true` (the default), new versions are automatically published. Otherwise, you need to publish them manually.
 
