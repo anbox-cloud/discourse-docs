@@ -6,22 +6,17 @@ Please see [component versions](https://anbox-cloud.io/docs/component-versions) 
 
 ## New features & improvements
 
-### Feature 1
+### Core stack improvements
 
-< Explain feature 1 >
+< List enhancements to core stack here. >
 
-### Feature 2
+### Streaming improvements
 
-< Explain feature 2 >
-
-
-< Add feature sections as necessary >
-
+< List enhancements to streaming stack here. >
 
 ### Dashboard improvements
 
 < List enhancements to the dashboard here. You can screenshots to illustrate something new or enhanced. >
-
 
 ### Other
 
@@ -30,21 +25,17 @@ Please see [component versions](https://anbox-cloud.io/docs/component-versions) 
 * Android security updates for < insert-month-year > (see Android Security Bulletin - < insert-month-year along with the link to bulletin > for more information).
 * The Android WebView has been updated to < insert-version-along-with-link >.
 
-
 ### Removed functionality
 
 < List features that were part of Anbox Cloud so far or that were on the deprecation path for a while and have been removed for the current release >
-
 
 ### Deprecations
 
 < List deprecated features. Provide an alternative, if any, for the users to use instead of the deprecated features >
 
-
 ## Known issues
 
 < List known issues with the current release. Include plans to fix it, if known. >
-
 
 ## Bug fixes
 
