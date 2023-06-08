@@ -7,7 +7,7 @@ The entire deployment process will take 20-30 minutes, depending on the selected
 Before starting the procedure,
 * Check the hardware requirements for the Anbox Cloud Appliance [here](https://discourse.ubuntu.com/t/17734).
 * Make sure that you have a Google Cloud account and a project on Google Cloud to create the virtual machine.
-* If you wish to use your own Ubuntu Pro subscription, ensure you have the Ubuntu Pro token for your Ubuntu Pro subscription. If you wish to use the Ubuntu Pro subscription offered by Google Cloud along with the virtual machine, skip this prerequisite.
+* If you wish to use your own [Ubuntu Pro subscription](https://ubuntu.com/pro), ensure you have the Ubuntu Pro token for your Ubuntu Pro subscription. If you wish to use the Ubuntu Pro subscription offered by Google Cloud along with the virtual machine, skip this prerequisite.
 
 ## Virtual machine setup
 
@@ -82,7 +82,7 @@ Second source filter : None
 Destination filter : None
 Protocols and ports : Specified protocols and ports
     TCP ports : 80,443,10000-11000
-    UDP ports : 5349,10000-11000, 60000-60100
+    UDP ports : 5349,10000-11000,60000-60100
 ```
 The target tag `foo` will be used as the network tag in the virtual machine settings. This tag should match the network tag of the virtual machine.
 
@@ -99,9 +99,3 @@ On the virtual machine instance page, connect to the instance using SSH. See [Go
 After logging on to the virtual machine, follow the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/22681) tutorial to install and initialise the Anbox Cloud Appliance and to register with the dashboard.
 
 [note type="information" status="Note"]If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.[/note]
-
-
-
-
-
-
