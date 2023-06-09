@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/get-woke/woke
+    rev: v0.19.0  # pick a tag to point to
+    hooks:
+      - id: woke
+        args: ["-c", "https://github.com/canonical-web-and-design/Inclusive-naming/raw/main/config.yml"]
+  - repo: https://github.com/jonasbn/pre-commit-hooks
+    rev: v0.5.0
+    hooks:
+      - id: spellcheck
