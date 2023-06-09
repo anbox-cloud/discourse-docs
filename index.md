@@ -176,6 +176,55 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 2 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
 | 2 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
+|   | release-notes/1.18.0 | [Release notes-Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
+|   | release-notes/1.17.2 | [Release notes-Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
+|   | release-notes/1.17.1 | [Release notes-Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
+|   | release-notes/1.17.0 | [Release notes-Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
+|   | release-notes/1.16.4 | [Release notes-Anbox Cloud 1.16.4](https://discourse.ubuntu.com/t/33437)|
+|   | release-notes/1.16.3 | [Release notes-Anbox Cloud 1.16.3](https://discourse.ubuntu.com/t/33261)|
+|   | release-notes/1.16.2 | [Release notes-Anbox Cloud 1.16.2](https://discourse.ubuntu.com/t/33161)|
+|   | release-notes/1.16.1 | [Release notes-Anbox Cloud 1.16.1](https://discourse.ubuntu.com/t/32733)|
+|   | release-notes/1.16.0 | [Release notes-Anbox Cloud 1.16.0](https://discourse.ubuntu.com/t/32264)|
+|   | release-notes/1.15.3 | [Release notes-Anbox Cloud 1.15.3](https://discourse.ubuntu.com/t/31616)|
+|   | release-notes/1.15.2 | [Release notes-Anbox Cloud 1.15.2](https://discourse.ubuntu.com/t/31322)|
+|   | release-notes/1.15.1 | [Release notes-Anbox Cloud 1.15.1](https://discourse.ubuntu.com/t/30585)|
+|   | release-notes/1.15.0 | [Release notes-Anbox Cloud 1.15.0](https://discourse.ubuntu.com/t/30196)|
+|   | release-notes/1.14.2 | [Release notes-Anbox Cloud 1.14.2](https://discourse.ubuntu.com/t/29553)|
+|   | release-notes/1.14.1 | [Release notes-Anbox Cloud 1.14.1](https://discourse.ubuntu.com/t/28952)|
+|   | release-notes/1.14.0 | [Release notes-Anbox Cloud 1.14.0](https://discourse.ubuntu.com/t/28557)|
+|   | release-notes/1.13.2 | [Release notes-Anbox Cloud 1.13.2](https://discourse.ubuntu.com/t/27701)|
+|   | release-notes/1.13.1 | [Release notes-Anbox Cloud 1.13.1](https://discourse.ubuntu.com/t/27254)|
+|   | release-notes/1.13.0 | [Release notes-Anbox Cloud 1.13.0](https://discourse.ubuntu.com/t/26857)|
+|   | release-notes/1.12.5 | [Release notes-Anbox Cloud 1.12.5](https://discourse.ubuntu.com/t/26380)|
+|   | release-notes/1.12.4 | [Release notes-Anbox Cloud 1.12.4](https://discourse.ubuntu.com/t/26263)|
+|   | release-notes/1.12.3 | [Release notes-Anbox Cloud 1.12.3](https://discourse.ubuntu.com/t/26252)|
+|   | release-notes/1.12.2 | [Release notes-Anbox Cloud 1.12.2](https://discourse.ubuntu.com/t/25819)|
+|   | release-notes/1.12.1 | [Release notes-Anbox Cloud 1.12.1](https://discourse.ubuntu.com/t/25542)|
+|   | release-notes/1.12.0 | [Release notes-Anbox Cloud 1.12.0](https://discourse.ubuntu.com/t/25295)|
+|   | release-notes/1.11.5 | [Release notes-Anbox Cloud 1.11.5](https://discourse.ubuntu.com/t/26739)|
+|   | release-notes/1.11.4 | [Release notes-Anbox Cloud 1.11.4](https://discourse.ubuntu.com/t/25018)|
+|   | release-notes/1.11.3 | [Release notes-Anbox Cloud 1.11.3](https://discourse.ubuntu.com/t/24705)|
+|   | release-notes/1.11.2 | [Release notes-Anbox Cloud 1.11.2](https://discourse.ubuntu.com/t/24293)|
+|   | release-notes/1.11.1 | [Release notes-Anbox Cloud 1.11.1](https://discourse.ubuntu.com/t/23772)|
+|   | release-notes/1.11.0 | [Release notes-Anbox Cloud 1.11.0](https://discourse.ubuntu.com/t/23590)|
+|   | release-notes/1.10.3 | [Release notes-Anbox Cloud 1.10.3](https://discourse.ubuntu.com/t/23267)|
+|   | release-notes/1.10.2 | [Release notes-Anbox Cloud 1.10.2](https://discourse.ubuntu.com/t/22692)|
+|   | release-notes/1.10.1 | [Release notes-Anbox Cloud 1.10.1](https://discourse.ubuntu.com/t/22280)|
+|   | release-notes/1.10.0 | [Release notes-Anbox Cloud 1.10.0](https://discourse.ubuntu.com/t/22205)|
+|   | release-notes/1.9.5 | [Release notes-Anbox Cloud 1.9.5](https://discourse.ubuntu.com/t/22259)|
+|   | release-notes/1.9.4 | [Release notes-Anbox Cloud 1.9.4](https://discourse.ubuntu.com/t/22148)|
+|   | release-notes/1.9.3 | [Release notes-Anbox Cloud 1.9.3](https://discourse.ubuntu.com/t/21795)|
+|   | release-notes/1.9.2 | [Release notes-Anbox Cloud 1.9.2](https://discourse.ubuntu.com/t/21420)|
+|   | release-notes/1.9.1 | [Release notes-Anbox Cloud 1.9.1](https://discourse.ubuntu.com/t/21232)|
+|   | release-notes/1.9.0 | [Release notes-Anbox Cloud 1.9.0](https://discourse.ubuntu.com/t/20870)|
+|   | release-notes/1.8.3 | [Release notes-Anbox Cloud 1.8.3](https://discourse.ubuntu.com/t/20435)|
+|   | release-notes/1.8.2 | [Release notes-Anbox Cloud 1.8.2](https://discourse.ubuntu.com/t/19951)|
+|   | release-notes/1.8.1 | [Release notes-Anbox Cloud 1.8.1](https://discourse.ubuntu.com/t/19319)|
+|   | release-notes/1.8.0 | [Release notes-Anbox Cloud 1.8.0](https://discourse.ubuntu.com/t/19200)|
+|   | release-notes/1.7.4 | [Release notes-Anbox Cloud 1.7.4](https://discourse.ubuntu.com/t/18812)|
+|   | release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
+|   | release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
+|   | release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
 [/details]
 
 ## Redirects
