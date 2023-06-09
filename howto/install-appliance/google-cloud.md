@@ -14,11 +14,11 @@ Before starting the procedure,
 ### 1. Create a virtual machine
 Log in to [Google Cloud](https://console.cloud.google.com) and select the project for this deployment. Select **CREATE INSTANCE** in the **VM instances** page.
 
-![VM instances on Google Cloud|690x440](https://assets.ubuntu.com/v1/d44bd0dd-VM-instance.png)
+![VM instances on Google Cloud|690x440](https://assets.ubuntu.com/v1/f1e83df5-VM-instance-2.png)
 
 Select **New VM instance** from the options on the sidebar.
 
-![VM instance options on Google Cloud|690x440](https://assets.ubuntu.com/v1/cbc94514-Instance-options.png)
+![VM instance options on Google Cloud|690x440](https://assets.ubuntu.com/v1/b400c919-Instance-options-2.png)
 
 ### 2. Configure basic settings
 
@@ -35,7 +35,7 @@ Most of the configuration depends on your deployment and its location. For the s
 
 Configure the boot disk by selecting **Boot disk > CHANGE** to choose the operating system and boot disk size.
 
-![Configure boot disk|690x440](https://assets.ubuntu.com/v1/d85bed8c-boot-disk-config.png)
+![Configure boot disk|690x440](https://assets.ubuntu.com/v1/884d0b10-boot-disk-config-2.png)
 
 Select the operating system. Google Cloud has two options - Ubuntu and Ubuntu Pro. If you have an Ubuntu Pro subscription already, you can choose Ubuntu and [attach your subscription](https://discourse.ubuntu.com/t/22681#attach-ubuntu-pro) manually. If you don’t, you can choose the Ubuntu Pro option which will include a Ubuntu Pro subscription through Google Cloud. 
 
@@ -47,7 +47,7 @@ Define your preferred boot disk size. We recommend allocating at least 100 GB of
 
 For Anbox Cloud Appliance, adding an additional disk is recommended for efficient container storage. Under **Advanced Options > Disks**, Select **ADD NEW DISK**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values. 
 
-![Add new disk|690x440](https://assets.ubuntu.com/v1/29645ed9-add-new-disk.png)
+![Add new disk|690x440](https://assets.ubuntu.com/v1/8acf5d22-add-new-disk-2.png)
 
 ### 4. Configure firewall mapping
 
