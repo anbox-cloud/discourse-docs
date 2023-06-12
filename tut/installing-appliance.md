@@ -50,6 +50,7 @@ If LXD is already installed but the version is older than 5.0, run:
 
     snap refresh --channel=5.0/stable lxd
 
+<a name="attach-ubuntu-pro"></a>
 ### 3. Attach your machine to the Ubuntu Pro subscription
 
 The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
