@@ -2,6 +2,15 @@ This page outlines the release notes of all versions of Anbox Cloud. If you're i
 
 For instructions on how to update your Anbox Cloud deployment to later versions, see [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) or [How to upgrade the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186).
 
+## Upcoming releases
+The following dates for upcoming releases are not final and could vary depending on various factors such as availability of Android security patches. The release notes link will be updated on the day of the release. See the [release roadmap](https://discourse.ubuntu.com/t/19359) to know the targeted features for a future release.
+
+| Tentative Release date | Release notes |
+|----|----|
+|June 14 2023|Anbox Cloud 1.18.1|
+|July 12 2023|Anbox Cloud 1.18.2|
+|August 16 2023|Anbox Cloud 1.19|
+
 ## Recent releases
 | Release date   |  Release notes  |
 |----|----|
