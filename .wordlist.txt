@@ -31,6 +31,7 @@ AudioTrack
 backend
 balancer
 balancers
+bbr
 benchmarking
 binderfs
 biometrics
@@ -38,6 +39,7 @@ bitrate
 bitrates
 BombSquad
 bool
+boolean
 BPF
 bzip
 cancellable
@@ -65,9 +67,11 @@ customisable
 customisation
 customisations
 CustomLocale
+dataset
 deallocate
 deallocated
 DDoS
+Debian
 deprecations
 Dev
 DNS
@@ -123,6 +127,7 @@ IPs
 iptables
 init
 interprocess
+iOS
 Javascript
 Jira
 jitter
@@ -252,6 +257,7 @@ swrast
 syscall
 syscalls
 systemd
+telegraf
 transcode
 tryCapture
 TCP
@@ -290,6 +296,7 @@ WebRTC
 websocket
 websockets
 WebView
+WiFi
 WGS
 workspaces
 WX
@@ -297,6 +304,7 @@ xz
 YAML
 ZFS
 zpool
+Uber
 Unhold
 
 
