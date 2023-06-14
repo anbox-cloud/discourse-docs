@@ -177,6 +177,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 2 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
 | 2 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
+|   | release-notes/1.18.1 | [Release notes-Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
 |   | release-notes/1.18.0 | [Release notes-Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
 |   | release-notes/1.17.2 | [Release notes-Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
 |   | release-notes/1.17.1 | [Release notes-Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
