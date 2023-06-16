@@ -58,7 +58,7 @@ Currently supported video codecs are:
  * H.264
  * VP8
 
-[note type="information" status="Important"]The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). It's your obligation to ensure you have the rights to streaming H.264 encoded video content to your users.[/note]
+[note type="information" status="Important"]The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). It's your obligation to ensure you have the rights to stream H.264 encoded video content to your users.[/note]
 
 In the future we plan to add support for:
 
