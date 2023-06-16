@@ -90,7 +90,8 @@ To do so, go to the resource page of your virtual machine and find its public IP
 
 Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
 
-1. Install the Anbox Cloud Appliance on the virtual machine.
+1. Install the Anbox Cloud Appliance on the virtual machine.  
+  [note type="information" status="Note"]Remember to attach the virtual machine to your Ubuntu Pro subscription, while installing the appliance. [/note]
 1. Initialise the appliance.
 1. Register your Ubuntu SSO account with the appliance dashboard.
 
