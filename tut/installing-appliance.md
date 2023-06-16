@@ -86,8 +86,6 @@ After the installation, access the appliance in your web browser by entering the
 
 ![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
 
-See [How to finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) for detailed information about the initialisation process.
-
 ### 1. Start the initialisation process
 
 On your machine, enter the following command to invoke the initialisation process of the Anbox Cloud Appliance:
