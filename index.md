@@ -56,7 +56,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/install-appliance/aws | [Install on AWS](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) |
 | 3 | howto/install-appliance/azure | [Install on Azure](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-azure/30824) |
 | 3 | howto/install-appliance/google-cloud | [Install on Google Cloud](https://discourse.ubuntu.com/t/36254) |
-| 3 | howto/install-appliance/finalise | [Finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) |
 | 2 | howto/update/landing | [Update an installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
 | 3 | howto/update/control | [Control updates](https://discourse.ubuntu.com/t/control-updates/24959)|
 | 3 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
