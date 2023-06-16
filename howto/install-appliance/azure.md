@@ -78,14 +78,22 @@ Azure will prompt you to download your private key before it starts creating the
 
 When deployment is complete, you can log on to the machine and install the Anbox Cloud Appliance.
 
-## Log on to the machine
+## Connect to the virtual machine using SSH
 
-To install the Anbox Cloud Appliance, you must log on to the virtual machine that you just created.
+To install the Anbox Cloud Appliance, you must connect to the virtual machine that you just created, using SSH.
 
 To do so, go to the resource page of your virtual machine and find its public IP address. Then use SSH to log on to the machine, using the user name `ubuntu` and the private key file that you downloaded during the creation of the virtual machine. For example:
 
     ssh -i Downloads/anbox-cloud-appliance_key.pem ubuntu@192.0.2.15
 
-## Install the appliance
+## Finish the installation
 
-After logging on to the virtual machine, follow the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/install-appliance/22681) tutorial to install and initialise the Anbox Cloud Appliance and to register with the dashboard.
+Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
+
+1. Install the Anbox Cloud Appliance on the virtual machine.  
+  [note type="information" status="Note"]Remember to attach the virtual machine to your Ubuntu Pro subscription, while installing the appliance. [/note]
+1. Initialise the appliance.
+1. Register your Ubuntu SSO account with the appliance dashboard.
+
+When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
+

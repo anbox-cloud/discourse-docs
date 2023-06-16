@@ -94,8 +94,17 @@ Select **CREATE** to create the firewall rule.
 
 On the virtual machine instance page, connect to the instance using SSH. See [Google's documentation](https://cloud.google.com/compute/docs/ssh-in-browser) for more information. 
 
-## Initialise the Anbox Cloud Appliance
+## Finish the installation
 
-After logging on to the virtual machine, follow the [Install the Anbox Cloud Appliance on your local machine](https://discourse.ubuntu.com/t/22681) tutorial to install and initialise the Anbox Cloud Appliance and to register with the dashboard.
+Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
 
-[note type="information" status="Note"]If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.[/note]
+1. Install the Anbox Cloud Appliance on the virtual machine.
+
+    [note type="information" status="Note"]If you choose Ubuntu Pro as your operating system, you can ignore the step in the installation instructions that guides you to attach your machine to the Ubuntu Pro subscription as the subscription is included with the Google Cloud resources. You can check the status of the Ubuntu Pro subscription by running `pro status`.[/note]
+
+1. Initialise the appliance.
+1. Register your Ubuntu SSO account with the appliance dashboard.
+
+When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
+
+

@@ -132,10 +132,15 @@ When the instance is successfully launched, you can find its public IP address i
 ![Appliance welcome screen|690x343, 100%](https://assets.ubuntu.com/v1/f35744dc-install_appliance_initialise.png)
 
 
-## Log on to the machine
+## Connect to the virtual machine using SSH
 
-To finalise the installation, you must log on to the machine that hosts the appliance. To do so, use the user name `ubuntu` and provide the path to your private key file when connecting. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
+Connect to the virtual machine hosting the appliance using SSH. To do so, use the user name `ubuntu` and provide the path to your private key file. See [Connect to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) for instructions on how to connect.
 
-## Finalise the installation
+## Finish the installation
 
-After the installation is complete, you must initialise the appliance and register your Ubuntu SSO account with the dashboard of the appliance. See [How to finalise the installation](https://discourse.ubuntu.com/t/how-to-finalise-the-installation/29704) for instructions.
+Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
+
+1. Initialise the appliance
+1. Register your Ubuntu SSO account with the appliance dashboard
+
+When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
