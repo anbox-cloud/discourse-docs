@@ -30,8 +30,8 @@ In the next sections, you will learn how to connect a container running on Anbox
 ### Install scrcpy
 
 Scrcpy is not available from the official Ubuntu repositories. Therefore, you must install scrcpy in one of the following ways:
-
-* Build scrcpy from the source by following the official [guide](https://github.com/Genymobile/scrcpy/blob/master/BUILD.md)
+<!-- wokeignore:rule=master -->
+* Build scrcpy from the source by following the official [guide](https://github.com/Genymobile/scrcpy/blob/master/doc/build.md)
 
 * Install scrcpy from the [Ubuntu snap store](https://snapcraft.io):
 

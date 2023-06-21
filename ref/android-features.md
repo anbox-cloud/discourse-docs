@@ -15,7 +15,7 @@ Anbox Cloud implements support for various features that Android has. The follow
 | Telephony / mobile connectivity | | |
 | Hardware-accelerated video decoding (H.264) | ✓ | |
 | Hardware-accelerated video encoding (H.264) | | |
-| [`fs-verity`](https://source.android.com/security/features/apk-verity) | | |
+| [`fs-verity`](https://www.kernel.org/doc/html/latest/filesystems/fsverity.html) | | |
 | [Disk encryption](https://source.android.com/security/encryption) | | |
 | [Verified Boot](https://source.android.com/security/verifiedboot) | | |
 | [Trusted Execution Environment (TEE)](https://source.android.com/security/trusty) | | |
