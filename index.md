@@ -1,26 +1,16 @@
-Anbox Cloud makes it possible to run Android apps in the cloud and supports all kinds of different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
+Anbox Cloud enables running Android apps on any cloud platform at scale. It uses [LXD containers](https://linuxcontainers.org/) to run the nested Android containers and [Juju](https://charmhub.io/) for deployment in a cloud environment.
 
-Using container technology, Anbox Cloud manages the application life cycle while optimising for high density, performance and fast container boot times. It is scalable from a single-machine installation that can run scores of single Android systems to an entire cluster of machines. Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures. Deploying the solution is simple and straightforward, and it is based on powerful and battle-proven software from Canonical like [LXD](https://linuxcontainers.org/) and [Juju](https://jujucharms.com/).
+Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures. 
 
-Anbox Cloud uses system containers to emulate Android systems. This method results in an isolation and security level similar to virtual machines with an overhead as low as process containers. Therefore, Anbox Cloud can provide at least twice the container density compared to other Android emulation solutions, and can serve up to 100 Android instances per server.
+Since Anbox Cloud uses containerisation to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the container density and can serve up to 100 Android instances per server.
 
-You should consider using Anbox Cloud if you want to deliver mobile applications that don't depend on the capabilities of your user's devices and that offload compute, storage and energy-intensive applications from the end device to the cloud. Typical use cases include mobile game streaming services, corporate application streaming, application automation and Android application testing.
+Due to its highly scalable nature and performance optimisation, delivering device-agnostic mobile applications becomes very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
 
+# In this documentaion
 | | |
 |--|--|
 |  [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) </br> Step-by-step guides covering key operations and common tasks |
 |  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics, architecture  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs |
-
-## What's new
-
-Along with bug fixes and general improvements, Anbox Cloud 1.18 includes the following changes:
-
-* Streaming improvements
-* Support for the Android container to use a custom Android ID
-* Updated Mesa driver 
-* Various dashboard improvements
-
-For detailed information, see the [Release notes](https://discourse.ubuntu.com/t/release-notes/17842).
 
 ## Project and community
 
@@ -29,6 +19,7 @@ Anbox Cloud is a Canonical product. It originally grew out of the Anbox open-sou
 - [Get support through Ubuntu Pro](https://ubuntu.com/support)
 - [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
 - [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
+- [Report issues with Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)
 
 Thinking about using Anbox Cloud for your next project? [Get in touch!](https://anbox-cloud.io/contact-us)
 
