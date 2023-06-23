@@ -82,7 +82,8 @@ If the APK file that you want to test is located in local folder or hosted on a 
 The above preset accepts either an absolute path to an APK or a URL.
 
 Finally you can start a new test session and run your test cases.
-For more details about Appium, please refer to the [official documentation](http://appium.io/docs/en/about-appium/getting-started/)
+
+For more details about Appium, please refer to the [Appium official documentation](https://appium.io)
 
 ### APK managed by AMS
 
