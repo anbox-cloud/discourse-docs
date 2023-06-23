@@ -8,3 +8,12 @@ repos:
     rev: v0.5.0
     hooks:
       - id: spellcheck
+  - repo: https://github.com/anbox-cloud/pre-commit-hooks
+    rev: 797fe47e86364afe21b7679f2dc309ee441a891d
+    hooks:
+      - id: anbox-cloud-docs-links-checker
+        exclude: |
+          (?x)^(
+            .github/.*
+            |release-notes/.*
+          )$
