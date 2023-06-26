@@ -10,5 +10,6 @@ review workflow on top.
   the spellchecker.
 * Navigate to the top-level directory of this repository and run `pre-commit install --install-hooks`.
 * The following checks are run automatically before every commit.
-  - Inclusive naming checks (`woke`).
-  - Spellcheck.
+  - Inclusive naming checks (`woke`)
+  - Spellcheck (`spellcheck`)
+  - Docs links checker (`anbox-cloud-docs-links-checker`)
