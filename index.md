@@ -1,10 +1,10 @@
-Anbox Cloud enables running Android apps on any cloud platform at scale. It uses [LXD containers](https://linuxcontainers.org/) to run the nested Android containers and [Juju](https://charmhub.io/) for deployment in a cloud environment.
+Anbox Cloud enables running Android apps on any cloud platform at scale. It uses system containers to run the nested Android containers and [Juju](https://juju.is/) for deployment in a cloud environment.
 
 Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures. 
 
-Since Anbox Cloud uses containerisation to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the container density and can serve up to 100 Android instances per server.
+Since Anbox Cloud uses system containers to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the container density and can serve up to 100 Android instances per server.
 
-Due to its highly scalable nature and performance optimisation, delivering device-agnostic mobile applications becomes very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
+Due to its highly scalable nature and performance optimisation, delivering device-agnostic mobile applications is very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
 
 # In this documentaion
 | | |
@@ -19,7 +19,7 @@ Anbox Cloud is a Canonical product. It originally grew out of the Anbox open-sou
 - [Get support through Ubuntu Pro](https://ubuntu.com/support)
 - [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
 - [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
-- [Report issues with Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)
+- [Troubleshoot](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837) and [report](https://bugs.launchpad.net/anbox-cloud/+bugs) issues with Anbox Cloud
 
 Thinking about using Anbox Cloud for your next project? [Get in touch!](https://anbox-cloud.io/contact-us)
 
