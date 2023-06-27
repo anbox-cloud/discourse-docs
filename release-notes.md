@@ -8,21 +8,32 @@ The following dates for upcoming releases are not final and could vary depending
 | Tentative Release date | Release notes |
 |----|----|
 |July 12 2023|Anbox Cloud 1.18.2|
-|August 16 2023|Anbox Cloud 1.19|
+|August 16 2023|Anbox Cloud 1.19.0|
 
 ## Recent releases
+
 | Release date   |  Release notes  |
 |----|----|
 |June 14 2023|[Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
 |May 17 2023|[Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
-|April 17 2023|[Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
-|March 16 2023|[Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
-|February 15 2023|[Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
+
+### What's new in 1.18.x?
+
+Along with bug fixes and general improvements, Anbox Cloud 1.18.x includes:
+
+* Streaming improvements
+* Support for the Android container to use a custom Android ID
+* Updated Mesa driver 
+* Various dashboard improvements
+
 
 [Details=Older releases]
 ## 2023
 |  Release date  |  Release notes  |
 |----|----|
+|April 17 2023|[Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
+|March 16 2023|[Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
+|February 15 2023|[Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
 |January 24 2023|[Anbox Cloud 1.16.4](https://discourse.ubuntu.com/t/33437)|
 |January 17 2023|[Anbox Cloud 1.16.3](https://discourse.ubuntu.com/t/33261)|
 |January 12 2023|[Anbox Cloud 1.16.2](https://discourse.ubuntu.com/t/33161)|
