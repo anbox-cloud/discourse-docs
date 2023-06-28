@@ -1,6 +1,6 @@
 Anbox Cloud is built using multiple open source software components. This guide lists those components and where to find their license information.
 
-| Open source software | Where to find the license information |
+| Software components | Where to find their licenses |
 |--|--|
 | LXD images | Within the LXD image, <br/>`/usr/share/licenses` and `/opt/mesa/share/licenses` |
 | Android | In the Android container, <br/> **Settings** > **About emulated device** > **Legal information** |
