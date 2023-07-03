@@ -122,6 +122,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/application-creation | [Troubleshoot application creation](https://discourse.ubuntu.com/t/troubleshoot-issues-with-application-creation/35702)|
 | 3 | howto/troubleshoot/container-failures | [Troubleshoot container failures](https://discourse.ubuntu.com/t/troubleshoot-container-failures/35703)|
 | 3 | howto/troubleshoot/lxd-cluster | [Troubleshoot LXD cluster](https://discourse.ubuntu.com/t/troubleshoot-issues-with-lxd-clustering/35705)|
+| 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
@@ -143,24 +144,24 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
-| 2 | ref/license-information | [License information](tbd)
+| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649)
 | 2 | ref/lxd-docs | [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/index)|
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
 | 1 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 2 | exp/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
 | 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
-| 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
+| 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
+| 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
+| 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
-| 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416)
+| 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
 | 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/gpu-support | [GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
-| 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
-| 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
+| 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 0 | | |
 | 1 | anbox/landing | [About the project](https://discourse.ubuntu.com/t/about-the-project/28830) |
 | 2 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
