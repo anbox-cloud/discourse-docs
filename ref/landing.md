@@ -35,7 +35,7 @@ Learn about the available metrics and benchmarks for measuring performance.
 ## Other related information
 | Guides | Description |
 |--|--|
-| [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/) | Link to the LXD documentation (external) |
+| [LXD documentation](https://documentation.ubuntu.com/lxd) | Link to the LXD documentation (external) |
 | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)| Useful terminology for working with Anbox Cloud |
 
 Also check out the [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) for step-by-step instructions that help you get familiar with Anbox Cloud, the [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) for instructions on how to achieve specific goals when using Anbox Cloud and the [Explanation](https://discourse.ubuntu.com/t/explanation/28829) section for background information.

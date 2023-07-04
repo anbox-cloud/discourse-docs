@@ -20,7 +20,7 @@ See [How to join a machine to the Anbox Cloud Appliance](https://discourse.ubunt
 
 In a clustering setup for a full Anbox Cloud deployment, one node is dedicated to host the AMS service (the management node). If you use the streaming stack, two additional nodes are dedicated to host the extra services required for streaming. All other nodes are used as worker nodes.
 
-Each worker node runs [LXD](https://linuxcontainers.org/) in [clustering mode](https://linuxcontainers.org/lxd/docs/latest/clustering/), and this LXD cluster is used to host the Android containers.
+Each worker node runs [LXD](https://ubuntu.com/lxd) in [clustering mode](https://documentation.ubuntu.com/lxd/en/latest/clustering/), and this LXD cluster is used to host the Android containers.
 
 ### Cluster capacity
 
@@ -36,7 +36,7 @@ The current release of Anbox Cloud has no builtin auto scaling implementation bu
 
 The following guidelines are both recommended and must-have aspects of an auto scaling implementation. Make sure that your auto scaling implementation follows these to stay within a supported and tested scope.
 
-1. Don't scale the LXD cluster below three nodes. You should keep three active nodes at all times to ensure the database LXD uses can achieve a quorum and is highly available. If you run below three nodes, your cluster is very likely to get into a non-functional state or be lost completely (see [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/clustering#recover-from-quorum-loss) for more information).
+1. Don't scale the LXD cluster below three nodes. You should keep three active nodes at all times to ensure the database LXD uses can achieve a quorum and is highly available. If you run below three nodes, your cluster is very likely to get into a non-functional state or be lost completely (see [LXD documentation](https://documentation.ubuntu.com/lxd/en/latest/howto/cluster_recover/) for more information).
 1. A single LXD cluster should take no more than 40 nodes.
 1. If you need more than 40 nodes, you should create a separate cluster in a separate Juju model with its own AMS.
 1. Scaling a cluster up with multiple new nodes in parallel is fine and recommended if you need to quickly increase your cluster capacity.

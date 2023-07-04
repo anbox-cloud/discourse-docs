@@ -1,6 +1,6 @@
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components was designed to be fundamentally secure.
 
-For containerisation, Anbox Cloud uses the well established and secure container hypervisor [LXD](https://linuxcontainers.org/). To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD container.
+For containerisation, Anbox Cloud uses the well established and secure container hypervisor [LXD](https://ubuntu.com/lxd). To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD container.
 
 The following sections give more insight into how security is ensured through different aspects of Anbox Cloud.
 
@@ -29,7 +29,7 @@ The following table shows the authentication methods that are in place for the d
 
 ## Container security
 
-Anbox Cloud uses secure and isolated system containers supplied by [LXD](https://linuxcontainers.org/). LXD provides a high degree of flexibility when setting up containers, allowing you to run in a fully secure or less secure way, depending on your requirements. See [Security](https://linuxcontainers.org/lxd/docs/latest/security/) in the LXD documentation for more information about how a LXD setup can be secured.
+Anbox Cloud uses secure and isolated system containers supplied by [LXD](https://ubuntu.com/lxd). LXD provides a high degree of flexibility when setting up containers, allowing you to run in a fully secure or less secure way, depending on your requirements. See [Security](https://documentation.ubuntu.com/lxd/en/latest/security/) in the LXD documentation for more information about how a LXD setup can be secured.
 
 Anbox Cloud uses LXD in a way that enforces the highest security level.
 
