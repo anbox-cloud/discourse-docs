@@ -340,7 +340,7 @@ See [the Juju website](https://juju.is/).
 
 A system container and virtual machine manager that offers a unified user experience around full Linux systems running inside containers or virtual machines. Anbox Cloud is based on LXD.
 
-See [the LXD website](https://linuxcontainers.org/).
+See [the LXD website](https://ubuntu.com/lxd).
 
 <a name="lxd-cluster"></a>
 ### LXD cluster

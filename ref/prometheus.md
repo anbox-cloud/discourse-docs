@@ -230,7 +230,7 @@ Replace `<LXD_server>` with the IP address of your LXD server, which you can det
 * For a full Anbox Cloud deployment: `juju run --unit lxd/0 -- unit-get private-address`
 * For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
 
-The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://linuxcontainers.org/lxd/docs/latest/metrics/#create-metrics-certificate) in the LXD documentation for instructions on how to create a certificate.
+The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://documentation.ubuntu.com/lxd/en/latest/metrics/#add-a-metrics-certificate-to-lxd) in the LXD documentation for instructions on how to create a certificate.
 
 Alternatively, if you are using the Anbox Cloud Appliance, you can also access the LXD metrics through the local Unix socket. In this case, you don't need authentication. To use this method, enter the following command:
 
@@ -238,7 +238,7 @@ Alternatively, if you are using the Anbox Cloud Appliance, you can also access t
 
 ### LXD metrics
 
-You can find the list of metrics that LXD provides in the [LXD documentation](https://linuxcontainers.org/lxd/docs/latest/metrics/#provided-metrics).
+You can find the list of metrics that LXD provides in the [LXD documentation](https://documentation.ubuntu.com/lxd/en/latest/reference/provided_metrics/).
 
 ## WebRTC
 
