@@ -1,4 +1,4 @@
-Developing and testing addons using the Anbox Management Service (AMS) may be time-consuming. Instead, a container with `--devmode` enabled can provide a safe environment to test addons and their scripts without having to upload the addon to the AMS.
+Developing and testing addons using the Anbox Management Service (AMS) may be time-consuming. Instead, a container with `--devmode` enabled can provide a safe environment to develop and test addons and their hooks without having to upload the addon to the AMS.
 
 This guide explains how to use a container in development mode to develop and test an addon using Anbox runtime. See [development mode](https://discourse.ubuntu.com/t/17763#dev-mode) to learn more about development mode enabled containers.
 
@@ -20,7 +20,7 @@ Alternatively, you can use `amc exec <container_id> <command_options>` to direct
 
 Use the container as a remote environment to develop your addon. To make your addon source available within the container, either copy the addon manifest and hooks using the [`lxc file push`](https://documentation.ubuntu.com/lxd/en/latest/howto/instances_access_files/#push-files-from-the-local-machine-to-the-instance) command or clone a git repository using SSH.
 
-You can test your addon scripts by running it inside the container shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works.
+You can test your addon hooks by running it inside the container shell. For example, `ADDON_DIR=$PWD ./hooks/install` can help test if the install hook of the addon works. See [environment variables](https://discourse.ubuntu.com/t/28555#env-variables) for a list of available variables.
 
 To troubleshoot issues within the container, try either of the following options:
 * Run `amc logs <container-id>` on the host to see the Anbox runtime logs.
