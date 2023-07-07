@@ -12,9 +12,10 @@ Due to its highly scalable nature and performance optimisation, delivering devic
 |  [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826)</br>  Get started - a hands-on introduction to Anbox Cloud for new users </br> |  [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) </br> Step-by-step guides covering key operations and common tasks |
 |  [Explanation](https://discourse.ubuntu.com/t/explanation/28829) </br> Concepts - discussion and clarification of key topics, architecture  | [Reference](https://discourse.ubuntu.com/t/reference/28828) </br> Technical information - specifications, APIs |
 
+<a name="project-community"></a>
 ## Project and community
 
-Anbox Cloud is a Canonical product. It originally grew out of the Anbox open-source project, but its code base is now completely independent.
+Anbox Cloud is a Canonical product. It originally grew out of the [Anbox open-source project](https://github.com/anbox), but its code base is now completely independent.
 
 - [Get support through Ubuntu Pro](https://ubuntu.com/support)
 - [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
@@ -67,20 +68,21 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/application/resources | [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)|
 | 3 | howto/application/delete | [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)|
 | 3 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
-| 3 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
-| 3 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
-| 3 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 3 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
 | 3 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
 | 3 | howto/application/extend | [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)|
 | 3 | howto/application/userdata | [Pass custom data](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)|
+| 2 | howto/aar/landing | [Manage AAR](tbd)|
+| 3 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
+| 3 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
+| 3 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
 | 2 | howto/port/landing | [Port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776)|
 | 3 | howto/port/permissions | [Grant permissions](https://discourse.ubuntu.com/t/grant-runtime-permissions/26054)|
 | 3 | howto/port/architecture | [Choose APK architecture](https://discourse.ubuntu.com/t/choose-apk-architecture/26055)|
 | 3 | howto/port/obb-files | [Port APKs with OBB files](https://discourse.ubuntu.com/t/port-apks-with-obb-files/26056)|
 | 3 | howto/port/configure-watchdog | [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057)|
 | 3 | howto/port/install-system-app | [Install APK as a system app](https://discourse.ubuntu.com/t/install-an-apk-as-a-system-app/27086)|
-| 2 | howto/container/landing | [Work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
+| 2 | howto/container/landing | [Manage containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
 | 3 | howto/container/create | [Create a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
 | 3 | howto/container/start | [Start a container](https://discourse.ubuntu.com/t/how-to-start-a-container/33924)|
 | 3 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
