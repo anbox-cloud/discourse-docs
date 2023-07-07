@@ -40,7 +40,5 @@ amc exec $id -- ssh-import-id gh:<user_name>
 amc show $id --format=json | json_pp
 # Connect to the container using SSH
 ssh -p <node_port> root@<public_address>
-# Clone the GitHub repository
-git clone <repository-url>
 ```
 Once you are logged in to the container, you can remotely develop and test your addon within the container. For example, see how to [set up VS Code for remote development using SSH](https://code.visualstudio.com/docs/remote/ssh).
