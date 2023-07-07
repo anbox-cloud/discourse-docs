@@ -16,4 +16,5 @@ repos:
           (?x)^(
             .github/.*
             |release-notes/.*
+            |README.md
           )$
