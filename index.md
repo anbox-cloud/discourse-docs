@@ -72,7 +72,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
 | 3 | howto/application/extend | [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)|
 | 3 | howto/application/userdata | [Pass custom data](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)|
-| 2 | howto/aar/landing | [Manage AAR](tbd)|
+| 2 | howto/aar/landing | [Manage AAR](https://discourse.ubuntu.com/t/manage-aar/36807)|
 | 3 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
 | 3 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
 | 3 | howto/aar/revoke | [Revoke an AAR client](https://discourse.ubuntu.com/t/revoke-an-aar-client/24320)|
