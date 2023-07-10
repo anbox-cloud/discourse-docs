@@ -39,9 +39,9 @@ amc exec $id -- ssh-import-id gh:<user_name>
 # Get the network's public address
 # Run `sudo apt install jq` if `jq` is not already installed
 amc show $id --format=json | jq '.network.public_address'
-# Get the node port
+# Get the SSH port
 amc show $id --format=json | jq '.network.services[0].node_port'
 # Connect to the container using SSH
-ssh -p <node_port> root@<public_address>
+ssh -p <ssh port> root@<public address>
 ```
 Once you are logged in to the container, you can remotely develop and test your addon within the container. For example, see how to [set up VS Code for remote development using SSH](https://code.visualstudio.com/docs/remote/ssh).
