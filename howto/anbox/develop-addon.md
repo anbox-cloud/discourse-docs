@@ -36,8 +36,11 @@ id="$(amc launch --devmode -s ssh --raw)"
 amc exec $id -- apt install -y ssh-import-id
 # Import SSH keys for GitHub; Use lp:<user_name> for Launchpad
 amc exec $id -- ssh-import-id gh:<user_name>
-# Get the <public_address> and <node_port> values of the container
-amc show $id --format=json | json_pp
+# Get the network's public address
+# Run `sudo apt install jq` if `jq` is not already installed
+amc show $id --format=json | jq '.network.public_address'
+# Get the node port
+amc show $id --format=json | jq '.network.services[0].node_port'
 # Connect to the container using SSH
 ssh -p <node_port> root@<public_address>
 ```
