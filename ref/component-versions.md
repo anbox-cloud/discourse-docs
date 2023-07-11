@@ -2,6 +2,83 @@ This documents the versions of the different components for each Anbox Cloud rel
 
 Not all components are updated with each release. When components are not updated, this is called out in the [release notes](https://discourse.ubuntu.com/t/release-notes/17842) and components are marked with `n/a` below.
 
+[Details=1.18.2]
+### Charms
+
+#### Ubuntu 22.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.18/stable` | 134 |
+| `ams-node-controller` | `1.18/stable` | 144 |
+| `coturn` | `1.18/stable` | 137 |
+| `ams` | `1.18/stable` | 148 |
+| `aar` | `1.18/stable` | 141 |
+| `anbox-stream-gateway` | `1.18/stable` | 153 |
+| `ams-load-balancer` | `1.18/stable` | 143 |
+| `ams-lxd` | `1.18/stable` | 139 |
+| `anbox-stream-agent` | `1.18/stable` | 147 |
+| `nats ` | ` latest/stable` | 11 |
+
+#### Ubuntu 20.04
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud-dashboard` | `1.18/stable` | 133 |
+| `ams-node-controller` | `1.18/stable` | 143 |
+| `coturn` | `1.18/stable` | 136 |
+| `ams` | `1.18/stable` | 147 |
+| `aar` | `1.18/stable` | 140 |
+| `anbox-stream-gateway` | `1.18/stable` | 152 |
+| `ams-load-balancer` | `1.18/stable` | 142 |
+| `ams-lxd` | `1.18/stable` | 138 |
+| `anbox-stream-agent` | `1.18/stable` | 146 |
+| `nats ` | ` latest/stable` | 11 |
+
+### Validated revisions of 3rd party charms
+
+n/a
+
+### Bundles
+
+| Name | Channel | Revision |
+|----------|--------------|--------------|
+| `anbox-cloud` | `1.18/stable` | 89 |
+| `anbox-cloud-core` | `1.18/stable` | 94 |
+
+### Snaps
+
+| Name |  Channel | Version |
+|----------|--------------|---------|
+| `ams`    | `1.18/stable` | 1.18.2 |
+| `aar`    | `1.18/stable` | 1.18.2 |
+| `ams-node-controller` | `1.18/stable` | 1.18.2 |
+| `anbox-cloud-dashboard` | `1.18/stable` | 1.18.2 |
+| `anbox-stream-agent` | `1.18/stable` | 1.18.2 |
+| `anbox-stream-gateway` | `1.18/stable` | 1.18.2 |
+| `anbox-cloud-appliance` | `1.18/stable` | 1.18.2 |
+
+
+### Anbox images
+
+| Name | Version |
+|----------|--------------|
+| `jammy:android13:amd64` | 1.18.2 |
+| `jammy:android13:arm64` | 1.18.2 |
+| `jammy:android12:amd64` | 1.18.2 |
+| `jammy:android12:arm64` | 1.18.2 |
+| `jammy:android11:amd64` | 1.18.2 |
+| `jammy:android11:arm64` | 1.18.2 |
+| `jammy:android10:amd64` | 1.18.2 |
+| `jammy:android10:arm64` | 1.18.2 |
+| `bionic:android12:amd64` | 1.18.2 |
+| `bionic:android12:arm64` | 1.18.2 |
+| `bionic:android11:amd64` | 1.18.2 |
+| `bionic:android11:arm64` | 1.18.2 |
+| `bionic:android10:amd64` | 1.18.2 |
+| `bionic:android10:arm64` | 1.18.2 |
+[/Details]
+
 [Details=1.18.1]
 
 ### Charms
