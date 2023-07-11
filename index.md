@@ -18,8 +18,12 @@ Due to its highly scalable nature and performance optimisation, delivering devic
 Anbox Cloud is a Canonical product. It originally grew out of the [Anbox open-source project](https://github.com/anbox), but its code base is now completely independent.
 
 - [Get support through Ubuntu Pro](https://ubuntu.com/support)
-- [Join the Discourse forum to ask questions](https://discourse.ubuntu.com/c/anbox-cloud/49)
+- Forums:
+    - [Ask questions about Anbox Cloud](https://discourse.ubuntu.com/c/anbox-cloud/users/148)
+    - [Contribute to Anbox Cloud documentation](https://discourse.ubuntu.com/c/anbox-cloud/documentation/50)
+    - [Follow Anbox Cloud release announcements](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55)
 - [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
+- [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)
 - [Troubleshoot](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837) and [report](https://bugs.launchpad.net/anbox-cloud/+bugs) issues with Anbox Cloud
 
 Thinking about using Anbox Cloud for your next project? [Get in touch!](https://anbox-cloud.io/contact-us)
@@ -128,6 +132,11 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
+| 2 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
+| 2 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
+| 2 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
+| 2 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
 | 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
@@ -165,12 +174,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/gpu-support | [GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
 | 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 0 | | |
-| 1 | anbox/landing | [About the project](https://discourse.ubuntu.com/t/about-the-project/28830) |
-| 2 | requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 2 | release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
-| 2 | roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
-| 2 | supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
-| 2 | component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 |   | release-notes/1.18.1 | [Release notes-Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
 |   | release-notes/1.18.0 | [Release notes-Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
 |   | release-notes/1.17.2 | [Release notes-Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
@@ -287,4 +290,9 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 | /docs/howto/container/launch | /docs/howto/container/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
+| requirements | /ref/requirements |
+| release-notes | /ref/release-notes |
+| roadmap | /ref/roadmap |
+| component-versions | /ref/component-versions |
+| supported-versions | /ref/supported-versions |
 [/details]
