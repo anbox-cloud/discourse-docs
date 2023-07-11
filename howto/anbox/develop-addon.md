@@ -34,14 +34,14 @@ To troubleshoot issues within the container, try either of the following options
 id="$(amc launch --devmode -s ssh --raw)"
 # Install the ssh-import-id package
 amc exec $id -- apt install -y ssh-import-id
-# Import SSH keys for GitHub; Use lp:<user_name> for Launchpad
-amc exec $id -- ssh-import-id gh:<user_name>
-# Get the network's public address
+# Import SSH keys from GitHub; Use lp:<username> for Launchpad
+amc exec $id -- ssh-import-id gh:<username>
+# Get the container's public IP address
 # Run `sudo apt install jq` if `jq` is not already installed
-amc show $id --format=json | jq '.network.public_address'
+container_address="$(amc show $id --format=json | jq -r '.network.public_address')"
 # Get the SSH port
-amc show $id --format=json | jq '.network.services[0].node_port'
+node_port="$(amc show $id --format=json | jq -r '.network.services[0].node_port')"
 # Connect to the container using SSH
-ssh -p <ssh port> root@<public address>
+ssh -p "$node_port" root@"$container_address"
 ```
 Once you are logged in to the container, you can remotely develop and test your addon within the container. For example, see how to [set up VS Code for remote development using SSH](https://code.visualstudio.com/docs/remote/ssh).
