@@ -15,7 +15,7 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
-|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/tbd)
+|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)
 |June 14 2023|[Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
 |May 17 2023|[Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
 
