@@ -18,7 +18,7 @@ Not all components are updated with each release. When components are not update
 | `ams-load-balancer` | `1.18/stable` | 143 |
 | `ams-lxd` | `1.18/stable` | 139 |
 | `anbox-stream-agent` | `1.18/stable` | 147 |
-| `nats ` | ` latest/stable` | 11 |
+| `nats ` | `latest/stable` | 11 |
 
 #### Ubuntu 20.04
 
@@ -33,7 +33,7 @@ Not all components are updated with each release. When components are not update
 | `ams-load-balancer` | `1.18/stable` | 142 |
 | `ams-lxd` | `1.18/stable` | 138 |
 | `anbox-stream-agent` | `1.18/stable` | 146 |
-| `nats ` | ` latest/stable` | 11 |
+| `nats ` | `latest/stable` | 11 |
 
 ### Validated revisions of 3rd party charms
 
@@ -77,6 +77,7 @@ n/a
 | `bionic:android11:arm64` | 1.18.2 |
 | `bionic:android10:amd64` | 1.18.2 |
 | `bionic:android10:arm64` | 1.18.2 |
+
 [/Details]
 
 [Details=1.18.1]
