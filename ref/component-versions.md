@@ -43,8 +43,8 @@ n/a
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.18/stable` | 89 |
-| `anbox-cloud-core` | `1.18/stable` | 94 |
+| `anbox-cloud` | `1.18/stable` | 90 |
+| `anbox-cloud-core` | `1.18/stable` | 95 |
 
 ### Snaps
 
