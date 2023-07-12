@@ -2044,7 +2044,7 @@ Supported update field            |   Description
 `gpu_slots` | (number) Slots on the GPU available to containers
 `gpu_encoder_slots` | (number) Slots on the GPU encoders available to containers
 `tags` | (string) User defined tags
-`unscheduable` | (Boolean) Whether this LXD node is schedulable by AMS. (The typo in the field name will be fixed in an upcoming release.)
+`unschedulable` | (Boolean) Whether this LXD node is schedulable by AMS.
 
 A sample payload as follows:
 
