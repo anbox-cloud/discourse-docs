@@ -2,12 +2,11 @@ This tutorial guides you through the first steps of managing Anbox Cloud from th
 
 The tutorial focuses on using the command line to work with Anbox Cloud, which gives you access to all features of Anbox Cloud. Alternatively, you can use the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871), which provides a simpler user interface but does not support all functionality. See the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial for an introduction on how to use the web dashboard.
 
-[note type="information" status="Important"]
+## Preparation
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
 * [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
 * [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)
-[/note]
 
 ## 1. Run AMC
 

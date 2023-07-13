@@ -1,8 +1,4 @@
-You can fine-tune the WebRTC streamer implementation in Anbox Cloud to provide better results in certain situations.
-
-[note type="information" status="Note"]
-The default configuration is optimised to provide a good balance between low latency and high quality, and usually, you don't need to adjust it.
-[/note]
+Usually you wouldn't need to adjust the default WebRTC streamer configuration because it is optimised to provide a good balance between low latency and high quality. However, you can still fine-tune it to provide better results in certain situations.
 
 Place the WebRTC streamer configuration at `/var/lib/anbox/streamer.json` within the Anbox container before the Anbox runtime starts. The configuration can be shipped as part of an [application](https://discourse.ubuntu.com/t/managing-applications/17760) or an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
 

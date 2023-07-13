@@ -87,7 +87,7 @@ The `amc wait` command returns when your application is ready to launch. You can
 amc launch my-application --service +ssh
 ```
 
-[note type="information" status="Note"]The SSH port 22 is closed by default. Therefore, we open it by [exposing its service](https://anbox-cloud.io/docs/howto/container/expose-services).[/note]
+The SSH port 22 is closed by default. In the above command, we open it by [exposing its service](https://anbox-cloud.io/docs/howto/container/expose-services) by using `--service`.[/note]
 
 You can now access your container via SSH:
 ```bash

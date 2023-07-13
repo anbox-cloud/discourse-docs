@@ -13,7 +13,7 @@ The dashboard comes pre-installed when you deploy [Anbox Cloud with the streamin
 
 To access the dashboard, go to `https://<your-machine-address>/`.
 
-[note type="information" status="Note"]The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.[/note]
+The dashboard uses self-signed certificates. You might see a warning from your browser and have to accept the certificates manually.
 
 ### Granting access
 

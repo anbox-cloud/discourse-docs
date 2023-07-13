@@ -335,7 +335,7 @@ Alternatively, you can follow the steps below:
 The following example demonstrates how to send a message with the Anbox
 Platform API to a remote client:
 
-```
+```java
 import com.canonical.anbox.PlatformAPISkeleton;
 
 public class FakeCameraActivity extends AppCompatActivity {
@@ -344,8 +344,8 @@ public class FakeCameraActivity extends AppCompatActivity {
      public void onResume() {
         super.onResume();
 
-        String type = “message-type”;
-        String data = ”message-data”;
+        String type = “message-type”; //Size is limited to 256 KB
+        String data = ”message-data”; //Size is limited to 1 MB
         PlatformAPISkeleton api_skeleton = new PlatformAPISkeleton();
         if (!api_skeleton.sendMessage(type, data)) {
             Log.e(TAG, "Failed to send a message type " + type + " to Anbox session");
@@ -353,8 +353,6 @@ public class FakeCameraActivity extends AppCompatActivity {
     }
 }
 ```
-
-[note type="information" status="Note"]The length for the message type is limited to 256 KB, and the length of the data is limited to 1 MB.[/note]
 
 ### Receive message on the client
 

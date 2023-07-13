@@ -115,7 +115,7 @@ Replace `<IP_address>` with the IP address of the machine on which you deployed 
 
     juju status --format yaml nagios/0 | grep public-address
 
-[note type="information" status="Note"]If you have deployed more than one Nagios unit, you might need to replace the `0` in `nagios/0` with the suitable unit ID. Check `juju status` if you are in doubt.[/note]
+If you have deployed more than one Nagios unit, you might need to replace the `0` in `nagios/0` with the suitable unit ID. Check `juju status` if you are in doubt.
 
 You must enter your user name and password to log in. The user name is `nagiosadmin`. You can determine the password by running the following command (note that you might need to replace the `0` as mentioned above):
 

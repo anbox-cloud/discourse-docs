@@ -201,7 +201,7 @@ You must enter your user name and password to log in. The user name is `admin`. 
 
     juju run-action --wait grafana/0 get-admin-password
 
-[note type="information" status="Note"]If you have deployed more than one Grafana unit, you might need to replace the `0` in `grafana/0` with the suitable unit ID. Check `juju status` if you are in doubt.[/note]
+If you have deployed more than one Grafana unit, you might need to replace the `0` in `grafana/0` with the suitable unit ID. Check `juju status` if you are in doubt.
 
 The response should look similar to this:
 
