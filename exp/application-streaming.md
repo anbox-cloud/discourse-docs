@@ -42,7 +42,7 @@ The following provides an overview of the process:
  5. Each network path is bundled in an `ICE candidate`. There are usually multiple ICE candidates per peer and both sides negotiate the best candidate pair.
  6. Both peer agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway web socket and talk directly to each other.
 
-[note type="information" status="Note"]The server itself does not need to know about the messages content, it just has to forward messages from one peer to the other.[/note]
+[note type="information" status="Note"]The server does not need to know about the content of the messages, it just has to forward messages from one peer to the other.[/note]
 
 ### 3. Establishing the stream
 
@@ -55,10 +55,8 @@ In order to support low latency encoding the list of supported video codecs is l
 
 Currently supported video codecs are:
 
- * H.264
+ * H.264 - The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). Ensure you have the rights to stream H.264 encoded video content to your users.
  * VP8
-
-[note type="information" status="Important"]The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). It's your obligation to ensure you have the rights to stream H.264 encoded video content to your users.[/note]
 
 In the future we plan to add support for:
 

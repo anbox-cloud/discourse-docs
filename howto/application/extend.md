@@ -13,7 +13,7 @@ A hook is a script file that runs a series of commands at a specific time in the
 The general steps for creating a hook are as follows:
 
 1. Create or download any files or applications that the hook needs. For example, this could be configuration files or Android applications that you want to run.
-1. In a `hooks/` sub-directory, create a script file with the commands that you want to run. As file name, use the name of the hook.
+1. In a `hooks/` sub-directory, create a script file with the commands that you want to run. As the file name, use the name of the hook.
 
    [note type="information" status="Tip"]
 
@@ -175,6 +175,4 @@ addons: [my-addon]
 
 The application will now execute the hook and you should see that, for example, the system locale is changed or the standard Android launcher is replaced.
 
-[note type="information" status="Tip"]
-See [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) for detailed instructions on how to create an addon, and the [addon reference](https://discourse.ubuntu.com/t/addons/25293) for further information.
-[/note]
+For more information, see [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) and the [addon reference guide](https://discourse.ubuntu.com/t/addons/25293).

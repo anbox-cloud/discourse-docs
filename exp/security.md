@@ -39,7 +39,7 @@ Many container managers use privileged containers, which means that the containe
 
 Anbox Cloud uses unprivileged LXD containers only, which fully isolates the containers and ensures that they cannot gain root privileges. In addition, the Android container that runs inside the LXD container also runs as an unprivileged container. This method isolates the Android container twice, with the result that if the encapsulation of either the LXD container or the Android container should fail, the system would still be protected.
 
-[note type="information" status="Important"]
+[note type="caution" status="Warning"]
 While containers are fully isolated, all containers currently use the same GPU resources. As a result, any container that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other containers from starting.
 
 See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.

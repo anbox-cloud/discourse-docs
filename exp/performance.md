@@ -26,14 +26,16 @@ Generally, applications should use the smallest suitable instance type. However,
 
 AMS has different modes to grant CPU access to a container. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
 
-* `scheduler` - This mode uses the LXD [`limits.cpu.allowance`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
-* `pinning` - This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balance all running containers on all available cores.
+* `scheduler` :
+
+    This mode uses the LXD [`limits.cpu.allowance`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
+* `pinning` :
+
+   This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balance all running containers on all available cores.
+
+   Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default starting with Ubuntu 22.04 and can be enabled on Ubuntu 20.04 by booting with `systemd.unified_cgroup_hierarchy=1` added to [the kernel boot parameters](https://wiki.ubuntu.com/Kernel/KernelBootParameters).
 
 By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases  that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
-
-[note type="information" status="Note"]
-Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default starting with Ubuntu 22.04 and can be enabled on Ubuntu 20.04 by booting with `systemd.unified_cgroup_hierarchy=1` added to [the kernel boot parameters](https://wiki.ubuntu.com/Kernel/KernelBootParameters).
-[/note]
 
 <a name="hardware-setup"></a>
 ## Hardware and network setup

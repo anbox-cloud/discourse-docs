@@ -38,18 +38,15 @@ The port to use is always `8444`, the same AMS is listening on.
 
 ## Anbox Streaming Stack
 
-[note type="caution" status="Warning"]If you are upgrading from 1.4 or earlier, check [the upgrade instructions](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750).[/note]
+If you are upgrading from 1.4 or earlier, check [the upgrade instructions](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) before proceeding.
 
-In the Streaming Stack, both the Agent and the Gateway can be run in HA.
+In the Streaming Stack, both the Agent and the Gateway can be run in HA. We recommend a minimum of 3 machines for the Streaming Stack.
 
     juju add-unit anbox-stream-gateway -n 2
     juju add-unit anbox-stream-agent -n 2
     juju relate anbox-stream-gateway:api anbox-stream-gateway-lb:reverseproxy
 
 This would give you 3 instances of both the Stream Gateway and the Stream Agent.
-
-[note type="information" status="Note"]We recommend a minimum of 3 machines for the Streaming Stack.[/note]
-
 
 ## Checking status
 

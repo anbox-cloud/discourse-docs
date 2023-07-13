@@ -6,9 +6,7 @@ This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts 
 
 A platform module must be built on the same version of Ubuntu as the Anbox runtime. This means that if you're using one of the Anbox images based on Ubuntu 22.04 (for example, `jammy:android12:arm64`), you must build on Ubuntu 22.04.
 
-[note type="information" status="Note"]
-If you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker container or on another machine).
-[/note]
+However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker container or on another machine).
 
 To get started, you must first install the [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk).
 

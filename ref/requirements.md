@@ -11,13 +11,9 @@ The following requirements apply to all variants of Anbox Cloud.
 
 After registering to Anbox Cloud, you should have received an [Ubuntu Pro](https://ubuntu.com/pro) token. If you haven't received one, please contact [support](https://support.canonical.com/) or your Canonical account representative as you'll need it to deploy Anbox Cloud.
 
-[note type="information" status="Note"]When [installing the Anbox Cloud Appliance from the AWS Marketplace](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703), the Ubuntu Pro token is included in the Anbox Cloud Appliance subscription and is used under the hood during the deployment. Therefore, you will not receive it separately.[/note]
-
 ### Ubuntu OS
 
-Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported.
-
-[note type="information" status="Important"]You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on an Ubuntu Desktop installation is not supported.[/note]
+Anbox Cloud is supported only on the [Ubuntu](https://ubuntu.com/) operating system. Other Linux-based operating systems are not supported. You must run either the [server](https://ubuntu.com/download/server) or the [cloud](https://ubuntu.com/download/cloud) variant of Ubuntu. Running Anbox Cloud on an Ubuntu Desktop installation is not supported.
 
 See [Ubuntu version for the Anbox Cloud Appliance](#appliance-ubuntu-version) or [Ubuntu version for Juju-based deployments](#ac-ubuntu-version) for information about the supported Ubuntu versions.
 
@@ -81,9 +77,7 @@ Anbox Cloud currently supports the following LXD versions:
 <a name="juju-version"></a>
 ### Juju version
 
-Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Starting with Anbox Cloud 1.13, the required Juju version is **2.9**.
-
-[note type="information" status="Note"]If you are using Anbox Cloud 1.11 or earlier, the required Juju version is **2.8**.[/note]
+Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Starting with Anbox Cloud 1.13, the required Juju version is **2.9**. If you are using Anbox Cloud 1.11 or earlier, the required Juju version is **2.8**.
 
 You can install Juju 2.9 with the following command:
 
