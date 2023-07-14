@@ -37,9 +37,6 @@ If you are using the `amc` snap on your machine, you can tell it to use the load
 The port to use is always `8444`, the same AMS is listening on.
 
 ## Anbox Streaming Stack
-
-If you are upgrading from 1.4 or earlier, check [the upgrade instructions](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750) before proceeding.
-
 In the Streaming Stack, both the Agent and the Gateway can be run in HA. We recommend a minimum of 3 machines for the Streaming Stack.
 
     juju add-unit anbox-stream-gateway -n 2

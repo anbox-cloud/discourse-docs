@@ -35,7 +35,7 @@ AMS has different modes to grant CPU access to a container. The `cpu.limit_mode`
 
    Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default starting with Ubuntu 22.04 and can be enabled on Ubuntu 20.04 by booting with `systemd.unified_cgroup_hierarchy=1` added to [the kernel boot parameters](https://wiki.ubuntu.com/Kernel/KernelBootParameters).
 
-By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases  that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
+By default, AMS uses the `scheduler` option, because it provides the most generic solution to a large set of use cases that Anbox Cloud supports. However, in some cases CPU pinning might be the better option to distribute load across all available CPU cores on a system.
 
 <a name="hardware-setup"></a>
 ## Hardware and network setup

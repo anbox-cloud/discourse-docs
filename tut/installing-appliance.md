@@ -53,9 +53,9 @@ If LXD is already installed but the version is older than 5.0, run:
 
 The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
 
-Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Pro token:
+Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<pro_token>* with your Ubuntu Pro token:
 
-    sudo ua attach <UA_token>
+    sudo ua attach <pro_token>
 
 ### 4. Install the snap
 

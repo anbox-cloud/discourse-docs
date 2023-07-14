@@ -344,8 +344,8 @@ public class FakeCameraActivity extends AppCompatActivity {
      public void onResume() {
         super.onResume();
 
-        String type = “message-type”; //Size is limited to 256 KB
-        String data = ”message-data”; //Size is limited to 1 MB
+        String type = "message-type"; //Size is limited to 256 KB
+        String data = "message-data"; //Size is limited to 1 MB
         PlatformAPISkeleton api_skeleton = new PlatformAPISkeleton();
         if (!api_skeleton.sendMessage(type, data)) {
             Log.e(TAG, "Failed to send a message type " + type + " to Anbox session");

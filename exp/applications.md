@@ -44,7 +44,7 @@ In general, the bootstrap process goes through the following steps in order:
 
 If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be set to `error` and the application status is set to `error` as well.
 
-Remember that an application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the application status is set to `error`.
+Remember that an application crash or ANR upon APK installation causes the bootstrap process to terminate abnormally and the application status is set to `error`.
 
 The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the container status is set to `error`.
 

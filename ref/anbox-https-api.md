@@ -240,7 +240,7 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 
 After this, when opening a camera application, the uploaded image should be displayed in the preview.
 
-If a static image already exists in Anbox Cloud, when you issue the above request next time, the image will be overridden.
+If a static image already exists in Anbox Cloud, when you issue the above request next time, the existing image will be overridden.
 
 [note type="information" status="Note"]Irrespective of whether the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request. Anbox Cloud will rotate the image automatically for you based on current screen orientation.[/note]
 

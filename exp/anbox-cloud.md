@@ -31,7 +31,7 @@ See the following table for a comparison of features for the different variants:
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
-Always start with the Anbox Cloud Appliance. You can expand to a full Anbox Cloud installation later.
+We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a full Anbox Cloud installation later.
 
 ## Anbox Cloud Components
 
