@@ -27,15 +27,11 @@ To configure a feature for one application in the manifest, use a syntax similar
 
 #### System UI
 
-*since 1.10.2*
-
 By default, Anbox hides the Android system UI when an application is running in foreground mode. In some use cases, however, it's required to have the system UI available for navigation purposes. This can be enabled with the `enable_system_ui` feature flag.
 
 The feature flag will be considered by all new launched containers once set.
 
 #### Virtual Keyboard
-
-*since 1.9.0*
 
 The Android virtual keyboard is disabled by default but can be enabled with the `enable_virtual_keyboard` feature flag.
 
@@ -43,23 +39,17 @@ For the feature to be considered, applications must be manually updated, because
 
 #### Client-Side Virtual Keyboard
 
-*since 1.11.0*
-
 The client-side virtual keyboard is disabled by default but can be enabled with the `enable_anbox_ime` feature flag. It requires the client application to embed [Anbox WebView](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643) which interacts with the client-side virtual keyboard for text editing and sends the text to the Android container.
 
 For the feature to be considered, applications must be manually updated, because changes to allow the feature to work are only applied during the [application bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap).
 
 #### WiFi
 
-*since 1.12.0*
-
 WiFi support can be optionally enabled with the `enable_wifi` feature flag. Anbox will then set up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection.
 
 The feature flag will be considered by all newly launched containers once set.
 
 #### Android reboot
-
-*since 1.12.0*
 
 By default, Android is not allowed to reboot. With the `allow_android_reboot` feature flag, this can be allowed.
 
