@@ -240,9 +240,9 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 
 After this, when opening a camera application, the uploaded image should be displayed in the preview.
 
-Here is a caveat about the size of a JPEG image to be uploaded to Anbox. Irrespective of the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request, Anbox will rotate the image automatically for you based on current screen orientation.
+If a static image already exists in Anbox Cloud, when you issue the above request next time, the existing image will be overridden.
 
-[note type="information" status="Note"]If a static image already exists in Anbox, when you issue the above request next time, the image will be overridden.[/note]
+[note type="information" status="Note"]Irrespective of whether the screen orientation is in landscape or portrait, the size of the uploaded JPEG image must match one of the resolutions you got from the response to the camera info request. Anbox Cloud will rotate the image automatically for you based on current screen orientation.[/note]
 
 #### DELETE
 
@@ -274,7 +274,7 @@ For example, for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
 ```
 
-[note type="information" status="Note"]The returned socket path is not fixed. It varies when you toggle camera support in Anbox via the above API.[/note]
+The returned socket path is not fixed. It varies when you toggle camera support in Anbox via the above API.
 
 For example, you have a mp4 video file available in the container, to stream video content to Anbox
 
@@ -370,7 +370,7 @@ Return value for `curl -s --unix-socket /run/user/1000/anbox/sockets/api.unix -X
 The sensor data is in the form of the following JSON  data structure and all values in the data are represented as floating-point data.
 
 Sensor Type       | JSON Data structure |
-------------------|---------------------|-------------------------
+------------------|---------------------|
 `acceleration`    | {"type": "acceleration", "x": \<data\>, "y": \<data\>, "z": \<data\>} |
 `gyroscope`       | {"type": "gyroscope", "x": \<data\>, "y": \<data\>, "z": \<data\>} |
 `magnetic-field`  | {"type": "magnetic-field", "x": \<data\>, "y": \<data\>, "z": \<data\>} |

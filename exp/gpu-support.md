@@ -40,6 +40,6 @@ If you want to let an application use the GPU (even if you are not interested in
 
 ## Force software rendering and video encoding
 
-[note type="information" status="Note"]Software rendering and video encoding will utilise the CPU. This will mean you can run less containers on a system than you can when you have a GPU.[/note]
+It is possible to instruct a container to run with software rendering. To do so, change the [instance type](https://discourse.ubuntu.com/t/instance-types/17764) or [resources](https://discourse.ubuntu.com/t/configure-available-resources/24960) of the application to not require a GPU. Anbox Cloud will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.
 
-It is possible to tell a container to run with software rendering. For that, simply change the [instance type](https://discourse.ubuntu.com/t/instance-types/17764) or [resources](https://discourse.ubuntu.com/t/configure-available-resources/24960) of the application to not require a GPU. Anbox will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.
+Since software rendering and video encoding will utilise the CPU, you won't be able to run as many containers on a system when compared to running containers when you have a GPU.

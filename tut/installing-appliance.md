@@ -1,10 +1,8 @@
 The Anbox Cloud Appliance provides a deployment of Anbox Cloud to a single machine. This offering is well suited for initial prototype and small scale deployments.
 
-[note type="information" status="Note"]
-There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine. To install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702).
+There are differences between the Anbox Cloud Appliance and the full Anbox Cloud installation (see [Variants](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#variants)). This tutorial focuses on installing the **Anbox Cloud Appliance** on a single dedicated machine.
 
-For instructions on how to install **Anbox Cloud**, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336).
-[/note]
+If you want to install **Anbox Cloud** instead, see [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) or if you want to install the appliance on a cloud platform, see [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702).
 
 This tutorial guides you through the steps that are required to install and initialise the Anbox Cloud Appliance on the machine from the [snap](https://snapcraft.io/anbox-cloud-appliance):
 
@@ -55,9 +53,9 @@ If LXD is already installed but the version is older than 5.0, run:
 
 The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
 
-Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<UA_token>* with your Ubuntu Pro token:
+Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<pro_token>* with your Ubuntu Pro token:
 
-    sudo ua attach <UA_token>
+    sudo ua attach <pro_token>
 
 ### 4. Install the snap
 
@@ -73,9 +71,7 @@ The appliance requires a few additional tools. Run the following commands to ins
     sudo snap install amc
     sudo snap install --classic --channel=2.9/stable juju
 
-[note type="information" status="Note"]
 See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
-[/note]
 
 <a name="initialise"></a>
 ## Initialise the appliance

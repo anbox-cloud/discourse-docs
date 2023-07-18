@@ -109,8 +109,6 @@ The command will ask for your approval before the version is removed as it might
 <a name="configure-automatic-updates"></a>
 ## Configure automatic application updates
 
-*since 1.11.0*
-
 AMS automatically updates an application whenever any of its dependencies (parent image, addons, global configuration) changes. This produces a new version for the application, which is automatically published if the `application.auto_publish` configuration item is enabled.
 
 In some cases, an automatic update is not wanted. To support this, AMS allows disabling automatic application updates via the `application.auto_update` configuration update.

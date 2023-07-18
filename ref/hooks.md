@@ -43,6 +43,4 @@ hooks:
 ...
 ```
 
-A hook that runs into a timeout exits with an error.
-
-[note type="information" status="Note"]Values longer than 15 minutes are considered invalid.[/note]
+A hook that runs into a timeout exits with an error. Timeout values longer than 15 minutes are considered invalid.

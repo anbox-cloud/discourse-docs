@@ -42,11 +42,11 @@ In general, the bootstrap process goes through the following steps in order:
 
 ![Application bootstrap process|571x653](https://assets.ubuntu.com/v1/7eed04fd-application-bootstrap.png)
 
-If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be marked with `error` and the application's status will end up with `error` as well.
+If one of the steps fails, AMS will interrupt the bootstrap process and make the entire process fail. As a result, the status of the base container will be set to `error` and the application status is set to `error` as well.
 
-[note type="information" status="Note"]An application crash or ANR upon APK installation will cause the bootstrap process to terminate abnormally and the status of application is set to `error` too.[/note]
+Remember that an application crash or ANR upon APK installation causes the bootstrap process to terminate abnormally and the application status is set to `error`.
 
-The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the container is marked with the status `error`.
+The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the container status is set to `error`.
 
 When a base container runs into an error status, you can see what has gone wrong there by checking the error message with `amc show <container ID>`:
 

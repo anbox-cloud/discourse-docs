@@ -2,12 +2,11 @@ This tutorial guides you through the first steps of using Anbox Cloud. You will 
 
 The web dashboard provides an easy-to use interface to Anbox Cloud. However, it currently supports a limited set of functionality, which means that it might not be sufficient for all use cases. If you want to learn how to manage Anbox Cloud from the command line, see the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial.
 
-[note type="information" status="Important"]
+## Preparation
 If you haven't installed Anbox Cloud or the Anbox Cloud Appliance yet, you must do so before you can continue with this tutorial. See the following documentation for installation instructions:
 
 - [How to install the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702)
 - [How to install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336) (note that you must install the streaming stack for the web dashboard to be available)
-[/note]
 
 <a name="virtual-device"></a>
 ## 1. Create a virtual device
@@ -18,9 +17,7 @@ Let's start exploring what Anbox Cloud can do by launching a virtual device that
 
 Complete the following steps to create a virtual device:
 
-1. Open `https://<your-machine-address>/applications` in your browser.
-
-   [note type="information" status="Note"]By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.[/note]
+1. Open `https://<your-machine-address>/applications` in your browser. By default, the Anbox Cloud Appliance uses self-signed certificates, which might cause a security warning in your browser. Use the mechanism provided by your browser to proceed to the web page.
 2. Click **Add Application**.
 3. Enter a name for the application, for example, `virtual-device-web`.
 4. Keep the preselected instance type.

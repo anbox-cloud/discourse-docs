@@ -195,7 +195,7 @@ Name                  | Value type | Description
 ----------------------|------------|-------------------------
 `keep`                |  array     | Contents under the [APP_DIR](https://discourse.ubuntu.com/t/hooks/28555#env-variables) directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
 
-To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved (the `manifest.yaml` file and the `hooks` directory, if present). If a hook requires any other files under the `APP_DIR` directory during the regular container runtime, you must include them in the application image.
+To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular container runtime, you must include them in the application image.
 
 ```yaml
 name: my-application
@@ -208,4 +208,4 @@ bootstrap:
 
 This will include the `scripts` folder and all APK files under the `apks` folder in the application image when the bootstrap is done, so that they are available to use during the regular container runtime.
 
-[note type="information" status="Note"]Because it contains metadata, the `manifest.yaml` file and the `hooks` directory (if present) are not removed when the application bootstrap is finished and are always kept in the application image even if they are not explicitly defined in the `keep` list under the `bootstrap` attribute.[/note]
+Because it contains metadata, the `manifest.yaml` file and the `hooks` directory (if present) are not removed when the application bootstrap is finished and are always kept in the application image even if they are not explicitly defined in the `keep` list under the `bootstrap` attribute.

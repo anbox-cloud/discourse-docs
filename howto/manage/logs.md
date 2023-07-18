@@ -78,7 +78,7 @@ The logging level can be set like this:
 
 This command sets the logging level for all units to `TRACE`.
 
-[note type="caution" status="Warning"]It isn't a good idea to leave the logging level at `TRACE` for any longer than you actually need to. Verbose logging not only consumes network bandwidth but also fills up the database on the controller.[/note]
+Do not leave the logging level at `TRACE` for longer than you need. Verbose logging not only consumes network bandwidth but also fills up the database on the controller.
 
 ## View logs for the Anbox Cloud Appliance
 

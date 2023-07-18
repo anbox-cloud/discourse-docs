@@ -31,9 +31,7 @@ See the following table for a comparison of features for the different variants:
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
-[note type="information" status="Tip"]
-We recommend to always start with the Anbox Cloud Appliance. You can expand to a full Anbox Cloud installation later.
-[/note]
+We recommend starting with the Anbox Cloud Appliance. You can choose to expand to a full Anbox Cloud installation later.
 
 ## Anbox Cloud Components
 
@@ -92,8 +90,6 @@ You also need an additional machine to host the streaming stack control plane wi
 
   * **Stream gateway** - The central component that connects clients with agents. Its role is to choose the best possible subcluster depending on the user location and server capacities.
   * **NATS** - A messaging system that the different components use to communicate. NATS is  responsible for the communication between the stream gateway and the stream agent. For more information, see [NATS protocol](https://docs.nats.io/reference/reference-protocols/nats-protocol).
-
-[note type="information" status="Note"] Currently, these two components must actually be hosted on different machines because they have different operating system requirements.[/note]
 
 You will be required to provide one or more frontend services. A frontend service authenticates the client with the stream gateway and can provide other functionality, such as, selecting a game.
 

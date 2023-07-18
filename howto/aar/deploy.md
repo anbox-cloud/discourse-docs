@@ -3,7 +3,7 @@ An [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application
 Use the following commands to deploy an AAR:
 
     juju deploy aar
-    juju config aar ua_token=<your UA token>
+    juju config aar ua_token=<your Ubuntu Pro token>
 
 ## Using the AWS S3 storage backend
 
