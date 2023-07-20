@@ -30,7 +30,7 @@ If a container stops with an error, its disk space is preserved for inspection. 
 <a name="gpu-slots"></a>
 ### GPU slots
 
-An additional aspect to take into account when planning your resources is the number of required GPU slots (see [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) for more information).
+An additional aspect to take into account when planning your resources is the number of required GPU slots (see [GPUs and containers](https://discourse.ubuntu.com/t/17768) for more information).
 
 GPUs have limited capacity that can be shared amongst multiple containers, and GPU slots are a way to fine-tune how many containers can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots) for instructions).
 

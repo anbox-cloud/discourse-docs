@@ -147,7 +147,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
 | 3 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
 | 2 | ref/instance-types | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
-| 2 | ref/platforms | [Anbox platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
 | 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
@@ -155,6 +154,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
+| 2 | ref/supported-rendering-resources | [Supported rendering resources](tbd)
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
 | 2 | ref/supported-video-codecs | [Supported video codes](tbd)
 | 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649)
@@ -169,11 +169,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
+| 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
 | 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416)
 | 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
 | 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
-| 2 | exp/gpu-support | [GPU support](https://discourse.ubuntu.com/t/gpu-support/17768)|
+| 2 | exp/gpus-containers | [GPUs and containers](https://discourse.ubuntu.com/t/17768)|
 | 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 0 | | |
 |   | release-notes/1.18.2 | [Release notes-Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
@@ -282,6 +283,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/manage/managing-containers | /docs/exp/containers |
 | /docs/manage/capacity-planning | /docs/exp/clustering |
 | /docs/manage/gpu-support | /docs/exp/gpu-support |
+| /docs/exp/gpu-support | /docs/exp/gpus-containers |
 | /docs/manage/benchmarking-a-deployment | /docs/exp/benchmarking |
 | /docs/manage/streaming-android-applications | /docs/exp/application-streaming |
 | /docs/usage/usecase-port-android-application-to-anbox-cloud | /docs/exp/porting-issues |
@@ -298,4 +300,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | roadmap | /ref/roadmap |
 | component-versions | /ref/component-versions |
 | supported-versions | /ref/supported-versions |
+| docs/ref/platforms | docs/exp/platforms |
 [/details]
