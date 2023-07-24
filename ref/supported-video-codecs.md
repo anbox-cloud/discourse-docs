@@ -12,4 +12,4 @@ In the future we plan to add support for:
  * VP9
  * AV1
 
-Availability of additional codecs depends on them being supported by the GPU vendors in their hardware encoding solutions or if a viable software encoding solution exists.
+Availability of additional codecs depends on them being supported by the GPU vendors in their hardware encoding solutions or if a viable software encoding solution exists. See [Release roadmap](https://discourse.ubuntu.com/t/19359) for future versions of Anbox Cloud and planned features.

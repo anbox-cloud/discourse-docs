@@ -35,7 +35,7 @@ The following is an overview of the signalling process:
  5. Each network path is bundled in an `ICE candidate`. There are usually multiple ICE candidates per peer and both sides negotiate the best candidate pair.
  6. Both peers agree on the best network path (`ICE candidate`) and start the actual streaming. At this point, they stop communicating through the Gateway web socket and communicate directly with each other.
 
-Details about messages exchanged between the client and the container are not covered in this guide, but you can find more information [here](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
+Details about messages exchanged between the client and the container are not covered in this guide, but you can find more information on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling).
 
 ### 3. Establishing the stream
 

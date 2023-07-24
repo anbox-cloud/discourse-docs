@@ -10,7 +10,7 @@ To have a better understanding of the rendering architecture of Anbox Cloud, it 
 
 Anbox Cloud has two rendering pipeline models - one for NVIDIA and the other for Intel and AMD. However, irrespective of the GPU that you use, the path of a frame typically looks like this: Android application > SurfaceFlinger > Hardware composer > Anbox Cloud > Display on screen or send it to streaming component.
 
-For communication between the hardware composer module on the Android side and Anbox runtime, we use Wayland protocol. So Anbox Cloud really functions as a compositor for Android i.e., the hardware composer module receives frames from the SurfaceFlinger and notifies Anbox runtime using Wayland. The Anbox runtime then submits the frame towards its output, which is either the screen or the streaming component.
+For communication between the hardware composer module on the Android side and Anbox runtime, we use the Wayland protocol. So Anbox Cloud really functions as a compositor for Android i.e., the hardware composer module receives frames from the SurfaceFlinger and notifies Anbox runtime using Wayland. The Anbox runtime then submits the frame towards its output, which is either the screen or the streaming component.
 
 ### For NVIDIA
 
