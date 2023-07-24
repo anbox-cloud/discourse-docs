@@ -17,7 +17,7 @@ The output of this command provides the access token. Make a note of this token 
 
 ### Create an application
 
-Follow the instructions in [How to create an application](https://discourse.ubuntu.com/t/24198) and create an application.
+Follow the instructions in [How to create an application](https://discourse.ubuntu.com/t/24198) and create an application. You can create any application, the application type does not matter.
 
 ## Set up the stream client
 Create a directory to set up the stream client:
@@ -42,14 +42,14 @@ Create a `demo.html` file inside `/srv/stream-client` with the following content
         // Run `juju status` to get the stream gateway IP/domain name
         // Replace 'https://gateway.url.net' with the stream gateway IP/domain name
         url: 'https://gateway.url.net',
-        //Use the access token created earlier as 'YOUR_AUTH_TOKEN'
+        // Use the access token created earlier as 'YOUR_AUTH_TOKEN'
         authToken: 'YOUR_AUTH_TOKEN',
         session: {
             // Run `amc list` to see a list of all applications
             // Replace `com.foo.bar` with your application name
             app: "com.foo.bar",
         },
-        // Set the display resolution and frame rate for the Android container
+        // Adjust the display resolution and frame rate for the Android container as per your requirements
         screen: {
             width: 1280,
             height: 720,
@@ -76,11 +76,13 @@ Create a `demo.html` file inside `/srv/stream-client` with the following content
     <div id="anbox-stream" style="width: 100vw; height: 100vh;"></div>
 </body>
 ```
-If you experience any streaming issues, you can turn on debug information by adding the following option to the `AnboxStream` which is the `main` class:
+If you experience any streaming issues, you can turn on debug information by adding the following option to the `AnboxStream`:
 
     experimental: {
        debug: true,
-       }
+    }
+
+See [how to troubleshoot streaming issues](https://discourse.ubuntu.com/t/31341) for common issues related to streaming.
 
 ## Create and enable the stream UI service
 
@@ -99,17 +101,26 @@ WantedBy=multi-user.target
 
 Run the following commands to install and start the service:
 ```bash
-#Install the service file
+# Install the service file
 sudo cp stream-ui.service /etc/systemd/system/
-#Reload systemd
+# Reload systemd
 sudo systemctl daemon-reload
-#Enable and start the service
+# Enable and start the service
 sudo systemctl enable --now stream-ui.service
 ```
+## Generate the HTTP basic authentication credentials
+
+Use the `htpasswd` tool to generate a user/password combination:
+```
+apt install -y apache2-utils
+htpasswd -n <your user name>
+```
+
+Enter your desired password when prompted.
 
 ## Add a middleware definition
 
-Add a middleware definition (see [Adding Basic Authentication](https://doc.traefik.io/traefik/v2.0/middlewares/basicauth/) for more details) to the [`traefik`](https://traefik.io/) configuration.
+The appliance uses [`traefik`](https://traefik.io/) as the reverse proxy for routing incoming requests and you need to add a middleware definition for the stream client to the `traefik` configuration. See [Adding Basic Authentication](https://doc.traefik.io/traefik/v2.0/middlewares/basicauth/) for more details.
 
 Create `stream-ui.yaml` under `/var/snap/anbox-cloud-appliance/common/traefik/conf/` with the following content for `traefik` to redirect requests to the service. 
 
@@ -126,8 +137,9 @@ http:
     demo-auth:
       basicAuth:
         users:
-        # demo is the user name and
-        # foobar is the password for HTTP basic authentication
+        # Replace 'demo' with the user name and
+        # 'foobar' with the password generated for HTTP basic 
+        # authentication earlier with the 'htpasswd' tool
         - "demo:foobar"
   services:
     stream-ui-demo:
@@ -138,36 +150,9 @@ http:
 
 Set the right permissions for the `stream-ui.yaml`:
 
-    chmod 0600  /var/snap/anbox-cloud-appliance/common/traefik/conf/stream-ui.yaml
+    chmod 0600 /var/snap/anbox-cloud-appliance/common/traefik/conf/stream-ui.yaml
 
-## Generate the HTTP basic authentication credentials
-
-Use the `htpasswd` tool to generate a user/password combination:
-```
-apt install -y apache2-utils
-httpasswd -n <your user name>
-```
-
-Enter your desired password when prompted.
-
-Insert the generated credentials to the `traefik` configuration by editing `/var/snap/anbox-cloud-appliance/common/traefik/conf/stream-ui.yaml` to look like:
-```
-http:
-routers:
-    ...
-    middlewares: ["ratelimiter", "strip-demo-prefix", "demo-auth"]
-middlewares:
-    ...
-    demo-auth:
-        basicAuth:
-            users:
-            - "<user name>:<hashed password>"
-...
-```
-
-With this configured, users will be asked to enter the basic authentication credentials to access the site.
-
-Restart `traefik`:
+With HTTP basic authentication configured, users will be asked to enter the credentials to access the site. Restart `traefik` for the configuration changes to take effect:
 
     sudo snap restart anbox-cloud-appliance.traefik
 
