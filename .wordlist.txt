@@ -45,7 +45,6 @@ bzip
 cancellable
 CDN
 Center
-Centriq
 CFS
 cgroup
 cgroup-v1
@@ -92,18 +91,14 @@ ETag
 etcd
 executables
 favicon
-FDS
 FEC
 ffmpeg
-Filebeat
 FormatException
 frontend
 fullscreen
 gamepad
 gameplay
-GCE
 GL
-GLES
 Golang
 GPG
 GPUs
@@ -177,7 +172,6 @@ NVMe
 OAuth
 OBB
 observability
-OCI
 OES
 OOB
 OOM
@@ -187,7 +181,6 @@ OpenStack
 overcommitment
 overcommitting
 PCI
-PCM
 Perfetto
 PKI
 playout
@@ -231,7 +224,6 @@ SIGBUS
 signaling
 simplestreams
 SkiaPipeline
-SKU
 SLI
 SMI
 Snapcraft
