@@ -27,7 +27,7 @@ Understand deployment configurations to plan your deployment.
 |--|--|
 | [Production planning](https://discourse.ubuntu.com/t/34648) | Aspects to consider for best results when you are planning a production deployment |
 | [Capacity planning](https://discourse.ubuntu.com/t/28717) | How to estimate the required capacity for your Anbox Cloud deployment |
-| [GPUs and containers](https://discourse.ubuntu.com/t/17768)| How to manage GPUs and to make them available to containers |
+| [GPUs and containers](https://discourse.ubuntu.com/t/17768)| How to manage GPUs and make them available to containers |
 | [Security](https://discourse.ubuntu.com/t/31217)| Important aspects to keep your Anbox Cloud deployment secure |
 
 

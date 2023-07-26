@@ -13,7 +13,7 @@ Do not mix GPUs from different vendors in a single deployment.
 
 Concrete support for the individual GPU depends on the platform being using for Anbox Cloud. The included `webrtc` platform currently supports the following GPUs:
 
-| Vendor | Model                 | Render | Hardware video encode |
+| Vendor | Model                 | Render | Hardware video encoder |
 |--------|-----------------------|--------|-----------------------|
 | AMD    | WX5100, WX4100        | Yes    | No                    |
 | NVIDIA | Quadro, Tesla, Ampere | Yes    | Yes                   |
