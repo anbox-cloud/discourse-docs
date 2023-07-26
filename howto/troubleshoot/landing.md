@@ -2,10 +2,12 @@ The topics in this guide describe some commonly encountered problems with Anbox 
 
 [note type="information" status="Note"] If the deployment is older than 3 months, you must upgrade Anbox Cloud to the latest version and see if the required fixes are already part of the upgrade. See [How to upgrade Anbox Cloud](https://discourse.ubuntu.com/t/how-to-upgrade-anbox-cloud/17750) for upgrade instructions.[/note]
 
-* [Troubleshoot issues with initial setup](https://discourse.ubuntu.com/t/troubleshoot-issues-with-initial-setup/35704)
-* [Troubleshoot container failures](https://discourse.ubuntu.com/t/troubleshoot-container-failures/35703)
-* [Troubleshoot issues with application creation](https://discourse.ubuntu.com/t/troubleshoot-issues-with-application-creation/35702)
-* [Troubleshoot issues with LXD clustering](https://discourse.ubuntu.com/t/troubleshoot-issues-with-lxd-clustering/35705)
+* [Troubleshoot issues with initial setup](https://discourse.ubuntu.com/t/35704)
+* [Troubleshoot container failures](https://discourse.ubuntu.com/t/35703)
+* [Troubleshoot issues with application creation](https://discourse.ubuntu.com/t/35702)
+* [Troubleshoot issues with LXD clustering](https://discourse.ubuntu.com/t/35705)
+* [Troubleshoot issues with dashboard](https://discourse.ubuntu.com/t/36105)
+* [Troubleshoot issues with streaming](https://discourse.ubuntu.com/t/31341)
 
 If you still need help, use any of the following utilities to collect troubleshooting information and report an [issue](https://bugs.launchpad.net/anbox-cloud/+filebug).
 
