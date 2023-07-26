@@ -86,8 +86,8 @@ See [how to troubleshoot streaming issues](https://discourse.ubuntu.com/t/31341)
 
 ## Create and enable the stream UI service
 
-Create a `stream-ui.service` with the following content:
-```
+Create `stream-ui.service` with the following content:
+```service
 [Unit]
 Description=Simple Anbox Cloud Stream Client
 
