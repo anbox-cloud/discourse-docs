@@ -39,6 +39,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | tut/installing-appliance | [Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
 | 2 | tut/getting-started-dashboard | [Get started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
 | 2 | tut/getting-started | [Get started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 2 | tut/stream-client | [Set up a stream client](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
 | 2 | tut/creating-addon | [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | |
 | 1 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
