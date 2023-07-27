@@ -1,4 +1,4 @@
-The performance of your Anbox Cloud deployment depends on a lot of different factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
+The performance of your Anbox Cloud deployment depends on multiple factors. To ensure optimal performance, check and monitor all areas and tune your deployment based on your findings.
 
 To measure the performance based on different parameters, you should [run performance benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770). See the provided [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) as a reference for what performance you can expect with different hardware configurations.
 
@@ -15,7 +15,7 @@ The main areas for performance tuning are:
 
 The most apparent performance aspect is how many containers you can run on each of your machines.
 
-Of course, the container density depends a lot on the available hardware. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for detailed information about estimating the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
+Of course, the container density depends a lot on the available hardware. See [capacity planning information](https://discourse.ubuntu.com/t/about-capacity-planning/28717) to estimate the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
 
 In addition, check your applications and make sure they use the resources in a fair way. Applications should avoid spikes in GPU utilisation, because such spikes require the application to reserve more resources and therefore reduce the container density.
 
@@ -31,7 +31,7 @@ AMS has different modes to grant CPU access to a container. The `cpu.limit_mode`
     This mode uses the LXD [`limits.cpu.allowance`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to grant a container a CPU time budget via the Linux CFS scheduler. See [CFS Bandwidth Control](https://www.kernel.org/doc/html/latest/scheduler/sched-bwc.html) for more details.
 * `pinning` :
 
-   This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balance all running containers on all available cores.
+   This mode uses the LXD [`limits.cpu`](https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/#cpu-limits) configuration option to pin a set of CPU cores to a container. LXD is responsible for allocating a specific number of cores to a container and load-balancing all running containers on all available cores.
 
    Using `pinning` requires a system with [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) enabled. Otherwise, limitations of [cgroup-v1](https://docs.kernel.org/admin-guide/cgroup-v1/index.html) might cause the load distribution over available CPU cores to not be optimal. [cgroup-v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) is enabled by default starting with Ubuntu 22.04 and can be enabled on Ubuntu 20.04 by booting with `systemd.unified_cgroup_hierarchy=1` added to [the kernel boot parameters](https://wiki.ubuntu.com/Kernel/KernelBootParameters).
 
@@ -44,7 +44,7 @@ See [Requirements](https://discourse.ubuntu.com/t/installation-requirements/1773
 
 For optimal performance, you should use a dedicated block device for LXD storage. Using a loop file is considerably slower. See [LXD storage](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802#lxd-storage) for more information.
 
-The overall performance depends not only on the hardware used for the actual Anbox Cloud deployment, but also on the setup used for other components that Anbox Cloud relies on. For example, the etcd database must use a hard disk that is fast enough; see [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/) for detailed information.
+The overall performance depends not only on the hardware used for the actual Anbox Cloud deployment, but also on the setup used for other components that Anbox Cloud relies on. For example, the etcd database must use a hard disk that is fast enough. See [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/) for detailed information.
 
 Also make sure that there is a stable network connection between the nodes of your cluster, to decrease the latency between nodes.
 
@@ -68,4 +68,9 @@ All client devices that access an Anbox Cloud deployment must be capable of low-
 
 Furthermore, the network connection is crucial. When implementing your applications, you must take into account what kind of connection the client devices will usually have (for example, 4G, 5G or WiFi), so that you can optimise the network traffic that your applications require.
 
-Also make sure to optimise the network path from the Anbox Cloud server to the client devices. What exactly that entails depends on your specific use case; for public clouds, it often means choosing the region that is located closest to the end users. When using a bare metal installation, you should deploy servers that are geographically close to the end users. There might also be other solutions depending on the network service route.
+Also make sure to optimise the network path from the Anbox Cloud server to the client devices. This optimisation could be very specific to your use case. For public clouds, it often means choosing the region that is located closest to the end users. When using a bare metal installation, you should deploy servers that are geographically close to the end users. There might also be other solutions depending on the network service route.
+
+## Related information
+* [Hooks](https://discourse.ubuntu.com/t/28555)
+* [Container benchmarks](https://discourse.ubuntu.com/t/17770#container-benchmarks)
+* [Capacity planning](https://discourse.ubuntu.com/t/28717)

@@ -54,7 +54,7 @@ Use the following command to prevent the node from accepting new containers:
 <a name="configure-gpu-slots"></a>
 ## Configure GPU slots and GPU encoder slots
 
-GPU slots are used to share GPUs amongst containers. See [About GPU support](https://discourse.ubuntu.com/t/gpu-support/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
+GPU slots are used to share GPUs amongst containers. See [GPUs and containers](https://discourse.ubuntu.com/t/17768) and [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
 
 Each GPU-equipped cluster node is configured with a number of GPU slots and a number of GPU encoder slots. See [Node-specific configuration](https://discourse.ubuntu.com/t/ams-configuration/20872#node-specific) for the default values that are used. Nodes without GPU are configured with 0 GPU slots and 0 GPU encoder slots.
 
