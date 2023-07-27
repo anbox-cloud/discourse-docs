@@ -119,7 +119,7 @@ Some additional information:
 - The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
   More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
-- If you require GPU support, see [Supported rendering resources](tbd) for a list of supported GPUs.
+- If you require GPU support, see [Supported rendering resources](https://discourse.ubuntu.com/t/37322) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
  - **etcd**: [Hardware recommendations](https://etcd.io/docs/v3.5/op-guide/hardware/)

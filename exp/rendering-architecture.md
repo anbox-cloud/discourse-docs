@@ -1,6 +1,6 @@
 The rendering pipeline of Anbox Cloud can vary depending on the GPU used. This guide explains in detail, the rendering architecture of Anbox Cloud while discussing the different rendering pipeline models.
 
-## Rendering architecture
+## Overview
 
 For NVIDIA GPUs, Anbox Cloud driver stacks currently have a native OpenGL ES driver. For AMD and Intel GPUs, an OpenGL ES or EGL driver is layered on top of the Vulkan API. Since Vulkan API provides better GPU management at a lower level than OpenGL ES or EGL, this approach is beneficial and preferred by many users.
 
@@ -27,11 +27,7 @@ In terms of performance, this could be perceived to have some transmission overh
 For AMD and Intel GPUs, Anbox Cloud uses Vulkan as API in the Android space and we use ANGLE on top of Vulkan to circumvent OpenGL ES and EGL. Since the Mesa driver (vendor GPU driver) is available directly in the Android space, we do not have the overhead of the remote procedure call implementation as in the pipeline for NVIDIA. 
 
 ## Related information
-* [Supported rendering resources](tbd)
+* [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
 * [SurfaceFlinger](https://source.android.com/docs/core/graphics/surfaceflinger-windowmanager)
 * [Wayland](https://wayland.freedesktop.org/)
-
-
-
-
 

@@ -154,9 +154,9 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
-| 2 | ref/supported-rendering-resources | [Supported rendering resources](tbd)
+| 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322)
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
-| 2 | ref/supported-video-codecs | [Supported video codes](tbd)
+| 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)
 | 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649)
 | 2 | ref/lxd-docs | [LXD documentation](https://documentation.ubuntu.com/lxd)|
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
@@ -295,10 +295,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 | /docs/howto/container/launch | /docs/howto/container/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
+| /docs/ref/platforms | /docs/exp/platforms |
 | requirements | /ref/requirements |
 | release-notes | /ref/release-notes |
 | roadmap | /ref/roadmap |
 | component-versions | /ref/component-versions |
 | supported-versions | /ref/supported-versions |
-| docs/ref/platforms | docs/exp/platforms |
 [/details]

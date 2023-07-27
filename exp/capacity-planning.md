@@ -6,7 +6,7 @@ When estimating capacity, consider the following questions to better understand 
     - How much CPU, memory and disk space does your application need?
     - Will the application use hardware- or software-based video encoding?
     - If the application uses hardware-based encoding, how much GPU capacity is needed?
-* [CPU and memory](#over-committing-resources):
+* [CPU and memory](#overovercommitting):
     - Does every container need dedicated access to the CPU and memory, or can the capacity be shared between several containers?
 * [Application](#application-requirements):
     - What type of application are you running?
@@ -14,7 +14,7 @@ When estimating capacity, consider the following questions to better understand 
     - How many containers will be running simultaneously?
     - What would be the impact of not being able to serve all users?
 
-<a name="application-resources>
+<a name="application-resources"></a>
 ## Application resources
 
 Depending on the resources that your application requires, choose a suitable [instance type](https://discourse.ubuntu.com/t/instance-types/17764).
@@ -66,6 +66,7 @@ For example, consider an application that uses the `a2.3` instance type, which r
 
 The CPU allocation rate depends on the type of application and the amount of resources it requires. For applications that are not CPU-intensive, a higher allocation rate makes sense while for applications that are very CPU-intensive, a lower allocation rate is suitable.
 
+<a name="application-requirements"></a>
 ## Application requirements
 
 To realistically estimate the required capacity for your deployment, you must consider the type of application that you're running and the expected usage behaviour.

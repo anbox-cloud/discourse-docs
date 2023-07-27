@@ -18,6 +18,7 @@ Understand the different objects used in the product stack and how to use them t
 |--|--|
 | [Applications](https://discourse.ubuntu.com/t/17760)| Application requirements and the application bootstrap process |
 | [Containers](https://discourse.ubuntu.com/t/17763)| Different container types and the container life cycle |
+| [Platforms](https://discourse.ubuntu.com/t/configuration-for-supported-platforms/18733)| Configuring supported platforms |
 | [Clustering](https://discourse.ubuntu.com/t/17765)| Clustering and managing the load over multiple machines|
 | [Performance](https://discourse.ubuntu.com/t/29416) | Aspects that are relevant for tuning the performance of Anbox Cloud |
 

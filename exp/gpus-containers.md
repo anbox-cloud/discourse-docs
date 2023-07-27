@@ -12,7 +12,7 @@ See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu
 
 AMS configures each LXD container to pass through a GPU device from the host. Currently, all GPUs that are available to a machine are passed to every container that owns a GPU slot. For NVIDIA GPUs, LXD uses the [NVIDIA container runtime](https://github.com/NVIDIA/nvidia-container-runtime) to make the GPU driver of the host available to the container.
 
-Check the [list of supported GPUs](tbd#supported-gpus) to see if Anbox Cloud includes a driver for your GPU device. If a GPU driver is available inside the container, there are no further differences in how to use it in comparison to a regular environment. If no GPU driver is available, you must provide it through an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
+Check the [list of supported GPUs](thttps://discourse.ubuntu.com/t/37322#supported-gpus) to see if Anbox Cloud includes a driver for your GPU device. If a GPU driver is available inside the container, there are no further differences in how to use it in comparison to a regular environment. If no GPU driver is available, you must provide it through an [addon](https://discourse.ubuntu.com/t/managing-addons/17759).
 
 If you want to let an application use the GPU (even if you are not interested in streaming the visual output), launch it with the `--enable-graphics` flag. With this flag, the command will launch the container using the `webrtc` platform, which will automatically detect the underlying GPU and make use of it.
 
@@ -25,5 +25,5 @@ It is possible to instruct a container to run with software rendering. To do so,
 Since software rendering and video encoding will utilise the CPU, you won't be able to run as many containers on a system when compared to running containers when you have a GPU.
 
 ## Related information
-* [Supported rendering resources](tbd)
+* [Supported rendering resources](https://discourse.ubuntu.com/t/37322)
 
