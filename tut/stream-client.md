@@ -24,7 +24,9 @@ Create a directory to set up the stream client:
 
     sudo mkdir -p /srv/stream-client
 
-Create a `demo.html` file inside `/srv/stream-client` with the following content:
+Create a `demo.html` file inside `/srv/stream-client`:
+
+[note type="information" status="Important"]The inline comments in the following code provide pointers to replace certain values with your corresponding values. For example, you will be required to replace the values of `url`, `authToken`, `app` in the following example with your values. [/note]
 
 ```html
 <!DOCTYPE html>
