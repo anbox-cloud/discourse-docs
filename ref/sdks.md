@@ -52,15 +52,18 @@ The AMS SDK comes with a set of examples demonstrating the capabilities of the S
 Clients must authenticate to AMS before communicating with it. For more information, see [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774) and the [AMS SDK documentation](https://github.com/anbox-cloud/ams-sdk) on GitHub.
 
 <a name="streaming-sdk"></a>
-## Anbox Streaming SDK
+## Anbox Cloud Streaming SDK
 
-The Anbox Streaming SDK allows the development of custom streaming clients using JavaScript.
+The Anbox Cloud streaming SDK allows the development of custom streaming clients using JavaScript. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.
 
-### Components
+Under the hood, the SDK is actually comprised of two components:
 
-The Anbox Streaming SDK provides a JavaScript SDK designed to help you get started with the development of a web-based client. This SDK handles all aspects of streaming, from the WebRTC protocol to handling controls, game pads, speakers and screen resolutions.
+* The connector that communicates to the stream backend (either the stream gateway or your own middleware) and initiates the WebRTC setup.
+* The stream class that displays the video and audio feed, handle controls, life-cycle events and more.
 
-#### Features
+Having these two components makes it easier to plug your own software in the SDK rather than having to re-write everything again.
+
+### Features
 
 | Feature                                          | JavaScript SDK |
 |--------------------------------------------------|:--------------:|
@@ -79,12 +82,12 @@ The Anbox Streaming SDK provides a JavaScript SDK designed to help you get start
 
 ### Download and installation
 
-To use the Anbox Streaming SDK, you must have [deployed the Anbox Streaming Stack](https://discourse.ubuntu.com/t/installation-quickstart/17744).
+To use the Anbox Cloud streaming SDK, you must have [deployed the Anbox Streaming Stack](https://discourse.ubuntu.com/t/installation-quickstart/17744).
 
-You can download the Anbox Streaming SDK via Git from GitHub:
+You can download the Anbox Cloud streaming SDK via Git from GitHub:
 
     git clone https://github.com/anbox-cloud/anbox-streaming-sdk.git
 
 ### Examples
 
-The Anbox Streaming SDK comes bundled with examples to help you get started. They are located in the `examples` directory.
+The Anbox Cloud streaming SDK comes bundled with examples to help you get started. They are located in the `examples` directory.
