@@ -7,13 +7,15 @@ We need the Anbox Cloud streaming stack to be deployed already to set up a strea
 
 ### Create an access token
 
-To access the HTTP API of the Anbox Stream Gateway, an access token is required. Each access token is associated with a service account.
+To access the HTTP API of the Anbox Cloud stream gateway, an access token is required. Each access token is associated with a service account.
 
 On the machine where Anbox Cloud Appliance is installed, create the service account by running the following command:
 
     anbox-cloud-appliance gateway account create test
 
 The output of this command provides the access token. Make a note of this token to use when you make a request to the stream gateway API.
+
+See [How to access the stream gateway](https://discourse.ubuntu.com/t/how-to-access-the-stream-gateway/17784) for more information on creating, using and deleting the access token.
 
 ### Create an application
 
@@ -51,14 +53,16 @@ Create a `demo.html` file inside `/srv/stream-client`:
             // Replace `com.foo.bar` with your application name
             app: "com.foo.bar",
         },
-        // Adjust the display resolution and frame rate for the Android container as per your requirements
+        // Adjust the display resolution and frame rate for the
+        // Android container as per your requirements
         screen: {
             width: 1280,
             height: 720,
             fps: 25,
         }
     });
-    // The AnboxStream class takes care of the WebRTC signaling process as well as the web browser integration
+    // The AnboxStream class takes care of the WebRTC signaling process
+    // as well as the web browser integration
     let stream = new AnboxStream({
         connector: connector,
         // targetElement is the ID of the HTML element where the SDK can attach the video
@@ -66,6 +70,7 @@ Create a `demo.html` file inside `/srv/stream-client`:
         controls: {
             keyboard: true
         },
+        // Register callbacks to be notified at specific points in the stream life cycle.
         callbacks: {
             error: error => {
                 console.log("AnboxStream failed: ", error);
@@ -74,7 +79,8 @@ Create a `demo.html` file inside `/srv/stream-client`:
     });
     stream.connect();
     </script>
-    <!--To display the video element correctly, always specify both the height and the width attributes-->
+    <!--To display the video element correctly,
+        always specify both the height and the width attributes-->
     <div id="anbox-stream" style="width: 100vw; height: 100vh;"></div>
 </body>
 ```

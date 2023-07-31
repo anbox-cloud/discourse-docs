@@ -114,7 +114,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 2 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
 | 3 | howto/stream/access | [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) |
-| 3 | howto/stream/web-client | [Implement a web-based client](https://discourse.ubuntu.com/t/implement-web-based-streaming-client/21835)|
 | 3 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
 | 3 | howto/stream/client-side-keyboard | [Use a client-side keyboard](https://discourse.ubuntu.com/t/integrate-a-client-side-virtual-keyboard/23643)|
 | 2 | howto/cluster/landing | [Manage the cluster](https://discourse.ubuntu.com/t/manage-cluster-nodes/24334) |
