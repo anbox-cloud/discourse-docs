@@ -80,7 +80,7 @@ Create a `demo.html` file inside `/srv/stream-client`:
     stream.connect();
     </script>
     <!--To display the video element correctly,
-    always specify both the height and the width attributes-->
+        always specify both the height and the width attributes-->
     <div id="anbox-stream" style="width: 100vw; height: 100vh;"></div>
 </body>
 ```

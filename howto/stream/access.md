@@ -19,7 +19,7 @@ If you are running the Anbox Cloud Appliance, use the following command:
 
     anbox-cloud-appliance gateway account create my-client
 
-### Using the token in your requests
+### Using the token
 
 When making requests to the stream gateway API, you can either place the token in the request HTTP headers or in the query parameters.
 
