@@ -264,6 +264,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/monitoring/monitoring-nagios | /docs/howto/monitor/nagios |
 | /docs/implement-android-native-streaming-client | /docs/howto/stream/native-client |
 | /docs/implement-web-based-streaming-client | /docs/howto/stream/web-client |
+| /docs/howto/stream/web-client | /docs/tut/stream-client |
 | /docs/exchange-out-of-band-data | /docs/howto/stream/oob-data |
 | /docs/integrate-keyboard | /docs/howto/stream/client-side-keyboard |
 | /docs/faq | /docs/howto/troubleshoot/landing |
