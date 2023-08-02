@@ -18,17 +18,11 @@ You can see the synchronised images with the `amc image list` command:
 +----------------------+------------------------+--------+----------+--------------+---------+
 |          ID          |          NAME          | STATUS | VERSIONS | ARCHITECTURE | DEFAULT |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| cbv37rfu3kvchoeai3kg | jammy:android12:arm64  | active | 1        | aarch64      | true    |
+| cgrqjd6k9eqlsruefcng | jammy:android13:arm64  | active | 1        | aarch64      | true    |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| cbv384vu3kvchoeai3l0 | jammy:android11:arm64  | active | 1        | aarch64      | false   |
+| cgrqjnmk9eqlsruefco0 | jammy:android12:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| cbv38gnu3kvchoeai3lg | jammy:android10:arm64  | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| cbv393nu3kvchoeai3m0 | bionic:android12:arm64 | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| cbv39mvu3kvchoeai3mg | bionic:android11:arm64 | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| cbv3a4vu3kvchoeai3n0 | bionic:android10:arm64 | active | 1        | aarch64      | false   |
+| cgrqk2uk9eqlsruefcog | jammy:android11:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
 ```
 
@@ -38,7 +32,7 @@ The default image is used when you create an application without the `image` fie
 
 You can set any image as your default with the following command:
 
-    amc image switch bionic:android12:arm64
+    amc image switch jammy:android13:arm64
 
 Running `amc image list` will now show this image marked as default.
 
@@ -72,9 +66,9 @@ With every new Anbox Cloud release, updated images are published. By default, th
 
     amc image add <local image name> <remote image name>@<release>
 
-For instance, to fetch the arm64 Android 11 image of the 1.11.2 release:
+For instance, to fetch the arm64 Android 13 image of the 1.18.0 release:
 
-    amc image add foobar bionic:android11:arm64@1.11.2
+    amc image add foobar jammy:android13:arm64@1.18.0
 
 You can then use the `foobar` image as you would any other image.
 

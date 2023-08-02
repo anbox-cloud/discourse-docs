@@ -40,17 +40,11 @@ Next, check whether AMS has synchronised all images from the Canonical hosted im
 +----------------------+------------------------+--------+----------+--------------+---------+
 |          ID          |          NAME          | STATUS | VERSIONS | ARCHITECTURE | DEFAULT |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| caa6s5l07mps24asmii0 | jammy:android12:arm64  | active | 1        | aarch64      | true    |
+| cgrqjd6k9eqlsruefcng | jammy:android13:arm64  | active | 1        | aarch64      | true    |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| caa6scl07mps24asmiig | jammy:android11:arm64  | active | 1        | aarch64      | false   |
+| cgrqjnmk9eqlsruefco0 | jammy:android12:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
-| caa6sil07mps24asmij0 | jammy:android10:arm64  | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| caa6sol07mps24asmijg | bionic:android12:arm64 | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| caa6t2d07mps24asmik0 | bionic:android11:arm64 | active | 1        | aarch64      | false   |
-+----------------------+------------------------+--------+----------+--------------+---------+
-| caa6ta507mps24asmikg | bionic:android10:arm64 | active | 1        | aarch64      | false   |
+| cgrqk2uk9eqlsruefcog | jammy:android11:arm64  | active | 1        | aarch64      | false   |
 +----------------------+------------------------+--------+----------+--------------+---------+
 ```
 
