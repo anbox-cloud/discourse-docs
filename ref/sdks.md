@@ -78,7 +78,7 @@ Having these two components makes it easier to plug your own software in the SDK
 | Location support                                 |        ✓       |
 | Supported platforms                              |       All       |
 | Zero Copy rendering and decoding                 |        ✓       |
-| Supported video codecs                           | VP8, H.264      |
+| Supported video codecs                           | VP8, H.264, AV1 |
 
 ### Download and installation
 
