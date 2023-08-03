@@ -18,10 +18,10 @@ The following table lists supported images available on the official image serve
 ## Deprecated images
 The following table lists the images that are available on the official image server but are deprecated. They will become unsupported after two releases.
 
-| Name                        | Android Version | Ubuntu Version | Available since |
-|-----------------------------|-----------------|----------------|---------------|
-| `jammy:android11:amd64`     | 11              | 22.04          | 1.14 |
-| `jammy:android11:arm64`     | 11              | 22.04          | 1.14 |
+| Name                        | Android Version | Ubuntu Version | Available since | Deprecated since |
+|-----------------------------|-----------------|----------------|-----------------|--------------------|
+| `jammy:android11:amd64`     | 11              | 22.04          | 1.14            | 1.19 |
+| `jammy:android11:arm64`     | 11              | 22.04          | 1.14            | 1.19 |
 
 ## Image support
 
