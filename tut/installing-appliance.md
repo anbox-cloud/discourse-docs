@@ -66,12 +66,7 @@ Run the following command to install the `anbox-cloud-appliance` snap, which han
 <a name="additional-tools"></a>
 ### 5. Install additional tools
 
-The appliance requires a few additional tools. Run the following commands to install them:
-
-    sudo snap install amc
-    sudo snap install --classic --channel=2.9/stable juju
-
-See [Juju version](https://discourse.ubuntu.com/t/installation-requirements/17734#juju-version) for information about which Juju version is required for your version of Anbox Cloud.
+Run `sudo snap install amc` to install the Anbox Management Client (AMC).
 
 <a name="initialise"></a>
 ## Initialise the appliance

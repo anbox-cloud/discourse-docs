@@ -77,7 +77,7 @@ Anbox Cloud currently supports the following LXD versions:
 <a name="juju-version"></a>
 ### Juju version
 
-Anbox Cloud requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Starting with Anbox Cloud 1.13, the required Juju version is **2.9**. Earlier versions require Juju **2.8**.
+The regular Anbox Cloud variant requires [Juju](https://juju.is/) to be installed to manage the different components and their dependencies. Starting with Anbox Cloud 1.13, the required Juju version is **2.9**. Earlier versions require Juju **2.8**.
 
 You can install Juju 2.9 with the following command:
 
