@@ -108,5 +108,3 @@ Perform the following steps to finish the appliance installation on the virtual 
 1. Register your Ubuntu SSO account with the appliance dashboard.
 
 When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
-
-
