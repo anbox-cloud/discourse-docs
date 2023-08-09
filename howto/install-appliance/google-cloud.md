@@ -2,6 +2,8 @@ The Anbox Cloud Appliance is not yet available from the Google Marketplace. Howe
 
 The entire deployment process will take 20-30 minutes, depending on the selected hardware and the network conditions.
 
+[note type="caution" status="Warning"]Currently, Anbox Cloud requires support for 32-bit architecture. Since T2A ARM instances are not available with 32-bit support, the T2A instance family on Google Cloud cannot be supported by Anbox Cloud. See [Google's documentation on T2A limitations](https://cloud.google.com/compute/docs/general-purpose-machines#t2a_limitations) for more information.[/note]
+
 ## Prerequisites
 
 Before starting the procedure,
