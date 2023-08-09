@@ -274,6 +274,7 @@ validator
 vCPU
 vCPUs
 viewport
+VirGL
 virglrenderer
 VM
 VMs
