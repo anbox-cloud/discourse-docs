@@ -7,32 +7,41 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-|August 16 2023|Anbox Cloud 1.19.0|
 |September 13 2023|Anbox Cloud 1.19.1|
 |October 11 2023|Anbox Cloud 1.19.2|
+|November 15 2023|Anbox Cloud 1.20.0|
 
 ## Recent releases
 
 | Release date   |  Release notes  |
 |----|----|
-|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)
-|June 14 2023|[Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
-|May 17 2023|[Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
+|August 16 2023|[Anbox Cloud 1.19.0](tbd)|
 
-### What's new in 1.18.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.18.x includes:
+### What's new in 1.19.x?
 
-* Streaming improvements
-* Support for the Android container to use a custom Android ID
-* Updated Mesa driver 
-* Various dashboard improvements
+Along with bug fixes and general improvements, Anbox Cloud 1.19.x includes:
+
+* OpenAPI based documentation of the Anbox Management Service (AMS) API.
+* Pagination and filtering support for containers and applications in the AMS API.
+* Several dashboard enhancements including:
+    - Ability to configure Anbox Application Registry (AAR)
+    - Streaming statistics
+    - Ability to share a streaming session
+    - Application detail view and management
+    - Bulk management of containers
+* AV1 hardware accelerated video encoding on NVIDIA GPUs.
+* cgroup v1 compatibility layer to support Android on cgroup v2-only systems.
+* Android security updates.
 
 
 [Details=Older releases]
 ## 2023
 |  Release date  |  Release notes  |
 |----|----|
+|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)
+|June 14 2023|[Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
+|May 17 2023|[Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
 |April 17 2023|[Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
 |March 16 2023|[Anbox Cloud 1.17.1](https://discourse.ubuntu.com/t/34573)|
 |February 15 2023|[Anbox Cloud 1.17.0](https://discourse.ubuntu.com/t/33927)|
