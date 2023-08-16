@@ -74,3 +74,37 @@ You can select any application you previously created and start a streaming sess
 ![Start a streaming session|690x352](https://assets.ubuntu.com/v1/6087fbd9-gs_dashboard_start_session.png)
 
 For more information about the Streaming Stack, visit [About application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769).
+
+#### Streaming statistics
+
+View the streaming statistics for your running sessions by selecting the **Statistics** button on the session. The statistics display on the right pane and also have a download option to download the statistics in a `.csv` format for further analysis.
+
+The downloaded `.csv` file has the following statistics:
+
+| Statistic | Description |
+| --------- |------------ |
+| `date` | Date and timestamp |
+| `network-currentrtt` | Current round-trip time of the network in milliseconds |
+| `video-bandwidth` | The amount of video data that the session can handle per second |
+| `video-totalreceived` | Total video data received |
+| `video-fps` | Video frames per second |
+| `video-decodetime` | Time taken to extract video |
+| `video-jitter` | Loss of transmitted video data during streaming |
+| `video-averagejitterbufferdelay` | Average jitter buffer delay in video transmission  |
+| `video-packetsreceived` | Number of video packets received |
+| `video-packetslost` | Number of video packets lost |
+| `audio-bandwidth` | The amount of audio data that the session can handle per second |
+| `audio-totalreceived` | Total audio data received during streaming |
+| `audio-totalsamplesreceived` | Number of audio samples received |
+| `audio-jitter` | Loss of transmitted audio data during streaming |
+| `audio-averagejitterbufferdelay` | Average jitter buffer delay in audio transmission |
+| `audio-packetsreceived` | Number of audio packets received |
+| `audio-packetslost` | Number of audio packets lost |
+
+#### Sharing a streaming session
+
+Use the **Sharing** button on the session page to share a streaming session with users without an account. The button generates a link using which users without an account can join your session.
+
+### Managing Applications and their versions
+
+If you have configured the Anbox Application Registry (AAR), you can view and manage applications and their versions in the registry using the **Registry** button on the main menu. If you have configured AAR in manual mode, you can also manually push and delete apps from the registry.
