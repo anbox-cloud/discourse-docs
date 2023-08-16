@@ -41,13 +41,13 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['nrpe', 'nagios']
    machines:
      '0':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=4 mem=4G root-disk=40G"
      '1':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=8 mem=16G root-disk=50G"
      '2':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=2 mem=8G root-disk=10G"
    ```
    [/Details]
@@ -73,13 +73,13 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
      - ['coturn', 'nrpe:nrpe-external-master']
    machines:
      '0':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=4 mem=4G root-disk=40G"
      '1':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=8 mem=16G root-disk=50G"
      '2':
-       series: bionic
+       series: jammy
        constraints: "cpu-cores=2 mem=8G root-disk=10G"
    ```
    [/Details]
