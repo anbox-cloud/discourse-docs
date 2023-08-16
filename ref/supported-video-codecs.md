@@ -5,11 +5,7 @@ Not all codecs are supported by one or more of the supported GPU models, neither
 Currently, the following video codecs are supported:
 
  * H.264 - The use of H.264 requires a license from the [MPEG LA](https://www.mpegla.com/). Ensure you have the rights to stream H.264 encoded video content to your users.
+ * AV1 - Depending on the GPU model used in the deployment, AV1 hardware encoding is the default preference over H.264 on supported GPUs, such as NVIDIA Ada Lovelace Architecture-based GPUs like L4. Otherwise, it will fallback to AV1 software encoding.
  * VP8
-
-In the future we plan to add support for:
-
- * VP9
- * AV1
 
 Availability of additional codecs depends on them being supported by the GPU vendors in their hardware encoding solutions or if a viable software encoding solution exists. See [Release roadmap](https://discourse.ubuntu.com/t/19359) for future versions of Anbox Cloud and planned features.
