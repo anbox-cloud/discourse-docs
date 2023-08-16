@@ -11,6 +11,5 @@ Anbox Cloud follows a defined release cycle with frequent minor and patch releas
 ## Roadmap
 | Release | Target Date | What to expect| 
 |---------|-------------|---------------|
-| 1.19.0 | August 16 2023 | * Pagination / filtering support for parts of the AMS API (containers + applications)<br/>* AV1 hardware accelerated video encoding on NVIDIA GPUs<br/>* OpenAPI based documentation of the AMS API<br/>* cgroup-v1 compatibility layer to support Android on cgroup-v2 only systems<br/>* Vulkan support for NVIDIA GPUs (alpha)<br/>* Android security updates for August 2023<br/>* Bug fixes|
 | 1.19.1 | September 13 2023 | * Android security updates for September 2023<br/>* Bug fixes |
 | 1.19.2 | October 11 2023 | * Android security updates for October 2023<br/>* Bug fixes |

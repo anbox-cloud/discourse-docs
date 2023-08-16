@@ -142,7 +142,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
 | 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 2 | ref/api-reference | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) |
-| 3 | ref/ams-http-api | [AMS HTTP API](https://discourse.ubuntu.com/t/ams-rest-api-reference/17801)|
+| 3 | ref/ams-http-api | [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/)|
 | 3 | ref/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
 | 3 | ref/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
 | 3 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
