@@ -29,4 +29,3 @@ Currently, Anbox Cloud provides images based on Ubuntu 22.04 (jammy). Deprecatio
 
 Android versions are supported as long as Google provides security updates for the respective versions.
 
-
