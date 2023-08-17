@@ -83,7 +83,7 @@ The downloaded `.csv` file has the following statistics:
 
 | Statistic | Description |
 | --------- |------------ |
-| `date` | Date and timestamp |
+| `date` | Date and time in ISO format |
 | `network-currentrtt` | Current round-trip time of the network in milliseconds |
 | `video-bandwidth` | The amount of video data that the session can handle per second |
 | `video-totalreceived` | Total video data received |

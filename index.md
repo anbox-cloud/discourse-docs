@@ -60,7 +60,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
 | 3 | howto/manage/manage-appliance | [Manage the appliance](https://discourse.ubuntu.com/t/manage-the-anbox-cloud-appliance/26725) |
 | 3 | howto/manage/tls-for-appliance | [Set up TLS for appliance](https://discourse.ubuntu.com/t/set-up-tls-for-the-anbox-cloud-appliance/28552) |
-| 3 | howto/dashboard/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
+| 3 | howto/manage/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 3 | howto/manage/images | [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 3 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 3 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
