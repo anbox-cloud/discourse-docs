@@ -41,7 +41,7 @@ The Anbox Cloud Appliance requires a valid Ubuntu Pro subscription.
 
 Before installing the appliance, you must attach the machine on which you want to run the Anbox Cloud Appliance to your Ubuntu Pro subscription. To do so, run the following command, replacing *<pro_token>* with your Ubuntu Pro token:
 
-    sudo ua attach <pro_token>
+    sudo pro attach <pro_token>
 
 <a name="enable-anbox-service"></a>
 ### 3. Enable the `anbox-cloud` service using the Ubuntu Pro client.
@@ -52,15 +52,15 @@ On your machine, run the following command to install the Anbox Cloud Appliance 
 
 Running this command does the following:
 
-1. Install the following tools and dependencies, if they are not installed already:
+1. Installs the following tools and dependencies, if they are not installed already:
     * snapd
     * Anbox Management Client (AMC)
     * LXD
 
-        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `latest/stable` track. If LXD is already installed but the version is older than 5.0, run ` snap refresh --channel=5.0/stable lxd` to update it.[/note]
+        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `latest/stable` track. If LXD is already installed but the version is older than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it.[/note]
 
-1. Install `anbox-cloud-appliance` snap from the `latest/stable` track.
-1. Configure the `apt` repositories for Anbox Cloud.
+1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
+1. Configures the `apt` repositories for Anbox Cloud.
 
 <a name="initialise"></a>
 ## Initialise the appliance
