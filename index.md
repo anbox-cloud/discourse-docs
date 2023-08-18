@@ -36,10 +36,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 0 | / | [Anbox Cloud documentation](https://discourse.ubuntu.com/t/anbox-cloud-documentation/17029) |
 | 0 | | |
 | 1 | tut/landing | [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) |
-| 2 | tut/installing-appliance | [1.Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 2 | tut/getting-started-dashboard | [2.Get started using web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
-| 2 | tut/getting-started | [3.Get started using CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
-| 2 | tut/stream-client | [4.Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
+| 2 | tut/installing-appliance | [1. Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
+| 2 | tut/getting-started-dashboard | [2. Get started using the web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
+| 2 | tut/getting-started | [3. Get started using the CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 2 | tut/stream-client | [4. Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
 | 2 | tut/creating-addon | [5. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | |
 | 1 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
@@ -140,7 +140,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
-| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)|
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
@@ -159,6 +158,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
 | 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
+| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
 | 1 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |

@@ -5,7 +5,7 @@ The following tutorials help you install the Anbox cloud Appliance and start usi
 1. [Get started with Anbox Cloud using the web dashboard](https://discourse.ubuntu.com/t/24958)
 1. [Get started with Anbox Cloud using the command line interface](https://discourse.ubuntu.com/t/17756) 
 
-The following tutorials help you further explore features of Anbox Cloud:
+The following tutorials are optional and help you further explore features of Anbox Cloud:
 1. [Set up a stream client](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328)
 1. [Create an addon](https://discourse.ubuntu.com/t/25284)
 
