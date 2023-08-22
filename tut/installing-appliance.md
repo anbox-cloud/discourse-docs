@@ -53,11 +53,11 @@ On your machine, run the following command to install the Anbox Cloud Appliance 
 Running this command does the following:
 
 1. Installs the following tools and dependencies, if they are not installed already:
-    * snapd
-    * Anbox Management Client (AMC)
-    * LXD
+    * [snapd](https://snapcraft.io/snapd)
+    * [Anbox Management Client (AMC)](https://snapcraft.io/amc)
+    * [LXD](https://snapcraft.io/lxd)
 
-        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `latest/stable` track. If LXD is already installed but the version is older than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it.[/note]
+        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `5.0/stable` track. If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it. However, if LXD version is later than 5.0, you cannot downgrade it.[/note]
 
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
