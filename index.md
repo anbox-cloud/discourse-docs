@@ -133,7 +133,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
-| 2 | ref/releases-versions | [Releases and versions](tbd) |
+| 2 | ref/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
 | 3 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 3 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
 | 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
