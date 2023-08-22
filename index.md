@@ -36,23 +36,23 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 0 | / | [Anbox Cloud documentation](https://discourse.ubuntu.com/t/anbox-cloud-documentation/17029) |
 | 0 | | |
 | 1 | tut/landing | [Tutorials](https://discourse.ubuntu.com/t/tutorials/28826) |
-| 2 | tut/installing-appliance | [Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
-| 2 | tut/getting-started-dashboard | [Get started (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
-| 2 | tut/getting-started | [Get started (CLI)](https://discourse.ubuntu.com/t/getting-started/17756)|
-| 2 | tut/stream-client | [Set up a stream client](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
-| 2 | tut/creating-addon | [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
+| 2 | tut/installing-appliance | [1. Install the appliance](https://discourse.ubuntu.com/t/install-appliance/22681) |
+| 2 | tut/getting-started-dashboard | [2. Get started using the web dashboard](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958)|
+| 2 | tut/getting-started | [3. Get started using the CLI](https://discourse.ubuntu.com/t/getting-started/17756)|
+| 2 | tut/stream-client | [4. Set up a stream client (Optional)](https://discourse.ubuntu.com/t/set-up-a-stream-client/37328) |
+| 2 | tut/creating-addon | [5. Create an addon (Optional)](https://discourse.ubuntu.com/t/creating-an-addon/25284)|
 | 0 | | |
 | 1 | howto/landing | [How-to guides](https://discourse.ubuntu.com/t/how-to-guides/28827) |
+| 2 | howto/install-appliance/landing | [Install the appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) |
+| 3 | howto/install-appliance/aws | [Install on AWS](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) |
+| 3 | howto/install-appliance/azure | [Install on Azure](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-azure/30824) |
+| 3 | howto/install-appliance/google-cloud | [Install on Google Cloud](https://discourse.ubuntu.com/t/36254) |
 | 2 | howto/install/landing | [Install Anbox Cloud](https://discourse.ubuntu.com/t/install-anbox-cloud/24336)|
 | 3 | howto/install/deploy-juju | [Deploy with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744) |
 | 3 | howto/install/deploy-bare-metal | [Deploy on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378) |
 | 3 | howto/install/customise | [Customise the installation](https://discourse.ubuntu.com/t/installation-customizing/17747)|
 | 3 | howto/install/high-availability | [Enable High Availability](https://discourse.ubuntu.com/t/high-availability/17754)|
 | 3 | howto/install/validate | [Validate the deployment](https://discourse.ubuntu.com/t/validation/20329)|
-| 2 | howto/install-appliance/landing | [Install the appliance](https://discourse.ubuntu.com/t/how-to-install-the-anbox-cloud-appliance/29702) |
-| 3 | howto/install-appliance/aws | [Install on AWS](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-aws/29703) |
-| 3 | howto/install-appliance/azure | [Install on Azure](https://discourse.ubuntu.com/t/how-to-install-the-appliance-on-azure/30824) |
-| 3 | howto/install-appliance/google-cloud | [Install on Google Cloud](https://discourse.ubuntu.com/t/36254) |
 | 2 | howto/update/landing | [Update an installation](https://discourse.ubuntu.com/t/update-your-installation/24331)|
 | 3 | howto/update/control | [Control updates](https://discourse.ubuntu.com/t/control-updates/24959)|
 | 3 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
@@ -60,23 +60,22 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
 | 3 | howto/manage/manage-appliance | [Manage the appliance](https://discourse.ubuntu.com/t/manage-the-anbox-cloud-appliance/26725) |
 | 3 | howto/manage/tls-for-appliance | [Set up TLS for appliance](https://discourse.ubuntu.com/t/set-up-tls-for-the-anbox-cloud-appliance/28552) |
-| 3 | howto/manage/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
-| 3 | howto/manage/images | [Manage images](https://discourse.ubuntu.com/t/managing-images/17758)|
-| 3 | howto/manage/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
+| 3 | howto/manage/images | [Manage Anbox Cloud images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 3 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
 | 3 | howto/manage/benchmarks | [Run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770)|
 | 3 | howto/manage/resize-storage | [Resize LXD storage](https://discourse.ubuntu.com/t/resize-lxd-storage/32569)|
+| 2 | howto/dashboard/web-dashboard | [Use the web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871)|
 | 2 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 3 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 3 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
-| 3 | howto/application/update | [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)|
 | 3 | howto/application/resources | [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)|
-| 3 | howto/application/delete | [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)|
 | 3 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
-| 3 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
-| 3 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
-| 3 | howto/application/extend | [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)|
 | 3 | howto/application/userdata | [Pass custom data](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)|
+| 3 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
+| 3 | howto/application/update | [Update an application](https://discourse.ubuntu.com/t/update-an-application/24201)|
+| 3 | howto/application/delete | [Delete an application](https://discourse.ubuntu.com/t/delete-an-application/24199)|
+| 3 | howto/application/extend | [Extend an application](https://discourse.ubuntu.com/t/extand-an-application/28554)|
+| 2 | howto/application/virtual-devices | [Create a virtual device](https://discourse.ubuntu.com/t/virtual-devices/19069)|
 | 2 | howto/aar/landing | [Manage AAR](https://discourse.ubuntu.com/t/manage-aar/36807)|
 | 3 | howto/aar/deploy | [Deploy an AAR](https://discourse.ubuntu.com/t/installation-application-registry/17749)|
 | 3 | howto/aar/configure | [Configure an AAR](https://discourse.ubuntu.com/t/configure-an-aar/24319)|
@@ -92,13 +91,13 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/container/start | [Start a container](https://discourse.ubuntu.com/t/how-to-start-a-container/33924)|
 | 3 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
 | 3 | howto/container/access | [Access a container](https://discourse.ubuntu.com/t/container-access/17772)|
-| 3 | howto/container/expose-services | [Expose services](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)|
-| 3 | howto/container/logs | [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)|
-| 3 | howto/container/stop | [Stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)|
-| 3 | howto/container/delete | [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)|
 | 3 | howto/container/list | [List containers](https://discourse.ubuntu.com/t/list-containers/24328)|
 | 3 | howto/container/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
+| 3 | howto/container/logs | [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)|
+| 3 | howto/container/stop | [Stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)|
 | 3 | howto/container/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
+| 3 | howto/container/delete | [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)|
+| 3 | howto/container/expose-services | [Expose services](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)|
 | 2 | howto/addons/landing | [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 3 | howto/addons/enable-globally | [Enable globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285)|
 | 3 | howto/addons/update | [Update addons](https://discourse.ubuntu.com/t/update-addons/25286)|
@@ -108,10 +107,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/addons/customise-android | [Example: Customise Android](https://discourse.ubuntu.com/t/example-customise-android/25290)|
 | 3 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
 | 3 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
-| 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 3 | howto/monitor/telegraf | [Configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365)
-| 3 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
-| 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 2 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
 | 3 | howto/stream/access | [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) |
 | 3 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
@@ -126,56 +121,61 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/anbox/develop-addon | [Develop and test addons](https://discourse.ubuntu.com/t/develop-and-test-addons-in-development-mode/36914) |
 | 2 | howto/troubleshoot/landing | [Troubleshoot Anbox Cloud](https://discourse.ubuntu.com/t/how-to-troubleshoot-anbox-cloud/17837)|
 | 3 | howto/troubleshoot/initial-setup | [Troubleshoot initial setup](https://discourse.ubuntu.com/t/troubleshoot-issues-with-initial-setup/35704)|
+| 3 | howto/troubleshoot/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 3 | howto/troubleshoot/application-creation | [Troubleshoot application creation](https://discourse.ubuntu.com/t/troubleshoot-issues-with-application-creation/35702)|
 | 3 | howto/troubleshoot/container-failures | [Troubleshoot container failures](https://discourse.ubuntu.com/t/troubleshoot-container-failures/35703)|
 | 3 | howto/troubleshoot/lxd-cluster | [Troubleshoot LXD cluster](https://discourse.ubuntu.com/t/troubleshoot-issues-with-lxd-clustering/35705)|
 | 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
+| 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
+| 3 | howto/monitor/telegraf | [Configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365)
+| 3 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
+| 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
-| 2 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
-| 2 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 2 | ref/releases-versions | [Releases and versions](tbd) |
+| 3 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
+| 3 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
+| 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
+| 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 2 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
-| 2 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
+| 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
+| 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)|
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
-| 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
-| 2 | ref/api-reference | [API reference](https://discourse.ubuntu.com/t/api-reference/24339) |
+| 2 | ref/instance-types | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
+| 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
+| 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
+| 2 | ref/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
 | 3 | ref/ams-http-api | [AMS HTTP API](https://anbox-cloud.github.io/latest/ams/)|
 | 3 | ref/anbox-https-api | [Anbox HTTP API](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819)|
 | 3 | ref/anbox-stream-gateway | [Stream Gateway API](https://anbox-cloud.github.io/latest/anbox-stream-gateway/)|
 | 3 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
-| 2 | ref/instance-types | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
-| 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
-| 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
-| 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
+| 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 2 | ref/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
 | 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
-| 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
-| 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322)
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
-| 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)
-| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649)
-| 2 | ref/lxd-docs | [LXD documentation](https://documentation.ubuntu.com/lxd)|
+| 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
+| 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
+| 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
 | 0 | | |
 | 1 | exp/landing | [Explanation](https://discourse.ubuntu.com/t/explanation/28829) |
 | 2 | exp/anbox-cloud | [Anbox Cloud](https://discourse.ubuntu.com/t/anbox-cloud-overview/17802) |
+| 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
+| 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
 | 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
-| 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 2 | exp/rendering-architecture | [Rendering architecture](https://discourse.ubuntu.com/t/about-rendering-architecture/35129)
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
-| 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
-| 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416)
-| 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
-| 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/gpus-containers | [GPUs and containers](https://discourse.ubuntu.com/t/17768)|
-| 2 | exp/security | [Security](https://discourse.ubuntu.com/t/about-security/31217)|
+| 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
+| 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416) |
+| 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
+| 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
 | 0 | | |
 |   | release-notes/1.19.0 | [Release notes-Anbox Cloud 1.19.0](https://discourse.ubuntu.com/t/37849)|
 |   | release-notes/1.18.2 | [Release notes-Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
@@ -297,6 +297,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 | /docs/howto/container/launch | /docs/howto/container/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
+| /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
+| /docs/howto/manage/logs | /docs/howto/troubleshoot/logs |
 | /docs/ref/platforms | /docs/exp/platforms |
 | requirements | /ref/requirements |
 | release-notes | /ref/release-notes |
