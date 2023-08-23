@@ -95,7 +95,7 @@ The downloaded `.csv` file has the following statistics:
 | `video-packetslost` | Number of video packets lost |
 | `audio-bandwidth` | The amount of audio data that the session can handle per second |
 | `audio-totalreceived` | Total audio data received during streaming |
-| `audio-totalsamplesreceived` | Number of audio samples received |
+| `audio-totalsamplesreceived` | Total number of audio samples received |
 | `audio-jitter` | Loss of transmitted audio data during streaming |
 | `audio-averagejitterbufferdelay` | Average jitter buffer delay in audio transmission |
 | `audio-packetsreceived` | Number of audio packets received |
@@ -107,4 +107,4 @@ Use the **Sharing** button on the session page to share a streaming session with
 
 ### Managing Applications and their versions
 
-If you have configured the Anbox Application Registry (AAR), you can view and manage applications and their versions in the registry using the **Registry** button on the main menu. If you have configured AAR in manual mode, you can also manually push and delete apps from the registry.
+If you have configured the [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761), you can view and manage applications and their versions in the registry using the **Registry** button on the main menu. If you have configured AAR in manual mode, you can also manually push and delete apps from the registry.
