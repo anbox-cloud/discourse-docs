@@ -57,7 +57,7 @@ Running this command does the following:
     * [Anbox Management Client (AMC)](https://snapcraft.io/amc)
     * [LXD](https://snapcraft.io/lxd)
 
-        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `5.0/stable` track. If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it. However, if LXD version is later than 5.0, you cannot downgrade it.[/note]
+        [note type="information" status="Important"] The Anbox Cloud Appliance requires LXD >= 5.0 and hence LXD is installed from the `5.0/stable` track by default. If LXD is already installed but the version is earlier than 5.0, run `snap refresh --channel=5.0/stable lxd` to update it. However, if LXD version is later than 5.0, [do not downgrade it as it may render LXD unusable](https://documentation.ubuntu.com/lxd/en/latest/installing/#upgrade-lxd).[/note]
 
 1. Installs `anbox-cloud-appliance` snap from the `latest/stable` track.
 1. Configures the `apt` repositories for Anbox Cloud.
