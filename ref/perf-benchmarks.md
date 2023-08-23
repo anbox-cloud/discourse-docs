@@ -1,21 +1,21 @@
 The following benchmarks give an overview of the performance that you can achieve with Anbox Cloud.
 
-The benchmarks were performed using the `amc benchmark` utility as described in [How to run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (column "# Containers") delivering a stable frame rate (column "Avg. FPS"). Running more containers either gives too high variation in the provided frame rate or is not possible due to other hardware limitations (system memory, GPU memory, ...).
+The benchmarks were performed using the `amc benchmark` utility as described in [How to run benchmarks](https://discourse.ubuntu.com/t/benchmarking-a-deployment/17770). The results describe the maximum number of parallel running containers (column **# Containers**) delivering a stable frame rate (column **Avg. FPS**). Running more containers either gives a very high variation in the provided frame rate or is not possible due to other hardware limitations such as system memory, GPU memory etc.
 
-All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU.
+For most of the benchmarks below, a special version of the [BombSquad](https://www.froemling.net/apps/bombsquad) application was used. This version runs in a demo mode in which the game provides random and automated simulated gameplay. This allowed the benchmark to simulate a real-world scenario where actual users would play the game, instead of deriving from a static game scene without much variation across the Android instances.
 
-For most of the benchmarks below, a special version of the [BombSquad](https://www.froemling.net/apps/bombsquad) application was used. This version runs in a demo mode in which the game provides random and automated simulated gameplay. This allows the benchmark to simulate a real-world scenario where actual users would play the game, instead of sitting on a static game scene without much variation across the Android instances.
-
-All benchmarks are done with a variation of the following `amc benchmark` command:
+All benchmarks were performed with a variation of the following `amc benchmark` command:
 
     amc benchmark --network-address 192.168.100.1 -n <number of containers> \
         -p webrtc -f -s 0.1 --measure-time 5m \
         --userdata '{"display_width":1280,"display_height":720,"fps":30,"benchmark":{"enabled":true}}' \
         <app name>
 
+[note type="information" status="Note"]All benchmarks include rendering and video encoding. On machines/VMs without a GPU, rendering and video encoding are performed in software on the CPU. See [software rendering and video encoding](https://discourse.ubuntu.com/t/17768#software-rendering) for more information.[/note]
+
 ## Bare metal
 
-| Hardware                            | Anbox Cloud version | Rendering / encoding | Resolution | Application         | # Containers | Avg. FPS |
+| Hardware     | Anbox Cloud version | Rendering / encoding | Resolution | Application     | # Containers | Avg. FPS |
 |-------------------------------------|---------------------|----------------------|------------|---------------------|--------------|---------|
 | Ampere Altra + 1x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 30           | 29      |
 | Ampere Altra + 2x NVIDIA Tesla T4   | 1.11.2 (appliance)  | hardware / hardware  | 720p       | [BombSquad](https://www.froemling.net/apps/bombsquad)    | 55           | 29      |
