@@ -1,3 +1,5 @@
+The copyright and license information of Anbox Cloud can be found within an Anbox Cloud container at `/usr/share/doc/anbox/copyright`.
+
 Anbox Cloud is built using multiple open source software components. This guide lists those components and where to find their license information.
 
 | Software components | Where to find their licenses |
