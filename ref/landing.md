@@ -8,6 +8,7 @@ Learn about Anbox Cloud releases, release roadmap, supported product versions an
 | [Release roadmap](https://discourse.ubuntu.com/t/19359) | Information about general release cycle, currently supported version and future releases |
 | [Release notes](https://discourse.ubuntu.com/t/17842) | Release notes for all versions of Anbox Cloud |
 | [Component versions](https://discourse.ubuntu.com/t/21413) | Version information about different components of Anbox Cloud for each release |
+| [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) | Information about supported Anbox Cloud versions and professional support |
 
 ## Usage
 
