@@ -1,4 +1,4 @@
-Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the [default platforms](https://anbox-cloud.io/docs/ref/platforms) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
+Anbox Cloud provides a platform SDK that allows the development of custom platform plugins for the Anbox runtime, for use cases where the [default platforms](https://discourse.ubuntu.com/t/18733) don't fit. For example, a custom platform can be used to integrate a custom streaming protocol with the Anbox runtime.
 
 This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts the [Anbox Cloud Appliance](https://discourse.ubuntu.com/t/install-appliance/22681).
 
@@ -29,7 +29,7 @@ The build process creates a `platform_minimal.so` module in the `build` director
 
 ## Install the example platform
 
-[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching Anbox containers in a special [development mode](https://anbox-cloud.io/docs/exp/containers#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the container when it detects failures or other problems.
+[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching Anbox containers in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the container when it detects failures or other problems.
 
 To try out the `minimal` platform, complete the following steps:
 
@@ -37,7 +37,7 @@ To try out the `minimal` platform, complete the following steps:
 
         amc launch --raw --devmode --instance-type=a4.3
 
-   If you chose the `nvidia` example, you must select an [instance type](https://discourse.ubuntu.com/t/instance-types/17764) that supports GPUs:
+   If you chose the `nvidia` example, you must select an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) that supports GPUs:
 
         amc launch --raw --devmode --instance-type=g4.3
 

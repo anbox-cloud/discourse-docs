@@ -20,7 +20,6 @@ Understand the difference aspects of using Anbox Cloud such as requirements, sup
 | [Supported rendering resources](https://discourse.ubuntu.com/t/37322)| A list of supported GPU vendors, drivers, platforms, APIs etc. |
 | [Supported video codecs](https://discourse.ubuntu.com/t/37323)| A list of supported video codecs |
 | [Supported Android features](https://discourse.ubuntu.com/t/28825)| Overview of Android features and which of them are supported by Anbox Cloud |
-| [Instance types](https://discourse.ubuntu.com/t/17764)| A list of predefined instance types |
 | [API reference](https://discourse.ubuntu.com/t/24339)| APIs that Anbox Cloud provides |
 | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/17844)| Overview of the SDKs that Anbox Cloud provides to facilitate integrating and extending the solution |
 | [Network ports](https://discourse.ubuntu.com/t/33650)| A list of network ports that Anbox Cloud exposes for each service |

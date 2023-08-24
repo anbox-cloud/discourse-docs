@@ -326,7 +326,7 @@ See https://discourse.ubuntu.com/t/manage-images/17758 and https://discourse.ubu
 
 An abstraction for a set of resources that is available to a container.
 
-See https://discourse.ubuntu.com/t/instance-types/17764.
+See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type.
 
 <a name="juju"></a>
 ### Juju

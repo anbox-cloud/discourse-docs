@@ -4,7 +4,7 @@ The supported conditions for an application are as follows:
 
 Name            |  Value
 ----------------|------------
-`instance-type` |  Supported instance type. See [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.
+`instance-type` |  Supported instance type. See [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for a list of available instance types.
 `addons`        |  Comma-separated list of addons.
 `tag`           |  Application tag name (deprecated, use `tags` instead).
 `tags`          |  Comma-separated list of tags.
