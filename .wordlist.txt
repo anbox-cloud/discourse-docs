@@ -108,6 +108,7 @@ Graylog
 gRPC
 gzip
 HAProxy
+hotfix
 HTTPS
 HW
 HWE
