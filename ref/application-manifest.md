@@ -2,27 +2,48 @@ An application manifest defines the various attributes of an application.
 
 The available attributes are listed in the following table:
 
-Name          | Value type | Description
---------------|------------|-------------------------
-`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space
-`version`       | string     | Version to encode with the application. Maximum length is 50 characters.
-`instance-type` | string     | Container instance type that all containers created for the application will use.
-`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation.
-`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty.
-`addons` (optional) | array      | List of addons to be installed during the application bootstrap process.
-`tags` (optional) | array      | List of tags to be associated with the application.
-`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present).
-`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest).
-`video-encoder` (optional) | string     | Video encoder to be used by a container launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`
-`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation.
-`services` (optional)    | array      | Services to be provided from the installed application.
-`resources` (optional)   | map        | Resources to be allocated on application installation.
-`extra-data` (optional)  | array      | List of additional data to be installed on application installation.
-`hooks` (optional) | object | Hooks settings to be configured on application installation.
-`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation.
-`features` (optional) | array | List of feature flags to be defined for containers created from the application.
-`node-selector` (optional) | array | List of selectors which will limit what node a container for the application can be scheduled on. |
+Name          | Value type | Description |
+--------------|------------|-------------------------|
+`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space |
+`version`       | string     | Version to encode with the application. Maximum length is 50 characters. |
+`instance-type` | string     | Container instance type that all containers created for the application will use. [Jump to details](#instance-type) |
+`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. |
+`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) |
+`addons` (optional) | array      | List of addons to be installed during the application bootstrap process. |
+`tags` (optional) | array      | List of tags to be associated with the application. |
+`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). |
+`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). |
+`video-encoder` (optional) | string     | Video encoder to be used by a container launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder) |
+`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog)|
+`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services) |
+`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources) |
+`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data) |
+`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks) |
+`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap)|
+`features` (optional) | array | List of feature flags to be defined for containers created from the application. |
+`node-selector` (optional) | array | List of selectors which will limit what node a container for the application can be scheduled on. [Jump to details](#node-selector) |
 
+<a name="instance-type"></a>
+## Instance type
+
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single container with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of containers or particular applications.
+
+Anbox Cloud offers the following instance types:
+
+Name  | vCPU cores | RAM   | Disk size | GPU slots |
+------|------------|-------|-----------|-----------|
+a2.3  | 2          | 3 GB  | 3 GB      |  0        |
+a4.3  | 4          | 3 GB  | 3 GB      |  0        |
+a6.3  | 6          | 3 GB  | 3 GB      |  0        |
+a8.3  | 8          | 3 GB  | 3 GB      |  0        |
+a10.3 | 10         | 3 GB  | 3 GB      |  0        |
+g2.3  | 2          | 3 GB  | 3 GB      |  1        |
+g4.3  | 4          | 3 GB  | 3 GB      |  1        |
+g6.3  | 6          | 3 GB  | 3 GB      |  1        |
+g8.3  | 8          | 3 GB  | 3 GB      |  1        |
+g10.3 | 10         | 3 GB  | 3 GB      |  1        |
+
+<a name="image"></a>
 ## Image
 
 The `image` attribute defines which image the application is based on. If left empty, your application is based on the default image. See [How to manage images](https://discourse.ubuntu.com/t/managing-images/17758) for more details on this. Available images on your installation can be listed with the following command:
@@ -57,7 +78,7 @@ When `gpu` video encoder is specified in the manifest, AMS can fail to create an
  - There is no GPU support across the entire LXD cluster.
 
 <a name="watchdog"></a>
-## Watchdog settings
+## Watchdog
 
 The `watchdog` attribute includes the following field definitions:
 
@@ -87,6 +108,7 @@ The rules forbid launching another activity, not part of the installed package o
 
 Supplying `['*']` to the `allowed-packages` when the watchdog is enabled allows any application to be displayed in the foreground without triggering a watchdog.
 
+<a name="services"></a>
 ## Services
 
 A container launched from the installed application can expose `services` you want to make accessible from outside the container. You must define the following properties for each service:
@@ -101,7 +123,9 @@ Name           | Value type | Description
 <a name="resources"></a>
 ## Resources
 
-If the [`instance-type`](https://discourse.ubuntu.com/t/instances-types-reference/17764) that is provided by AMS doesn't meet the criteria that the installed application requires to function, you can use the `resources` directive to override the predefined resources.
+Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to a container. For example, if you start a container for an application that uses the instance type `a4.3`, the container is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
+
+If your application requires resources that do not correspond to any of the provided instance types, you can use the `resources` directive to override some or all of the predefined resources.
 
 Name           | Value type | Minimum value  | Description
 ---------------|------------|----------------|-------------------------
@@ -110,18 +134,11 @@ Name           | Value type | Minimum value  | Description
 `disk-size`    | string     |     3 GB       | Disk size to be assigned to the application
 `gpu-slots`(optional) | integer |     0      | Number of GPU slots to be assigned to the application
 
-In the following application manifest file, the application is created with `a4.3` instance type, which will be assigned 4 vCPU cores, 3 GB of memory and a disk size of 3 GB. With the following resources defined in the manifest file, the allocated memory and disk size will end up at 4 GB and 8 GB, respectively, on application installation, and the number of vCPU cores remains the same:
-
-```yaml
-name: candy
-instance-type: a4.3
-resources:
-  memory: 4GB
-  disk-size: 8GB
-```
-
 If all required fields (`cpus`/`memory`/`disk-size`) of `resources` are supplied in the application manifest, the `instance-type` field is no longer needed. Even if the `instance-type` field is provided, it will be overridden by the requirements in the `resources` fields upon application installation.
 
+See [How to configure available resources](https://discourse.ubuntu.com/t/24960) for more information.
+
+<a name="extra-data"></a>
 ## Extra data
 
 Some Android applications which contain large program assets such as graphics or media files use so-called [OBB](https://developer.android.com/google/play/expansion-files) files to store additional data. These data files are separated from the APK and saved onto the external or internal SD card of an Android device. The `extra-data` field can be used in this case to install an APK with separated OBB files or any other additional data into the Android system.
@@ -179,7 +196,7 @@ The manifest and extra data in our example are placed next to the application pa
 │       └── data.bin
 └── manifest.yaml
 ```
-
+<a name="hooks"></a>
 ## Hooks
 
 Hooks allow you to run custom scripts when a certain event is triggered in a container life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more details about the usage of hooks in an application.

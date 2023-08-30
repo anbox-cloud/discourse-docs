@@ -136,14 +136,13 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
 | 3 | ref/roadmap | [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)|
 | 3 | ref/release-notes | [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)|
-| 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046)|
+| 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) |
 | 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)|
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
-| 2 | ref/instance-types | [Instance types](https://discourse.ubuntu.com/t/instance-types-reference/17764)|
 | 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
 | 2 | ref/api-reference | [APIs](https://discourse.ubuntu.com/t/api-reference/24339) |
@@ -301,9 +300,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
 | /docs/howto/manage/logs | /docs/howto/troubleshoot/logs |
 | /docs/ref/platforms | /docs/exp/platforms |
-| requirements | /ref/requirements |
-| release-notes | /ref/release-notes |
-| roadmap | /ref/roadmap |
-| component-versions | /ref/component-versions |
-| supported-versions | /ref/supported-versions |
+| /docs/requirements | /docs/ref/requirements |
+| /docs/release-notes | /docs/ref/release-notes |
+| /docs/roadmap | /docs/ref/roadmap |
+| /docs/component-versions | /docs/ref/component-versions |
+| /docs/supported-versions | /docs/ref/supported-versions |
+| /docs/ref/instance-types | /docs/ref/application-manifest |
 [/details]

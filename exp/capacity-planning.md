@@ -17,7 +17,7 @@ When estimating capacity, consider the following questions to better understand 
 <a name="application-resources"></a>
 ## Application resources
 
-Depending on the resources that your application requires, choose a suitable [instance type](https://discourse.ubuntu.com/t/instance-types/17764).
+Depending on the resources that your application requires, choose a suitable [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type).
 
 The instance type specifies the resources that are available to the application:
 

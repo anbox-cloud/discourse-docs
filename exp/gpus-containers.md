@@ -18,9 +18,10 @@ If you want to let an application use the GPU (even if you are not interested in
 
     amc launch --enable-graphics my-application
 
+<a name="software-rendering"></name>
 ## Force software rendering and video encoding
 
-It is possible to instruct a container to run with software rendering. To do so, change the [instance type](https://discourse.ubuntu.com/t/instance-types/17764) or [resources](https://discourse.ubuntu.com/t/configure-available-resources/24960) of the application to not require a GPU. Anbox Cloud will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.
+It is possible to instruct a container to run with software rendering. To do so, change the [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) or [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) of the application to not require a GPU. Anbox Cloud will then automatically determine that no GPU is available and use software rendering instead if a container is launched with graphics enabled.
 
 Since software rendering and video encoding will utilise the CPU, you won't be able to run as many containers on a system when compared to running containers when you have a GPU.
 

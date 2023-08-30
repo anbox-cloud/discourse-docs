@@ -6,7 +6,7 @@ The internal process will prepare a container based on the currently available i
 
 To create an application, you need an Android package (APK) with support for the target architecture. Additionally, you must select one of the available instance types for the application. The instance type defines CPU/RAM constraints put onto the container launch for the application.
 
-[note type="information" status="Note"]See [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) for a list of available instance types.[/note]
+[note type="information" status="Note"]See [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for a list of available instance types.[/note]
 
 To create a new application, you must first create a manifest file to define the various attributes the new application should have. The manifest is a simple [YAML](http://yaml.org/) file and looks like this:
 

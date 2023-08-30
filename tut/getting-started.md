@@ -177,7 +177,7 @@ Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
 
-2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/instances-types-reference/17764) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
 
    For example, the file could look like this:
 
@@ -186,7 +186,7 @@ Complete the following steps to create an application from an APK:
    instance-type: a4.3
    ```
 
-   [note type="information" status="Tip"]The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) and [Instance types](https://discourse.ubuntu.com/t/instances-types-reference/17764) documentation.[/note]
+   [note type="information" status="Tip"]The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) and [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) documentation.[/note]
 2. Enter the following command to create the application, replacing */path/to/manifest/directory/* with the path to the directory where you created the manifest file:
 
         amc application create /path/to/manifest/directory/

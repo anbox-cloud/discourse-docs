@@ -46,7 +46,7 @@ You can access AMS either by IP or through a UNIX socket. The IP depends on your
 
 [note type="information" status="Tip"]If your client requires the AMS certificate, you can find it in `/var/snap/ams/common/server/ams.crt`.[/note]
 
-### Related information
+## Related information
 * [How to control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)
 * [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)
 * [Anbox Application Registry (AAR)](https://discourse.ubuntu.com/t/application-registry/17761)
