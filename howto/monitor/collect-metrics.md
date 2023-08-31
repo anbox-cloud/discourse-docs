@@ -78,7 +78,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          install_keys: |
             - |
             -----BEGIN PGP PUBLIC KEY BLOCK-----
-
             mQGNBGO4aiUBDAC82zo3vUyQH3yTCabQ7ZpospBg/xXBbJWbQNksIbEP/+I12CjB
             zac1QcMFd27MJlyXpsTqqSo1ZHOisNy0Tmyl/WlqMyoMeChg+LmIHLNbvAK0jPOX
             1Pt2OykXJWN9Ru+ZZ4uQNgdKO5nXS6CZtK+McfhRwwghp+vlZFJgqP6aGR2A4cZ7
@@ -196,7 +195,6 @@ Complete the following steps to deploy Anbox Cloud with the reference monitoring
          install_keys: |
             - |
             -----BEGIN PGP PUBLIC KEY BLOCK-----
-
             mQGNBGO4aiUBDAC82zo3vUyQH3yTCabQ7ZpospBg/xXBbJWbQNksIbEP/+I12CjB
             zac1QcMFd27MJlyXpsTqqSo1ZHOisNy0Tmyl/WlqMyoMeChg+LmIHLNbvAK0jPOX
             1Pt2OykXJWN9Ru+ZZ4uQNgdKO5nXS6CZtK+McfhRwwghp+vlZFJgqP6aGR2A4cZ7
