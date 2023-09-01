@@ -1,4 +1,4 @@
-The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and handles all aspects of the application and container life cycle. It is responsible for managing containers, applications, addons, updates and more, while simultaneously ensuring high density, performance and fast container startup times.
+The Anbox Management Service (AMS) sits at the heart of Anbox Cloud and handles all aspects of the application and instance life cycle. It is responsible for managing instances, applications, addons, updates and more, while simultaneously ensuring high density, performance and fast startup times.
 
 ## Interacting with AMS
 AMS is usually managed through the command line interface, the Anbox Management Client (AMC), which can run either on the same machine as AMS or on a remote machine.
