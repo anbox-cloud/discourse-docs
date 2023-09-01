@@ -1,6 +1,6 @@
 Anbox Cloud currently supports the `swrast`, `null`, `webrtc` platforms. This guide covers the display settings configuration for these platforms.
 
-To instruct a container to use a platform, include the `--platform` (or `-p`) flag when launching a container:
+To instruct an Anbox Cloud instance to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
 
     amc launch -p webrtc <application>
 
@@ -8,9 +8,9 @@ To instruct a container to use a platform, include the `--platform` (or `-p`) fl
 
 [note type="caution" status="Warning"]The `swrast` platform is deprecated and has been replaced with the `webrtc` platform starting with Anbox Cloud 1.13. You can still explicitly specify `swrast` as platform name, but internally, it is mapped to the `webrtc` platform. The `webrtc` platform provides backward compatibility with the display settings described below.[/note]
 
-Anbox Cloud provides a way of inserting user data to Android container upon its launch which can configure the display settings for `swrast` platform.
+Anbox Cloud provides a way of add user data to the Android container upon its launch which can configure the display settings for `swrast` platform.
 
-By default, when launching a container on the `swrast` platform without specifying the display settings through user data, the following display specification will be used:
+By default, when launching an Android container on the `swrast` platform without specifying the display settings through user data, the following display specification will be used:
 
 Display specs   | Value
 ----------------|-------
@@ -23,11 +23,11 @@ If you want to change the display settings of the Android container, you need to
 
     <Display width>,<Display height>,<FPS>,<Display density>
 
-The first two fields which imply display width and display height respectively are required, however the latter two are optional. When launching a container, supply the display settings via user data:
+The first two fields which imply display width and display height respectively are required, however the latter two are optional. When launching an Anbox Cloud instance, mention the display settings via user data:
 
     amc launch --userdata="960,720,30,120" -p swrast <application>
 
-Then the supplied display setting will be applied after the container gets started.
+Then the specified display setting will be applied after the instance gets started.
 
 ## Configuration for `null` platform
 
@@ -37,7 +37,7 @@ Instead of supplying the display settings via `userdata` through the `amc launch
 
 ## Configuration for `webrtc` platform
 
-The `webrtc` platform can be configured through user data provided to the container in JSON format. AMS puts the configuration data at `/var/lib/anbox/userdata`.
+The `webrtc` platform can be configured through user data provided to the instance in JSON format. AMS puts the configuration data at `/var/lib/anbox/userdata`.
 
 Field name | Type | Default | Description
 -----------|------|---------|------------
@@ -46,7 +46,7 @@ Field name | Type | Default | Description
 `display_density` | `int` | `240` | Density of the display provided to Android.
 `fps` | `int` | `60` | Refresh rate of the display provided to Android.
 
-For example, to configure the platform for a display height of 1080p and 60 FPS, set the user data for a container like this:
+For example, to configure the platform for a display height of 1080p and 60 FPS, set the user data for an instance like this:
 
     amc launch -p webrtc --userdata '{"display_width":1920, "display_height":1080, "fps": 60}'
 
