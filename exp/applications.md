@@ -13,12 +13,12 @@ If your application fulfils these requirements but you are still having issues r
 
 When [creating an application](https://discourse.ubuntu.com/t/create-an-application/24198) from a directory, a tarball, or a zip archive, AMS will perform a bootstrap process, which builds the application and synchronises it across all LXD nodes in the cluster. There are major benefits that the bootstrap process provides:
 
-  * It enables AMS to launch a container for an application without installing the APK every time.
-  * It dramatically speeds up the startup time of a regular container.
+  * It enables AMS to launch an instance for an application without installing the APK every time.
+  * It dramatically speeds up the startup time of a regular instance.
 
 Furthermore, an application is synchronised within the LXD cluster, which enables AMS to continue to work when nodes are being removed from the cluster through [scaling down](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) or lost from the cluster unexpectedly.
 
-A temporary base container is created and used for bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
+A temporary base instance is created and used for bootstrapping during the application creation. For example, you might see the following output for `amc ls` right after creating an application:
 
 ```bash
 +----------------------+-------------+------+----------+------+---------------+-----------+
@@ -44,13 +44,13 @@ In general, the bootstrap process goes through the following steps in order:
 
 The bootstrap process fails if one or more of the following situations happen:
 
-* If one of the steps in the bootstrap process fails, AMS will interrupt the bootstrap process and hence the entire process fails. As a result, the status of the base container will be set to `error` and the application status is set to `error` as well.
+* If one of the steps in the bootstrap process fails, AMS will interrupt the bootstrap process and hence the entire process fails. As a result, the status of the base instance will be set to `error` and the application status is set to `error` as well.
 
 * An application crash or ANR upon APK installation causes the bootstrap process to terminate abnormally and the application status is set to `error`.
 
-* The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the container status is set to `error`.
+* The bootstrap process is limited to a maximum duration of 15 minutes. If it takes longer, the bootstrap process is aborted and the instance status is set to `error`.
 
-When a base container runs into an `error` status, you can find the issue by checking the error message with `amc show <container ID>`:
+When a base instance runs into an `error` status, you can find the issue by checking the error message with `amc show <instance ID>`:
 
 ```bash
 id: bq78a3oj1qm02cebmof0
@@ -72,9 +72,9 @@ error_message: 'Failed to install application: com.foo.bar: Failed to extract na
 config: {}
 ```
 
-Alternatively, [check the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) to troubleshoot problems in the container.
+Alternatively, [check the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) to troubleshoot problems in a container.
 
-When the application bootstrap succeeds, the base container is automatically removed and the status of the application changes to `ready` indicating that the application is ready to use.
+When the application bootstrap succeeds, the base instance is automatically removed and the status of the application changes to `ready` indicating that the application is ready to use.
 
 ## Related information
 * [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)
