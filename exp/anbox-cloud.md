@@ -1,8 +1,6 @@
 Anbox Cloud provides a rich software stack that enables you to run Android applications in the cloud for different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
 
-At its heart, it uses lightweight container technology instead of full virtual machines and maintains a single Android system per container. This approach allows for higher density and better performance per host while ensuring security and isolation of each container. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 containers on a single machine.
-
-For containerisation of Android, Anbox Cloud uses the well-established and secure container hypervisor [LXD](https://ubuntu.com/lxd). LXD is secure by design, scales to a large number of containers, and provides advanced resource management for hosted containers.
+Anbox Cloud maintains a single Android system per instance, providing higher density and better performance per host while ensuring security and isolation of each instance. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 instances on a single machine.
 
 <a name="variants"></a>
 ## Variants
@@ -51,9 +49,9 @@ The core stack contains one or more Anbox subclusters, a Juju controller, and th
 
 Inside each Anbox subcluster, the following components are present:
 
-* **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and container life cycle, including application and image update, while ensuring high density, performance, and fast container startup times.
+* **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and instance life cycle, including application and image update, while ensuring high density, performance, and fast startup times.
 
-  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting and releasing resources as per demand.
+  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox Cloud instances, requesting and releasing resources as per demand.
 
 * **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to [control AMS remotely](https://discourse.ubuntu.com/t/how-to-control-ams-remotely/17774), but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
 
@@ -63,11 +61,11 @@ Inside each Anbox subcluster, the following components are present:
 
 Each Anbox subcluster also has a number of LXD worker nodes that form a LXD cluster. Each LXD worker node runs the following components:
 
-* **LXD** - The LXD daemon spawns a number of LXD containers containing Anbox-related configuration. These containers provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD container runs exactly one Android container that the end user can access/stream.
+* **LXD** - The LXD daemon spawns a number of LXD instances containing Anbox-related configuration. These instances provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD instance runs exactly one Android instance that the end user can access/stream.
 
-    [note type="information" status="Note"] The term LXD containers means that they are LXD containers that contain Anbox-related configuration. Within the context of Anbox Cloud, the term Anbox containers/images is synonymous with LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.[/note]
+    [note type="information" status="Note"] The term LXD instance means that they are LXD containers or virtual machines that contain configuration related to Anbox Cloud. Within the context of Anbox Cloud, the term Anbox Cloud instances/images is synonymous with LXD instances/LXD images in the sense that they are LXD instances/images containing specific configuration related to Anbox Cloud.[/note]
 
-* **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when a container is started or stopped to control ingress and egress traffic.
+* **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when an instance is started or stopped to control ingress and egress traffic.
 
 Outside the Anbox subcluster, you have the following machines:
 
@@ -82,7 +80,7 @@ The diagram below depicts the streaming stack along with the core stack and user
 
 When the streaming stack is in use, each Anbox subcluster has the following additional components:
 
-* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the Anbox container running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
+* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the Anbox Cloud instance running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
 * **Stream agent** - Serves as an entry point that the gateway can connect to to talk to the AMS of the Anbox subcluster.
 
@@ -98,11 +96,11 @@ For example, your web client can be a mobile app used to access the provided And
 <a name="lxd"></a>
 ## LXD
 
-Anbox Cloud includes LXD for hosting and managing the Ubuntu containers that run the nested Android containers.
+Anbox Cloud includes LXD for hosting and managing the Ubuntu containers or virtual machines that run the nested Android containers.
 
 LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), which adds some Anbox-specific configuration to LXD. AMS configures LXD automatically and fully manages it, which means that in most scenarios, you do not need to worry about LXD at all.
 
-If you want to monitor LXD, you can always run `lxc list` to display the existing containers. For the full deployment, LXD hosts the AMS containers. If you run the Anbox Cloud Appliance, LXD also containerises the Anbox Cloud deployment, which means that it hosts containers for the different Juju machines that Anbox Cloud requires:
+If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the AMS containers or virtual machines. If you run the Anbox Cloud Appliance, LXD hosts containers or virtual machines for the different Juju machines that Anbox Cloud requires:
 
 ```
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
