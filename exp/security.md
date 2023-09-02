@@ -1,6 +1,6 @@
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
 
-For containerisation, Anbox Cloud uses the secure container hypervisor [LXD](https://ubuntu.com/lxd). To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD container.
+Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
 This security guide gives more insight into how security is ensured through different aspects of Anbox Cloud.
 
@@ -54,7 +54,7 @@ With this secure channel, Juju charms can communicate with each other using rela
 
 ### Security updates
 
-Anbox Cloud provides container images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with [`application.auto_update`](https://discourse.ubuntu.com/t/ams-configuration/20872)).
+Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with [`application.auto_update`](https://discourse.ubuntu.com/t/ams-configuration/20872)).
 
 In addition, to ensure that the latest Ubuntu security patches are applied outside of image updates as well, Anbox Cloud checks for and installs available security updates every time an application is bootstrapped. So when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to bootstrap the application again, and thus install the latest security patches.
 
