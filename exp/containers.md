@@ -1,35 +1,35 @@
-Containers are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system.
+Instances are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
 
-All containers in Anbox Cloud are ephemeral, which means that as soon as a container is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu container. Backup and restore of data must be implemented separately through [addons](https://discourse.ubuntu.com/t/addons/25293). See [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289) for information on how to do this.
+All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu container. Backup and restore of data must be implemented separately through [addons](https://discourse.ubuntu.com/t/addons/25293). See [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289) for information on how to do this.
 
 <a name="regular-vs-base"></a>
-## Regular containers vs. base containers
+## Regular instances vs. base instances
 
-Anbox Cloud differentiates between two types of containers: regular containers and base containers. The container type is visible in the output of the `amc ls` command.
+Anbox Cloud differentiates between two types of instances: regular and base. The instance type is visible in the output of the `amc ls` command.
 
-Regular containers are containers that are launched from either an application or an image. They exist until they are deleted.
+Regular instances are containers or virtual machines that are launched from either an application or an image. They exist until they are deleted.
 
-Base containers are temporary containers that are used when [bootstrapping an application](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). They are automatically deleted when the application bootstrap is completed.
+Base instances are temporary containers or virtual machines that are used when [bootstrapping an application](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap). They are automatically deleted when the application bootstrap is completed.
 
-When we refer to containers in this documentation without specifying the container type, we mean regular containers.
+When we refer to instances in this documentation without specifying the instance type, we mean regular instances.
 
 <a name="application-vs-raw"></a>
-## Application containers vs. raw containers
+## Application instances vs. raw instances
 
-Containers are based on either [applications](https://discourse.ubuntu.com/t/managing-applications/17760) or [images](https://discourse.ubuntu.com/t/provided-images/24185). That means that if you launch an application or an image, Anbox Management Service (AMS) automatically creates a container for it.
+Instances are based on either [applications](https://discourse.ubuntu.com/t/managing-applications/17760) or [images](https://discourse.ubuntu.com/t/provided-images/24185). So if you launch an application or an image, Anbox Management Service (AMS) automatically creates an instance for it.
 
-Application containers are containers created when launching an application and run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog). With the default configuration, you will see only the app and not the Android launcher.
+Application instances are containers or virtual machines created when launching an application and run the full Android system. If the application is based on an Android app (an APK package), this app is launched after the system boots and monitored by the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog). With the default configuration, you will see only the app and not the Android launcher.
 
-Raw containers are containers created when launching an image. They run the full Android system, without any additional apps installed.
+Raw instances are containers or virtual machines created when launching an image. They run the full Android system, without any additional apps installed.
 
-## Container life cycle
+## Life cycle of an Anbox Cloud instance
 
-### Creating a container
+### Creating an instance
 
-When you [create a container](https://discourse.ubuntu.com/t/launch-a-container/24327) by either launching or initialising an application or an image, AMS schedules the container on a LXD node. The container then executes the following steps in order:
+When you [create an instance](https://discourse.ubuntu.com/t/launch-a-container/24327) by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
 
 1. Configure the network interface and gateway.
-1. (Only for raw containers) Install addons that are specified with `--addons`.
+1. (Only for raw instances) Install addons that are specified with `--addons`.
 1. Expose services that are specified with `--service` or through the application manifest.
 1. Execute the `pre-start` hook provided by the installed addons.
 1. Launch the Android container.
@@ -37,47 +37,47 @@ When you [create a container](https://discourse.ubuntu.com/t/launch-a-container/
 
 ![Container start|584x646](https://assets.ubuntu.com/v1/230fd172-container_start.png)
 
-The container launch process is successful only if all of the above steps succeed. If there are issues during the process, the status of the container changes to the `error` status. You can [view the available logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) from the container for further troubleshooting.
+Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) from the container for further troubleshooting.
 
-### Stopping a container
+### Stopping an instance
 
-Containers can be stopped because of the following scenarios:
+Anbox Cloud instances can be stopped because of the following scenarios:
 
 - You stopped it.
 - You deleted it.
 - An error occurred.
 
-When a container is stopped, it executes the following steps in order:
+When an instance is stopped, it executes the following steps in order:
 
 1. Stop the Android container.
 2. Execute the `post-stop` hook provided by the installed addons.
-3. Shut down the container.
+3. Shut down the instance.
 
-Beyond that, the container will be removed from AMS either because you deleted it or because an error occurred during its runtime.
+Beyond that, the instance will be removed from AMS either because you deleted it or because an error occurred during its runtime.
 ![Container stop|575x521](https://assets.ubuntu.com/v1/0377512e-container_stop.png)
 
-### Possible container status
+### Possible instance status
 
-A container moves through different stages and correspondingly have the following status depending on its current state.
+An instance moves through different stages and correspondingly can have the following status depending on its current state.
 
 Status            |  Description
 ----------------|------------
-`created`     | AMS has created an internal database object for the container and will next schedule the container onto a suitable LXD node.
-`prepared` | AMS has decided the LXD node on which it will schedule the container.
-`started` | The container is started and now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the container will switch to `running`.
-`running` | The container is fully up and running.
-`stopped` | The container is fully stopped and will be deleted by AMS.
-`deleted` | The container is deleted and will be removed from the AMS database soon.
-`error` | An error occurred while processing the container. The container is stopped. Further information about the error can be viewed with `amc show <container id>`.
+`created`     | AMS has created an internal database object for the instance and will next schedule the instance onto a suitable LXD node.
+`prepared` | AMS has decided the LXD node on which it will schedule the instance.
+`started` | The instance is started and now booting. During the boot sequence, possible hooks are executed. Only when all hooks have been executed, the instance will switch to `running`.
+`running` | The instance is fully up and running.
+`stopped` | The instance is fully stopped and will be deleted by AMS.
+`deleted` | The instance is deleted and will be removed from the AMS database soon.
+`error` | An error occurred while processing the instance. The instance is stopped. Further information about the error can be viewed with `amc show <instance id>`.
 
 <a name="dev-mode"></a>
 ## Development mode
 
-AMS allows to start a container in development mode. This mode turns off some features that are usually active in a container. It is mainly useful when developing addons inside a container.
+AMS allows to start an instance in development mode. This mode turns off some features that are usually active in an instance. It is mainly useful when developing addons inside an instance.
 
-When development mode is enabled, the container sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the container to continue running. This allows you to restart the Anbox runtime inside the container, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or develop a [platform plugin](https://anbox-cloud.github.io/latest/anbox-platform-sdk/).
+When development mode is enabled, the instance sends status updates to AMS when the Anbox runtime is terminated, however, AMS allows the instance to continue running. This allows you to restart the Anbox runtime inside the instance, providing an easy way to test [addons](https://discourse.ubuntu.com/t/addons/25293) or develop a [platform plugin](https://anbox-cloud.github.io/latest/anbox-platform-sdk/).
 
-To check whether development mode is enabled, run `amc show <container_ID>` or look at the `/var/lib/anbox/session.yaml` file in the container. If the `devmode` field in the configuration file is set to `true`, development mode is active.
+To check whether development mode is enabled, run `amc show <instance_ID>` or look at the `/var/lib/anbox/session.yaml` file in the instance. If the `devmode` field in the configuration file is set to `true`, development mode is active.
 
 ## Related information
 
