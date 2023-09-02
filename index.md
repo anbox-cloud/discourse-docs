@@ -169,7 +169,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
 | 2 | exp/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
 | 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
+| 2 | exp/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
 | 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
 | 2 | exp/gpus-containers | [GPUs and containers](https://discourse.ubuntu.com/t/17768)|
 | 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
@@ -325,4 +325,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/addons/best-practices | /docs/exp/addons |
 | /docs/ref/addons | /docs/ref/addon-manifest |
 | /docs/howto/manage/manage-appliance | /docs/ref/appliance-command-reference/landing |
+| /docs/exp/containers | /docs/exp/instances |
 [/details]
