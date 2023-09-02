@@ -7,11 +7,11 @@ When estimating capacity, consider the following questions to better understand 
     - Will the application use hardware- or software-based video encoding?
     - If the application uses hardware-based encoding, how much GPU capacity is needed?
 * [CPU and memory](#overovercommitting):
-    - Does every container need dedicated access to the CPU and memory, or can the capacity be shared between several containers?
+    - Does every instance need dedicated access to the CPU and memory, or can the capacity be shared between several instances?
 * [Application](#application-requirements):
     - What type of application are you running?
     - What frame rate and what resolution does your application need?
-    - How many containers will be running simultaneously?
+    - How many instances will be running simultaneously?
     - What would be the impact of not being able to serve all users?
 
 <a name="application-resources"></a>
@@ -28,11 +28,11 @@ The instance type specifies the resources that are available to the application:
 
 If none of the provided instance types fits for your application, you can also manually [configure the resources](https://discourse.ubuntu.com/t/how-to-configure-available-resources/24960) according to your requirements.
 
-When a container for an application is launched, it takes the specified amount of resources. For example, if an application uses the `a4.3` instance type, it requires 4 vCPU cores, 3 GB of memory, 3 GB of disk space and no GPU slot. AMS internally summarises the amount of resources used by containers on a single machine and disallows launching additional containers when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new container:
+When an instance for an application is launched, it takes the specified amount of resources. For example, if an application uses the `a4.3` instance type, it requires 4 vCPU cores, 3 GB of memory, 3 GB of disk space and no GPU slot. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
-    No suitable node to satisfy container requirement available
+    No suitable node to satisfy instance requirement available
 
-If a container stops with an error, its disk space is preserved for inspection. Other resources are released. Therefore, if you have many containers with `error` status, you might run out of disk space.
+If an instance stops with an error, its disk space is preserved for inspection. Other resources are released. Therefore, if you have many instances with `error` status, you might run out of disk space.
 
 <a name="gpu-slots"></a>
 ### GPU slots
@@ -58,11 +58,11 @@ The main purpose of GPU slots is to control the number of containers that are la
 <a name="overcommitting"></a>
 ## Over-committing resources
 
-If the unused resources on a cluster node don't suffice to launch a container for an application with its defined resource requirements, the container cannot be launched. This behaviour is very restrictive, and in many cases unnecessary.
+If the unused resources on a cluster node don't suffice to launch an instance for an application with its defined resource requirements, the instance cannot be launched. This behaviour is very restrictive, and in many cases unnecessary.
 
-Usually, a container doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See [Configure allocation rates](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-allocation-rates) for instructions on how to define the allocation rates for a node.
+Usually, an instance doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See [Configure allocation rates](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-allocation-rates) for instructions on how to define the allocation rates for a node.
 
-For example, consider an application that uses the `a2.3` instance type, which requires 2 vCPU cores and 3 GB of memory, and you have a node with 8 CPU cores and 16 GB of memory. Without over-commitment, you could only launch four containers before you run out of resources on the node. However, with a CPU allocation rate of `4` and a memory allocation rate of `2` (the default), the available resources on the node change to `4 * 8 physical CPU cores = 32 vCPU cores` and `2 * 16 GB memory = 32 GB memory`, which will allow up to ten containers on the node.
+For example, consider an application that uses the `a2.3` instance type, which requires 2 vCPU cores and 3 GB of memory, and you have a node with 8 CPU cores and 16 GB of memory. Without over-commitment, you could only launch four instances before you run out of resources on the node. However, with a CPU allocation rate of `4` and a memory allocation rate of `2` (the default), the available resources on the node change to `4 * 8 physical CPU cores = 32 vCPU cores` and `2 * 16 GB memory = 32 GB memory`, which will allow up to ten instances on the node.
 
 The CPU allocation rate depends on the type of application and the amount of resources it requires. For applications that are not CPU-intensive, a higher allocation rate makes sense while for applications that are very CPU-intensive, a lower allocation rate is suitable.
 
@@ -71,9 +71,9 @@ The CPU allocation rate depends on the type of application and the amount of res
 
 To realistically estimate the required capacity for your deployment, you must consider the type of application that you're running and the expected usage behaviour.
 
-You should [run benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770) to test your application performance and fine-tune the best node and application configuration. Also consider whether your containers use a hardware or software [video encoder](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) for video encoding, and the frame rate and resolution they require.
+You should [run benchmarks](https://discourse.ubuntu.com/t/how-to-run-benchmarks/17770) to test your application performance and fine-tune the best node and application configuration. Also consider whether your instances use a hardware or software [video encoder](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) for video encoding, and the frame rate and resolution they require.
 
-Another aspect is, of course, the number of users expected and hence, the number of containers that will be running simultaneously. If you expect the usage to be rather consistent, you might not need to plan for huge peaks in load. On the other hand, you must also consider the impact if your cluster runs out of resources and it is not possible anymore to start more containers.
+Another aspect is, of course, the number of users expected and hence, the number of instances that will be running simultaneously. If you expect the usage to be rather consistent, you might not need to plan for huge peaks in load. On the other hand, you must also consider the impact if your cluster runs out of resources and it is not possible anymore to start more instances.
 
 ## An example calculation
 
@@ -102,9 +102,9 @@ The current calculation does not take into account that there might be peaks of 
 - Disk space: `200 * 3 GB = 600 GB`
 - GPU slots: `200 * 1 = 200`
 
-To avoid your cluster running out of resources even at peak loads, you must size it accordingly (or dynamically scale it up and down, see [About clustering](https://discourse.ubuntu.com/t/about-clustering/17765)). If the impact of not being able to provide additional containers at peak loads is rather low, you could compromise on the following factors:
+To avoid your cluster running out of resources even at peak loads, you must size it accordingly (or dynamically scale it up and down, see [About clustering](https://discourse.ubuntu.com/t/about-clustering/17765)). If the impact of not being able to provide additional instances at peak loads is rather low, you could compromise on the following factors:
 
 - Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
 - Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
-- Tweak the instance type or the resource specification for your application to give less resources to each container. The impact of doing this depends very much on your application.
-- Base your estimate on a lower maximum number of containers (for example, 150), which will lead to your cluster running out of resources before the peak load is reached.
+- Tweak the instance type or the resource specification for your application to give less resources to each instance. The impact of doing this depends very much on your application.
+- Base your estimate on a lower maximum number of instances (for example, 150 containers), which will lead to your cluster running out of resources before the peak load is reached.
