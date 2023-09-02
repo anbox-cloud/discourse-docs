@@ -36,7 +36,7 @@ Anbox Cloud can make use of different [platforms](https://anbox-cloud.github.io/
 
 | Name     	| Behaviour                                                                                                                                            	|
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching a container.                                                                       	|
+| `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                       	|
 | `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
 | `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    | 
 
