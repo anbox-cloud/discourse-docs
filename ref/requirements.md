@@ -102,7 +102,7 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 0  | amd64 or arm64 | 2         | 2GB  | 100GB SSD  | no   |  Hosts the load balancer |
 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the streaming stack control plane |
 2  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
-3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
+3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox Cloud instances  |
 
 To run the core version of Anbox Cloud without the streaming stack, we recommend the following setup:
 
@@ -110,7 +110,7 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 ---|----------------|-----------|------|------------|------|------------|
 -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://discourse.juju.is/t/controllers/1111)  |
 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS)  |
-1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
+1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox Cloud instances  |
 
 Some additional information:
 
@@ -118,7 +118,7 @@ Some additional information:
 - You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
 - The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
-  More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
+  More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of instances. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of instances.
 - If you require GPU support, see [Supported rendering resources](https://discourse.ubuntu.com/t/37322) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:
