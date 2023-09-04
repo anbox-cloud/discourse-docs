@@ -26,7 +26,7 @@ Name          | Value type | Description |
 <a name="instance-type"></a>
 ## Instance type
 
-Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single container or a virtual machine with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of Anbox Cloud instances or particular applications.
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of Anbox Cloud instances or particular applications.
 
 Anbox Cloud offers the following instance types:
 
@@ -65,7 +65,7 @@ node-selector: [foo, bar]
 
 <a name="video-encoder"></a>
 ## Video encoder
-A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that a container launched from the application can use a GPU or software video encoder according to different scenarios. Virtual machines do not have GPU support and hence will use software video encoding.
+A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that an instance launched from the application can use a GPU or software video encoder according to different scenarios. Virtual machines do not have GPU support and hence will use software video encoding.
 
 Name                     |  Description
 -------------------------|-------------------------
@@ -74,7 +74,7 @@ Name                     |  Description
 `software`            |  A software-based video encoder
 
 When `gpu` video encoder is specified in the manifest, AMS can fail to create an application if:
- - All GPU slots are used up by running containers.
+ - All GPU slots are used up by running instances.
  - There is no GPU support across the entire LXD cluster.
 
 <a name="watchdog"></a>
@@ -123,7 +123,7 @@ Name           | Value type | Description
 <a name="resources"></a>
 ## Resources
 
-Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to a container or a virtual machine. For example, if you start a container for an application that uses the instance type `a4.3`, the container is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
+Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to an instance. For example, if you start an instance for an application that uses the instance type `a4.3`, the instance is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
 
 If your application requires resources that do not correspond to any of the provided instance types, you can use the `resources` directive to override some or all of the predefined resources.
 
