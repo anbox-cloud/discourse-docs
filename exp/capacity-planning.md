@@ -37,22 +37,22 @@ If an instance stops with an error, its disk space is preserved for inspection. 
 <a name="gpu-slots"></a>
 ### GPU slots
 
-An additional aspect to take into account when planning your resources is the number of required GPU slots (see [GPUs and containers](https://discourse.ubuntu.com/t/17768) for more information).
+An additional aspect to take into account when planning your resources is the number of required GPU slots (see [GPUs and instances](https://discourse.ubuntu.com/t/17768) for more information).
 
-GPUs have limited capacity that can be shared amongst multiple containers, and GPU slots are a way to fine-tune how many containers can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots) for instructions).
+GPUs have limited capacity that can be shared amongst multiple instances, and GPU slots are a way to fine-tune how many instances can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots) for instructions).
 
 To determine the best number of GPU slots for a specific GPU model, consider the following aspects:
 
 - The memory that the GPU provides
-- The memory that a container uses
+- The memory that an instance uses
 - The number of parallel encoding pipelines that the GPU offers
 
-When you launch a container for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the container is terminated. If no GPU slots are available on the node, containers that require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `gpu`) will not be launched on it. Containers that don't require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `software` or `gpu-preferred`) can still be launched.
+When you launch an instance for an application, AMS reserves the number of GPU slots defined for the application on the node where it is launched. These GPU slots are marked as unavailable until the instance is terminated. If no GPU slots are available on the node, instances that require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `gpu`) will not be launched on it. Instances that don't require a GPU ([video encoder type](https://discourse.ubuntu.com/t/application-manifest/24197#video-encoder) `software` or `gpu-preferred`) can still be launched.
 
 [note type="information" status="Important"]
-GPU slots are used to share GPUs amongst containers, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application does not guarantee that more GPU resources are allocated to the corresponding application containers. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
+GPU slots are used to share GPUs amongst instances, but they do not impose limits on GPU usage. Therefore, increasing the number of required GPU slots for an application does not guarantee that more GPU resources are allocated to the corresponding application instances. For example, an intensive game that is configured to use one GPU slot might consume more GPU resources than a simple photo gallery app that is configured to use five GPU slots.
 
-The main purpose of GPU slots is to control the number of containers that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
+The main purpose of GPU slots is to control the number of instances that are launched on a node that has a GPU installed, which reduces contention for GPU resources.
 [/note]
 
 <a name="overcommitting"></a>
@@ -77,11 +77,11 @@ Another aspect is, of course, the number of users expected and hence, the number
 
 ## An example calculation
 
-Let's consider an application that uses the `g4.3` instance type with 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The application is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 containers running at the same time, with peaks up to 200.
+Let's consider an application that uses the `g4.3` instance type with 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The application is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 instances running at the same time, with peaks up to 200.
 
 We now want to determine the capacity that is needed for the overall deployment. This capacity can be either for a single machine (which is rather unlikely for the given requirements) or for a cluster with multiple nodes.
 
-Without over-commitment, you would require the following resources to fulfil the average demand of 100 containers:
+Without over-commitment, you would require the following resources to fulfil the average demand of 100 instances:
 
 - vCPU cores: `100 * 4 = 400`
 - RAM: `100 * 3 GB = 300 GB`
@@ -95,7 +95,7 @@ With a CPU allocation rate of 2, you can bring the requirement of 400 vCPU cores
 - Disk space: `100 * 3 GB = 300 GB`
 - GPU slots: `100 * 1 = 100`
 
-The current calculation does not take into account that there might be peaks of up to 200 simultaneous containers. To cover all peaks, you would require the following resources:
+The current calculation does not take into account that there might be peaks of up to 200 simultaneous instances. To cover all peaks, you would require the following resources:
 
 - vCPU cores: `200 * 4 = 800` or with CPU allocation rate 2: `400`
 - RAM: `200 * 3 GB = 600 GB` or with memory allocation rate 2: `300 GB`
@@ -107,4 +107,4 @@ To avoid your cluster running out of resources even at peak loads, you must size
 - Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
 - Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
 - Tweak the instance type or the resource specification for your application to give less resources to each instance. The impact of doing this depends very much on your application.
-- Base your estimate on a lower maximum number of instances (for example, 150 containers), which will lead to your cluster running out of resources before the peak load is reached.
+- Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
