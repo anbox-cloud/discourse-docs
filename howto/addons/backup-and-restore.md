@@ -1,4 +1,4 @@
-When a container is stopped, all the data and logs produced during the runtime are lost. To avoid this, you can use hooks to back up and restore any type of data you want.
+When an instance is stopped, all the data and logs produced during the runtime are lost. To avoid this, you can use hooks to back up and restore any type of data you want.
 
 ### Back up data
 In this example, we create a backup hook that uploads logs onto a cloud storage if Android terminated with an error.
