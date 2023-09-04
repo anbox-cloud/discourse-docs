@@ -25,11 +25,11 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 64 bit x86 or Arm CPU with >= 4 CPU cores
 * 8 GB of memory
 * 40 GB of disk space for the OS
-* optional, but strongly recommended: >= 50GB block volume to host container storage
+* optional, but strongly recommended: >= 50GB block volume to host instance storage
 
-The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
+The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
 
-On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
+On public clouds, it is always recommended to allocate an additional storage volume for instance storage. If no additional storage volume is available, the appliance creates an on-disk image and uses it for instance storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and instance startup time.
 
 For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](https://discourse.ubuntu.com/t/network-ports/33650#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
 
