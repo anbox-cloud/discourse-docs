@@ -1,5 +1,7 @@
 This guide lists various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
 
+[note type="information" status="Important"]Currently Anbox Cloud does not support GPU for virtual machines.[/note]
+
 <a name="supported-gpus"></a>
 ## Supported GPU vendors and GPU models
 
@@ -46,7 +48,7 @@ For rendering, you can use the `swrast` or the `null` platforms depending on you
 
 `null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing. It does not perform software rendering and does not produce any graphic output. Hence, the overhead on the CPU when using `null` platform is significantly low which makes it a good candidate for all use cases where a graphic output is not necessary.
 
-The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when a container is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
+The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when an instance is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
 
 ## Supported APIs
 
