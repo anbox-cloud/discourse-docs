@@ -1,6 +1,6 @@
 Instances are the centre piece of the Anbox Cloud stack. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
 
-All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu container. Backup and restore of data must be implemented separately through [addons](https://discourse.ubuntu.com/t/addons/25293). See [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289) for information on how to do this.
+All instances in Anbox Cloud are ephemeral, which means that as soon as an instance is stopped, all of its data is deleted. Anbox Cloud **DOES NOT** back up any data from the Android or the outer Ubuntu instance. Backup and restore of data must be implemented separately through [addons](https://discourse.ubuntu.com/t/addons/25293). See [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289) for information on how to do this.
 
 <a name="regular-vs-base"></a>
 ## Regular instances vs. base instances
