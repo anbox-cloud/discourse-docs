@@ -4,22 +4,22 @@ To measure the performance based on different parameters, you should [run perfor
 
 The main areas for performance tuning are:
 
-- [Container density](#container-density)
+- [Instance density](#instance-density)
 - [CPU access for an Anbox Cloud instance](#instance-cpu-access)
 - [Hardware and network setup](#hardware-setup)
 - [Startup time for an Anbox Cloud instance](#startup-time)
 - [Client devices](#client-devices)
 
-<a name="container-density"></a>
-## Container density
+<a name="instance-density"></a>
+## Instance density
 
-The most apparent performance aspect is how many containers you can run on each of your machines.
+The most apparent performance aspect is how many instances you can run on each of your machines.
 
-Of course, the container density depends a lot on the available hardware. See [capacity planning information](https://discourse.ubuntu.com/t/about-capacity-planning/28717) to estimate the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
+Of course, the instance density depends a lot on the available hardware. See [capacity planning information](https://discourse.ubuntu.com/t/about-capacity-planning/28717) to estimate the necessary capacity and the hardware requirements for your Anbox Cloud deployment.
 
-In addition, check your applications and make sure they use the resources in a fair way. Applications should avoid spikes in GPU utilisation, because such spikes require the application to reserve more resources and therefore reduce the container density.
+In addition, check your applications and make sure they use the resources in a fair way. Applications should avoid spikes in GPU utilisation, because such spikes require the application to reserve more resources and therefore reduce the instance density.
 
-Generally, applications should use the smallest suitable instance type. However, if you see an overall bad performance when running the application, using a more powerful instance type usually helps (even though it reduces the container density). As an example, consider an application that runs on an Anbox Cloud deployment that does not have any GPUs installed. In this case, the rendering workload is put on the CPU instead of the GPU, and if the instance type of the application does not have a sufficient number of vCPU cores, the performance of the application is impacted. This can show, for example, in the virtual keyboard being really slow. By switching to a more powerful instance type, the container density is reduced, but the performance of each application container is increased.
+Generally, applications should use the smallest suitable instance type. However, if you see an overall bad performance when running the application, using a more powerful instance type usually helps (even though it reduces the instance density). As an example, consider an application that runs on an Anbox Cloud deployment that does not have any GPUs installed. In this case, the rendering workload is put on the CPU instead of the GPU, and if the instance type of the application does not have a sufficient number of vCPU cores, the performance of the application is impacted. This can show, for example, in the virtual keyboard being really slow. By switching to a more powerful instance type, the instance density is reduced, but the performance of each application instance is increased.
 
 <a name="instance-cpu-access"></a>
 ## CPU access for an Anbox Cloud instance
