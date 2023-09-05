@@ -1,4 +1,4 @@
-An image is the base for a container running in the Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
+An image is the base for an instance running in the Anbox Cloud. It contains all necessary components, like Anbox or the Android root file system. Each release of Anbox Cloud comes with an updated image.
 
 See [Provided images](https://discourse.ubuntu.com/t/provided-images/24185) for information about which images Anbox Cloud provides.
 
@@ -28,7 +28,7 @@ You can see the synchronised images with the `amc image list` command:
 
 ## Default image
 The first image that is synchronised (usually the newest image) is marked as the default image.
-The default image is used when you create an application without the `image` field or launch a raw container without specifying any ID.
+The default image is used when you create an application without the `image` field or launch a raw instance without specifying any ID.
 
 You can set any image as your default with the following command:
 
