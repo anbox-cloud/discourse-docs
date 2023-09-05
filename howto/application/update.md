@@ -84,7 +84,7 @@ In addition, each version has a status which indicates the status of the bootstr
 <a name="publish-application-versions"></a>
 ## Publish application versions
 
-The most important part of an application version is the `published` field. If a version is marked as published, it is available to launch and use. Generally when launching containers by using the AMS REST API, if no specific application version is given, by default, the latest published version of an application is used to create the container.
+The most important part of an application version is the `published` field. If a version is marked as published, it is available to launch and use. Generally when launching instances by using the AMS REST API, if no specific application version is given, by default, the latest published version of an application is used to create the instance.
 
 If [`application.auto_publish`](https://discourse.ubuntu.com/t/ams-configuration/20872) is set to `true` (the default), new versions are automatically published. Otherwise, you need to publish them manually.
 
