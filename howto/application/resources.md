@@ -1,4 +1,4 @@
-Anbox Cloud provides a set of instance types that define the resources available to a container. Often your application may require resources that do not correspond to any of the provided instance types. In such cases, you can override some or all of the resource requirements in your application manifest.
+Anbox Cloud provides a set of instance types that define the resources available to an instance. Often your application may require resources that do not correspond to any of the provided instance types. In such cases, you can override some or all of the resource requirements in your application manifest.
 
 Define the required `cpus`, `memory`, `disk size` values for the `resources` attribute in the application manifest. 
 
