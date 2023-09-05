@@ -36,7 +36,7 @@ You can either run the package update manually or use the Juju command to run it
 
     juju exec --all -- /bin/sh -c 'sudo apt update && sudo apt upgrade -y'
 
-If the LXD charm is deployed on a machine that has an NVIDIA GPU installed, running the above command for the machine may upgrade the NVIDIA drivers, which accidentally suspends running containers with GPU support. Starting with the 1.17.1 release, the NVIDIA drivers are held from being upgraded until you upgrade the LXD charm using the Juju command. To check if the currently installed NVIDIA drivers are held from being upgraded:
+If the LXD charm is deployed on a machine that has an NVIDIA GPU installed, running the above command for the machine may upgrade the NVIDIA drivers, which accidentally suspends running instances with GPU support. Starting with the 1.17.1 release, the NVIDIA drivers are held from being upgraded until you upgrade the LXD charm using the Juju command. To check if the currently installed NVIDIA drivers are held from being upgraded:
 
     apt-mark showhold "libnvidia-.*-$(nvidia-smi --query-gpu=driver_version --format=csv,noheader | cut -d'.' -f1)"
 
@@ -119,7 +119,7 @@ The AMS service needs to be updated independently of the other service component
 
 ### Upgrade LXD
 
-As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not restart running containers but it's recommended to take a backup before continuing.
+As the last step, you have to upgrade the LXD cluster. Upgrading LXD will not restart running instances but it's recommended to take a backup before continuing.
 
 As the first step, you need to upgrade the AMS node controller by running:
 
@@ -143,13 +143,13 @@ Once the unnecessary nodes are dropped, the upgrade for a single LXD deployment 
 
 Once the upgrade has completed, the unit will be marked as active.
 
-For major and minor version upgrades, an update of the LXD charm may upgrade kernel modules or GPU drivers. This requires stopping any running containers before applying the upgrade and performing a reboot of the machine once the upgrade completed.
+For major and minor version upgrades, an update of the LXD charm may upgrade kernel modules or GPU drivers. This requires stopping any running instances before applying the upgrade and performing a reboot of the machine once the upgrade completed.
 
 In case a reboot of the machine is required, a status message will be shown. When the machine has been rebooted, the status message can be cleared by running:
 
     juju run --wait=1m lxd/0 clear-notification
 
-If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running containers due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to run the following Juju action:
+If the LXD charm is deployed on a machine with an NVIDIA GPU installed, by default, the NVIDIA drivers are held from being upgraded in case of downtime for all running instances due to either a manual upgrade or an [unattended-upgrade](https://wiki.debian.org/UnattendedUpgrades). The downside to this is that the machine may miss security updates for the NVIDIA drivers. To manually upgrade the NVIDIA drivers, you need to run the following Juju action:
     
     juju run --wait=30m lxd/0 upgrade-gpu-drivers
 
