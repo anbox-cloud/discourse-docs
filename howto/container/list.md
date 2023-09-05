@@ -1,4 +1,4 @@
-To get an overview of which and how many containers are currently running on an Anbox Cloud deployment, run the `amc ls` command:
+To get an overview of the running status of instances on an Anbox Cloud deployment, run the `amc ls` command:
 
 ```bash
 +----------------------+----------------+---------+---------+------+---------------+------------------------+
@@ -9,23 +9,23 @@ To get an overview of which and how many containers are currently running on an 
 +----------------------+----------------+---------+---------+------+---------------+------------------------+
 ```
 
-This will list all containers with their status and additional information, for example, on which LXD node in the cluster the containers are running.
+This will list all instances with their status and additional information, for example, the LXD node in the cluster on which the instances are running.
 
-## Filter containers
+## Filter instances
 
-`amc ls` accepts a `--filter` flag to filter and group containers.
+`amc ls` accepts a `--filter` flag to filter and group instances.
 
 The filter flag accepts a key-value pair as the filtering value. The following attributes are valid keys:
 
 Name            |  Value
 ----------------|------------
 `app`           |  Application name or ID
-`type`          |  Container type, possible values: "base", "regular"
-`node`          |  Node on which the container runs
-`status`        |  Container status, possible values: "created", "prepared", "started", "stopped", "running", "error", "deleted", "unknown"
+`type`          |  Type of the instance, possible values: "base", "regular"
+`node`          |  Node on which the instance runs
+`status`        |  Instance status, possible values: "created", "prepared", "started", "stopped", "running", "error", "deleted", "unknown"
 
 
-To list all regular containers:
+To list all regular instances:
 
     amc ls --filter type=regular
 
@@ -33,4 +33,4 @@ If you need to apply multiple filters, pass multiple flags:
 
     amc ls --filter type=regular --filter node=lxd0
 
-This will query all regular containers that are placed on the node with the name `lxd0`.
+This will query all regular instances that are placed on the node with the name `lxd0`.
