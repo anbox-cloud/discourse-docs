@@ -41,7 +41,7 @@ To try out the `minimal` platform, complete the following steps:
 
         amc launch --raw --devmode --instance-type=g4.3
 
-    [note type="information" status="Note"]Use the `--vm` option if you want to start a VM instance.[/note]
+    [note type="information" status="Note"]Use the `--vm` option to start a VM instance.[/note]
 
    The command prints out the ID of the instance. Note down this ID; you will need it in the next step.
 
@@ -116,4 +116,4 @@ When launching an instance, you must explicitly specify the platform that the An
 
     amc launch --raw --addon minimal --platform minimal
 
-Use the `--vm` option if you want to start a VM instance.
+Use the `--vm` option to start a VM instance.
