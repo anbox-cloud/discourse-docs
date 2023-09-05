@@ -1,9 +1,9 @@
-You can view the Anbox and the Android system logs while a container is running, or check the collected logs if a container fails.
-[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from a container that failed to start or had an error at runtime.[/note]
+You can view the Anbox and the Android system logs while an instance is running, or check the collected logs if an instance fails.
+[note type="information" status="Note"]AMS does not support runtime log collection. Logs are currently only being collected from an instance that failed to start or had an error at runtime.[/note]
 
 ## View runtime logs
 
-While a container is running, you can use the `amc` command to access both the Anbox and the Android system logs. The following command shows the system log:
+While an instance is running, you can use the `amc` command to access both the Anbox and the Android system logs. The following command shows the system log:
 
     amc logs -t <log type>
 
@@ -18,9 +18,9 @@ This will show the logs and update the output whenever new entries are added.
 <a name="view-stored-logs"></a>
 ## View stored logs
 
-If a container fails to start or a runtime error occurs, AMS collects relevant log files from the container and makes them available for inspection.
+If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection.
 
-Available logs can be listed with the `amc show <container_id>` command:
+Available logs can be listed with the `amc show <instance_id>` command:
 
 ```bash
 id: bh03th0j1qm6416q0v30
@@ -41,7 +41,7 @@ stored_logs:
 error_message: 'Failed to install application com.canonical.candy: exit status 1'
 ```
 
-The container in this example failed to install the application as indicated by the `error_message` field. There are three log files being stored which can be shown with the `amc show-log` command (for example, `amc show-log bh03th0j1qm6416q0v30 system.log`):
+The instance in this example failed to install the application as indicated by the `error_message` field. There are three log files being stored which can be shown with the `amc show-log` command (for example, `amc show-log bh03th0j1qm6416q0v30 system.log`):
 
 ```bash
 -- Logs begin at Thu 2019-01-17 08:37:56 UTC, end at Thu 2019-01-17 08:38:58 UTC. --
