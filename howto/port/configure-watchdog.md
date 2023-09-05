@@ -1,8 +1,8 @@
-The [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) monitors the app installed by the boot package. By default, it terminates the container if the app crashes or is moved to the background.
+The [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) monitors the app installed by the boot package. By default, it terminates the instance if the app crashes or is moved to the background.
 
 ## Disable the watchdog
 
-When you create an application, the watchdog is enabled by default. However, when the watchdog is enabled, it's difficult to identify a problem or debug a porting issue, because the container is terminated when the watchdog is triggered.
+When you create an application, the watchdog is enabled by default. However, when the watchdog is enabled, it's difficult to identify a problem or debug a porting issue, because the instance is terminated when the watchdog is triggered.
 
 To overcome this problem, temporarily disable the watchdog in the application manifest:
 
@@ -13,7 +13,7 @@ watchdog:
 ...
 ```
 
-When you finish debugging your application, make sure to enable the watchdog again. The watchdog must be running for Anbox Cloud to collect tombstones or [ANR](https://developer.android.com/topic/performance/vitals/anr) if a crash happens during the application runtime, and to terminate the failing container.
+When you finish debugging your application, make sure to enable the watchdog again. The watchdog must be running for Anbox Cloud to collect tombstones or [ANR](https://developer.android.com/topic/performance/vitals/anr) if a crash happens during the application runtime, and to terminate the failing instance.
 
 ## Add exceptions for allowed apps
 
