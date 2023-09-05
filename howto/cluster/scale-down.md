@@ -1,25 +1,25 @@
 Scaling down a LXD cluster involves more checks than scaling up.
 
 There are two important requirements when scaling down:
- - The node you remove must not have any containers left.
+ - The node you remove must not have any instances left.
  - You must wait for a node to be fully removed before you can start removing another one.
 
 ## Prepare the node for removal
 
-First, pick the node you want to remove and tell AMS to stop considering this node for new containers:
+First, pick the node you want to remove and tell AMS to stop considering this node for new instances:
 
     amc node set lxd0 unschedulable true
 
-Now the node won't be considered for any further container launches.
+Now the node won't be considered for any further instances launches.
 
-The node might still have containers running. You can decide to either kill all containers or wait for your users to disconnect.
-Use the following command to check if the node still hosts containers:
+The node might still have instances running. You can decide to either kill all instances or wait for your users to disconnect.
+Use the following command to check if the node still hosts instances:
 
     amc ls --filter node=lxd0
 
-Note that a node must have no container left on it before you can remove it.
+Note that a node must have no instances left on it before you can remove it.
 
-If you want to kill all containers immediately, run the following command:
+If you want to kill all instances immediately, run the following command:
 
     amc delete --all --yes
 
