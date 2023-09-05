@@ -6,7 +6,7 @@ This guide assumes that all steps are run on an Ubuntu 22.04 machine that hosts 
 
 A platform module must be built on the same version of Ubuntu as the Anbox runtime. This means that if you're using one of the Anbox images based on Ubuntu 22.04 (for example, `jammy:android12:arm64`), you must build on Ubuntu 22.04.
 
-However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker container or on another machine).
+However, if you're running the Anbox Cloud Appliance on a machine with a different Ubuntu version, you can build the platform on a separate system (for example, in a LXD or docker instance or on another machine).
 
 To get started, you must first install the [Anbox Platform SDK](https://github.com/anbox-cloud/anbox-platform-sdk). To do so, follow the [installation instructions](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#anbox-platform-sdk).
 
@@ -29,11 +29,11 @@ The build process creates a `platform_minimal.so` module in the `build` director
 
 ## Install the example platform
 
-[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching Anbox containers in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the container when it detects failures or other problems.
+[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching Anbox Cloud instances in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems.
 
 To try out the `minimal` platform, complete the following steps:
 
-1. Start a [raw container](https://discourse.ubuntu.com/t/managing-containers/17763#application-vs-raw) with development mode turned on:
+1. Start a [raw instance](https://discourse.ubuntu.com/t/17763#application-vs-raw) with development mode turned on:
 
         amc launch --raw --devmode --instance-type=a4.3
 
@@ -41,18 +41,20 @@ To try out the `minimal` platform, complete the following steps:
 
         amc launch --raw --devmode --instance-type=g4.3
 
-   The command prints out the ID of the container. Note down this ID; you will need it in the next step.
+    [note type="information" status="Note"]Use the `--vm` option if you want to start a VM instance.[/note]
 
-   The start of the raw container takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) before the container is ready to be used.
+   The command prints out the ID of the instance. Note down this ID; you will need it in the next step.
 
-1. When the container is fully up and running, copy the `platform_minimal.so` module to it:
+   The start of the raw instance takes some time, because it runs through the full [bootstrap process](https://discourse.ubuntu.com/t/managing-applications/17760#bootstrap) before the instance is ready to be used.
 
-        id=<ID_of_the_container>
+1. When the instance is fully up and running, copy the `platform_minimal.so` module to it:
+
+        id=<ID_of_the_instance>
         triplet=$(dpkg-architecture -qDEB_BUILD_MULTIARCH)
         amc exec "${id}" mkdir "/usr/lib/${triplet}/anbox/platforms/minimal"
         lxc file push build/platform_minimal.so "ams-${id}/usr/lib/${triplet}/anbox/platforms/minimal/"
 
-1. With the platform plugin present inside the container, configure the Anbox runtime to make use of it. For that, change the `/var/lib/anbox/session.yaml` configuration file within the container:
+1. With the platform plugin present inside the instance, configure the Anbox runtime to make use of it. For that, change the `/var/lib/anbox/session.yaml` configuration file within the instance:
 
         cat << EOF | amc exec "${id}" tee /var/lib/anbox/session.yaml
         log-level: debug
@@ -61,11 +63,11 @@ To try out the `minimal` platform, complete the following steps:
 
    This command rewrites the Anbox runtime configuration to use the new `minimal` platform instead of the default one.
 
-1. Restart Anbox inside the container:
+1. Restart Anbox inside the instance:
 
         amc exec "${id}" -- systemctl restart anbox
 
-1. When the Anbox runtime was restarted, verify from the container system log that it now uses the new `minimal` platform:
+1. When the Anbox runtime was restarted, verify from the instance system log that it now uses the new `minimal` platform:
 
         amc logs "${id}"
 
@@ -87,7 +89,7 @@ When you want to stop Anbox, you can use `CTRL`+`C` to send it the signal to ter
 
 ## Package the platform
 
-To ship the platform to actual containers via AMS, you must create an [addon](https://discourse.ubuntu.com/t/managing-addons/17759) package that installs the platform into the container.
+To ship the platform to actual instance via AMS, you must create an [addon](https://discourse.ubuntu.com/t/managing-addons/17759) package that installs the platform into the instance.
 
 A very simple addon to install the created `minimal` platform looks as follows:
 
@@ -95,7 +97,7 @@ A very simple addon to install the created `minimal` platform looks as follows:
     cat << EOF > hooks/pre-start
     #!/bin/sh -ex
 
-    # Only run for base containers
+    # Only run for base instance
     [ "$CONTAINER_TYPE" = "regular" ] && exit0
 
     # Install the platform plugin into the right location
@@ -106,10 +108,12 @@ A very simple addon to install the created `minimal` platform looks as follows:
     chmod +x hooks/pre-start
     tar cjf minimal-addon.tar.bz2 hooks platform_minimal.so
 
-Load this addon into AMS so that it can be used by applications and containers:
+Load this addon into AMS so that it can be used by applications and instances:
 
     amc addon add minimal minimal-addon.tar.bz2
 
-When launching a container, you must explicitly specify the platform that the Anbox runtime inside the container should use with the `--platform` argument. If not specified, Anbox will use its default. To launch a container with the `minimal` platform, run the following command:
+When launching an instance, you must explicitly specify the platform that the Anbox runtime inside the instance should use with the `--platform` argument. If not specified, Anbox will use its default. To launch an instance with the `minimal` platform, run the following command:
 
     amc launch --raw --addon minimal --platform minimal
+
+Use the `--vm` option if you want to start a VM instance.
