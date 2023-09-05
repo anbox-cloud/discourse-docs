@@ -1,4 +1,4 @@
-If you're running the Anbox Cloud Appliance and you want to extend the available container capacity, you can join additional machines to the appliance.
+If you're running the Anbox Cloud Appliance and you want to extend the available instance capacity, you can join additional machines to the appliance.
 
 The following instructions describe how to add a machine. Also see [Multi-node support for the Anbox Cloud Appliance](https://discourse.ubuntu.com/t/capacity-planning/17765#clustering-anbox-cloud).
 
@@ -38,7 +38,7 @@ appliance. If you don't care about answering any of them you can just
 accept the defaults.
 
 For any further questions please have a look a the official Anbox Cloud
-documentation at https://anbox-cloud.io/docs
+documentation at https://discourse.ubuntu.com/t/17029
 
 Are you joining this node to an existing Anbox Cloud Appliance installation? (EXPERIMENTAL) [default=no] yes
 Please enter the join token: eyJsdCI6ImV5SnpaWEoyWlhKZmJtRnRaU0k2SW14NFpERWlMQ0ptYVc1blpYSndjbWx1ZENJNkltWXhPVEpqTm1Ga09XVm1PVGRoTXpnNU9XVmxOelF6WW1NeU5ESmxaak5sWkRaaVpXTm1abUV4T0dFNFlqRTVNalE1TjJaalkyRTBaREUzWlRRMk5HWWlMQ0poWkdSeVpYTnpaWE1pT2xzaU1UY3lMak14TGpJeExqVTZPRFEwTXlKZExDSnpaV055WlhRaU9pSmxOMlZrTldZd00yWTVPVEF5WXpKbVpETmlNRFV6TmpJeE5tTmpOV1JsWmprelptVTVPV05pTWpBM1lqRXlOekk1TVRneU1UTTVOV1EwTWpNeVpqQXdJbjA9IiwianQiOiJNRTRUQ1d4NFpERXROMkUyWXpBVUV4SXlOREF1TWpFdU5TNHlNelk2TVRjd056QUVJSmhzeVo5QjlrWGRKX0dOOWJQd09pTHlLV1VXdXM1Y092cDdST29INzdIWEV3bGhjSEJzYVdGdVkyVUEiLCJmIjp7Im0iOnRydWV9fQ==
