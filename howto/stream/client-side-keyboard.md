@@ -2,7 +2,7 @@ The Anbox Streaming SDK enables developers to build a hybrid mobile application 
 
 You can use Anbox WebView to quickly integrate a client-side virtual keyboard feature into your mobile application. This client-side virtual keyboard can send text to the Android container on the fly when typing:
 
-* When the text editor of the application in the container gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
+* When the text editor of the application in the instance gains focus, the client-side virtual keyboard pops up, and it disappears when the focus moves away.
 * When typing on the client-side virtual keyboard, the input text is sent to the Android container and displayed in the running application.
 
 The following steps provide general instructions for integrating the client-side virtual keyboard feature into an Android application. See [Customising the virtual keyboard](#customising) for additional implementation options.
