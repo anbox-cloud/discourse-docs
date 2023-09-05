@@ -101,7 +101,7 @@ The Anbox Cloud instance requires sufficient storage to work correctly. For opti
 * A root disk with a minimum of 50 GB (required)
 * An additional EBS volume of at least 50 GB (strongly recommended)
 
-Anbox Cloud uses the additional volume exclusively to store all of its data, including containers. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
+Anbox Cloud uses the additional volume exclusively to store all of its data, including its instances. Using a separate volume isolates it from the operating system, which increases performance. If no additional EBS volume is added, the Anbox Cloud Appliance automatically creates an image on the root disk, which is used to store any data. However, this is not recommended.
 
 ![Add storage](https://assets.ubuntu.com/v1/9b717248-install_appliance_add-storage.png)
 
