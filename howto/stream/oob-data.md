@@ -5,7 +5,7 @@ Anbox Cloud provides two versions of this OOB data exchange:
 * [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
   Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in a container and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in an instance and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
@@ -75,7 +75,7 @@ At the same time, a number of Unix domain sockets are created under the `/run/us
 - Receive data sent from a WebRTC client over the data channel and forward it to an Android application.
 - Receive data sent from an Android application and forward it to a WebRTC client over the data channel.
 
-A trivial example to simulate the data transmission between an Anbox container and a WebRTC client is using the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
+A trivial example to simulate the data transmission between an Anbox Cloud instance and a WebRTC client is using the [`socat`](https://manpages.ubuntu.com/manpages/bionic/man1/socat.1.html) command to connect the Unix domain socket and perform bidirectional asynchronous data sending and receiving:
 
 1. Connect the Unix domain socket:
 
@@ -114,7 +114,7 @@ To build up the communication bridge between an Android application and the Anbo
  * Connecting to one specific data channel via the Unix domain socket exposed by the Anbox WebRTC platform
  * Passing the connected socket as a file descriptor to the Android application
 
-The `anbox-webrtc-data-proxy` system daemon runs in the Anbox container and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
+The `anbox-webrtc-data-proxy` system daemon runs in the Anbox Cloud instance and registers an Android system service named `org.anbox.webrtc.IDataProxyService`. This service allows Android developers to easily make use of binder interprocess communication (IPC) for data communication between an Android application and the Anbox WebRTC platform through a file descriptor.
 
 [note type="information" status="Note"]To interact with the `org.anbox.webrtc.IDataProxyService` system service, the Android application must be [installed as a system app](https://discourse.ubuntu.com/t/how-to-install-an-apk-as-a-system-app/27086). [/note]
 
@@ -266,7 +266,7 @@ try {
     ex.printStackTrace();
 }
 ```
-
+<!-- wokeignore:rule=master -->
 For a complete Android example, see the [out_of_band_v2](https://github.com/anbox-cloud/anbox-streaming-sdk/tree/master/examples/android/out_of_band_v2) project.
 
 <a name="oob-v1"></a>
@@ -277,14 +277,14 @@ The support for version 1 of the out-of-band data exchange between an Android ap
 [/note]
 
 The following instructions will walk you through how to send a message from an Android application
-running in a container to the client application developed with the Anbox Streaming
+running in an instance to the client application developed with the Anbox Streaming
 SDK.
 
 ### Android application
 
 #### Add required permissions
 
-For the Android application running in the container, add the
+For the Android application running in the instance, add the
 following required permission to the `AndroidManifest.xml` to allow the
 application to send messages to the Anbox runtime:
 
@@ -363,7 +363,7 @@ in JavaScript, C or C++ by using the Anbox Streaming SDK.
 
 For a web-based application, you can use the JavaScript SDK which you can find under
 [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#streaming-sdk). To receive the data sent from the Android application
-running in the Anbox container, implement the `messageReceived` callback
+running in the Anbox Cloud instance, implement the `messageReceived` callback
 of the `AnboxStream` object:
 
 ```
