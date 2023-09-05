@@ -2,7 +2,7 @@ Anbox Cloud allows specifying a geographic location for an Android container. Th
 
 ## Set a static location
 
-To specify a static location for an Android container, configure it in the `/var/lib/anbox/static_gps_position` file within the container.
+To specify a static location for an Android container, configure it in the `/var/lib/anbox/static_gps_position` file within the instance.
 
 The location data is constructed in the following format:
 
@@ -27,6 +27,6 @@ To make the file `/var/lib/anbox/static_gps_position` available to the Android c
 
 ## Set the location dynamically
 
-To update the geographic location of an Android container dynamically while the container is running, use the location endpoint of the Anbox HTTP API.
+To update the geographic location of an Android container dynamically while the instance is running, use the location endpoint of the Anbox HTTP API.
 
 See the documentation of the [PATCH method](https://discourse.ubuntu.com/t/anbox-http-api-reference/17819#location-patch) for more information and the specification of the data format.
