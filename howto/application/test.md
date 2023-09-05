@@ -1,26 +1,26 @@
-Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with a container running on Anbox Cloud and automate UI testing for Android applications.
+Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with an instance running on Anbox Cloud and automate UI testing for Android applications.
 
 ## Setup Anbox Cloud for Appium
 
 As most deployments don't include GPUs we're going to use the `swrast` software rendering platform for Anbox which provides a graphics driver based on [swiftshader](https://swiftshader.googlesource.com/SwiftShader).
 
-If you want to automate the UI tests against an APK which is externally provided, you can launch a raw container:
+If you want to automate the UI tests against an APK which is externally provided, you can launch a raw instance:
 
     amc launch -s adb --enable-graphics -r default
 
-This will create a container which exposes the TCP port `5559` on its private address from the default image `default`. If you want to expose ADB on the public address of a node, you can add the `+` from the service endpoint specification. With that the command looks as follows:
+This will create an instance which exposes the TCP port `5559` on its private address from the default image `default`. If you want to expose ADB on the public address of a node, you can add the `+` from the service endpoint specification. With that the command looks as follows:
 
     amc launch -s +adb --enable-graphics -r
 
-[note type="information" status="Tip"]If you're wondering about the syntax of the command used to launch a container, see [How to launch a container](https://discourse.ubuntu.com/t/launch-a-container/24327).[/note]
+[note type="information" status="Tip"]If you're wondering about the syntax of the command used to launch an instance, see [How to launch an instance](https://discourse.ubuntu.com/t/24327).[/note]
 
-If you want to run the Appium tests against an Android application managed by AMS (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular container instead:
+If you want to run the Appium tests against an Android application managed by AMS (see [How to create an application](https://discourse.ubuntu.com/t/create-an-application/24198)) you can start a regular instance instead:
 
     amc launch -s adb --enable-graphics --disable-watchdog app
 
 [note type="information" status="Important"]The `--disable-watchdog` argument is important because by default, Anbox prevents Android from switching its foreground application and terminates when the application is stopped. To prevent this, we need to disable the watchdog.[/note]
 
-Once the container is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the `amc ls` command:
+Once the instance is up and running, you can get its private IP address and the exposed port for the ADB service endpoint with the `amc ls` command:
 
 ```bash
 +----------------------+-------------+---------+---------+------+---------------+------------------------+
@@ -31,11 +31,11 @@ Once the container is up and running, you can get its private IP address and the
 +----------------------+-------------+---------+---------+------+---------------+------------------------+
 ```
 
-In the above output, the IP address and the exposed port of the running container is `10.226.4.168:10000/tcp`
+In the above output, the IP address and the exposed port of the running instance is `10.226.4.168:10000/tcp`
 
 ## Connect Appium with Android Instance
 
-As the endpoint `10.226.4.168:10000/tcp` shown above is not exposed to the public internet, the Android instance is not accessible from outside of the subnet the LXD instance is on. To connect to the exposed ADB port you have to setup a secure and encrypted SSH tunnel to the LXD machine the container is running on. For that you should have an SSH client available you can use to setup the tunnel.
+As the endpoint `10.226.4.168:10000/tcp` shown above is not exposed to the public internet, the Android instance is not accessible from outside of the subnet the LXD instance is on. To connect to the exposed ADB port you have to setup a secure and encrypted SSH tunnel to the LXD machine the instance is running on. For that you should have an SSH client available you can use to setup the tunnel.
 
 On a Linux system you can setup a tunnel with the following command:
 
@@ -63,7 +63,7 @@ Appium uses ADB as located in the Android SDK to establish a connection between 
 
 ## Execute Tests with Appium
 
-Once the connection is established between the Anbox Container and your development machine through ADB, you can launch the Appium desktop application to execute test cases.
+Once the connection is established between the Anbox Cloud instance and your development machine through ADB, you can launch the Appium desktop application to execute test cases.
 
 ### Manually provided APK
 
@@ -96,11 +96,13 @@ name: app
 instance-type: a4.3
 ```
 
-Once the application is fully bootstrapped by AMS, you can launch a container for it with the following command:
+Once the application is fully bootstrapped by AMS, you can launch an instance for it with the following command:
 
     amc launch -s +adb --enable-graphics --disable-watchdog app
 
-After the container is up and running, you need to specify the proper `appPackage` and `appActivity` in the Appium preset, the installed Android application will be launched automatically in the container when a new session is created by Appium.
+[note type="information" status="Note"]Use the `--vm` option to launch a VM instance.[/note]
+
+After the instance is up and running, you need to specify the proper `appPackage` and `appActivity` in the Appium preset, the installed Android application will be launched automatically in the instance when a new session is created by Appium.
 
 ```json
 {
