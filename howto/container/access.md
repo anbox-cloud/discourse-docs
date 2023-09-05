@@ -1,15 +1,15 @@
-In some cases, it might be necessary to access an individual container for debugging reasons.
+In some cases, it might be necessary to access an individual instance for debugging reasons.
 
 You can do this on the command line with the `amc` command, or you can use [scrcpy](https://github.com/Genymobile/scrcpy) for graphical access.
 
 <a name="amc"></a>
-## Access a container with `amc`
+## Access an instance with `amc`
 
-The `amc` command provides simple shell access to any container managed by AMS. To access a specific container you only need its ID:
+The `amc` command provides simple shell access to any instance managed by AMS. To access a specific instance you only need its ID:
 
     amc shell <id>
 
-This command opens a bash shell inside the container. To access the nested Android container, use the `anbox-shell` command inside the new shell. If you combined the `anbox-shell` command with `amc exec`, you can get direct access to the Android container:
+This command opens a bash shell inside the instance. To access the nested Android container, use the `anbox-shell` command inside the new shell. If you combined the `anbox-shell` command with `amc exec`, you can get direct access to the Android container:
 
     amc exec <id> -- anbox-shell
 
@@ -20,12 +20,12 @@ If you only want to watch the Android log output, use the following command:
 `amc shell` and `amc exec` open various possibilities for automation use cases. See the help output of the commands for further details.
 
 <a name="scrcpy"></a>
-## Access a container with scrcpy
+## Access an instance with scrcpy
 
-The AMS services enable connecting remotely over a network to containers via [scrcpy](https://github.com/Genymobile/scrcpy).
-Scrcpy provides a simple way to display and control containers running on Anbox Cloud remotely.
+The AMS services enable connecting remotely over a network to instance via [scrcpy](https://github.com/Genymobile/scrcpy).
+Scrcpy provides a simple way to display and control instances running on Anbox Cloud remotely.
 
-In the next sections, you will learn how to connect a container running on Anbox Cloud via scrcpy.
+In the next sections, you will learn how to connect an instance running on Anbox Cloud via scrcpy.
 
 ### Install scrcpy
 
@@ -39,15 +39,17 @@ Scrcpy is not available from the official Ubuntu repositories. Therefore, you mu
 
   [note type="information" status="Note"]The scrcpy snap package that is published to snap store is a non-official package. You can use it, but it's at your own risk. Because of this, it's highly recommended to build scrcpy from source by yourself.[/note]
 
-### Launch container
+### Launch instance
 
-First, launch a container with graphics enabled:
+First, launch an instance with graphics enabled:
 
     amc launch -s +adb --enable-graphics -r default
 
-The above command will launch a container from the default image. Since scrcpy requires ADB to establish the connection between your host and the container, the ADB service must be enabled by default. With the leading `+` symbol to the `adb` service, it exposes TCP port 5559 on the public address of the node.
+[note type="information" status="Note"]Use the `--vm` flag to launch a virtual machine.[/note]
 
-Afterwards you can find the network endpoint of the container in the output of the `amc ls` command:
+The above command will launch a container instance from the default image. Since scrcpy requires ADB to establish the connection between your host and the instance, the ADB service must be enabled by default. With the leading `+` symbol to the `adb` service, it exposes TCP port 5559 on the public address of the node.
+
+Afterwards you can find the network endpoint of the instance in the output of the `amc ls` command:
 
 ```bash
 +----------------------+---------------+---------+---------+------+---------------+-------------------------------------------------------+
@@ -57,13 +59,13 @@ Afterwards you can find the network endpoint of the container in the output of t
 +----------------------+---------------+---------+---------+------+---------------+-------------------------------------------------------+
 ```
 
-The endpoint of the ADB service exposed from the running container is available at 10.226.4.200:10000 on the public network.
+The endpoint of the ADB service exposed from the running instance is available at 10.226.4.200:10000 on the public network.
 
 [note type="caution" status="Warning"]Exposing the ADB service over the public internet brings security risks from having plain text data intercepted by third parties. It's always preferable to run scrcpy [through an encrypted SSH tunnel](#ssh-tunnel) if possible.[/note]
 
 ### Run scrcpy
 
-Before running scrcpy to connect the running container remotely, establish the connection between your host and the container through the exposed ADB service via TCP/IP:
+Before running scrcpy to connect the running instance remotely, establish the connection between your host and the instance through the exposed ADB service via TCP/IP:
 
     adb connect 10.226.4.200:10000
 
@@ -82,11 +84,13 @@ Then you can interact with the running Android container locally.
 
 In the above example, the ADB service is exposed directly over the internet. This is a major security risk as the ADB connection is not secure. To overcome this security issue, you can use the machine where AMS is running as relay server to set up a secure and encrypted SSH tunnel by forwarding the exposed ADB TCP port from the LXD machine to your localhost through the AMS machine.
 
-To set up a secure connection, launch the container so that it doesn't expose the ADB service to the internet:
+To set up a secure connection, launch the instance so that it doesn't expose the ADB service to the internet:
 
     amc launch -s adb --enable-graphics -r default
 
-As the ADB service is enabled for the launched container but without the leading `+`, the endpoint `10.226.4.168:10000/tcp` shown via `amc ls` is not exposed to the public network:
+[note type="information" status="Note"]Use the `--vm` flag to launch a virtual machine.[/note]
+
+As the ADB service is enabled for the launched instance but without the leading `+`, the endpoint `10.226.4.168:10000/tcp` shown via `amc ls` is not exposed to the public network:
 
 ```bash
 +----------------------+---------------+---------+---------+------+---------------+-------------------------------------------------------+
@@ -100,7 +104,7 @@ Now forward any connection to port 10000 on your localhost to port 10000 on the 
 
     ssh -NL 10000:10.226.4.168:10000 ubuntu@10.180.45.183
 
-In another terminal, you can connect the running container via ADB with the following command:
+In another terminal, you can connect the running instance via ADB with the following command:
 
     adb connect localhost:10000
 
