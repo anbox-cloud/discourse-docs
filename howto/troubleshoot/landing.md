@@ -21,13 +21,13 @@ If you have the [`juju-crashdump` plugin](https://github.com/juju/juju-crashdump
 
 A Juju crash dump may include the following debugging information:
 * Additional information provided by the Anbox Cloud charms
-* Information about any Anbox containers that crashed
+* Information about any Anbox Cloud instances that crashed
 
 Use the following command to generate a crash dump:
 
     juju crashdump -s -a debug-layer 
 
-The Anbox Management Service (AMS) charm implements the `debug-layer` addon which will add a `debug-*.tar.gz` archive to the crash dump for the AMS units. The tarball may contain container logs for the containers that are in `error` state in AMS and other information about the Anbox runtime process.
+The Anbox Management Service (AMS) charm implements the `debug-layer` addon which will add a `debug-*.tar.gz` archive to the crash dump for the AMS units. The tarball may contain logs for the instances that are in `error` state in AMS and other information about the Anbox runtime process.
 
 ## `anbox-cloud-appliance.buginfo` command
 
@@ -41,25 +41,25 @@ This is the recommended option to provide debugging information when you report 
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance since 1.16.0*
 
-Anbox containers come preinstalled with the `anbox-bug-report` utility, which
-collects the log files and other relevant information for a specific container.
+Anbox Cloud instances come preinstalled with the `anbox-bug-report` utility, which
+collects the log files and other relevant information for a specific instance.
 To generate the report and save it to a local file, use `amc exec` on a running
-container:
+instance:
 
 ```
-amc exec <container_id> -- bash -c 'cat "$(anbox-bug-report)"' > "<target_file>"
+amc exec <instance_id> -- bash -c 'cat "$(anbox-bug-report)"' > "<target_file>"
 ```
 
-This command builds a zip archive that contains the container report. It then
+This command builds a zip archive that contains the instance report. It then
 saves it to the local `<target_file>`. This process might take a few seconds.
 
-## Stored container logs
+## Stored instance logs
 
 *Applies to: Anbox Cloud, Anbox Cloud Appliance*
 
-If a container fails to start or a runtime error occurs, AMS collects relevant log files from the container and makes them available for inspection. 
+If an instance fails to start or a runtime error occurs, AMS collects relevant log files from the instance and makes them available for inspection. 
 
-Use `amc show <container_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/how-to-view-the-container-logs/24329#view-stored-logs) for an example of such a stored log.
+Use `amc show <instance_id>` command to list the available logs. See [View stored logs](https://discourse.ubuntu.com/t/how-to-view-the-container-logs/24329#view-stored-logs) for an example of such a stored log.
 
 ## Related topics
 
