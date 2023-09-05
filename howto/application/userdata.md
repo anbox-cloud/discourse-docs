@@ -1,15 +1,15 @@
 You can pass custom data to your application, which you can then use in addons or hooks. For example, you might want to pass user IDs, application configuration or display settings.
 
-The user data that you pass in is stored in the `/var/lib/anbox/userdata` file in the container, and your hooks can access it from this file.
+The user data that you pass in is stored in the `/var/lib/anbox/userdata` file in the instance, and your hooks can access it from this file.
 
-The structure of the `/var/lib/anbox/userdata` file and the way how you pass in the data depends on whether you pass the data when launching a container or when starting a streaming session.
+The structure of the `/var/lib/anbox/userdata` file and the way how you pass in the data depends on whether you pass the data when launching an instance or when starting a streaming session.
 
-## Pass custom data when launching a container
+## Pass custom data when launching an instance
 
-When you launch a container, you can pass in custom data through the `--userdata` or the `--userdata-path` flags:
+When you launch an instance, you can pass in custom data through the `--userdata` or the `--userdata-path` flags:
 
-* `--userdata` takes a string and stores the provided data in the `/var/lib/anbox/userdata` file in the container.
-* `--userdata-path` takes a file name and copies the contents of the file to the `/var/lib/anbox/userdata` file in the container.
+* `--userdata` takes a string and stores the provided data in the `/var/lib/anbox/userdata` file in the instance.
+* `--userdata-path` takes a file name and copies the contents of the file to the `/var/lib/anbox/userdata` file in the instance.
 
 In both cases, the `/var/lib/anbox/userdata` file will contain exactly the data that you provide. The data must be in string form (to send binary data, you must encode it as Base64 text). The size limit for the data is 10 KB.
 
