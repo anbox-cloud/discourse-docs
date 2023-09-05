@@ -1,10 +1,10 @@
-AMS allows a container to expose a service to the outer network. For that, it provides a feature called container services which let you define a port to expose on the container endpoints. The set of services to expose is defined when the container is launched. For example, the following command exposes port `22` on the container's private endpoint:
+AMS allows an instance to expose a service to the outer network. For that, it provides a feature called instance services which let you define a port to expose on the instance endpoints. The set of services to expose is defined when the instance is launched. For example, the following command exposes port `22` on the instance's private endpoint:
 
     amc launch -s tcp:22 bdp7kmahmss3p9i8huu0
 
-[note type="information" status="Note"]The specified port is exposed only on the IP address that the container itself has. As the container is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).[/note]
+[note type="information" status="Note"]The specified port is exposed only on the IP address assigned to the instance. As the instance is normally not accessible from outside, the LXD node it is running on AMS sets up port forwarding rules on the node and maps the specified port to one in a higher port range (`10000 - 110000`).[/note]
 
-The list of containers (`amc ls`) will now show the container and the exposed port `22`:
+The list of instances (`amc ls`) will now show the instance and the exposed port `22`:
 
 ```bash
 +----------------------+----------------+---------+---------+------+---------------+------------------------+
@@ -15,7 +15,7 @@ The list of containers (`amc ls`) will now show the container and the exposed po
 +----------------------+----------------+---------+---------+------+---------------+------------------------+
 ```
 
-As described above, the port `22` is exposed only on the IP address the container itself has.
+As described above, the port `22` is exposed only on the IP address assigned to the instance.
 In addition, it was mapped onto port `10000` on the address of the LXD node `lxd0`.
 
 To help identifying services later on you can give them a name. For the example above we can simply name the service `ssh`:
@@ -33,11 +33,11 @@ This will help to identify which endpoint is used for which service:
 +----------------------+----------------+---------+---------+------+---------------+----------------------------+
 ```
 
-If we want to expose the service on the public endpoint of a LXD node instead we must slightly change the service definition when the container is launched:
+If we want to expose the service on the public endpoint of a LXD node, we must slightly change the service definition when the instance is launched:
 
     amc launch -s +tcp:22 bdp7kmahmss3p9i8huu0
 
-Notice the `+` in front of the port definition. This tells AMS to expose the service on the public endpoint of the LXD node the container is scheduled onto. The container list then shows the public address of the node the container is running on in the list of endpoints:
+Notice the `+` in front of the port definition. This tells AMS to expose the service on the public endpoint of the LXD node on which the instance is scheduled. The instance list shows the public address of the node on which the instance is running, in the list of endpoints:
 
 ```bash
 +----------------------+----------------+---------+---------+------+---------------+------------------------+
