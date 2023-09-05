@@ -2,7 +2,7 @@ This example implementation provides a starting point for a monitoring stack tha
 
 [note type="information" status="Important"]This reference implementation is provided for demonstration purposes only. It does not cover all aspects that you should consider for a production-level solution (for example, high availability). It cannot be used with the Anbox Cloud Appliance.[/note]
 
-In this setup, every LXD cluster node runs a Telegraf instance that gathers the machine metrics. All Anbox containers that exist on the node also report their metrics to the Telegraf instance.
+In this setup, every LXD cluster node runs a Telegraf instance that gathers the machine metrics. All Anbox Cloud instances that exist on the node also report their metrics to the Telegraf instance.
 
 Prometheus gathers the metrics provided by the different sources (the Telegraf instances, AMS, Anbox Stream Gateway and NATS) and stores them in its time series database. You can then access, query and visualise the full metrics data through Grafana.
 
