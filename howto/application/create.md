@@ -1,10 +1,10 @@
 Every application which should be available on an Anbox Cloud cluster must be created first.
 
-The internal process will prepare a container based on the currently available image with the application package installed. This container is then used for any newly launched containers to support fast boot times.
+The internal process will prepare an instance based on the currently available image with the application package installed. This instance is then used for any newly launched instances to support fast boot times.
 
 ## Preparation
 
-To create an application, you need an Android package (APK) with support for the target architecture. Additionally, you must select one of the available instance types for the application. The instance type defines CPU/RAM constraints put onto the container launch for the application.
+To create an application, you need an Android package (APK) with support for the target architecture. Additionally, you must select one of the available instance types for the application. The instance type defines CPU/RAM constraints put onto the instance launch for the application.
 
 [note type="information" status="Note"]See [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for a list of available instance types.[/note]
 
