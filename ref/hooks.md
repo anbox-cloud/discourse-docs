@@ -31,7 +31,8 @@ The following variables are available:
 | `ANBOX_DIR`      | Path to the Anbox directory.                            | `/var/lib/anbox`        |
 | `ANDROID_ROOTFS` | Path to the Android RootFS.                             | `/var/lib/anbox/rootfs` |
 | `BOOT_PACKAGE`   | Boot package of the APK.                                |                         |
-| `CONTAINER_TYPE` | Type of container being run.                            | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
+| `CONTAINER_TYPE` | Type of container being run. This variable is now deprecated. Use `INSTANCE_TYPE` instead.                   | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
+| `INSTANCE_TYPE`  | Type of instance being run      | `regular` (instance running an application or a raw image)<br/>`base` (instance bootstrapping, thus creating or updating, an application)|
 | `ANBOX_EXIT_CODE`| *`post-stop` hook only:* Exit code of the Anbox process.| `0` if no error occurred, otherwise set to the actual return code.|
 
 <a name='hook-timeouts'></a>

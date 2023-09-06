@@ -98,7 +98,7 @@ A very simple addon to install the created `minimal` platform looks as follows:
     #!/bin/sh -ex
 
     # Only run for base instance
-    [ "$CONTAINER_TYPE" = "regular" ] && exit0
+    [ "$INSTANCE_TYPE" = "regular" ] && exit0
 
     # Install the platform plugin into the right location
     # NOTE: Please adjust the path for the right architecture you're targeting
