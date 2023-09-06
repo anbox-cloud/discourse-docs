@@ -26,7 +26,7 @@ Raw instances are containers or virtual machines created when launching an image
 
 ### Creating an instance
 
-When you [create an instance](https://discourse.ubuntu.com/t/launch-a-container/24327) by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
+When you [create an instance](https://discourse.ubuntu.com/t/24327) by either launching or initialising an application or an image, AMS schedules the instance on a LXD node. The instance then executes the following steps in order:
 
 1. Configure the network interface and gateway.
 1. (Only for raw instances) Install addons that are specified with `--addons`.
@@ -37,7 +37,7 @@ When you [create an instance](https://discourse.ubuntu.com/t/launch-a-container/
 
 ![Container start|584x646](https://assets.ubuntu.com/v1/230fd172-container_start.png)
 
-Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) from the container for further troubleshooting.
+Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/24329) from the container for further troubleshooting.
 
 ### Stopping an instance
 
