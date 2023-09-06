@@ -18,7 +18,7 @@ In the `hooks` directory, create a `pre-start` file with the following content:
 ```bash
 #!/bin/bash
 
-if [ "$CONTAINER_TYPE" = "regular" ]; then
+if [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0
 fi
 
@@ -34,7 +34,7 @@ chmod +x hooks/pre-start
 [note type="information" status="Tip"]
 
 - Supported hooks are `pre-start`, `post-start` and `post-stop`.
-- Use the `CONTAINER_TYPE` variable to distinguish between regular and base containers.
+- Use the `INSTANCE_TYPE` variable to distinguish between regular and base instances.
 
 See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more information.
 [/note]
@@ -87,7 +87,7 @@ The `amc wait` command returns when your application is ready to launch. You can
 amc launch my-application --service +ssh
 ```
 
-The SSH port 22 is closed by default. In the above command, we open it by [exposing its service](https://anbox-cloud.io/docs/howto/container/expose-services) by using `--service`.[/note]
+The SSH port 22 is closed by default. In the above command, we open it by [exposing its service](https://discourse.ubuntu.com/t/24326) by using `--service`.[/note]
 
 You can now access your container via SSH:
 ```bash

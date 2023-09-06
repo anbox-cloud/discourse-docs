@@ -42,7 +42,7 @@ Follow the [tutorial](https://discourse.ubuntu.com/t/creating-an-addon/25284) to
 #!/bin/bash -ex
 
 # Only install the APK as a system app when bootstrapping an application.
-if  [ "$CONTAINER_TYPE" = "regular" ]; then
+if  [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0
 fi
 

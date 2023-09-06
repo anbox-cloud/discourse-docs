@@ -18,7 +18,7 @@ The general steps for creating a hook are as follows:
    [note type="information" status="Tip"]
 
    - Supported hooks are `pre-start`, `post-start` and `post-stop`.
-   - Use the `CONTAINER_TYPE` variable to distinguish between regular and base instances.
+   - Use the `INSTANCE_TYPE` variable to distinguish between regular and base instances.
 
    See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more information.
    [/note]
@@ -40,7 +40,7 @@ Complete the following steps to create a hook that changes the Android system lo
 
    ```
    #!/bin/sh -ex
-   if  [ "$CONTAINER_TYPE" = "regular" ]; then
+   if  [ "$INSTANCE_TYPE" = "regular" ]; then
      exit 0
    fi
    cp "<working_dir>"/*.apk $ANBOX_DIR/data
@@ -80,7 +80,7 @@ Complete the following steps to create a hook that replaces the standard Android
 
    ```
    #!/bin/sh -ex
-   if  [ "$CONTAINER_TYPE" = "regular" ]; then
+   if  [ "$INSTANCE_TYPE" = "regular" ]; then
      exit 0
    fi
    cp "<working_dir>"/*.apk $ANBOX_DIR/data/

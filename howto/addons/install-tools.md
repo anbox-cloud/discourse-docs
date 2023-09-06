@@ -9,7 +9,7 @@ To do so, create a new addon with the following `pre-start` hook:
 
 # We only need to install things once when the image is being created, so we
 # don't need to execute the hook when users are running the application.
-if  [ "$CONTAINER_TYPE" = "regular" ]; then
+if  [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0
 fi
 
