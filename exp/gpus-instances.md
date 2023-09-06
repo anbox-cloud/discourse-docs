@@ -1,6 +1,6 @@
 Anbox Cloud has support for managing GPUs and can provide them to individual instances for rendering and video encoding functionality.
 
-[note type="information" status="Important"]Currently Anbox Cloud does not support GPU provisioning for virtual machines. This feature is planned for a future release.[/note]
+[note type="information" status="Important"]This topic is applicable only for container instances because Anbox Cloud currently does not support GPU provisioning for virtual machines. This feature is planned for a future release.[/note]
 
 Anbox Cloud automatically detects GPU devices during the deployment and configures the cluster to use them. If no GPU is available, Anbox Cloud automatically falls back to the [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) that does not perform any rendering. However, you can enable software rendering and video encoding by launching your application with the `--enable-graphics` flag. This makes it possible to run entirely without a GPU and still use rendering.
 
