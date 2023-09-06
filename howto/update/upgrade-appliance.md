@@ -8,6 +8,7 @@ The Anbox Cloud Appliance includes an `upgrade` command which will perform all r
     status: ready
     update-available: true
     reboot-needed: false
+    version: 1.19.0
 
 [note type="information" status="Important"]While the upgrade process is active API endpoints and the dashboard will not be available. Anbox containers will stay active and existing streams will also not be interrupted.[/note]
 
@@ -29,5 +30,6 @@ You can watch the upgrade progress on the web interface:
     progress: 40
     update-available: false
     reboot-needed: true
+    version: 1.19.1
 
 When the upgrade has finished the appliance is again available for regular use.
