@@ -37,7 +37,7 @@ When you [create an instance](https://discourse.ubuntu.com/t/24327) by either la
 
 ![Instance start|584x646](https://assets.ubuntu.com/v1/45389cab-instance_start.png)
 
-Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/24329) from the container for further troubleshooting.
+Launching an instance is successful only if all of the above steps succeed. If there are issues during the process, the status of the instance changes to `error`. You can [view the available logs](https://discourse.ubuntu.com/t/24329) from the instance for further troubleshooting.
 
 ### Stopping an instance
 
@@ -81,14 +81,14 @@ To check whether development mode is enabled, run `amc show <instance_ID>` or lo
 
 ## Related information
 
- * [How to create a container](https://discourse.ubuntu.com/t/launch-a-container/24327)
- * [How to start a container](https://discourse.ubuntu.com/t/how-to-start-a-container/33924)
- * [How to wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)
- * [How to access a container](https://discourse.ubuntu.com/t/access-containers-remotely/17772)
- * [How to expose services on a container](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)
- * [How to view the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)
- * [How to stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)
- * [How to delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)
- * [How to list containers](https://discourse.ubuntu.com/t/list-containers/24328)
- * [How to configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)
- * [How to back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)
+ * [How to create an instance](https://discourse.ubuntu.com/t/24327)
+ * [How to start an instance](https://discourse.ubuntu.com/t/33924)
+ * [How to wait for an instance](https://discourse.ubuntu.com/t/24330)
+ * [How to access an instance](https://discourse.ubuntu.com/t/17772)
+ * [How to expose services on an instance](https://discourse.ubuntu.com/t/24326)
+ * [How to view the instance logs](https://discourse.ubuntu.com/t/24329)
+ * [How to stop an instance](https://discourse.ubuntu.com/t/33925)
+ * [How to delete an instance](https://discourse.ubuntu.com/t/24325)
+ * [How to list instances](https://discourse.ubuntu.com/t/24328)
+ * [How to configure geographic location](https://discourse.ubuntu.com/t/17782)
+ * [How to back up and restore application data](https://discourse.ubuntu.com/t/24183)
