@@ -12,11 +12,11 @@ The hook name **must** be one of the following:
 | restore (deprecated) | DEPRECATED: Use `pre-start` instead. Executed before Android starts.                                                 |
 | backup (deprecated)  | DEPRECATED: Use `post-stop` instead. Executed after Android shuts down.                                              |
 
-A failed hook will cause the instance to stop immediately and end up in an error state. In such cases, [view the container logs](https://discourse.ubuntu.com/t/24329) to further investigate the causes of failure.
+A failed hook will cause the instance to stop immediately and end up in an error state. In such cases, [view the instance logs](https://discourse.ubuntu.com/t/24329) to further investigate the causes of failure.
 
 The following figure shows when the different hooks are executed in the life cycle of a base or a regular instance.
 
-![Hooks execution in the life cycle of a container|471x601](https://assets.ubuntu.com/v1/bc9b1291-addons-reference-hook-order.png)
+![Hooks execution in the life cycle of an instance |471x601](https://assets.ubuntu.com/v1/8441e690-addons-reference-hook-order.png)
 
 <a name='env-variables'></a>
 ## Environment variables
