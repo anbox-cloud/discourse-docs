@@ -39,6 +39,8 @@ If an instance stops with an error, its disk space is preserved for inspection. 
 
 An additional aspect to take into account when planning your resources is the number of required GPU slots (see [GPUs and instances](https://discourse.ubuntu.com/t/17768) for more information).
 
+[note type="information" status="Note"]Currently, Anbox Cloud does not have GPU support for virtual machines. This feature is planned for a future release.[/note]
+
 GPUs have limited capacity that can be shared amongst multiple instances, and GPU slots are a way to fine-tune how many instances can run on a given node. In a cluster setup, you define the number of available GPU slots for each node (see [Configure GPU slots](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-gpu-slots) for instructions).
 
 To determine the best number of GPU slots for a specific GPU model, consider the following aspects:
