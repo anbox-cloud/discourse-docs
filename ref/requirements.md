@@ -25,7 +25,7 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 64 bit x86 or Arm CPU with >= 4 CPU cores
 * 8 GB of memory
 * 40 GB of disk space for the OS
-* optional, but strongly recommended: >= 50GB block volume to host instance storage
+* At least 100GB block volume to host instance storage
 
 The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
 
