@@ -1,4 +1,4 @@
-Anbox provides an HTTP API endpoint through a Unix socket at `/run/users/1000/anbox/api.socket` inside every container. The API allows controlling certain aspects of the Anbox runtime and the Android container.
+Anbox Cloud provides an HTTP API endpoint through a Unix socket at `/run/users/1000/anbox/api.socket` inside every instance. The API allows controlling certain aspects of the Anbox runtime and the Android container.
 
 ## Accessing the API endpoint
 
@@ -7,7 +7,7 @@ The API endpoint can be for example accessed via `curl` in the following way
     curl --unix-socket /run/user/1000/anbox/sockets/api.unix s/1.0
 
 ## API versioning
-When Android container gets up and running, all REST API endpoints are served under the base path `/1.0/` inside of the container.
+When the Android container gets up and running, all REST API endpoints are served under the base path `/1.0/` inside of the Android container.
 
 The details of a version of the API can be retrieved using `GET s/1.0`.
 
@@ -276,7 +276,7 @@ For example, for `curl -s -X POST --unix-socket /run/user/1000/anbox/sockets/api
 
 The returned socket path is not fixed. It varies when you toggle camera support in Anbox via the above API.
 
-For example, you have a mp4 video file available in the container, to stream video content to Anbox
+For example, you have an mp4 video file available in the instance, to stream video content to Anbox
 
 ```bash
 ffmpeg -r 10 -i test.mp4 -vf format=rgba -f rawvideo -r 24 - | nc -N -U /run/user/1000/anbox/sockets/camera_video_stream_f053368cc1
@@ -384,7 +384,7 @@ Sensor Type       | JSON Data structure |
 Please check the following [link](https://developer.android.com/guide/topics/sensors/sensors_environment) for the units of measure for the environmental sensors.
 
 [note type="information" status="Note"]If Android framework or applications are not requesting sensor data during its runtime, any attempt to send sensor data to Anbox via HTTP API endpoint will fail with the error `Sensor 'acceleration' is not active` even if the sensor updates are activated.
-Issue GET method to sensor endpoint can check the current active sensors in Android container.
+Issuing GET method to sensor endpoint can check the current active sensors in the Android container.
 [/note]
 
 
@@ -444,7 +444,7 @@ Return value:
 ```
 
 As a result, a trace file can be found from the given path recorded in the response.
-You can pull that file from the container and import it to [Perfetto Trace Viewer](https://ui.perfetto.dev/#!/viewer) for further analysis.
+You can pull that file from the instance and import it to [Perfetto Trace Viewer](https://ui.perfetto.dev/#!/viewer) for further analysis.
 
 <a name="heading--10platform"></a>
 ### `/1.0/platform`
@@ -489,5 +489,5 @@ The available configuration items depend on the platform being used by Anbox and
 
 Platform | Field name       | Available since   | JSON type | Access | Description        |
 ---------|------------------|-------------------|-----------|--------|--------------------|
-`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the Anbox container. |
+`webrtc` | `rtc_log`         | 1.15 | Boolean   | read/write | Enable/disable [RTC event logging](https://webrtc.googlesource.com/src/+/lkgr/logging/g3doc/rtc_event_log.md). Logs are written to `/var/lib/anbox/traces/rtc_log.*` inside the Anbox Cloud instance. |
 `webrtc` | `stream_active`   | 1.15 | Boolean   | read | `true` if a client is actively streaming, `false` if no client is connected. |
