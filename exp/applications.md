@@ -72,7 +72,7 @@ error_message: 'Failed to install application: com.foo.bar: Failed to extract na
 config: {}
 ```
 
-Alternatively, [check the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) to troubleshoot problems in a container.
+Alternatively, [check the instance logs](https://discourse.ubuntu.com/t/24329) to troubleshoot problems in a container.
 
 When the application bootstrap succeeds, the base instance is automatically removed and the status of the application changes to `ready` indicating that the application is ready to use.
 
