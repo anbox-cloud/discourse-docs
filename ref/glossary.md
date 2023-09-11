@@ -183,7 +183,7 @@ See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#a
 
 A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the Anbox Cloud instance.
 
-See [Access a container with AMC](https://discourse.ubuntu.com/t/access-a-container/17772#amc).
+See [Access an instance with AMC](https://discourse.ubuntu.com/t/17772#amc).
 
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
