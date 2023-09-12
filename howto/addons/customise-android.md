@@ -1,6 +1,6 @@
-If you need to do any customisation to the Android system that runs your application, you can use the `anbox-shell` tool within a hook. This tool is useful to interact with the Android system directly.
+To do any customisation to the Android system that runs your application, use the `anbox-shell` tool within a hook. This tool is useful to interact with the Android system directly.
 
-The following hook configures the Android system to use an HTTP proxy:
+In this example, we create a hook that configures the Android system to use an HTTP proxy:
 
 ```bash
 #!/bin/sh -ex
