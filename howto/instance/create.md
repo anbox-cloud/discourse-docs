@@ -11,10 +11,6 @@ Launching an instance for a registered application can be achieved with the foll
 
     amc launch <application_id>
 
-If you want to launch the application in a virtual machine, use the `--vm` flag with the `amc launch` command:
-
-    amc launch --vm <application_id>
-
 As argument, provide the ID of the application that you want to launch.
 
 You can list all available applications with the `amc application ls` command:
