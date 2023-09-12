@@ -13,7 +13,7 @@ AMS can act in two different roles, `publisher` or `client` when working with an
 
     The `publisher` role allows both read and write access to the AAR. AMS instances registered as publishers act in `push` mode and are meant to push new applications and their updates to the AAR so that they can be consumed by regular read-only clients.
 
-    We recommend that you have one `publisher` per architecture, for example, one for `amd64` and one for `arm64`. The publishers should not be used to host regular Anbox Cloud instances but only to manage applications. Regular users should be directed to AMS instances acting as clients.
+    We recommend that you have one `publisher` per architecture, for example, one for `amd64` and one for `arm64`. The publishers should not be used to host regular instances but only to manage applications. Regular users should be directed to AMS instances acting as clients.
 
 * `client`:
 
