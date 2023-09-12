@@ -83,6 +83,6 @@ Then create the application with the `amc` command:
 
     amc application create .
 
-Use the `--vm` flag to create the application in a virtual machine.
+Use the `--vm` flag to create the application in a virtual machine. If you create the application with a specific image, make sure that it is a virtual machine image.
 
 After the AMS application is created successfully, the APK is installed as a proper system app. It will run as a system app in the Android container when you start it from an instance launched from the newly created application.
