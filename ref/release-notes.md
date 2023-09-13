@@ -36,7 +36,8 @@ Along with bug fixes and general improvements, Anbox Cloud 1.19.x includes:
 * Android security updates.
 
 
-[Details=Older releases]
+## Older releases
+[Details=Expand to access release notes of earlier versions]
 ## 2023
 |  Release date  |  Release notes  |
 |----|----|
