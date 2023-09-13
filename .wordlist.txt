@@ -66,6 +66,7 @@ customisable
 customisation
 customisations
 CustomLocale
+CVE
 dataset
 deallocate
 deallocated
@@ -287,6 +288,7 @@ Vulkan
 vsync
 Wayland
 WebRTC
+WebSocket
 websocket
 websockets
 WebView
