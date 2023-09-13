@@ -98,6 +98,7 @@ status: initializing
 progress: 60
 update-available: false
 reboot-needed: false
+version: 1.19.1
 ```
 <a name="register"></a>
 ## Register with the dashboard
