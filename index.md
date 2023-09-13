@@ -176,6 +176,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
 | 0 | | |
+|   | release-notes/1.19.1 | [Release notes-Anbox Cloud 1.19.1](https://discourse.ubuntu.com/t/38595)|
 |   | release-notes/1.19.0-fix1 | [Hotfix release announcement](https://discourse.ubuntu.com/t/38250)|
 |   | release-notes/1.19.0 | [Release notes-Anbox Cloud 1.19.0](https://discourse.ubuntu.com/t/37849)|
 |   | release-notes/1.18.2 | [Release notes-Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
