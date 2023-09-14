@@ -33,7 +33,7 @@ Addons are executed synchronously. Any addon that performs long-running operatio
 Addons that are enabled for all applications can be useful, but they can add up quickly. Try to attach addons to individual applications unless you need a global addon and you are sure that it won't slow down containers.
 
 ### Clean up your addons
-For base containers, if your addon needs additional tools and dependencies during its installation, make sure you remove them afterwards. This will make your addon lighter and all applications using it will start faster.
+For base containers, if your addon needs additional tools and dependencies during its installation, make sure you remove them afterwards (as part of the [`post-stop` hook](https://discourse.ubuntu.com/t/hooks/28555)). This will make your addon lighter and all applications using it will start faster.
 
 
 ## Related information
