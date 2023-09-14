@@ -11,6 +11,8 @@ Launching an instance for a registered application can be achieved with the foll
 
     amc launch <application_id>
 
+The `--vm` flag is not required when you specify an application id. The application has the information about whether a container or a virtual machine is to be created.
+
 As argument, provide the ID of the application that you want to launch.
 
 You can list all available applications with the `amc application ls` command:
