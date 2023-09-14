@@ -141,7 +141,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
-| 2 | ref/supported-video-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)|
+| 2 | ref/supported-codecs | [Supported video codecs](https://discourse.ubuntu.com/t/37323)|
 | 2 | ref/android-features | [Supported Android features](https://discourse.ubuntu.com/t/supported-android-features/28825)|
 | 2 | ref/ams-configuration | [AMS configuration](https://discourse.ubuntu.com/t/ams-configuration/20872)|
 | 2 | ref/application-manifest | [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)|
@@ -307,4 +307,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/component-versions | /docs/ref/component-versions |
 | /docs/supported-versions | /docs/ref/supported-versions |
 | /docs/ref/instance-types | /docs/ref/application-manifest |
+| /docs/ref/supported-video-codecs | /docs/ref/supported-codecs |
 [/details]

@@ -46,4 +46,4 @@ The streams can then be consumed to display the final content.
 ## Related information
 * [Installing Streaming Stack](https://discourse.ubuntu.com/t/installation-quickstart/17744#deploy-anbox-cloud)
 * [Signalling](https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
-* [Supported video codecs](https://discourse.ubuntu.com/t/supported-video-codecs/37323)
+* [Supported codecs](https://discourse.ubuntu.com/t/37323)
