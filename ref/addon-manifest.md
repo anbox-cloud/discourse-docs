@@ -1,5 +1,3 @@
-## Addon manifest
-
 The following table lists the valid keys in an addon manifest:
 
 | Name                  | Type         | Description    | Allowed values  |
@@ -11,6 +9,6 @@ The following table lists the valid keys in an addon manifest:
 
 ## Related information
 
-* [Addons](tbd)
+* [Addons](https://discourse.ubuntu.com/t/38727)
 * [Tutorial: Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284)
 * [How to use addons](https://discourse.ubuntu.com/t/managing-addons/17759)

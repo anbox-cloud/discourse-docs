@@ -107,7 +107,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/addons/backup-and-restore | [Example: Back up data](https://discourse.ubuntu.com/t/example-back-up-data/25289)|
 | 3 | howto/addons/customise-android | [Example: Customise Android](https://discourse.ubuntu.com/t/example-customise-android/25290)|
 | 3 | howto/addons/emulate-platforms | [Example: Emulate platforms](https://discourse.ubuntu.com/t/example-emulate-platforms/25291)|
-| 3 | howto/addons/best-practices | [Best practices](https://discourse.ubuntu.com/t/best-practices-for-addons/25292)|
 | 2 | howto/stream/landing | [Implement streaming](https://discourse.ubuntu.com/t/implement-streaming/24332) |
 | 3 | howto/stream/access | [Access the stream gateway](https://discourse.ubuntu.com/t/managing-stream-gateway-access/17784) |
 | 3 | howto/stream/oob-data | [Exchange OOB data](https://discourse.ubuntu.com/t/exchange-out-of-band-data/21834)|
@@ -153,7 +152,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/anbox-platform-sdk-api | [Anbox Platform SDK API](https://anbox-cloud.github.io/latest/anbox-platform-sdk/)|
 | 2 | ref/sdks | [Anbox Cloud SDKs](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844)|
 | 2 | ref/network-ports | [Network ports](https://discourse.ubuntu.com/t/network-ports/33650)|
-| 2 | ref/addons | [Addons](https://discourse.ubuntu.com/t/addons/25293)|
+| 2 | ref/addon-manifest | [Addon manifest](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
 | 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
@@ -168,6 +167,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 2 | exp/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
 | 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
 | 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
@@ -311,4 +311,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/supported-versions | /docs/ref/supported-versions |
 | /docs/ref/instance-types | /docs/ref/application-manifest |
 | /docs/ref/supported-video-codecs | /docs/ref/supported-codecs |
+| /docs/howto/addons/best-practices | /docs/exp/addons |
+| /docs/ref/addons | /docs/ref/addon-manifest |
 [/details]
