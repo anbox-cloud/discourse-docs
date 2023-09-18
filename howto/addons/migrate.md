@@ -1,6 +1,7 @@
 Starting with Anbox Cloud 1.12, use the following new hooks instead of the deprecated ones:
 
-* Use `pre-start` instead of `install` and `restore`
+* Use `pre-start` instead of `install`
+* Use `pre-start` instead of `restore`
 * Use `post-start` instead of `prepare`
 * Use `post-stop` instead of `backup`
 
