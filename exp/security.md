@@ -37,6 +37,8 @@ Anbox Cloud uses LXD in a way that enforces the highest security level.
 
 ### Unprivileged instances
 
+[note type="information" status="Note"]This section is particularly applicable for container based instances because a virtual machine is unprivileged by nature.[/note]
+
 Many instance managers use privileged instances, which means that the instances have root privileges on the host system, including access to all devices. This is a security risk, because attackers could gain control over the host system.
 
 Anbox Cloud uses unprivileged LXD instances only, which fully isolates the instances and ensures that they cannot gain root privileges. In addition, the Android container that runs inside the LXD instance also runs as an unprivileged instance. This method isolates the Android container twice, with the result that if the encapsulation of either the LXD instance or the Android container should fail, the system would still be protected.
