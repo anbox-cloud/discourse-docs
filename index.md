@@ -21,6 +21,7 @@ Anbox Cloud is a Canonical product. It originally grew out of the [Anbox open-so
 - Forums:
     - [Ask questions about Anbox Cloud](https://discourse.ubuntu.com/c/anbox-cloud/users/148)
     - [Contribute to Anbox Cloud documentation](https://discourse.ubuntu.com/c/anbox-cloud/documentation/50)
+    - [Give feedback on Anbox Cloud documentation](https://forms.gle/6yzgLbwN8rVYSdvG9)
     - [Follow Anbox Cloud release announcements](https://discourse.ubuntu.com/c/anbox-cloud/announcements/55)
 - [Release roadmap](https://discourse.ubuntu.com/t/release-roadmap/19359)
 - [Release notes](https://discourse.ubuntu.com/t/release-notes/17842)
@@ -175,6 +176,8 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416) |
 | 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
 | 2 | exp/production | [Production planning](https://discourse.ubuntu.com/t/about-production-planning/34648) |
+| 0 | | |
+| 1 | |[Documentation feedback](https://forms.gle/6yzgLbwN8rVYSdvG9)|
 | 0 | | |
 |   | release-notes/1.19.1 | [Release notes-Anbox Cloud 1.19.1](https://discourse.ubuntu.com/t/38595)|
 |   | release-notes/1.19.0-fix1 | [Hotfix release announcement](https://discourse.ubuntu.com/t/38250)|
