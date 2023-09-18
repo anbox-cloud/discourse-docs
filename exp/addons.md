@@ -30,10 +30,12 @@ Addons are executed synchronously. Any addon that performs long-running operatio
 [note type="information" Status="Tip"]Use the `CONTAINER_TYPE` environment variable to run only on the specified container type. Doing so runs the code in your hooks only when necessary.[/note]
 
 ### Use global addons sparingly
-Addons that are enabled for all applications can be useful, but they can add up quickly. Try to attach addons to individual applications unless you need a global addon and you are sure that it won't slow down containers.
+Addons that are enabled for all applications can be useful, but they can add up quickly because whenever a global addon gets updated, a new application version is created. So if you use a global addon and that addon gets updated often, the disk capacity fills up fast.
+
+Try to attach addons to individual applications unless you need a [global addon](https://discourse.ubuntu.com/t/how-to-enable-an-addon-globally/25285).
 
 ### Clean up your addons
-For base containers, if your addon needs additional tools and dependencies during its installation, make sure you remove them afterwards (as part of the [`post-stop` hook](https://discourse.ubuntu.com/t/hooks/28555)). This will make your addon lighter and all applications using it will start faster.
+For base containers, if your addon needs additional tools and dependencies during its installation, make sure you remove them afterwards (as part of the [`post-stop` hook](https://discourse.ubuntu.com/t/hooks/28555)). This will make your application image lighter and all containers launched from it will start faster.
 
 
 ## Related information
