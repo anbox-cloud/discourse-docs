@@ -1,9 +1,9 @@
-Starting with Anbox Cloud 1.12, the following hooks are deprecated and should be replaced:
+Starting with Anbox Cloud 1.12, use the following new hooks instead of the deprecated ones:
 
-- `install` should be replaced with `pre-start`
-- `prepare` should be replaced with `post-start`
-- `restore` should be replaced with `pre-start`
-- `backup` should be replaced with `post-stop`
+* Use `pre-start` instead of `install`
+* Use `pre-start` instead of `restore`
+* Use `post-start` instead of `prepare`
+* Use `post-stop` instead of `backup`
 
 Be aware that the new hooks run for **all** container types. To execute a hook for only regular or only base containers, use the new `CONTAINER_TYPE` environment variable. This variable is set to either `base` or `regular`.
 

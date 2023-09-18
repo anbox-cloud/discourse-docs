@@ -1,6 +1,6 @@
-Addons can be used to customise the images used for the containers. An addon has [hooks](https://discourse.ubuntu.com/t/hooks/28555) that are invoked at various points in the life cycle of a container. Addons are created independently and can be attached to individual applications.
+Addons can be used to customise the images used for the containers. See [Addons](tbd) and [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about addons in detail.
 
-See [Addons](https://discourse.ubuntu.com/t/addons/25293) for more information and a complete reference on addons. Follow the [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial to learn how to write a simple addon.
+If this is your first time creating an addon, follow the [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial to learn how to write a simple addon.
 
 You can use addons to, for example:
 - Enable SSH access for automation tools (see [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284))
