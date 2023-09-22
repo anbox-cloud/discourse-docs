@@ -14,28 +14,20 @@ Before starting the procedure,
 ## Virtual machine setup
 
 ### 1. Create a virtual machine
-Log in to [Google Cloud](https://console.cloud.google.com) and select the project for this deployment. Select **CREATE INSTANCE** in the **VM instances** page.
-
-![VM instances on Google Cloud|690x440](https://assets.ubuntu.com/v1/f1e83df5-VM-instance-2.png)
-
-Select **New VM instance** from the options on the sidebar.
-
-![VM instance options on Google Cloud|690x440](https://assets.ubuntu.com/v1/b400c919-Instance-options-2.png)
+Log in to [Google Cloud](https://console.cloud.google.com) and select the project for this deployment. Select **VM instances > Create Instance > New VM instance**.
 
 ### 2. Configure basic settings
 
-Configure the following basic settings for the virtual machine. 
-
-* **Name** - Name of the virtual machine instance
-* **Labels** - Organisational labels to keep track of your resources on Google Cloud
-* **Region** and **Zone** - The geographic location where your resources are run and your data is stored
-* **Machine configuration**, **Series**, **Machine type** and **Display device** - Select a machine configuration that matches the hardware requirements. If your requirement includes GPUs, select the GPU-optimised machine configuration. For example, an NVIDIA L4 GPU. You can select the recommended preset machine type or define a custom type with additional cores and memory for an added cost.
+* *Name* - Name of the virtual machine instance
+* *Labels* - Organisational labels to keep track of your resources on Google Cloud
+* *Region* and *Zone* - The geographic location where your resources are run and your data is stored
+* *Machine configuration*, *Series*, *Machine type* and *Display device* - Select a machine configuration that matches the hardware requirements. If your requirement includes GPUs, select the GPU-optimised machine configuration. For example, an NVIDIA L4 GPU. You can select the recommended preset machine type or define a custom type with additional cores and memory for an added cost.
 
 Most of the configuration depends on your deployment and its location. For the settings that are not mentioned in this guide, you can choose to proceed with the default options or see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance) to customise your virtual machine on Google Cloud.
 
 ### 3. Configure disks
 
-Configure the boot disk by selecting **Boot disk > CHANGE** to choose the operating system and boot disk size.
+Configure the boot disk by selecting **Boot disk > Change** to choose the operating system and boot disk size.
 
 ![Configure boot disk|690x440](https://assets.ubuntu.com/v1/884d0b10-boot-disk-config-2.png)
 
@@ -47,7 +39,7 @@ Select the latest Ubuntu image for the architecture that you want to use. For ex
 
 Define your preferred boot disk size. We recommend allocating at least 100 GB of disk size.
 
-For Anbox Cloud Appliance, adding an additional disk is recommended for efficient container storage. Under **Advanced Options > Disks**, Select **ADD NEW DISK**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values. 
+For Anbox Cloud Appliance, adding an additional disk is recommended for efficient container storage. Under **Advanced Options > Disks**, Select **Add new disk**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values.
 
 ![Add new disk|690x440](https://assets.ubuntu.com/v1/8acf5d22-add-new-disk-2.png)
 
@@ -59,13 +51,15 @@ There are two ways to map the firewall rules to the virtual machine in Google Cl
 
 **Specified target tags** - If you want to use specified target tags to map your firewall rules to the virtual machine, assign a unique network tag under **Advanced options > Networking > Network tags**. This network tag will later be used while creating a firewall rule.
 
+For more information, see [Google's documentation](https://cloud.google.com/firewall/docs/using-firewalls).
+
 ### 5. Launch the virtual machine
 
-Select **CREATE** to create the virtual machine on Google Cloud. For additional information on creating a virtual machine in Google Cloud, see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance).
+Select **Create** to create the virtual machine on Google Cloud. For additional information on creating a virtual machine in Google Cloud, see [Google's documentation](https://cloud.google.com/compute/docs/instances/create-start-instance).
 
 ## Firewall setup
 
-Before installing Anbox Cloud on the virtual machine, you should set up a firewall to control the incoming and outgoing traffic to your virtual machine. From the navigation menu, select **VPC network > Firewall**. Select **CREATE FIREWALL RULE**. 
+Before installing Anbox Cloud on the virtual machine, you should set up a firewall to control the incoming and outgoing traffic to your virtual machine. From the navigation menu, select **VPC network > Firewall**. Select **Create firewall rule**.
 
 You can create a firewall rule based on your networking requirements following [Google's documentation](https://cloud.google.com/firewall/docs/using-firewalls). The following is an example firewall rule to enable access to the Anbox Cloud Appliance dashboard once the appliance is installed on the virtual machine. 
 
@@ -90,7 +84,7 @@ The target tag `foo` will be used as the network tag in the virtual machine sett
 
 If you want to use the service account to map the firewall rule to the instance, choose `Targets` as `Specified service account` and use the service account configured in the virtual machine.
 
-Select **CREATE** to create the firewall rule.
+Select **Create** to create the firewall rule.
 
 ## Connect to the virtual machine using SSH
 
@@ -98,7 +92,7 @@ On the virtual machine instance page, connect to the instance using SSH. See [Go
 
 ## Finish the installation
 
-Perform the following steps to finish the appliance installation on the virtual machine. If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.
+To complete the installation:
 
 1. Install the Anbox Cloud Appliance on the virtual machine.
 
@@ -106,5 +100,7 @@ Perform the following steps to finish the appliance installation on the virtual 
 
 1. Initialise the appliance.
 1. Register your Ubuntu SSO account with the appliance dashboard.
+
+[note type="information" status="Note"]If you are not already familiar with how to perform these steps, see the [tutorial on installing the appliance](https://discourse.ubuntu.com/t/22681) for detailed instructions.[/note]
 
 When you are done, you can log into the appliance dashboard using `https://your-machine-address` with your Ubuntu SSO account.
