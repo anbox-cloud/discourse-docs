@@ -1,4 +1,4 @@
-Before you upgrade the Anbox Cloud Appliance, make sure all packages on the machines that are part of the deployment, are up-to-date. To do so, run the following commands on each machine:
+Before you upgrade the Anbox Cloud Appliance, make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:
 
     sudo apt update
     sudo apt upgrade
