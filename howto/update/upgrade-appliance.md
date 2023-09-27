@@ -33,3 +33,7 @@ You can watch the upgrade progress on the web interface:
     version: 1.19.1
 
 When the upgrade is successful, the appliance is again available for regular use.
+
+In case the upgrade fails due to a transient error or an issue with the system configuration, after resolving the issue, use the `--force` option to run the upgrade process again:
+
+    anbox-cloud-appliance upgrade --force
