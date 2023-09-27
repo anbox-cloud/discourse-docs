@@ -1,4 +1,4 @@
-Before you upgrade the Anbox Cloud Appliance, you should make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:
+Before you upgrade the Anbox Cloud Appliance, make sure all packages on the machines that are part of the deployment are up-to-date. To do so, run the following commands on each machine:
 
     sudo apt update
     sudo apt upgrade
@@ -10,9 +10,9 @@ The Anbox Cloud Appliance includes an `upgrade` command which will perform all r
     reboot-needed: false
     version: 1.19.0
 
-[note type="information" status="Important"]While the upgrade process is active API endpoints and the dashboard will not be available. Anbox containers will stay active and existing streams will also not be interrupted.[/note]
+[note type="information" status="Important"]While the upgrade process is active, API endpoints and the dashboard will not be available. Anbox Cloud containers will stay active and existing streams will also not be interrupted.[/note]
 
-In the command output above the `update-available` field indicates an update is available. The upgrade process can now be initiated by running the `upgrade` command:
+In the `anbox-cloud-appliance status` command output, the `update-available` field indicates if an update is available. If an update is available, the upgrade process can now be initiated by running the `upgrade` command:
 
     anbox-cloud-appliance upgrade
 
@@ -24,7 +24,7 @@ You can watch the upgrade progress on the web interface:
 
 ![Upgrade the appliance|690x435](https://assets.ubuntu.com/v1/1093e239-update_appliance.png)
 
- or with the `anbox-cloud-appliance status` command you used above:
+ or with the same `anbox-cloud-appliance status` command that you used earlier:
 
     status: maintenance
     progress: 40
@@ -32,4 +32,4 @@ You can watch the upgrade progress on the web interface:
     reboot-needed: true
     version: 1.19.1
 
-When the upgrade has finished the appliance is again available for regular use.
+When the upgrade is successful, the appliance is again available for regular use.
