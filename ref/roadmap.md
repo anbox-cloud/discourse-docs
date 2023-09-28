@@ -11,5 +11,6 @@ Anbox Cloud follows a defined release cycle with frequent minor and patch releas
 ## Roadmap
 | Release | Target Date | What to expect| 
 |---------|-------------|---------------|
-| 1.19.2 | October 11 2023 | * Android security updates for October 2023<br/>* Bug fixes |
 | 1.20.0 | November 15 2023 | * Support for running Anbox Cloud on VMs<br/>* Lazy image download<br/>* Support for Android 14<br/>* Vulkan support for NVIDIA GPUs<br/>* Enhancements to the streaming experience|
+| 1.20.1 | December 13 2023 | * Android security updates for December 2023<br/>* Bug fixes |
+| 1.20.2 | January 17 2024  | * Android security updates for January 2023<br/>* Bug fixes |
