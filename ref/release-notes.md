@@ -7,13 +7,15 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Tentative Release date | Planned release version |
 |----|----|
-|October 11 2023|Anbox Cloud 1.19.2|
 |November 15 2023|Anbox Cloud 1.20.0|
+|December 13 2023|Anbox Cloud 1.20.1|
+|January 17 2024|Anbox Cloud 1.20.2|
 
 ## Recent releases
 
 | Release date   |  Release notes  |
 |----|----|
+|October 11 2023|[Anbox Cloud 1.19.2](tbd)|
 |September 13 2023|[Anbox Cloud 1.19.1](https://discourse.ubuntu.com/t/38595)|
 |August 30 2023|[Anbox Cloud 1.19.0-fix1](https://discourse.ubuntu.com/t/38250)|
 |August 16 2023|[Anbox Cloud 1.19.0](https://discourse.ubuntu.com/t/37849)|
@@ -41,7 +43,7 @@ Along with bug fixes and general improvements, Anbox Cloud 1.19.x includes:
 ## 2023
 |  Release date  |  Release notes  |
 |----|----|
-|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)
+|July 12 2023|[Anbox Cloud 1.18.2](https://discourse.ubuntu.com/t/36916)|
 |June 14 2023|[Anbox Cloud 1.18.1](https://discourse.ubuntu.com/t/36309)|
 |May 17 2023|[Anbox Cloud 1.18.0](https://discourse.ubuntu.com/t/35812)|
 |April 17 2023|[Anbox Cloud 1.17.2](https://discourse.ubuntu.com/t/35195)|
