@@ -1,6 +1,6 @@
 Anbox Cloud currently supports the `swrast`, `null`, `webrtc` platforms. This guide covers the display settings configuration for these platforms.
 
-To instruct an instance to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
+To instruct an [instance](https://discourse.ubuntu.com/t/26204#instance) to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
 
     amc launch -p webrtc <application>
 

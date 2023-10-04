@@ -1,4 +1,4 @@
-Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with an instance running on Anbox Cloud and automate UI testing for Android applications.
+Anbox Cloud enables you to run automated tests for Android applications at scale. In the following example, we make use of [Appium](http://appium.io/) to interact with an [instance](https://discourse.ubuntu.com/t/26204#instance) running on Anbox Cloud and automate UI testing for Android applications.
 
 ## Setup Anbox Cloud for Appium
 

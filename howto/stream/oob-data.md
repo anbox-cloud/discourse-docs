@@ -5,7 +5,7 @@ Anbox Cloud provides two versions of this OOB data exchange:
 * [Version 2](#oob-v2) provides a full-duplex bidirectional data transmission mode in which data can flow in both directions at the same time.
 
   Use this version if you start your implementation now. If you already have an existing implementation, you should plan to update it to use version 2.
-* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in an instance and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
+* [Version 1](#oob-v1) enables Android application developers to trigger an action from an Android application running in an [instance](https://discourse.ubuntu.com/t/26204#instance) and forward it to a WebRTC client through the Anbox WebRTC platform. When Anbox receives the action, as one peer of the WebRTC platform, the action is propagated from Anbox to the remote peer (the WebRTC client) through a WebRTC data channel. The client can then react to the action received from the remote peer and respond accordingly on the UI.
 
   This version supports only half-duplex data transmission. It allows sending data from an Android application to a WebRTC client through the Anbox WebRTC platform, but it is not possible to receive data from the WebRTC client to an Android application.
 
