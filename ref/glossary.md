@@ -317,7 +317,7 @@ See https://discourse.ubuntu.com/t/manage-images/17758 and https://discourse.ubu
 <a name="instance"></a>
 ### Instance
 
-One of the main objects of Anbox Cloud. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system. Within the context of Anbox Cloud, the term Anbox Cloud images is used interchangeably with LXD images in the sense that they are LXD images containing specific configuration related to Anbox Cloud.
+An instance is a container or a virtual machine used to launch an application or an image. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
 
 See https://discourse.ubuntu.com/t/17763.
 
