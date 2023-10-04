@@ -22,7 +22,7 @@ Application instances are containers or virtual machines created when launching 
 
 Raw instances are containers or virtual machines created when launching an image. They run the full Android system, without any additional apps installed.
 
-## Life cycle of an Anbox Cloud instance
+## Life cycle of an instance
 
 ### Creating an instance
 
@@ -41,7 +41,7 @@ Launching an instance is successful only if all of the above steps succeed. If t
 
 ### Stopping an instance
 
-Anbox Cloud instances can be stopped because of the following scenarios:
+Instances can be stopped because of the following scenarios:
 
 - You stopped it.
 - You deleted it.

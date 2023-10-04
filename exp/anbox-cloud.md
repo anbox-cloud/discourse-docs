@@ -51,7 +51,7 @@ Inside each Anbox subcluster, the following components are present:
 
 * **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and instance life cycle, including application and image update, while ensuring high density, performance, and fast startup times.
 
-  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox Cloud instances, requesting and releasing resources as per demand.
+  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with the instances, requesting and releasing resources as per demand.
 
 * **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to [control AMS remotely](https://discourse.ubuntu.com/t/how-to-control-ams-remotely/17774), but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
 
@@ -63,7 +63,7 @@ Each Anbox subcluster also has a number of LXD worker nodes that form a LXD clus
 
 * **LXD** - The LXD daemon spawns a number of LXD instances containing Anbox-related configuration. These instances provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD instance runs exactly one Android instance that the end user can access/stream.
 
-    [note type="information" status="Note"] The term LXD instance means that they are LXD containers or virtual machines that contain configuration related to Anbox Cloud. Within the context of Anbox Cloud, the term Anbox Cloud instances/images is synonymous with LXD instances/LXD images in the sense that they are LXD instances/images containing specific configuration related to Anbox Cloud.[/note]
+    [note type="information" status="Note"] The term LXD instance means that they are LXD containers or virtual machines that contain configuration related to Anbox Cloud. Within the context of Anbox Cloud, the term Anbox Cloud images is used interchangeably with LXD images in the sense that they are LXD images containing specific configuration related to Anbox Cloud.[/note]
 
 * **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when an instance is started or stopped to control ingress and egress traffic.
 
@@ -80,7 +80,7 @@ The diagram below depicts the streaming stack along with the core stack and user
 
 When the streaming stack is in use, each Anbox subcluster has the following additional components:
 
-* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the Anbox Cloud instance running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
+* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the application running on Anbox Cloud. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
 * **Stream agent** - Serves as an entry point that the gateway can connect to to talk to the AMS of the Anbox subcluster.
 

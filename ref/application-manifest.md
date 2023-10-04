@@ -26,7 +26,7 @@ Name          | Value type | Description |
 <a name="instance-type"></a>
 ## Instance type
 
-Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of Anbox Cloud instances or particular applications.
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
 Anbox Cloud offers the following instance types:
 
@@ -111,7 +111,7 @@ Supplying `['*']` to the `allowed-packages` when the watchdog is enabled allows 
 <a name="services"></a>
 ## Services
 
-An Anbox Cloud instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
+An instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
 
 Name           | Value type | Description
 ---------------|------------|-------------------------

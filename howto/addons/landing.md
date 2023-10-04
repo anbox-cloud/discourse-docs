@@ -1,4 +1,4 @@
-Addons can be used to customise the images used for the Anbox Cloud instances. See [Addons](https://discourse.ubuntu.com/t/38727) and [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about addons in detail.
+In Anbox Cloud, addons can be used to customise the images used for the instances. See [Addons](https://discourse.ubuntu.com/t/38727) and [Addon manifest](https://discourse.ubuntu.com/t/25293) to learn about addons in detail.
 
 If this is your first time creating an addon, follow the [Create an addon](https://discourse.ubuntu.com/t/creating-an-addon/25284) tutorial to learn how to write a simple addon.
 

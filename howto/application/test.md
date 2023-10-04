@@ -63,7 +63,7 @@ Appium uses ADB as located in the Android SDK to establish a connection between 
 
 ## Execute Tests with Appium
 
-Once the connection is established between the Anbox Cloud instance and your development machine through ADB, you can launch the Appium desktop application to execute test cases.
+Once the connection is established between the instance and your development machine through ADB, you can launch the Appium desktop application to execute test cases.
 
 ### Manually provided APK
 
