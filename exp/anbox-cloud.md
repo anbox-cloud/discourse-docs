@@ -100,7 +100,7 @@ Anbox Cloud includes LXD for hosting and managing the Ubuntu instances that run 
 
 LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), which adds some Anbox-specific configuration to LXD. AMS configures LXD automatically and fully manages it, which means that in most scenarios, you do not need to worry about LXD at all.
 
-If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the AMS instances. If you run the Anbox Cloud Appliance, LXD hosts instances for the different Juju machines that Anbox Cloud requires:
+If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the instances created by AMS. If you run the Anbox Cloud Appliance, LXD hosts instances for the different Juju machines that Anbox Cloud requires:
 
 ```
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
@@ -129,7 +129,7 @@ While a loop file is easy to set up, it is much slower than a block device. Ther
 
 If you are doing a full deployment, configure the storage before starting the deployment. See the *Customise storage* section in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744#customise-storage) or [How to deploy Anbox Cloud on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378#customise-storage) for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
 
-If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, thus both the Juju and AMS instances.
+If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
 
 <a name="juju-bundles"></a>
 ## Juju bundles
