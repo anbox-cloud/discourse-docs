@@ -286,6 +286,8 @@ While following this tutorial, you created several applications and containers. 
 
 You now know how to use the command line to create, launch and test applications in Anbox Cloud.
 
+This tutorial used a container to illustrate how to create and work with applications using Anbox Cloud. Alternatively, you can also use a virtual machine instead of a container by using the `--vm` option with the `amc` commands.
+
 If you are interested in a more easy-to-use interface, check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
-Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.
+Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with instances](https://discourse.ubuntu.com/t/24335) for more in-depth information.

@@ -1,6 +1,6 @@
 There are two types of logs that help you understand what is happening in your Anbox Cloud installation:
 
-- Logs for the applications that you are running, on a cluster or node level. See [How to view the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329) for information about this type of logs.
+- Logs for the applications that you are running, on a cluster or node level. See [How to view the instance logs](https://discourse.ubuntu.com/t/24329) for information about this type of logs.
 - Infrastructure logs for the deployment. These logs differ depending on whether you run a full Anbox Cloud deployment or the Anbox Cloud Appliance. See the following sections for more information.
 
 ## View logs for Anbox Cloud

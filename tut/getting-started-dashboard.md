@@ -48,7 +48,7 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 
 [note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
 
-Choose an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+Choose an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the instance will use a GPU if available or software encoding otherwise.
 
 ![Add an application](https://assets.ubuntu.com/v1/2ccd2c00-gs_dashboard_add_application.png)
 
@@ -79,33 +79,33 @@ To delete an application, click the **Delete application** button in the **Actio
 To skip the confirmation window, hold **Shift** when clicking the **Delete application** button.
 [/note]
 
-## 6. Inspect containers
+## 6. Inspect instances
 
-Every time you start a session for an application, Anbox Cloud creates a container. The container keeps running even if you exit the stream, until you either stop the session by clicking **Stop session** or delete the container.
+Every time you start a session for an application, Anbox Cloud creates an instance. The instance keeps running even if you exit the stream, until you either stop the session by clicking **Stop session** or delete the instance.
 
-You can see all containers in the container view at `https://<your-machine-address>/containers`.
+You can see all instances in the instance view at `https://<your-machine-address>/instances`.
 
-![Container view](https://assets.ubuntu.com/v1/55b5f36f-gs_dashboard_containers.png)
+![Instance view](https://assets.ubuntu.com/v1/55b5f36f-gs_dashboard_containers.png)
 
-Complete the following steps to inspect a container:
+Complete the following steps to inspect an instance:
 
-1. Click on the ID of one of the running containers to see detailed information for the container.
+1. Click on the ID of one of the running instances to see detailed information for the instance.
 
-   ![Container information](https://assets.ubuntu.com/v1/60de9b54-gs_dashboard_container_overview.png)
-1. Switch to the **Terminal** tab. You will see a terminal for the Linux container that runs the Android container.
+   ![Instance information](https://assets.ubuntu.com/v1/60de9b54-gs_dashboard_container_overview.png)
+1. Switch to the **Terminal** tab. You will see a terminal for the Linux instance that runs the Android container.
 
-   You can run commands in the Linux container, or you can enter `anbox-shell` to access the nested Android container (enter `exit` to go back to the Linux container).
+   You can run commands in the Linux instance, or you can enter `anbox-shell` to access the nested Android container (enter `exit` to go back to the Linux instance).
 
-   ![Use the container terminal](https://assets.ubuntu.com/v1/286a95da-gs_dashboard_container_terminal.png)
-1. Switch to the **Logs** tab. You will not see any logs, because log files are available only for containers that are in an error state, not for running containers.
+   ![Use the instance terminal](https://assets.ubuntu.com/v1/286a95da-gs_dashboard_container_terminal.png)
+1. Switch to the **Logs** tab. You will not see any logs, because log files are available only for instances that are in an error state, not for running instances.
 
-   To simulate a failure for the container, switch to the **Terminal** tab and enter the following command:
+   To simulate a failure for the instance, switch to the **Terminal** tab and enter the following command:
 
         amsctl notify-status error --message="My error message"
 
-   Go back to the container overview, and when the container status changes to **error**, click on the container ID and switch to the **Logs** tab. You can now see the error logs for the container.
+   Go back to the instance overview, and when the instance status changes to **error**, click on the instance ID and switch to the **Logs** tab. You can now see the error logs for the instance.
 
-   ![Container logs](https://assets.ubuntu.com/v1/5ee5624c-gs_dashboard_container_logs.png)
+   ![Instance logs](https://assets.ubuntu.com/v1/5ee5624c-gs_dashboard_container_logs.png)
 
 ## Done!
 
@@ -113,4 +113,4 @@ You now know how to use the web dashboard to create, launch and test application
 
 If you are interested in more advanced use cases, check out the [Get started with Anbox Cloud (CLI)](https://discourse.ubuntu.com/t/getting-started/17756) tutorial to learn how to use Anbox Cloud from the command line.
 
-Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335).
+Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with instances](https://discourse.ubuntu.com/t/24335).

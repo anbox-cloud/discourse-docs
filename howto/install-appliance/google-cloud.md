@@ -39,7 +39,7 @@ Select the latest Ubuntu image for the architecture that you want to use. For ex
 
 Define your preferred boot disk size. We recommend allocating at least 100 GB of disk size.
 
-For Anbox Cloud Appliance, adding an additional disk is recommended for efficient container storage. Under **Advanced Options > Disks**, Select **Add new disk**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values.
+For Anbox Cloud Appliance, adding an additional disk is recommended for efficient instance storage. Under **Advanced Options > Disks**, Select **Add new disk**. Add a disk name and choose the disk size as 100 GB. For the other fields, you can choose your preferred value or proceed with the default values.
 
 ![Add new disk|690x440](https://assets.ubuntu.com/v1/8acf5d22-add-new-disk-2.png)
 

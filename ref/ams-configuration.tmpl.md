@@ -13,11 +13,11 @@ See [Configure cluster nodes](https://discourse.ubuntu.com/t/configure-cluster-n
 
 ## Features
 
-Anbox Cloud includes some features which are not enabled by default but can be conditionally enabled. The features are enabled by flags which are configured through AMS. You can configure the feature flags either globally for all containers or per application.
+Anbox Cloud includes some features which are not enabled by default but can be conditionally enabled. The features are enabled by flags which are configured through AMS. You can configure the feature flags either globally for all instances or per application.
 
-To configure a feature globally for all containers, use a command similar to the following:
+To configure a feature globally for all instances, use a command similar to the following:
 
-    amc config set container.feature foo,bar
+    amc config set instance.feature foo,bar
 
 To configure a feature for one application in the manifest, use a syntax similar to the following:
 
@@ -29,7 +29,7 @@ To configure a feature for one application in the manifest, use a syntax similar
 
 By default, Anbox hides the Android system UI when an application is running in foreground mode. In some use cases, however, it's required to have the system UI available for navigation purposes. This can be enabled with the `enable_system_ui` feature flag.
 
-The feature flag will be considered by all new launched containers once set.
+The feature flag will be considered by all new launched instances once set.
 
 #### Virtual Keyboard
 
@@ -47,7 +47,7 @@ For the feature to be considered, applications must be manually updated, because
 
 WiFi support can be optionally enabled with the `enable_wifi` feature flag. Anbox will then set up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection.
 
-The feature flag will be considered by all newly launched containers once set.
+The feature flag will be considered by all newly launched instances once set.
 
 #### Android reboot
 
@@ -55,7 +55,7 @@ By default, Android is not allowed to reboot. With the `allow_android_reboot` fe
 
 Note that you must disable the [watchdog](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog) if reboots are allowed.
 
-The feature flag will be considered by all newly launched containers once set.
+The feature flag will be considered by all newly launched instances once set.
 
 #### AV1 software encoder
 
@@ -63,7 +63,7 @@ The feature flag will be considered by all newly launched containers once set.
 
 The AV1 software encoder is disabled by default but can be enabled with the `experimental.force_av1_software_encoding` feature flag. To transcode the video stream encoded in AV1 codec, all clients must support AV1 decoding.
 
-Once set, this feature flag will be considered by all newly launched containers.
+Once set, this feature flag will be considered by all newly launched instances.
 
 #### Development settings
 
@@ -71,7 +71,7 @@ Once set, this feature flag will be considered by all newly launched containers.
 
 The Android development settings (which include an ADB connection) are enabled by default. Some applications require these settings to be disabled, which you can do with the `disable_development_settings` feature flag.
 
-Once set, this feature flag will be considered by all newly launched containers.
+Once set, this feature flag will be considered by all newly launched instances.
 
 #### Custom Android ID
 
@@ -86,4 +86,4 @@ To enable the Android container to use a custom Android ID, add the feature flag
  * The `<package_name>` is the package name of the application.
  * The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
 
-Once set, this feature flag will be considered by all newly launched containers.
+Once set, this feature flag will be considered by all newly launched instances.
