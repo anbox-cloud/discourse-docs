@@ -31,22 +31,27 @@ You can then access the endpoint with `curl`, for example:
 ### AMS cluster metrics
 
 Metrics prefixed with `ams_cluster_` keep you informed about the status of your Anbox Cloud cluster.
-These metrics are available since Anbox Cloud 1.0.0.
 
-| Name                                             | Description                                   |
-|--------------------------------------------------|-----------------------------------------------|
-| `ams_cluster_nodes_total`                        | Number of nodes in the cluster                |
-| `ams_cluster_applications_total`                 | Number of applications                        |
-| `ams_cluster_containers_total`                   | Number of containers currently in the cluster |
-| `ams_cluster_container_boot_time_seconds_count`  | Number of container boot time measured        |
-| `ams_cluster_container_boot_time_seconds_sum`    | Sum of all container boot times (can be used to compute the average boot time) |
-| `ams_cluster_container_boot_time_seconds_bucket` | Container boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |
-| `ams_cluster_containers_per_application_total`   | Number of containers per application          |
-| `ams_cluster_containers_per_status_total`        | Number of containers per container status     |
-| `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node      |
-| `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                 |
-| `ams_cluster_available_memory_total`             | Total memory available in each worker node    |
-| `ams_cluster_used_memory_total`                  | Used memory in each worker node               |
+| Name                                             | Description                                   | Status    |
+|--------------------------------------------------|-----------------------------------------------|-----------|
+| `ams_cluster_nodes_total`                        | Number of nodes in the cluster                | Available since 1.0.0 |
+| `ams_cluster_applications_total`                 | Number of applications                        | Available since 1.0.0 |
+| `ams_cluster_containers_total`                   | Number of containers currently in the cluster | Deprecated since 1.20.0, use `ams_cluster_instances_total` instead. |
+| `ams_cluster_container_boot_time_seconds_count`  | Number of container boot time measured     | Deprecated since 1.20.0, use `ams_cluster_instance_boot_time_seconds_count` instead. |
+| `ams_cluster_container_boot_time_seconds_sum`    | Sum of all container boot times and can be used to compute the average boot time |  Deprecated since 1.20.0, use `ams_cluster_instance_boot_time_seconds_sum` instead. |
+| `ams_cluster_container_boot_time_seconds_bucket` | Container boot times bucket and can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information |  Deprecated since 1.20.0, use `ams_cluster_instance_boot_time_seconds_bucket` instead. |
+| `ams_cluster_containers_per_application_total`   | Number of containers per application  | Deprecated since 1.20.0, use `ams_cluster_instances_per_application_total` instead. |
+| `ams_cluster_containers_per_status_total`        | Number of containers per container status |  Deprecated since 1.20.0, use `ams_cluster_instances_per_status_total` instead. |
+| `ams_cluster_instances_total`                   | Number of instances currently in the cluster | Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_count`  | Number of instance boot time measured        | Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_sum`    | Sum of all instance boot times (can be used to compute the average boot time) |  Available since 1.20.0 |
+| `ams_cluster_instance_boot_time_seconds_bucket` | Instance boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |  Available since 1.20.0 |
+| `ams_cluster_instances_per_application_total`   | Number of instances per application          |  Available since 1.20.0 |
+| `ams_cluster_instances_per_status_total`        | Number of instances per instance status     | Available since 1.20.0 |
+| `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node      | Available since 1.0.0 |
+| `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                 | Available since 1.0.0 |
+| `ams_cluster_available_memory_total`             | Total memory available in each worker node    | Available since 1.0.0 |
+| `ams_cluster_used_memory_total`                  | Used memory in each worker node               | Available since 1.0.0 |
 
 ### AMS API metrics
 
@@ -94,13 +99,20 @@ The following table contains all routes and their corresponding labels (ignoring
 | `DELETE`| `/1.0/applications/<id>/<version>`          | `application_version_DELETE`       |
 | `GET`   | `/1.0/applications/<id>/manifest`           | `application_manifest_GET`         |
 | `GET`   | `/1.0/applications/<id>/<version>/manifest` | `application_version_manifest_GET` |
-| `GET`   | `/1.0/containers`                           | `containers_GET`                   |
-| `POST`  | `/1.0/containers`                           | `containers_POST`                  |
-| `GET`   | `/1.0/containers/<id>`                      | `container_GET`                    |
-| `DELETE`| `/1.0/containers/<id>`                      | `container_DELETE`                 |
-| `POST`  | `/1.0/containers/<id>/exec`                 | `container_exec_POST`              |
-| `GET`   | `/1.0/containers/<id>/logs`                 | `container_logs_GET`               |
-| `GET`   | `/1.0/containers/<id>/logs/<name>`          | `container_log_GET`                |
+| `GET`   | `/1.0/containers`                           | `containers_GET` (Deprecated)      |
+| `POST`  | `/1.0/containers`                           | `containers_POST` (Deprecated)     |
+| `GET`   | `/1.0/containers/<id>`                      | `container_GET` (Deprecated)       |
+| `DELETE`| `/1.0/containers/<id>`                      | `container_DELETE` (Deprecated)    |
+| `POST`  | `/1.0/containers/<id>/exec`                 | `container_exec_POST` (Deprecated) |
+| `GET`   | `/1.0/containers/<id>/logs`                 | `container_logs_GET` (Deprecated)  |
+| `GET`   | `/1.0/containers/<id>/logs/<name>`          | `container_log_GET` (Deprecated)   |
+| `GET`   | `/1.0/instances`                            | `instances_GET`                    |
+| `POST`  | `/1.0/instances`                            | `instances_POST`                   |
+| `GET`   | `/1.0/instances/<id>`                       | `instance_GET`                     |
+| `DELETE`| `/1.0/instances/<id>`                       | `instance_DELETE`                  |
+| `POST`  | `/1.0/instances/<id>/exec`                  | `instance_exec_POST`               |
+| `GET`   | `/1.0/instances/<id>/logs`                  | `instance_logs_GET`                |
+| `GET`   | `/1.0/instances/<id>/logs/<name>`           | `instance_log_GET`                 |
 | `GET`   | `/1.0/version`                              | `version_GET`                      |
 | `GET`   | `/1.0/nodes`                                | `nodes_GET`                        |
 | `POST`  | `/1.0/nodes`                                | `nodes_POST`                       |
@@ -121,7 +133,8 @@ The following table contains all routes and their corresponding labels (ignoring
 | `POST`  | `/1.0/registry/applications/<id>/push`      | `registry_application_push_POST`   |
 | `POST`  | `/1.0/registry/applications/<id>/pull`      | `registry_application_pull_POST`   |
 | `GET`   | `/1.0/artifacts/<id>`                       | `internal_artifacts_GET`           |
-| `PATCH` | `/1.0/containers/<id>`                      | `internal_containers_PATCH`        |
+| `PATCH` | `/1.0/containers/<id>`                      | `internal_containers_PATCH` (Deprecated)|
+| `PATCH` | `/1.0/instances/<id>`                       | `internal_instances_PATCH`         |
 
 
 ## Anbox Stream Gateway
