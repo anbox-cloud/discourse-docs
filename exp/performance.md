@@ -5,9 +5,9 @@ To measure the performance based on different parameters, you should [run perfor
 The main areas for performance tuning are:
 
 - [Instance density](#instance-density)
-- [CPU access for an Anbox Cloud instance](#instance-cpu-access)
+- [CPU access for an instance](#instance-cpu-access)
 - [Hardware and network setup](#hardware-setup)
-- [Startup time for an Anbox Cloud instance](#startup-time)
+- [Startup time for an instance](#startup-time)
 - [Client devices](#client-devices)
 
 <a name="instance-density"></a>
@@ -22,7 +22,7 @@ In addition, check your applications and make sure they use the resources in a f
 Generally, applications should use the smallest suitable instance type. However, if you see an overall bad performance when running the application, using a more powerful instance type usually helps (even though it reduces the instance density). As an example, consider an application that runs on an Anbox Cloud deployment that does not have any GPUs installed. In this case, the rendering workload is put on the CPU instead of the GPU, and if the instance type of the application does not have a sufficient number of vCPU cores, the performance of the application is impacted. This can show, for example, in the virtual keyboard being really slow. By switching to a more powerful instance type, the instance density is reduced, but the performance of each application instance is increased.
 
 <a name="instance-cpu-access"></a>
-## CPU access for an Anbox Cloud instance
+## CPU access for an instance
 
 AMS has different modes to grant CPU access to an instance. The `cpu.limit_mode` configuration option can be used to change the mode. The possible modes are:
 
@@ -49,7 +49,7 @@ The overall performance depends not only on the hardware used for the actual Anb
 Also make sure that there is a stable network connection between the nodes of your cluster, to decrease the latency between nodes.
 
 <a name="startup-time"></a>
-## Startup time for an Anbox Cloud instance
+## Startup time for an instance
 
 A very noticeable performance issue is a long wait time when starting an application.
 

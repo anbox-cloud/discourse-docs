@@ -1,6 +1,6 @@
 Anbox Cloud currently supports the `swrast`, `null`, `webrtc` platforms. This guide covers the display settings configuration for these platforms.
 
-To instruct an Anbox Cloud instance to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
+To instruct an [instance](https://discourse.ubuntu.com/t/26204#instance) to use a platform, include the `--platform` (or `-p`) flag when launching the instance:
 
     amc launch -p webrtc <application>
 
@@ -23,7 +23,7 @@ If you want to change the display settings of the Android container, you need to
 
     <Display width>,<Display height>,<FPS>,<Display density>
 
-The first two fields which imply display width and display height respectively are required, however the latter two are optional. When launching an Anbox Cloud instance, mention the display settings via user data:
+The first two fields which imply display width and display height respectively are required, however the latter two are optional. When launching an instance, mention the display settings via user data:
 
     amc launch --userdata="960,720,30,120" -p swrast <application>
 

@@ -1,4 +1,4 @@
-Hooks are scripts that automatically trigger actions based on an event performed in the life cycle of an Anbox Cloud instance. A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
+Hooks are scripts that automatically trigger actions based on an event performed in the life cycle of an [instance](https://discourse.ubuntu.com/t/26204#instance). A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
 
 The hook name **must** be one of the following:
 

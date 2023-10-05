@@ -96,7 +96,7 @@ For reference, all required ports are documented [here](https://discourse.ubuntu
 
 ### 6. Add storage
 
-The Anbox Cloud instance requires sufficient storage to work correctly. For optimal performance, we recommend the following setup:
+The instance requires sufficient storage to work correctly. For optimal performance, we recommend the following setup:
 
 * A root disk with a minimum of 50 GB (required)
 * An additional EBS volume of at least 50 GB (strongly recommended)

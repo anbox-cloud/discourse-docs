@@ -18,7 +18,6 @@
 - [Anbox Cloud Appliance](#anbox-cloud-appliance)
 - [Anbox Cloud cluster](#anbox-cloud-cluster)
 - [Anbox Cloud subcluster](#anbox-cloud-subcluster)
-- [Anbox Cloud instance](#anbox-instance)
 - [Anbox Management Client](#amc)
 - [Anbox Management Service](#ams)
 - [Anbox Platform SDK](#anbox-platform-sdk)
@@ -45,6 +44,7 @@
 - [High availability](#ha)
 - [Hook](#hook)
 - [Image](#image)
+- [Instance](#instance)
 - [Instance type](#instance-type)
 - [Juju](#juju)
 - [LXD](#lxd)
@@ -150,13 +150,6 @@ A deployment of the Anbox Cloud, either just the core stack or the core stack al
 
 The group of components that is made up of LXD, AMS node controller, and the [control node](#control-node) hosting the AMS, AMC, and etcd.
 
-<a name="anbox-instance"></a>
-### Anbox Cloud instance
-
-One of the main objects of Anbox Cloud. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system. Within the context of Anbox Cloud, the term Anbox Cloud instances/images is synonymous with LXD instances/LXD images in the sense that they are LXD instances/images containing specific configuration related to Anbox Cloud.
-
-See https://discourse.ubuntu.com/t/17763.
-
 <a name="amc"></a>
 ### Anbox Management Client (AMC)
 
@@ -181,7 +174,7 @@ See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#a
 <a name="anbox-shell"></a>
 ### Anbox shell
 
-A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the Anbox Cloud instance.
+A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the instance.
 
 See [Access an instance with AMC](https://discourse.ubuntu.com/t/17772#amc).
 
@@ -310,21 +303,28 @@ See https://discourse.ubuntu.com/t/enable-high-availability/17754.
 <a name="hook"></a>
 ### Hook
 
-Code that is invoked at different points in time in the life cycle of an Anbox Cloud instance. Hooks are part of addons or applications.
+Code that is invoked at different points in time in the life cycle of an instance. Hooks are part of addons or applications.
 
 See [Hooks](https://discourse.ubuntu.com/t/hooks/28555).
 
 <a name="image"></a>
 ### Image
 
-The base for an Anbox Cloud instance, which contains all necessary components like Anbox or the Android root file system. Anbox Cloud provides images based on different Android and Ubuntu versions and different architectures.
+The base for an instance, which contains all necessary components like Anbox or the Android root file system. Anbox Cloud provides images based on different Android and Ubuntu versions and different architectures.
 
 See https://discourse.ubuntu.com/t/manage-images/17758 and https://discourse.ubuntu.com/t/provided-images/24185.
+
+<a name="instance"></a>
+### Instance
+
+An instance is a container or a virtual machine used to launch an application or an image. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
+
+See https://discourse.ubuntu.com/t/17763.
 
 <a name="instance-type"></a>
 ### Instance type
 
-An abstraction for a set of resources that is available to an Anbox Cloud instance.
+An abstraction for a set of resources that is available to an instance.
 
 See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type.
 

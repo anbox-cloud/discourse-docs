@@ -6,7 +6,7 @@ Name          | Value type | Description |
 --------------|------------|-------------------------|
 `name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space |
 `version`       | string     | Version to encode with the application. Maximum length is 50 characters. |
-`instance-type` | string     | Instance type that all instances of Anbox Cloud created for the application will use. [Jump to details](#instance-type) |
+`instance-type` | string     | Instance type that all [instances](https://discourse.ubuntu.com/t/26204#instance) created for the application will use. [Jump to details](#instance-type) |
 `required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. |
 `image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) |
 `addons` (optional) | array      | List of addons to be installed during the application bootstrap process. |
@@ -26,7 +26,7 @@ Name          | Value type | Description |
 <a name="instance-type"></a>
 ## Instance type
 
-Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of Anbox Cloud instances or particular applications.
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
 Anbox Cloud offers the following instance types:
 
@@ -111,7 +111,7 @@ Supplying `['*']` to the `allowed-packages` when the watchdog is enabled allows 
 <a name="services"></a>
 ## Services
 
-An Anbox Cloud instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
+An instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
 
 Name           | Value type | Description
 ---------------|------------|-------------------------

@@ -5,7 +5,7 @@ When an instance is either initialised with the `amc init` (see [Create an insta
 `<instance_id>` is the ID of the instance that you want to start.
 
 [note type="information" status="Important"]
-Do not use the `lxc` command to manage an instance. Always use the `amc` command instead. Anbox Cloud instances have their own life cycle and using the `lxc` command to manage an instance can cause the instance to be out of sync.
+Do not use the `lxc` command to manage an instance. Always use the `amc` command instead. In Anbox Cloud, instances have their own life cycle and using the `lxc` command to manage an instance can cause the instance to be out of sync.
 [/note]
 
 By default, the `amc start` command waits 5 minutes for an instance to run before the operation times out. When starting an instance, you can specify a custom wait time with the `--timeout` option.
