@@ -29,7 +29,7 @@ The build process creates a `platform_minimal.so` module in the `build` director
 
 ## Install the example platform
 
-[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching Anbox Cloud instances in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems.
+[AMS](https://discourse.ubuntu.com/t/about-ams/24321) allows launching instances in a special [development mode](https://discourse.ubuntu.com/t/17763#dev-mode), which is helpful when developing, for example, addons or platforms. In development mode, the Anbox runtime does not terminate the instance when it detects failures or other problems.
 
 To try out the `minimal` platform, complete the following steps:
 

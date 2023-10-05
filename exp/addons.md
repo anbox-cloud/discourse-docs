@@ -1,4 +1,4 @@
-Addons provide a way to extend and customise images in Anbox Cloud. Once you have created addons, you can create [hooks](https://discourse.ubuntu.com/t/28555) for them that are triggered based on events in the life cycle of an Anbox Cloud instance. You can create addons independently and later attach it to individual applications.
+Addons provide a way to extend and customise images in Anbox Cloud. Once you have created addons, you can create [hooks](https://discourse.ubuntu.com/t/28555) for them that are triggered based on events in the life cycle of an [instance](https://discourse.ubuntu.com/t/26204#instance). You can create addons independently and later attach it to individual applications.
 
 To create or update an addon, you need a specific file structure for the directory containing your addon files. In the directory where you created your addon files, also create the following:
 
