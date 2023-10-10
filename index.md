@@ -59,7 +59,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/update/upgrade-appliance | [Upgrade the appliance](https://discourse.ubuntu.com/t/upgrade-anbox-cloud-appliance/24186)|
 | 3 | howto/update/upgrade-anbox | [Upgrade Anbox Cloud](https://discourse.ubuntu.com/t/upgrading-from-previous-versions/17750)|
 | 2 | howto/manage/landing| [Manage Anbox Cloud](https://discourse.ubuntu.com/t/manage-anbox-cloud/24337) |
-| 3 | howto/manage/manage-appliance | [Manage the appliance](https://discourse.ubuntu.com/t/manage-the-anbox-cloud-appliance/26725) |
 | 3 | howto/manage/tls-for-appliance | [Set up TLS for appliance](https://discourse.ubuntu.com/t/set-up-tls-for-the-anbox-cloud-appliance/28552) |
 | 3 | howto/manage/images | [Manage Anbox Cloud images](https://discourse.ubuntu.com/t/managing-images/17758)|
 | 3 | howto/manage/ams-access | [Control AMS remotely](https://discourse.ubuntu.com/t/managing-ams-access/17774)|
@@ -139,6 +138,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) |
 | 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
+| 2 | ref/appliance-command-reference/landing | [Appliance command reference](tbd)|
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | ref/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
@@ -233,6 +233,16 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 |   | release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
 |   | release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
 |   | release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
+|   | ref/command-reference/ams | [Command reference - ams](tbd)|
+|   | ref/command-reference/cluster | [Command reference - cluster](tbd)|
+|   | ref/command-reference/dashboard | [Command reference - dashboard](tbd)|
+|   | ref/command-reference/destroy | [Command reference - destroy](tbd)|
+|   | ref/command-reference/gateway | [Command reference - gateway](tbd)|
+|   | ref/command-reference/help | [Command reference - help](tbd)|
+|   | ref/command-reference/init | [Command reference - init](tbd)|
+|   | ref/command-reference/monitor | [Command reference - monitor](tbd)|
+|   | ref/command-reference/status | [Command reference - status](tbd)|
+|   | ref/command-reference/upgrade | [Command reference - upgrade](tbd)|
 [/details]
 
 ## Redirects
@@ -313,4 +323,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/ref/supported-video-codecs | /docs/ref/supported-codecs |
 | /docs/howto/addons/best-practices | /docs/exp/addons |
 | /docs/ref/addons | /docs/ref/addon-manifest |
+| /docs/howto/manage/manage-appliance | /docs/ref/appliance-command-reference/landing |
 [/details]
