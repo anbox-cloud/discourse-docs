@@ -13,14 +13,14 @@ Adds a new member to the cluster
 
 #### Usage
 
-    anbox-cloud-appliance cluster add <member name>
+    anbox-cloud-appliance cluster add <member-name>
 
 ### `remove`
 Removes a member from the cluster
 
 #### Usage
 
-    `anbox-cloud-appliance cluster remove <member name> <options>`
+    `anbox-cloud-appliance cluster remove <member-name> <options>`
 
 #### Options
 

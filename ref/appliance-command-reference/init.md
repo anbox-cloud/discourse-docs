@@ -16,5 +16,5 @@ See [Initialise the appliance](https://discourse.ubuntu.com/t/22681#initialise) 
 |`--image-server-auth <credentials>`|To specify authentication credentials for the Anbox Cloud image server|
 |`--image-server-url <url>`| To specify the URL of the Anbox Cloud image server|
 |`--preseed`| To enable pre-seed mode, expects YAML config from stdin|
-|`--proxy <server-address`| To specify the HTTP/HTTPS proxy server to use during installation|
+|`--proxy <server-address>`| To specify the HTTP/HTTPS proxy server to use during installation|
 |`--use-existing-gpu-driver`|To indicate that a GPU driver is already installed and ready for use|
