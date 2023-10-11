@@ -50,7 +50,7 @@ Replace `<IP_address>` with the IP address of the machine on which you deployed 
 
 You must enter your user name and password to log in. The user name is `admin`. You can determine the password by running the following command:
 
-    juju run-action --wait grafana/0 get-admin-password
+    juju run --wait grafana/0 get-admin-password
 
 If you have deployed more than one Grafana unit, you might need to replace the `0` in `grafana/0` with the suitable unit ID. Check `juju status` if you are in doubt.
 
