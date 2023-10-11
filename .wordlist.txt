@@ -83,6 +83,7 @@ DRM
 easyrsa
 Easy-RSA
 EBS
+EFI
 EGL
 EINVAL
 EmuGL
@@ -283,6 +284,8 @@ VMs
 VNC
 VPC
 VPN
+VPU
+VPUs
 vsync
 Vulkan
 vsync
