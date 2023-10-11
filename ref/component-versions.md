@@ -9,30 +9,30 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.19/stable` | 180 |
-| `ams-node-controller` | `1.19/stable` | 189 |
-| `coturn` | `1.19/stable` | 182 |
-| `ams` | `1.19/stable` | 193 |
-| `aar` | `1.19/stable` | 187 |
-| `anbox-stream-gateway` | `1.19/stable` | 198 |
-| `ams-load-balancer` | `1.19/stable` | 188 |
-| `ams-lxd` | `1.19/stable` | 185 |
-| `anbox-stream-agent` | `1.19/stable` | 193 |
+| `anbox-cloud-dashboard` | `1.19/stable` | 208 |
+| `ams-node-controller` | `1.19/stable` | 217 |
+| `coturn` | `1.19/stable` | 210 |
+| `ams` | `1.19/stable` | 221 |
+| `aar` | `1.19/stable` | 215 |
+| `anbox-stream-gateway` | `1.19/stable` | 226 |
+| `ams-load-balancer` | `1.19/stable` | 216 |
+| `ams-lxd` | `1.19/stable` | 213 |
+| `anbox-stream-agent` | `1.19/stable` | 221 |
 | `nats ` | `latest/stable` | 11 |
 
 #### Ubuntu 20.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.19/stable` | 179 |
-| `ams-node-controller` | `1.19/stable` | 188 |
-| `coturn` | `1.19/stable` | 181 |
-| `ams` | `1.19/stable` | 192 |
-| `aar` | `1.19/stable` | 186 |
-| `anbox-stream-gateway` | `1.19/stable` | 197 |
-| `ams-load-balancer` | `1.19/stable` | 187 |
-| `ams-lxd` | `1.19/stable` | 184 |
-| `anbox-stream-agent` | `1.19/stable` | 192 |
+| `anbox-cloud-dashboard` | `1.19/stable` | 207 |
+| `ams-node-controller` | `1.19/stable` | 216 |
+| `coturn` | `1.19/stable` | 209 |
+| `ams` | `1.19/stable` | 220 |
+| `aar` | `1.19/stable` | 214 |
+| `anbox-stream-gateway` | `1.19/stable` | 225 |
+| `ams-load-balancer` | `1.19/stable` | 215 |
+| `ams-lxd` | `1.19/stable` | 212 |
+| `anbox-stream-agent` | `1.19/stable` | 220 |
 | `nats ` | `latest/stable` | 11 |
 
 ### Validated revisions of 3rd party charms
@@ -43,8 +43,8 @@ n/a
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.19/stable` | 115 |
-| `anbox-cloud-core` | `1.19/stable` | 120 |
+| `anbox-cloud` | `1.19/stable` | 129 |
+| `anbox-cloud-core` | `1.19/stable` | 134 |
 
 ### Snaps
 
