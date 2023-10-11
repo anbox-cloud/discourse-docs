@@ -13,7 +13,7 @@ See [Initialise the appliance](https://discourse.ubuntu.com/t/22681#initialise) 
 |`--auto`|To enable automatic (non-interactive) mode. Use this option if you want to accept the default options for the appliance.|
 |`--charm-channel <channel>`|To specify the store channel from which Anbox Cloud charms are to be deployed|
 |`--force-network-bridge`|To force using a local network bridge instead of a FAN overlay network|
-|`--image-server-auth <credentials>`|To specify authentication credentials for the Anbox Cloud image server|
+|`--image-server-auth <username:password>`|To specify authentication credentials for the Anbox Cloud image server|
 |`--image-server-url <url>`| To specify the URL of the Anbox Cloud image server|
 |`--preseed`| To enable pre-seed mode, expects YAML config from stdin|
 |`--proxy <server-address>`| To specify the HTTP/HTTPS proxy server to use during installation|
