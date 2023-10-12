@@ -16,8 +16,8 @@ You can access the AMS metrics from any machine that is on the same network as y
 
 Replace `<AMS_server>` with the IP address of your AMS server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --unit ams/0 -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit ams/0 -- unit-get private-address`
+* For a full Anbox Cloud deployment: `juju run --wait=5m --unit ams/0 -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit ams/0 -- unit-get private-address`
 
 Replace `<AMS_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
 
@@ -151,8 +151,8 @@ You can access the Anbox Stream Gateway metrics from any machine that is on the 
 
 Replace `<gateway_server>` with the IP address of your Anbox Stream Gateway server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit anbox-stream-gateway/0 -- unit-get private-address`
+* For a full Anbox Cloud deployment: `juju run --unit anbox-stream-gateway/0 --wait=5m -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit anbox-stream-gateway/0 -- unit-get private-address`
 
 Replace `<gateway_port>` with the port for the API endpoint, which you can determine by running one of the following commands:
 
@@ -242,8 +242,8 @@ You can access the LXD metrics through the following endpoint:
 
 Replace `<LXD_server>` with the IP address of your LXD server, which you can determine by running one of the following commands:
 
-* For a full Anbox Cloud deployment: `juju run --unit lxd/0 -- unit-get private-address`
-* For the Anbox Cloud Appliance: `juju run -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
+* For a full Anbox Cloud deployment: `juju run --wait=5m --unit lxd/0 -- unit-get private-address`
+* For the Anbox Cloud Appliance: `juju run --wait=5m -m appliance:anbox-cloud --unit lxd/0 -- unit-get private-address`
 
 The LXD metrics endpoint is on HTTPS, and therefore you must authenticate to access it. See [Create metrics certificate](https://documentation.ubuntu.com/lxd/en/latest/metrics/#add-a-metrics-certificate-to-lxd) in the LXD documentation for instructions on how to create a certificate.
 
