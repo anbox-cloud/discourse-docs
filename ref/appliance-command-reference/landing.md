@@ -12,7 +12,7 @@ The following commands are available for the `anbox-cloud-appliance` tool:
 |[`destroy`](tbd) | Destroy the appliance|
 |[`gateway`](tbd) | Manage the appliance stream gateway|
 |[`help`](tbd) | Help about the `anbox-cloud-appliance` tool|
-|[`init](tbd)| Initialise the appliance|
+|[`init`](tbd)| Initialise the appliance|
 |[`monitor`](tbd)| Manage the monitoring dashboard of the appliance|
 |[`status`](tbd) | Display the current status and version of the appliance|
 |[`upgrade`](tbd) | Upgrade the appliance to a newer version|
