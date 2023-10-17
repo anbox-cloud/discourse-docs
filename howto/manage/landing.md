@@ -8,4 +8,4 @@ The guides in this section help you to manage and work with your Anbox Cloud or 
 
 ## Related information
 
-* [Appliance command reference](tbd)
+* [Appliance command reference](https://discourse.ubuntu.com/t/39525)

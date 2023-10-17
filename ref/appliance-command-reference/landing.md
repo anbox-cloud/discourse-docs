@@ -6,15 +6,15 @@ The following commands are available for the `anbox-cloud-appliance` tool:
 
 | Command | Description|
 |---------|------------|
-|[`ams`](tbd)    | Manage access to the Anbox Management Service (AMS)|
-|[`cluster`](tbd)| Manage cluster nodes|
-|[`dashboard`](tbd)| Manage the web dashboard of appliance|
-|[`destroy`](tbd) | Destroy the appliance|
-|[`gateway`](tbd) | Manage the appliance stream gateway|
-|[`help`](tbd) | Help about the `anbox-cloud-appliance` tool|
-|[`init`](tbd)| Initialise the appliance|
-|[`monitor`](tbd)| Manage the monitoring dashboard of the appliance|
-|[`status`](tbd) | Display the current status and version of the appliance|
-|[`upgrade`](tbd) | Upgrade the appliance to a newer version|
+|[`ams`](https://discourse.ubuntu.com/t/39517)    | Manage access to the Anbox Management Service (AMS)|
+|[`cluster`](https://discourse.ubuntu.com/t/39519)| Manage cluster nodes|
+|[`dashboard`](https://discourse.ubuntu.com/t/39520)| Manage the web dashboard of appliance|
+|[`destroy`](https://discourse.ubuntu.com/t/39521) | Destroy the appliance|
+|[`gateway`](https://discourse.ubuntu.com/t/39522) | Manage the appliance stream gateway|
+|[`help`](https://discourse.ubuntu.com/t/39523) | Help about the `anbox-cloud-appliance` tool|
+|[`init`](https://discourse.ubuntu.com/t/39524)| Initialise the appliance|
+|[`monitor`](https://discourse.ubuntu.com/t/39526)| Manage the monitoring dashboard of the appliance|
+|[`status`](https://discourse.ubuntu.com/t/39527) | Display the current status and version of the appliance|
+|[`upgrade`](https://discourse.ubuntu.com/t/39528) | Upgrade the appliance to a newer version|
 
 If you encounter an issue and want to collect debugging information from the appliance, use `anbox-cloud-appliance.buginfo`.

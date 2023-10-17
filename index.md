@@ -138,7 +138,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/supported-versions | [Supported versions](https://discourse.ubuntu.com/t/supported-versions/21046) |
 | 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
-| 2 | ref/appliance-command-reference/landing | [Appliance command reference](tbd)|
+| 2 | ref/appliance-command-reference/landing | [Appliance command reference](https://discourse.ubuntu.com/t/39525)|
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | ref/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
@@ -234,16 +234,16 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 |   | release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
 |   | release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
 |   | release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
-|   | ref/command-reference/ams | [Command reference - ams](tbd)|
-|   | ref/command-reference/cluster | [Command reference - cluster](tbd)|
-|   | ref/command-reference/dashboard | [Command reference - dashboard](tbd)|
-|   | ref/command-reference/destroy | [Command reference - destroy](tbd)|
-|   | ref/command-reference/gateway | [Command reference - gateway](tbd)|
-|   | ref/command-reference/help | [Command reference - help](tbd)|
-|   | ref/command-reference/init | [Command reference - init](tbd)|
-|   | ref/command-reference/monitor | [Command reference - monitor](tbd)|
-|   | ref/command-reference/status | [Command reference - status](tbd)|
-|   | ref/command-reference/upgrade | [Command reference - upgrade](tbd)|
+|   | ref/command-reference/ams | [Command reference - ams](https://discourse.ubuntu.com/t/39517)|
+|   | ref/command-reference/cluster | [Command reference - cluster](https://discourse.ubuntu.com/t/39519)|
+|   | ref/command-reference/dashboard | [Command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
+|   | ref/command-reference/destroy | [Command reference - destroy](https://discourse.ubuntu.com/t/39521)|
+|   | ref/command-reference/gateway | [Command reference - gateway](https://discourse.ubuntu.com/t/39522)|
+|   | ref/command-reference/help | [Command reference - help](https://discourse.ubuntu.com/t/39523)|
+|   | ref/command-reference/init | [Command reference - init](https://discourse.ubuntu.com/t/39524)|
+|   | ref/command-reference/monitor | [Command reference - monitor](https://discourse.ubuntu.com/t/39526)|
+|   | ref/command-reference/status | [Command reference - status](https://discourse.ubuntu.com/t/39527)|
+|   | ref/command-reference/upgrade | [Command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
 [/details]
 
 ## Redirects
