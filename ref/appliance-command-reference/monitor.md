@@ -9,14 +9,13 @@ Manages accounts that can access the monitoring dashboard.
 
     anbox-cloud-appliance monitor account <subcommand>
 
-#### Subcommands
+The `account` command can be used with two subcommands - `create` and `delete`:
 
-##### `create`
-Creates a new account to access the monitoring dashboard. The monitoring dashboard is configured with basic authentication and hence you need to create an account to access it.
+The monitoring dashboard is configured with basic authentication and hence you need to create an account to access it. The `account create` command creates a new account to access the monitoring dashboard.
 
     anbox-cloud-appliance monitor account create <account-name> [--password=<value>] [--email=<email>] [--role=viewer|admin|editor] [options]
 
-###### Options
+The following options can be used with the `account create` command:
 
 |Option | Description |
 |-------|-------------|
@@ -24,8 +23,7 @@ Creates a new account to access the monitoring dashboard. The monitoring dashboa
 | `-p`, `--password <value>`|Password of the monitor account|
 | `-r`, `--role <value>`|Role of the monitor account can be either of these three options: viewer/admin/editor. The default role is viewer.|
 
-##### `delete`
-Deletes the specified account and removes access to the monitoring dashboard for the mentioned account.
+The `account delete` command deletes the specified account and removes access to the monitoring dashboard for the mentioned account.
 
     anbox-cloud-appliance monitor account delete <account-name>
 
