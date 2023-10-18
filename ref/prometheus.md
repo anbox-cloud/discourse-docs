@@ -42,12 +42,14 @@ Metrics prefixed with `ams_cluster_` keep you informed about the status of your 
 | `ams_cluster_container_boot_time_seconds_bucket` | Container boot times bucket and can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information |  Deprecated since 1.20.0, use `ams_cluster_instance_boot_time_seconds_bucket` instead. |
 | `ams_cluster_containers_per_application_total`   | Number of containers per application  | Deprecated since 1.20.0, use `ams_cluster_instances_per_application_total` instead. |
 | `ams_cluster_containers_per_status_total`        | Number of containers per container status |  Deprecated since 1.20.0, use `ams_cluster_instances_per_status_total` instead. |
+| `ams_cluster_containers_per_node_total`          | Number of containers per worker node |  Deprecated since 1.20.0, use `ams_cluster_instances_per_node_total` instead. |
 | `ams_cluster_instances_total`                   | Number of instances currently in the cluster | Available since 1.20.0 |
 | `ams_cluster_instance_boot_time_seconds_count`  | Number of instance boot time measured        | Available since 1.20.0 |
 | `ams_cluster_instance_boot_time_seconds_sum`    | Sum of all instance boot times (can be used to compute the average boot time) |  Available since 1.20.0 |
 | `ams_cluster_instance_boot_time_seconds_bucket` | Instance boot times bucket (can be used for alerting when above a threshold; see the [Prometheus documentation](https://prometheus.io/docs/practices/histograms/) for more information) |  Available since 1.20.0 |
 | `ams_cluster_instances_per_application_total`   | Number of instances per application          |  Available since 1.20.0 |
 | `ams_cluster_instances_per_status_total`        | Number of instances per instance status     | Available since 1.20.0 |
+| `ams_cluster_instances_per_node_total`          | Number of instances per worker node         |  Available since 1.20.0 |
 | `ams_cluster_available_cpu_total`                | Total CPUs available in each worker node      | Available since 1.0.0 |
 | `ams_cluster_used_cpu_total`                     | Used CPUs in each worker node                 | Available since 1.0.0 |
 | `ams_cluster_available_memory_total`             | Total memory available in each worker node    | Available since 1.0.0 |
