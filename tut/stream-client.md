@@ -140,7 +140,13 @@ http:
       rule: "PathPrefix(`/demo/`)"
       service: stream-ui-demo
       priority: 110
-      tls: {}deployed
+      tls: {}
+      middlewares: ["ratelimiter", "strip-demo-prefix", "demo-auth"]
+  middlewares:
+    strip-demo-prefix:
+      stripPrefix:
+        prefixes:
+          - "/demo"
         forceSlash: false
     demo-auth:
       basicAuth:
