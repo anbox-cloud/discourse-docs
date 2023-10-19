@@ -43,8 +43,7 @@ Create a `demo.html` file inside `/srv/stream-client`:
     import {AnboxStream, AnboxStreamGatewayConnector} from './anbox-stream-sdk.js';
 
     const connector = new AnboxStreamGatewayConnector({
-        // Run `juju status` to get the stream gateway IP/domain name
-        // Replace 'https://gateway.url.net' with the stream gateway IP/domain name
+        // Replace 'https://gateway.url.net' with the host IP address or domain name
         url: 'https://gateway.url.net',
         // Use the access token created earlier as 'YOUR_AUTH_TOKEN'
         authToken: 'YOUR_AUTH_TOKEN',
