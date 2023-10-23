@@ -328,6 +328,8 @@ An abstraction for a set of resources that is available to an instance.
 
 See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type.
 
+[note type="information" status="Note"] The `instance-type` attribute in the application manifest will be deprecated effective version 1.20 and will be removed in future releases. After the `instance-type` attribute becomes unsupported, this term will be replaced with the term *Resource preset*.[/note]
+
 <a name="juju"></a>
 ### Juju
 
