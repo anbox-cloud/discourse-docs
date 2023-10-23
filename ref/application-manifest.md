@@ -2,29 +2,30 @@ An application manifest defines the various attributes of an application.
 
 The available attributes are listed in the following table:
 
-Name          | Value type | Description |
---------------|------------|-------------------------|
-`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space |
-`version`       | string     | Version to encode with the application. Maximum length is 50 characters. |
-`instance-type` | string     | Instance type that all [instances](https://discourse.ubuntu.com/t/26204#instance) created for the application will use. [Jump to details](#instance-type) |
-`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. |
-`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) |
-`addons` (optional) | array      | List of addons to be installed during the application bootstrap process. |
-`tags` (optional) | array      | List of tags to be associated with the application. |
-`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). |
-`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). |
-`video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder) |
-`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog)|
-`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services) |
-`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources) |
-`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data) |
-`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks) |
-`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap)|
-`features` (optional) | array | List of feature flags to be defined for instances created from the application. |
-`node-selector` (optional) | array | List of selectors which will limit what node an instance for the application can be scheduled on. [Jump to details](#node-selector) |
+Name          | Value type | Description | Status |
+--------------|------------|-------------------------|----|
+`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space | Supported |
+`version`       | string     | Version to encode with the application. Maximum length is 50 characters. | Supported |
+`instance-type` | string     | Instance type that all [instances](https://discourse.ubuntu.com/t/26204#instance) created for the application will use. [Jump to details](#instance-type) | Deprecated since 1.20 |
+`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. | Supported |
+`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) | Supported |
+`addons` (optional) | array      | List of addons to be installed during the application bootstrap process. | Supported |
+`tags` (optional) | array      | List of tags to be associated with the application. | Supported |
+`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). | Supported |
+`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). | Supported |
+`video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder) | Supported |
+`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog)| Supported |
+`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services) | Supported |
+`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources) | Supported |
+`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data) | Supported |
+`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks) | Supported |
+`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap)| Supported |
+`features` (optional) | array | List of feature flags to be defined for instances created from the application. | Supported |
+`node-selector` (optional) | array | List of selectors which will limit what node an instance for the application can be scheduled on. [Jump to details](#node-selector) | Supported |
 
 <a name="instance-type"></a>
 ## Instance type
+[note type="information" Status="Note"] The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so. [/note]
 
 Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
