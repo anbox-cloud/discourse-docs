@@ -48,7 +48,7 @@ To create an application for a specific Android app, follow the steps in [1. Cre
 
 [note type="information" status="Important"]Not all Android apps are compatible with Anbox Cloud. See [How to port Android apps](https://discourse.ubuntu.com/t/port-android-apps/17776) for more information.[/note]
 
-Choose an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the instance will use a GPU if available or software encoding otherwise.
+Choose a [resource preset](https://discourse.ubuntu.com/t/application-manifest/24197#resources) suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
 
 You can launch and test the application in the same way as you did for the virtual device.
 
