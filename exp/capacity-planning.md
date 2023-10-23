@@ -17,18 +17,16 @@ When estimating capacity, consider the following questions to better understand 
 <a name="application-resources"></a>
 ## Application resources
 
-Depending on the resources that your application requires, choose a suitable [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type).
-
-The instance type specifies the resources that are available to the application:
+A default resource preset will be set for every application. A resource preset specifies the resources that are available to the application:
 
 - The number of vCPU cores
 - The amount of RAM
 - The amount of disk space
 - The number of GPU slots
 
-If none of the provided instance types fits for your application, you can also manually [configure the resources](https://discourse.ubuntu.com/t/how-to-configure-available-resources/24960) according to your requirements.
+Depending on the resources that your application requires, if the default resource preset does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) that fit your application.
 
-When an instance for an application is launched, it takes the specified amount of resources. For example, if an application uses the `a4.3` instance type, it requires 4 vCPU cores, 3 GB of memory, 3 GB of disk space and no GPU slot. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
+When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
     No suitable node to satisfy instance requirement available
 
@@ -64,7 +62,7 @@ If the unused resources on a cluster node don't suffice to launch an instance fo
 
 Usually, an instance doesn't use its dedicated vCPU cores and memory at 100% all the time. Therefore, AMS allows over-committing available resources. By default, AMS uses a CPU allocation rate of `4` and a memory allocation rate of `2`, which means that it allows four times the number of vCPU cores and twice the amount of RAM per node. See [Configure allocation rates](https://discourse.ubuntu.com/t/configure-cluster-nodes/28716#configure-allocation-rates) for instructions on how to define the allocation rates for a node.
 
-For example, consider an application that uses the `a2.3` instance type, which requires 2 vCPU cores and 3 GB of memory, and you have a node with 8 CPU cores and 16 GB of memory. Without over-commitment, you could only launch four instances before you run out of resources on the node. However, with a CPU allocation rate of `4` and a memory allocation rate of `2` (the default), the available resources on the node change to `4 * 8 physical CPU cores = 32 vCPU cores` and `2 * 16 GB memory = 32 GB memory`, which will allow up to ten instances on the node.
+For example, consider an application that has a resource preset of 2 vCPU cores and 3 GB of memory, and you have a node with 8 CPU cores and 16 GB of memory. Without over-commitment, you could only launch four instances before you run out of resources on the node. However, with a CPU allocation rate of `4` and a memory allocation rate of `2` (the default), the available resources on the node change to `4 * 8 physical CPU cores = 32 vCPU cores` and `2 * 16 GB memory = 32 GB memory`, which will allow up to ten instances on the node.
 
 The CPU allocation rate depends on the type of application and the amount of resources it requires. For applications that are not CPU-intensive, a higher allocation rate makes sense while for applications that are very CPU-intensive, a lower allocation rate is suitable.
 
@@ -79,7 +77,7 @@ Another aspect is, of course, the number of users expected and hence, the number
 
 ## An example calculation
 
-Let's consider an application that uses the `g4.3` instance type with 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The application is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 instances running at the same time, with peaks up to 200.
+Let's consider an application that has a resource preset of 4 vCPU cores, 3 GB of RAM, 3 GB of disk space and 1 GPU slot. The application is quite CPU-intensive, which means you should not over-commit resources by a large margin. You expect an average of 100 instances running at the same time, with peaks up to 200.
 
 We now want to determine the capacity that is needed for the overall deployment. This capacity can be either for a single machine (which is rather unlikely for the given requirements) or for a cluster with multiple nodes.
 
@@ -108,5 +106,5 @@ To avoid your cluster running out of resources even at peak loads, you must size
 
 - Use a higher CPU and/or memory allocation rate, which might decrease performance at peak loads.
 - Configure your cluster nodes to use more GPU slots per GPU, which might decrease video quality.
-- Tweak the instance type or the resource specification for your application to give less resources to each instance. The impact of doing this depends very much on your application.
+- Tweak the resource preset for your application to give less resources to each instance. The impact of doing this depends very much on your application.
 - Base your estimate on a lower maximum number of instances (for example, 150 instances), which will lead to your cluster running out of resources before the peak load is reached.
