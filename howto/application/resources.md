@@ -1,26 +1,27 @@
-Anbox Cloud provides a set of instance types that define the resources available to an instance. Often your application may require resources that do not correspond to any of the provided instance types. In such cases, you can override some or all of the resource requirements in your application manifest.
+Resource presets denote the resources available to an instance. Anbox Cloud uses some default resource presets if there are no custom resource requirements specified.
 
-Define the required `cpus`, `memory`, `disk size` values for the `resources` attribute in the application manifest. 
-
-For example, the following application manifest results in allotting 6 vCPU cores and 8 GB disk size instead of the standard 4 vCPU cores and 3 GB disk size for an `a4.3` instance type.
+For a container instance, the default resource preset is:
 
 ```yaml
 name: my-application
-instance-type: a4.3
 resources:
-  cpus: 6
-  disk-size: 8GB
+  cpus: 2
+  memory: 3GB
+  disk-size: 15GB
 ```
-If you require a custom number of GPU slots to be assigned to the application, change the `gpu-slots` value for the `resources` attribute in the application manifest.
-
-If you are using the instance type `g6.3` but require 3 GPU slots, use the following application manifest:
+For a virtual machine instance, the default resource preset is:
 
 ```yaml
-name: my-GPU-applicaton
-instance-type: g6.3
+name: my-application
 resources:
-  gpu-slots: 3
+  cpus: 2
+  memory: 3GB
+  disk-size: 3GB
 ```
+
+If your application requires different resources than the default, specify the required resources in the application manifest to override some or all of default resource preset options.
+
+In addition to the `cpus`, `memory` and the `disk-size` requirements, if your application requires a custom number of GPU slots, change the `gpu-slots` value for the `resources` attribute in the application manifest.
+
 ## Related information
 * [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197)
-* [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type)
