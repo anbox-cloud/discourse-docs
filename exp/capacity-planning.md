@@ -24,7 +24,7 @@ A default resource preset will be set for every application. A resource preset s
 - The amount of disk space
 - The number of GPU slots
 
-Depending on the resources that your application requires, if the default resource preset does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) that fit your application.
+Depending on the resources that your application requires, if the [default resource preset](https://discourse.ubuntu.com/t/24960) does not suit, you can choose suitable [resources](https://discourse.ubuntu.com/t/application-manifest/24197#resources) that fit your application.
 
 When an instance for an application is launched, it takes the specified amount of resources. AMS internally summarises the amount of resources used by instances on a single machine and disallows launching additional instances when all resources are used (see [Over-committing resources](#overcommitting) for how to allow a higher resource usage). In such cases, you will see the following error message when trying to launch a new instance:
 
