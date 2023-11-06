@@ -69,7 +69,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 3 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 3 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
-| 3 | howto/application/resources | [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)|
 | 3 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
 | 3 | howto/application/userdata | [Pass custom data](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)|
 | 3 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
@@ -167,6 +166,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 3 | exp/resources | [Resources and resource presets](https://discourse.ubuntu.com/t/24960)|
 | 2 | exp/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
 | 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
 | 2 | exp/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
@@ -328,4 +328,5 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/container/start | /docs/howto/instance/start |
 | /docs/howto/container/stop | /docs/howto/instance/stop |
 | /docs/howto/container/wait | /docs/howto/instance/wait |
+| /docs/howto/application/resources | /docs/exp/resources |
 [/details]
