@@ -66,6 +66,7 @@ Complete the following steps to create a virtual device:
    name: virtual-device-cli
    resources:
      cpus: 4
+     memory: 4GB
      disk-size: 3GB
    ```
 
@@ -179,7 +180,9 @@ Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
 
-2. Create a `manifest.yaml` file in that folder. The manifest contains the name and if you want to define a resource preset, the resources for the application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
+2. Create a `manifest.yaml` file in that folder. This manifest contains the application name and if necessary, define resources for the application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
+
+If no specific resources are mentioned, the [default resource preset](https://discourse.ubuntu.com/t/24960) is used.
 
    For example, the file could look like this:
 
@@ -187,6 +190,7 @@ Complete the following steps to create an application from an APK:
    name: my-application
    resources:
      cpus: 6
+     memory: 4GB
      disk-size: 8GB
    ```
 
