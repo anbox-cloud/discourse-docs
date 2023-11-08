@@ -13,7 +13,6 @@ The following commands are available for the `anbox-cloud-appliance` tool:
 |[`gateway`](https://discourse.ubuntu.com/t/39522) | Manage the appliance stream gateway|
 |[`help`](https://discourse.ubuntu.com/t/39523) | Help about the `anbox-cloud-appliance` tool|
 |[`init`](https://discourse.ubuntu.com/t/39524)| Initialise the appliance|
-|[`monitor`](https://discourse.ubuntu.com/t/39526)| Manage the monitoring dashboard of the appliance|
 |[`status`](https://discourse.ubuntu.com/t/39527) | Display the current status and version of the appliance|
 |[`upgrade`](https://discourse.ubuntu.com/t/39528) | Upgrade the appliance to a newer version|
 

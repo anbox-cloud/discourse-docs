@@ -241,7 +241,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 |   | ref/command-reference/gateway | [Command reference - gateway](https://discourse.ubuntu.com/t/39522)|
 |   | ref/command-reference/help | [Command reference - help](https://discourse.ubuntu.com/t/39523)|
 |   | ref/command-reference/init | [Command reference - init](https://discourse.ubuntu.com/t/39524)|
-|   | ref/command-reference/monitor | [Command reference - monitor](https://discourse.ubuntu.com/t/39526)|
 |   | ref/command-reference/status | [Command reference - status](https://discourse.ubuntu.com/t/39527)|
 |   | ref/command-reference/upgrade | [Command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
 [/details]
