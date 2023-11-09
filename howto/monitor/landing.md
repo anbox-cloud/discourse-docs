@@ -4,4 +4,4 @@ See [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521
 
 The implementation of a monitoring or observability solution depends on your specific use case and the tools that you want to use. See [Open source observability for enterprises](https://ubuntu.com/observability) for an overview of observability tools and stacks that are recommended and supported by Canonical. In particular, see the [Canonical Observability Stack (LMA2)](https://juju.is/docs/lma2).
 
-There are plans in the Anbox Cloud roadmap to provide better monitoring abilities by using the Canonical Observability Stack.
+There are plans in the Anbox Cloud roadmap to provide better monitoring abilities by using the [Canonical Observability Stack](https://charmhub.io/topics/canonical-observability-stack).
