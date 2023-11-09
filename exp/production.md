@@ -63,13 +63,7 @@ Load balancing solutions can differ based on your deployment model. You should a
 
 Although Anbox Cloud does not offer its own observability solution, Anbox Cloud gathers various performance metrics that you can access through API endpoints to create a monitoring solution.
 
-You can decide if you want to use Canonical's monitoring system or a customised version. See [How to monitor Anbox Cloud?](https://discourse.ubuntu.com/t/how-to-monitor-anbox-cloud/24338) and [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521) for a detailed understanding of monitoring and metrics to assess your monitoring needs for the production deployment.
-
-To help you in your assessment, you can refer to the following example implementations:
-* [Example: Collect metrics](https://discourse.ubuntu.com/t/example-collect-metrics/17787)
-* [Example: Monitor status](https://discourse.ubuntu.com/t/example-monitor-status/17788).
-
-Also, see [Performance](https://discourse.ubuntu.com/t/29416) to learn about the factors that could influence the performance of your deployment.
+You can decide if you want to use Canonical's monitoring system or a customised version. Also, see [Performance](https://discourse.ubuntu.com/t/29416) to learn about the factors that could influence the performance of your deployment.
 
 ## Licensing and Support
 
