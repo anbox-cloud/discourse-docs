@@ -47,13 +47,11 @@ anbox-stream-gateway:
   expose: true
   num_units: 1
   options:
-    prometheus_port: 10001
-    # We use self-signed TLS certificates by default. If proper signed certificates are used, this can be dropped.
-    use_insecure_tls: true
+    max_http_requests_per_second: 150
   to: ['0']
 ```
 
-The entries under `options` in this example assign a specific port for Prometheus and allow using self-signed TLS certificates. There are, however, a number of additional configuration options available (see the [charm documentation](https://charmhub.io/anbox-charmers-anbox-stream-gateway)). To add further configurations, specify the desired settings under `options`.
+The `max_http_requests_per_second` under `options` in this example allow setting the maximum number of HTTP requests that the stream gateway can handle to a custom number. There are a number of additional configuration options available (see the [charm documentation](https://charmhub.io/anbox-charmers-anbox-stream-gateway/configure)). To add further configurations, specify the desired settings under `options`.
 
 For example, the following YAML fragment sets some proxy values:
 
