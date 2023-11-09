@@ -126,9 +126,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 3 | howto/monitor/telegraf | [Configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365)
-| 3 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
-| 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 2 | ref/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
@@ -154,7 +151,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | ref/addon-manifest | [Addon manifest](https://discourse.ubuntu.com/t/addons/25293)|
 | 2 | ref/hooks | [Hooks](https://discourse.ubuntu.com/t/hooks/28555)|
 | 2 | ref/webrtc-streamer | [WebRTC streamer](https://discourse.ubuntu.com/t/webrtc-streamer/30195)|
-| 2 | ref/prometheus | [Prometheus metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521)|
 | 2 | ref/perf-benchmarks | [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709)|
 | 2 | ref/license-information | [License information](https://discourse.ubuntu.com/t/license-information/36649) |
 | 2 | ref/glossary | [Glossary](https://discourse.ubuntu.com/t/glossary/26204)|
@@ -269,6 +265,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/installation/installation-application-registry | /docs/howto/aar/deploy |
 | /docs/usage/usecase-application-testing | /docs/howto/application/test |
 | /docs/usage/usecase-virtual-devices | /docs/howto/application/virtual-devices |
+<<<<<<< HEAD
 | /docs/manage/container-access | /docs/howto/instance/access |
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
@@ -277,6 +274,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/monitor/install | /docs/howto/monitor/landing |
 | /docs/monitoring/monitoring-grafana | /docs/howto/monitor/grafana |
 | /docs/monitoring/monitoring-nagios | /docs/howto/monitor/nagios |
+=======
+| /docs/manage/container-access | /docs/howto/container/access |
+| /docs/howto/container/view-log | /docs/howto/container/logs |
+| /docs/usage/usecase-container-configuration | /docs/howto/container/geographic-location |
+| /docs/howto/containers/backup-and-restore | /docs/howto/container/backup-and-restore |
+>>>>>>> 007f110 (Remove deleted topics from navigation)
 | /docs/implement-android-native-streaming-client | /docs/howto/stream/native-client |
 | /docs/implement-web-based-streaming-client | /docs/howto/stream/web-client |
 | /docs/howto/stream/web-client | /docs/tut/stream-client |
@@ -290,7 +293,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/reference/anbox-stream-gateway-reference | /docs/ref/anbox-stream-gateway |
 | /docs/manage/instance-types-reference | /docs/ref/instance-types |
 | /docs/reference/anbox-platforms | /docs/ref/platforms |
-| /docs/reference/prometheus-metrics | /docs/ref/prometheus |
 | /docs/ams-configuration | /docs/ref/ams-configuration |
 | /docs/overview | /docs/exp/anbox-cloud |
 | /docs/manage/managing-applications | /docs/exp/applications |
@@ -307,8 +309,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/exp/porting-issues | /docs/howto/port/landing |
 | /docs/exp/benchmarking | /docs/howto/manage/benchmarks |
 | /docs/changelog | /docs/release-notes |
-| /docs/howto/monitor/grafana | /docs/howto/monitor/collect-metrics |
-| /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 | /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
 | /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
