@@ -38,7 +38,6 @@
 - [Core stack](#core-stack)
 - [Coturn](#coturn)
 - [GPU](#gpu)
-- [Grafana](#grafana)
 - [Graphics Processing Unit](#gpu)
 - [HA](#ha)
 - [High availability](#ha)
@@ -51,10 +50,7 @@
 - [LXD cluster](#lxd-cluster)
 - [LXD worker node](#lxd-worker-node)
 - [Manifest](#application-manifest)
-- [Monitoring stack](#monitoring-stack)
 - [NATS](#nats)
-- [Nagios](#nagios)
-- [Nagios Remote Plugin Executor](#nrpe)
 - [Neural Autonomic Transport System](#nats)
 - [Node controller](#ams-node-controller)
 - [NRPE](#nrpe)
@@ -281,13 +277,6 @@ An open-source implementation of a STUN/TURN server needed for WebRTC to work be
 
 See [the Coturn project on GitHub](https://github.com/coturn/coturn).
 
-<a name="grafana"></a>
-### Grafana
-
-A tool for analytics and monitoring that allows to query and visualise the metrics of the cluster or individual instances and generate alerts based on the data.
-
-See [Example: Collect metrics](https://discourse.ubuntu.com/t/use-grafana/17787) and [the Grafana website](https://grafana.com/).
-
 <a name="gpu"></a>
 ### Graphics Processing Unit (GPU)
 
@@ -354,33 +343,12 @@ A set of LXD nodes that share the same distributed database that holds the confi
 
 In a clustering setup for a full Anbox Cloud deployment, all nodes other than the [control node](#control-node) are worker nodes. If you have a streaming stack, all nodes other than the [control node](#control-node) and the two nodes that are dedicated to host the streaming services are worker nodes. Each worker node runs LXD in clustering mode, and this LXD cluster is used to host the Android containers.
 
-<a name="monitoring-stack"></a>
-### Monitoring stack
-
-A reference implementation for basic monitoring functionality. Anbox Cloud does not provide a monitoring solution, but it offers reference implementations that can be used as a starting point for implementing a custom solution.
-
-See https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338.
-
-<a name="nagios"></a>
-### Nagios
-
-A tool for monitoring the status of critical infrastructure like networks, servers and applications.
-
-See [the Nagios website](https://www.nagios.org/).
-
 <a name="nats"></a>
 ### Neural Autonomic Transport System (NATS)
 
 An open-source messaging system that the components of the streaming stack use to communicate.
 
 See [the NATS website](https://nats.io/).
-
-<a name="nrpe"></a>
-### Nagios Remote Plugin Executor (NRPE)
-
-A Nagios agent that allows to execute Nagios plugins on a remote host to monitor the status and metrics on that machine.
-
-See [the NRPE project on GitHub](https://github.com/NagiosEnterprises/nrpe).
 
 <a name="platform"></a>
 ### Platform
