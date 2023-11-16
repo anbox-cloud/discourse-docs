@@ -16,22 +16,23 @@ The following dates for upcoming releases are not final and could vary depending
 |----|----|
 | November 16 2023 | [Anbox Cloud 1.20.0](https://discourse.ubuntu.com/t/40281) |
 
-### What's new in 1.19.x?
+### What's new in 1.20.x?
 
-Along with bug fixes and general improvements, Anbox Cloud 1.19.x includes:
+Along with bug fixes and general improvements, Anbox Cloud 1.20.x includes:
 
-* OpenAPI based documentation of the Anbox Management Service (AMS) API.
-* Pagination and filtering support for containers and applications in the AMS API.
-* Several dashboard enhancements including:
-    - Ability to configure Anbox Application Registry (AAR)
-    - Streaming statistics
-    - Ability to share a streaming session
-    - Application detail view and management
-    - Bulk management of containers
-* AV1 hardware accelerated video encoding on NVIDIA GPUs.
-* cgroup v1 compatibility layer to support Android on cgroup v2-only systems.
-* Android security updates.
+* Support for creating virtual machine instances
+* Alpha support for Vulkan on NVIDIA GPUs
+* Upgraded Mesa driver and `virglrenderer`
+* Anbox Cloud images download only on first use
+* The Anbox Management Service (AMS) snaps use [core22](https://snapcraft.io/core22)
+* Modernised [NATS charm](https://charmhub.io/nats)
+* Several web dashboard improvements including:
+  - Improvements to session streaming statistics
+  - Ability to select and delete multiple instances
+  - Ability to change the Anbox Cloud configuration using the web dashboard
+  - Simplified app version selection for new sessions
 
+* Android security updates
 
 ## Older releases
 [Details=Expand to access release notes of earlier versions]
