@@ -43,6 +43,8 @@ The following guidelines are both recommended and must-have aspects of an auto s
 
 The decision of when to scale a cluster up or down is not simple and is different for each use case. The traditional approach to measure CPU, memory or GPU load does not apply for Anbox Cloud as capacity is well-planned and the number of instances per node is configured ahead of time. Furthermore, user patterns are hard to predict and will be different in each case. Hence, custom logic is required to take a decision when a cluster should be scaled up or down.
 
+Anbox Cloud provides [various metrics](https://discourse.ubuntu.com/t/prometheus-metrics/19521) to help decide when to scale up or down. Based on these metrics, together with data from a production system, you can build a model trying to predict when auto scaling should trigger.
+
 Future versions of Anbox Cloud will provide a framework which will help to implement such a model.
 
 See [How to scale up a LXD cluster](https://discourse.ubuntu.com/t/scale-up-a-lxd-cluster/24322) and [How to scale down a LXD cluster](https://discourse.ubuntu.com/t/scale-down-a-lxd-cluster/24323) for instructions on how to add or remove nodes from the cluster.
