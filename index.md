@@ -266,21 +266,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/installation/installation-application-registry | /docs/howto/aar/deploy |
 | /docs/usage/usecase-application-testing | /docs/howto/application/test |
 | /docs/usage/usecase-virtual-devices | /docs/howto/application/virtual-devices |
-<<<<<<< HEAD
 | /docs/manage/container-access | /docs/howto/instance/access |
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
 | /docs/howto/containers/backup-and-restore | /docs/howto/instance/backup-and-restore |
-| /docs/monitoring/monitoring-installation | /docs/howto/monitor/landing |
-| /docs/howto/monitor/install | /docs/howto/monitor/landing |
-| /docs/monitoring/monitoring-grafana | /docs/howto/monitor/grafana |
-| /docs/monitoring/monitoring-nagios | /docs/howto/monitor/nagios |
-=======
-| /docs/manage/container-access | /docs/howto/container/access |
-| /docs/howto/container/view-log | /docs/howto/container/logs |
-| /docs/usage/usecase-container-configuration | /docs/howto/container/geographic-location |
-| /docs/howto/containers/backup-and-restore | /docs/howto/container/backup-and-restore |
->>>>>>> 007f110 (Remove deleted topics from navigation)
 | /docs/implement-android-native-streaming-client | /docs/howto/stream/native-client |
 | /docs/implement-web-based-streaming-client | /docs/howto/stream/web-client |
 | /docs/howto/stream/web-client | /docs/tut/stream-client |
