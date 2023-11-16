@@ -126,9 +126,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
 | 2 | howto/monitor/landing | [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) |
-| 3 | howto/monitor/telegraf | [Configure Telegraf](https://discourse.ubuntu.com/t/how-to-configure-telegraf/30365)
-| 3 | howto/monitor/collect-metrics | [Example: Collect metrics](https://discourse.ubuntu.com/t/monitoring-grafana/17787)|
-| 3 | howto/monitor/monitor-status | [Example: Monitor status](https://discourse.ubuntu.com/t/monitoring-nagios/17788)|
 | 0 | | |
 | 1 | ref/landing | [Reference](https://discourse.ubuntu.com/t/reference/28828) |
 | 2 | ref/releases-versions | [Releases and versions](https://discourse.ubuntu.com/t/releases-and-versions/37993) |
@@ -273,10 +270,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/container/view-log | /docs/howto/instance/logs |
 | /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
 | /docs/howto/containers/backup-and-restore | /docs/howto/instance/backup-and-restore |
-| /docs/monitoring/monitoring-installation | /docs/howto/monitor/landing |
-| /docs/howto/monitor/install | /docs/howto/monitor/landing |
-| /docs/monitoring/monitoring-grafana | /docs/howto/monitor/grafana |
-| /docs/monitoring/monitoring-nagios | /docs/howto/monitor/nagios |
 | /docs/implement-android-native-streaming-client | /docs/howto/stream/native-client |
 | /docs/implement-web-based-streaming-client | /docs/howto/stream/web-client |
 | /docs/howto/stream/web-client | /docs/tut/stream-client |
@@ -307,8 +300,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/exp/porting-issues | /docs/howto/port/landing |
 | /docs/exp/benchmarking | /docs/howto/manage/benchmarks |
 | /docs/changelog | /docs/release-notes |
-| /docs/howto/monitor/grafana | /docs/howto/monitor/collect-metrics |
-| /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
 | /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
 | /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |

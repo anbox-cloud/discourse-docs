@@ -25,7 +25,7 @@ Learn how to manage the different variants of Anbox Cloud, distribute the load o
 
 ## Monitoring Anbox Cloud
 
-Learn how to implement a monitoring solution for Anbox Cloud so that you can further optimise your deployment.
+Understand monitoring options for Anbox Cloud to further optimise your deployment.
 
 * [Monitor Anbox Cloud](https://discourse.ubuntu.com/t/24338)
 

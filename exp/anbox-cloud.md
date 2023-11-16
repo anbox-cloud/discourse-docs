@@ -25,7 +25,6 @@ See the following table for a comparison of features for the different variants:
 | [Security updates](https://ubuntu.com/support) | ✓ | ✓ |
 | [Community support](https://discourse.ubuntu.com/c/anbox-cloud/) | ✓ | ✓ |
 | [Vendor support available](https://ubuntu.com/support) | ✓* | ✓ |
-| [Monitoring](https://discourse.ubuntu.com/t/monitor-anbox-cloud/24338) | - | ✓ |
 
 *\* When purchasing the Anbox Cloud Appliance through the AWS Marketplace, the Ubuntu Pro subscription does not include vendor support.*
 
