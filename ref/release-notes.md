@@ -14,7 +14,7 @@ The following dates for upcoming releases are not final and could vary depending
 
 | Release date   |  Release notes  |
 |----|----|
-| November 16 2023 | [Anbox Cloud 1.20.0](tbd) |
+| November 16 2023 | [Anbox Cloud 1.20.0](https://discourse.ubuntu.com/t/40281) |
 
 ### What's new in 1.19.x?
 
