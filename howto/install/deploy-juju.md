@@ -266,6 +266,6 @@ To reboot the machine hosting LXD, run the following command:
 
 When the machine is back running, you must manually clear the status of the LXD units:
 
-    juju run-action --wait lxd/0 clear-notification
+    juju run --wait=5m lxd/0 clear-notification
 
 Once done, the reboot operation is finished.

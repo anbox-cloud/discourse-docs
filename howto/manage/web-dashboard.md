@@ -27,7 +27,7 @@ Before you can log into the dashboard, you must register your Ubuntu One account
 
 On a regular Anbox Cloud deployment, use the following Juju action to register an Ubuntu One account:
 
-    juju run-action anbox-cloud-dashboard/0 --wait register-account email=<Ubuntu One email address>
+    juju run anbox-cloud-dashboard/0 --wait=5m register-account email=<Ubuntu One email address>
 
 You will see output similar to the following:
 
