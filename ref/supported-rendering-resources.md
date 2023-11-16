@@ -1,5 +1,7 @@
 This guide lists various supported GPU vendors, drivers, platforms, APIs and discuss the rendering pipelines used for different GPUs.
 
+[note type="information" status="Important"]Currently Anbox Cloud does not support GPU for virtual machines.[/note]
+
 <a name="supported-gpus"></a>
 ## Supported GPU vendors and GPU models
 
@@ -36,7 +38,7 @@ Anbox Cloud can make use of different [platforms](https://anbox-cloud.github.io/
 
 | Name     	| Behaviour                                                                                                                                            	|
 |----------	|-----------------------------------------------------------------------------------------------------------------------------------------------------	|
-| `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching a container.                                                                       	|
+| `null`   	|  A headless-GL platform. No rendering is performed. No audio input/output. Useful for functional tests. It's used by default if no platform is specified when launching an instance.                                                                       	|
 | `webrtc` 	| Full-featured WebRTC based streaming platform. Includes driver and integration for AMD and NVIDIA GPUs as well as LLVMpipe based software rendering if no GPU is detected.  Support audio input/output. |
 | `swrast` 	| (DEPRECATED) Software Rasterization platform. A LLVMpipe based software rendering platform. Useful for visual tests. No audio input/output.    | 
 
@@ -46,7 +48,7 @@ For rendering, you can use the `swrast` or the `null` platforms depending on you
 
 `null` is an OpenGL headless platform that makes use of the rendering backend of the [Almost Native Graphics Layer Engine (ANGLE)](https://chromium.googlesource.com/angle/angle) and can be used when you do not need a graphic output, such as, automation testing. It does not perform software rendering and does not produce any graphic output. Hence, the overhead on the CPU when using `null` platform is significantly low which makes it a good candidate for all use cases where a graphic output is not necessary.
 
-The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when a container is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
+The `webrtc` platform is used by Anbox to provide graphical output. It supports all GPUs supported by Anbox Cloud in addition to software rendering. It is used when an instance is launched with `--enable-graphics`, or via the Anbox Stream Gateway.
 
 ## Supported APIs
 

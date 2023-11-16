@@ -6,14 +6,24 @@ To create a virtual device, you must first set up a basic application. This appl
 
 A very simple application manifest for such an application looks like this:
 
-```
+```yaml
 name: vdev
-instance-type: a4.3
+resources:
+  cpus: 2
+  memory: 3GB
+  disk-size: 3GB
 ```
 
-[note type="information" status="Note"]
-If you want to use a GPU for containers created for your new `vdev` application, use an [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) with GPU support, like `g4.3`.
-[/note]
+If you want to use a GPU for instances created for your new `vdev` application, include `gpu-slots` as a resource requirement in the application manifest.
+
+```yaml
+name: vdev-gpu
+resources:
+  cpus: 2
+  memory: 3GB
+  disk-size: 5GB
+  gpu-slots: 3
+```
 
 ## Optionally extend the application
 

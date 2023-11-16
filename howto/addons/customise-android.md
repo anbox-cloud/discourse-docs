@@ -6,7 +6,7 @@ In this example, we create a hook that configures the Android system to use an H
 #!/bin/sh -ex
 
 # The settings we change are persistent, so we only need to set them once
-if [ "$CONTAINER_TYPE" = "regular" ]; then
+if [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0
 fi
 

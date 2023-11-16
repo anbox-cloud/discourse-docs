@@ -25,11 +25,11 @@ The Anbox Cloud Appliance has the following minimum hardware requirements:
 * 64 bit x86 or Arm CPU with >= 4 CPU cores
 * 8 GB of memory
 * 40 GB of disk space for the OS
-* optional, but strongly recommended: >= 50GB block volume to host container storage
+* At least 100GB block volume to host instance storage
 
-The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
+The above defines a minimum of what is necessary to run the Anbox Cloud Appliance. As Anbox Cloud is dependent on available resources to launch its Android containers, the available resources dictate the maximum number of possible Android containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an explanation on how to plan for a specific capacity on your appliance.
 
-On public clouds it's recommended to always allocate an additional storage volume for the container storage. If no additional storage volume is available, the appliance will create an on-disk image it will use for the container storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and container startup time.
+On public clouds, it is always recommended to allocate an additional storage volume for instance storage. If no additional storage volume is available, the appliance creates an on-disk image and uses it for instance storage. This is sufficient for very simple cases but does not provide optimal performance and will slow down operations and instance startup time.
 
 For external access to the Anbox Cloud Appliance, you must expose a couple of network ports on the machine where the appliance is running. See [Network ports](https://discourse.ubuntu.com/t/network-ports/33650#appliance) for the list of ports that must be exposed. How to allow incoming traffic on the listed ports differs depending on the cloud used. See the documentation of the cloud for further information on how to change the firewall.
 
@@ -102,7 +102,7 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 0  | amd64 or arm64 | 2         | 2GB  | 100GB SSD  | no   |  Hosts the load balancer |
 1  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the streaming stack control plane |
 2  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS) |
-3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
+3  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
 
 To run the core version of Anbox Cloud without the streaming stack, we recommend the following setup:
 
@@ -110,7 +110,7 @@ ID | Architecture   | CPU cores | RAM  | Disk       | GPUs |  FUNCTION |
 ---|----------------|-----------|------|------------|------|------------|
 -  | amd64 or arm64 | 4         | 4GB  | 50GB SSD   | no   |  Hosts the  [Juju controller](https://discourse.juju.is/t/controllers/1111)  |
 0  | amd64 or arm64 | 4         | 8GB  | 100GB SSD  | no   |  Hosts the management layer of Anbox Cloud (for example, AMS)  |
-1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual Anbox containers  |
+1  | amd64 or arm64 | 8         | 16GB | 200GB NVMe | optional   |  LXD worker node that hosts the actual containers or virtual machines  |
 
 Some additional information:
 
@@ -118,7 +118,7 @@ Some additional information:
 - You can mix architectures for the different machines. However, if you have several LXD nodes, all of them must have the same architecture.
 - The specified number of cores and RAM is only the minimum required to run Anbox Cloud at a sensible performance.
 
-  More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of containers. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of containers.
+  More CPU cores and more RAM on the machine hosting LXD will allow to run a higher number of instances. See [About capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) for an introduction of how many resources are necessary to host a specific number of instances.
 - If you require GPU support, see [Supported rendering resources](https://discourse.ubuntu.com/t/37322) for a list of supported GPUs.
 
 Applications not maintained by Anbox Cloud may have different hardware recommendations:

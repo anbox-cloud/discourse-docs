@@ -1,6 +1,6 @@
 Anbox Cloud is secure by design, which means that its architecture, its components and all communication between components are designed to be fundamentally secure.
 
-For containerisation, Anbox Cloud uses the secure container hypervisor [LXD](https://ubuntu.com/lxd). To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD container.
+Anbox Cloud uses the secure [LXD](https://ubuntu.com/lxd) for container and virtual machine management. To ensure security and isolation of each Android system, Anbox Cloud runs a single Android system per LXD instance.
 
 This security guide gives more insight into how security is ensured through different aspects of Anbox Cloud.
 
@@ -27,20 +27,24 @@ The following table shows the authentication methods that are in place for the d
 | Coturn with STUN      | No authentication needed     |
 | Coturn with TURN      | Temporary user and password  |
 
-## Container security
+## Instance security
 
-Anbox Cloud uses secure and isolated system containers supplied by [LXD](https://ubuntu.com/lxd). LXD provides a high degree of flexibility when setting up containers, allowing you to run in a fully secure or less secure way, depending on your requirements. See [Security](https://documentation.ubuntu.com/lxd/en/latest/security/) in the LXD documentation for more information about how a LXD setup can be secured.
+Anbox Cloud uses secure and isolated system instances supplied by [LXD](https://ubuntu.com/lxd). LXD provides a high degree of flexibility when setting up instances, allowing you to run in a fully secure or less secure way, depending on your requirements. See [Security](https://documentation.ubuntu.com/lxd/en/latest/security/) in the LXD documentation for more information about how a LXD setup can be secured.
+
+Using virtual machines to host Android containers provides provides better workload isolation.
 
 Anbox Cloud uses LXD in a way that enforces the highest security level.
 
-### Unprivileged containers
+### Unprivileged instances
 
-Many container managers use privileged containers, which means that the containers have root privileges on the host system, including access to all devices. This is a security risk, because attackers could gain control over the host system.
+[note type="information" status="Note"]This section is particularly applicable for container based instances because a virtual machine is unprivileged by nature.[/note]
 
-Anbox Cloud uses unprivileged LXD containers only, which fully isolates the containers and ensures that they cannot gain root privileges. In addition, the Android container that runs inside the LXD container also runs as an unprivileged container. This method isolates the Android container twice, with the result that if the encapsulation of either the LXD container or the Android container should fail, the system would still be protected.
+Many instance managers use privileged instances, which means that the instances have root privileges on the host system, including access to all devices. This is a security risk, because attackers could gain control over the host system.
+
+Anbox Cloud uses unprivileged LXD instances only, which fully isolates the instances and ensures that they cannot gain root privileges. In addition, the Android container that runs inside the LXD instance also runs as an unprivileged instance. This method isolates the Android container twice, with the result that if the encapsulation of either the LXD instance or the Android container should fail, the system would still be protected.
 
 [note type="caution" status="Warning"]
-While containers are fully isolated, all containers currently use the same GPU resources. As a result, any container that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other containers from starting.
+While instances are fully isolated, all instances currently use the same GPU resources. As a result, any instance that is launched with GPU support could take all GPU resources in a DDoS-like attack, which would prevent other instances from starting.
 
 See [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots) for more information.
 [/note]
@@ -54,7 +58,7 @@ With this secure channel, Juju charms can communicate with each other using rela
 
 ### Security updates
 
-Anbox Cloud provides container images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with [`application.auto_update`](https://discourse.ubuntu.com/t/ams-configuration/20872)).
+Anbox Cloud provides images that are frequently updated with the latest security patches. When an image is updated, all Anbox Cloud applications that use the image are automatically updated as well (unless disabled with [`application.auto_update`](https://discourse.ubuntu.com/t/ams-configuration/20872)).
 
 In addition, to ensure that the latest Ubuntu security patches are applied outside of image updates as well, Anbox Cloud checks for and installs available security updates every time an application is bootstrapped. So when you create an application, its underlying image is updated with the latest Ubuntu security patches. You can also create a new application version without other changes to bootstrap the application again, and thus install the latest security patches.
 

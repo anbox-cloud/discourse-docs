@@ -18,7 +18,7 @@ The general steps for creating a hook are as follows:
    [note type="information" status="Tip"]
 
    - Supported hooks are `pre-start`, `post-start` and `post-stop`.
-   - Use the `CONTAINER_TYPE` variable to distinguish between regular and base containers.
+   - Use the `INSTANCE_TYPE` variable to distinguish between regular and base instances.
 
    See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more information.
    [/note]
@@ -31,7 +31,7 @@ The following sections give some examples for hooks.
 ### Create a hook for changing the Android system locale
 
 Complete the following steps to create a hook that changes the Android system locale to Korean:
-
+<!-- wokeignore:rule=master -->
 1. Build the [CustomLocale](https://android.googlesource.com/platform/development/+/master/apps/CustomLocale) application from the AOSP project and move the compiled APK to a folder of your choice.
 1. In your folder, create a `hooks` sub-directory:
 
@@ -40,7 +40,7 @@ Complete the following steps to create a hook that changes the Android system lo
 
    ```
    #!/bin/sh -ex
-   if  [ "$CONTAINER_TYPE" = "regular" ]; then
+   if  [ "$INSTANCE_TYPE" = "regular" ]; then
      exit 0
    fi
    cp "<working_dir>"/*.apk $ANBOX_DIR/data
@@ -80,7 +80,7 @@ Complete the following steps to create a hook that replaces the standard Android
 
    ```
    #!/bin/sh -ex
-   if  [ "$CONTAINER_TYPE" = "regular" ]; then
+   if  [ "$INSTANCE_TYPE" = "regular" ]; then
      exit 0
    fi
    cp "<working_dir>"/*.apk $ANBOX_DIR/data/
@@ -133,10 +133,10 @@ You can add your hooks directly to an application. To do so, complete the follow
 
         amc application create my-app
 
-After the application is created, launch a container. You should see that the hook is executed and that, for example, the system locale is changed or the standard Android launcher is replaced.
+After the application is created, launch an instance. You should see that the hook is executed and that, for example, the system locale is changed or the standard Android launcher is replaced.
 
 [note type="information" status="Important"]
-By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://anbox-cloud.io/docs/exp/applications#bootstrap) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular container.
+By default, the files required for the hooks (for example, APK files) are removed automatically from the application image after the [application bootstrap](https://discourse.ubuntu.com/t/17760) is completed. According to your application requirements, consider using the [`bootstrap.keep`](https://discourse.ubuntu.com/t/application-manifest/24197#bootstrap) attribute in the application manifest file if you want to keep any content needed by the application running in a regular instance.
 [/note]
 
 <a name="addon"></a>

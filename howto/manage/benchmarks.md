@@ -3,18 +3,18 @@ Anbox Cloud provides tools for benchmarking different aspects of your deployment
 See [Performance benchmarks](https://discourse.ubuntu.com/t/performance-benchmarks/24709) for an overview of results that you can expect for selected hardware configurations.
 
 [note type="information" status="Important"]Benchmarks provide useful information only if you run them with an application and workload that reflects your real-life scenario. For example, if you run the benchmark with an Android app that just sits idle and does not constantly refresh the screen by itself, you will get a low FPS number. This number does not reflect the real scenario though, because in reality, your users actually use the app and thus cause a higher workload.[/note]
-<a name="container-benchmarks"></a>
-## Run container benchmarks
+<a name="instance-benchmarks"></a>
+## Run instance benchmarks
 
-The `amc` command line utility provides a `benchmark` subcommand to run benchmarks on an Anbox Cloud deployment. It measures the time containers take to start up and their average FPS (frames per second) rate.
+The `amc` command line utility provides a `benchmark` subcommand to run benchmarks on an Anbox Cloud deployment. It measures the time instances take to start up and their average FPS (frames per second) rate.
 
-The results you get depend on the resources of the machines that host the containers. In addition, latency between the different nodes and the AMS services can impact the results
+The results you get depend on the resources of the machines that host the instances. In addition, latency between the different nodes and the AMS services can impact the results
 
 Check the help output to see all available arguments and their purpose:
 
     amc benchmark -h
 
-The benchmark command launches the specified number of containers on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
+The benchmark command launches the specified number of instances on the Anbox [`null` platform](https://discourse.ubuntu.com/t/anbox-platforms/18733) with the following default display specification:
 
  | Display spec            | Value |
  | ----------------------- | ----- |
@@ -31,10 +31,11 @@ You can configure a different display specification through the `--userdata` par
 | `swrast`              | Comma-separated values                | <display_width>,<display_height>,<display_fps>,<display_density>  |
 | `webrtc`              | JSON-based                            | {<br>"display_width": <display_width>,<br>"display_height": <display_height>,<br>"display_density": <display_density>,<br>"fps": <display_fps>,<br>"render_only": true<br> } |
 
-[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the containers in render-only mode. Otherwise, the container creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
+[note type="information" status="Note"]If you're running a benchmark against the `webrtc` platform, make sure to specify `"render_only": true` to launch the instances in render-only mode. Otherwise, the instance creation will fail, because the `amc benchmark` command doesn't interact with the stream gateway for the benchmark execution.[/note]
 
 ### Example
 
+This example demonstrates running benchmarks for containers. You can do the same for virtual machines following the same commands and procedure.
 The following command launches 15 containers for the application with ID `bh2q90vo3v1lt1ft4mlg`:
 
     amc benchmark --fps --network-address=172.31.4.11 --num-containers=15 --containers-per-second=0.1 bh2q90vo3v1lt1ft4mlg
@@ -112,7 +113,7 @@ The output for this command could look like this:
 
 ## Run stream benchmarks
 
-A benchmark for streaming requires more automation than just starting containers. Therefore, Anbox Cloud provides a dedicated benchmark tool for this purpose. The tool automates the following tasks:
+A benchmark for streaming requires more automation than just starting instances. Therefore, Anbox Cloud provides a dedicated benchmark tool for this purpose. The tool automates the following tasks:
 
 - Create a streaming session
 - Receive the video/audio stream

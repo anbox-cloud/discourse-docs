@@ -42,7 +42,7 @@ Follow the [tutorial](https://discourse.ubuntu.com/t/creating-an-addon/25284) to
 #!/bin/bash -ex
 
 # Only install the APK as a system app when bootstrapping an application.
-if  [ "$CONTAINER_TYPE" = "regular" ]; then
+if  [ "$INSTANCE_TYPE" = "regular" ]; then
   exit 0
 fi
 
@@ -83,4 +83,6 @@ Then create the application with the `amc` command:
 
     amc application create .
 
-After the AMS application is created successfully, the APK is installed as a proper system app. It will run as a system app in the Android container when you start it from a container launched from the newly created application.
+Use the `--vm` flag to create the application in a virtual machine. If you create the application with a specific image, make sure that it is a virtual machine image.
+
+After the AMS application is created successfully, the APK is installed as a proper system app. It will run as a system app in the Android container when you start it from an instance launched from the newly created application.

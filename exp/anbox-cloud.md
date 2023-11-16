@@ -1,8 +1,6 @@
 Anbox Cloud provides a rich software stack that enables you to run Android applications in the cloud for different use cases, including high-performance streaming of graphics to desktop and mobile client devices.
 
-At its heart, it uses lightweight container technology instead of full virtual machines and maintains a single Android system per container. This approach allows for higher density and better performance per host while ensuring security and isolation of each container. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 containers on a single machine.
-
-For containerisation of Android, Anbox Cloud uses the well-established and secure container hypervisor [LXD](https://ubuntu.com/lxd). LXD is secure by design, scales to a large number of containers, and provides advanced resource management for hosted containers.
+Anbox Cloud maintains a single Android system per [instance](https://discourse.ubuntu.com/t/26204#instance), providing higher density and better performance per host while ensuring security and isolation of each instance. Depending on the target platform, payload, and desired application performance (for example, frame rate), Anbox Cloud can run more than 100 instances on a single machine.
 
 <a name="variants"></a>
 ## Variants
@@ -45,15 +43,15 @@ The diagrams used to explain the architecture in this topic show the recommended
 
 The diagram below depicts the core stack and its components:
 
-![Anbox Cloud core stack|690x398](https://assets.ubuntu.com/v1/68142a18-core_stack.png)
+![Anbox Cloud core stack|690x398](https://assets.ubuntu.com/v1/2a7f484d-core_stack_updated.png)
 
 The core stack contains one or more Anbox subclusters, a Juju controller, and the Anbox Application Registry (AAR).
 
 Inside each Anbox subcluster, the following components are present:
 
-* **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and container life cycle, including application and image update, while ensuring high density, performance, and fast container startup times.
+* **Anbox Management Service (AMS)** - AMS is the management tool for Anbox Cloud. It handles all aspects of the application and instance life cycle, including application and image update, while ensuring high density, performance, and fast startup times.
 
-  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with Anbox containers, requesting and releasing resources as per demand.
+  Users can connect to AMS via CLI or HTTP API calls on port 8444. AMS is installed as a snap on each of the control nodes and interacts with the instances, requesting and releasing resources as per demand.
 
 * **Anbox Management Client (AMC)**  - You can choose to install AMC on other machines to [control AMS remotely](https://discourse.ubuntu.com/t/how-to-control-ams-remotely/17774), but it is generally installed together with AMS. A developer or system administrator will manage AMS through the command line interface (AMC) or through custom-built tools interacting with the AMS HTTP API.
 
@@ -63,11 +61,11 @@ Inside each Anbox subcluster, the following components are present:
 
 Each Anbox subcluster also has a number of LXD worker nodes that form a LXD cluster. Each LXD worker node runs the following components:
 
-* **LXD** - The LXD daemon spawns a number of LXD containers containing Anbox-related configuration. These containers provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD container runs exactly one Android container that the end user can access/stream.
+* **LXD** - The LXD daemon spawns a number of LXD instances containing Anbox-related configuration. These instances provide an Ubuntu environment that uses the hardware of the LXD worker node, including CPUs, disks, networks, and if available, GPUs. Each LXD instance runs exactly one Android instance that the end user can access/stream.
 
-    [note type="information" status="Note"] The term LXD containers means that they are LXD containers that contain Anbox-related configuration. Within the context of Anbox Cloud, the term Anbox containers/images is synonymous with LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.[/note]
+    [note type="information" status="Note"] The term LXD instance means that they are LXD containers or virtual machines that contain configuration related to Anbox Cloud. Within the context of Anbox Cloud, the term Anbox Cloud images is used interchangeably with LXD images in the sense that they are LXD images containing specific configuration related to Anbox Cloud.[/note]
 
-* **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when a container is started or stopped to control ingress and egress traffic.
+* **AMS node controller** – The AMS node controller puts the appropriate firewall rules in place when an instance is started or stopped to control ingress and egress traffic.
 
 Outside the Anbox subcluster, you have the following machines:
 
@@ -78,11 +76,11 @@ Outside the Anbox subcluster, you have the following machines:
 
 The diagram below depicts the streaming stack along with the core stack and user specific components:
 
-![Anbox Cloud streaming stack|690x440](https://assets.ubuntu.com/v1/d547f8e2-core_and_streaming_stack.png)
+![Anbox Cloud streaming stack|690x440](https://assets.ubuntu.com/v1/29aa27b6-core_and_streaming_stack_updated.png)
 
 When the streaming stack is in use, each Anbox subcluster has the following additional components:
 
-* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the Anbox container running its application. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
+* **TURN/STUN servers** - Servers that find the most optimal network path between a client and the application running on Anbox Cloud. The streaming stack provides secure STUN and TURN servers, but you can use public ones as well.
 
 * **Stream agent** - Serves as an entry point that the gateway can connect to to talk to the AMS of the Anbox subcluster.
 
@@ -98,11 +96,11 @@ For example, your web client can be a mobile app used to access the provided And
 <a name="lxd"></a>
 ## LXD
 
-Anbox Cloud includes LXD for hosting and managing the Ubuntu containers that run the nested Android containers.
+Anbox Cloud includes LXD for hosting and managing the Ubuntu instances that run the nested Android containers.
 
 LXD is installed through the [`ams-lxd` charm](https://charmhub.io/ams-lxd), which adds some Anbox-specific configuration to LXD. AMS configures LXD automatically and fully manages it, which means that in most scenarios, you do not need to worry about LXD at all.
 
-If you want to monitor LXD, you can always run `lxc list` to display the existing containers. For the full deployment, LXD hosts the AMS containers. If you run the Anbox Cloud Appliance, LXD also containerises the Anbox Cloud deployment, which means that it hosts containers for the different Juju machines that Anbox Cloud requires:
+If you want to monitor LXD, you can always run `lxc list` to display the existing instances. For the full deployment, LXD hosts the instances created by AMS. If you run the Anbox Cloud Appliance, LXD hosts instances for the different Juju machines that Anbox Cloud requires:
 
 ```
 +--------------------------+---------+------------------------+------+-----------+-----------+----------+
@@ -131,7 +129,7 @@ While a loop file is easy to set up, it is much slower than a block device. Ther
 
 If you are doing a full deployment, configure the storage before starting the deployment. See the *Customise storage* section in [How to deploy Anbox Cloud with Juju](https://discourse.ubuntu.com/t/install-with-juju/17744#customise-storage) or [How to deploy Anbox Cloud on bare metal](https://discourse.ubuntu.com/t/deploy-anbox-cloud-on-bare-metal/26378#customise-storage) for instructions. If you skip the configuration, Anbox Cloud sets up a loop-file with an automatically calculated size, which is not recommended.
 
-If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, thus both the Juju containers and the AMS containers.
+If you are using the Anbox Cloud Appliance, you are prompted during the initialisation process to specify the storage location, and, if you choose a loop file, its size. When choosing a size, keep in mind that the loop file cannot be larger than the root disk, and that it will cause the disk to fill up as the loop file grows to its maximum size over time. The created storage pool is used to store all Anbox Cloud content, including the instances created by Juju.
 
 <a name="juju-bundles"></a>
 ## Juju bundles
@@ -152,4 +150,4 @@ For detailed information about the charm, check the `bundle.yaml` file in the bu
 You can download the bundle with `juju download <charm_name>`, thus `juju download anbox-cloud-core` or `juju download anbox-cloud`. Unzip the bundle to access the `bundle.yaml` file.
 [/note]
 
-If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See [How to access a container](https://discourse.ubuntu.com/t/container-access/17772) for details.
+If you don't need to stream the visual output of the Android containers, you can use the `anbox-cloud-core` bundle. Otherwise, you should use the `anbox-cloud` bundle. However, even without the streaming stack, there are still ways to get visual access for inspection purposes. See [How to access an instance](https://discourse.ubuntu.com/t/17772) for details.

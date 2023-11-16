@@ -18,7 +18,6 @@
 - [Anbox Cloud Appliance](#anbox-cloud-appliance)
 - [Anbox Cloud cluster](#anbox-cloud-cluster)
 - [Anbox Cloud subcluster](#anbox-cloud-subcluster)
-- [Anbox container](#anbox-container)
 - [Anbox Management Client](#amc)
 - [Anbox Management Service](#ams)
 - [Anbox Platform SDK](#anbox-platform-sdk)
@@ -30,9 +29,9 @@
 - [Android Package Kit](#apk)
 - [Appium](#appium)
 - [Application](#application)
-- [Application container](#application-container)
+- [Application instance](#application-instance)
 - [Application manifest](#application-manifest)
-- [Base container](#base-container)
+- [Base instance](#base-instance)
 - [Boot package](#boot-package)
 - [Bootstrap process](#bootstrap-process)
 - [Control node](#control-node)
@@ -45,6 +44,7 @@
 - [High availability](#ha)
 - [Hook](#hook)
 - [Image](#image)
+- [Instance](#instance)
 - [Instance type](#instance-type)
 - [Juju](#juju)
 - [LXD](#lxd)
@@ -60,8 +60,8 @@
 - [NRPE](#nrpe)
 - [Platform](#platform)
 - [Prometheus](#prometheus)
-- [Raw container](#raw-container)
-- [Regular container](#regular-container)
+- [Raw instance](#raw-instance)
+- [Regular instance](#regular-instance)
 - [STUN/TURN server](#stun/turn-server)
 - [Scrcpy](#scrcpy)
 - [Session](#session)
@@ -98,7 +98,7 @@ See [the AWS website](https://aws.amazon.com/).
 <a name="ams-node-controller"></a>
 ### AMS Node Controller
 
-A service that runs on every LXD node and puts the appropriate firewall rules in place when a container is started or stopped.
+A service that runs on every LXD node and puts the appropriate firewall rules in place when an instance is started or stopped.
 
 <a name="ams-sdk"></a>
 ### AMS SDK
@@ -150,13 +150,6 @@ A deployment of the Anbox Cloud, either just the core stack or the core stack al
 
 The group of components that is made up of LXD, AMS node controller, and the [control node](#control-node) hosting the AMS, AMC, and etcd.
 
-<a name="anbox-container"></a>
-### Anbox container
-
-One of the main objects of Anbox Cloud. Every time you launch an application or an image, Anbox Cloud creates a container for it. Every container provides a full Android system. Within the context of Anbox Cloud, the term Anbox containers/images can mean LXD containers/LXD images in the sense that they are LXD containers/images containing specific Anbox-related configuration.
-
-See https://discourse.ubuntu.com/t/about-containers/17763.
-
 <a name="amc"></a>
 ### Anbox Management Client (AMC)
 
@@ -165,7 +158,7 @@ The command line interface that is used to manage the Anbox Management Service (
 <a name="ams"></a>
 ### Anbox Management Service (AMS)
 
-The service that handles all aspects of the application and container life cycle in Anbox Cloud. AMS is responsible for managing containers, applications, addons, updates and more, ensuring high density, performance and fast container startup times.
+The service that handles all aspects of the application and instance life cycle in Anbox Cloud. AMS is responsible for managing instances, applications, addons, updates and more, ensuring high density, performance and fast startup times for the instances.
 
 AMS uses [etcd](https://etcd.io/) as database. It connects to LXD over its REST API.
 
@@ -181,9 +174,9 @@ See [Anbox Platform SDK](https://discourse.ubuntu.com/t/anbox-cloud-sdks/17844#a
 <a name="anbox-shell"></a>
 ### Anbox shell
 
-A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the container.
+A command-line tool (`anbox-shell`) that provides an ADB shell with root permissions granted, which you can use to access the Android system in the instance.
 
-See [Access a container with AMC](https://discourse.ubuntu.com/t/access-a-container/17772#amc).
+See [Access an instance with AMC](https://discourse.ubuntu.com/t/17772#amc).
 
 <a name="anbox-streaming-sdk"></a>
 ### Anbox Streaming SDK
@@ -230,12 +223,12 @@ One of the main objects of Anbox Cloud. An application encapsulates an Android a
 
 See https://discourse.ubuntu.com/t/about-applications/17760.
 
-<a name="application-container"></a>
-### Application container
+<a name="application-instance"></a>
+### Application instance
 
-A container that is created when launching an application.
+An instance that is created when launching an application.
 
-See [Application containers vs. raw containers](https://discourse.ubuntu.com/t/about-containers/17763#application-vs-raw).
+See [Application instances vs. raw instances](https://discourse.ubuntu.com/t/17763#application-vs-raw).
 
 <a name="application-manifest"></a>
 ### Application manifest
@@ -244,17 +237,17 @@ A file that defines the attributes of an Anbox Cloud application.
 
 See https://discourse.ubuntu.com/t/application-manifest/24197.
 
-<a name="base-container"></a>
-### Base container
+<a name="base-instance"></a>
+### Base instance
 
-A temporary container that is used when bootstrapping an application. It is automatically deleted when the application bootstrap is completed.
+A temporary instance that is used when bootstrapping an application. It is automatically deleted when the application bootstrap is completed.
 
-See https://discourse.ubuntu.com/t/about-containers/17763#regular-vs-base.
+See https://discourse.ubuntu.com/t/17763#regular-vs-base.
 
 <a name="boot-package"></a>
 ### Boot package
 
-The package to launch in an application container once the system has booted.
+The package to launch in an application instance once the system has booted.
 
 <a name="bootstrap-process"></a>
 ### Bootstrap process
@@ -291,7 +284,7 @@ See [the Coturn project on GitHub](https://github.com/coturn/coturn).
 <a name="grafana"></a>
 ### Grafana
 
-A tool for analytics and monitoring that allows to query and visualise the metrics of the cluster or individual containers and generate alerts based on the data.
+A tool for analytics and monitoring that allows to query and visualise the metrics of the cluster or individual instances and generate alerts based on the data.
 
 See [Example: Collect metrics](https://discourse.ubuntu.com/t/use-grafana/17787) and [the Grafana website](https://grafana.com/).
 
@@ -310,23 +303,32 @@ See https://discourse.ubuntu.com/t/enable-high-availability/17754.
 <a name="hook"></a>
 ### Hook
 
-Code that is invoked at different points in time in the life cycle of a container. Hooks are part of addons or applications.
+Code that is invoked at different points in time in the life cycle of an instance. Hooks are part of addons or applications.
 
 See [Hooks](https://discourse.ubuntu.com/t/hooks/28555).
 
 <a name="image"></a>
 ### Image
 
-The base for a container, which contains all necessary components like Anbox or the Android root file system. Anbox Cloud provides images based on different Android and Ubuntu versions and different architectures.
+The base for an instance, which contains all necessary components like Anbox or the Android root file system. Anbox Cloud provides images based on different Android and Ubuntu versions and different architectures.
 
 See https://discourse.ubuntu.com/t/manage-images/17758 and https://discourse.ubuntu.com/t/provided-images/24185.
+
+<a name="instance"></a>
+### Instance
+
+An instance is a container or a virtual machine used to launch an application or an image. Every time you launch an application or an image, Anbox Cloud creates an instance for it. Every instance provides a full Android system.
+
+See https://discourse.ubuntu.com/t/17763.
 
 <a name="instance-type"></a>
 ### Instance type
 
-An abstraction for a set of resources that is available to a container.
+An abstraction for a set of resources that is available to an instance.
 
 See https://discourse.ubuntu.com/t/application-manifest/24197#instance-type.
+
+[note type="information" status="Note"] The `instance-type` attribute in the application manifest will be deprecated effective version 1.20 and will be removed in future releases. After the `instance-type` attribute becomes unsupported, this term will be replaced with the term *Resource preset*.[/note]
 
 <a name="juju"></a>
 ### Juju
@@ -394,19 +396,19 @@ An open-source application used for event monitoring and alerting, which records
 
 See [the Prometheus website](https://prometheus.io/).
 
-<a name="raw-container"></a>
-### Raw container
+<a name="raw-instance"></a>
+### Raw instance
 
-A container that is created when launching an image. It runs the full Android system, without any additional apps installed.
+An instance that is created when launching an image. It runs the full Android system, without any additional apps installed.
 
-See [Application containers vs. raw containers](https://discourse.ubuntu.com/t/about-containers/17763#application-vs-raw).
+See [Application instances vs. raw instances](https://discourse.ubuntu.com/t/17763#application-vs-raw).
 
-<a name="regular-container"></a>
-### Regular container
+<a name="regular-instance"></a>
+### Regular instance
 
-A container that is launched from either an application or an image. It exists until it is deleted.
+An instance that is launched from either an application or an image. It exists until it is deleted.
 
-See https://discourse.ubuntu.com/t/about-containers/17763#regular-vs-base.
+See [Regular instances vs. base instances](https://discourse.ubuntu.com/t/17763#regular-vs-base).
 
 <a name="scrcpy"></a>
 ### Scrcpy
@@ -418,7 +420,7 @@ See [the scrcpy project on GitHub](https://github.com/Genymobile/scrcpy).
 <a name="session"></a>
 ### Session
 
-The interaction between a streaming client and the application container during streaming. A session contains, among other information, user data and application information and provides an entry point for both the client and the container to start the signalling process.
+The interaction between a streaming client and the application instance during streaming. A session contains, among other information, user data and application information and provides an entry point for both the client and the instance to start the signalling process.
 
 See https://discourse.ubuntu.com/t/about-application-streaming/17769.
 
@@ -453,14 +455,14 @@ See https://discourse.ubuntu.com/t/about-application-streaming/17769.
 <a name="streaming-stack"></a>
 ### Streaming stack
 
-A collection of components designed to run containers and stream their visual output to clients via WebRTC. Streaming can happen through GPUs or through software rendering.
+A collection of components designed to run containers or virtual machines and stream their visual output to clients via WebRTC. Streaming can happen through GPUs or through software rendering.
 
 See https://discourse.ubuntu.com/t/about-application-streaming/17769.
 
 <a name="stun/turn-server"></a>
 ### STUN/TURN server
 
-A server that finds the most optimal network path between a client and the container running its application.
+A server that finds the most optimal network path between a client and the instance running its application.
 
 <a name="ubuntu-pro"></a>
 ### Ubuntu Pro
@@ -479,7 +481,7 @@ See [Ubuntu One](https://login.ubuntu.com/).
 <a name="watchdog"></a>
 ### Watchdog
 
-A software component that monitors the app in a container and terminates the container if the app crashes or is moved to the background.
+A software component that monitors the app in an instance and terminates the instance if the app crashes or is moved to the background.
 
 See [Watchdog settings](https://discourse.ubuntu.com/t/application-manifest/24197#watchdog).
 

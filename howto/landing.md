@@ -8,11 +8,11 @@ Learn how to install, configure and update Anbox Cloud.
 * [Update your installation](https://discourse.ubuntu.com/t/24331)
 
 ## Using Anbox Cloud
-Learn about applications, containers and more in Anbox Cloud and how to use them.
+Learn about applications, instances and more in Anbox Cloud and how to use them.
 
 * [Port Android apps](https://discourse.ubuntu.com/t/17776)
 * [Manage applications and the Anbox Application Registry(AAR)](https://discourse.ubuntu.com/t/24333)
-* [Manage, configure and work with containers](https://discourse.ubuntu.com/t/24335)
+* [Manage, configure and work with instances](https://discourse.ubuntu.com/t/24335)
 * [Use addons](https://discourse.ubuntu.com/t/17759)
 *  [Implement streaming for your application](https://discourse.ubuntu.com/t/implement-streaming/24332)
 

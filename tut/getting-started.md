@@ -60,11 +60,14 @@ Let's start exploring what Anbox Cloud can do by launching a virtual device that
 
 Complete the following steps to create a virtual device:
 
-1. Create a simple `manifest.yaml` file that contains the name and instance type for the virtual device. For example, the file could look like this:
+1. Create a simple `manifest.yaml` file that contains the name and resource preset for the virtual device. For example, the file could look like this:
 
    ```yaml
    name: virtual-device-cli
-   instance-type: a4.3
+   resources:
+     cpus: 4
+     memory: 4GB
+     disk-size: 3GB
    ```
 
 2. Enter the following command to create the virtual device, replacing */path/to/manifest/directory/* with the path to the directory where you created the manifest file:
@@ -177,16 +180,21 @@ Complete the following steps to create an application from an APK:
 
 1. Create a folder for your application (for example, `my-application`) and place your APK inside this folder.
 
-2. Create a `manifest.yaml` file in that folder. The manifest contains the name and [instance type](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) for the application. Choose an instance type that is suitable for your application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, select an instance type with GPU support like `g4.3`. For other instance types, the container will use a GPU if available or software encoding otherwise.
+2. Create a `manifest.yaml` file in that folder. This manifest contains the application name and if necessary, define resources for the application. If your instance is equipped with a GPU and your application requires the use of the GPU for rendering and video encoding, make sure to mention the GPU requirement using the `resources` attribute. Otherwise, the container will use a GPU if available or software encoding.
+
+If no specific resources are mentioned, the [default resource preset](https://discourse.ubuntu.com/t/24960) is used.
 
    For example, the file could look like this:
 
    ```yaml
    name: my-application
-   instance-type: a4.3
+   resources:
+     cpus: 6
+     memory: 4GB
+     disk-size: 8GB
    ```
 
-   [note type="information" status="Tip"]The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. You can find more details about the manifest format and the available instance types in the [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) and [Instance types](https://discourse.ubuntu.com/t/application-manifest/24197#instance-type) documentation.[/note]
+   [note type="information" status="Tip"]The manifest can also contain more advanced configuration like [Addons](https://discourse.ubuntu.com/t/managing-addons/17759), permissions and others. For more information about the manifest format, see [Application manifest](https://discourse.ubuntu.com/t/application-manifest/24197) documentation.[/note]
 2. Enter the following command to create the application, replacing */path/to/manifest/directory/* with the path to the directory where you created the manifest file:
 
         amc application create /path/to/manifest/directory/
@@ -286,6 +294,8 @@ While following this tutorial, you created several applications and containers. 
 
 You now know how to use the command line to create, launch and test applications in Anbox Cloud.
 
+This tutorial used a container to illustrate how to create and work with applications using Anbox Cloud. Alternatively, you can also use a virtual machine instead of a container by using the `--vm` option with the `amc` commands.
+
 If you are interested in a more easy-to-use interface, check out the [Get started with Anbox Cloud (web dashboard)](https://discourse.ubuntu.com/t/getting-started-with-anbox-cloud-web-dashboard/24958) tutorial to learn how to manage Anbox Cloud using the [web dashboard](https://discourse.ubuntu.com/t/web-dashboard/20871).
 
-Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with containers](https://discourse.ubuntu.com/t/work-with-containers/24335) for more in-depth information.
+Also see the documentation about [How to manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) and [How to work with instances](https://discourse.ubuntu.com/t/24335) for more in-depth information.

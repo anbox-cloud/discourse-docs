@@ -2,31 +2,32 @@ An application manifest defines the various attributes of an application.
 
 The available attributes are listed in the following table:
 
-Name          | Value type | Description |
---------------|------------|-------------------------|
-`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space |
-`version`       | string     | Version to encode with the application. Maximum length is 50 characters. |
-`instance-type` | string     | Container instance type that all containers created for the application will use. [Jump to details](#instance-type) |
-`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. |
-`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) |
-`addons` (optional) | array      | List of addons to be installed during the application bootstrap process. |
-`tags` (optional) | array      | List of tags to be associated with the application. |
-`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). |
-`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). |
-`video-encoder` (optional) | string     | Video encoder to be used by a container launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder) |
-`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog)|
-`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services) |
-`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources) |
-`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data) |
-`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks) |
-`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap)|
-`features` (optional) | array | List of feature flags to be defined for containers created from the application. |
-`node-selector` (optional) | array | List of selectors which will limit what node a container for the application can be scheduled on. [Jump to details](#node-selector) |
+Name          | Value type | Description | Status |
+--------------|------------|-------------------------|----|
+`name`          | string     | Verbose name of the application. The following special characters are not allowed: `< > : " / \ \| ? *`, as well as space | Supported |
+`version`       | string     | Version to encode with the application. Maximum length is 50 characters. | Supported |
+`instance-type` | string     | Instance type that all [instances](https://discourse.ubuntu.com/t/26204#instance) created for the application will use. [Jump to details](#instance-type) | Deprecated since 1.20 |
+`required-permissions` | array of strings | List of permissions to automatically grant to the application. See [Android Permissions](https://developer.android.com/guide/topics/permissions/overview) for a list of available permissions. If `[*]` was given, all required runtime permissions for the application will be granted on application installation. | Supported |
+`image` (optional) | string     | Name or ID of an image to be used for the application. The default image is used if empty. [Jump to details](#image) | Supported |
+`addons` (optional) | array      | List of addons to be installed during the application bootstrap process. | Supported |
+`tags` (optional) | array      | List of tags to be associated with the application. | Supported |
+`boot-package` (optional) | string     | Package to launch once the system has booted (default: package name retrieved from the APK if APK file is present). | Supported |
+`boot-activity` (optional) | string     | Activity of boot package to launch once the system has booted (default: main activity as defined in the application manifest). | Supported |
+`video-encoder` (optional) | string     | Video encoder to be used by an instance launched from the application  (default: `gpu-preferred`). Possible values are: `gpu`, `gpu-preferred`, `software`. [Jump to details](#video-encoder) | Supported |
+`watchdog` (optional)    | map        | Watchdog settings to be configured on application installation. [Jump to details](#watchdog)| Supported |
+`services` (optional)    | array      | Services to be provided from the installed application. [Jump to details](#services) | Supported |
+`resources` (optional)   | map        | Resources to be allocated on application installation. [Jump to details](#resources) | Supported |
+`extra-data` (optional)  | array      | List of additional data to be installed on application installation. [Jump to details](#extra-data) | Supported |
+`hooks` (optional) | object | Hooks settings to be configured on application installation. [Jump to details](#hooks) | Supported |
+`bootstrap` (optional) | object | Application bootstrap settings to be configured on application installation. [Jump to details](#bootstrap)| Supported |
+`features` (optional) | array | List of feature flags to be defined for instances created from the application. | Supported |
+`node-selector` (optional) | array | List of selectors which will limit what node an instance for the application can be scheduled on. [Jump to details](#node-selector) | Supported |
 
 <a name="instance-type"></a>
 ## Instance type
+[note type="information" Status="Note"] The `instance-type` attribute is deprecated since 1.20. For any application, a default set of resources will be chosen. If you wish to set specific resources to your application, use the [`resources` attribute](#resources) to do so. [/note]
 
-Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single container with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of containers or particular applications.
+Similar to other clouds, Anbox Cloud describes the amount of resources that are available to a single instance with an *instance type*. An instance type is a name that is mapped to a set of resources. This allows to have an easy abstraction when referring to resource requirements of instances or particular applications.
 
 Anbox Cloud offers the following instance types:
 
@@ -53,9 +54,9 @@ The `image` attribute defines which image the application is based on. If left e
 <a name="node-selector"></a>
 ## Node selector
 
-The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which a container for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#configure-tags) specified for each node.
+The `node-selector` attribute allows specifying a list of selectors to limit the LXD nodes on which an instance for the application can be scheduled. AMS will match the selector against the [tags](https://discourse.ubuntu.com/t/how-to-configure-cluster-nodes/28716#configure-tags) specified for each node.
 
-The following manifest specifies a node selector that instructs the AMS to schedule only those containers having the tags `foo` and `bar`, onto a node:
+The following manifest specifies a node selector that instructs the AMS to schedule only those instances having the tags `foo` and `bar`, onto a node:
 
 ```
 name: candy
@@ -65,7 +66,7 @@ node-selector: [foo, bar]
 
 <a name="video-encoder"></a>
 ## Video encoder
-A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that a container launched from the application can use a GPU or software video encoder according to different scenarios.
+A video encoder type can be specified through the `video-encoder` field in the manifest file when creating an application, so that an instance launched from the application can use a GPU or software video encoder according to different scenarios. Virtual machines do not have GPU support and hence will use software video encoding.
 
 Name                     |  Description
 -------------------------|-------------------------
@@ -74,7 +75,7 @@ Name                     |  Description
 `software`            |  A software-based video encoder
 
 When `gpu` video encoder is specified in the manifest, AMS can fail to create an application if:
- - All GPU slots are used up by running containers.
+ - All GPU slots are used up by running instances.
  - There is no GPU support across the entire LXD cluster.
 
 <a name="watchdog"></a>
@@ -87,7 +88,7 @@ Name                     | Value type | Description
 `disabled`               | Boolean    | Toggle application watchdog on or off (default: false)
 `allowed-packages`       | array of strings | Besides the boot package, list of packages to be allowed to display in the foreground
 
-When a container is launched, Anbox enables an application watchdog by default for the installed package unless it's disabled explicitly with:
+When an instance is launched, Anbox enables an application watchdog by default for the installed package unless it's disabled explicitly with:
 
 ```yaml
 name: candy
@@ -97,7 +98,7 @@ watchdog:
   disabled: true
 ```
 
-If one of the following scenarios occurs, the watchdog will be triggered. The container will be terminated and ends up with `error` status.
+If one of the following scenarios occurs, the watchdog will be triggered. The instance will be terminated and ends up with `error` status.
 
 - The application crashes or an [ANR](https://developer.android.com/topic/performance/vitals/anr) is triggered.
 - The application is not in the foreground when an application which is not listed in `allowed-packages` was brought to the foreground and gained the focus.
@@ -111,7 +112,7 @@ Supplying `['*']` to the `allowed-packages` when the watchdog is enabled allows 
 <a name="services"></a>
 ## Services
 
-A container launched from the installed application can expose `services` you want to make accessible from outside the container. You must define the following properties for each service:
+An instance launched from the installed application can expose `services` you want to make accessible from outside the instance. You must define the following properties for each service:
 
 Name           | Value type | Description
 ---------------|------------|-------------------------
@@ -123,7 +124,7 @@ Name           | Value type | Description
 <a name="resources"></a>
 ## Resources
 
-Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to a container. For example, if you start a container for an application that uses the instance type `a4.3`, the container is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
+Anbox Cloud provides a set of [instance types](#instance-type) that define the resources available to an instance. For example, if you start an instance for an application that uses the instance type `a4.3`, the instance is assigned 4 vCPU cores, 3 GB of RAM and 3 GB of disk space.
 
 If your application requires resources that do not correspond to any of the provided instance types, you can use the `resources` directive to override some or all of the predefined resources.
 
@@ -199,7 +200,7 @@ The manifest and extra data in our example are placed next to the application pa
 <a name="hooks"></a>
 ## Hooks
 
-Hooks allow you to run custom scripts when a certain event is triggered in a container life cycle. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more details about the usage of hooks in an application.
+Hooks allow you to run custom scripts when a certain event is triggered in the life cycle of an instance. See [Hooks](https://discourse.ubuntu.com/t/hooks/28555) for more details about the usage of hooks in an application.
 
 <a name="bootstrap"></a>
 ## Bootstrap
@@ -212,7 +213,7 @@ Name                  | Value type | Description
 ----------------------|------------|-------------------------
 `keep`                |  array     | Contents under the [APP_DIR](https://discourse.ubuntu.com/t/hooks/28555#env-variables) directory to be preserved in the application image after the bootstrap is finished. Wildcard patterns are supported. See [pattern syntax](https://golang.org/pkg/path/filepath/#Match) for more details.
 
-To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular container runtime, you must include them in the application image.
+To minimise the application size, most contents under the `APP_DIR` directory are removed when the application bootstrap is finished. By default, only the metadata content is preserved. If a hook requires any other files under the `APP_DIR` directory during the regular instance runtime, you must include them in the application image.
 
 ```yaml
 name: my-application
@@ -223,6 +224,6 @@ bootstrap:
     - 'scripts'
 ```
 
-This will include the `scripts` folder and all APK files under the `apks` folder in the application image when the bootstrap is done, so that they are available to use during the regular container runtime.
+This will include the `scripts` folder and all APK files under the `apks` folder in the application image when the bootstrap is done, so that they are available to use during the regular instance runtime.
 
 Because it contains metadata, the `manifest.yaml` file and the `hooks` directory (if present) are not removed when the application bootstrap is finished and are always kept in the application image even if they are not explicitly defined in the `keep` list under the `bootstrap` attribute.

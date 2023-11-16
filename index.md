@@ -1,8 +1,8 @@
-Anbox Cloud enables running Android apps on any cloud platform at scale. It uses system containers to run the nested Android containers and [Juju](https://juju.is/) for deployment in a cloud environment.
+Anbox Cloud enables running Android apps on any cloud platform at scale. It uses system containers or virtual machines to run the nested Android containers and [Juju](https://juju.is/) for deployment in a cloud environment.
 
 Anbox Cloud supports x86 and Arm64 hardware, providing the same set of features for both architectures.
 
-Since Anbox Cloud uses system containers to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the container density and can serve up to 100 Android instances per server.
+Since Anbox Cloud uses system containers or virtual machines to emulate Android systems, you can achieve the isolation and security level of a virtual machine without the associated overhead. Therefore, compared to other Android emulation solutions, Anbox Cloud can provide at least twice the density and can serve up to 100 Android instances per server.
 
 Due to its highly scalable nature and performance optimisation, delivering device-agnostic mobile applications is very easy. Popular use cases of Anbox Cloud include mobile game streaming services, corporate application streaming, application automation and testing.
 
@@ -68,7 +68,6 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | howto/application/landing | [Manage applications](https://discourse.ubuntu.com/t/manage-applications/24333) |
 | 3 | howto/application/create | [Create an application](https://discourse.ubuntu.com/t/create-an-application/24198)|
 | 3 | howto/application/wait | [Wait for an application](https://discourse.ubuntu.com/t/wait-for-an-application/24202)|
-| 3 | howto/application/resources | [Configure available resources](https://discourse.ubuntu.com/t/configure-available-resources/24960)|
 | 3 | howto/application/list | [List applications](https://discourse.ubuntu.com/t/list-applications/24200)|
 | 3 | howto/application/userdata | [Pass custom data](https://discourse.ubuntu.com/t/how-to-pass-custom-data-to-an-application/30368)|
 | 3 | howto/application/test | [Test your application](https://discourse.ubuntu.com/t/usecase-application-testing/17775)|
@@ -86,18 +85,18 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/port/obb-files | [Port APKs with OBB files](https://discourse.ubuntu.com/t/port-apks-with-obb-files/26056)|
 | 3 | howto/port/configure-watchdog | [Configure the watchdog](https://discourse.ubuntu.com/t/configure-the-watchdog/26057)|
 | 3 | howto/port/install-system-app | [Install APK as a system app](https://discourse.ubuntu.com/t/install-an-apk-as-a-system-app/27086)|
-| 2 | howto/container/landing | [Manage containers](https://discourse.ubuntu.com/t/work-with-containers/24335) |
-| 3 | howto/container/create | [Create a container](https://discourse.ubuntu.com/t/launch-a-container/24327)|
-| 3 | howto/container/start | [Start a container](https://discourse.ubuntu.com/t/how-to-start-a-container/33924)|
-| 3 | howto/container/wait | [Wait for a container](https://discourse.ubuntu.com/t/wait-for-a-container/24330)|
-| 3 | howto/container/access | [Access a container](https://discourse.ubuntu.com/t/container-access/17772)|
-| 3 | howto/container/list | [List containers](https://discourse.ubuntu.com/t/list-containers/24328)|
-| 3 | howto/container/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/usecase-container-configuration/17782)|
-| 3 | howto/container/logs | [View the container logs](https://discourse.ubuntu.com/t/view-the-container-logs/24329)|
-| 3 | howto/container/stop | [Stop a container](https://discourse.ubuntu.com/t/how-to-stop-a-container/33925)|
-| 3 | howto/container/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/back-up-and-restore-application-data/24183)|
-| 3 | howto/container/delete | [Delete a container](https://discourse.ubuntu.com/t/delete-a-container/24325)|
-| 3 | howto/container/expose-services | [Expose services](https://discourse.ubuntu.com/t/expose-services-on-a-container/24326)|
+| 2 | howto/instance/landing | [Manage instances](https://discourse.ubuntu.com/t/24335) |
+| 3 | howto/instance/create | [Create an instance](https://discourse.ubuntu.com/t/24327)|
+| 3 | howto/instance/start | [Start an instance](https://discourse.ubuntu.com/t/33924)|
+| 3 | howto/instance/wait | [Wait for an instance](https://discourse.ubuntu.com/t/24330)|
+| 3 | howto/instance/access | [Access an instance](https://discourse.ubuntu.com/t/17772)|
+| 3 | howto/instance/list | [List instances](https://discourse.ubuntu.com/t/24328)|
+| 3 | howto/instance/geographic-location | [Configure geographic location](https://discourse.ubuntu.com/t/17782)|
+| 3 | howto/instance/logs | [View the instance logs](https://discourse.ubuntu.com/t/24329)|
+| 3 | howto/instance/stop | [Stop an instance](https://discourse.ubuntu.com/t/33925)|
+| 3 | howto/instance/backup-and-restore | [Back up and restore application data](https://discourse.ubuntu.com/t/24183)|
+| 3 | howto/instance/delete | [Delete an instance](https://discourse.ubuntu.com/t/24325)|
+| 3 | howto/instance/expose-services | [Expose services](https://discourse.ubuntu.com/t/24326)|
 | 2 | howto/addons/landing | [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
 | 3 | howto/addons/enable-globally | [Enable globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285)|
 | 3 | howto/addons/update | [Update addons](https://discourse.ubuntu.com/t/update-addons/25286)|
@@ -122,7 +121,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/troubleshoot/initial-setup | [Troubleshoot initial setup](https://discourse.ubuntu.com/t/troubleshoot-issues-with-initial-setup/35704)|
 | 3 | howto/troubleshoot/logs | [View logs](https://discourse.ubuntu.com/t/managing-logs/17771)|
 | 3 | howto/troubleshoot/application-creation | [Troubleshoot application creation](https://discourse.ubuntu.com/t/troubleshoot-issues-with-application-creation/35702)|
-| 3 | howto/troubleshoot/container-failures | [Troubleshoot container failures](https://discourse.ubuntu.com/t/troubleshoot-container-failures/35703)|
+| 3 | howto/troubleshoot/instance-failures | [Troubleshoot instance failures](https://discourse.ubuntu.com/t/35703)|
 | 3 | howto/troubleshoot/lxd-cluster | [Troubleshoot LXD cluster](https://discourse.ubuntu.com/t/troubleshoot-issues-with-lxd-clustering/35705)|
 | 3 | howto/troubleshoot/dashboard-issues | [Troubleshoot dashboard issues](https://discourse.ubuntu.com/t/36105)
 | 3 | howto/troubleshoot/streaming-issues | [Troubleshoot streaming issues](https://discourse.ubuntu.com/t/how-to-debug-streaming-issues/31341)|
@@ -167,11 +166,12 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 2 | exp/ams | [AMS](https://discourse.ubuntu.com/t/about-ams/24321)|
 | 2 | exp/aar | [AAR](https://discourse.ubuntu.com/t/application-registry/17761)|
 | 2 | exp/applications | [Applications](https://discourse.ubuntu.com/t/managing-applications/17760)|
+| 3 | exp/resources | [Resources and resource presets](https://discourse.ubuntu.com/t/24960)|
 | 2 | exp/addons | [Addons](https://discourse.ubuntu.com/t/addons/38727)|
 | 2 | exp/application-streaming | [Application streaming](https://discourse.ubuntu.com/t/streaming-android-applications/17769)|
-| 2 | exp/containers | [Containers](https://discourse.ubuntu.com/t/managing-containers/17763)|
+| 2 | exp/instances | [Instances](https://discourse.ubuntu.com/t/17763)|
 | 2 | exp/platforms | [Platforms](https://discourse.ubuntu.com/t/anbox-platforms/18733)|
-| 2 | exp/gpus-containers | [GPUs and containers](https://discourse.ubuntu.com/t/17768)|
+| 2 | exp/gpus-instances | [GPUs and instances](https://discourse.ubuntu.com/t/17768)|
 | 2 | exp/clustering | [Clustering](https://discourse.ubuntu.com/t/capacity-planning/17765)|
 | 2 | exp/performance | [Performance](https://discourse.ubuntu.com/t/about-performance/29416) |
 | 2 | exp/capacity-planning | [Capacity planning](https://discourse.ubuntu.com/t/about-capacity-planning/28717) |
@@ -270,10 +270,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/installation/installation-application-registry | /docs/howto/aar/deploy |
 | /docs/usage/usecase-application-testing | /docs/howto/application/test |
 | /docs/usage/usecase-virtual-devices | /docs/howto/application/virtual-devices |
-| /docs/manage/container-access | /docs/howto/container/access |
-| /docs/howto/container/view-log | /docs/howto/container/logs |
-| /docs/usage/usecase-container-configuration | /docs/howto/container/geographic-location |
-| /docs/howto/containers/backup-and-restore | /docs/howto/container/backup-and-restore |
+| /docs/manage/container-access | /docs/howto/instance/access |
+| /docs/howto/container/view-log | /docs/howto/instance/logs |
+| /docs/usage/usecase-container-configuration | /docs/howto/instance/geographic-location |
+| /docs/howto/containers/backup-and-restore | /docs/howto/instance/backup-and-restore |
 | /docs/monitoring/monitoring-installation | /docs/howto/monitor/landing |
 | /docs/howto/monitor/install | /docs/howto/monitor/landing |
 | /docs/monitoring/monitoring-grafana | /docs/howto/monitor/grafana |
@@ -297,10 +297,10 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/manage/managing-applications | /docs/exp/applications |
 | /docs/manage/managing-addons | /docs/howto/addons/landing |
 | /docs/manage/application-registry | /docs/exp/aar |
-| /docs/manage/managing-containers | /docs/exp/containers |
+| /docs/manage/managing-containers | /docs/exp/instances |
 | /docs/manage/capacity-planning | /docs/exp/clustering |
 | /docs/manage/gpu-support | /docs/exp/gpu-support |
-| /docs/exp/gpu-support | /docs/exp/gpus-containers |
+| /docs/exp/gpu-support | /docs/exp/gpus-instances |
 | /docs/manage/benchmarking-a-deployment | /docs/exp/benchmarking |
 | /docs/manage/streaming-android-applications | /docs/exp/application-streaming |
 | /docs/usage/usecase-port-android-application-to-anbox-cloud | /docs/exp/porting-issues |
@@ -310,7 +310,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/changelog | /docs/release-notes |
 | /docs/howto/monitor/grafana | /docs/howto/monitor/collect-metrics |
 | /docs/howto/monitor/nagios | /docs/howto/monitor/monitor-status |
-| /docs/howto/container/launch | /docs/howto/container/create |
+| /docs/howto/container/launch | /docs/howto/instance/create |
 | /docs/howto/stream/debug | /docs/howto/troubleshoot/streaming-issues |
 | /docs/howto/manage/web-dashboard | /docs/howto/dashboard/web-dashboard |
 | /docs/howto/manage/logs | /docs/howto/troubleshoot/logs |
@@ -325,4 +325,20 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | /docs/howto/addons/best-practices | /docs/exp/addons |
 | /docs/ref/addons | /docs/ref/addon-manifest |
 | /docs/howto/manage/manage-appliance | /docs/ref/appliance-command-reference/landing |
+| /docs/exp/containers | /docs/exp/instances |
+| /docs/howto/container | /docs/howto/instance |
+| /docs/howto/troubleshoot/container-failures | /docs/howto/troubleshoot/instance-failures |
+| /docs/howto/container/access | /docs/howto/instance/access |
+| /docs/howto/container/backup-and-restore | /docs/howto/instance/backup-and-restore |
+| /docs/howto/container/create | /docs/howto/instance/create |
+| /docs/howto/container/delete | /docs/howto/instance/delete |
+| /docs/howto/container/expose-service | /docs/howto/instance/expose-service |
+| /docs/howto/container/geographic-location | /docs/howto/instance/geographic-location |
+| /docs/howto/container/landing | /docs/howto/instance/landing |
+| /docs/howto/container/list | /docs/howto/instance/list |
+| /docs/howto/container/logs | /docs/howto/instance/logs |
+| /docs/howto/container/start | /docs/howto/instance/start |
+| /docs/howto/container/stop | /docs/howto/instance/stop |
+| /docs/howto/container/wait | /docs/howto/instance/wait |
+| /docs/howto/application/resources | /docs/exp/resources |
 [/details]

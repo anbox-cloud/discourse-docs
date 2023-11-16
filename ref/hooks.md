@@ -1,22 +1,22 @@
-Hooks are scripts that automatically trigger actions based on an event performed in the container life cycle. A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
+Hooks are scripts that automatically trigger actions based on an event performed in the life cycle of an [instance](https://discourse.ubuntu.com/t/26204#instance). A hook can be any executable file that is placed in the `hooks` directory of an addon or an application folder.
 
 The hook name **must** be one of the following:
 
 | Name                 | Description      |
 |----------------------|---------------------|
-| pre-start            | Executed **before** Android is started. If the hook fails to execute, the container fails to start and has an error status.  |
-| post-start           | Executed **after** Android is started. If the hook fails to execute, the container stops with an error.              |
-| post-stop            | Executed **after** Android is stopped. If the container fails to start, this hook will not be invoked. If the hook fails to execute, the container stops with an error.  |
+| pre-start            | Executed **before** Android is started. If the hook fails to execute, the instance fails to start and has an error status.  |
+| post-start           | Executed **after** Android is started. If the hook fails to execute, the instance stops with an error.              |
+| post-stop            | Executed **after** Android is stopped. If the instance fails to start, this hook will not be invoked. If the hook fails to execute, the instance stops with an error.  |
 | install (deprecated) | DEPRECATED: Use `pre-start` instead. Executed during the application bootstrap when the addon is installed.          |
 | prepare (deprecated) | DEPRECATED: Use `post-start` instead. Executed during the application bootstrap when Android is running.             |
 | restore (deprecated) | DEPRECATED: Use `pre-start` instead. Executed before Android starts.                                                 |
 | backup (deprecated)  | DEPRECATED: Use `post-stop` instead. Executed after Android shuts down.                                              |
 
-A failed hook will cause the container to stop immediately and end up in an error state. In such cases, [view the container logs](https://discourse.ubuntu.com/t/24329) to further investigate the causes of failure.
+A failed hook will cause the instance to stop immediately and end up in an error state. In such cases, [view the instance logs](https://discourse.ubuntu.com/t/24329) to further investigate the causes of failure.
 
-The following figure shows when the different hooks are executed in the life cycle of a container (base container or regular container).
+The following figure shows when the different hooks are executed in the life cycle of a base or a regular instance.
 
-![Hooks execution in the life cycle of a container|471x601](https://assets.ubuntu.com/v1/bc9b1291-addons-reference-hook-order.png)
+![Hooks execution in the life cycle of an instance |471x601](https://assets.ubuntu.com/v1/8441e690-addons-reference-hook-order.png)
 
 <a name='env-variables'></a>
 ## Environment variables
@@ -31,12 +31,13 @@ The following variables are available:
 | `ANBOX_DIR`      | Path to the Anbox directory.                            | `/var/lib/anbox`        |
 | `ANDROID_ROOTFS` | Path to the Android RootFS.                             | `/var/lib/anbox/rootfs` |
 | `BOOT_PACKAGE`   | Boot package of the APK.                                |                         |
-| `CONTAINER_TYPE` | Type of container being run.                            | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
+| `CONTAINER_TYPE` | Type of container being run. This variable is now deprecated. Use `INSTANCE_TYPE` instead.                   | `regular` (container running an application or a raw image)<br/>`base` (container bootstrapping, thus creating or updating, an application)|
+| `INSTANCE_TYPE`  | Type of instance being run      | `regular` (instance running an application or a raw image)<br/>`base` (instance bootstrapping, thus creating or updating, an application)|
 | `ANBOX_EXIT_CODE`| *`post-stop` hook only:* Exit code of the Anbox process.| `0` if no error occurred, otherwise set to the actual return code.|
 
 <a name='hook-timeouts'></a>
 ## Hook timeouts
-By default, all hooks are subject to a 5 minute timeout to avoid blocking a container for too long. The timeout can be configured through the `hooks.timeout` key in the addon or application manifest. For example:
+By default, all hooks are subject to a 5 minute timeout to avoid blocking an instance for too long. The timeout can be configured through the `hooks.timeout` key in the addon or application manifest. For example:
 
 ```yaml
 ...

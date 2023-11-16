@@ -11,7 +11,7 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 |-----------------------|-------------|-----------|--------------------|------------------------------|---------------------------------------|
 | AMS                   | 8444        | TCP       | no                 | yes                          | HTTPS API                             |
 | AMS                   | 20002       | TCP       | no                 | no                           | HTTPS Prometheus endpoint             |
-| AMS node controller   | 10000-11000 | UDP & TCP | yes                | no                           | Container service ports               |
+| AMS node controller   | 10000-11000 | UDP & TCP | yes                | no                           | Instance service ports                |
 | Anbox Cloud Dashboard | 5000        | TCP       | no                 | no                           | HTTPS website                         |
 | Anbox Stream Agent    | 443         | TCP       | no                 | yes                          | HTTPS API                             |
 | Anbox Stream Gateway  | 4000        | TCP       | no                 | yes                          | HTTPS API                             |
@@ -31,7 +31,7 @@ For the Anbox Cloud Appliance, ports are exposed only for accessing the Anbox Cl
 
 | Service             | Port(s)     | Protocol  | Required | Description                            |
 |---------------------|-------------|-----------|----------|----------------------------------------|
-| AMS node controller | 10000-11000 | UDP & TCP | no       | Container service ports                |
+| AMS node controller | 10000-11000 | UDP & TCP | no       | Instance service ports                 |
 | Coturn              | 5349        | UDP       | yes      | STUN/TURN                              |
 | Coturn              | 60000-60100 | UDP       | yes      | TURN relay ports                       |
 | Traefik             | 80          | TCP       | yes      | HTTP (redirects to HTTPS on port 443)  |

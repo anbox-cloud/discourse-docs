@@ -7,6 +7,7 @@ all:
       Comma-separated list of addons that every application managed by
       AMS will use. See
       [How to enable an addon globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285).
+    deprecated: false
   application.auto_publish:
     type: "bool"
     default: "true"
@@ -15,6 +16,7 @@ all:
       versions when the bootstrap process is finished. `false`
       disables this. See
       [Publish application versions](https://discourse.ubuntu.com/t/update-an-application/24201#publish-application-versions).
+    deprecated: false
   application.auto_update:
     type: "bool"
     default: "true"
@@ -23,6 +25,7 @@ all:
       whenever any dependencies (parent image, addons, global
       configuration) change. `false` disables this. See
       [Configure automatic application updates](https://discourse.ubuntu.com/t/update-an-application/24201#configure-automatic-updates).
+    deprecated: false
   application.default_abi:
     type: "string"
     default: "-"
@@ -30,6 +33,7 @@ all:
       Default Android ABI that applications should use. See
       [Android ABIs](https://developer.android.com/ndk/guides/abis)
       for a list of available ABIs.
+    deprecated: false
   application.max_published_versions:
     type: "integer"
     default: "3"
@@ -37,81 +41,137 @@ all:
       Maximum number of published versions per application. If the
       number of versions of an application exceeds this configuration,
       AMS will automatically clean up older versions.
+    deprecated: false
   container.apt_mirror:
     type: "string"
     default: "-"
     description: >-
       APT mirror to use within the containers. By default,
       `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com`
+      (arm64) is used. This configuration item is deprecated since 1.20,
+      use `instance.apt_mirror` instead.
+    deprecated: true
+  instance.apt_mirror:
+    type: "string"
+    default: "-"
+    description: >-
+      APT mirror to use within the instances. By default,
+      `http://archive.ubuntu.com` (amd64) or `http://ports.ubuntu.com`
       (arm64) is used.
+    deprecated: false
   container.default_platform:
     type: "string"
     default: "-"
     description: >-
-      The name of the platform that Anbox uses by default to launch
-      containers.
+      The name of the platform that Anbox Cloud uses by default to launch
+      containers. This configuration item is deprecated since 1.20,
+      use `instance.default_platform` instead.
+    deprecated: true
+  instance.default_platform:
+    type: "string"
+    default: "-"
+    description: >-
+      The name of the platform that Anbox Cloud uses by default to launch
+      instances.
+    deprecated: false
   container.features:
     type: "string"
     default: "-"
     description: >-
       Comma-separated list of features to enable (see list below).
+      This configuration item is deprecated since 1.20, use
+      `instance.features` instead.
+    deprecated: true
+  instance.features:
+    type: "string"
+    default: "-"
+    description: >-
+      Comma-separated list of features to enable (see list below).
+    deprecated: false
   container.network_proxy:
     type: "string"
     default: "-"
     description: >-
-      Network proxy to use inside the containers.
+      Network proxy to use inside the containers. This configuration
+      item is deprecated since 1.20, use `instance.network_proxy`
+      instead.
+    deprecated: true
+  instance.network_proxy:
+    type: "string"
+    default: "-"
+    description: >-
+      Network proxy to use inside the instances.
+    deprecated: false
   container.security_updates:
     type: "bool"
     default: "true"
     description: >-
       If set to `true`, automatic Ubuntu security updates are applied
       during the application bootstrap process. `false` disables this.
+    deprecated: true
+  instance.security_updates:
+    type: "bool"
+    default: "true"
+    description: >-
+      If set to `true`, automatic Ubuntu security updates are applied
+      during the application bootstrap process. `false` disables this.
+      This configuration item is deprecated since 1.20, use
+      `instance.security_updates` instead.
+    deprecated: false
   core.proxy_http:
     type: "string"
     default: "-"
     description: >-
       HTTP proxy to use for HTTP requests that AMS performs.
+    deprecated: false
   core.proxy_https:
     type: "string"
     default: "-"
     description: >-
       HTTPS proxy to use for HTTPS requests that AMS performs.
+    deprecated: false
   core.proxy_ignore_hosts:
     type: "string"
     default: "-"
     description: >-
       Comma-separated list that defines the hosts for which a
       configured proxy is not used.
+    deprecated: false
   core.trust_password:
     type: "string"
     default: "-"
     description: >-
       The AMS trust password.
+    deprecated: false
   cpu.limit_mode:
     type: "string"
     default: "scheduler"
     description: >-
-      The mode AMS uses to limit CPU access for a container. See
+      The mode AMS uses to limit CPU access for an instance. See
       [About performance](https://discourse.ubuntu.com/t/about-performance/29416) for details.
       Possible values are: `scheduler`, `pinning`
+    deprecated: false
   gpu.allocation_mode:
     type: "string"
     default: "`all`"
     description: >-
       Method of allocating GPUs: `all` tells AMS to allocate all
-      available GPUs on a system to a container. `single` allocates
+      available GPUs on a system to an instance. `single` allocates
       only a single GPU.
+    deprecated: false
   gpu.type:
     type: "string"
     default: "`none`"
     description: >-
       Type of GPU: `none`, `intel`, `nvidia`, `amd`
+    deprecated: false
   images.allow_insecure:
     type: "bool"
     default: "false"
     description: >-
       If set to `true`, AMS allows accepting untrusted certificates
       provided by the configured image server.
+    deprecated: false
   images.auth:
     type: "string"
     default: "-"
@@ -120,16 +180,19 @@ all:
       reading this configuration, a Boolean value that indicates
       whether the item is set is returned, to avoid exposing
       credentials.
+    deprecated: false
   images.update_interval:
     type: "string"
     default: "`5m`"
     description: >-
       Frequency of image updates (for example: 1h, 30m).
+    deprecated: false
   images.url:
     type: "string"
     default: "`https://images.anbox-cloud.io/stable/`"
     description: >-
       URL of the image server to use.
+    deprecated: false
   images.version_lockstep:
     type: "bool"
     default: "true"
@@ -139,27 +202,31 @@ all:
       automatically updated to newer image versions if AMS is still at
       an older version. This only applies for new major and minor but
       not patch version updates.
+    deprecated: false
   load_balancer.url:
     type: "string"
     default: "-"
     description: >-
       URL of the load balancer behind which AMS sits. The URL is
-      handed to containers started by AMS to allow them to contact AMS
+      handed to instances started by AMS to allow them to contact AMS
       through the load balancer and not via the address of an
       individual AMS instance.
+    deprecated: false
   node.queue_size:
     type: "integer"
     default: "100"
     description: >-
       Maximum size of the queue containing requests to start and stop
-      container per LXD node. Changing the value requires a restart of
+      instances per LXD node. Changing the value requires a restart of
       AMS.
+    deprecated: false
   node.workers_per_queue:
     type: "integer"
     default: "4"
     description: >-
-      Number of workers processing container start and stop requests.
+      Number of workers processing instance start and stop requests.
       Changing the value requires a restart of AMS.
+    deprecated: false
   registry.filter:
     type: "string"
     default: "-"
@@ -168,6 +235,7 @@ all:
       fetched from the
       [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761).
       If empty, no filter is applied.
+    deprecated: false
   registry.fingerprint:
     type: "string"
     default: "-"
@@ -176,6 +244,7 @@ all:
       [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)
       uses to TLS-secure its HTTPS endpoint. This is used by AMS for
       mutual TLS authentication with the registry.
+    deprecated: false
   registry.mode:
     type: "string"
     default: "`pull`"
@@ -183,6 +252,7 @@ all:
       Mode in which the
       [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)
       client in AMS operates: `manual`, `pull`, `push`
+    deprecated: false
   registry.update_interval:
     type: "string"
     default: "`1h`"
@@ -190,6 +260,7 @@ all:
       Frequency of
       [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)
       updates (for example: 1h, 30m).
+    deprecated: false
   registry.url:
     type: "string"
     default: "-"
@@ -197,13 +268,15 @@ all:
       URL of the
       [Anbox Application Registry](https://discourse.ubuntu.com/t/application-registry/17761)
       to use.
+    deprecated: false
   scheduler.strategy:
     type: "string"
     default: "`spread`"
     description: >-
-      Strategy that the internal container scheduler in AMS uses to
-      distribute containers across available LXD nodes: `binpack`,
+      Strategy that the internal instance scheduler in AMS uses to
+      distribute instances across available LXD nodes: `binpack`,
       `spread`
+    deprecated: false
 node:
   cpu-allocation-rate:
     type: "integer"
@@ -211,11 +284,13 @@ node:
     description: >-
       CPU allocation rate used for
       [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+    deprecated: false
   cpus:
     type: "integer"
     default: "all available"
     description: >-
-      Number of CPUs dedicated to Anbox containers.
+      Number of CPUs dedicated to instances.
+    deprecated: false
   gpu-encoder-slots:
     type: "integer"
     default: >-
@@ -223,6 +298,7 @@ node:
       NVIDIA GPU)<br/>10 (for nodes with Intel GPU)
     description: >-
       Number of GPU encoder slots available on the node.
+    deprecated: false
   gpu-slots:
     type: "integer"
     default: >-
@@ -232,35 +308,42 @@ node:
       Number of
       [GPU slots](https://discourse.ubuntu.com/t/about-capacity-planning/28717#gpu-slots)
       available on the node.
+    deprecated: false
   memory:
     type: "integer"
     default: "all available"
     description: >-
-      Memory dedicated to Anbox containers.
+      Memory dedicated to instances.
+    deprecated: false
   memory-allocation-rate:
     type: "integer"
     default: "2"
     description: >-
       Memory allocation rate used for
       [over-committing resources](https://discourse.ubuntu.com/t/about-capacity-planning/28717#overcommitting).
+    deprecated: false
   public-address:
     type: "string"
     default: "-"
     description: >-
       The public, reachable address of the node.
+    deprecated: false
   subnet:
     type: "string"
     default: "-"
     description: >-
       The network subnet of the machine where the node runs.
+    deprecated: false
   tags:
     type: "string"
     default: "-"
     description: >-
       Tags to identify the node.
+    deprecated: false
   unschedulable:
     type: "bool"
     default: "false"
     description: >-
       If set to `true`, the node cannot be scheduled, which prevents
-      new containers from being launched on it.
+      new instances from being launched on it.
+    deprecated: false
