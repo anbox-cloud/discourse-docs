@@ -40,6 +40,7 @@ Know the configuration options that can be defined for various components of Anb
 Learn about the available metrics and benchmarks for measuring performance.
 | Guides | Description |
 |--|--|
+| [Prometheus metrics](https://discourse.ubuntu.com/t/19521)| Performance metrics that Anbox Cloud provides |
 | [Performance benchmarks](https://discourse.ubuntu.com/t/24709)| Benchmarks for the performance that you can achieve with different versions and configurations of Anbox Cloud |
 
 ## Other related information
