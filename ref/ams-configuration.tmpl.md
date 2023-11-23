@@ -45,7 +45,7 @@ For the feature to be considered, applications must be manually updated, because
 
 #### WiFi
 
-WiFi support can be optionally enabled with the `enable_wifi` feature flag. Anbox will then set up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection.
+By default, Anbox sets up a virtual WiFi device, which sits on top of an Ethernet connection and simulates a real WiFi connection. This WiFi support can be optionally disabled with the `disable_wifi` feature flag.
 
 The feature flag will be considered by all newly launched instances once set.
 
