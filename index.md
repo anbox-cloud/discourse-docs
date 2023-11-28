@@ -98,6 +98,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | howto/instance/delete | [Delete an instance](https://discourse.ubuntu.com/t/24325)|
 | 3 | howto/instance/expose-services | [Expose services](https://discourse.ubuntu.com/t/24326)|
 | 2 | howto/addons/landing | [Use addons](https://discourse.ubuntu.com/t/managing-addons/17759)|
+| 3 | howto/addons/create | [Create addons] (https://discourse.ubuntu.com/t/create-an-addon/40632)|
 | 3 | howto/addons/enable-globally | [Enable globally](https://discourse.ubuntu.com/t/enable-an-addon-globally/25285)|
 | 3 | howto/addons/update | [Update addons](https://discourse.ubuntu.com/t/update-addons/25286)|
 | 3 | howto/addons/migrate | [Migrate from previous versions](https://discourse.ubuntu.com/t/migrate-from-previous-addon-versions/25287)|
