@@ -152,6 +152,7 @@ LTS
 LXC
 LXD
 MAAS
+macOS
 middleware
 Minetest
 mutex
@@ -190,6 +191,7 @@ PKI
 playout
 Plex
 PLI
+powershell
 pre
 preselected
 Quadro
