@@ -276,6 +276,7 @@ UTF
 validator
 vCPU
 vCPUs
+VHAL
 viewport
 VirGL
 virglrenderer
