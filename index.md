@@ -136,6 +136,7 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 | 3 | ref/component-versions | [Component versions](https://discourse.ubuntu.com/t/component-versions/21413)|
 | 2 | ref/requirements | [Requirements](https://discourse.ubuntu.com/t/installation-requirements/17734) |
 | 2 | ref/appliance-command-reference/landing | [Appliance command reference](https://discourse.ubuntu.com/t/39525)|
+| 2 | ref/amc-command-reference/landing | [AMC command reference](https://discourse.ubuntu.com/t/40797) |
 | 2 | ref/provided-images | [Provided images](https://discourse.ubuntu.com/t/provided-images/24185)|
 | 2 | ref/supported-rendering-resources | [Supported rendering resources](https://discourse.ubuntu.com/t/supported-rendering-resources/37322) |
 | 2 | ref/supported-codecs | [Supported codecs](https://discourse.ubuntu.com/t/37323)|
@@ -233,15 +234,37 @@ Thinking about using Anbox Cloud for your next project? [Get in touch!](https://
 |   | release-notes/1.7.3 | [Release notes-Anbox Cloud 1.7.3](https://discourse.ubuntu.com/t/18458)|
 |   | release-notes/1.7.2 | [Release notes-Anbox Cloud 1.7.2](https://discourse.ubuntu.com/t/18265)|
 |   | release-notes/1.7.1 | [Release notes-Anbox Cloud 1.7.1](https://discourse.ubuntu.com/t/17977)|
-|   | ref/command-reference/ams | [Command reference - ams](https://discourse.ubuntu.com/t/39517)|
-|   | ref/command-reference/cluster | [Command reference - cluster](https://discourse.ubuntu.com/t/39519)|
-|   | ref/command-reference/dashboard | [Command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
-|   | ref/command-reference/destroy | [Command reference - destroy](https://discourse.ubuntu.com/t/39521)|
-|   | ref/command-reference/gateway | [Command reference - gateway](https://discourse.ubuntu.com/t/39522)|
-|   | ref/command-reference/help | [Command reference - help](https://discourse.ubuntu.com/t/39523)|
-|   | ref/command-reference/init | [Command reference - init](https://discourse.ubuntu.com/t/39524)|
-|   | ref/command-reference/status | [Command reference - status](https://discourse.ubuntu.com/t/39527)|
-|   | ref/command-reference/upgrade | [Command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
+|   | ref/appliance-command-reference/ams | [Appliance command reference - ams](https://discourse.ubuntu.com/t/39517)|
+|   | ref/appliance-command-reference/cluster | [Appliance command reference - cluster](https://discourse.ubuntu.com/t/39519)|
+|   | ref/appliance-command-reference/dashboard | [Appliance command reference - dashboard](https://discourse.ubuntu.com/t/39520)|
+|   | ref/appliance-command-reference/destroy | [Appliance command reference - destroy](https://discourse.ubuntu.com/t/39521)|
+|   | ref/appliance-command-reference/gateway | [Appliance command reference - gateway](https://discourse.ubuntu.com/t/39522)|
+|   | ref/appliance-command-reference/help | [Appliance command reference - help](https://discourse.ubuntu.com/t/39523)|
+|   | ref/appliance-command-reference/init | [Appliance command reference - init](https://discourse.ubuntu.com/t/39524)|
+|   | ref/appliance-command-reference/status | [Appliance command reference - status](https://discourse.ubuntu.com/t/39527)|
+|   | ref/appliance-command-reference/upgrade | [Appliance command reference - upgrade](https://discourse.ubuntu.com/t/39528)|
+|   | ref/amc-command-reference/addon | [AMC command reference - addon](https://discourse.ubuntu.com/t/40775) |
+|   | ref/amc-command-reference/application | [AMC command reference - application](https://discourse.ubuntu.com/t/40776) |
+|   | ref/amc-command-reference/benchmark | [AMC command reference - benchmark](https://discourse.ubuntu.com/t/40777) |
+|   | ref/amc-command-reference/completion | [AMC command reference - completion](https://discourse.ubuntu.com/t/40778) |
+|   | ref/amc-command-reference/config | [AMC command reference - config](https://discourse.ubuntu.com/t/40779) |
+|   | ref/amc-command-reference/delete | [AMC command reference - delete](https://discourse.ubuntu.com/t/40780) |
+|   | ref/amc-command-reference/exec | [AMC command reference - exec](https://discourse.ubuntu.com/t/40781) |
+|   | ref/amc-command-reference/help | [AMC command reference - help](https://discourse.ubuntu.com/t/40782) |
+|   | ref/amc-command-reference/image | [AMC command reference - image](https://discourse.ubuntu.com/t/40783) |
+|   | ref/amc-command-reference/info | [AMC command reference - info](https://discourse.ubuntu.com/t/40784) |
+|   | ref/amc-command-reference/init | [AMC command reference - init](https://discourse.ubuntu.com/t/40785) |
+|   | ref/amc-command-reference/launch | [AMC command reference - launch](https://discourse.ubuntu.com/t/40786) |
+|   | ref/amc-command-reference/list | [AMC command reference - list](https://discourse.ubuntu.com/t/40787) |
+|   | ref/amc-command-reference/logs | [AMC command reference - logs](https://discourse.ubuntu.com/t/40788) |
+|   | ref/amc-command-reference/node | [AMC command reference - node](https://discourse.ubuntu.com/t/40789) |
+|   | ref/amc-command-reference/remote | [AMC command reference - remote](https://discourse.ubuntu.com/t/40790) |
+|   | ref/amc-command-reference/shell | [AMC command reference - shell](https://discourse.ubuntu.com/t/40791) |
+|   | ref/amc-command-reference/show-log | [AMC command reference - show-log](https://discourse.ubuntu.com/t/40792) |
+|   | ref/amc-command-reference/show | [AMC command reference - show](https://discourse.ubuntu.com/t/40793) |
+|   | ref/amc-command-reference/start | [AMC command reference - start](https://discourse.ubuntu.com/t/40794) |
+|   | ref/amc-command-reference/stop | [AMC command reference - stop](https://discourse.ubuntu.com/t/40795) |
+|   | ref/amc-command-reference/wait | [AMC command reference - wait](https://discourse.ubuntu.com/t/40796) |
 [/details]
 
 ## Redirects
