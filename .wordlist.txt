@@ -60,6 +60,7 @@ Coturn
 CPUs
 crashdump
 Crashpad
+CSV
 CTS
 CUDA
 customisable
@@ -151,6 +152,7 @@ LTS
 LXC
 LXD
 MAAS
+macOS
 middleware
 Minetest
 mutex
@@ -189,6 +191,7 @@ PKI
 playout
 Plex
 PLI
+powershell
 pre
 preselected
 Quadro
