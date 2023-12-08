@@ -9,30 +9,30 @@ Not all components are updated with each release. When components are not update
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.20/stable` | 228 |
-| `ams-node-controller` | `1.20/stable` | 237 |
-| `coturn` | `1.20/stable` | 230 |
-| `ams` | `1.20/stable` | 241 |
-| `aar` | `1.20/stable` | 235 |
-| `anbox-stream-gateway` | `1.20/stable` | 246 |
-| `ams-load-balancer` | `1.20/stable` | 236 |
-| `ams-lxd` | `1.20/stable` | 233 |
-| `anbox-stream-agent` | `1.20/stable` | 241 |
+| `anbox-cloud-dashboard` | `1.20/stable` | 259 |
+| `ams-node-controller` | `1.20/stable` | 267 |
+| `coturn` | `1.20/stable` | 261 |
+| `ams` | `1.20/stable` | 272 |
+| `aar` | `1.20/stable` | 266 |
+| `anbox-stream-gateway` | `1.20/stable` | 277 |
+| `ams-load-balancer` | `1.20/stable` | 267 |
+| `ams-lxd` | `1.20/stable` | 264 |
+| `anbox-stream-agent` | `1.20/stable` | 272 |
 | `nats ` | `latest/stable` | 11 |
 
 #### Ubuntu 20.04
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud-dashboard` | `1.20/stable` | 227 |
-| `ams-node-controller` | `1.20/stable` | 236 |
-| `coturn` | `1.20/stable` | 229 |
-| `ams` | `1.20/stable` | 240 |
-| `aar` | `1.20/stable` | 234 |
-| `anbox-stream-gateway` | `1.20/stable` | 245 |
-| `ams-load-balancer` | `1.20/stable` | 235 |
-| `ams-lxd` | `1.20/stable` | 232 |
-| `anbox-stream-agent` | `1.20/stable` | 240 |
+| `anbox-cloud-dashboard` | `1.20/stable` | 258 |
+| `ams-node-controller` | `1.20/stable` | 266 |
+| `coturn` | `1.20/stable` | 260 |
+| `ams` | `1.20/stable` | 271 |
+| `aar` | `1.20/stable` | 265 |
+| `anbox-stream-gateway` | `1.20/stable` | 276 |
+| `ams-load-balancer` | `1.20/stable` | 266 |
+| `ams-lxd` | `1.20/stable` | 263 |
+| `anbox-stream-agent` | `1.20/stable` | 271 |
 | `nats ` | `latest/stable` | 11 |
 
 ### Validated revisions of 3rd party charms
@@ -43,8 +43,8 @@ n/a
 
 | Name | Channel | Revision |
 |----------|--------------|--------------|
-| `anbox-cloud` | `1.20/stable` | 144 |
-| `anbox-cloud-core` | `1.20/stable` | 149 |
+| `anbox-cloud` | `1.20/stable` | 156 |
+| `anbox-cloud-core` | `1.20/stable` | 161 |
 
 ### Snaps
 
