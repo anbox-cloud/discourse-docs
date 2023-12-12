@@ -5,13 +5,13 @@ You can view the Anbox and the Android system logs while an instance is running,
 
 While an instance is running, you can use the `amc` command to access both the Anbox and the Android system logs. The following command shows the system log:
 
-    amc logs -t <log type>
+    amc logs -t <log type> <instance_id>
 
 As `<log type>`, specify either `anbox` for the Anbox system log or `android` for the Android one. If you don't specify the log type, the Anbox system log is displayed by default.
 
 To follow the log and get automatic updates for new entries, add the `-f` argument:
 
-    amc logs -t anbox -f
+    amc logs -t anbox -f <instance_id>
 
 This will show the logs and update the output whenever new entries are added.
 
