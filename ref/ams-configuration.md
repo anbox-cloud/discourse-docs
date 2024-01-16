@@ -138,3 +138,19 @@ To enable the Android container to use a custom Android ID, add the feature flag
  * The `<android_id>` is a unique ID that represents the Android ID for the targeting application. It must be at least 16 characters in length.
 
 Once set, this feature flag will be considered by all newly launched instances.
+
+#### GL Async Swap Support
+
+*since 1.19.0*
+
+GL Async swap support is enabled by default for explicit signals of buffer swaps completion. To disable the GL async object feature, add the feature flag `emugl.disable_async_swap_support` upon application creation. Once the async swap support is disabled, Anbox Cloud will not use the host GL driver fence commands and file descriptors to synchronise the finished frames between the host and guest. Instead, it will fully rely on the host GPU driver to do so. The environment variable `ANBOX_ASYNC_SWAP_DISABLED_PACKAGES` that accepts a comma-separated list of package names can be used to prevent certain packages from using the async object.
+
+Once set, this feature flag will be considered by all newly launched instances.
+
+#### WebRTC ICE candidate logging
+
+*since 1.20.2*
+
+The WebRTC ICE logging is disabled by default. To enable support for extended ICE logging to allow debugging connection attempts, add the feature flag `webrtc.enable_ice_logging` upon application creation.
+
+Once set, this feature flag will be considered by all newly launched instances.
